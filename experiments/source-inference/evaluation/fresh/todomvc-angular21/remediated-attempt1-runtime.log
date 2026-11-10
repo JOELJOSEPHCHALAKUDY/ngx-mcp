@@ -1,0 +1,24 @@
+{
+  "totals": {
+    "frozenOperations": 7,
+    "exactBaselineEffects": 0,
+    "compilerNativeEffects": 0,
+    "boundariesPassed": 0
+  },
+  "baseline": [],
+  "compilerNative": [],
+  "boundaries": []
+}
+/Users/joeljoseph/Desktop/Personal Work/ai-experiments-apps/angular-mcp-compiler/src/approval.ts:31
+      throw new Error(`${approval.id} is not demonstrably read-only (it dispatches, mutates, writes storage or its effects could not be traced); approve it with effect "write"`);
+            ^
+
+Error: /all#FooterComponent.navigate:app-todo-footer a[routerlink] is not demonstrably read-only (it dispatches, mutates, writes storage or its effects could not be traced); approve it with effect "write"
+    at <anonymous> (/Users/joeljoseph/Desktop/Personal Work/ai-experiments-apps/angular-mcp-compiler/src/approval.ts:31:13)
+    at Array.map (<anonymous>)
+    at reviewedTools (/Users/joeljoseph/Desktop/Personal Work/ai-experiments-apps/angular-mcp-compiler/src/approval.ts:11:20)
+    at browserAdapter (/Users/joeljoseph/Desktop/Personal Work/ai-experiments-apps/angular-mcp-compiler/src/browser-adapter.ts:27:19)
+    at execute (/private/tmp/fresh-todomvc-modern-evaluation/remediated-mcp-runtime.mts:24:16)
+    at async <anonymous> (/private/tmp/fresh-todomvc-modern-evaluation/remediated-mcp-runtime.mts:41:64)
+
+Node.js v24.15.0

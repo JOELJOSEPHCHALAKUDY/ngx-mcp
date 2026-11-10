@@ -1,0 +1,24 @@
+finance transaction-create integration-failed Error: {"status":"not-dispatched","operation":"fill","target":{"sourceId":"ngmcp_82074e47b3397a9eadd7d5d3","instanceId":"ngmcp_82074e47b3397a9eadd7d5d3@8wfjym-1vvnazk-ipl5wt-1hupgsp:27"},"changed":[],"values":[],"validation":{"status":"invalid","fields":[{"sourceId":"ngmcp_82074e47b3397a9eadd7d5d3","instanceId":"ngmcp_82074e47b3397a9eadd7d5d3@8wfjym-1vvnazk-ipl5wt-1hupgsp:27","path":["categoryId"],"status":"INVALID","updateOn":"change","errors":[{"code":"required"}]}],"groups":[{"path":[],"status":"INVALID","errors":[]}]},"url":"http://127.0.0.1:4461/transacoes","businessStatus":"unknown","reason":"Unsupported native control or custom value accessor; a UI adapter is required"}
+finance transaction-edit integration-failed Error: {"status":"not-dispatched","operation":"fill","target":{"sourceId":"ngmcp_82074e47b3397a9eadd7d5d3","instanceId":"ngmcp_82074e47b3397a9eadd7d5d3@mh2erf-1q7p1dr-h1blem-3h25g1:42"},"changed":[],"values":[],"validation":{"status":"valid","fields":[{"sourceId":"ngmcp_82074e47b3397a9eadd7d5d3","instanceId":"ngmcp_82074e47b3397a9eadd7d5d3@mh2erf-1q7p1dr-h1blem-3h25g1:42","path":["categoryId"],"status":"VALID","updateOn":"change","errors":[]}],"groups":[{"path":[],"status":"VALID","errors":[]}]},"url":"http://127.0.0.1:4461/transacoes","businessStatus":"unknown","reason":"Unsupported native control or custom value accessor; a UI adapter is required"}
+finance transaction-delete passed 
+finance transaction-undo passed 
+finance category-create passed 
+finance category-edit passed 
+finance category-delete passed 
+finance budget-set integration-failed Error: data/limit must be string
+finance budget-remove passed 
+finance transactions-import passed 
+finance transactions-export passed 
+finance data-clear passed 
+finance data-restore-demo passed 
+finance blank-description blocked-before-validation 
+finance zero-amount blocked-before-validation 
+finance too-large-amount blocked-before-validation 
+finance missing-category blocked-before-validation 
+finance invalid-date blocked-before-validation 
+finance duplicate-category passed 
+finance zero-budget blocked-before-validation 
+finance used-category-delete passed 
+finance malformed-import passed 
+finance cancel-delete passed 
+REPORT /Users/joeljoseph/Desktop/Personal Work/ai-experiments-apps/angular-mcp-compiler/evaluation/integration-unseen/runs/final-v6-2026-11-10/finance/raw.json {"positive":13,"positivePassed":10,"negative":10,"negativePassed":4,"protocolBoundaryNotApplicable":0}

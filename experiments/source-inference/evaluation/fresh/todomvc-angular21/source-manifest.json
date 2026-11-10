@@ -1,0 +1,150 @@
+{
+  "repository": "https://github.com/tastejs/todomvc",
+  "commit": "ff43b02e59dfa604386bb382034b2cd07c2bcd8a",
+  "subdirectory": "examples/angular",
+  "excludedGeneratedPaths": [
+    "examples/angular/dist/"
+  ],
+  "files": [
+    {
+      "path": "examples/angular/.browserslistrc",
+      "sha256": "4d917afcae808de480b3f540909d6f0a40ea6650bf6376a72d9708c8b8330640",
+      "bytes": 600
+    },
+    {
+      "path": "examples/angular/.editorconfig",
+      "sha256": "08fe692cae5731d5ff601317e427ce338b9879472552ad1c9e41e8146a99d9d8",
+      "bytes": 274
+    },
+    {
+      "path": "examples/angular/.gitignore",
+      "sha256": "490d6c1a2883b072f9f2d8e19dc722daa65ad02a533bb4ab9d2d04f48a6b49c4",
+      "bytes": 33
+    },
+    {
+      "path": "examples/angular/angular.json",
+      "sha256": "46d225a10039e2eca66592806e79f4ee38defc35a8cc2c78ffeef9d797fc8893",
+      "bytes": 2387
+    },
+    {
+      "path": "examples/angular/package-lock.json",
+      "sha256": "4048fb1e9b90c71328542775c3cfdac043a75fe45f3e82de8ece87819a4963e0",
+      "bytes": 263333
+    },
+    {
+      "path": "examples/angular/package.json",
+      "sha256": "9108d47abc16b54d25d5d9346e79bf36ab84745ebe7eead748feac5fa88e7fb6",
+      "bytes": 751
+    },
+    {
+      "path": "examples/angular/readme.md",
+      "sha256": "5e8dbd917a10798bcd99a865411a9e773d1bbd223bad1e7a6967943c54da2d0c",
+      "bytes": 2943
+    },
+    {
+      "path": "examples/angular/src/app/app.component.html",
+      "sha256": "e68d1689d6a81aa36e3eeb002543209e253a3cf99a9f2368978e4e293037bbf5",
+      "bytes": 101
+    },
+    {
+      "path": "examples/angular/src/app/app.component.ts",
+      "sha256": "ab43f5258c0e1ea7d63689d3de05332d3e84ddb186b0d26fde40e704664e4c4d",
+      "bytes": 446
+    },
+    {
+      "path": "examples/angular/src/app/app.config.ts",
+      "sha256": "491877388539ae9c557ebe103fa1f6635ea45d9ff591ea131cb50339f12b34a4",
+      "bytes": 273
+    },
+    {
+      "path": "examples/angular/src/app/app.routes.ts",
+      "sha256": "6bd0785fbb84660d7aeb4e5a1dcb7cd3203c57f7ac07a28beb6f361bf0be3926",
+      "bytes": 322
+    },
+    {
+      "path": "examples/angular/src/app/footer/footer.component.html",
+      "sha256": "21e2b2dbd3cbbc9e0bdc81c3e91d0faf6b4fb270a839ffc2afe9bde687613874",
+      "bytes": 679
+    },
+    {
+      "path": "examples/angular/src/app/footer/footer.component.ts",
+      "sha256": "633657167b889bd3fee8d689d81fe59fcbb38c8c54cb5f99f103c1161f8d0810",
+      "bytes": 846
+    },
+    {
+      "path": "examples/angular/src/app/header/header.component.html",
+      "sha256": "e8ac14c4db4e580af5de734a526e850a7faf71311a145f2f94193a87c9e72743",
+      "bytes": 191
+    },
+    {
+      "path": "examples/angular/src/app/header/header.component.ts",
+      "sha256": "3ab2cd5459464871966307e4afdd9205f86570034ded01adedce8d4339c209e6",
+      "bytes": 566
+    },
+    {
+      "path": "examples/angular/src/app/todo-item/todo-item.component.html",
+      "sha256": "3d54173f430f8e2772bc99ba9fad6c8e8886ae8832c7d1d2b10270135ef8672e",
+      "bytes": 686
+    },
+    {
+      "path": "examples/angular/src/app/todo-item/todo-item.component.ts",
+      "sha256": "4abfe32ecc2277eaf9c9e5472bd62a8bc1c258e08eb3ffd4c22ad327b61c847f",
+      "bytes": 1622
+    },
+    {
+      "path": "examples/angular/src/app/todo-list/todo-list.component.html",
+      "sha256": "a7bc2a72746abb190f025bbb7e441efa76e982c88ce53a82e1a96f2ea62bdc01",
+      "bytes": 462
+    },
+    {
+      "path": "examples/angular/src/app/todo-list/todo-list.component.ts",
+      "sha256": "7aff333ee921aa1a90a5a870a8b3cf5f472ac1548b4b7ee199909e2e3f400d4a",
+      "bytes": 919
+    },
+    {
+      "path": "examples/angular/src/app/todos.service.ts",
+      "sha256": "e0d975f7148b642bdb7f788ac2e2e22c1edf53ab10d5ac73127a7abf5eeb686e",
+      "bytes": 1267
+    },
+    {
+      "path": "examples/angular/src/assets/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "examples/angular/src/favicon.ico",
+      "sha256": "f9102be80297c0529207607be5277b4f90bca89d65988fa1771b91c7894e815f",
+      "bytes": 15086
+    },
+    {
+      "path": "examples/angular/src/index.html",
+      "sha256": "1ebaf8d082b7337ea3369fc204a99d2fbf410decfcf02d474a59c1d7619d0881",
+      "bytes": 646
+    },
+    {
+      "path": "examples/angular/src/main.ts",
+      "sha256": "98f31b67b543962dfae3f3e55e5fbd56c77d1bc6835a5c317dd92fa7d4a022c8",
+      "bytes": 250
+    },
+    {
+      "path": "examples/angular/src/styles.css",
+      "sha256": "9c73b493f7007bc85de7acd010f217fb25b992dfdc5ac8d6b09b2159d3601672",
+      "bytes": 575
+    },
+    {
+      "path": "examples/angular/tsconfig.app.json",
+      "sha256": "a184f5fb7f000739dc69163beecad2de028802e3d89216a0351d86eb55156e45",
+      "bytes": 263
+    },
+    {
+      "path": "examples/angular/tsconfig.json",
+      "sha256": "2a088986db02612cb933ac4ce66af4a5697d96b2d3f5d4e2e8860e977a868d23",
+      "bytes": 738
+    },
+    {
+      "path": "license.md",
+      "sha256": "32238c5c6759b589ea768661b6eb0fcb42449b74d57cdf09928743f2e1eb748d",
+      "bytes": 1166
+    }
+  ]
+}

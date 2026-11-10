@@ -1,0 +1,19 @@
+{
+  "result": {
+    "status": "ui-dispatched",
+    "url": "http://127.0.0.1:4322/"
+  },
+  "writes": [
+    {
+      "method": "POST",
+      "path": "/api/users",
+      "body": {
+        "user": {
+          "email": "agent@example.test",
+          "password": "[REDACTED]",
+          "username": "ExternalAgent"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+[
+  {
+    "id": "/add-new-course#CreateCourseStep1Component.edit_form:create-course-step-1",
+    "fingerprint": "a7fa9d0ec0b5f04f107b96122df059a84efad3670eba9dfaa71ec9ca410764df",
+    "description": "Execute the original forms-course workflow using the compiler-derived UI plan and isolated sample data.",
+    "effect": "write"
+  }
+]

@@ -1,0 +1,187 @@
+{
+  "reportKind": "nonfrozen-supplemental-source-ui-fixture",
+  "mode": "reference",
+  "sourceOperation": "profile-avatar",
+  "supplementalId": "profile-avatar-32px",
+  "fixtureSha256": "e9bc8894951971f2c38b8a679336f7156822f1c250dbfaf84a0ddebbcadc3723",
+  "excludedFromFrozen35": true,
+  "frozenLabelsSha256": "42566e776738d25d6bee64a734111f325177d35d6da7b6f7196a1c6e9c329410",
+  "calls": [],
+  "consoleErrors": [
+    "Failed to load resource: net::ERR_INVALID_URL"
+  ],
+  "network": [
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "body": {
+        "username": "unseen-admin",
+        "password": "Synthetic-123"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/einkaufszettel",
+      "body": null
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/refresh-token",
+      "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/refresh-token",
+      "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+    },
+    {
+      "method": "POST",
+      "path": "/api/profil",
+      "body": {
+        "id": 1,
+        "username": "unseen-admin",
+        "password": "Synthetic-123",
+        "name": "Unseen Admin",
+        "email": "admin@example.test",
+        "token": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic",
+        "roles": [
+          {
+            "id": 1,
+            "name": "ROLE_ADMIN"
+          }
+        ],
+        "avatarBase64": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAZABkDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAQUGBAL/xAAtEAABAwIDAg8AAAAAAAAAAAACAAEDBAURElEhcRMUIjEyMzVBQlJhcoGR0f/EABgBAAMBAQAAAAAAAAAAAAAAAAMEBQAB/8QAHBEAAgMBAAMAAAAAAAAAAAAAAQMAAhEEEiFB/9oADAMBAAIRAxEAPwCOs9qjKIamqHNm2gD82Grp20YMOVgFh0ZtiMbM0YsPRZmw3Iq6pVV1wSfe5sdMU3S0RSxFLTAwSjtyi2DF8aqaV2sPF6PQUs/lFjtfUKtxAwzPZrnHLCFPMbDKDYDj4m/U2UIqum7Nb2rnL0Gw8T8mcsA6Ibnco6OIhAmKd25It3erqW4WTzl9oSdYW91yk3Psy2mHWsUE/9k="
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/refresh-token",
+      "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+    }
+  ],
+  "before": {
+    "domain": {
+      "users": [
+        {
+          "id": 1,
+          "username": "unseen-admin",
+          "password": "Synthetic-123",
+          "name": "Unseen Admin",
+          "email": "admin@example.test",
+          "token": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic",
+          "roles": [
+            {
+              "id": 1,
+              "name": "ROLE_ADMIN"
+            }
+          ],
+          "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+        },
+        {
+          "id": 2,
+          "username": "unseen-member",
+          "password": "Synthetic-123",
+          "name": "Unseen Member",
+          "email": "member@example.test",
+          "roles": [
+            {
+              "id": 2,
+              "name": "ROLE_USER"
+            }
+          ],
+          "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+        }
+      ],
+      "lists": [
+        {
+          "id": 101,
+          "name": "Unseen fixture list",
+          "owners": [],
+          "sharedWith": [],
+          "artikels": [
+            {
+              "id": 201,
+              "name": "Unseen milk",
+              "anzahl": 1,
+              "gekauft": false
+            },
+            {
+              "id": 202,
+              "name": "Unseen bread",
+              "anzahl": 1,
+              "gekauft": false
+            }
+          ]
+        }
+      ],
+      "archived": [],
+      "confirmations": []
+    },
+    "user": "{\"id\":1,\"username\":\"unseen-admin\",\"password\":\"Synthetic-123\",\"name\":\"Unseen Admin\",\"email\":\"admin@example.test\",\"token\":\"eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic\",\"roles\":[{\"id\":1,\"name\":\"ROLE_ADMIN\"}],\"avatar\":\"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII=\"}"
+  },
+  "after": {
+    "domain": {
+      "users": [
+        {
+          "id": 1,
+          "username": "unseen-admin",
+          "password": "Synthetic-123",
+          "name": "Unseen Admin",
+          "email": "admin@example.test",
+          "token": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic",
+          "roles": [
+            {
+              "id": 1,
+              "name": "ROLE_ADMIN"
+            }
+          ],
+          "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII=",
+          "avatarBase64": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAZABkDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAQUGBAL/xAAtEAABAwIDAg8AAAAAAAAAAAACAAEDBAURElEhcRMUIjEyMzVBQlJhcoGR0f/EABgBAAMBAQAAAAAAAAAAAAAAAAMEBQAB/8QAHBEAAgMBAAMAAAAAAAAAAAAAAQMAAhEEEiFB/9oADAMBAAIRAxEAPwCOs9qjKIamqHNm2gD82Grp20YMOVgFh0ZtiMbM0YsPRZmw3Iq6pVV1wSfe5sdMU3S0RSxFLTAwSjtyi2DF8aqaV2sPF6PQUs/lFjtfUKtxAwzPZrnHLCFPMbDKDYDj4m/U2UIqum7Nb2rnL0Gw8T8mcsA6Ibnco6OIhAmKd25It3erqW4WTzl9oSdYW91yk3Psy2mHWsUE/9k="
+        },
+        {
+          "id": 2,
+          "username": "unseen-member",
+          "password": "Synthetic-123",
+          "name": "Unseen Member",
+          "email": "member@example.test",
+          "roles": [
+            {
+              "id": 2,
+              "name": "ROLE_USER"
+            }
+          ],
+          "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+        }
+      ],
+      "lists": [
+        {
+          "id": 101,
+          "name": "Unseen fixture list",
+          "owners": [],
+          "sharedWith": [],
+          "artikels": [
+            {
+              "id": 201,
+              "name": "Unseen milk",
+              "anzahl": 1,
+              "gekauft": false
+            },
+            {
+              "id": 202,
+              "name": "Unseen bread",
+              "anzahl": 1,
+              "gekauft": false
+            }
+          ]
+        }
+      ],
+      "archived": [],
+      "confirmations": []
+    },
+    "user": "{\"id\":1,\"username\":\"unseen-admin\",\"password\":\"Synthetic-123\",\"name\":\"Unseen Admin\",\"email\":\"admin@example.test\",\"token\":\"eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic\",\"roles\":[{\"id\":1,\"name\":\"ROLE_ADMIN\"}],\"avatar\":\"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII=\",\"avatarBase64\":\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAZABkDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAQUGBAL/xAAtEAABAwIDAg8AAAAAAAAAAAACAAEDBAURElEhcRMUIjEyMzVBQlJhcoGR0f/EABgBAAMBAQAAAAAAAAAAAAAAAAMEBQAB/8QAHBEAAgMBAAMAAAAAAAAAAAAAAQMAAhEEEiFB/9oADAMBAAIRAxEAPwCOs9qjKIamqHNm2gD82Grp20YMOVgFh0ZtiMbM0YsPRZmw3Iq6pVV1wSfe5sdMU3S0RSxFLTAwSjtyi2DF8aqaV2sPF6PQUs/lFjtfUKtxAwzPZrnHLCFPMbDKDYDj4m/U2UIqum7Nb2rnL0Gw8T8mcsA6Ibnco6OIhAmKd25It3erqW4WTzl9oSdYW91yk3Psy2mHWsUE/9k=\"}"
+  },
+  "oracle": {
+    "businessEffect": true
+  },
+  "status": "passed"
+}

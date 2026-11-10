@@ -1,0 +1,24 @@
+{
+  "projectId": "notes-manager-holdout",
+  "repository": "https://github.com/dplocki/angular-notes-manager",
+  "commit": "f1aa7eb02e2dcee35be7684d7aebba647083fd98",
+  "license": {
+    "spdx": "MIT",
+    "file": "LICENSE",
+    "sha256": "f7743c10d298bb5b21d3a198bf9fa79a43d9cb845f2f670d699be90ab73f8c4a"
+  },
+  "versionsFromUpstreamLock": {
+    "@angular/core": "20.0.2",
+    "@angular/compiler": "20.0.2",
+    "@angular/compiler-cli": "20.0.2",
+    "@angular/forms": "20.0.2",
+    "@angular/cli": "20.0.1",
+    "typescript": "5.8.3"
+  },
+  "lockSha256": "9bbda90ff9092f57dce32612dc7135b284d36883d24225578ee5e9202de71e58",
+  "tsconfig": "tsconfig.app.json",
+  "appTarget": "angular-notes-manager",
+  "route": "/",
+  "sourceDirectory": "/private/tmp/integration-holdout-notes",
+  "sourceSelection": "HEAD had unsupported CLI21/core20 skew; pinned unchanged coherent Angular20 release-era source/lock before later dependency-only updates. No source or dependency overlays."
+}

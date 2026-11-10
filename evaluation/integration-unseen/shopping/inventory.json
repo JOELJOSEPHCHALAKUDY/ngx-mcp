@@ -1,0 +1,44 @@
+{
+  "included": [
+    "session-login",
+    "account-register",
+    "session-logout",
+    "account-confirm",
+    "list-create",
+    "list-edit",
+    "list-delete",
+    "article-create",
+    "article-edit",
+    "article-delete",
+    "article-buy",
+    "article-unbuy",
+    "articles-archive",
+    "profile-save",
+    "profile-avatar",
+    "admin-user-save",
+    "admin-user-delete"
+  ],
+  "excluded": [
+    {
+      "kind": "transient UI/read",
+      "items": [
+        "routing",
+        "menus",
+        "reset auth draft",
+        "cancel admin row editing",
+        "list/archive loading",
+        "pagination/sort",
+        "image preview before save"
+      ]
+    },
+    {
+      "kind": "backend not supplied",
+      "items": [
+        "real email delivery",
+        "realJWT verification",
+        "server-sideauthorization"
+      ],
+      "reason": "Only request/response contracts modeled by deterministic fixture; no real accounts, mail or backend security assertion."
+    }
+  ]
+}

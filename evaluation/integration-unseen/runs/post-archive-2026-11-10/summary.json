@@ -1,0 +1,245 @@
+{
+  "reportKind": "integration-unseen-measurement",
+  "startedAt": "2026-11-10T12:38:37.610Z",
+  "compilerDigestBefore": "83d149f7c4134cc17114bbb6b7dc27209ca3847bf012c1e1c5d7b6c5f29fb8ff",
+  "evaluatorFilesBefore": {
+    "../digest.mjs": "144d34b528858cda3c9f22b1011282cc3085a70b46082a1f71b838f6aebd3fa1",
+    "fixtures.mjs": "a1aae6c88be66e8d5c9863b5f48367391dae0fc9e13665ae1d6161380e2c74c2",
+    "cases.mjs": "bd4e615be4817518f0d3a1184bf9c157d566438915b086c23ef8d52aa2a0ace1",
+    "oracles.mjs": "77903660f1fa4839bc780bd70cc2fb530cf0ae28ac9a8d4450c7b2342d4313f1",
+    "evidence.mjs": "4e3d8e0b7adc247bb24d568253a6f76b66209467395048a94542338e9f77ad0d",
+    "shopping/avatar-reference-adjudication.json": "009f6e0d727ed17eb978d8be6241021370d586c4d7e700ef1df805231f3a9d33",
+    "run.mjs": "92f4b75500b923597d90f83378e058a0a9d675c3de7c4083b168abb6f5f6611e",
+    "mcp-driver.mjs": "57e0bf836da0e58708db217aac96bdfaa477039a7fc41a02e20bcd25c0df95b4",
+    "measure.mjs": "18c9b76843c084a74429cb0fdf9753af0655ac7d8770b8eb9d67adf9f4276332",
+    "check.mjs": "13ab6f2d8f34ef7751793a2b3ba23a91b6c235ab73c77c83995b8ad024e09150",
+    "fetch.mjs": "22290bc78d25551d747416d1f0a83d8e67022a9e1d416efeb5a65919651b8e8c",
+    "serve.mjs": "10d557d10870966198fcae9126b7114b60f400628852bf44e9239d0942cd88f2"
+  },
+  "goldPositiveScenarios": 35,
+  "goldNegativeOrBoundaryCases": 21,
+  "projects": [
+    {
+      "id": "finance",
+      "commit": "61c1bb87567df4245f0722713edabc8177121842",
+      "originalPort": 4451,
+      "stagedPort": 4461,
+      "source": "/tmp/integration-unseen-finance",
+      "staged": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-10T12-38-37-608Z-32724/finance",
+      "compilerDigestBeforeStage": "83d149f7c4134cc17114bbb6b7dc27209ca3847bf012c1e1c5d7b6c5f29fb8ff",
+      "evidence": {
+        "reference": {
+          "path": "runs/post-archive-2026-11-10/finance/reference.json",
+          "sha256": "b5ee7c70d4df6b18bd877aa5df00e01bd31a68d3cb049e4335b434ac67b9f180"
+        },
+        "raw": {
+          "path": "runs/post-archive-2026-11-10/finance/raw.json",
+          "sha256": "aaf34227c9a111b5ca7b181ad505f9e9966d9f88d7191746b988008c5fdc5516"
+        },
+        "ui": {
+          "path": "runs/post-archive-2026-11-10/finance/ui.json",
+          "sha256": "489d560a6ea0dd6ed726b1246ce7e5aa4fc01bceda74362c14968c840ec56e10"
+        }
+      },
+      "compilerDigestAfterStage": "83d149f7c4134cc17114bbb6b7dc27209ca3847bf012c1e1c5d7b6c5f29fb8ff",
+      "runtimeModuleSha256": "daf579a9d29076e9664889f48a50df48a64191520db0ab1bab2838fd42a6ee26",
+      "manifestSha256": "bfeddd1c349f1d8331206edf8b93077812275a442628c430421f9f10d7f0d2da",
+      "serverOwnership": {
+        "original": {
+          "pid": 32738,
+          "cwd": "/tmp/integration-unseen-finance"
+        },
+        "staged": {
+          "pid": 32742,
+          "cwd": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-10T12-38-37-608Z-32724/finance"
+        }
+      },
+      "serversStopped": true,
+      "counts": {
+        "native": {
+          "positive": 13,
+          "positivePassed": 13,
+          "negative": 10,
+          "negativePassed": 10,
+          "protocolBoundaryNotApplicable": 0
+        },
+        "raw": {
+          "positive": 13,
+          "positivePassed": 10,
+          "negative": 10,
+          "negativePassed": 4,
+          "protocolBoundaryNotApplicable": 0
+        },
+        "ui": {
+          "positive": 13,
+          "positivePassed": 13,
+          "negative": 10,
+          "negativePassed": 10,
+          "protocolBoundaryNotApplicable": 0
+        }
+      },
+      "protocolBoundaryGaps": [],
+      "nativePassing": 23,
+      "nativeBlocked": [],
+      "parityGaps": []
+    },
+    {
+      "id": "todo",
+      "commit": "391435fc4edf819abf4f507187fc0364ac26e00b",
+      "originalPort": 4452,
+      "stagedPort": 4462,
+      "source": "/tmp/integration-unseen-todo",
+      "staged": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-10T12-38-37-608Z-32724/todo",
+      "compilerDigestBeforeStage": "83d149f7c4134cc17114bbb6b7dc27209ca3847bf012c1e1c5d7b6c5f29fb8ff",
+      "evidence": {
+        "reference": {
+          "path": "runs/post-archive-2026-11-10/todo/reference.json",
+          "sha256": "900082b6b954ddf9d53ccf555a5b77ef0baa3593521ba95f8a9cee93bf307e2e"
+        },
+        "raw": {
+          "path": "runs/post-archive-2026-11-10/todo/raw.json",
+          "sha256": "5c501f0e0d39f5b68c53ae88e776f74bb65c1a8126ba046b452e001689093b79"
+        },
+        "ui": {
+          "path": "runs/post-archive-2026-11-10/todo/ui.json",
+          "sha256": "2df116f6f35dcbe5c7f679e086387afed646e099597356f8e982b3e63c349bda"
+        }
+      },
+      "compilerDigestAfterStage": "83d149f7c4134cc17114bbb6b7dc27209ca3847bf012c1e1c5d7b6c5f29fb8ff",
+      "runtimeModuleSha256": "daf579a9d29076e9664889f48a50df48a64191520db0ab1bab2838fd42a6ee26",
+      "manifestSha256": "2a4e11b2746491583c2e0213f8c3b704d66e85bc23cb44baaadbfbf2072c2f9d",
+      "serverOwnership": {
+        "original": {
+          "pid": 33841,
+          "cwd": "/tmp/integration-unseen-todo"
+        },
+        "staged": {
+          "pid": 33849,
+          "cwd": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-10T12-38-37-608Z-32724/todo"
+        }
+      },
+      "serversStopped": true,
+      "counts": {
+        "native": {
+          "positive": 5,
+          "positivePassed": 5,
+          "negative": 3,
+          "negativePassed": 2,
+          "protocolBoundaryNotApplicable": 1
+        },
+        "raw": {
+          "positive": 5,
+          "positivePassed": 5,
+          "negative": 3,
+          "negativePassed": 3,
+          "protocolBoundaryNotApplicable": 0
+        },
+        "ui": {
+          "positive": 5,
+          "positivePassed": 5,
+          "negative": 3,
+          "negativePassed": 3,
+          "protocolBoundaryNotApplicable": 0
+        }
+      },
+      "protocolBoundaryGaps": [],
+      "nativePassing": 7,
+      "nativeBlocked": [],
+      "parityGaps": []
+    },
+    {
+      "id": "shopping",
+      "commit": "3464f15ad53ede4de5673415ca9de68070bf78a1",
+      "originalPort": 4453,
+      "stagedPort": 4463,
+      "source": "/tmp/integration-unseen-shopping",
+      "staged": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-10T12-38-37-608Z-32724/shopping",
+      "compilerDigestBeforeStage": "83d149f7c4134cc17114bbb6b7dc27209ca3847bf012c1e1c5d7b6c5f29fb8ff",
+      "evidence": {
+        "reference": {
+          "path": "runs/post-archive-2026-11-10/shopping/reference.json",
+          "sha256": "f1616126a4aef8593d0e024d201476ff230f556b0554a73b4d3ee6148e353887"
+        },
+        "raw": {
+          "path": "runs/post-archive-2026-11-10/shopping/raw.json",
+          "sha256": "32d45af10bf447d687c55aced32eb822cbdc14e7bb1be2cb0860ce9970a8d284"
+        },
+        "ui": {
+          "path": "runs/post-archive-2026-11-10/shopping/ui.json",
+          "sha256": "256ccc153f1ab6550b3562f2fa4183c9631d91896aef3ae18f510159094755fd"
+        }
+      },
+      "compilerDigestAfterStage": "83d149f7c4134cc17114bbb6b7dc27209ca3847bf012c1e1c5d7b6c5f29fb8ff",
+      "runtimeModuleSha256": "daf579a9d29076e9664889f48a50df48a64191520db0ab1bab2838fd42a6ee26",
+      "manifestSha256": "47a4c8c0222568f1b2542347f3efc84dfbc23290e1a9388162d6b6d136ced938",
+      "serverOwnership": {
+        "original": {
+          "pid": 34044,
+          "cwd": "/tmp/integration-unseen-shopping"
+        },
+        "staged": {
+          "pid": 34049,
+          "cwd": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-10T12-38-37-608Z-32724/shopping"
+        }
+      },
+      "serversStopped": true,
+      "counts": {
+        "native": {
+          "positive": 17,
+          "positivePassed": 16,
+          "negative": 8,
+          "negativePassed": 7,
+          "protocolBoundaryNotApplicable": 1
+        },
+        "raw": {
+          "positive": 17,
+          "positivePassed": 10,
+          "negative": 8,
+          "negativePassed": 5,
+          "protocolBoundaryNotApplicable": 0
+        },
+        "ui": {
+          "positive": 17,
+          "positivePassed": 16,
+          "negative": 8,
+          "negativePassed": 8,
+          "protocolBoundaryNotApplicable": 0
+        }
+      },
+      "protocolBoundaryGaps": [],
+      "nativePassing": 23,
+      "nativeBlocked": [
+        {
+          "id": "profile-avatar",
+          "status": "reference-failed",
+          "error": "AssertionError [ERR_ASSERTION]: undefined == true"
+        }
+      ],
+      "parityGaps": []
+    }
+  ],
+  "sourcePolicy": "Pinned originals unchanged; only generic staged compiler/runtime instrumentation. All action-under-test calls are actual SDK MCP with no native reference fallback.",
+  "finishedAt": "2026-11-10T12:46:59.022Z",
+  "compilerDigestAfter": "83d149f7c4134cc17114bbb6b7dc27209ca3847bf012c1e1c5d7b6c5f29fb8ff",
+  "evaluatorFilesAfter": {
+    "../digest.mjs": "144d34b528858cda3c9f22b1011282cc3085a70b46082a1f71b838f6aebd3fa1",
+    "fixtures.mjs": "a1aae6c88be66e8d5c9863b5f48367391dae0fc9e13665ae1d6161380e2c74c2",
+    "cases.mjs": "bd4e615be4817518f0d3a1184bf9c157d566438915b086c23ef8d52aa2a0ace1",
+    "oracles.mjs": "77903660f1fa4839bc780bd70cc2fb530cf0ae28ac9a8d4450c7b2342d4313f1",
+    "evidence.mjs": "4e3d8e0b7adc247bb24d568253a6f76b66209467395048a94542338e9f77ad0d",
+    "shopping/avatar-reference-adjudication.json": "009f6e0d727ed17eb978d8be6241021370d586c4d7e700ef1df805231f3a9d33",
+    "run.mjs": "92f4b75500b923597d90f83378e058a0a9d675c3de7c4083b168abb6f5f6611e",
+    "mcp-driver.mjs": "57e0bf836da0e58708db217aac96bdfaa477039a7fc41a02e20bcd25c0df95b4",
+    "measure.mjs": "18c9b76843c084a74429cb0fdf9753af0655ac7d8770b8eb9d67adf9f4276332",
+    "check.mjs": "13ab6f2d8f34ef7751793a2b3ba23a91b6c235ab73c77c83995b8ad024e09150",
+    "fetch.mjs": "22290bc78d25551d747416d1f0a83d8e67022a9e1d416efeb5a65919651b8e8c",
+    "serve.mjs": "10d557d10870966198fcae9126b7114b60f400628852bf44e9239d0942cd88f2"
+  },
+  "compilerStable": true,
+  "evaluatorStable": true,
+  "nativeParity": true,
+  "protocolBoundariesPassed": true,
+  "usableWithinNativePassingScope": true,
+  "releaseReady": false,
+  "scope": "Integrity and declared native-reference parity only. Frozen positive denominator remains35 including source-blocked1px avatar. Raw field values and explicit UI transport mappings are separate. This is not a production or full-schema guarantee."
+}

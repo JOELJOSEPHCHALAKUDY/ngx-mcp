@@ -1,0 +1,2546 @@
+{
+  "startedAt": "2026-11-10T11:40:56.311Z",
+  "protocol": "Real SDK Client, createMcpServer, linked InMemoryTransport, tools/list and tools/call",
+  "manifestSha256": "c130551b1d1b84d16e231fec348470dbc8869bfd4549b534b2d4d383e135bdf5",
+  "baseline": [
+    {
+      "id": "filter_todos",
+      "phase": "exact-frozen-input",
+      "args": {
+        "filter": "active"
+      },
+      "capability": "/all#FooterComponent.navigate:app-todo-footer a[routerlink]",
+      "before": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "network": {
+        "blocked": [],
+        "apiRequests": []
+      },
+      "tools": [
+        {
+          "name": "angular_navigate_c080d829d0",
+          "description": "Synthetic modern holdout remediated runtime",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "route": {
+                "type": "string",
+                "enum": [
+                  "/",
+                  "/active",
+                  "/completed"
+                ]
+              }
+            },
+            "required": [
+              "route"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "const": "ui-dispatched"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "status",
+              "url"
+            ],
+            "additionalProperties": false
+          },
+          "annotations": {
+            "readOnlyHint": false,
+            "destructiveHint": true,
+            "openWorldHint": true
+          }
+        }
+      ],
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "data must have required property 'route', data must NOT have additional properties"
+          }
+        ],
+        "isError": true
+      },
+      "after": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "effectVerified": false,
+      "status": "tool-error"
+    },
+    {
+      "id": "add_todo",
+      "phase": "exact-frozen-input",
+      "args": {
+        "title": "  Frozen holdout task  "
+      },
+      "capability": "/all#HeaderComponent.addTodo:app-todo-header input.new-todo",
+      "before": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "network": {
+        "blocked": [],
+        "apiRequests": []
+      },
+      "tools": [
+        {
+          "name": "angular_addTodo_8ce7c12f7a",
+          "description": "Synthetic modern holdout remediated runtime",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "title"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "const": "ui-dispatched"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "status",
+              "url"
+            ],
+            "additionalProperties": false
+          },
+          "annotations": {
+            "readOnlyHint": false,
+            "destructiveHint": true,
+            "openWorldHint": true
+          }
+        }
+      ],
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:60742/#/all\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:60742/#/all"
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          },
+          {
+            "title": "Frozen holdout task",
+            "completed": false,
+            "editing": false
+          }
+        ],
+        "activeCount": "3",
+        "input": ""
+      },
+      "effectVerified": true,
+      "status": "effect-verified"
+    },
+    {
+      "id": "toggle_todo",
+      "phase": "exact-frozen-input",
+      "args": {
+        "todo": {
+          "title": "Read fixture article",
+          "completed": false
+        }
+      },
+      "capability": "/all#TodoItemComponent.toggleTodo:app-todo-item input.toggle",
+      "before": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "network": {
+        "blocked": [],
+        "apiRequests": []
+      },
+      "tools": [
+        {
+          "name": "angular_toggleTodo_4d449069ec",
+          "description": "Synthetic modern holdout remediated runtime",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "todo": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "completed": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "title",
+                  "completed"
+                ],
+                "additionalProperties": false
+              },
+              "value": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "todo",
+              "value"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "const": "ui-dispatched"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "status",
+              "url"
+            ],
+            "additionalProperties": false
+          },
+          "annotations": {
+            "readOnlyHint": false,
+            "destructiveHint": true,
+            "openWorldHint": true
+          }
+        }
+      ],
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "data must have required property 'value'"
+          }
+        ],
+        "isError": true
+      },
+      "after": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "effectVerified": false,
+      "status": "tool-error"
+    },
+    {
+      "id": "delete_todo",
+      "phase": "exact-frozen-input",
+      "args": {
+        "todo": {
+          "title": "Clean fixture inbox",
+          "completed": false
+        }
+      },
+      "capability": "/all#TodoListComponent.removeTodo:app-todo-list app-todo-item button.destroy",
+      "before": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "network": {
+        "blocked": [],
+        "apiRequests": []
+      },
+      "tools": [
+        {
+          "name": "angular_removeTodo_3c807038f1",
+          "description": "Synthetic modern holdout remediated runtime",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "todo": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "completed": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "title",
+                  "completed"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "todo"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "const": "ui-dispatched"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "status",
+              "url"
+            ],
+            "additionalProperties": false
+          },
+          "annotations": {
+            "readOnlyHint": false,
+            "destructiveHint": true,
+            "openWorldHint": true
+          }
+        }
+      ],
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:60742/#/all\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:60742/#/all"
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "1",
+        "input": ""
+      },
+      "effectVerified": true,
+      "status": "effect-verified"
+    },
+    {
+      "id": "toggle_all",
+      "phase": "exact-frozen-input",
+      "args": {
+        "completed": true
+      },
+      "capability": "/all#TodoListComponent.toggleAll:app-todo-list input.toggle-all",
+      "before": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "network": {
+        "blocked": [],
+        "apiRequests": []
+      },
+      "tools": [
+        {
+          "name": "angular_toggleAll_ed9a1b7336",
+          "description": "Synthetic modern holdout remediated runtime",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "checked": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "checked"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "const": "ui-dispatched"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "status",
+              "url"
+            ],
+            "additionalProperties": false
+          },
+          "annotations": {
+            "readOnlyHint": false,
+            "destructiveHint": true,
+            "openWorldHint": true
+          }
+        }
+      ],
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "data must have required property 'checked', data must NOT have additional properties"
+          }
+        ],
+        "isError": true
+      },
+      "after": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "effectVerified": false,
+      "status": "tool-error"
+    },
+    {
+      "id": "edit_todo",
+      "phase": "exact-frozen-input",
+      "args": {
+        "todo": {
+          "title": "Read fixture article",
+          "completed": false
+        },
+        "title": "  Revised fixture article  "
+      },
+      "capability": "/all#TodoItemComponent.commitEdit:app-todo-item input.edit",
+      "before": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "network": {
+        "blocked": [],
+        "apiRequests": []
+      },
+      "tools": [
+        {
+          "name": "angular_commitEdit_27538f968f",
+          "description": "Synthetic modern holdout remediated runtime",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "todo": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "completed": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "title",
+                  "completed"
+                ],
+                "additionalProperties": false
+              },
+              "title": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "todo",
+              "title"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "const": "ui-dispatched"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "status",
+              "url"
+            ],
+            "additionalProperties": false
+          },
+          "annotations": {
+            "readOnlyHint": false,
+            "destructiveHint": true,
+            "openWorldHint": true
+          }
+        }
+      ],
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:60742/#/all\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:60742/#/all"
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Revised fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "effectVerified": true,
+      "status": "effect-verified"
+    },
+    {
+      "id": "clear_completed",
+      "phase": "exact-frozen-input",
+      "args": {},
+      "capability": "/all#FooterComponent.clearCompleted:app-todo-footer button.clear-completed",
+      "before": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "network": {
+        "blocked": [],
+        "apiRequests": []
+      },
+      "tools": [
+        {
+          "name": "angular_clearCompleted_a2b2bcb43e",
+          "description": "Synthetic modern holdout remediated runtime",
+          "inputSchema": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "const": "ui-dispatched"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "status",
+              "url"
+            ],
+            "additionalProperties": false
+          },
+          "annotations": {
+            "readOnlyHint": false,
+            "destructiveHint": true,
+            "openWorldHint": true
+          }
+        }
+      ],
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:60742/#/all\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:60742/#/all"
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "effectVerified": true,
+      "status": "effect-verified"
+    }
+  ],
+  "compilerNative": [
+    {
+      "id": "filter_todos",
+      "phase": "compiler-native-with-recorded-source-mapping",
+      "args": {
+        "route": "/active"
+      },
+      "capability": "/all#FooterComponent.navigate:app-todo-footer a[routerlink]",
+      "before": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "network": {
+        "blocked": [],
+        "apiRequests": []
+      },
+      "tools": [
+        {
+          "name": "angular_navigate_c080d829d0",
+          "description": "Synthetic modern holdout remediated runtime",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "route": {
+                "type": "string",
+                "enum": [
+                  "/",
+                  "/active",
+                  "/completed"
+                ]
+              }
+            },
+            "required": [
+              "route"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "const": "ui-dispatched"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "status",
+              "url"
+            ],
+            "additionalProperties": false
+          },
+          "annotations": {
+            "readOnlyHint": false,
+            "destructiveHint": true,
+            "openWorldHint": true
+          }
+        }
+      ],
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:60742/#/active\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:60742/#/active"
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:60742/#/active",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "effectVerified": true,
+      "status": "effect-verified"
+    },
+    {
+      "id": "add_todo",
+      "phase": "compiler-native-with-recorded-source-mapping",
+      "args": {
+        "title": "  Frozen holdout task  "
+      },
+      "capability": "/all#HeaderComponent.addTodo:app-todo-header input.new-todo",
+      "before": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "network": {
+        "blocked": [],
+        "apiRequests": []
+      },
+      "tools": [
+        {
+          "name": "angular_addTodo_8ce7c12f7a",
+          "description": "Synthetic modern holdout remediated runtime",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "title"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "const": "ui-dispatched"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "status",
+              "url"
+            ],
+            "additionalProperties": false
+          },
+          "annotations": {
+            "readOnlyHint": false,
+            "destructiveHint": true,
+            "openWorldHint": true
+          }
+        }
+      ],
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:60742/#/all\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:60742/#/all"
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          },
+          {
+            "title": "Frozen holdout task",
+            "completed": false,
+            "editing": false
+          }
+        ],
+        "activeCount": "3",
+        "input": ""
+      },
+      "effectVerified": true,
+      "status": "effect-verified"
+    },
+    {
+      "id": "toggle_todo",
+      "phase": "compiler-native-with-recorded-source-mapping",
+      "args": {
+        "todo": {
+          "title": "Read fixture article",
+          "completed": false
+        },
+        "value": true
+      },
+      "capability": "/all#TodoItemComponent.toggleTodo:app-todo-item input.toggle",
+      "before": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "network": {
+        "blocked": [],
+        "apiRequests": []
+      },
+      "tools": [
+        {
+          "name": "angular_toggleTodo_4d449069ec",
+          "description": "Synthetic modern holdout remediated runtime",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "todo": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "completed": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "title",
+                  "completed"
+                ],
+                "additionalProperties": false
+              },
+              "value": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "todo",
+              "value"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "const": "ui-dispatched"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "status",
+              "url"
+            ],
+            "additionalProperties": false
+          },
+          "annotations": {
+            "readOnlyHint": false,
+            "destructiveHint": true,
+            "openWorldHint": true
+          }
+        }
+      ],
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:60742/#/all\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:60742/#/all"
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": true,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "1",
+        "input": ""
+      },
+      "effectVerified": true,
+      "status": "effect-verified"
+    },
+    {
+      "id": "delete_todo",
+      "phase": "compiler-native-with-recorded-source-mapping",
+      "args": {
+        "todo": {
+          "title": "Clean fixture inbox",
+          "completed": false
+        }
+      },
+      "capability": "/all#TodoListComponent.removeTodo:app-todo-list app-todo-item button.destroy",
+      "before": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "network": {
+        "blocked": [],
+        "apiRequests": []
+      },
+      "tools": [
+        {
+          "name": "angular_removeTodo_3c807038f1",
+          "description": "Synthetic modern holdout remediated runtime",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "todo": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "completed": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "title",
+                  "completed"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "todo"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "const": "ui-dispatched"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "status",
+              "url"
+            ],
+            "additionalProperties": false
+          },
+          "annotations": {
+            "readOnlyHint": false,
+            "destructiveHint": true,
+            "openWorldHint": true
+          }
+        }
+      ],
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:60742/#/all\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:60742/#/all"
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "1",
+        "input": ""
+      },
+      "effectVerified": true,
+      "status": "effect-verified"
+    },
+    {
+      "id": "toggle_all",
+      "phase": "compiler-native-with-recorded-source-mapping",
+      "args": {
+        "checked": true
+      },
+      "capability": "/all#TodoListComponent.toggleAll:app-todo-list input.toggle-all",
+      "before": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "network": {
+        "blocked": [],
+        "apiRequests": []
+      },
+      "tools": [
+        {
+          "name": "angular_toggleAll_ed9a1b7336",
+          "description": "Synthetic modern holdout remediated runtime",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "checked": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "checked"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "const": "ui-dispatched"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "status",
+              "url"
+            ],
+            "additionalProperties": false
+          },
+          "annotations": {
+            "readOnlyHint": false,
+            "destructiveHint": true,
+            "openWorldHint": true
+          }
+        }
+      ],
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:60742/#/all\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:60742/#/all"
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": true,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": true,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "0",
+        "input": ""
+      },
+      "effectVerified": true,
+      "status": "effect-verified"
+    },
+    {
+      "id": "edit_todo",
+      "phase": "compiler-native-with-recorded-source-mapping",
+      "args": {
+        "todo": {
+          "title": "Read fixture article",
+          "completed": false
+        },
+        "title": "  Revised fixture article  "
+      },
+      "capability": "/all#TodoItemComponent.commitEdit:app-todo-item input.edit",
+      "before": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "network": {
+        "blocked": [],
+        "apiRequests": []
+      },
+      "tools": [
+        {
+          "name": "angular_commitEdit_27538f968f",
+          "description": "Synthetic modern holdout remediated runtime",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "todo": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "completed": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "title",
+                  "completed"
+                ],
+                "additionalProperties": false
+              },
+              "title": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "todo",
+              "title"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "const": "ui-dispatched"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "status",
+              "url"
+            ],
+            "additionalProperties": false
+          },
+          "annotations": {
+            "readOnlyHint": false,
+            "destructiveHint": true,
+            "openWorldHint": true
+          }
+        }
+      ],
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:60742/#/all\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:60742/#/all"
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Revised fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "effectVerified": true,
+      "status": "effect-verified"
+    },
+    {
+      "id": "clear_completed",
+      "phase": "compiler-native-with-recorded-source-mapping",
+      "args": {},
+      "capability": "/all#FooterComponent.clearCompleted:app-todo-footer button.clear-completed",
+      "before": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "network": {
+        "blocked": [],
+        "apiRequests": []
+      },
+      "tools": [
+        {
+          "name": "angular_clearCompleted_a2b2bcb43e",
+          "description": "Synthetic modern holdout remediated runtime",
+          "inputSchema": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "const": "ui-dispatched"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "status",
+              "url"
+            ],
+            "additionalProperties": false
+          },
+          "annotations": {
+            "readOnlyHint": false,
+            "destructiveHint": true,
+            "openWorldHint": true
+          }
+        }
+      ],
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:60742/#/all\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:60742/#/all"
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "effectVerified": true,
+      "status": "effect-verified"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "edit_todo",
+      "phase": "duplicate-titles-refused",
+      "args": {
+        "todo": {
+          "title": "Read fixture article",
+          "completed": false
+        },
+        "title": "  Revised fixture article  "
+      },
+      "capability": "/all#TodoItemComponent.commitEdit:app-todo-item input.edit",
+      "before": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          },
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          }
+        ],
+        "activeCount": "3",
+        "input": "Read fixture article"
+      },
+      "network": {
+        "blocked": [],
+        "apiRequests": []
+      },
+      "tools": [
+        {
+          "name": "angular_commitEdit_27538f968f",
+          "description": "Synthetic modern holdout remediated runtime",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "todo": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "completed": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "title",
+                  "completed"
+                ],
+                "additionalProperties": false
+              },
+              "title": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "todo",
+              "title"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "const": "ui-dispatched"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "status",
+              "url"
+            ],
+            "additionalProperties": false
+          },
+          "annotations": {
+            "readOnlyHint": false,
+            "destructiveHint": true,
+            "openWorldHint": true
+          }
+        }
+      ],
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "page.evaluate: Error: Projected item identity is missing or ambiguous in the source collection\n    at Object.select (eval at evaluate (:290:30), <anonymous>:1:4700)\n    at executeDom (eval at evaluate (:290:30), <anonymous>:1:6925)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+          }
+        ],
+        "isError": true
+      },
+      "after": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          },
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          }
+        ],
+        "activeCount": "3",
+        "input": "Read fixture article"
+      },
+      "effectVerified": false,
+      "refusalVerified": true,
+      "status": "refused-without-mutation"
+    },
+    {
+      "id": "edit_todo",
+      "phase": "other-row-editor-refused",
+      "args": {
+        "todo": {
+          "title": "Read fixture article",
+          "completed": false
+        },
+        "title": "  Revised fixture article  "
+      },
+      "capability": "/all#TodoItemComponent.commitEdit:app-todo-item input.edit",
+      "before": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": true
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "network": {
+        "blocked": [],
+        "apiRequests": []
+      },
+      "tools": [
+        {
+          "name": "angular_commitEdit_27538f968f",
+          "description": "Synthetic modern holdout remediated runtime",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "todo": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "completed": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "title",
+                  "completed"
+                ],
+                "additionalProperties": false
+              },
+              "title": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "todo",
+              "title"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "const": "ui-dispatched"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "status",
+              "url"
+            ],
+            "additionalProperties": false
+          },
+          "annotations": {
+            "readOnlyHint": false,
+            "destructiveHint": true,
+            "openWorldHint": true
+          }
+        }
+      ],
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "page.evaluate: Error: Another inline editor is active; the requested row is not open\n    at executeDom (eval at evaluate (:290:30), <anonymous>:1:6170)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+          }
+        ],
+        "isError": true
+      },
+      "after": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": true
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "effectVerified": false,
+      "refusalVerified": true,
+      "status": "refused-without-mutation"
+    },
+    {
+      "id": "edit_todo",
+      "phase": "blank-edit-source-delete",
+      "args": {
+        "todo": {
+          "title": "Read fixture article",
+          "completed": false
+        },
+        "title": "   "
+      },
+      "capability": "/all#TodoItemComponent.commitEdit:app-todo-item input.edit",
+      "before": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "network": {
+        "blocked": [],
+        "apiRequests": []
+      },
+      "tools": [
+        {
+          "name": "angular_commitEdit_27538f968f",
+          "description": "Synthetic modern holdout remediated runtime",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "todo": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "completed": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "title",
+                  "completed"
+                ],
+                "additionalProperties": false
+              },
+              "title": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "todo",
+              "title"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "const": "ui-dispatched"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "status",
+              "url"
+            ],
+            "additionalProperties": false
+          },
+          "annotations": {
+            "readOnlyHint": false,
+            "destructiveHint": true,
+            "openWorldHint": true
+          }
+        }
+      ],
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:60742/#/all\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:60742/#/all"
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "1",
+        "input": ""
+      },
+      "effectVerified": true,
+      "status": "effect-verified"
+    },
+    {
+      "id": "add_todo",
+      "phase": "blank-add-contract-refused",
+      "args": {
+        "title": "  "
+      },
+      "capability": "/all#HeaderComponent.addTodo:app-todo-header input.new-todo",
+      "before": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "network": {
+        "blocked": [],
+        "apiRequests": []
+      },
+      "tools": [
+        {
+          "name": "angular_addTodo_8ce7c12f7a",
+          "description": "Synthetic modern holdout remediated runtime",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "title"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "const": "ui-dispatched"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "status",
+              "url"
+            ],
+            "additionalProperties": false
+          },
+          "annotations": {
+            "readOnlyHint": false,
+            "destructiveHint": true,
+            "openWorldHint": true
+          }
+        }
+      ],
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "data/title must match pattern \"\\S\""
+          }
+        ],
+        "isError": true
+      },
+      "after": {
+        "url": "http://127.0.0.1:60742/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "effectVerified": false,
+      "refusalVerified": true,
+      "status": "refused-without-mutation"
+    }
+  ],
+  "sourcePatches": [],
+  "manifestPatches": [],
+  "runtimeContextAdditions": [],
+  "provenance": {
+    "measuredAt": "2026-11-10T11:40:56.310Z",
+    "repository": "https://github.com/tastejs/todomvc",
+    "commit": "ff43b02e59dfa604386bb382034b2cd07c2bcd8a",
+    "sourceDirectory": "/Users/joeljoseph/Desktop/Personal Work/ai-experiments-apps/angular-mcp-compiler/test-apps/fresh-todomvc/examples/angular",
+    "sourceManifestSha256": "494c3ce0d4156ffb58647e195fd3dccba25f3d765f43a3823e0d891863d55cc2",
+    "sourceIntegrity": [
+      {
+        "path": "examples/angular/.browserslistrc",
+        "expected": "4d917afcae808de480b3f540909d6f0a40ea6650bf6376a72d9708c8b8330640",
+        "observed": "4d917afcae808de480b3f540909d6f0a40ea6650bf6376a72d9708c8b8330640"
+      },
+      {
+        "path": "examples/angular/.editorconfig",
+        "expected": "08fe692cae5731d5ff601317e427ce338b9879472552ad1c9e41e8146a99d9d8",
+        "observed": "08fe692cae5731d5ff601317e427ce338b9879472552ad1c9e41e8146a99d9d8"
+      },
+      {
+        "path": "examples/angular/.gitignore",
+        "expected": "490d6c1a2883b072f9f2d8e19dc722daa65ad02a533bb4ab9d2d04f48a6b49c4",
+        "observed": "490d6c1a2883b072f9f2d8e19dc722daa65ad02a533bb4ab9d2d04f48a6b49c4"
+      },
+      {
+        "path": "examples/angular/angular.json",
+        "expected": "46d225a10039e2eca66592806e79f4ee38defc35a8cc2c78ffeef9d797fc8893",
+        "observed": "46d225a10039e2eca66592806e79f4ee38defc35a8cc2c78ffeef9d797fc8893"
+      },
+      {
+        "path": "examples/angular/package-lock.json",
+        "expected": "4048fb1e9b90c71328542775c3cfdac043a75fe45f3e82de8ece87819a4963e0",
+        "observed": "4048fb1e9b90c71328542775c3cfdac043a75fe45f3e82de8ece87819a4963e0"
+      },
+      {
+        "path": "examples/angular/package.json",
+        "expected": "9108d47abc16b54d25d5d9346e79bf36ab84745ebe7eead748feac5fa88e7fb6",
+        "observed": "9108d47abc16b54d25d5d9346e79bf36ab84745ebe7eead748feac5fa88e7fb6"
+      },
+      {
+        "path": "examples/angular/readme.md",
+        "expected": "5e8dbd917a10798bcd99a865411a9e773d1bbd223bad1e7a6967943c54da2d0c",
+        "observed": "5e8dbd917a10798bcd99a865411a9e773d1bbd223bad1e7a6967943c54da2d0c"
+      },
+      {
+        "path": "examples/angular/src/app/app.component.html",
+        "expected": "e68d1689d6a81aa36e3eeb002543209e253a3cf99a9f2368978e4e293037bbf5",
+        "observed": "e68d1689d6a81aa36e3eeb002543209e253a3cf99a9f2368978e4e293037bbf5"
+      },
+      {
+        "path": "examples/angular/src/app/app.component.ts",
+        "expected": "ab43f5258c0e1ea7d63689d3de05332d3e84ddb186b0d26fde40e704664e4c4d",
+        "observed": "ab43f5258c0e1ea7d63689d3de05332d3e84ddb186b0d26fde40e704664e4c4d"
+      },
+      {
+        "path": "examples/angular/src/app/app.config.ts",
+        "expected": "491877388539ae9c557ebe103fa1f6635ea45d9ff591ea131cb50339f12b34a4",
+        "observed": "491877388539ae9c557ebe103fa1f6635ea45d9ff591ea131cb50339f12b34a4"
+      },
+      {
+        "path": "examples/angular/src/app/app.routes.ts",
+        "expected": "6bd0785fbb84660d7aeb4e5a1dcb7cd3203c57f7ac07a28beb6f361bf0be3926",
+        "observed": "6bd0785fbb84660d7aeb4e5a1dcb7cd3203c57f7ac07a28beb6f361bf0be3926"
+      },
+      {
+        "path": "examples/angular/src/app/footer/footer.component.html",
+        "expected": "21e2b2dbd3cbbc9e0bdc81c3e91d0faf6b4fb270a839ffc2afe9bde687613874",
+        "observed": "21e2b2dbd3cbbc9e0bdc81c3e91d0faf6b4fb270a839ffc2afe9bde687613874"
+      },
+      {
+        "path": "examples/angular/src/app/footer/footer.component.ts",
+        "expected": "633657167b889bd3fee8d689d81fe59fcbb38c8c54cb5f99f103c1161f8d0810",
+        "observed": "633657167b889bd3fee8d689d81fe59fcbb38c8c54cb5f99f103c1161f8d0810"
+      },
+      {
+        "path": "examples/angular/src/app/header/header.component.html",
+        "expected": "e8ac14c4db4e580af5de734a526e850a7faf71311a145f2f94193a87c9e72743",
+        "observed": "e8ac14c4db4e580af5de734a526e850a7faf71311a145f2f94193a87c9e72743"
+      },
+      {
+        "path": "examples/angular/src/app/header/header.component.ts",
+        "expected": "3ab2cd5459464871966307e4afdd9205f86570034ded01adedce8d4339c209e6",
+        "observed": "3ab2cd5459464871966307e4afdd9205f86570034ded01adedce8d4339c209e6"
+      },
+      {
+        "path": "examples/angular/src/app/todo-item/todo-item.component.html",
+        "expected": "3d54173f430f8e2772bc99ba9fad6c8e8886ae8832c7d1d2b10270135ef8672e",
+        "observed": "3d54173f430f8e2772bc99ba9fad6c8e8886ae8832c7d1d2b10270135ef8672e"
+      },
+      {
+        "path": "examples/angular/src/app/todo-item/todo-item.component.ts",
+        "expected": "4abfe32ecc2277eaf9c9e5472bd62a8bc1c258e08eb3ffd4c22ad327b61c847f",
+        "observed": "4abfe32ecc2277eaf9c9e5472bd62a8bc1c258e08eb3ffd4c22ad327b61c847f"
+      },
+      {
+        "path": "examples/angular/src/app/todo-list/todo-list.component.html",
+        "expected": "a7bc2a72746abb190f025bbb7e441efa76e982c88ce53a82e1a96f2ea62bdc01",
+        "observed": "a7bc2a72746abb190f025bbb7e441efa76e982c88ce53a82e1a96f2ea62bdc01"
+      },
+      {
+        "path": "examples/angular/src/app/todo-list/todo-list.component.ts",
+        "expected": "7aff333ee921aa1a90a5a870a8b3cf5f472ac1548b4b7ee199909e2e3f400d4a",
+        "observed": "7aff333ee921aa1a90a5a870a8b3cf5f472ac1548b4b7ee199909e2e3f400d4a"
+      },
+      {
+        "path": "examples/angular/src/app/todos.service.ts",
+        "expected": "e0d975f7148b642bdb7f788ac2e2e22c1edf53ab10d5ac73127a7abf5eeb686e",
+        "observed": "e0d975f7148b642bdb7f788ac2e2e22c1edf53ab10d5ac73127a7abf5eeb686e"
+      },
+      {
+        "path": "examples/angular/src/assets/.gitkeep",
+        "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "observed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "examples/angular/src/favicon.ico",
+        "expected": "f9102be80297c0529207607be5277b4f90bca89d65988fa1771b91c7894e815f",
+        "observed": "f9102be80297c0529207607be5277b4f90bca89d65988fa1771b91c7894e815f"
+      },
+      {
+        "path": "examples/angular/src/index.html",
+        "expected": "1ebaf8d082b7337ea3369fc204a99d2fbf410decfcf02d474a59c1d7619d0881",
+        "observed": "1ebaf8d082b7337ea3369fc204a99d2fbf410decfcf02d474a59c1d7619d0881"
+      },
+      {
+        "path": "examples/angular/src/main.ts",
+        "expected": "98f31b67b543962dfae3f3e55e5fbd56c77d1bc6835a5c317dd92fa7d4a022c8",
+        "observed": "98f31b67b543962dfae3f3e55e5fbd56c77d1bc6835a5c317dd92fa7d4a022c8"
+      },
+      {
+        "path": "examples/angular/src/styles.css",
+        "expected": "9c73b493f7007bc85de7acd010f217fb25b992dfdc5ac8d6b09b2159d3601672",
+        "observed": "9c73b493f7007bc85de7acd010f217fb25b992dfdc5ac8d6b09b2159d3601672"
+      },
+      {
+        "path": "examples/angular/tsconfig.app.json",
+        "expected": "a184f5fb7f000739dc69163beecad2de028802e3d89216a0351d86eb55156e45",
+        "observed": "a184f5fb7f000739dc69163beecad2de028802e3d89216a0351d86eb55156e45"
+      },
+      {
+        "path": "examples/angular/tsconfig.json",
+        "expected": "2a088986db02612cb933ac4ce66af4a5697d96b2d3f5d4e2e8860e977a868d23",
+        "observed": "2a088986db02612cb933ac4ce66af4a5697d96b2d3f5d4e2e8860e977a868d23"
+      },
+      {
+        "path": "license.md",
+        "expected": "32238c5c6759b589ea768661b6eb0fcb42449b74d57cdf09928743f2e1eb748d",
+        "observed": "32238c5c6759b589ea768661b6eb0fcb42449b74d57cdf09928743f2e1eb748d"
+      }
+    ],
+    "compilerFiles": [
+      {
+        "path": "src/approval.ts",
+        "sha256": "db2f436ced733363ef508c6c0babb0f55eeb7af4d0678cc99ce94249dc83ba77"
+      },
+      {
+        "path": "src/baseline.ts",
+        "sha256": "49fa9ab1a98dd9c9ab1e0c4745e0fe66934c864c6fd4228da599d8984bbfc0e9"
+      },
+      {
+        "path": "src/browser-adapter.ts",
+        "sha256": "75cba09eadc9a2e451f8c966b563c6cc1903f0f9bcddd8607b89f502ba2315f5"
+      },
+      {
+        "path": "src/browser-runtime.ts",
+        "sha256": "6ee001f7a7c1ab46ba2fdd83aba429d26b33fdb8890f009aae0f3da5524ad821"
+      },
+      {
+        "path": "src/certification.ts",
+        "sha256": "8367df5f2236ab30242c9e53908186e764d3c966d906cc69b82129f25a2fdd4b"
+      },
+      {
+        "path": "src/certify.ts",
+        "sha256": "c1b2ddb1cdac045e659a8c9e94b0134aa906f7d70118918d56a856c459041516"
+      },
+      {
+        "path": "src/cli.ts",
+        "sha256": "b1dbe6de7cec92e68e50022406246c349ac4c6d5bf8fec43437220546d4721b6"
+      },
+      {
+        "path": "src/codegen.ts",
+        "sha256": "db98f36c3a51b2e7795a4653f79ff511e912d455969e632c447dc7f2851a776d"
+      },
+      {
+        "path": "src/compiler.ts",
+        "sha256": "26233887fb53d01d3918a257d3c31fd89b35fce1cd6cc525aab4972ce658aeec"
+      },
+      {
+        "path": "src/counter-compiler.ts",
+        "sha256": "c4edf04aa02daed7eabe0d0ab834cbea1967e3f635e4d520f963c62725cac69c"
+      },
+      {
+        "path": "src/demo.ts",
+        "sha256": "2e6342cb070fc0f20112122811b2cfd8b899f0e7bd3d38209e0024d9f3541101"
+      },
+      {
+        "path": "src/email-pattern.ts",
+        "sha256": "4afe80b0872a26f9be59b56ae592d64d0770c1a8057d0474b06d228362154755"
+      },
+      {
+        "path": "src/event-workflows.ts",
+        "sha256": "3ebea61b1b0b487d7078a283da465e9324e5ee278a2dbb41ac77f7b3f391680b"
+      },
+      {
+        "path": "src/experiment.ts",
+        "sha256": "32235451a9e0525668e4b00bd86e2cc35ebaa69282a978589f6459a903a899c4"
+      },
+      {
+        "path": "src/handler-constraints.ts",
+        "sha256": "390220fa090a5bb5278d6633695e2482b9c5b266689452e8237fee0b47413f22"
+      },
+      {
+        "path": "src/hash.ts",
+        "sha256": "910057cdcad237e56529705a4530b3d6836168aaf25a073e2ef77ade53fecefc"
+      },
+      {
+        "path": "src/host-context.ts",
+        "sha256": "86ac8dd23670185d15f08c52cadc80390da4d4727ebc6097d321c258090692de"
+      },
+      {
+        "path": "src/index.ts",
+        "sha256": "49b839dff72def0fbd9d8d8a10b22e18578a51c051e656b290c2c95c5b699f25"
+      },
+      {
+        "path": "src/inline-reveal.ts",
+        "sha256": "6d3504a2630d6ec0549fcdac53bde414c949f83dd9bcf39d394ba15841b1a204"
+      },
+      {
+        "path": "src/integrate.ts",
+        "sha256": "fc23529a7df185117bf042f4100b5bbab95bafed487b53dc08af963821945eb1"
+      },
+      {
+        "path": "src/integrated-serve.ts",
+        "sha256": "3cc6969ab11c57b712998ad8776e6149d976903c8d450b03b17eff87e2cdddd4"
+      },
+      {
+        "path": "src/integration-compiler.ts",
+        "sha256": "7288b62612a66f721f3d95353a0b86ad1990516f44d9de610aa537fb52505ffa"
+      },
+      {
+        "path": "src/integration-mcp.ts",
+        "sha256": "7dd202cdf6df224258c48113b18431c1f6e7f996ac364ebf6af7cd9a629b782b"
+      },
+      {
+        "path": "src/integration-project.ts",
+        "sha256": "6fe3a7d4207c8920ea48d1ff2a7ecc28fd29d0ec6567f14153cbd85756cb1d70"
+      },
+      {
+        "path": "src/integration-runtime.ts",
+        "sha256": "3d31ba5b0f0bfe4668bf111d5fdcac992b316ce38a2ea5693369ab998f26e9ac"
+      },
+      {
+        "path": "src/integration-ui.ts",
+        "sha256": "2495ce547774af1e42c07f7635d863f20e9298f2462e5493409256a32cfc2aef"
+      },
+      {
+        "path": "src/live-forms.ts",
+        "sha256": "cf24b028ebce48f6016bfd81eee0e943d7fa0b4df79616545e3994766142c64a"
+      },
+      {
+        "path": "src/live-rules.ts",
+        "sha256": "96bc5eaae62193565ef9011ab248cb7f1557821c7da03ed4eb3660d95a54151b"
+      },
+      {
+        "path": "src/local-app.ts",
+        "sha256": "42e903e95b5d9c3d9a18940a15bc20ce9fadfc194ade3532fdbea66dfdef875e"
+      },
+      {
+        "path": "src/mcp.ts",
+        "sha256": "376e00b1aef8f60edb19aa0b2ee542dfe675fdcb6e66dcc1b027856368a162b5"
+      },
+      {
+        "path": "src/model.ts",
+        "sha256": "b5a620afc3ffe8fb31cf48cf5301faf201b7cf7f67ecf8e03aee50aff0ce9876"
+      },
+      {
+        "path": "src/native-submit.ts",
+        "sha256": "c81edf5a1a5d9c07fccea08082be1ae8eaa6980204e96da08f3efaac846293bd"
+      },
+      {
+        "path": "src/probe-learning.ts",
+        "sha256": "d2bcd2fda2a1ab70835f87c4d3a35a8d3630c399a65fb1dab33fa3512d271cab"
+      },
+      {
+        "path": "src/probe.ts",
+        "sha256": "39bd98bf2722b414e7954c37139cb338af49224f50fa01f7a77ffdb56f2a0699"
+      },
+      {
+        "path": "src/project.ts",
+        "sha256": "563fe9f409039f7ede638a4cd3c643d092ea684efc7bccae1939e8b3653554d8"
+      },
+      {
+        "path": "src/projected-target.ts",
+        "sha256": "a9c73157ebe5161e8c4acc20202ad72d8286e2f7824bd02b06e2d4967a6057dc"
+      },
+      {
+        "path": "src/refine.ts",
+        "sha256": "e7b43087781f1033a1a8d7bfb34897e9d1c72c317d5ce4c9520dc7ad9d991194"
+      },
+      {
+        "path": "src/router-links.ts",
+        "sha256": "7da0ab6e045d889675566ddd9b94014cc9f1feda9e488a195de77054d88e87fc"
+      },
+      {
+        "path": "src/samples.ts",
+        "sha256": "9b0eed10d1b4527454d1401d8560f24c32545b00223bc85ffef6f6a6e76f9f93"
+      },
+      {
+        "path": "src/scalar-model-workflow.ts",
+        "sha256": "02fb4e7cd9daa646a506ef8decc09bfe26f1e20cc19213aa0a73fdda068f95d3"
+      },
+      {
+        "path": "src/schema.ts",
+        "sha256": "cb65837a7f4776034c21ba29483b6c5c0a0e5d96fd0105cb7558588defca606f"
+      },
+      {
+        "path": "src/serve.ts",
+        "sha256": "03c31bdc2814293d939fc7d469c67def2908649aa48a828a68681ba1d4f9281e"
+      },
+      {
+        "path": "src/template-callbacks.ts",
+        "sha256": "221bc0084bb5164bb5c2c99ebab870df198a073c3e118c4edb0a3d551f947a3f"
+      },
+      {
+        "path": "src/template-components.ts",
+        "sha256": "137b5759ab4232a98bad202c6c83e8b356cbd2751429c8556fbfa9432dbc7de0"
+      },
+      {
+        "path": "src/validator-constraints.ts",
+        "sha256": "12088f48761d182523ab869036180b2af2738d82cfe0512f59ad71aff24ee313"
+      },
+      {
+        "path": "src/workflow-compiler.ts",
+        "sha256": "d6cca4eb8559f1fde91bb6768a36f1e6dabe75b738fd6b73eb779a92edfcdbac"
+      },
+      {
+        "path": "src/wrapped-controls.ts",
+        "sha256": "73899545ca24dec439f9f9655b86088aadf498e22472448d3890a63ee960b5ab"
+      }
+    ],
+    "compilerDigest": "a0268035837b1c071e839b0b88b5a1ff39525d3c39b7dd5935bf07f78ebd2c2a",
+    "evaluatorFiles": [
+      {
+        "path": "mcp-runtime.mts",
+        "sha256": "af5863b398604ec66af9908d6c1bc002fc82155edfd05c7a4760fd9071bdcd6d"
+      },
+      {
+        "path": "reference.mjs",
+        "sha256": "c4ef7508f4c509f0f5c7a6d2e49ecb58c35177f3c02a4df4d6e1eaca293c08f8"
+      },
+      {
+        "path": "fixture.mjs",
+        "sha256": "094047b6a5b74de6b3ed156ceecd1c9d3faec905a5aa9ef9284c36a4e6ac1e76"
+      }
+    ],
+    "evaluatorDigest": "3865c9ddfbfb14ca7b02314af8e0b92b77db7c17ac2766d231af5fa8722753c6",
+    "manifestSha256": "c130551b1d1b84d16e231fec348470dbc8869bfd4549b534b2d4d383e135bdf5",
+    "frozenEvidenceBefore": {
+      "labels.json": "1cb5f42e42051d3600a2a5c509e2a04f3102a11862c089a593ad349b56a31795",
+      "source-manifest.json": "494c3ce0d4156ffb58647e195fd3dccba25f3d765f43a3823e0d891863d55cc2",
+      "inventory.json": "f89847da1905824e2792cff5a52221ba50519478ac87806ab009465f26f9e1f3",
+      "prerequisites.json": "88f86dbabe72a6020a72518522c88d6ea876dca81803d8ffd0182a4080abadf0",
+      "FREEZE.sha256": "3abdf1017b246717493496d0195674249c261e103787ffef699d1880711da0dd",
+      "first-pass-manifest.json": "2400867adb5b96cdb583833cb22174b724d2374be2128b27d60bcb644bfe06c5",
+      "first-pass-runtime-results.json": "1b363ed3603ffc50cab65393296dd914cd928a29c1825213a8070a91716e353f",
+      "reference-results.json": "edcad68649d817f5920ccf6c4d1555d5f6c7c999e83202a8788d037264f63576"
+    },
+    "freezeChecks": [
+      {
+        "file": "labels.json",
+        "expected": "1cb5f42e42051d3600a2a5c509e2a04f3102a11862c089a593ad349b56a31795",
+        "observed": "1cb5f42e42051d3600a2a5c509e2a04f3102a11862c089a593ad349b56a31795"
+      },
+      {
+        "file": "source-manifest.json",
+        "expected": "494c3ce0d4156ffb58647e195fd3dccba25f3d765f43a3823e0d891863d55cc2",
+        "observed": "494c3ce0d4156ffb58647e195fd3dccba25f3d765f43a3823e0d891863d55cc2"
+      },
+      {
+        "file": "inventory.json",
+        "expected": "f89847da1905824e2792cff5a52221ba50519478ac87806ab009465f26f9e1f3",
+        "observed": "f89847da1905824e2792cff5a52221ba50519478ac87806ab009465f26f9e1f3"
+      },
+      {
+        "file": "prerequisites.json",
+        "expected": "88f86dbabe72a6020a72518522c88d6ea876dca81803d8ffd0182a4080abadf0",
+        "observed": "88f86dbabe72a6020a72518522c88d6ea876dca81803d8ffd0182a4080abadf0"
+      }
+    ],
+    "compilerTreeDigestBefore": "6405f73911b4aab10abe5b8e6e11668d764a7658d43ef1548097b8799cdab13f",
+    "compilerTreeDigestAfterCompile": "6405f73911b4aab10abe5b8e6e11668d764a7658d43ef1548097b8799cdab13f",
+    "compilerTreeDigestAfter": "6405f73911b4aab10abe5b8e6e11668d764a7658d43ef1548097b8799cdab13f",
+    "validForFinalGate": true
+  },
+  "server": {
+    "mode": "managed-pinned-source",
+    "baseUrl": "http://127.0.0.1:60742",
+    "sourceDirectory": "/Users/joeljoseph/Desktop/Personal Work/ai-experiments-apps/angular-mcp-compiler/test-apps/fresh-todomvc/examples/angular",
+    "logs": "❯ Building...\n✔ Building...\nInitial chunk files | Names         | Raw size\nmain.js             | main          | 25.39 kB | \nstyles.css          | styles        |  9.45 kB | \nscripts.js          | scripts       |  6.73 kB | \npolyfills.js        | polyfills     | 95 bytes | \n\n                    | Initial total | 41.66 kB\n\nApplication bundle generation complete. [0.848 seconds] - 2026-11-10T11:40:58.232Z\n\nWatch mode enabled. Watching for file changes...\nNOTE: Raw file sizes do not reflect development server per-request transformations.\n  ➜  Local:   http://127.0.0.1:60742/\n"
+  },
+  "finishedAt": "2026-11-10T11:41:19.439Z",
+  "totals": {
+    "frozenOperations": 7,
+    "exactBaselineEffects": 4,
+    "compilerNativeEffects": 7,
+    "boundariesPassed": 4
+  },
+  "frozenEvidenceAfter": {
+    "labels.json": "1cb5f42e42051d3600a2a5c509e2a04f3102a11862c089a593ad349b56a31795",
+    "source-manifest.json": "494c3ce0d4156ffb58647e195fd3dccba25f3d765f43a3823e0d891863d55cc2",
+    "inventory.json": "f89847da1905824e2792cff5a52221ba50519478ac87806ab009465f26f9e1f3",
+    "prerequisites.json": "88f86dbabe72a6020a72518522c88d6ea876dca81803d8ffd0182a4080abadf0",
+    "FREEZE.sha256": "3abdf1017b246717493496d0195674249c261e103787ffef699d1880711da0dd",
+    "first-pass-manifest.json": "2400867adb5b96cdb583833cb22174b724d2374be2128b27d60bcb644bfe06c5",
+    "first-pass-runtime-results.json": "1b363ed3603ffc50cab65393296dd914cd928a29c1825213a8070a91716e353f",
+    "reference-results.json": "edcad68649d817f5920ccf6c4d1555d5f6c7c999e83202a8788d037264f63576"
+  },
+  "frozenEvidencePreserved": true,
+  "compilerTreeDigestBefore": "6405f73911b4aab10abe5b8e6e11668d764a7658d43ef1548097b8799cdab13f",
+  "compilerTreeDigestAfterCompile": "6405f73911b4aab10abe5b8e6e11668d764a7658d43ef1548097b8799cdab13f",
+  "compilerTreeDigestAfter": "6405f73911b4aab10abe5b8e6e11668d764a7658d43ef1548097b8799cdab13f",
+  "validForFinalGate": true
+}

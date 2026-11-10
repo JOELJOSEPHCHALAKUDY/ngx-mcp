@@ -1,0 +1,117 @@
+{
+  "kind": "owned-post-archive-evaluation-cleanup",
+  "checkedAt": "2026-11-10T12:49:04.442Z",
+  "servers": [
+    {
+      "project": "finance",
+      "kind": "original",
+      "pid": 32738,
+      "port": 4451,
+      "cwd": "/tmp/integration-unseen-finance",
+      "pidAlive": false,
+      "portClosed": true
+    },
+    {
+      "project": "finance",
+      "kind": "staged",
+      "pid": 32742,
+      "port": 4461,
+      "cwd": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-10T12-38-37-608Z-32724/finance",
+      "pidAlive": false,
+      "portClosed": true
+    },
+    {
+      "project": "todo",
+      "kind": "original",
+      "pid": 33841,
+      "port": 4452,
+      "cwd": "/tmp/integration-unseen-todo",
+      "pidAlive": false,
+      "portClosed": true
+    },
+    {
+      "project": "todo",
+      "kind": "staged",
+      "pid": 33849,
+      "port": 4462,
+      "cwd": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-10T12-38-37-608Z-32724/todo",
+      "pidAlive": false,
+      "portClosed": true
+    },
+    {
+      "project": "shopping",
+      "kind": "original",
+      "pid": 34044,
+      "port": 4453,
+      "cwd": "/tmp/integration-unseen-shopping",
+      "pidAlive": false,
+      "portClosed": true
+    },
+    {
+      "project": "shopping",
+      "kind": "staged",
+      "pid": 34049,
+      "port": 4463,
+      "cwd": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-10T12-38-37-608Z-32724/shopping",
+      "pidAlive": false,
+      "portClosed": true
+    }
+  ],
+  "holdout": {
+    "port": 4376,
+    "portClosed": true
+  },
+  "allRecordedPidsStopped": true,
+  "allOwnedPortsClosed": true,
+  "browsers": {
+    "matrixPhases": [
+      {
+        "project": "finance",
+        "phase": "reference",
+        "finishedAt": "2026-11-10T12:40:54.172Z"
+      },
+      {
+        "project": "finance",
+        "phase": "raw",
+        "finishedAt": "2026-11-10T12:41:57.411Z"
+      },
+      {
+        "project": "finance",
+        "phase": "ui",
+        "finishedAt": "2026-11-10T12:43:09.273Z"
+      },
+      {
+        "project": "todo",
+        "phase": "reference",
+        "finishedAt": "2026-11-10T12:43:58.604Z"
+      },
+      {
+        "project": "todo",
+        "phase": "raw",
+        "finishedAt": "2026-11-10T12:44:13.368Z"
+      },
+      {
+        "project": "todo",
+        "phase": "ui",
+        "finishedAt": "2026-11-10T12:44:27.929Z"
+      },
+      {
+        "project": "shopping",
+        "phase": "reference",
+        "finishedAt": "2026-11-10T12:46:07.734Z"
+      },
+      {
+        "project": "shopping",
+        "phase": "raw",
+        "finishedAt": "2026-11-10T12:46:31.967Z"
+      },
+      {
+        "project": "shopping",
+        "phase": "ui",
+        "finishedAt": "2026-11-10T12:46:58.928Z"
+      }
+    ],
+    "holdoutFinishedAt": "2026-11-10T12:47:52.647Z",
+    "evidence": "Both pinned harnesses await browser.close() before writing finalized reports. All nine matrix reports and the holdout report finalized successfully. Browser PIDs were not separately recorded."
+  }
+}

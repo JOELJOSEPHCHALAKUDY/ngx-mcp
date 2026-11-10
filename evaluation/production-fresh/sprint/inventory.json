@@ -1,0 +1,46 @@
+{
+  "project": "sprint",
+  "labeling": "Source-only authored before installing, building or instrumenting these projects. No generated schemas or compiler metadata inspected. Same development agent; no independent-human adjudication.",
+  "sourceRevision": "22f4ce92e1ae18f885e5153c945255443419d656",
+  "sourceAuthoredSecurityBoundaries": [
+    {
+      "id": "default_deny",
+      "expected": "Without explicit approved capabilities, catalog/actions reveal no private app values and perform no domain writes."
+    },
+    {
+      "id": "denied_action",
+      "expected": "Denied operation leaves frozen business storage and unrelated rows unchanged."
+    },
+    {
+      "id": "unapproved_write",
+      "expected": "A required approval cannot be bypassed by ordinary tool calls or by an agent supplying its own grant token."
+    },
+    {
+      "id": "expired_or_revoked",
+      "expected": "Expired/revoked authorization cannot execute the action; storage remains unchanged."
+    },
+    {
+      "id": "cross_session",
+      "expected": "An authorization or target handle from browser/user A cannot authorize a write in browser/user B; B data and A data remain unchanged."
+    },
+    {
+      "id": "audit_redaction",
+      "expected": "Audit records describe identity/operation/outcome without plaintext input passwords or complete private business payloads."
+    }
+  ],
+  "selectedPositiveCases": [
+    "register_user",
+    "login_user",
+    "create_project",
+    "create_task"
+  ],
+  "selectedNativeBoundaries": [
+    "empty_project_blocked",
+    "cancel_project"
+  ],
+  "knownLimits": [
+    "Drag/drop and native confirm are outside this selected business corpus.",
+    "The source demo stores passwords in localStorage and is not a production identity system; tests use synthetic data.",
+    "getProjectById/update/delete do not enforce ownership in a backend. Framework session tests must not claim to repair upstream authorization."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "formatVersion": 1,
+  "selectedAt": "2026-11-10T16:05:18.701935+00:00",
+  "sourcePolicy": "Pinned tracked upstream files unchanged. No source, dependency, template, or contract overlays.",
+  "files": {
+    "source-manifest.json": "9f81e01d4364a0388001bcc0474fc285994e5a82d03444020251568370b85fe5",
+    "labels.json": "b71cc36370902ddfe9d3ed3374fbb613dce7a8423dc0a10c2f35b7587be49c95",
+    "inventory.json": "1951df117db7d22de4df9dacfae76c993c85f2675ed186b703f2e5d34a7e24ff",
+    "LICENSE": "f719028bba7aa0e3e861f583ca82d4b714997211caf84677a7d3599f6b23b35a"
+  }
+}

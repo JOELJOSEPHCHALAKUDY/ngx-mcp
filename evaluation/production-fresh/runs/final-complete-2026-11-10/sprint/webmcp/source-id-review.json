@@ -1,0 +1,572 @@
+[
+  {
+    "sourceId": "ngmcp_07a613ae3b7cbdea7ee076ad",
+    "label": "button — src/app/components/dashboard/dashboard.component.ts:27",
+    "tag": "button",
+    "source": {
+      "file": "src/app/components/dashboard/dashboard.component.ts",
+      "start": 952,
+      "end": 1020,
+      "line": 27,
+      "column": 9
+    },
+    "operations": [
+      "describe",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_14c6f2e47d28559ac41b1ae2",
+    "label": "button — src/app/components/kanban/kanban.component.ts:75",
+    "tag": "button",
+    "source": {
+      "file": "src/app/components/kanban/kanban.component.ts",
+      "start": 2845,
+      "end": 2912,
+      "line": 75,
+      "column": 19
+    },
+    "operations": [
+      "describe",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_14f4b3b54cda3d069d6b72fa",
+    "label": "button — src/app/components/kanban/kanban.component.ts:38",
+    "tag": "button",
+    "source": {
+      "file": "src/app/components/kanban/kanban.component.ts",
+      "start": 1458,
+      "end": 1504,
+      "line": 38,
+      "column": 11
+    },
+    "operations": [
+      "describe",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_1c2a5db927f225fbd232364f",
+    "label": "mat-option — src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts:44",
+    "tag": "mat-option",
+    "source": {
+      "file": "src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts",
+      "start": 1640,
+      "end": 1665,
+      "line": 44,
+      "column": 13
+    },
+    "formId": "ngmcp_8b499b3c1b31c7582047456a",
+    "operations": [
+      "describe",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_269d7015d750178c589db050",
+    "label": "input password — src/app/components/auth/login/login.component.ts:40",
+    "tag": "input",
+    "source": {
+      "file": "src/app/components/auth/login/login.component.ts",
+      "start": 1428,
+      "end": 1508,
+      "line": 40,
+      "column": 15
+    },
+    "formId": "ngmcp_5d2f57b5772e13223215dd5b",
+    "operations": [
+      "describe",
+      "fill",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_2a7e9b25e386d54a09784d68",
+    "label": "input username — src/app/components/auth/login/login.component.ts:35",
+    "tag": "input",
+    "source": {
+      "file": "src/app/components/auth/login/login.component.ts",
+      "start": 1212,
+      "end": 1276,
+      "line": 35,
+      "column": 15
+    },
+    "formId": "ngmcp_5d2f57b5772e13223215dd5b",
+    "operations": [
+      "describe",
+      "fill",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_3689ab2dbc10cdb2b1fe48b3",
+    "label": "input password — src/app/components/auth/register/register.component.ts:45",
+    "tag": "input",
+    "source": {
+      "file": "src/app/components/auth/register/register.component.ts",
+      "start": 1664,
+      "end": 1744,
+      "line": 45,
+      "column": 15
+    },
+    "formId": "ngmcp_485f38c18ad43d90fec9527c",
+    "operations": [
+      "describe",
+      "fill",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_3f427051d54ea47294f1e3f5",
+    "label": "button — src/app/components/auth/login/login.component.ts:43",
+    "tag": "button",
+    "source": {
+      "file": "src/app/components/auth/login/login.component.ts",
+      "start": 1564,
+      "end": 1669,
+      "line": 43,
+      "column": 13
+    },
+    "formId": "ngmcp_5d2f57b5772e13223215dd5b",
+    "operations": [
+      "describe",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_485f38c18ad43d90fec9527c",
+    "label": "form — src/app/components/auth/register/register.component.ts:32",
+    "tag": "form",
+    "source": {
+      "file": "src/app/components/auth/register/register.component.ts",
+      "start": 1052,
+      "end": 1119,
+      "line": 32,
+      "column": 11
+    },
+    "operations": [
+      "describe",
+      "submit"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_507c2f733c88fa44ef3666d8",
+    "label": "button — src/app/components/dashboard/dashboard.component.ts:47",
+    "tag": "button",
+    "source": {
+      "file": "src/app/components/dashboard/dashboard.component.ts",
+      "start": 1769,
+      "end": 1837,
+      "line": 47,
+      "column": 13
+    },
+    "operations": [
+      "describe",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_50c11cc7894b33e3c489e30e",
+    "label": "input username — src/app/components/auth/register/register.component.ts:35",
+    "tag": "input",
+    "source": {
+      "file": "src/app/components/auth/register/register.component.ts",
+      "start": 1228,
+      "end": 1292,
+      "line": 35,
+      "column": 15
+    },
+    "formId": "ngmcp_485f38c18ad43d90fec9527c",
+    "operations": [
+      "describe",
+      "fill",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_51903f51076ea2d972bf08d8",
+    "label": "button — src/app/components/kanban/kanban.component.ts:151",
+    "tag": "button",
+    "source": {
+      "file": "src/app/components/kanban/kanban.component.ts",
+      "start": 5756,
+      "end": 5823,
+      "line": 151,
+      "column": 19
+    },
+    "operations": [
+      "describe",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_5b21ba19ec651c0375f057ca",
+    "label": "button — src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts:59",
+    "tag": "button",
+    "source": {
+      "file": "src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts",
+      "start": 2273,
+      "end": 2313,
+      "line": 59,
+      "column": 7
+    },
+    "operations": [
+      "describe",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_5d2f57b5772e13223215dd5b",
+    "label": "form — src/app/components/auth/login/login.component.ts:32",
+    "tag": "form",
+    "source": {
+      "file": "src/app/components/auth/login/login.component.ts",
+      "start": 1045,
+      "end": 1103,
+      "line": 32,
+      "column": 11
+    },
+    "operations": [
+      "describe",
+      "submit"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_6578ff961f1ceff5fe9cd59a",
+    "label": "input dueDate — src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts:52",
+    "tag": "input",
+    "source": {
+      "file": "src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts",
+      "start": 1962,
+      "end": 2040,
+      "line": 52,
+      "column": 11
+    },
+    "formId": "ngmcp_8b499b3c1b31c7582047456a",
+    "operations": [
+      "describe",
+      "fill",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_66fc1f622ec7d39e8d4a4013",
+    "label": "button — src/app/components/dialogs/create-project-dialog/create-project-dialog.component.ts:36",
+    "tag": "button",
+    "source": {
+      "file": "src/app/components/dialogs/create-project-dialog/create-project-dialog.component.ts",
+      "start": 1205,
+      "end": 1245,
+      "line": 36,
+      "column": 7
+    },
+    "operations": [
+      "describe",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_789a222a52c57b7495e8c00b",
+    "label": "form — src/app/components/dialogs/create-project-dialog/create-project-dialog.component.ts:23",
+    "tag": "form",
+    "source": {
+      "file": "src/app/components/dialogs/create-project-dialog/create-project-dialog.component.ts",
+      "start": 703,
+      "end": 731,
+      "line": 23,
+      "column": 7
+    },
+    "operations": [
+      "describe",
+      "submit"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_82fef9d9fab7a2124329753a",
+    "label": "input name — src/app/components/dialogs/create-project-dialog/create-project-dialog.component.ts:26",
+    "tag": "input",
+    "source": {
+      "file": "src/app/components/dialogs/create-project-dialog/create-project-dialog.component.ts",
+      "start": 832,
+      "end": 888,
+      "line": 26,
+      "column": 11
+    },
+    "formId": "ngmcp_789a222a52c57b7495e8c00b",
+    "operations": [
+      "describe",
+      "fill",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_8b499b3c1b31c7582047456a",
+    "label": "form — src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts:30",
+    "tag": "form",
+    "source": {
+      "file": "src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts",
+      "start": 1040,
+      "end": 1065,
+      "line": 30,
+      "column": 7
+    },
+    "operations": [
+      "describe",
+      "submit"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_947f06861dc7434d5f730549",
+    "label": "textarea description — src/app/components/dialogs/create-project-dialog/create-project-dialog.component.ts:31",
+    "tag": "textarea",
+    "source": {
+      "file": "src/app/components/dialogs/create-project-dialog/create-project-dialog.component.ts",
+      "start": 1023,
+      "end": 1096,
+      "line": 31,
+      "column": 11
+    },
+    "formId": "ngmcp_789a222a52c57b7495e8c00b",
+    "operations": [
+      "describe",
+      "fill",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_a9c18e09100ece75e048186f",
+    "label": "button — src/app/components/auth/register/register.component.ts:48",
+    "tag": "button",
+    "source": {
+      "file": "src/app/components/auth/register/register.component.ts",
+      "start": 1800,
+      "end": 1908,
+      "line": 48,
+      "column": 13
+    },
+    "formId": "ngmcp_485f38c18ad43d90fec9527c",
+    "operations": [
+      "describe",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_b7ffe79e3201ca072a1b5011",
+    "label": "button — src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts:60",
+    "tag": "button",
+    "source": {
+      "file": "src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts",
+      "start": 2335,
+      "end": 2418,
+      "line": 60,
+      "column": 7
+    },
+    "operations": [
+      "describe",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_c1972f251f59bbee501e6e89",
+    "label": "textarea description — src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts:38",
+    "tag": "textarea",
+    "source": {
+      "file": "src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts",
+      "start": 1357,
+      "end": 1430,
+      "line": 38,
+      "column": 11
+    },
+    "formId": "ngmcp_8b499b3c1b31c7582047456a",
+    "operations": [
+      "describe",
+      "fill",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_c4048490b17e679fb3e9bef6",
+    "label": "mat-option — src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts:46",
+    "tag": "mat-option",
+    "source": {
+      "file": "src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts",
+      "start": 1764,
+      "end": 1789,
+      "line": 46,
+      "column": 13
+    },
+    "formId": "ngmcp_8b499b3c1b31c7582047456a",
+    "operations": [
+      "describe",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_c776685f67453c7bfd0b9c07",
+    "label": "button — src/app/components/kanban/kanban.component.ts:34",
+    "tag": "button",
+    "source": {
+      "file": "src/app/components/kanban/kanban.component.ts",
+      "start": 1304,
+      "end": 1369,
+      "line": 34,
+      "column": 11
+    },
+    "operations": [
+      "describe",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_c7a83416ed429a914843d893",
+    "label": "button — src/app/components/kanban/kanban.component.ts:113",
+    "tag": "button",
+    "source": {
+      "file": "src/app/components/kanban/kanban.component.ts",
+      "start": 4313,
+      "end": 4380,
+      "line": 113,
+      "column": 19
+    },
+    "operations": [
+      "describe",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_c90087235ecb54757de10a45",
+    "label": "mat-select status — src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts:43",
+    "tag": "mat-select",
+    "source": {
+      "file": "src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts",
+      "start": 1571,
+      "end": 1627,
+      "line": 43,
+      "column": 11
+    },
+    "formId": "ngmcp_8b499b3c1b31c7582047456a",
+    "operations": [
+      "describe",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_d5767ca489688b254c9c3270",
+    "label": "input email — src/app/components/auth/register/register.component.ts:40",
+    "tag": "input",
+    "source": {
+      "file": "src/app/components/auth/register/register.component.ts",
+      "start": 1441,
+      "end": 1512,
+      "line": 40,
+      "column": 15
+    },
+    "formId": "ngmcp_485f38c18ad43d90fec9527c",
+    "operations": [
+      "describe",
+      "fill",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_d62a8c923a45a3fc2b623be3",
+    "label": "button — src/app/components/dashboard/dashboard.component.ts:43",
+    "tag": "button",
+    "source": {
+      "file": "src/app/components/dashboard/dashboard.component.ts",
+      "start": 1604,
+      "end": 1664,
+      "line": 43,
+      "column": 13
+    },
+    "operations": [
+      "describe",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_d7393f3107e9de233af3681d",
+    "label": "input title — src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts:33",
+    "tag": "input",
+    "source": {
+      "file": "src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts",
+      "start": 1164,
+      "end": 1222,
+      "line": 33,
+      "column": 11
+    },
+    "formId": "ngmcp_8b499b3c1b31c7582047456a",
+    "operations": [
+      "describe",
+      "fill",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_dd62c3222903c68984b6a253",
+    "label": "mat-option — src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts:45",
+    "tag": "mat-option",
+    "source": {
+      "file": "src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts",
+      "start": 1696,
+      "end": 1727,
+      "line": 45,
+      "column": 13
+    },
+    "formId": "ngmcp_8b499b3c1b31c7582047456a",
+    "operations": [
+      "describe",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_eac740a9a710c232ff2584d0",
+    "label": "button — src/app/components/dialogs/create-project-dialog/create-project-dialog.component.ts:37",
+    "tag": "button",
+    "source": {
+      "file": "src/app/components/dialogs/create-project-dialog/create-project-dialog.component.ts",
+      "start": 1267,
+      "end": 1349,
+      "line": 37,
+      "column": 7
+    },
+    "operations": [
+      "describe",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  }
+]

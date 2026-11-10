@@ -1,0 +1,83 @@
+{
+  "projectId": "sitepoint-todo",
+  "repository": "https://github.com/sitepoint-editors/angular-todo-app",
+  "commit": "7069b9be885821f2811f0fed8581a37e3b21f6c8",
+  "independentSourceOperations": 4,
+  "referenceEffectsPassed": 4,
+  "compilerFirstPass": {
+    "businessHandlers": {
+      "missing": 1,
+      "blocked": 3,
+      "candidate": 0
+    },
+    "candidateLeafUiStateControls": 2,
+    "exactFrozenInputEffectsPassed": 0,
+    "schemaNativeRetryEffectsPassed": 0,
+    "augmentedContextEffectsPassed": 0,
+    "noManifestPatches": true,
+    "noApplicationPatches": true
+  },
+  "operations": [
+    {
+      "id": "list_todos",
+      "businessHandlerClassification": "missing",
+      "businessCapabilities": [],
+      "issues": [],
+      "leafCandidates": []
+    },
+    {
+      "id": "add_todo",
+      "businessHandlerClassification": "blocked",
+      "businessCapabilities": [
+        "/#AppComponent.onAddTodo:app-root app-todo-list-header"
+      ],
+      "issues": [
+        "Forwarded event add needs exactly one emitting UI element (found 0)",
+        "Forwarded event needs a data identity for the item it acts on"
+      ],
+      "leafCandidates": []
+    },
+    {
+      "id": "toggle_todo_complete",
+      "businessHandlerClassification": "blocked",
+      "businessCapabilities": [
+        "/#AppComponent.onToggleTodoComplete:app-root app-todo-list"
+      ],
+      "issues": [
+        "Forwarded event toggleComplete needs exactly one emitting UI element (found 0)",
+        "Forwarded event needs a data identity for the item it acts on"
+      ],
+      "leafCandidates": [
+        "/#TodoListItemComponent.toggleTodoComplete:app-todo-list-item input.toggle"
+      ]
+    },
+    {
+      "id": "delete_todo",
+      "businessHandlerClassification": "blocked",
+      "businessCapabilities": [
+        "/#AppComponent.onRemoveTodo:app-root app-todo-list"
+      ],
+      "issues": [
+        "Forwarded event remove needs exactly one emitting UI element (found 0)"
+      ],
+      "leafCandidates": [
+        "/#TodoListItemComponent.removeTodo:app-todo-list-item button.destroy"
+      ]
+    }
+  ],
+  "limits": [
+    "This is an Angular4 legacy sample, not evidence about modern Angular support.",
+    "Upstream MIT declaration is package.json:4; repository has no separate license-text file.",
+    "Tool argument naming alone is not the only failure: schema-native retries fail actual repeated-row dispatch with unsupported legacy debug APIs.",
+    "Initial list is a frozen operation but compiler currently discovers UI event handlers rather than initialization workflows."
+  ],
+  "compilerDigest": "cdeed083c8d10b74abf889862e5a439c1277932e551e9f9fe6c603b594465f2f",
+  "failedHarnessAttempt": {
+    "file": "mcp-runtime.ts before rename to .mts",
+    "failure": "tsx classified outside-package .ts file as CommonJS and rejected top-level await; no app or MCP action executed; renamed harness only."
+  },
+  "supportScope": {
+    "status": "unsupported",
+    "reason": "Angular4 is outside the intended Angular16+ support range. Preserve failures as legacy compatibility evidence; do not blend into modern-scope metrics."
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "/#TodoListItemComponent.removeTodo:app-todo-list-item button.destroy",
+    "fingerprint": "9785ff171e614b7b0ae6a7d18e36e15fe7c769f66657589a7fbeb7317786e507",
+    "effect": "write",
+    "description": "Independent synthetic holdout runtime check"
+  },
+  {
+    "id": "/#TodoListItemComponent.toggleTodoComplete:app-todo-list-item input.toggle",
+    "fingerprint": "8d23dd1a97065464c219a27c918b251c71305f2140689e9a865b7809928cbac0",
+    "effect": "write",
+    "description": "Independent synthetic holdout runtime check"
+  }
+]

@@ -1,0 +1,2246 @@
+[
+  {
+    "id": "/admin/core-device-workbench#CoreDeviceWorkbenchComponent.onIndexChange:app-core-device-workbench mat-tab-group",
+    "effectClass": "read",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": false,
+      "domChanged": true,
+      "dialogs": [],
+      "calls": [
+        {
+          "method": "selectView",
+          "args": [
+            "inactive"
+          ]
+        }
+      ]
+    },
+    "confirmationRequired": false,
+    "probes": [],
+    "agreement": null,
+    "learned": {},
+    "disagreements": [],
+    "skipped": "no observable effect to use as an oracle"
+  },
+  {
+    "id": "/archive-ticket-grid#ArchiveTicketGridComponent.onCancel:app-archive-ticket-grid button",
+    "effectClass": "write",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": false,
+      "domChanged": true,
+      "dialogs": [],
+      "calls": [
+        {
+          "method": "cancel",
+          "args": [
+            "tic-1"
+          ]
+        },
+        {
+          "method": "list",
+          "args": []
+        }
+      ]
+    },
+    "confirmationRequired": false,
+    "probes": [],
+    "agreement": null,
+    "learned": {},
+    "disagreements": [],
+    "uncertainties": []
+  },
+  {
+    "id": "/admin/pilot-shipment-details/:shipmentId#PilotShipmentDetailsComponent.onApprove:app-pilot-shipment-details button[type=\"button\"]",
+    "effectClass": "write",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": false,
+      "domChanged": true,
+      "dialogs": [],
+      "calls": [
+        {
+          "method": "approve",
+          "args": [
+            "shi-1"
+          ]
+        },
+        {
+          "method": "find",
+          "args": [
+            "shi-1"
+          ]
+        }
+      ]
+    },
+    "confirmationRequired": false,
+    "probes": [],
+    "agreement": null,
+    "learned": {},
+    "disagreements": [],
+    "uncertainties": []
+  },
+  {
+    "id": "/daily-shipment-sortable#DailyShipmentSortableComponent.onSortChange:app-daily-shipment-sortable [matsort]",
+    "effectClass": "write",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": false,
+      "domChanged": false,
+      "dialogs": [],
+      "calls": [
+        {
+          "method": "sortBy",
+          "args": [
+            "carrierName",
+            "asc"
+          ]
+        }
+      ]
+    },
+    "confirmationRequired": false,
+    "probes": [],
+    "agreement": null,
+    "learned": {},
+    "disagreements": [],
+    "uncertainties": []
+  },
+  {
+    "id": "/core-booking-overview#CoreBookingOverviewComponent.onResolve:app-core-booking-overview button[type=\"button\"]",
+    "effectClass": "none-observed",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": false,
+      "domChanged": false,
+      "dialogs": [],
+      "calls": []
+    },
+    "confirmationRequired": false,
+    "probes": [],
+    "agreement": null,
+    "learned": {},
+    "disagreements": [],
+    "skipped": "baseline call failed: page.evaluate: Error: Expected one UI action; found 0"
+  },
+  {
+    "id": "/daily-shipment-sortable#DailyShipmentSortableComponent.toggleDetails:app-daily-shipment-sortable button[type=\"button\"]",
+    "effectClass": "ui-state",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": false,
+      "domChanged": true,
+      "dialogs": [],
+      "calls": []
+    },
+    "confirmationRequired": false,
+    "probes": [],
+    "agreement": null,
+    "learned": {},
+    "disagreements": [],
+    "skipped": "no observable effect to use as an oracle"
+  },
+  {
+    "id": "/direct-employee-preferences#DirectEmployeePreferencesComponent.setEnabled:app-direct-employee-preferences input[type=\"checkbox\"]",
+    "effectClass": "write",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": false,
+      "domChanged": true,
+      "dialogs": [],
+      "calls": [
+        {
+          "method": "setWeeklyDigest",
+          "args": [
+            true
+          ]
+        }
+      ]
+    },
+    "confirmationRequired": false,
+    "probes": [],
+    "agreement": null,
+    "learned": {},
+    "disagreements": [],
+    "uncertainties": [
+      "weeklyDigest: choice idempotence prevents inferring validation from an absent event."
+    ]
+  },
+  {
+    "id": "/draft-device-console#DraftDeviceConsoleComponent.close:app-draft-device-console button[type=\"button\"]",
+    "effectClass": "write",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": false,
+      "domChanged": true,
+      "dialogs": [],
+      "calls": [
+        {
+          "method": "close",
+          "args": [
+            "dev-1"
+          ]
+        },
+        {
+          "method": "list",
+          "args": []
+        }
+      ]
+    },
+    "confirmationRequired": false,
+    "probes": [],
+    "agreement": null,
+    "learned": {},
+    "disagreements": [],
+    "uncertainties": []
+  },
+  {
+    "id": "/internal-invoice-overview#InternalInvoiceOverviewComponent.resolveInvoice:app-internal-invoice-overview button[type=\"button\"]",
+    "effectClass": "write",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": false,
+      "domChanged": true,
+      "dialogs": [],
+      "calls": [
+        {
+          "method": "resolve",
+          "args": [
+            "inv-1"
+          ]
+        },
+        {
+          "method": "list",
+          "args": []
+        }
+      ]
+    },
+    "confirmationRequired": false,
+    "probes": [],
+    "agreement": null,
+    "learned": {},
+    "disagreements": [],
+    "uncertainties": []
+  },
+  {
+    "id": "/pending-ticket-settings#PendingTicketSettingsComponent.onFrequencyChange:app-pending-ticket-settings mat-select",
+    "effectClass": "write",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": false,
+      "domChanged": true,
+      "dialogs": [],
+      "calls": [
+        {
+          "method": "updateFrequency",
+          "args": [
+            "weekly"
+          ]
+        }
+      ]
+    },
+    "confirmationRequired": false,
+    "probes": [],
+    "agreement": null,
+    "learned": {},
+    "disagreements": [],
+    "uncertainties": [
+      "frequency: choice idempotence prevents inferring validation from an absent event."
+    ]
+  },
+  {
+    "id": "/archive-booking-catalog#ArchiveBookingCatalogComponent.saveName:app-archive-booking-catalog button[type=\"button\"]",
+    "effectClass": "none-observed",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": false,
+      "domChanged": false,
+      "dialogs": [],
+      "calls": []
+    },
+    "confirmationRequired": false,
+    "probes": [],
+    "agreement": null,
+    "learned": {},
+    "disagreements": [],
+    "skipped": "baseline call failed: page.evaluate: Error: Expected one UI action; found 0",
+    "synthesized": {
+      "id": "/archive-booking-catalog#ArchiveBookingCatalogComponent.saveName:app-archive-booking-catalog button[type=\"button\"]",
+      "fingerprint": "e83b932c7eace0f53684cf1bfa2d2a8012cffcf74a6959df795713208973a8c9",
+      "route": "/archive-booking-catalog",
+      "target": {
+        "param": "id",
+        "source": "context",
+        "path": [
+          "id"
+        ]
+      },
+      "component": "ArchiveBookingCatalogComponent",
+      "componentSelector": "app-archive-booking-catalog",
+      "action": {
+        "kind": "form",
+        "selector": "app-archive-booking-catalog",
+        "label": "Rename",
+        "event": "click",
+        "expression": "saveName(row.id, nameBox.value)",
+        "source": {
+          "file": "src/app/injected/components/archive-booking-catalog.component.ts",
+          "line": 13
+        }
+      },
+      "fields": [
+        {
+          "name": "name",
+          "selector": "app-archive-booking-catalog > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > input:nth-of-type(1)",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string"
+          },
+          "adapter": "native"
+        }
+      ],
+      "handler": "saveName",
+      "callPath": [
+        "ArchiveBookingCatalogComponent.saveName",
+        "ArchiveBookingService.rename",
+        "ArchiveBookingCatalogComponent.saveName",
+        "ArchiveBookingService.list"
+      ],
+      "bindings": [
+        {
+          "paramKeys": {
+            "name": "guestName"
+          },
+          "token": "ArchiveBookingService",
+          "service": "ArchiveBookingService",
+          "method": "rename",
+          "source": {
+            "file": "src/app/injected/services/archive-booking-service.service.ts",
+            "line": 22
+          },
+          "arguments": [
+            "id",
+            "trimmed"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "name"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        },
+        {
+          "token": "ArchiveBookingService",
+          "service": "ArchiveBookingService",
+          "method": "list",
+          "source": {
+            "file": "src/app/injected/services/archive-booking-service.service.ts",
+            "line": 14
+          },
+          "arguments": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "guestName": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "guestName",
+                "status"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate",
+      "plan": {
+        "mode": "submit",
+        "root": "app-archive-booking-catalog",
+        "submit": {
+          "selector": "app-archive-booking-catalog button[type=\"button\"]"
+        },
+        "repeats": []
+      }
+    }
+  },
+  {
+    "options": {
+      "theme": [
+        {
+          "value": "dark",
+          "label": "dark"
+        },
+        {
+          "value": "system",
+          "label": "system"
+        }
+      ]
+    },
+    "id": "/pilot-booking-settings#PilotBookingSettingsComponent.selectTheme:app-pilot-booking-settings mat-button-toggle-group",
+    "effectClass": "write",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": false,
+      "domChanged": true,
+      "dialogs": [],
+      "calls": [
+        {
+          "method": "updateTheme",
+          "args": [
+            "dark"
+          ]
+        }
+      ]
+    },
+    "confirmationRequired": false,
+    "probes": [
+      {
+        "args": {
+          "theme": ""
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "empty string"
+      },
+      {
+        "args": {
+          "theme": "aaaa"
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "length 4"
+      }
+    ],
+    "agreement": 0,
+    "learned": {
+      "theme": {
+        "minLength": 1
+      }
+    },
+    "disagreements": [
+      "empty string: app rejects, contract accepts",
+      "length 4: app rejects, contract accepts"
+    ],
+    "uncertainties": [
+      "theme: Format-sensitive field: finite probes cannot identify its regular expression."
+    ]
+  },
+  {
+    "id": "/portal/primary-employee-overview#PrimaryEmployeeOverviewComponent.deleteEmployeeEmployee:app-primary-employee-overview button[type=\"button\"]",
+    "effectClass": "write",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": false,
+      "domChanged": true,
+      "dialogs": [
+        "Delete this employee?"
+      ],
+      "calls": [
+        {
+          "method": "remove",
+          "args": [
+            "emp-1"
+          ]
+        },
+        {
+          "method": "list",
+          "args": []
+        }
+      ]
+    },
+    "confirmationRequired": true,
+    "probes": [],
+    "agreement": null,
+    "learned": {},
+    "disagreements": [],
+    "uncertainties": []
+  },
+  {
+    "id": "/pending-recipe-intake#PendingRecipeIntakeComponent.addRecipe:app-pending-recipe-intake form",
+    "effectClass": "ui-state",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": false,
+      "domChanged": true,
+      "dialogs": [],
+      "calls": []
+    },
+    "confirmationRequired": false,
+    "probes": [],
+    "agreement": null,
+    "learned": {},
+    "disagreements": [],
+    "skipped": "baseline call failed: page.evaluate: Error: The application disabled submission or rejected the form values"
+  },
+  {
+    "id": "/internal-course-editor#InternalCourseEditorComponent.onSubmit:app-internal-course-editor form",
+    "effectClass": "ui-state",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": false,
+      "domChanged": true,
+      "dialogs": [],
+      "calls": []
+    },
+    "confirmationRequired": false,
+    "probes": [],
+    "agreement": null,
+    "learned": {},
+    "disagreements": [],
+    "skipped": "no observable effect to use as an oracle"
+  },
+  {
+    "id": "/portal/daily-device-login#DailyDeviceLoginComponent.signIn:app-daily-device-login form",
+    "effectClass": "write",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": true,
+      "overlay": false,
+      "domChanged": true,
+      "dialogs": [],
+      "calls": [
+        {
+          "method": "login",
+          "args": [
+            "Alex Example",
+            "Example123!"
+          ]
+        }
+      ]
+    },
+    "confirmationRequired": false,
+    "probes": [
+      {
+        "args": {
+          "userName": ""
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "empty string"
+      },
+      {
+        "args": {
+          "userName": "aaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 12"
+      },
+      {
+        "args": {
+          "userName": "aaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 6"
+      },
+      {
+        "args": {
+          "userName": "aaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 3"
+      },
+      {
+        "args": {
+          "userName": "a"
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "length 1"
+      },
+      {
+        "args": {
+          "userName": "aa"
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "length 2"
+      },
+      {
+        "args": {
+          "userName": "aaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 24"
+      },
+      {
+        "args": {
+          "userName": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 48"
+      },
+      {
+        "args": {
+          "userName": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "length 96"
+      },
+      {
+        "args": {
+          "userName": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "length 72"
+      },
+      {
+        "args": {
+          "userName": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 60"
+      },
+      {
+        "args": {
+          "userName": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "length 66"
+      },
+      {
+        "args": {
+          "userName": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 63"
+      },
+      {
+        "args": {
+          "userName": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 64"
+      },
+      {
+        "args": {
+          "userName": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "length 65"
+      },
+      {
+        "args": {
+          "password": ""
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "empty string"
+      },
+      {
+        "args": {
+          "password": "aaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 11"
+      },
+      {
+        "args": {
+          "password": "aaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "length 5"
+      },
+      {
+        "args": {
+          "password": "aaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 8"
+      },
+      {
+        "args": {
+          "password": "aaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "length 6"
+      },
+      {
+        "args": {
+          "password": "aaaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "length 7"
+      },
+      {
+        "args": {
+          "password": "aaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 22"
+      },
+      {
+        "args": {
+          "password": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 44"
+      },
+      {
+        "args": {
+          "password": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "length 88"
+      }
+    ],
+    "agreement": 0.5,
+    "learned": {
+      "userName": {
+        "minLength": 3,
+        "maxLength": 64
+      },
+      "password": {
+        "minLength": 8
+      }
+    },
+    "disagreements": [
+      "empty string: app rejects, contract accepts",
+      "length 1: app rejects, contract accepts",
+      "length 2: app rejects, contract accepts",
+      "length 96: app rejects, contract accepts",
+      "length 72: app rejects, contract accepts",
+      "length 66: app rejects, contract accepts",
+      "length 65: app rejects, contract accepts",
+      "empty string: app rejects, contract accepts",
+      "length 5: app rejects, contract accepts",
+      "length 6: app rejects, contract accepts",
+      "length 7: app rejects, contract accepts",
+      "length 88: app rejects, contract accepts"
+    ],
+    "uncertainties": [
+      "password: Maximum string length remained unverified when the query budget ran out."
+    ]
+  },
+  {
+    "id": "/regional-booking-finder#RegionalBookingFinderComponent.onSearch:app-regional-booking-finder input[type=\"search\"][placeholder=\"Search bookings\"]",
+    "effectClass": "read",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": false,
+      "domChanged": true,
+      "dialogs": [],
+      "calls": [
+        {
+          "method": "search",
+          "args": [
+            "aaa"
+          ]
+        }
+      ]
+    },
+    "confirmationRequired": false,
+    "probes": [],
+    "agreement": null,
+    "learned": {},
+    "disagreements": [],
+    "skipped": "no observable effect to use as an oracle"
+  },
+  {
+    "id": "/portal/urgent-bookings/:id/edit#UrgentBookingUpsertComponent.submit:app-urgent-booking-upsert form",
+    "effectClass": "ui-state",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": false,
+      "domChanged": true,
+      "dialogs": [],
+      "calls": []
+    },
+    "confirmationRequired": false,
+    "probes": [],
+    "agreement": null,
+    "learned": {},
+    "disagreements": [],
+    "skipped": "no observable effect to use as an oracle"
+  },
+  {
+    "id": "/scheduled-shipment-cleanup#ScheduledShipmentCleanupComponent.purge:app-scheduled-shipment-cleanup button[type=\"button\"]",
+    "effectClass": "write",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": false,
+      "domChanged": false,
+      "dialogs": [],
+      "calls": [
+        {
+          "method": "purgeArchived",
+          "args": []
+        },
+        {
+          "method": "list",
+          "args": []
+        }
+      ]
+    },
+    "confirmationRequired": false,
+    "probes": [],
+    "agreement": null,
+    "learned": {},
+    "disagreements": [],
+    "uncertainties": []
+  },
+  {
+    "id": "/portal/urgent-bookings/new#UrgentBookingUpsertComponent.submit:app-urgent-booking-upsert form",
+    "effectClass": "ui-state",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": false,
+      "domChanged": true,
+      "dialogs": [],
+      "calls": []
+    },
+    "confirmationRequired": false,
+    "probes": [],
+    "agreement": null,
+    "learned": {},
+    "disagreements": [],
+    "skipped": "no observable effect to use as an oracle"
+  },
+  {
+    "id": "/secure-recipe-shell#SecureRecipeShellComponent.onLogout:app-secure-recipe-shell button[type=\"button\"]",
+    "effectClass": "write",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": true,
+      "overlay": false,
+      "domChanged": true,
+      "dialogs": [],
+      "calls": [
+        {
+          "method": "logout",
+          "args": []
+        }
+      ]
+    },
+    "confirmationRequired": false,
+    "probes": [],
+    "agreement": null,
+    "learned": {},
+    "disagreements": [],
+    "uncertainties": []
+  },
+  {
+    "id": "/regional-ticket-panel#RegionalTicketPanelComponent.saveDraft:app-regional-ticket-panel button[type=\"button\"]",
+    "effectClass": "write",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": false,
+      "domChanged": false,
+      "dialogs": [],
+      "calls": [
+        {
+          "method": "create",
+          "args": [
+            {
+              "reporterEmail": "alex@example.test",
+              "details": "Alex Example",
+              "reporterName": "Alex Example",
+              "severity": 1
+            }
+          ]
+        }
+      ]
+    },
+    "confirmationRequired": false,
+    "probes": [
+      {
+        "args": {
+          "reporterEmail": ""
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "empty string"
+      },
+      {
+        "args": {
+          "reporterEmail": "aaaaaaaaaaaaaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "length 17"
+      },
+      {
+        "args": {
+          "details": ""
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "empty string"
+      },
+      {
+        "args": {
+          "details": "aaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 12"
+      },
+      {
+        "args": {
+          "details": "a"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 1"
+      },
+      {
+        "args": {
+          "details": "aaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 24"
+      },
+      {
+        "args": {
+          "details": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 48"
+      },
+      {
+        "args": {
+          "details": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 96"
+      },
+      {
+        "args": {
+          "details": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 192"
+      },
+      {
+        "args": {
+          "details": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 384"
+      },
+      {
+        "args": {
+          "details": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "length 768"
+      },
+      {
+        "args": {
+          "details": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "length 576"
+      },
+      {
+        "args": {
+          "details": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 480"
+      },
+      {
+        "args": {
+          "details": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "length 528"
+      },
+      {
+        "args": {
+          "details": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "length 504"
+      },
+      {
+        "args": {
+          "details": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 492"
+      },
+      {
+        "args": {
+          "details": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 498"
+      },
+      {
+        "args": {
+          "details": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "length 501"
+      },
+      {
+        "args": {
+          "details": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 499"
+      },
+      {
+        "args": {
+          "details": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 500"
+      },
+      {
+        "args": {
+          "reporterName": ""
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "empty string"
+      },
+      {
+        "args": {
+          "reporterName": "aaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 12"
+      },
+      {
+        "args": {
+          "reporterName": "aaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 6"
+      },
+      {
+        "args": {
+          "reporterName": "aaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 3"
+      }
+    ],
+    "agreement": 0.6666666666666667,
+    "learned": {
+      "reporterEmail": {
+        "minLength": 1
+      },
+      "details": {
+        "maxLength": 500
+      }
+    },
+    "disagreements": [
+      "empty string: app rejects, contract accepts",
+      "length 17: app rejects, contract accepts",
+      "length 768: app rejects, contract accepts",
+      "length 576: app rejects, contract accepts",
+      "length 528: app rejects, contract accepts",
+      "length 504: app rejects, contract accepts",
+      "length 501: app rejects, contract accepts",
+      "empty string: app rejects, contract accepts"
+    ],
+    "uncertainties": [
+      "reporterEmail: Format-sensitive field: finite probes cannot identify its regular expression.",
+      "reporterName: Minimum string length remained unverified when the query budget ran out.",
+      "reporterName: String query budget exhausted before a maximum was verified."
+    ],
+    "synthesized": {
+      "id": "/regional-ticket-panel#RegionalTicketPanelComponent.saveDraft:app-regional-ticket-panel button[type=\"button\"]",
+      "fingerprint": "b2e2d7710cc4b5630c00a485504d3ce8ab70c30f985b5af128b91c8f927fa55b",
+      "route": "/regional-ticket-panel",
+      "component": "RegionalTicketPanelComponent",
+      "componentSelector": "app-regional-ticket-panel",
+      "action": {
+        "kind": "form",
+        "selector": "app-regional-ticket-panel",
+        "label": "Add",
+        "event": "click",
+        "expression": "saveDraft()",
+        "source": {
+          "file": "src/app/injected/components/regional-ticket-panel.component.ts",
+          "line": 26
+        }
+      },
+      "fields": [
+        {
+          "name": "reporterEmail",
+          "selector": "app-regional-ticket-panel > section:nth-of-type(1) > div:nth-of-type(1) > label:nth-of-type(1) > input:nth-of-type(1)",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "description": "Reporter email"
+          },
+          "adapter": "native"
+        },
+        {
+          "name": "details",
+          "selector": "app-regional-ticket-panel > section:nth-of-type(1) > div:nth-of-type(1) > label:nth-of-type(2) > textarea:nth-of-type(1)",
+          "element": "textarea",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "description": "Details"
+          },
+          "adapter": "native"
+        },
+        {
+          "name": "reporterName",
+          "selector": "app-regional-ticket-panel > section:nth-of-type(1) > div:nth-of-type(1) > label:nth-of-type(3) > input:nth-of-type(1)",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "description": "Reporter name"
+          },
+          "adapter": "native"
+        },
+        {
+          "name": "severity",
+          "selector": "app-regional-ticket-panel > section:nth-of-type(1) > div:nth-of-type(1) > label:nth-of-type(4) > input:nth-of-type(1)",
+          "element": "input",
+          "type": "number",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "number",
+            "description": "Severity"
+          },
+          "adapter": "native"
+        }
+      ],
+      "handler": "saveDraft",
+      "callPath": [
+        "RegionalTicketPanelComponent.saveDraft",
+        "RegionalTicketService.create"
+      ],
+      "bindings": [
+        {
+          "token": "RegionalTicketService",
+          "service": "RegionalTicketService",
+          "method": "create",
+          "source": {
+            "file": "src/app/injected/services/regional-ticket-service.service.ts",
+            "line": 25
+          },
+          "arguments": [
+            "{ reporterEmail: this.reporterEmail, details: this.details, reporterName: this.reporterName, severity: this.severity }"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "input": {
+                "type": "object",
+                "properties": {
+                  "reporterEmail": {
+                    "type": "string"
+                  },
+                  "details": {
+                    "type": "string"
+                  },
+                  "reporterName": {
+                    "type": "string"
+                  },
+                  "severity": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "reporterEmail",
+                  "reporterName",
+                  "severity"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "input"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": false,
+          "schemaIssues": [
+            "Unsupported type: RegionalTicketRecord"
+          ]
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "reporterEmail": {
+            "type": "string",
+            "description": "Reporter email"
+          },
+          "details": {
+            "type": "string",
+            "description": "Details"
+          },
+          "reporterName": {
+            "type": "string",
+            "description": "Reporter name"
+          },
+          "severity": {
+            "type": "number",
+            "description": "Severity"
+          }
+        },
+        "required": [
+          "reporterEmail",
+          "details",
+          "reporterName",
+          "severity"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate",
+      "plan": {
+        "mode": "submit",
+        "root": "app-regional-ticket-panel",
+        "submit": {
+          "selector": "app-regional-ticket-panel button[type=\"button\"]"
+        },
+        "repeats": []
+      }
+    }
+  },
+  {
+    "id": "/seasonal-recipe-page#SeasonalRecipeQuickFormComponent.send:app-seasonal-recipe-quick-form form",
+    "effectClass": "ui-state",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": false,
+      "domChanged": true,
+      "dialogs": [],
+      "calls": []
+    },
+    "confirmationRequired": false,
+    "probes": [],
+    "agreement": null,
+    "learned": {},
+    "disagreements": [],
+    "skipped": "no observable effect to use as an oracle"
+  },
+  {
+    "id": "/spring-recipe-manager#SpringRecipeManagerComponent.openDialog:app-spring-recipe-manager button[type=\"button\"]",
+    "effectClass": "opens-overlay",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": true,
+      "domChanged": true,
+      "dialogs": [],
+      "calls": []
+    },
+    "confirmationRequired": true,
+    "probes": [],
+    "agreement": null,
+    "learned": {},
+    "disagreements": [],
+    "skipped": "no observable effect to use as an oracle"
+  },
+  {
+    "id": "/urgent-course-counter#UrgentCourseCounterComponent.adjust:app-urgent-course-counter button[type=\"button\"]",
+    "effectClass": "write",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": false,
+      "domChanged": true,
+      "dialogs": [],
+      "calls": [
+        {
+          "method": "applyDelta",
+          "args": [
+            -1
+          ]
+        }
+      ]
+    },
+    "confirmationRequired": false,
+    "probes": [],
+    "agreement": null,
+    "learned": {},
+    "disagreements": [],
+    "uncertainties": []
+  },
+  {
+    "id": "/shared-booking-form#SharedBookingFormComponent.createBooking:app-shared-booking-form form",
+    "effectClass": "write",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": true,
+      "domChanged": true,
+      "dialogs": [],
+      "calls": [
+        {
+          "method": "create",
+          "args": [
+            {
+              "partyName": "aaaa",
+              "meal": "none",
+              "smsNotifications": true
+            }
+          ]
+        }
+      ]
+    },
+    "confirmationRequired": false,
+    "probes": [
+      {
+        "args": {
+          "partyName": ""
+        },
+        "accepted": false,
+        "staticAccepts": false,
+        "note": "empty string"
+      },
+      {
+        "args": {
+          "partyName": "aa"
+        },
+        "accepted": false,
+        "staticAccepts": false,
+        "note": "length 2"
+      },
+      {
+        "args": {
+          "partyName": "aaa"
+        },
+        "accepted": false,
+        "staticAccepts": false,
+        "note": "length 3"
+      },
+      {
+        "args": {
+          "partyName": "aaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 8"
+      },
+      {
+        "args": {
+          "partyName": "aaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 16"
+      },
+      {
+        "args": {
+          "partyName": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 32"
+      },
+      {
+        "args": {
+          "partyName": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": false,
+        "note": "length 64"
+      },
+      {
+        "args": {
+          "partyName": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 48"
+      },
+      {
+        "args": {
+          "partyName": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": false,
+        "note": "length 56"
+      },
+      {
+        "args": {
+          "partyName": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": false,
+        "note": "length 52"
+      },
+      {
+        "args": {
+          "partyName": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 50"
+      },
+      {
+        "args": {
+          "partyName": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": false,
+        "note": "length 51"
+      },
+      {
+        "args": {
+          "smsNotifications": false
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "opposite boolean"
+      }
+    ],
+    "agreement": 1,
+    "learned": {
+      "partyName": {
+        "minLength": 4,
+        "maxLength": 50
+      }
+    },
+    "disagreements": [],
+    "uncertainties": []
+  },
+  {
+    "id": "/workspace/global-invoice-tabs#GlobalInvoiceTabsComponent.onIndexChange:app-global-invoice-tabs mat-tab-group",
+    "effectClass": "read",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": false,
+      "domChanged": true,
+      "dialogs": [],
+      "calls": [
+        {
+          "method": "selectView",
+          "args": [
+            "team"
+          ]
+        }
+      ]
+    },
+    "confirmationRequired": false,
+    "probes": [],
+    "agreement": null,
+    "learned": {},
+    "disagreements": [],
+    "skipped": "no observable effect to use as an oracle"
+  },
+  {
+    "id": "/retail-ticket-setup/:id#RetailTicketSetupComponent.submit:app-retail-ticket-setup form",
+    "effectClass": "write",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": false,
+      "domChanged": true,
+      "dialogs": [],
+      "calls": [
+        {
+          "method": "update",
+          "args": [
+            "tic-1",
+            {
+              "subject": "aaaa",
+              "description": "aaa",
+              "details": "aaa",
+              "setupPin": "aaaaaa"
+            }
+          ]
+        }
+      ]
+    },
+    "confirmationRequired": false,
+    "probes": [
+      {
+        "args": {
+          "subject": ""
+        },
+        "accepted": false,
+        "staticAccepts": false,
+        "note": "empty string"
+      },
+      {
+        "args": {
+          "subject": "aa"
+        },
+        "accepted": false,
+        "staticAccepts": false,
+        "note": "length 2"
+      },
+      {
+        "args": {
+          "subject": "aaa"
+        },
+        "accepted": false,
+        "staticAccepts": false,
+        "note": "length 3"
+      },
+      {
+        "args": {
+          "subject": "aaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 8"
+      },
+      {
+        "args": {
+          "subject": "aaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 16"
+      },
+      {
+        "args": {
+          "subject": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": false,
+        "note": "length 32"
+      },
+      {
+        "args": {
+          "subject": "aaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 24"
+      },
+      {
+        "args": {
+          "subject": "aaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 28"
+      },
+      {
+        "args": {
+          "subject": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 30"
+      },
+      {
+        "args": {
+          "subject": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": false,
+        "note": "length 31"
+      },
+      {
+        "args": {
+          "description": ""
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "empty string"
+      },
+      {
+        "args": {
+          "description": "a"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 1"
+      },
+      {
+        "args": {
+          "description": "aaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 6"
+      },
+      {
+        "args": {
+          "description": "aaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 12"
+      },
+      {
+        "args": {
+          "description": "aaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 24"
+      },
+      {
+        "args": {
+          "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 48"
+      },
+      {
+        "args": {
+          "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 96"
+      },
+      {
+        "args": {
+          "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 192"
+      },
+      {
+        "args": {
+          "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 384"
+      },
+      {
+        "args": {
+          "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": false,
+        "note": "length 768"
+      },
+      {
+        "args": {
+          "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": false,
+        "note": "length 576"
+      },
+      {
+        "args": {
+          "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 480"
+      },
+      {
+        "args": {
+          "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": false,
+        "note": "length 528"
+      },
+      {
+        "args": {
+          "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": false,
+        "note": "length 504"
+      }
+    ],
+    "agreement": 1,
+    "learned": {
+      "subject": {
+        "minLength": 4,
+        "maxLength": 30
+      }
+    },
+    "disagreements": [],
+    "uncertainties": [
+      "description: Maximum string length remained unverified when the query budget ran out."
+    ]
+  },
+  {
+    "options": {
+      "sortOrder": [
+        {
+          "value": "oldest",
+          "label": "oldest"
+        },
+        {
+          "value": "alphabetical",
+          "label": "alphabetical"
+        }
+      ]
+    },
+    "id": "/workspace/global-shipment-options#GlobalShipmentOptionsComponent.selectSortOrder:app-global-shipment-options mat-radio-group",
+    "effectClass": "write",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": false,
+      "domChanged": true,
+      "dialogs": [],
+      "calls": [
+        {
+          "method": "setShipmentSortOrder",
+          "args": [
+            "oldest"
+          ]
+        }
+      ]
+    },
+    "confirmationRequired": false,
+    "probes": [
+      {
+        "args": {
+          "sortOrder": ""
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "empty string"
+      },
+      {
+        "args": {
+          "sortOrder": "aaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "length 6"
+      }
+    ],
+    "agreement": 0,
+    "learned": {
+      "sortOrder": {
+        "minLength": 1
+      }
+    },
+    "disagreements": [
+      "empty string: app rejects, contract accepts",
+      "length 6: app rejects, contract accepts"
+    ],
+    "uncertainties": [
+      "sortOrder: Format-sensitive field: finite probes cannot identify its regular expression."
+    ]
+  },
+  {
+    "id": "/verified-course-queue#VerifiedCourseQueueComponent.addItem:app-verified-course-queue button[type=\"button\"]",
+    "effectClass": "write",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": false,
+      "domChanged": true,
+      "dialogs": [],
+      "calls": [
+        {
+          "method": "add",
+          "args": [
+            "aaa"
+          ]
+        },
+        {
+          "method": "list",
+          "args": []
+        }
+      ]
+    },
+    "confirmationRequired": false,
+    "probes": [
+      {
+        "args": {
+          "instructorName": ""
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "empty string"
+      },
+      {
+        "args": {
+          "instructorName": "a"
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "length 1"
+      },
+      {
+        "args": {
+          "instructorName": "aa"
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "length 2"
+      },
+      {
+        "args": {
+          "instructorName": "aaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 6"
+      },
+      {
+        "args": {
+          "instructorName": "aaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 12"
+      },
+      {
+        "args": {
+          "instructorName": "aaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 24"
+      },
+      {
+        "args": {
+          "instructorName": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 48"
+      },
+      {
+        "args": {
+          "instructorName": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "length 96"
+      },
+      {
+        "args": {
+          "instructorName": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "length 72"
+      },
+      {
+        "args": {
+          "instructorName": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": true,
+        "staticAccepts": true,
+        "note": "length 60"
+      },
+      {
+        "args": {
+          "instructorName": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "length 66"
+      },
+      {
+        "args": {
+          "instructorName": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "length 63"
+      },
+      {
+        "args": {
+          "instructorName": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "accepted": false,
+        "staticAccepts": true,
+        "note": "length 61"
+      }
+    ],
+    "agreement": 0.3846153846153846,
+    "learned": {
+      "instructorName": {
+        "minLength": 3,
+        "maxLength": 60
+      }
+    },
+    "disagreements": [
+      "empty string: app rejects, contract accepts",
+      "length 1: app rejects, contract accepts",
+      "length 2: app rejects, contract accepts",
+      "length 96: app rejects, contract accepts",
+      "length 72: app rejects, contract accepts",
+      "length 66: app rejects, contract accepts",
+      "length 63: app rejects, contract accepts",
+      "length 61: app rejects, contract accepts"
+    ],
+    "uncertainties": [],
+    "synthesized": {
+      "id": "/verified-course-queue#VerifiedCourseQueueComponent.addItem:app-verified-course-queue button[type=\"button\"]",
+      "fingerprint": "e29efb589992a3bd5b05f2305bd9629c57336ac83724c0cf55979cdf20244ba3",
+      "route": "/verified-course-queue",
+      "component": "VerifiedCourseQueueComponent",
+      "componentSelector": "app-verified-course-queue",
+      "action": {
+        "kind": "form",
+        "selector": "app-verified-course-queue",
+        "label": "Add",
+        "event": "click",
+        "expression": "addItem()",
+        "source": {
+          "file": "src/app/injected/components/verified-course-queue.component.ts",
+          "line": 11
+        }
+      },
+      "fields": [
+        {
+          "name": "instructorName",
+          "selector": "app-verified-course-queue > section:nth-of-type(1) > input:nth-of-type(1)",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string"
+          },
+          "adapter": "native"
+        }
+      ],
+      "handler": "addItem",
+      "callPath": [
+        "VerifiedCourseQueueComponent.addItem",
+        "VerifiedCourseManager.add",
+        "VerifiedCourseQueueComponent.addItem",
+        "VerifiedCourseManager.list"
+      ],
+      "bindings": [
+        {
+          "paramKeys": {
+            "instructorName": "instructorName"
+          },
+          "token": "VerifiedCourseManager",
+          "service": "VerifiedCourseManager",
+          "method": "add",
+          "source": {
+            "file": "src/app/injected/services/verified-course-manager.service.ts",
+            "line": 22
+          },
+          "arguments": [
+            "value"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "instructorName": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "instructorName"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "instructorName": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "instructorName",
+              "status"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        },
+        {
+          "token": "VerifiedCourseManager",
+          "service": "VerifiedCourseManager",
+          "method": "list",
+          "source": {
+            "file": "src/app/injected/services/verified-course-manager.service.ts",
+            "line": 14
+          },
+          "arguments": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "instructorName": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "instructorName",
+                "status"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "instructorName": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "instructorName"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate",
+      "plan": {
+        "mode": "submit",
+        "root": "app-verified-course-queue",
+        "submit": {
+          "selector": "app-verified-course-queue button[type=\"button\"]"
+        },
+        "repeats": []
+      }
+    }
+  },
+  {
+    "id": "/spring-recipe-manager#SpringRecipeDialogComponent.confirmCreate:app-spring-recipe-dialog form@app-spring-recipe-manager button[type=\"button\"]",
+    "effectClass": "opens-overlay",
+    "effects": {
+      "http": [],
+      "storage": [],
+      "navigated": false,
+      "overlay": true,
+      "domChanged": true,
+      "dialogs": [],
+      "calls": []
+    },
+    "confirmationRequired": true,
+    "probes": [],
+    "agreement": null,
+    "learned": {},
+    "disagreements": [],
+    "skipped": "no observable effect to use as an oracle"
+  }
+]

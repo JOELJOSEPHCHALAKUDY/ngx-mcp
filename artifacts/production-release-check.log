@@ -1,0 +1,67 @@
+
+> ngx-mcp@0.1.0 release:check
+> npm run check:webmcp-evidence && npm run check:production-evidence && npm run test:production-evidence
+
+
+> ngx-mcp@0.1.0 check:webmcp-evidence
+> node tooling/check-webmcp-evidence.mjs
+
+{
+  "integrity": "passed",
+  "nativeWebMcp": true,
+  "compilerDigest": "681b7df0277c15aa1086e8951f1339755f13d02e9025786ddc119f3816776d8e",
+  "browserVersion": "157.0.8103.39",
+  "modes": [
+    "mcp",
+    "webmcp",
+    "both"
+  ],
+  "scope": "Native browser API and production Angular fixtures; no claim of ChatGPT or Claude product interoperability. Publisher lifecycle uses persisted page events, not actual BFCache navigation."
+}
+
+> ngx-mcp@0.1.0 check:production-evidence
+> node tooling/check-production-evidence.mjs
+
+{
+  "integrity": "passed",
+  "report": "runs/final-verified-2026-11-10/report.json",
+  "compilerDigest": "3bc8375681109b9135afa8fac340d0a856edc2e8ac8e6b3160578eff495430fc",
+  "builds": 9,
+  "business": {
+    "passed": 64,
+    "positive": 44,
+    "nativeBoundary": 20
+  },
+  "framework": {
+    "passed": 132
+  },
+  "originalSourcesUnchanged": true,
+  "resourcesClosed": "Frozen runner awaited browser and fixture server close",
+  "scope": "Source-first selected synthetic business workflows and separate integration authorization boundaries. Exact reviewed compiler source IDs only; no per-app source patches and no DOM action fallback under test. SDK MCP uses an authenticated ES256 JWT Streamable HTTP gateway on explicit test-only loopback HTTP; external TLS and real IdP are outside this run.",
+  "releaseReady": false
+}
+
+> ngx-mcp@0.1.0 test:production-evidence
+> node tooling/check-production-evidence-selftest.mjs
+
+{
+  "integritySelfTest": "passed",
+  "validEvidenceAccepted": true,
+  "relocatedPacketAccepted": true,
+  "tamperedEvidenceRejected": 13,
+  "cases": [
+    "raw report bytes changed",
+    "stale compiler source",
+    "stale frozen harness",
+    "stale root package lock",
+    "stale installed runtime version metadata",
+    "missing resource closure",
+    "infrastructure error hidden by passed totals",
+    "failed case hidden by passed totals",
+    "missing business case hidden by passed totals",
+    "changed business payload with passing flags and renewed pointers",
+    "changed reviewed policy digest",
+    "changed runtime digest",
+    "changed production output digest"
+  ]
+}

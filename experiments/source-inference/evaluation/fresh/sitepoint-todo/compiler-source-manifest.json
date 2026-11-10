@@ -1,0 +1,126 @@
+{
+  "measuredAt": "after-first-pass-before-any-holdout-fixes",
+  "files": [
+    {
+      "path": "src/approval.ts",
+      "sha256": "db2f436ced733363ef508c6c0babb0f55eeb7af4d0678cc99ce94249dc83ba77"
+    },
+    {
+      "path": "src/baseline.ts",
+      "sha256": "49fa9ab1a98dd9c9ab1e0c4745e0fe66934c864c6fd4228da599d8984bbfc0e9"
+    },
+    {
+      "path": "src/browser-adapter.ts",
+      "sha256": "53d54676884c3c1e0149236ec4b308916b7503d96c9da943a679f641f6215ddc"
+    },
+    {
+      "path": "src/browser-runtime.ts",
+      "sha256": "690c54e1c56ffb70ba3c84c7842c4cd849211bb302749cb05737d854f446dcc8"
+    },
+    {
+      "path": "src/cli.ts",
+      "sha256": "b1dbe6de7cec92e68e50022406246c349ac4c6d5bf8fec43437220546d4721b6"
+    },
+    {
+      "path": "src/codegen.ts",
+      "sha256": "db98f36c3a51b2e7795a4653f79ff511e912d455969e632c447dc7f2851a776d"
+    },
+    {
+      "path": "src/compiler.ts",
+      "sha256": "63a64b0835530fa72a6506a938ff72cffa9171b719dcaa1703e6092f3df848bb"
+    },
+    {
+      "path": "src/counter-compiler.ts",
+      "sha256": "c4edf04aa02daed7eabe0d0ab834cbea1967e3f635e4d520f963c62725cac69c"
+    },
+    {
+      "path": "src/demo.ts",
+      "sha256": "2e6342cb070fc0f20112122811b2cfd8b899f0e7bd3d38209e0024d9f3541101"
+    },
+    {
+      "path": "src/experiment.ts",
+      "sha256": "32235451a9e0525668e4b00bd86e2cc35ebaa69282a978589f6459a903a899c4"
+    },
+    {
+      "path": "src/handler-constraints.ts",
+      "sha256": "b76df2baab94cff8784430705783dee9d287ecfba3e06fe6d7bfafb49c3a95b6"
+    },
+    {
+      "path": "src/hash.ts",
+      "sha256": "910057cdcad237e56529705a4530b3d6836168aaf25a073e2ef77ade53fecefc"
+    },
+    {
+      "path": "src/host-context.ts",
+      "sha256": "86ac8dd23670185d15f08c52cadc80390da4d4727ebc6097d321c258090692de"
+    },
+    {
+      "path": "src/index.ts",
+      "sha256": "ae71ac9e2874e829996422361b2d62a799cf20303a0f623cee83727d35ee678f"
+    },
+    {
+      "path": "src/inline-reveal.ts",
+      "sha256": "069afe7f32216da176dc99c875378f442127848484efe0763e2096543c6a0eae"
+    },
+    {
+      "path": "src/local-app.ts",
+      "sha256": "42e903e95b5d9c3d9a18940a15bc20ce9fadfc194ade3532fdbea66dfdef875e"
+    },
+    {
+      "path": "src/mcp.ts",
+      "sha256": "376e00b1aef8f60edb19aa0b2ee542dfe675fdcb6e66dcc1b027856368a162b5"
+    },
+    {
+      "path": "src/model.ts",
+      "sha256": "c19e1f8de337712d47b8abdb7af1b010e1b4d5743244db9e8cbc27c7cd74b831"
+    },
+    {
+      "path": "src/native-submit.ts",
+      "sha256": "c81edf5a1a5d9c07fccea08082be1ae8eaa6980204e96da08f3efaac846293bd"
+    },
+    {
+      "path": "src/probe-learning.ts",
+      "sha256": "9e54f6402581fedb97cf879b09a11f56f74fb9c1e7744a6a05c61d66609200f8"
+    },
+    {
+      "path": "src/probe.ts",
+      "sha256": "84800446bd262fcb5a59323207dd03613904bf8b97e89f2f046f07930d8115e6"
+    },
+    {
+      "path": "src/project.ts",
+      "sha256": "563fe9f409039f7ede638a4cd3c643d092ea684efc7bccae1939e8b3653554d8"
+    },
+    {
+      "path": "src/refine.ts",
+      "sha256": "5063f07b48a588856b0590fe1c1ad8da3041483739587eed97517014b1d2376f"
+    },
+    {
+      "path": "src/samples.ts",
+      "sha256": "9b0eed10d1b4527454d1401d8560f24c32545b00223bc85ffef6f6a6e76f9f93"
+    },
+    {
+      "path": "src/schema.ts",
+      "sha256": "cb65837a7f4776034c21ba29483b6c5c0a0e5d96fd0105cb7558588defca606f"
+    },
+    {
+      "path": "src/serve.ts",
+      "sha256": "03c31bdc2814293d939fc7d469c67def2908649aa48a828a68681ba1d4f9281e"
+    },
+    {
+      "path": "src/template-callbacks.ts",
+      "sha256": "221bc0084bb5164bb5c2c99ebab870df198a073c3e118c4edb0a3d551f947a3f"
+    },
+    {
+      "path": "src/template-components.ts",
+      "sha256": "137b5759ab4232a98bad202c6c83e8b356cbd2751429c8556fbfa9432dbc7de0"
+    },
+    {
+      "path": "src/workflow-compiler.ts",
+      "sha256": "23138abc5b0725fb5552a383e4238075a03b21a20f6d9379983abedda20b22b8"
+    },
+    {
+      "path": "src/wrapped-controls.ts",
+      "sha256": "73899545ca24dec439f9f9655b86088aadf498e22472448d3890a63ee960b5ab"
+    }
+  ],
+  "digest": "cdeed083c8d10b74abf889862e5a439c1277932e551e9f9fe6c603b594465f2f"
+}

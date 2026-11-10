@@ -1,0 +1,63 @@
+{
+  "name": "ngx-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Use an Angular application's compiler and live controls to expose UI workflows over MCP",
+  "engines": {
+    "node": "^22.22.3 || ^24.15.0 || >=26.0.0"
+  },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "npm run test:integration && npm run test:integration-eval",
+    "test:setup": "npm --prefix samples/toolchains/course-crud ci",
+    "test:integration": "tsx --test tests/integration*.test.ts",
+    "test:integration-eval": "node --test tests/integration-evaluator.test.mjs evaluation/integration-unseen/oracles.test.mjs",
+    "verify": "npm run check && npm test && npm run pack:check",
+    "build": "node tooling/build.mjs",
+    "pack:check": "npm run build && node tooling/check-package.mjs",
+    "integrate": "tsx src/ngx-mcp.ts generate",
+    "mcp:integrated": "tsx src/ngx-mcp.ts serve",
+    "benchmark:integration": "node --import tsx evaluation/integration-unseen/measure.mjs",
+    "check:integration-evidence": "node --import tsx evaluation/integration-unseen/check.mjs",
+    "check:integration-holdout": "node evaluation/integration-holdout/notes-manager/check.mjs",
+    "release:check": "npm run check:webmcp-evidence && npm run check:production-evidence && npm run test:production-evidence",
+    "prepublishOnly": "npm run verify && npm run release:check",
+    "test:webmcp": "tsx --test tests/integration-catalog.test.ts tests/integration-webmcp.test.ts tests/integration-webmcp-browser.test.ts",
+    "check:webmcp-evidence": "node tooling/check-webmcp-evidence.mjs",
+    "benchmark:production": "node --import tsx evaluation/production-fresh/run.mjs",
+    "check:production-evidence": "node tooling/check-production-evidence.mjs",
+    "test:production-evidence": "node tooling/check-production-evidence-selftest.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "ajv": "8.20.0",
+    "playwright": "1.58.2",
+    "jose": "6.2.16"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.0",
+    "node": "24.15.0",
+    "tsx": "4.23.15",
+    "esbuild": "0.28.1",
+    "typescript": "6.0.3"
+  },
+  "license": "MIT",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "RELEASING.md",
+    "PRODUCTION.md"
+  ],
+  "bin": {
+    "ngx-mcp": "dist/ngx-mcp.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  }
+}

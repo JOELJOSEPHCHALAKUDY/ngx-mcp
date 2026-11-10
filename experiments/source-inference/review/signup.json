@@ -1,0 +1,8 @@
+[
+  {
+    "id": "/account/register#RegisterComponent.onSubmit:ng-component form",
+    "fingerprint": "2de15f36c0c8fd4a8f894965054cbc8e7d49ce77b11cb5919c65dfe37b961fd1",
+    "description": "Run the existing signup form workflow using isolated public-sample data.",
+    "effect": "write"
+  }
+]

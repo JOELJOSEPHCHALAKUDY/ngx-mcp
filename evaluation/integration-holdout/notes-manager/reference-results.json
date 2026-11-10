@@ -1,0 +1,572 @@
+{
+  "formatVersion": 1,
+  "kind": "native-dom-reference",
+  "labelFreeze": "23cd7896c6ff015f4f080c1e9d82c3a026e79bf78f3407a1e3336c3b936005d7",
+  "passed": 9,
+  "total": 12,
+  "cases": [
+    {
+      "id": "load_seeded",
+      "pass": true,
+      "before": {
+        "textarea": "First fixture note",
+        "rows": [
+          {
+            "title": "First fixture note",
+            "selected": true,
+            "dirty": false
+          },
+          {
+            "title": "Second fixture note",
+            "selected": false,
+            "dirty": false
+          }
+        ],
+        "storage": [
+          {
+            "id": 1,
+            "text": "First fixture note"
+          },
+          {
+            "id": 2,
+            "text": "Second fixture note"
+          }
+        ]
+      },
+      "after": {
+        "textarea": "First fixture note",
+        "rows": [
+          {
+            "title": "First fixture note",
+            "selected": true,
+            "dirty": false
+          },
+          {
+            "title": "Second fixture note",
+            "selected": false,
+            "dirty": false
+          }
+        ],
+        "storage": [
+          {
+            "id": 1,
+            "text": "First fixture note"
+          },
+          {
+            "id": 2,
+            "text": "Second fixture note"
+          }
+        ]
+      }
+    },
+    {
+      "id": "load_empty",
+      "pass": true,
+      "before": {
+        "textarea": "",
+        "rows": [
+          {
+            "title": "(empty)",
+            "selected": true,
+            "dirty": true
+          }
+        ],
+        "storage": []
+      },
+      "after": {
+        "textarea": "",
+        "rows": [
+          {
+            "title": "(empty)",
+            "selected": true,
+            "dirty": true
+          }
+        ],
+        "storage": []
+      }
+    },
+    {
+      "id": "create_blank",
+      "pass": true,
+      "before": {
+        "textarea": "First fixture note",
+        "rows": [
+          {
+            "title": "First fixture note",
+            "selected": true,
+            "dirty": false
+          },
+          {
+            "title": "Second fixture note",
+            "selected": false,
+            "dirty": false
+          }
+        ],
+        "storage": [
+          {
+            "id": 1,
+            "text": "First fixture note"
+          },
+          {
+            "id": 2,
+            "text": "Second fixture note"
+          }
+        ]
+      },
+      "after": {
+        "textarea": "",
+        "rows": [
+          {
+            "title": "First fixture note",
+            "selected": false,
+            "dirty": false
+          },
+          {
+            "title": "Second fixture note",
+            "selected": false,
+            "dirty": false
+          },
+          {
+            "title": "(empty)",
+            "selected": true,
+            "dirty": true
+          }
+        ],
+        "storage": [
+          {
+            "id": 1,
+            "text": "First fixture note"
+          },
+          {
+            "id": 2,
+            "text": "Second fixture note"
+          }
+        ]
+      }
+    },
+    {
+      "id": "edit_selected",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'First fixture note'\n- 'Revised first fixtur...'\n\n    at file:///private/tmp/integration-holdout-notes-evidence/reference.mjs:11:180\n    at async run (file:///private/tmp/integration-holdout-notes-evidence/reference.mjs:7:168)\n    at async file:///private/tmp/integration-holdout-notes-evidence/reference.mjs:11:2",
+      "after": {
+        "textarea": "Revised first fixture note",
+        "rows": [
+          {
+            "title": "First fixture note",
+            "selected": true,
+            "dirty": false
+          },
+          {
+            "title": "Second fixture note",
+            "selected": false,
+            "dirty": false
+          }
+        ],
+        "storage": [
+          {
+            "id": 1,
+            "text": "First fixture note"
+          },
+          {
+            "id": 2,
+            "text": "Second fixture note"
+          }
+        ]
+      }
+    },
+    {
+      "id": "select_other",
+      "pass": true,
+      "before": {
+        "textarea": "First fixture note",
+        "rows": [
+          {
+            "title": "First fixture note",
+            "selected": true,
+            "dirty": false
+          },
+          {
+            "title": "Second fixture note",
+            "selected": false,
+            "dirty": false
+          }
+        ],
+        "storage": [
+          {
+            "id": 1,
+            "text": "First fixture note"
+          },
+          {
+            "id": 2,
+            "text": "Second fixture note"
+          }
+        ]
+      },
+      "after": {
+        "textarea": "Second fixture note",
+        "rows": [
+          {
+            "title": "First fixture note",
+            "selected": false,
+            "dirty": false
+          },
+          {
+            "title": "Second fixture note",
+            "selected": true,
+            "dirty": false
+          }
+        ],
+        "storage": [
+          {
+            "id": 1,
+            "text": "First fixture note"
+          },
+          {
+            "id": 2,
+            "text": "Second fixture note"
+          }
+        ]
+      }
+    },
+    {
+      "id": "save_existing",
+      "pass": true,
+      "before": {
+        "textarea": "First fixture note",
+        "rows": [
+          {
+            "title": "First fixture note",
+            "selected": true,
+            "dirty": false
+          },
+          {
+            "title": "Second fixture note",
+            "selected": false,
+            "dirty": false
+          }
+        ],
+        "storage": [
+          {
+            "id": 1,
+            "text": "First fixture note"
+          },
+          {
+            "id": 2,
+            "text": "Second fixture note"
+          }
+        ]
+      },
+      "after": {
+        "textarea": "Saved fixture revision",
+        "rows": [
+          {
+            "title": "Saved fixture revisi...",
+            "selected": true,
+            "dirty": false
+          },
+          {
+            "title": "Second fixture note",
+            "selected": false,
+            "dirty": false
+          }
+        ],
+        "storage": [
+          {
+            "id": 1,
+            "text": "Saved fixture revision"
+          },
+          {
+            "id": 2,
+            "text": "Second fixture note"
+          }
+        ]
+      }
+    },
+    {
+      "id": "delete_header_accept",
+      "pass": true,
+      "before": {
+        "textarea": "First fixture note",
+        "rows": [
+          {
+            "title": "First fixture note",
+            "selected": true,
+            "dirty": false
+          },
+          {
+            "title": "Second fixture note",
+            "selected": false,
+            "dirty": false
+          }
+        ],
+        "storage": [
+          {
+            "id": 1,
+            "text": "First fixture note"
+          },
+          {
+            "id": 2,
+            "text": "Second fixture note"
+          }
+        ]
+      },
+      "after": {
+        "textarea": "Second fixture note",
+        "rows": [
+          {
+            "title": "Second fixture note",
+            "selected": true,
+            "dirty": false
+          }
+        ],
+        "storage": [
+          {
+            "id": 2,
+            "text": "Second fixture note"
+          }
+        ]
+      },
+      "dialogs": [
+        {
+          "type": "confirm",
+          "message": "Do you realy wish to delete the note?",
+          "decision": "accept"
+        }
+      ]
+    },
+    {
+      "id": "delete_row_accept",
+      "pass": true,
+      "before": {
+        "textarea": "First fixture note",
+        "rows": [
+          {
+            "title": "First fixture note",
+            "selected": true,
+            "dirty": false
+          },
+          {
+            "title": "Second fixture note",
+            "selected": false,
+            "dirty": false
+          }
+        ],
+        "storage": [
+          {
+            "id": 1,
+            "text": "First fixture note"
+          },
+          {
+            "id": 2,
+            "text": "Second fixture note"
+          }
+        ]
+      },
+      "after": {
+        "textarea": "First fixture note",
+        "rows": [
+          {
+            "title": "First fixture note",
+            "selected": true,
+            "dirty": false
+          }
+        ],
+        "storage": [
+          {
+            "id": 1,
+            "text": "First fixture note"
+          }
+        ]
+      },
+      "dialogs": [
+        {
+          "type": "confirm",
+          "message": "Do you realy wish to delete the note?",
+          "decision": "accept"
+        }
+      ]
+    },
+    {
+      "id": "delete_header_cancel",
+      "pass": true,
+      "before": {
+        "textarea": "First fixture note",
+        "rows": [
+          {
+            "title": "First fixture note",
+            "selected": true,
+            "dirty": false
+          },
+          {
+            "title": "Second fixture note",
+            "selected": false,
+            "dirty": false
+          }
+        ],
+        "storage": [
+          {
+            "id": 1,
+            "text": "First fixture note"
+          },
+          {
+            "id": 2,
+            "text": "Second fixture note"
+          }
+        ]
+      },
+      "after": {
+        "textarea": "First fixture note",
+        "rows": [
+          {
+            "title": "First fixture note",
+            "selected": true,
+            "dirty": false
+          },
+          {
+            "title": "Second fixture note",
+            "selected": false,
+            "dirty": false
+          }
+        ],
+        "storage": [
+          {
+            "id": 1,
+            "text": "First fixture note"
+          },
+          {
+            "id": 2,
+            "text": "Second fixture note"
+          }
+        ]
+      },
+      "dialogs": [
+        {
+          "type": "confirm",
+          "message": "Do you realy wish to delete the note?",
+          "decision": "dismiss"
+        }
+      ]
+    },
+    {
+      "id": "delete_row_cancel",
+      "pass": true,
+      "before": {
+        "textarea": "First fixture note",
+        "rows": [
+          {
+            "title": "First fixture note",
+            "selected": true,
+            "dirty": false
+          },
+          {
+            "title": "Second fixture note",
+            "selected": false,
+            "dirty": false
+          }
+        ],
+        "storage": [
+          {
+            "id": 1,
+            "text": "First fixture note"
+          },
+          {
+            "id": 2,
+            "text": "Second fixture note"
+          }
+        ]
+      },
+      "after": {
+        "textarea": "Second fixture note",
+        "rows": [
+          {
+            "title": "First fixture note",
+            "selected": false,
+            "dirty": false
+          },
+          {
+            "title": "Second fixture note",
+            "selected": true,
+            "dirty": false
+          }
+        ],
+        "storage": [
+          {
+            "id": 1,
+            "text": "First fixture note"
+          },
+          {
+            "id": 2,
+            "text": "Second fixture note"
+          }
+        ]
+      },
+      "dialogs": [
+        {
+          "type": "confirm",
+          "message": "Do you realy wish to delete the note?",
+          "decision": "dismiss"
+        }
+      ]
+    },
+    {
+      "id": "empty_text_allowed",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert(s.rows[0].dirty)\n\n    at file:///private/tmp/integration-holdout-notes-evidence/reference.mjs:18:126\n    at async run (file:///private/tmp/integration-holdout-notes-evidence/reference.mjs:7:168)\n    at async file:///private/tmp/integration-holdout-notes-evidence/reference.mjs:18:2",
+      "after": {
+        "textarea": "",
+        "rows": [
+          {
+            "title": "First fixture note",
+            "selected": true,
+            "dirty": false
+          },
+          {
+            "title": "Second fixture note",
+            "selected": false,
+            "dirty": false
+          }
+        ],
+        "storage": [
+          {
+            "id": 1,
+            "text": "First fixture note"
+          },
+          {
+            "id": 2,
+            "text": "Second fixture note"
+          }
+        ]
+      }
+    },
+    {
+      "id": "long_title_truncated_only",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'First fixture note'\n- '12345678901234567890...'\n\n    at file:///private/tmp/integration-holdout-notes-evidence/reference.mjs:19:206\n    at async run (file:///private/tmp/integration-holdout-notes-evidence/reference.mjs:7:168)\n    at async file:///private/tmp/integration-holdout-notes-evidence/reference.mjs:19:2",
+      "after": {
+        "textarea": "12345678901234567890 additional complete text",
+        "rows": [
+          {
+            "title": "First fixture note",
+            "selected": true,
+            "dirty": false
+          },
+          {
+            "title": "Second fixture note",
+            "selected": false,
+            "dirty": false
+          }
+        ],
+        "storage": [
+          {
+            "id": 1,
+            "text": "First fixture note"
+          },
+          {
+            "id": 2,
+            "text": "Second fixture note"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "kind": "independent-source-schema-audit",
+  "measuredAt": "2026-11-09T21:07:13.231Z",
+  "results": {
+    "create": {
+      "control": "title",
+      "cases": [
+        {
+          "value": "",
+          "angularValid": false,
+          "errors": {
+            "whitespace": "value is only whitespace"
+          },
+          "saveDisabled": true,
+          "nativeValid": true
+        },
+        {
+          "value": "   ",
+          "angularValid": false,
+          "errors": {
+            "whitespace": "value is only whitespace"
+          },
+          "saveDisabled": true,
+          "nativeValid": true
+        },
+        {
+          "value": "\t\n",
+          "angularValid": false,
+          "errors": {
+            "whitespace": "value is only whitespace"
+          },
+          "saveDisabled": true,
+          "nativeValid": true
+        },
+        {
+          "value": " ",
+          "angularValid": false,
+          "errors": {
+            "whitespace": "value is only whitespace"
+          },
+          "saveDisabled": true,
+          "nativeValid": true
+        },
+        {
+          "value": "Benchmark",
+          "angularValid": true,
+          "errors": null,
+          "saveDisabled": false,
+          "nativeValid": true
+        },
+        {
+          "value": " A ",
+          "angularValid": true,
+          "errors": null,
+          "saveDisabled": false,
+          "nativeValid": true
+        },
+        {
+          "value": "​",
+          "angularValid": true,
+          "errors": null,
+          "saveDisabled": false,
+          "nativeValid": true
+        }
+      ]
+    },
+    "settings": {
+      "control": "name",
+      "cases": [
+        {
+          "value": "",
+          "angularValid": false,
+          "errors": {
+            "whitespace": "value is only whitespace"
+          },
+          "saveDisabled": true,
+          "nativeValid": true
+        },
+        {
+          "value": "   ",
+          "angularValid": false,
+          "errors": {
+            "whitespace": "value is only whitespace"
+          },
+          "saveDisabled": true,
+          "nativeValid": true
+        },
+        {
+          "value": "\t\n",
+          "angularValid": false,
+          "errors": {
+            "whitespace": "value is only whitespace"
+          },
+          "saveDisabled": true,
+          "nativeValid": true
+        },
+        {
+          "value": " ",
+          "angularValid": false,
+          "errors": {
+            "whitespace": "value is only whitespace"
+          },
+          "saveDisabled": true,
+          "nativeValid": true
+        },
+        {
+          "value": "Benchmark",
+          "angularValid": true,
+          "errors": null,
+          "saveDisabled": false,
+          "nativeValid": true
+        },
+        {
+          "value": " A ",
+          "angularValid": true,
+          "errors": null,
+          "saveDisabled": false,
+          "nativeValid": true
+        },
+        {
+          "value": "​",
+          "angularValid": true,
+          "errors": null,
+          "saveDisabled": false,
+          "nativeValid": true
+        }
+      ],
+      "nativeOptions": [
+        {
+          "value": "Business",
+          "text": "Business"
+        },
+        {
+          "value": "Marketing",
+          "text": "Marketing"
+        },
+        {
+          "value": "Software",
+          "text": "Software"
+        }
+      ]
+    }
+  }
+}

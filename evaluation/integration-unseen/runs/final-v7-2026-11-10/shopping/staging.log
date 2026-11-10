@@ -1,0 +1,31 @@
+{
+  "workspace": "/private/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-10T11-21-00-902Z-23099/shopping",
+  "project": "/private/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-10T11-21-00-902Z-23099/shopping/tsconfig.app.json",
+  "angularVersion": "16.1.7",
+  "nodes": 60,
+  "diagnostics": [
+    {
+      "category": "warning",
+      "code": "directive-output-dispatch",
+      "message": "onChange is a resolved directive output, not a native DOM event; runtime support must be explicit",
+      "file": "src/app/components/einkaufszettel/home/home.component.html",
+      "line": 16
+    },
+    {
+      "category": "warning",
+      "code": "directive-output-dispatch",
+      "message": "imageChange is a resolved directive output, not a native DOM event; runtime support must be explicit",
+      "file": "src/app/components/settings/profile-edit/profile-edit.component.html",
+      "line": 3
+    },
+    {
+      "category": "warning",
+      "code": "directive-output-dispatch",
+      "message": "onSelect is a resolved directive output, not a native DOM event; runtime support must be explicit",
+      "file": "src/app/components/settings/profile-edit/avatar/avatar.component.html",
+      "line": 13
+    }
+  ],
+  "manifest": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-10T11-21-00-902Z-23099/shopping/angular-mcp.integration.json"
+}
+Build or serve this staged workspace with its normal Angular CLI.

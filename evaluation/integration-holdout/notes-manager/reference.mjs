@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import {writeFileSync} from 'node:fs';
+import {join} from 'node:path';
+import {assertFrozen,launchOriginal,freshPage,snapshot,setText,confirmClick,seed,artifactRoot} from './fixture.mjs';
+assertFrozen();const app=await launchOriginal();const cases=[];
+try{
+ const run=async(id,fn,empty=false)=>{const {page,context}=await freshPage(app.browser,app.baseUrl,empty);let result;try{const before=await snapshot(page);const extra=await fn(page);const after=await snapshot(page);result={id,pass:true,before,after,...extra};}catch(error){result={id,pass:false,error:error.stack,after:await snapshot(page)};}finally{await context.close();}cases.push(result);console.log(JSON.stringify(result));};
+ await run('load_seeded',async page=>{const s=await snapshot(page);assert.equal(s.rows.length,2);assert.equal(s.textarea,seed[0].text);assert(s.rows[0].selected);assert.deepEqual(s.storage,seed);});
+ await run('load_empty',async page=>{const s=await snapshot(page);assert.equal(s.rows.length,1);assert.equal(s.textarea,'');assert(s.rows[0].dirty);assert.deepEqual(s.storage,[]);},true);
+ await run('create_blank',async page=>{await page.locator('app-new-button a').click();const s=await snapshot(page);assert.equal(s.rows.length,3);assert.equal(s.textarea,'');assert(s.rows[2].dirty);assert(s.rows[2].selected);assert.deepEqual(s.storage,seed);});
+ await run('edit_selected',async page=>{await setText(page,'Revised first fixture note');const s=await snapshot(page);assert.equal(s.textarea,'Revised first fixture note');assert.equal(s.rows[0].title,'Revised first fixtur...');assert(s.rows[0].dirty);assert.deepEqual(s.storage,seed);});
+ await run('select_other',async page=>{await page.locator('app-note-list-item').nth(1).click();const s=await snapshot(page);assert.equal(s.textarea,seed[1].text);assert(s.rows[1].selected);assert.deepEqual(s.storage,seed);});
+ await run('save_existing',async page=>{await setText(page,'Saved fixture revision');await page.locator('app-save-button a').click();const s=await snapshot(page);assert.deepEqual(s.storage,[{id:1,text:'Saved fixture revision'},seed[1]]);assert(!s.rows[0].dirty);});
+ await run('delete_header_accept',async page=>{const dialogs=await confirmClick(page,'header app-delete-button a',true);const s=await snapshot(page);assert.deepEqual(s.storage,[seed[1]]);assert.equal(s.rows.length,1);assert.equal(s.textarea,seed[1].text);assert.equal(dialogs[0]?.type,'confirm');return {dialogs};});
+ await run('delete_row_accept',async page=>{const dialogs=await confirmClick(page,'app-note-list-item:nth-of-type(2) app-delete-button a',true);const s=await snapshot(page);assert.deepEqual(s.storage,[seed[0]]);assert.equal(s.rows.length,1);assert.equal(dialogs[0]?.type,'confirm');return {dialogs};});
+ await run('delete_header_cancel',async page=>{const dialogs=await confirmClick(page,'header app-delete-button a',false);const s=await snapshot(page);assert.deepEqual(s.storage,seed);assert.equal(s.rows.length,2);assert.equal(dialogs[0]?.decision,'dismiss');return {dialogs};});
+ await run('delete_row_cancel',async page=>{const dialogs=await confirmClick(page,'app-note-list-item:nth-of-type(2) app-delete-button a',false);const s=await snapshot(page);assert.deepEqual(s.storage,seed);assert.equal(s.rows.length,2);assert.equal(dialogs[0]?.decision,'dismiss');return {dialogs};});
+ await run('empty_text_allowed',async page=>{await setText(page,'');const s=await snapshot(page);assert.equal(s.textarea,'');assert(s.rows[0].dirty);assert.deepEqual(s.storage,seed);});
+ await run('long_title_truncated_only',async page=>{const value='12345678901234567890 additional complete text';await setText(page,value);const s=await snapshot(page);assert.equal(s.textarea,value);assert.equal(s.rows[0].title,'12345678901234567890...');assert.deepEqual(s.storage,seed);});
+ assertFrozen();const report={formatVersion:1,kind:'native-dom-reference',labelFreeze:'23cd7896c6ff015f4f080c1e9d82c3a026e79bf78f3407a1e3336c3b936005d7',passed:cases.filter(c=>c.pass).length,total:cases.length,cases};writeFileSync(process.env.HOLDOUT_REFERENCE_OUT??join(artifactRoot,'reference-results.json'),JSON.stringify(report,null,2)+'\n');if(report.passed!==report.total)process.exitCode=1;
+}finally{await app.close();}

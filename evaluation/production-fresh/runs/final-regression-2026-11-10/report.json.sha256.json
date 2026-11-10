@@ -1,0 +1,32 @@
+{
+  "formatVersion": 1,
+  "sha256": "528cc88dbffdf20b77f19ea35b4b69867172734e67126fa4a75ecfe34b0f2f87",
+  "evidenceFiles": {
+    "todo/freeze.json": "e4fa9167b8a5c157ffe538ce11457420c5c6649a6cb9b332057736963450957b",
+    "todo/source-manifest.json": "02c64ca4c0427e6adbdd8d9fd50ab019bc341b6db949c20fbf0d1d638769ba3e",
+    "todo/labels.json": "d92ffa41317f918d3bc3c807783ac70bb73e04cda987ee93e2c9dd6ae3abac72",
+    "todo/inventory.json": "6b5c43b975f22d68d43d905014d319c4d004535bf55ea364a4b8145b11f2d23b",
+    "todo/LICENSE": "68d2bdb9220b0927d5d34b5898ec61d7f507a37112a4962b5b24596c29aeca64",
+    "sprint/freeze.json": "8abedf84dbde4d31d3044b6defab0ded650bda3510aa355e165aafa4f326b700",
+    "sprint/source-manifest.json": "9f81e01d4364a0388001bcc0474fc285994e5a82d03444020251568370b85fe5",
+    "sprint/labels.json": "b71cc36370902ddfe9d3ed3374fbb613dce7a8423dc0a10c2f35b7587be49c95",
+    "sprint/inventory.json": "1951df117db7d22de4df9dacfae76c993c85f2675ed186b703f2e5d34a7e24ff",
+    "sprint/LICENSE": "f719028bba7aa0e3e861f583ca82d4b714997211caf84677a7d3599f6b23b35a",
+    "expense/freeze.json": "971068eda9fb985375180e906a70ccbe58b09685f83c792524f4fca0232290dd",
+    "expense/source-manifest.json": "be0b10b90c1a62aa280c14210c06ff148d788ecc1513426d6544952c69b0332e",
+    "expense/labels.json": "245f1839a69cca8feb8520c65c7591f1f0ab61a8c1fad0331c04acef0a1632a2",
+    "expense/inventory.json": "bd27ec4beaebafb3f1c6862a74bd206f99627a76ee07ed3dac51a6c0af9eba59",
+    "expense/LICENSE": "12d98b22602986ca992acc18a8e76f35c270c6ace9c4f59437f9b277363032f0",
+    "native-original.json": "75fd7f4f49d8fc94261b8d1b188c3ba94622ed8a533edde0708b526e61ad5986",
+    "original-builds.json": "79ec257318e25ce6dfcb94dd50c33633a3c803c443bcc917f5d36f1972bcc510"
+  },
+  "completion": {
+    "file": "run-completion.json",
+    "sha256": "0b4b1efa61335392e199a1dddf1aa4135fac9b2d19e8b34c7fade7b1e3c6e9aa"
+  },
+  "artifactManifest": {
+    "file": "evidence-manifest.json",
+    "sha256": "b6e3847590790891b83a69d49f468a5c8f5bdc789d765b63a1a5171621fa1f2b"
+  },
+  "report": "/Users/joeljoseph/Desktop/Personal Work/ai-experiments-apps/ngx-mcp/evaluation/production-fresh/runs/final-regression-2026-11-10/report.json"
+}

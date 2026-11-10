@@ -1,0 +1,121 @@
+{
+  "formatVersion": 1,
+  "kind": "independent-source-adjudications",
+  "recordedAt": "2026-11-09T21:22:14.779333+00:00",
+  "project": "modern-store",
+  "sourceCommit": "5bface390202c117a30bb7de06839735d3b9f013",
+  "frozenLabelsSha256": "aecacb8704ca8a0dc3a85f3d184e8eb63ea452d08b816638e41eadb2f4bb5de9",
+  "frozenLabelsChanged": false,
+  "method": "Read pinned source/validators/templates. Scope decisions cite exclusion IDs already present in the frozen pre-scoring inventory. Runtime audits inspect original UI/native/Angular behavior without submitting business mutations. Current compiler snapshot is used only to enumerate raw emissions, never as source truth.",
+  "metricPolicy": "Keep raw precision/counts unchanged. If reporting scoped business-state precision, show it separately and apply only explicit evidenced exclusions; never silently remove unknowns. Unadjudicated candidates stay visible. This file does not change labels, validInput or action denominator.",
+  "rawSnapshot": {
+    "manifestFile": "evaluation/fresh/modern-store/compiler-manifest.json",
+    "manifestSha256": "b221737e4aa30b3238dddacfb6f3f71fb2be92fdf097be9ea27ed24c30ea3c75",
+    "rawEmissions": 20,
+    "rawRunnableEmissions": 20,
+    "rawUnknownRunnableEmissions": 3,
+    "rawUnknownRunnableOperations": [
+      "HeaderActions.openSignInDialog",
+      "HeaderActions.openSignUpDialog",
+      "ViewCart.store.proceedToCheckout"
+    ],
+    "explicitScopeExcludedRawUnknownEmissionIds": [
+      "/#HeaderActions.openSignInDialog:app-header-actions button",
+      "/#HeaderActions.openSignUpDialog:app-header-actions button[matbutton=\"filled\"]",
+      "/cart#ViewCart.store.proceedToCheckout:app-view-cart button.w-full.mt-6.py-3"
+    ],
+    "unadjudicatedRawUnknownEmissionIds": []
+  },
+  "scopeDecisions": [
+    {
+      "component": "ViewCart",
+      "handler": "store.proceedToCheckout",
+      "frozenExclusionId": "proceed-to-checkout",
+      "reason": "Original method only opens the sign-in dialog or navigates to checkout. Cart/wishlist/user/order state are not changed by this step. Actual sign-in and placeOrder are separate included actions.",
+      "evidence": [
+        {
+          "file": "src/app/ecommerce-store.ts",
+          "startLine": 498,
+          "endLine": 509,
+          "sha256": "c8e353de1eaaec1098b5f7f47784059ef8a94139e9ca69212b7b0e96d32ce645"
+        },
+        {
+          "file": "src/app/pages/view-cart/view-cart.ts",
+          "startLine": 24,
+          "endLine": 27,
+          "sha256": "e6bf5dae59d35003d748835265b420f58a31409323b5d5ac6b62ca70d13a467f"
+        }
+      ],
+      "classification": "out-of-scope-transient-ui",
+      "rawEmissionIds": [
+        "/cart#ViewCart.store.proceedToCheckout:app-view-cart button.w-full.mt-6.py-3"
+      ],
+      "preserveInRawCounts": true
+    },
+    {
+      "component": "HeaderActions",
+      "handler": "openSignInDialog",
+      "frozenExclusionId": "presentation-and-dialog-controls",
+      "reason": "Only MatDialog.open(SignInDialog); source domain mutation occurs at separate SignInDialog.signIn.",
+      "evidence": [
+        {
+          "file": "src/app/layout/header-actions/header-actions.ts",
+          "startLine": 73,
+          "endLine": 77,
+          "sha256": "81e5bcf0abb461b4a46e375dac1c133ebb2b999828f1ef63ec43e3d9d2a75542"
+        }
+      ],
+      "classification": "out-of-scope-transient-ui",
+      "rawEmissionIds": [
+        "/#HeaderActions.openSignInDialog:app-header-actions button"
+      ],
+      "preserveInRawCounts": true
+    },
+    {
+      "component": "HeaderActions",
+      "handler": "openSignUpDialog",
+      "frozenExclusionId": "presentation-and-dialog-controls",
+      "reason": "Only MatDialog.open(SignUpDialog); source domain mutation occurs at separate SignUpDialog.signUp.",
+      "evidence": [
+        {
+          "file": "src/app/layout/header-actions/header-actions.ts",
+          "startLine": 79,
+          "endLine": 83,
+          "sha256": "81e5bcf0abb461b4a46e375dac1c133ebb2b999828f1ef63ec43e3d9d2a75542"
+        }
+      ],
+      "classification": "out-of-scope-transient-ui",
+      "rawEmissionIds": [
+        "/#HeaderActions.openSignUpDialog:app-header-actions button[matbutton=\"filled\"]"
+      ],
+      "preserveInRawCounts": true
+    }
+  ],
+  "schemaAdjudications": [
+    {
+      "kind": "frozen-label-approximation",
+      "actions": [
+        "session-sign-in",
+        "session-sign-up"
+      ],
+      "field": "email",
+      "assessment": "format:email under ajv-formats default/full does not exactly match native plus Angular admissibility. a@b, a@localhost and user@example pass native/Angular but fail full mode. Fast mode additionally accepts a..b@example.com, which Angular rejects.",
+      "evidence": [
+        {
+          "file": "src/app/components/sign-in-dialog/sign-in-dialog.ts",
+          "startLine": 87,
+          "endLine": 104,
+          "sha256": "3b919eb43a13cbb2b8f3eacbbc4066dc28bd9b3985858a777402e0aa25376207"
+        },
+        {
+          "file": "src/app/components/sign-up-dialog/sign-up-dialog.ts",
+          "startLine": 112,
+          "endLine": 138,
+          "sha256": "e1651145f4164a91e564402af62eeafb4e8baa2fce477f39aefcf788c1d12963"
+        }
+      ],
+      "runtimeEvidence": "email-audit.json",
+      "disposition": "Record mismatch; do not change frozen labels or choose a validator mode merely to improve scores."
+    }
+  ]
+}

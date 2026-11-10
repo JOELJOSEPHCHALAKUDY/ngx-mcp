@@ -1,0 +1,8 @@
+[
+  {
+    "id": "/users/add#AddEditComponent.onSubmit:ng-component form",
+    "fingerprint": "9406a72acfdd316b79c94e86bee073bdf2e4816ccbdf8f7fb5f9f4d1f0e6bda9",
+    "description": "Run the existing user-crud form workflow using isolated public-sample data.",
+    "effect": "write"
+  }
+]

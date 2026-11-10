@@ -1,0 +1,42 @@
+
+> ngx-mcp@0.1.0 pack:check
+> npm run build && node tooling/check-package.mjs
+
+
+> ngx-mcp@0.1.0 build
+> node tooling/build.mjs
+
+{
+  "name": "ngx-mcp",
+  "version": "0.1.0",
+  "compressedBytes": 47754,
+  "unpackedBytes": 172613,
+  "files": [
+    "LICENSE",
+    "README.md",
+    "RELEASING.md",
+    "THIRD_PARTY_NOTICES.md",
+    "dist/chunk-5VCH5MJ3.js",
+    "dist/chunk-S4ZHBWHD.js",
+    "dist/chunk-YZKPYWU5.js",
+    "dist/index.js",
+    "dist/integrate.js",
+    "dist/integrated-serve.js",
+    "dist/ngx-mcp.js",
+    "dist/types/index.d.ts",
+    "dist/types/integrate.d.ts",
+    "dist/types/integrated-serve.d.ts",
+    "dist/types/integration-catalog.d.ts",
+    "dist/types/integration-compiler.d.ts",
+    "dist/types/integration-mcp.d.ts",
+    "dist/types/integration-project.d.ts",
+    "dist/types/integration-runtime.d.ts",
+    "dist/types/integration-ui.d.ts",
+    "dist/types/integration-webmcp.d.ts",
+    "package.json"
+  ],
+  "sampleApplicationsIncluded": false,
+  "legacyExperimentIncluded": false,
+  "published": false
+}
+Extracted current-integration CLI, API, and code generation passed.

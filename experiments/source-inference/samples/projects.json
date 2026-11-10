@@ -1,0 +1,181 @@
+[
+  {
+    "id": "user-crud",
+    "repository": "https://github.com/cornflourblue/angular-14-crud-example",
+    "revision": "4abfcfdd1ac9e44260f4d9407713142257bc7e65",
+    "license": "MIT",
+    "licenseFile": "LICENSE",
+    "subdirectory": ".",
+    "complexity": "1 \u2014 Small CRUD",
+    "features": [
+      "NgModules",
+      "lazy routes",
+      "reactive form",
+      "local fake backend"
+    ],
+    "tsconfig": "tsconfig.app.json",
+    "routes": "src/app/app-routing.module.ts#routes",
+    "angularProject": "angular-14-example",
+    "port": 4318,
+    "scenario": {
+      "route": "/users/add",
+      "component": "AddEditComponent",
+      "handler": "onSubmit",
+      "args": {
+        "title": "Ms",
+        "firstName": "Ada",
+        "lastName": "Lovelace",
+        "email": "ada@example.test",
+        "role": "User",
+        "password": "Synthetic-123",
+        "confirmPassword": "Synthetic-123"
+      },
+      "expectedPath": "/users",
+      "storageKey": "angular-14-crud-example-users"
+    }
+  },
+  {
+    "id": "signup",
+    "repository": "https://github.com/cornflourblue/angular-15-signup-verification-boilerplate",
+    "revision": "0ba71391309cfad3940167842f3ca351bfd5b2fd",
+    "license": "MIT",
+    "licenseFile": "LICENSE",
+    "subdirectory": ".",
+    "complexity": "2 \u2014 Authentication and accounts",
+    "features": [
+      "registration",
+      "cross-field validation",
+      "terms checkbox",
+      "guarded profile/admin routes"
+    ],
+    "tsconfig": "tsconfig.app.json",
+    "routes": "src/app/app-routing.module.ts#routes",
+    "angularProject": "angular-15-example",
+    "port": 4319,
+    "scenario": {
+      "route": "/account/register",
+      "component": "RegisterComponent",
+      "handler": "onSubmit",
+      "args": {
+        "title": "Ms",
+        "firstName": "Grace",
+        "lastName": "Hopper",
+        "email": "grace@example.test",
+        "password": "Synthetic-123",
+        "confirmPassword": "Synthetic-123",
+        "acceptTerms": true
+      },
+      "expectedPath": "/account/login"
+    }
+  },
+  {
+    "id": "forms-course",
+    "repository": "https://github.com/angular-university/angular-forms-course",
+    "revision": "ed20366d7be3ffffd852f28536e3ed58e86fb46d",
+    "license": "MIT",
+    "licenseFile": "LICENSE",
+    "subdirectory": ".",
+    "complexity": "3 \u2014 Composite forms",
+    "features": [
+      "Material stepper",
+      "custom value accessors",
+      "async validators",
+      "dynamic lessons",
+      "some deliberately empty exercise handlers"
+    ],
+    "tsconfig": "src/tsconfig.app.json",
+    "routes": "app/app-routing.module.ts#routes",
+    "angularProject": "angular-forms-course",
+    "port": 4320,
+    "scenario": {
+      "route": "/add-new-course",
+      "component": "CreateCourseStep1Component",
+      "handler": "edit_form",
+      "kind": "workflow",
+      "args": {
+        "title": "Agentic Angular Course",
+        "category": "Advanced",
+        "downloadsAllowed": true,
+        "longDescription": "A course draft saved through the original Angular wizard."
+      },
+      "expectedPath": "/add-new-course",
+      "storageKey": "STEP_1",
+      "upstreamLimitation": "The final Create Course exercise only logs values; this scenario verifies the implemented draft-saving workflow."
+    }
+  },
+  {
+    "id": "course-crud",
+    "repository": "https://github.com/loiane/crud-angular-spring",
+    "revision": "e2b9c5a08a57f149689c8ef79b0b7935287e8fbf",
+    "license": "MIT",
+    "licenseFile": "LICENSE",
+    "subdirectory": "crud-angular",
+    "complexity": "4 \u2014 Signal Forms and nested state",
+    "features": [
+      "Angular Signal Forms",
+      "@Service",
+      "protected template handlers",
+      "Material select",
+      "repeated lesson rows",
+      "resolver input"
+    ],
+    "tsconfig": "tsconfig.app.json",
+    "routes": "src/app/app.routes.ts#routes",
+    "angularProject": "crud-angular",
+    "port": 4321,
+    "scenario": {
+      "route": "/courses/new",
+      "preparePath": "/courses",
+      "component": "CourseForm",
+      "handler": "onSubmit",
+      "args": {
+        "name": "Compiler Workflow Course",
+        "category": "Front-end",
+        "lessons": [
+          {
+            "name": "Introduction to Angular",
+            "youtubeUrl": "dQw4w9WgXcQ"
+          },
+          {
+            "name": "Understanding Signals",
+            "youtubeUrl": "aqz-KE-bpKQ"
+          }
+        ]
+      },
+      "expectedPath": "/courses"
+    },
+    "toolchain": "samples/toolchains/course-crud"
+  },
+  {
+    "id": "realworld",
+    "repository": "https://github.com/realworld-apps/angular-realworld-example-app",
+    "revision": "d426ec804f7d035c374aa4a1b48ecdb05a03eb02",
+    "license": "MIT",
+    "licenseFile": "LICENSE",
+    "subdirectory": ".",
+    "complexity": "5 \u2014 Multi-feature application",
+    "features": [
+      "standalone lazy default exports",
+      "authentication",
+      "articles",
+      "profiles",
+      "comments",
+      "external REST API"
+    ],
+    "tsconfig": "tsconfig.app.json",
+    "routes": "src/app/app.routes.ts#routes",
+    "angularProject": "angular-conduit",
+    "port": 4322,
+    "scenario": {
+      "route": "/register",
+      "component": "AuthComponent",
+      "handler": "submitForm",
+      "args": {
+        "username": "Katherine",
+        "email": "katherine@example.test",
+        "password": "Synthetic-123"
+      },
+      "expectedPath": "/"
+    }
+  }
+]

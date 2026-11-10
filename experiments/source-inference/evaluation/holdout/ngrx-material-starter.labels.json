@@ -1,0 +1,842 @@
+[
+ {
+  "id": "auth-login",
+  "component": "AppComponent",
+  "handler": "onLoginClick",
+  "routes": [
+   "/about",
+   "/feature-list",
+   "/settings",
+   "/examples/todos",
+   "/examples/stock-market",
+   "/examples/theming",
+   "/examples/crud",
+   "/examples/crud/:id",
+   "/examples/simple-state-management",
+   "/examples/form",
+   "/examples/notifications",
+   "/examples/elements",
+   "/examples/authenticated"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {},
+   "required": []
+  },
+  "validInput": {},
+  "effect": "Dispatches authLogin; sets isAuthenticated=true and persists to local storage (unlocks /examples/authenticated).",
+  "notes": "Toolbar button, shown only when logged out; app-wide"
+ },
+ {
+  "id": "auth-logout",
+  "component": "AppComponent",
+  "handler": "onLogoutClick",
+  "routes": [
+   "/about",
+   "/feature-list",
+   "/settings",
+   "/examples/todos",
+   "/examples/stock-market",
+   "/examples/theming",
+   "/examples/crud",
+   "/examples/crud/:id",
+   "/examples/simple-state-management",
+   "/examples/form",
+   "/examples/notifications",
+   "/examples/elements",
+   "/examples/authenticated"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {},
+   "required": []
+  },
+  "validInput": {},
+  "effect": "Dispatches authLogout; clears auth state, navigates home.",
+  "notes": "Toolbar user-icon menu item, shown only when logged in; app-wide"
+ },
+ {
+  "id": "toolbar-change-language",
+  "component": "AppComponent",
+  "handler": "onLanguageSelect",
+  "routes": [
+   "/about",
+   "/feature-list",
+   "/settings",
+   "/examples/todos",
+   "/examples/stock-market",
+   "/examples/theming",
+   "/examples/crud",
+   "/examples/crud/:id",
+   "/examples/simple-state-management",
+   "/examples/form",
+   "/examples/notifications",
+   "/examples/elements",
+   "/examples/authenticated"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "language": {
+     "type": "string",
+     "enum": [
+      "en",
+      "de",
+      "sk",
+      "fr",
+      "es",
+      "pt-br",
+      "zh-cn",
+      "he",
+      "ar"
+     ]
+    }
+   },
+   "required": [
+    "language"
+   ]
+  },
+  "validInput": {
+   "language": "de"
+  },
+  "effect": "Changes UI language and persists settings.",
+  "notes": "Toolbar mat-select, present on every route"
+ },
+ {
+  "id": "settings-change-language",
+  "component": "SettingsContainerComponent",
+  "handler": "onLanguageSelect",
+  "routes": [
+   "/settings"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "language": {
+     "type": "string",
+     "enum": [
+      "en",
+      "de",
+      "sk",
+      "fr",
+      "es",
+      "pt-br",
+      "zh-cn",
+      "he",
+      "ar"
+     ]
+    }
+   },
+   "required": [
+    "language"
+   ]
+  },
+  "validInput": {
+   "language": "fr"
+  },
+  "effect": "Changes UI language and persists settings.",
+  "notes": ""
+ },
+ {
+  "id": "settings-change-theme",
+  "component": "SettingsContainerComponent",
+  "handler": "onThemeSelect",
+  "routes": [
+   "/settings"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "theme": {
+     "type": "string",
+     "enum": [
+      "DEFAULT-THEME",
+      "LIGHT-THEME",
+      "NATURE-THEME",
+      "BLACK-THEME"
+     ]
+    }
+   },
+   "required": [
+    "theme"
+   ]
+  },
+  "validInput": {
+   "theme": "NATURE-THEME"
+  },
+  "effect": "Changes theme and persists settings.",
+  "notes": ""
+ },
+ {
+  "id": "settings-auto-night-mode",
+  "component": "SettingsContainerComponent",
+  "handler": "onAutoNightModeToggle",
+  "routes": [
+   "/settings"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "autoNightMode": {
+     "type": "boolean"
+    }
+   },
+   "required": [
+    "autoNightMode"
+   ]
+  },
+  "validInput": {
+   "autoNightMode": true
+  },
+  "effect": "Toggles automatic night mode (persisted).",
+  "notes": ""
+ },
+ {
+  "id": "settings-sticky-header",
+  "component": "SettingsContainerComponent",
+  "handler": "onStickyHeaderToggle",
+  "routes": [
+   "/settings"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "stickyHeader": {
+     "type": "boolean"
+    }
+   },
+   "required": [
+    "stickyHeader"
+   ]
+  },
+  "validInput": {
+   "stickyHeader": false
+  },
+  "effect": "Toggles fixed toolbar (persisted).",
+  "notes": ""
+ },
+ {
+  "id": "settings-page-animations",
+  "component": "SettingsContainerComponent",
+  "handler": "onPageAnimationsToggle",
+  "routes": [
+   "/settings"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "pageAnimations": {
+     "type": "boolean"
+    }
+   },
+   "required": [
+    "pageAnimations"
+   ]
+  },
+  "validInput": {
+   "pageAnimations": false
+  },
+  "effect": "Toggles page transition animations (persisted).",
+  "notes": ""
+ },
+ {
+  "id": "settings-elements-animations",
+  "component": "SettingsContainerComponent",
+  "handler": "onElementsAnimationsToggle",
+  "routes": [
+   "/settings"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "elementsAnimations": {
+     "type": "boolean"
+    }
+   },
+   "required": [
+    "elementsAnimations"
+   ]
+  },
+  "validInput": {
+   "elementsAnimations": false
+  },
+  "effect": "Toggles element animations (persisted).",
+  "notes": ""
+ },
+ {
+  "id": "todos-add",
+  "component": "TodosContainerComponent",
+  "handler": "onAddTodo",
+  "routes": [
+   "/examples/todos"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "name": {
+     "type": "string",
+     "minLength": 4
+    }
+   },
+   "required": [
+    "name"
+   ]
+  },
+  "validInput": {
+   "name": "Buy milk"
+  },
+  "effect": "Adds a todo to the store and shows info notification.",
+  "notes": "Button disabled / Enter ignored when text length < 4"
+ },
+ {
+  "id": "todos-toggle",
+  "component": "TodosContainerComponent",
+  "handler": "onToggleTodo",
+  "routes": [
+   "/examples/todos"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "id": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "id"
+   ]
+  },
+  "validInput": {
+   "id": "todo-uuid-1"
+  },
+  "effect": "Toggles todo done state; snackbar offers Undo (which toggles again).",
+  "notes": "Handler takes a Todo; checkbox or label click"
+ },
+ {
+  "id": "todos-remove-done",
+  "component": "TodosContainerComponent",
+  "handler": "onRemoveDoneTodos",
+  "routes": [
+   "/examples/todos"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {},
+   "required": []
+  },
+  "validInput": {},
+  "effect": "Removes all done todos.",
+  "notes": "Trash button disabled when no done todos"
+ },
+ {
+  "id": "todos-filter",
+  "component": "TodosContainerComponent",
+  "handler": "onFilterTodos",
+  "routes": [
+   "/examples/todos"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "filter": {
+     "type": "string",
+     "enum": [
+      "ALL",
+      "DONE",
+      "ACTIVE"
+     ]
+    }
+   },
+   "required": [
+    "filter"
+   ]
+  },
+  "validInput": {
+   "filter": "DONE"
+  },
+  "effect": "Sets todo list filter (persisted in store) and notifies.",
+  "notes": "Inside filter mat-menu"
+ },
+ {
+  "id": "stock-market-retrieve",
+  "component": "StockMarketContainerComponent",
+  "handler": "onSymbolChange",
+  "routes": [
+   "/examples/stock-market"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "symbol": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "symbol"
+   ]
+  },
+  "validInput": {
+   "symbol": "AAPL"
+  },
+  "effect": "Retrieves stock quote for symbol (debounced 500ms, mocked service); also auto-fired on init with stored symbol.",
+  "notes": "Triggered on keyup; handler onSymbolValue(symbol)"
+ },
+ {
+  "id": "crud-select-book",
+  "component": "CrudComponent",
+  "handler": "select",
+  "routes": [
+   "/examples/crud",
+   "/examples/crud/:id"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "id": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "id"
+   ]
+  },
+  "validInput": {
+   "id": "book-id-1"
+  },
+  "effect": "Selects book by navigating to /examples/crud/:id (shows detail).",
+  "notes": "Navigation-like but drives detail view; card click"
+ },
+ {
+  "id": "crud-add-new",
+  "component": "CrudComponent",
+  "handler": "addNew",
+  "routes": [
+   "/examples/crud",
+   "/examples/crud/:id"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {},
+   "required": []
+  },
+  "validInput": {},
+  "effect": "Opens edit form with a fresh book with new uuid.",
+  "notes": "UI-only until save; FAB button hidden while editing"
+ },
+ {
+  "id": "crud-edit-book",
+  "component": "CrudComponent",
+  "handler": "edit",
+  "routes": [
+   "/examples/crud/:id"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "id": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "id"
+   ]
+  },
+  "validInput": {
+   "id": "book-id-1"
+  },
+  "effect": "Loads selected book into the edit form.",
+  "notes": "Requires a selected book; edit icon"
+ },
+ {
+  "id": "crud-save-book",
+  "component": "CrudComponent",
+  "handler": "save",
+  "routes": [
+   "/examples/crud",
+   "/examples/crud/:id"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "id": {
+     "type": "string"
+    },
+    "title": {
+     "type": "string",
+     "minLength": 1
+    },
+    "author": {
+     "type": "string",
+     "minLength": 1
+    },
+    "description": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "id",
+    "title",
+    "author"
+   ]
+  },
+  "validInput": {
+   "id": "book-id-1",
+   "title": "Dune",
+   "author": "Frank Herbert",
+   "description": "Sci-fi classic"
+  },
+  "effect": "Upserts book into store and navigates to its detail.",
+  "notes": "title and author required; description optional; form shown only in editing mode (add or edit)"
+ },
+ {
+  "id": "crud-delete-book",
+  "component": "CrudComponent",
+  "handler": "delete",
+  "routes": [
+   "/examples/crud/:id"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "id": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "id"
+   ]
+  },
+  "validInput": {
+   "id": "book-id-1"
+  },
+  "effect": "Deletes selected book and navigates to /examples/crud.",
+  "notes": "Trash icon visible only with selected book"
+ },
+ {
+  "id": "crud-deselect-book",
+  "component": "CrudComponent",
+  "handler": "deselect",
+  "routes": [
+   "/examples/crud/:id"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {},
+   "required": []
+  },
+  "validInput": {},
+  "effect": "Clears selection by navigating to /examples/crud.",
+  "notes": "Navigation-like; X icon"
+ },
+ {
+  "id": "form-save",
+  "component": "FormComponent",
+  "handler": "save",
+  "routes": [
+   "/examples/form"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "autosave": {
+     "type": "boolean"
+    },
+    "username": {
+     "type": "string"
+    },
+    "password": {
+     "type": "string"
+    },
+    "email": {
+     "type": "string"
+    },
+    "description": {
+     "type": "string"
+    },
+    "requestGift": {
+     "type": "boolean"
+    },
+    "birthday": {
+     "type": "string"
+    },
+    "rating": {
+     "type": "number",
+     "minimum": 1,
+     "maximum": 10
+    }
+   },
+   "required": []
+  },
+  "validInput": {
+   "username": "joel",
+   "description": "A long description"
+  },
+  "effect": "Saves current form values to store (no validation); also auto-fired on value change when autosave on.",
+  "notes": "Save button disabled while autosave on (then `update` runs on each change)"
+ },
+ {
+  "id": "form-submit",
+  "component": "FormComponent",
+  "handler": "submit",
+  "routes": [
+   "/examples/form"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "autosave": {
+     "type": "boolean"
+    },
+    "username": {
+     "type": "string",
+     "minLength": 1
+    },
+    "password": {
+     "type": "string",
+     "minLength": 1
+    },
+    "email": {
+     "type": "string",
+     "format": "email",
+     "minLength": 1
+    },
+    "description": {
+     "type": "string",
+     "minLength": 10,
+     "maxLength": 1000
+    },
+    "requestGift": {
+     "type": "boolean"
+    },
+    "birthday": {
+     "type": "string",
+     "minLength": 1
+    },
+    "rating": {
+     "type": "number",
+     "minimum": 1,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "username",
+    "password",
+    "email",
+    "description",
+    "birthday",
+    "rating"
+   ]
+  },
+  "validInput": {
+   "username": "joel",
+   "password": "secret",
+   "email": "a@b.com",
+   "description": "At least ten characters",
+   "requestGift": true,
+   "birthday": "1990-01-01",
+   "rating": 5
+  },
+  "effect": "If valid: saves form to store and shows info notification.",
+  "notes": "Send button; no-op when invalid"
+ },
+ {
+  "id": "form-reset",
+  "component": "FormComponent",
+  "handler": "reset",
+  "routes": [
+   "/examples/form"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {},
+   "required": []
+  },
+  "validInput": {},
+  "effect": "Resets form and dispatches actionFormReset to clear stored form.",
+  "notes": ""
+ },
+ {
+  "id": "user-submit",
+  "component": "UserComponent",
+  "handler": "onSubmit",
+  "routes": [
+   "/examples/simple-state-management"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "id": {
+     "type": "string"
+    },
+    "username": {
+     "type": "string",
+     "minLength": 5
+    },
+    "name": {
+     "type": "string",
+     "minLength": 5
+    },
+    "surname": {
+     "type": "string",
+     "minLength": 5
+    }
+   },
+   "required": [
+    "username",
+    "name",
+    "surname"
+   ]
+  },
+  "validInput": {
+   "username": "joeljoseph",
+   "name": "Joel Joe",
+   "surname": "Josephs"
+  },
+  "effect": "Adds a user, or updates it when id provided (edit mode), then resets form.",
+  "notes": "Handler also takes FormGroupDirective; id empty=add, set=update"
+ },
+ {
+  "id": "user-edit",
+  "component": "UserComponent",
+  "handler": "editUser",
+  "routes": [
+   "/examples/simple-state-management"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "id": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "id"
+   ]
+  },
+  "validInput": {
+   "id": "user-id-1"
+  },
+  "effect": "Loads user into form (switches to edit mode).",
+  "notes": "UI-only until submit"
+ },
+ {
+  "id": "user-remove",
+  "component": "UserComponent",
+  "handler": "removeUser",
+  "routes": [
+   "/examples/simple-state-management"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "id": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "id"
+   ]
+  },
+  "validInput": {
+   "id": "user-id-1"
+  },
+  "effect": "Removes user from the list.",
+  "notes": "Delete button on user card"
+ },
+ {
+  "id": "notify-default",
+  "component": "NotificationsComponent",
+  "handler": "default",
+  "routes": [
+   "/examples/notifications"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {},
+   "required": []
+  },
+  "validInput": {},
+  "effect": "Shows a default snackbar notification.",
+  "notes": "Cosmetic notification, no persisted state"
+ },
+ {
+  "id": "notify-info",
+  "component": "NotificationsComponent",
+  "handler": "info",
+  "routes": [
+   "/examples/notifications"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {},
+   "required": []
+  },
+  "validInput": {},
+  "effect": "Shows a info snackbar notification.",
+  "notes": "Cosmetic notification, no persisted state"
+ },
+ {
+  "id": "notify-success",
+  "component": "NotificationsComponent",
+  "handler": "success",
+  "routes": [
+   "/examples/notifications"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {},
+   "required": []
+  },
+  "validInput": {},
+  "effect": "Shows a success snackbar notification.",
+  "notes": "Cosmetic notification, no persisted state"
+ },
+ {
+  "id": "notify-warn",
+  "component": "NotificationsComponent",
+  "handler": "warn",
+  "routes": [
+   "/examples/notifications"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {},
+   "required": []
+  },
+  "validInput": {},
+  "effect": "Shows a warn snackbar notification.",
+  "notes": "Cosmetic notification, no persisted state"
+ },
+ {
+  "id": "notify-error",
+  "component": "NotificationsComponent",
+  "handler": "error",
+  "routes": [
+   "/examples/notifications"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {},
+   "required": []
+  },
+  "validInput": {},
+  "effect": "Shows a error snackbar notification.",
+  "notes": "Cosmetic notification, no persisted state"
+ },
+ {
+  "id": "elements-increment",
+  "component": "ElementsComponent",
+  "handler": "increment",
+  "routes": [
+   "/examples/elements"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {},
+   "required": []
+  },
+  "validInput": {},
+  "effect": "Increments local counter on lazily loaded mwc-button.",
+  "notes": "Local UI counter only; borderline"
+ }
+]

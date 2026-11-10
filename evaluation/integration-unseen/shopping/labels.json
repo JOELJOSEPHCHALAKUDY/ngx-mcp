@@ -1,0 +1,849 @@
+{
+  "formatVersion": 1,
+  "scope": "All normal source-authored account/profile/admin/list/article domain mutations; seventeen positive scenarios including signed confirmation page-load and image upload. Every backend is synthetic and blocked from actual network.",
+  "operations": [
+    {
+      "id": "session-login",
+      "component": "LoginComponent",
+      "handler": "login",
+      "routes": [
+        "/login"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "minLength": 1
+          },
+          "password": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "username",
+          "password"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "username": "unseen-admin",
+        "password": "Synthetic-123"
+      },
+      "effect": "Original form dispatch reaches synthetic API with exact source form values; login stores returned user/token and renders home; register records one new synthetic account and returns login.",
+      "evidence": [
+        {
+          "file": "src/app/components/auth/login/login.component.ts",
+          "line": 32,
+          "sha256": "935f7e8c7d3251044444bb6ff975ab1bc8ab82bf4237947189f85f40ca726e08",
+          "excerpt": "login() {"
+        },
+        {
+          "file": "src/app/service/auth.service.ts",
+          "line": 30,
+          "sha256": "21dcc97b12003990c6ba33e4b0e97934d2fe63656a5d24931654fcc2ed9a284c",
+          "excerpt": "login(user: User) {"
+        }
+      ],
+      "businessRules": [
+        "Angular required; register email follows Angular Validators.email, not AJV-format assumption."
+      ]
+    },
+    {
+      "id": "account-register",
+      "component": "RegisterComponent",
+      "handler": "register",
+      "routes": [
+        "/register"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "minLength": 1
+          },
+          "password": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "email": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "username",
+          "password",
+          "name",
+          "email"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "username": "unseen-register",
+        "password": "Synthetic-123",
+        "name": "Unseen Register",
+        "email": "unseen@example.test"
+      },
+      "effect": "Original form dispatch reaches synthetic API with exact source form values; login stores returned user/token and renders home; register records one new synthetic account and returns login.",
+      "evidence": [
+        {
+          "file": "src/app/components/auth/register/register.component.ts",
+          "line": 35,
+          "sha256": "588a4a14dc66ead48497e4ed22eccedcb78fd14f12254bb3ce6467a3b624c9f0",
+          "excerpt": "register() {"
+        },
+        {
+          "file": "src/app/service/auth.service.ts",
+          "line": 36,
+          "sha256": "21dcc97b12003990c6ba33e4b0e97934d2fe63656a5d24931654fcc2ed9a284c",
+          "excerpt": "register(user: User) {"
+        }
+      ],
+      "businessRules": [
+        "Angular required; register email follows Angular Validators.email, not AJV-format assumption."
+      ]
+    },
+    {
+      "id": "session-logout",
+      "component": "AppComponent",
+      "handler": "logout",
+      "routes": [
+        "/home"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "effect": "After original PrimeNG confirmation, user localStorage becomes JSON null and router returns login.",
+      "evidence": [
+        {
+          "file": "src/app/app.component.ts",
+          "line": 32,
+          "sha256": "072548d969fa854f720122e5ea38ede656c9365fbabdf308708413cf9c6093cd",
+          "excerpt": "logout(event: Event) {"
+        },
+        {
+          "file": "src/app/store/auth/auth.effects.ts",
+          "line": 89,
+          "sha256": "ec800addad5897e0f6fa73cb266a8c6a3299b32949859dfc29191ad6c921fc81",
+          "excerpt": "logout$ = createEffect(() => {"
+        }
+      ],
+      "confirmation": true
+    },
+    {
+      "id": "account-confirm",
+      "component": "RegistrationConfirmationComponent",
+      "handler": "ngOnInit",
+      "routes": [
+        "/registration-confirmation"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "effect": "Entering declared signed confirmation URL calls synthetic /auth/confirm with fixture token once and renders confirmed success text.",
+      "evidence": [
+        {
+          "file": "src/app/components/auth/registration-confirmation/registration-confirmation.component.ts",
+          "line": 21,
+          "sha256": "75c00e96312238e76c0fe399c8e838f21542f948eb1c8819e88c19411a593d72",
+          "excerpt": "ngOnInit(): void {"
+        },
+        {
+          "file": "src/app/service/auth.service.ts",
+          "line": 42,
+          "sha256": "21dcc97b12003990c6ba33e4b0e97934d2fe63656a5d24931654fcc2ed9a284c",
+          "excerpt": "confirmRegistrationToken(token: string) {"
+        }
+      ],
+      "routeContext": {
+        "token": "synthetic-unseen-confirm-token"
+      },
+      "entryKind": "page-load",
+      "qualification": "No source event binding; retained even if bridge intentionally does not expose page-load workflows."
+    },
+    {
+      "id": "list-create",
+      "component": "EditEinkaufszettelComponent",
+      "handler": "save",
+      "routes": [
+        "/einkaufszettel"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "owners": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "sharedWith": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "name": "Unseen shopping list",
+        "owners": [],
+        "sharedWith": []
+      },
+      "effect": "Create/update exactly selected list via source form; synthetic API records names and chosen source user objects; update preserves route-selected id.",
+      "evidence": [
+        {
+          "file": "src/app/components/einkaufszettel/edit-einkaufszettel/edit-einkaufszettel.component.ts",
+          "line": 63,
+          "sha256": "986b8c0612a0279e7d9f75e39b29e56ca2f7f4491a8ce4da4bfcc38df5697072",
+          "excerpt": "save() {"
+        },
+        {
+          "file": "src/app/service/einkaufszettel.service.ts",
+          "line": 30,
+          "sha256": "fcb210eba62ff34a627a4ec1ee6ac2b78f5767bdbed1043a3d8ccadcc23265d4",
+          "excerpt": "createEinkaufszettel(einkaufszettel: Einkaufszettel) {"
+        }
+      ],
+      "routeContext": {},
+      "representation": {
+        "owners/sharedWith": "JSON user identities select source-owned options; actual CVA values are User objects."
+      }
+    },
+    {
+      "id": "list-edit",
+      "component": "EditEinkaufszettelComponent",
+      "handler": "save",
+      "routes": [
+        "/einkaufszettel/:einkaufszettelId"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "owners": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "sharedWith": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "name": "Unseen shopping list",
+        "owners": [],
+        "sharedWith": []
+      },
+      "effect": "Create/update exactly selected list via source form; synthetic API records names and chosen source user objects; update preserves route-selected id.",
+      "evidence": [
+        {
+          "file": "src/app/components/einkaufszettel/edit-einkaufszettel/edit-einkaufszettel.component.ts",
+          "line": 63,
+          "sha256": "986b8c0612a0279e7d9f75e39b29e56ca2f7f4491a8ce4da4bfcc38df5697072",
+          "excerpt": "save() {"
+        },
+        {
+          "file": "src/app/service/einkaufszettel.service.ts",
+          "line": 30,
+          "sha256": "fcb210eba62ff34a627a4ec1ee6ac2b78f5767bdbed1043a3d8ccadcc23265d4",
+          "excerpt": "createEinkaufszettel(einkaufszettel: Einkaufszettel) {"
+        }
+      ],
+      "routeContext": {
+        "einkaufszettelId": 101
+      },
+      "representation": {
+        "owners/sharedWith": "JSON user identities select source-owned options; actual CVA values are User objects."
+      }
+    },
+    {
+      "id": "list-delete",
+      "component": "EditEinkaufszettelComponent",
+      "handler": "delete",
+      "routes": [
+        "/einkaufszettel/:einkaufszettelId"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "effect": "After original confirmation DELETE exactly selected list; reload lists without it.",
+      "evidence": [
+        {
+          "file": "src/app/components/einkaufszettel/edit-einkaufszettel/edit-einkaufszettel.component.ts",
+          "line": 74,
+          "sha256": "986b8c0612a0279e7d9f75e39b29e56ca2f7f4491a8ce4da4bfcc38df5697072",
+          "excerpt": "delete(event: Event) {"
+        },
+        {
+          "file": "src/app/service/einkaufszettel.service.ts",
+          "line": 42,
+          "sha256": "fcb210eba62ff34a627a4ec1ee6ac2b78f5767bdbed1043a3d8ccadcc23265d4",
+          "excerpt": "deleteEinkaufszettel(einkaufszettel: Einkaufszettel) {"
+        }
+      ],
+      "routeContext": {
+        "einkaufszettelId": 101
+      },
+      "confirmation": true
+    },
+    {
+      "id": "article-create",
+      "component": "EditArtikelComponent",
+      "handler": "save",
+      "routes": [
+        "/artikel/new/:einkaufszettelId"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "anzahl": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 100
+          }
+        },
+        "required": [
+          "name",
+          "anzahl"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "name": "Unseen milk",
+        "anzahl": 2
+      },
+      "effect": "Create/update selected article with exact name/quantity under selected list; bought status preserved from source form; API state and rendered list agree.",
+      "evidence": [
+        {
+          "file": "src/app/components/einkaufszettel/edit-artikel/edit-artikel.component.ts",
+          "line": 58,
+          "sha256": "51928ccd7a93d2e016e3efb74bde74d627a3fc82dafc1010d4c9b966c41bff28",
+          "excerpt": "save() {"
+        },
+        {
+          "file": "src/app/service/einkaufszettel.service.ts",
+          "line": 48,
+          "sha256": "fcb210eba62ff34a627a4ec1ee6ac2b78f5767bdbed1043a3d8ccadcc23265d4",
+          "excerpt": "createArtikel(einkaufszettelId: number, artikel: Artikel) {"
+        }
+      ],
+      "routeContext": {
+        "einkaufszettelId": 101
+      }
+    },
+    {
+      "id": "article-edit",
+      "component": "EditArtikelComponent",
+      "handler": "save",
+      "routes": [
+        "/artikel/:einkaufszettelId/:artikelId"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "anzahl": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 100
+          }
+        },
+        "required": [
+          "name",
+          "anzahl"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "name": "Unseen milk",
+        "anzahl": 2
+      },
+      "effect": "Create/update selected article with exact name/quantity under selected list; bought status preserved from source form; API state and rendered list agree.",
+      "evidence": [
+        {
+          "file": "src/app/components/einkaufszettel/edit-artikel/edit-artikel.component.ts",
+          "line": 58,
+          "sha256": "51928ccd7a93d2e016e3efb74bde74d627a3fc82dafc1010d4c9b966c41bff28",
+          "excerpt": "save() {"
+        },
+        {
+          "file": "src/app/service/einkaufszettel.service.ts",
+          "line": 48,
+          "sha256": "fcb210eba62ff34a627a4ec1ee6ac2b78f5767bdbed1043a3d8ccadcc23265d4",
+          "excerpt": "createArtikel(einkaufszettelId: number, artikel: Artikel) {"
+        }
+      ],
+      "routeContext": {
+        "einkaufszettelId": 101,
+        "artikelId": 201
+      }
+    },
+    {
+      "id": "article-delete",
+      "component": "EditArtikelComponent",
+      "handler": "delete",
+      "routes": [
+        "/artikel/:einkaufszettelId/:artikelId"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "effect": "After original confirmation delete only selected article under selected list; preserve other list/articles.",
+      "evidence": [
+        {
+          "file": "src/app/components/einkaufszettel/edit-artikel/edit-artikel.component.ts",
+          "line": 75,
+          "sha256": "51928ccd7a93d2e016e3efb74bde74d627a3fc82dafc1010d4c9b966c41bff28",
+          "excerpt": "delete(event: Event) {"
+        },
+        {
+          "file": "src/app/service/einkaufszettel.service.ts",
+          "line": 60,
+          "sha256": "fcb210eba62ff34a627a4ec1ee6ac2b78f5767bdbed1043a3d8ccadcc23265d4",
+          "excerpt": "deleteArtikel(einkaufszettelId: number, artikel: Artikel) {"
+        }
+      ],
+      "routeContext": {
+        "einkaufszettelId": 101,
+        "artikelId": 201
+      },
+      "confirmation": true
+    },
+    {
+      "id": "article-buy",
+      "component": "HomeComponent",
+      "handler": "changeArtikel",
+      "routes": [
+        "/home"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "effect": "Source PrimeNG checkbox changes false→true and API receives selected article id; moves active to bought section.",
+      "evidence": [
+        {
+          "file": "src/app/components/einkaufszettel/home/home.component.ts",
+          "line": 39,
+          "sha256": "b98be57938fd5976077a2f67a6650e4d8e870e34faf54a2814b061761492387a",
+          "excerpt": "changeArtikel(einkaufszettel: Einkaufszettel, artikel: Artikel) {"
+        },
+        {
+          "file": "src/app/components/einkaufszettel/home/home.component.html",
+          "line": 19,
+          "sha256": "e419e03eb6464337fd2dee69c9ad6a196a805275c6913d184d12c0f711c13455",
+          "excerpt": "(onChange)=\"changeArtikel(einkaufszettel, artikel)\"></p-checkbox>"
+        }
+      ],
+      "targetContext": {
+        "listId": 101,
+        "articleId": 201,
+        "selection": "unique source-visible article row Unseen milk"
+      }
+    },
+    {
+      "id": "article-unbuy",
+      "component": "HomeComponent",
+      "handler": "changeArtikelGekauft",
+      "routes": [
+        "/home"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "effect": "Source checkmark changes true→false and API updates selected article; returns active section.",
+      "evidence": [
+        {
+          "file": "src/app/components/einkaufszettel/home/home.component.ts",
+          "line": 46,
+          "sha256": "b98be57938fd5976077a2f67a6650e4d8e870e34faf54a2814b061761492387a",
+          "excerpt": "changeArtikelGekauft(einkaufszettel: Einkaufszettel, artikel: Artikel) {"
+        },
+        {
+          "file": "src/app/components/einkaufszettel/home/home.component.html",
+          "line": 36,
+          "sha256": "e419e03eb6464337fd2dee69c9ad6a196a805275c6913d184d12c0f711c13455",
+          "excerpt": "(click)=\"changeArtikelGekauft(einkaufszettel, artikel)\"></span>"
+        }
+      ],
+      "targetContext": {
+        "listId": 101,
+        "articleId": 201,
+        "selection": "unique source-visible article row Unseen milk"
+      }
+    },
+    {
+      "id": "articles-archive",
+      "component": "HomeComponent",
+      "handler": "archiviereGekaufteArtikel",
+      "routes": [
+        "/home"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "effect": "Source split-button menu archives only bought articles from selected list; active articles retained; archive endpoint/state agrees.",
+      "evidence": [
+        {
+          "file": "src/app/components/einkaufszettel/home/home.component.ts",
+          "line": 19,
+          "sha256": "b98be57938fd5976077a2f67a6650e4d8e870e34faf54a2814b061761492387a",
+          "excerpt": "archiviereGekaufteArtikel(einkaufszettel: Einkaufszettel) {"
+        },
+        {
+          "file": "src/app/service/einkaufszettel.service.ts",
+          "line": 66,
+          "sha256": "fcb210eba62ff34a627a4ec1ee6ac2b78f5767bdbed1043a3d8ccadcc23265d4",
+          "excerpt": "archiviereArtikel(einkaufszettelId: number) {"
+        }
+      ],
+      "targetContext": {
+        "listId": 101
+      },
+      "precondition": "Source UI article marked bought; choose authored callback item Gekaufte Artikel archivieren."
+    },
+    {
+      "id": "profile-save",
+      "component": "ProfileEditComponent",
+      "handler": "onSubmit",
+      "routes": [
+        "/profile-edit"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "email": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "name",
+          "email"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "name": "Unseen profile",
+        "email": "updated@example.test"
+      },
+      "effect": "Source native form sends chosen profile id/name/email; avatar/avatarBase64 clearing follows authored handler; refresh response stored and displayed.",
+      "evidence": [
+        {
+          "file": "src/app/components/settings/profile-edit/profile-edit.component.ts",
+          "line": 37,
+          "sha256": "d94280029e7e1b4afde85546fc1f99bbd9b12ece4073663bc6a7a5043cc03abb",
+          "excerpt": "onSubmit() {"
+        },
+        {
+          "file": "src/app/service/profile.service.ts",
+          "line": 29,
+          "sha256": "962a1e0ff3691e4416d24653d1570343784ff51366326a98a0d360ed2b109138",
+          "excerpt": "saveProfile(user: User) {"
+        }
+      ],
+      "precondition": "Synthetic login returns nonempty existing avatar so required custom avatar control valid; omitted avatar left unchanged in UI until handler transformation."
+    },
+    {
+      "id": "profile-avatar",
+      "component": "ProfileEditComponent",
+      "handler": "onImageChange",
+      "routes": [
+        "/profile-edit"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "mimeType": {
+                "type": "string"
+              },
+              "base64": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "mimeType",
+              "base64"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "file"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "file": {
+          "name": "unseen.png",
+          "mimeType": "image/png",
+          "base64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+        }
+      },
+      "effect": "Source file chooser/cropper emits imageChange; /profil receives nonempty cropped avatarBase64 for current user; refresh reflects updated avatar.",
+      "evidence": [
+        {
+          "file": "src/app/components/settings/profile-edit/profile-edit.component.ts",
+          "line": 55,
+          "sha256": "d94280029e7e1b4afde85546fc1f99bbd9b12ece4073663bc6a7a5043cc03abb",
+          "excerpt": "onImageChange(newInputValue: string) {"
+        },
+        {
+          "file": "src/app/service/profile.service.ts",
+          "line": 29,
+          "sha256": "962a1e0ff3691e4416d24653d1570343784ff51366326a98a0d360ed2b109138",
+          "excerpt": "saveProfile(user: User) {"
+        }
+      ],
+      "precondition": "Login through normal UI; open source avatar file/crop workflow. Unsupported widget is reported honestly."
+    },
+    {
+      "id": "admin-user-save",
+      "component": "UserComponent",
+      "handler": "onRowEditSave",
+      "routes": [
+        "/user"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "required": [
+          "username",
+          "name",
+          "email",
+          "roles"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "username": "unseen-member-edited",
+        "name": "Unseen member edited",
+        "email": "member-edited@example.test",
+        "roles": [
+          2
+        ]
+      },
+      "effect": "Source PrimeNG row edit NgModel controls update only selected user; original row Save dispatch/API response persists it; neighboring user unchanged.",
+      "evidence": [
+        {
+          "file": "src/app/components/admin/user/user.component.ts",
+          "line": 40,
+          "sha256": "bd0e9122f54c9bb2fb044b385bc1bbfda9f020dce562d2e118bde7c54fb06dac",
+          "excerpt": "onRowEditSave(user: User) {"
+        },
+        {
+          "file": "src/app/components/admin/user/user.component.html",
+          "line": 138,
+          "sha256": "c8c21fa050fd6e89fc399fe0229848f3bdbc05b0a1584761454234b2fbe03260",
+          "excerpt": "(click)=\"onRowEditSave(user)\""
+        },
+        {
+          "file": "src/app/service/user.service.ts",
+          "line": 35,
+          "sha256": "81e0f79aac67924c9c652fe6d58f80f0cebaa53263bf1b2341a82ee90f9bfab1",
+          "excerpt": "updateUser(user: User) {"
+        }
+      ],
+      "targetContext": {
+        "userId": 2,
+        "selection": "source row username unseen-member"
+      },
+      "precondition": "Admin synthetic login via UI; edit row2; roles IDs select source allRoles options, CVA emits Role objects."
+    },
+    {
+      "id": "admin-user-delete",
+      "component": "UserComponent",
+      "handler": "deleteUser",
+      "routes": [
+        "/user"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "effect": "Source confirmation deletes only selected non-admin user; other users retained.",
+      "evidence": [
+        {
+          "file": "src/app/components/admin/user/user.component.ts",
+          "line": 52,
+          "sha256": "bd0e9122f54c9bb2fb044b385bc1bbfda9f020dce562d2e118bde7c54fb06dac",
+          "excerpt": "deleteUser(user: User) {"
+        },
+        {
+          "file": "src/app/service/user.service.ts",
+          "line": 41,
+          "sha256": "81e0f79aac67924c9c652fe6d58f80f0cebaa53263bf1b2341a82ee90f9bfab1",
+          "excerpt": "deleteUser(user: User) {"
+        }
+      ],
+      "targetContext": {
+        "userId": 2
+      },
+      "confirmation": true
+    }
+  ],
+  "negativeCases": [
+    {
+      "id": "login-empty-username",
+      "operation": "session-login",
+      "inputPatch": {
+        "username": ""
+      },
+      "expected": "refused-without-domain-effect",
+      "oracle": "Source invalid form disables submission; no corresponding mutation request or synthetic domain-state change."
+    },
+    {
+      "id": "register-invalid-email",
+      "operation": "account-register",
+      "inputPatch": {
+        "email": "invalid-address"
+      },
+      "expected": "refused-without-domain-effect",
+      "oracle": "Source invalid form disables submission; no corresponding mutation request or synthetic domain-state change."
+    },
+    {
+      "id": "empty-list-name",
+      "operation": "list-create",
+      "inputPatch": {
+        "name": ""
+      },
+      "expected": "refused-without-domain-effect",
+      "oracle": "Source invalid form disables submission; no corresponding mutation request or synthetic domain-state change."
+    },
+    {
+      "id": "article-quantity-zero",
+      "operation": "article-create",
+      "inputPatch": {
+        "anzahl": 0
+      },
+      "expected": "refused-without-domain-effect",
+      "oracle": "Source invalid form disables submission; no corresponding mutation request or synthetic domain-state change."
+    },
+    {
+      "id": "article-quantity-over100",
+      "operation": "article-create",
+      "inputPatch": {
+        "anzahl": 101
+      },
+      "expected": "refused-without-domain-effect",
+      "oracle": "Source invalid form disables submission; no corresponding mutation request or synthetic domain-state change."
+    },
+    {
+      "id": "profile-invalid-email",
+      "operation": "profile-save",
+      "inputPatch": {
+        "email": "invalid-address"
+      },
+      "expected": "refused-without-domain-effect",
+      "oracle": "Source invalid form disables submission; no corresponding mutation request or synthetic domain-state change."
+    },
+    {
+      "id": "delete-cancel",
+      "operation": "article-delete",
+      "inputPatch": {},
+      "expected": "refused-without-domain-effect",
+      "oracle": "Reject original confirmation; no DELETE and article retained.",
+      "decision": "reject"
+    },
+    {
+      "id": "repeated-row-ambiguous",
+      "operation": "admin-user-save",
+      "inputPatch": {},
+      "expected": "ambiguous-target-refused",
+      "precondition": "Two users visible; request sourceId without instanceId.",
+      "oracle": "No field or user data changes before explicit instance choice."
+    }
+  ]
+}

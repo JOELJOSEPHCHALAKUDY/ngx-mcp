@@ -1,0 +1,253 @@
+{
+  "formatVersion": 1,
+  "project": "sprint",
+  "storageKeys": [
+    "users",
+    "currentUser",
+    "projects",
+    "tasks"
+  ],
+  "cases": [
+    {
+      "id": "register_user",
+      "kind": "positive",
+      "route": "/register",
+      "input": {
+        "username": "fresh-user",
+        "email": "fresh-user@example.test",
+        "password": "Synthetic-Pass-481"
+      },
+      "ui": {
+        "form": "form",
+        "fields": {
+          "username": "input[name=username]",
+          "email": "input[name=email]",
+          "password": "input[name=password]"
+        },
+        "commit": "button[type=submit]"
+      },
+      "expected": {
+        "userFields": {
+          "username": "fresh-user",
+          "email": "fresh-user@example.test",
+          "password": "Synthetic-Pass-481"
+        },
+        "generatedUserIdNonempty": true,
+        "route": "/login",
+        "noCurrentUser": true
+      },
+      "evidence": [
+        {
+          "file": "src/app/components/auth/register/register.component.ts",
+          "line": 91,
+          "anchor": "onRegister(form: any)",
+          "sha256": "9206112eb951ce338f044706fe51e6089f93270a8e345f59883eb9452de06c8f"
+        },
+        {
+          "file": "src/app/services/auth.service.ts",
+          "line": 23,
+          "anchor": "register(username: string",
+          "sha256": "c4f5361716cf05227913389095fe8a3ebbe0240100fe93f62b4de960eeb9de83"
+        }
+      ]
+    },
+    {
+      "id": "login_user",
+      "kind": "positive",
+      "route": "/login",
+      "input": {
+        "username": "fixture-user",
+        "password": "Synthetic-Pass-481"
+      },
+      "ui": {
+        "form": "form",
+        "fields": {
+          "username": "input[name=username]",
+          "password": "input[name=password]"
+        },
+        "commit": "button[type=submit]"
+      },
+      "expected": {
+        "currentUser": {
+          "id": "fixture-user-a",
+          "username": "fixture-user",
+          "email": "fixture-user@example.test"
+        },
+        "route": "/dashboard"
+      },
+      "evidence": [
+        {
+          "file": "src/app/services/auth.service.ts",
+          "line": 44,
+          "anchor": "login(username: string",
+          "sha256": "c4f5361716cf05227913389095fe8a3ebbe0240100fe93f62b4de960eeb9de83"
+        }
+      ]
+    },
+    {
+      "id": "create_project",
+      "kind": "positive",
+      "route": "/dashboard",
+      "input": {
+        "name": "Fresh project",
+        "description": "Synthetic project body"
+      },
+      "ui": {
+        "open": "button containing Create Project",
+        "fields": {
+          "name": "input[name=name]",
+          "description": "textarea[name=description]"
+        },
+        "commit": "mat-dialog-container button:text-is(\"Create\")"
+      },
+      "expected": {
+        "projectFields": {
+          "name": "Fresh project",
+          "description": "Synthetic project body",
+          "ownerId": "fixture-user-a"
+        },
+        "generatedProjectIdNonempty": true,
+        "otherProjectsUnchanged": true
+      },
+      "evidence": [
+        {
+          "file": "src/app/components/dialogs/create-project-dialog/create-project-dialog.component.ts",
+          "line": 61,
+          "anchor": "onCreate(): void",
+          "sha256": "1fa1fe3a99b32728b88262f3158a396a48ae5965e5c08c96496cd76f53f54340"
+        },
+        {
+          "file": "src/app/services/project.service.ts",
+          "line": 36,
+          "anchor": "createProject(name: string",
+          "sha256": "47f97da20f65e8b04fcdbdabad9e649a9eba10f7193efc475ffc19f081430e60"
+        }
+      ]
+    },
+    {
+      "id": "create_task",
+      "kind": "positive",
+      "route": "/projects/fixture-project",
+      "input": {
+        "title": "Fresh task",
+        "description": "Synthetic task body",
+        "status": "inprogress",
+        "dueDate": null
+      },
+      "ui": {
+        "open": "button containing Add Task",
+        "fields": {
+          "title": "input[name=title]",
+          "description": "textarea[name=description]",
+          "status": "mat-select[name=status]"
+        },
+        "optionLabel": "In Progress",
+        "commit": "mat-dialog-container button:text-is(\"Create\")"
+      },
+      "expected": {
+        "taskFields": {
+          "title": "Fresh task",
+          "description": "Synthetic task body",
+          "status": "inprogress",
+          "projectId": "fixture-project",
+          "dueDate": null
+        },
+        "generatedTaskIdNonempty": true,
+        "otherTasksUnchanged": true
+      },
+      "evidence": [
+        {
+          "file": "src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts",
+          "line": 87,
+          "anchor": "onCreate(): void",
+          "sha256": "91018acd099c8982be0c3a876a7a1760c3c03b6b230f4338e74a4ee2c22bf592"
+        },
+        {
+          "file": "src/app/services/task.service.ts",
+          "line": 40,
+          "anchor": "createTask(task:",
+          "sha256": "e5d16e934bb4436131c2d1eb2d14df264e7aa4b13440b04694d5f4b2f7a69ace"
+        }
+      ]
+    },
+    {
+      "id": "empty_project_blocked",
+      "kind": "negative-native",
+      "route": "/dashboard",
+      "input": {
+        "name": "",
+        "description": "Must not save"
+      },
+      "ui": {
+        "open": "button containing Create Project",
+        "commit": "mat-dialog-container button:text-is(\"Create\")"
+      },
+      "expected": {
+        "projectStorageUnchanged": true,
+        "commitDisabled": true
+      },
+      "evidence": [
+        {
+          "file": "src/app/components/dialogs/create-project-dialog/create-project-dialog.component.ts",
+          "line": 37,
+          "anchor": "[disabled]=\"!name\"",
+          "sha256": "1fa1fe3a99b32728b88262f3158a396a48ae5965e5c08c96496cd76f53f54340"
+        }
+      ]
+    },
+    {
+      "id": "cancel_project",
+      "kind": "negative-native",
+      "route": "/dashboard",
+      "input": {
+        "name": "Cancelled project",
+        "description": "Must not save"
+      },
+      "ui": {
+        "open": "button containing Create Project",
+        "commit": "mat-dialog-container button:text-is(\"Cancel\")"
+      },
+      "expected": {
+        "projectStorageUnchanged": true,
+        "dialogClosed": true
+      },
+      "evidence": [
+        {
+          "file": "src/app/components/dialogs/create-project-dialog/create-project-dialog.component.ts",
+          "line": 57,
+          "anchor": "onCancel(): void",
+          "sha256": "1fa1fe3a99b32728b88262f3158a396a48ae5965e5c08c96496cd76f53f54340"
+        }
+      ]
+    }
+  ],
+  "fixtures": {
+    "user": {
+      "id": "fixture-user-a",
+      "username": "fixture-user",
+      "email": "fixture-user@example.test",
+      "password": "Synthetic-Pass-481",
+      "createdAt": "2026-11-01T12:00:00.000Z"
+    },
+    "otherUser": {
+      "id": "fixture-user-b",
+      "username": "other-user",
+      "email": "other-user@example.test",
+      "password": "Synthetic-Other-482",
+      "createdAt": "2026-11-01T12:00:00.000Z"
+    },
+    "project": {
+      "id": "fixture-project",
+      "name": "Fixture project",
+      "description": "Existing project",
+      "ownerId": "fixture-user-a",
+      "createdAt": "2026-11-01T12:00:00.000Z",
+      "updatedAt": "2026-11-01T12:00:00.000Z"
+    }
+  },
+  "excluded": [
+    "Drag/drop and native confirm are outside this selected business corpus.",
+    "The source demo stores passwords in localStorage and is not a production identity system; tests use synthetic data.",
+    "getProjectById/update/delete do not enforce ownership in a backend. Framework session tests must not claim to repair upstream authorization."
+  ]
+}

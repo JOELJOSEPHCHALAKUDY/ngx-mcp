@@ -1,0 +1,27 @@
+{
+  "id": "user-crud",
+  "repository": "https://github.com/cornflourblue/angular-14-crud-example",
+  "revision": "4abfcfdd1ac9e44260f4d9407713142257bc7e65",
+  "complexity": "1 — Small CRUD",
+  "outcome": "executed",
+  "capability": {
+    "id": "/users/add#AddEditComponent.onSubmit:ng-component form",
+    "fingerprint": "9406a72acfdd316b79c94e86bee073bdf2e4816ccbdf8f7fb5f9f4d1f0e6bda9"
+  },
+  "routes": 5,
+  "candidates": 8,
+  "reviewedTools": 1,
+  "finalPath": "/users",
+  "evidence": {
+    "title": "Ms",
+    "firstName": "Ada",
+    "lastName": "Lovelace",
+    "email": "ada@example.test",
+    "role": "User",
+    "password": "[REDACTED]",
+    "id": 2
+  },
+  "pageErrors": [],
+  "offOriginRequestsBlocked": 1,
+  "applicationSourceModified": false
+}

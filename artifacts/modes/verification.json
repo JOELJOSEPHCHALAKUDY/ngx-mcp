@@ -1,0 +1,28 @@
+{
+  "kind": "selectable-mcp-webmcp-modes",
+  "compilerDigest": "087886f40afef435567ca93b0fe1bbb4834d8fd1c0c0d96152a6318d2904a660",
+  "modes": [
+    "mcp",
+    "webmcp",
+    "both"
+  ],
+  "defaultMode": "mcp",
+  "initialFullVerification": {
+    "integrationPassed": 68,
+    "evaluatorPassed": 23,
+    "log": "initial-full-verify.log",
+    "phase": "Before final persisted-page publisher fix"
+  },
+  "finalAffectedChecks": {
+    "publisherStrictAndStagingPassed": 15,
+    "nativeModeTestsPassed": 4,
+    "typecheckPassed": true,
+    "extractedPackagePassed": true
+  },
+  "nativeEvidence": "artifacts/webmcp/native-conformance.json",
+  "nativeEvidenceIntegrityPassed": true,
+  "nativeBrowserVersion": "157.0.8103.39",
+  "scope": "Native browser API and production Angular fixtures; no claim of ChatGPT or Claude product interoperability. Publisher lifecycle uses persisted page events, not actual BFCache navigation.",
+  "priorPublicProjectMeasurementsRequireReplay": true,
+  "published": false
+}

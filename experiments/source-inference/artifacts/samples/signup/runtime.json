@@ -1,0 +1,32 @@
+{
+  "id": "signup",
+  "repository": "https://github.com/cornflourblue/angular-15-signup-verification-boilerplate",
+  "revision": "0ba71391309cfad3940167842f3ca351bfd5b2fd",
+  "complexity": "2 — Authentication and accounts",
+  "outcome": "executed",
+  "capability": {
+    "id": "/account/register#RegisterComponent.onSubmit:ng-component form",
+    "fingerprint": "2de15f36c0c8fd4a8f894965054cbc8e7d49ce77b11cb5919c65dfe37b961fd1"
+  },
+  "routes": 16,
+  "candidates": 15,
+  "reviewedTools": 1,
+  "finalPath": "/account/login",
+  "evidence": {
+    "title": "Ms",
+    "firstName": "Grace",
+    "lastName": "Hopper",
+    "email": "grace@example.test",
+    "password": "[REDACTED]",
+    "acceptTerms": true,
+    "id": 1,
+    "role": "Admin",
+    "dateCreated": "2026-11-10T11:31:36.240Z",
+    "verificationToken": "[REDACTED]",
+    "isVerified": false,
+    "refreshTokens": "[REDACTED]"
+  },
+  "pageErrors": [],
+  "offOriginRequestsBlocked": 1,
+  "applicationSourceModified": false
+}

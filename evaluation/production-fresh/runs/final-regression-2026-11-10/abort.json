@@ -1,0 +1,13 @@
+{
+  "formatVersion": 1,
+  "report": "/Users/joeljoseph/Desktop/Personal Work/ai-experiments-apps/ngx-mcp/evaluation/production-fresh/runs/final-regression-2026-11-10/report.json",
+  "sha256": "528cc88dbffdf20b77f19ea35b4b69867172734e67126fa4a75ecfe34b0f2f87",
+  "aborted": true,
+  "resourcesClosed": false,
+  "reason": "Parent stopped the intermediate replay after a generic dynamic ARIA/path metadata read-value leakage finding and before the engine fix. No completed matrix or cleanup certification.",
+  "observedExitCode": 1,
+  "termination": "Normal SIGTERM closed the owned Chrome. The runner handled that signal and continued, so the exact owned runner was terminated; follow-up process-tree inspection confirmed no owned descendants remained. Partial failures after browser shutdown are not engine outcomes.",
+  "originalPartialReportUnmodified": true,
+  "finishedAt": "2026-11-10T16:51:38.349Z",
+  "observedExitBasis": "The exec session returned exit_code 1 after the owned runner termination."
+}

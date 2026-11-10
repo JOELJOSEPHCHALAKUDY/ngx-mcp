@@ -1,0 +1,108 @@
+{
+  "kind": "independent-frozen-label-email-audit",
+  "sourceCommit": "5bface390202c117a30bb7de06839735d3b9f013",
+  "date": "2026-11-09T20:19:08.795Z",
+  "sourceControls": "SignInDialog email native input type=email + Validators.required/Validators.email; SignUpDialog has same email validator",
+  "frozenLabelUnchanged": true,
+  "interpretation": "Frozen format:email labels do not exactly encode the source validator intersection when evaluated with ajv-formats default/full. Record these as ground-truth schema approximation mismatches; do not tune frozen labels to compiler output. AJV without ajv-formats ignores email only when configured to ignore unknown formats, so that is not equivalent validation.",
+  "results": [
+    {
+      "value": "a@b",
+      "nativeValid": true,
+      "angularValid": true,
+      "angularErrors": null,
+      "angularValue": "a@b",
+      "ajvFullFormatEmail": false,
+      "ajvFastFormatEmail": true
+    },
+    {
+      "value": "a@b.co",
+      "nativeValid": true,
+      "angularValid": true,
+      "angularErrors": null,
+      "angularValue": "a@b.co",
+      "ajvFullFormatEmail": true,
+      "ajvFastFormatEmail": true
+    },
+    {
+      "value": "a..b@example.com",
+      "nativeValid": true,
+      "angularValid": false,
+      "angularErrors": {
+        "email": true
+      },
+      "angularValue": "a..b@example.com",
+      "ajvFullFormatEmail": false,
+      "ajvFastFormatEmail": true
+    },
+    {
+      "value": "a+b@example.com",
+      "nativeValid": true,
+      "angularValid": true,
+      "angularErrors": null,
+      "angularValue": "a+b@example.com",
+      "ajvFullFormatEmail": true,
+      "ajvFastFormatEmail": true
+    },
+    {
+      "value": "a@localhost",
+      "nativeValid": true,
+      "angularValid": true,
+      "angularErrors": null,
+      "angularValue": "a@localhost",
+      "ajvFullFormatEmail": false,
+      "ajvFastFormatEmail": true
+    },
+    {
+      "value": "user@example",
+      "nativeValid": true,
+      "angularValid": true,
+      "angularErrors": null,
+      "angularValue": "user@example",
+      "ajvFullFormatEmail": false,
+      "ajvFastFormatEmail": true
+    },
+    {
+      "value": "a@b.c",
+      "nativeValid": true,
+      "angularValid": true,
+      "angularErrors": null,
+      "angularValue": "a@b.c",
+      "ajvFullFormatEmail": true,
+      "ajvFastFormatEmail": true
+    },
+    {
+      "value": "u@-a.com",
+      "nativeValid": false,
+      "angularValid": false,
+      "angularErrors": {
+        "email": true
+      },
+      "angularValue": "u@-a.com",
+      "ajvFullFormatEmail": false,
+      "ajvFastFormatEmail": false
+    },
+    {
+      "value": "u@a-.com",
+      "nativeValid": false,
+      "angularValid": false,
+      "angularErrors": {
+        "email": true
+      },
+      "angularValue": "u@a-.com",
+      "ajvFullFormatEmail": false,
+      "ajvFastFormatEmail": false
+    },
+    {
+      "value": "\"name\"@example.com",
+      "nativeValid": false,
+      "angularValid": false,
+      "angularErrors": {
+        "email": true
+      },
+      "angularValue": "\"name\"@example.com",
+      "ajvFullFormatEmail": false,
+      "ajvFastFormatEmail": false
+    }
+  ]
+}

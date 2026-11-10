@@ -1,0 +1,54 @@
+--- a/src/integration-access.ts
++++ b/src/integration-access.ts
+@@ -145,11 +145,13 @@
+   const controller=new AbortController();controllers.add(controller);
+   return new Promise((resolve,reject)=>{
+    let settled=false;
+-   const finish=(ok:boolean,value:any)=>{if(settled)return;settled=true;clearTimeout(timer);controllers.delete(controller);controller.signal.removeEventListener('abort',aborted);if(ok)resolve(value);else reject(value);};
++   // A timeout rejects this operation immediately, but its trusted callback may
++   // ignore AbortSignal. Keep its capacity reservation until the work settles.
++   const finish=(ok:boolean,value:any)=>{if(settled)return;settled=true;clearTimeout(timer);controller.signal.removeEventListener('abort',aborted);if(ok)resolve(value);else reject(value);};
+    const aborted=()=>finish(false,new Error('access-revoked'));
+    const timer=setTimeout(()=>{finish(false,new Error(code));controller.abort();},Math.max(1,milliseconds));
+    controller.signal.addEventListener('abort',aborted,{once:true});
+-   Promise.resolve().then(()=>hook(...args,{signal:controller.signal})).then(value=>finish(true,value),()=>finish(false,new Error(code)));
++   Promise.resolve().then(()=>hook(...args,{signal:controller.signal})).then(value=>finish(true,value),()=>finish(false,new Error(code))).finally(()=>{controllers.delete(controller);});
+   });
+  }
+  function validSession(session:any):boolean{return !!session&&typeof session==='object'&&typeof session.id==='string'&&session.id.length>0&&session.id.length<=1024&&typeof session.subject==='string'&&session.subject.length>0&&session.subject.length<=1024&&Number.isSafeInteger(session.expiresAt);}
+--- a/tests/integration-access.test.ts
++++ b/tests/integration-access.test.ts
+@@ -155,7 +155,9 @@
+  const releases:((value:boolean)=>void)[]=[];
+  const capped=setup({approve:()=>new Promise<boolean>(resolve=>releases.push(resolve))});
+  const waits=Array.from({length:16},()=>capped.access.authorize(request()));
+- await new Promise(resolve=>setTimeout(resolve,0));
++ const deadline=Date.now()+5000;
++ while(releases.length<16&&Date.now()<deadline)await new Promise(resolve=>setTimeout(resolve,2));
++ assert.equal(releases.length,16,'All capped approval callbacks must be pending before release');
+  await assert.rejects(capped.access.authorize(request()),/access-busy/);
+  for(const release of releases)release(false);
+  const results=await Promise.allSettled(waits);assert(results.every(result=>result.status==='rejected'));
+@@ -172,3 +174,22 @@
+   assert.equal(diagnostics.length,0,ts.formatDiagnosticsWithColorAndContext(diagnostics,{getCurrentDirectory:()=>directory,getCanonicalFileName:(file:string)=>file,getNewLine:()=> '\n'}));
+  }finally{rmSync(directory,{recursive:true,force:true});}
+ });
++
++
++test('timed-out trusted callbacks retain slots until their underlying work settles',async()=>{
++ const releases:((value:any)=>void)[]=[],signals:AbortSignal[]=[];let effects=0;
++ const bounded=setup({validateSession:({signal}:{signal:AbortSignal})=>{signals.push(signal);return new Promise(resolve=>releases.push(resolve));}},{approvalMaxAgeMs:2,maxAuditRecords:1000});
++ for(let index=0;index<80;index++)await assert.rejects(bounded.access.run(request(),()=>effects++));
++ assert.equal(releases.length,64,'An ignored abort must not free the underlying callback reservation');
++ assert(signals.every(signal=>signal.aborted));assert.equal(effects,0);
++ for(const release of releases)release(bounded.state.session);
++ await new Promise(resolve=>setTimeout(resolve,0));assert.equal(effects,0,'Late callbacks cannot resume timed-out operations');
++ const pending:((value:any)=>void)[]=[];let hanging=true;
++ const recover=setup({validateSession:()=>hanging?new Promise(resolve=>pending.push(resolve)):Promise.resolve(recover.state.session)},{approvalMaxAgeMs:2,maxAuditRecords:1000});
++ for(let index=0;index<63;index++)await assert.rejects(recover.access.run(request(),()=>effects++),/session-invalid/);
++ pending[0](recover.state.session);await new Promise(resolve=>setTimeout(resolve,0));
++ await assert.rejects(recover.access.run(request(),()=>effects++),/session-invalid/);
++ assert.equal(pending.length,64,'Settled underlying work releases exactly one callback slot');
++ hanging=false;for(const release of pending)release(recover.state.session);await new Promise(resolve=>setTimeout(resolve,0));
++ assert.equal(await recover.access.run(request(),()=>++effects),1);
++});

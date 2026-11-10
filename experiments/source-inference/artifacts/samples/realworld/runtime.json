@@ -1,0 +1,31 @@
+{
+  "id": "realworld",
+  "repository": "https://github.com/realworld-apps/angular-realworld-example-app",
+  "revision": "d426ec804f7d035c374aa4a1b48ecdb05a03eb02",
+  "complexity": "5 — Multi-feature application",
+  "outcome": "executed",
+  "capability": {
+    "id": "/register#AuthComponent.submitForm:app-auth-page form",
+    "fingerprint": "5bd581f5dcf5542a6aa3ec76b2012a98ffaf1667fca7a8fd51a13e18d823be4f"
+  },
+  "routes": 11,
+  "candidates": 25,
+  "reviewedTools": 1,
+  "finalPath": "/",
+  "evidence": [
+    {
+      "method": "POST",
+      "path": "/api/users",
+      "body": {
+        "user": {
+          "email": "katherine@example.test",
+          "password": "[REDACTED]",
+          "username": "Katherine"
+        }
+      }
+    }
+  ],
+  "pageErrors": [],
+  "offOriginRequestsBlocked": 2,
+  "applicationSourceModified": false
+}

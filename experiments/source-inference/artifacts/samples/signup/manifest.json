@@ -1,0 +1,3235 @@
+{
+  "formatVersion": 1,
+  "compilerVersion": "0.1.0",
+  "sourceDigest": "c6544df2f9ed69e6b72a46a7576a90cf1a9945b880454e1a7663407e9adbd48c",
+  "routes": [
+    {
+      "path": "/",
+      "component": "HomeComponent",
+      "guards": [
+        "AuthGuard"
+      ]
+    },
+    {
+      "path": "/account",
+      "component": "LayoutComponent",
+      "guards": []
+    },
+    {
+      "path": "/account/forgot-password",
+      "component": "ForgotPasswordComponent",
+      "guards": []
+    },
+    {
+      "path": "/account/login",
+      "component": "LoginComponent",
+      "guards": []
+    },
+    {
+      "path": "/account/register",
+      "component": "RegisterComponent",
+      "guards": []
+    },
+    {
+      "path": "/account/reset-password",
+      "component": "ResetPasswordComponent",
+      "guards": []
+    },
+    {
+      "path": "/account/verify-email",
+      "component": "VerifyEmailComponent",
+      "guards": []
+    },
+    {
+      "path": "/admin",
+      "component": "SubNavComponent",
+      "guards": [
+        "AuthGuard"
+      ]
+    },
+    {
+      "path": "/admin",
+      "component": "LayoutComponent",
+      "guards": [
+        "AuthGuard"
+      ]
+    },
+    {
+      "path": "/admin",
+      "component": "OverviewComponent",
+      "guards": [
+        "AuthGuard"
+      ]
+    },
+    {
+      "path": "/admin/accounts",
+      "component": "ListComponent",
+      "guards": [
+        "AuthGuard"
+      ]
+    },
+    {
+      "path": "/admin/accounts/add",
+      "component": "AddEditComponent",
+      "guards": [
+        "AuthGuard"
+      ]
+    },
+    {
+      "path": "/admin/accounts/edit/:id",
+      "component": "AddEditComponent",
+      "guards": [
+        "AuthGuard"
+      ]
+    },
+    {
+      "path": "/profile",
+      "component": "LayoutComponent",
+      "guards": [
+        "AuthGuard"
+      ]
+    },
+    {
+      "path": "/profile",
+      "component": "DetailsComponent",
+      "guards": [
+        "AuthGuard"
+      ]
+    },
+    {
+      "path": "/profile/update",
+      "component": "UpdateComponent",
+      "guards": [
+        "AuthGuard"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "/#AlertComponent.removeAlert:alert button.btn-close",
+      "fingerprint": "ad345e456196b040eae5448f7d3f876f11771c2282a96f4042ccc04b0103702c",
+      "route": "/",
+      "target": {
+        "param": "alert",
+        "source": "context",
+        "path": [
+          "id"
+        ],
+        "valuePath": [
+          "id"
+        ],
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "type": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "const": 0
+                },
+                {
+                  "type": "number",
+                  "const": 1
+                },
+                {
+                  "type": "number",
+                  "const": 2
+                },
+                {
+                  "type": "number",
+                  "const": 3
+                }
+              ]
+            },
+            "message": {
+              "type": "string"
+            },
+            "autoClose": {
+              "type": "boolean"
+            },
+            "keepAfterRouteChange": {
+              "type": "boolean"
+            },
+            "fade": {
+              "type": "boolean"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "component": "AlertComponent",
+      "componentSelector": "alert",
+      "action": {
+        "owner": "alert",
+        "kind": "button",
+        "selector": "alert button.btn-close",
+        "label": "removeAlert",
+        "event": "click",
+        "expression": "removeAlert(alert)",
+        "source": {
+          "file": "src/app/_components/alert.component.html",
+          "line": 5
+        }
+      },
+      "fields": [],
+      "handler": "removeAlert",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "alert": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "type": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "const": 0
+                  },
+                  {
+                    "type": "number",
+                    "const": 1
+                  },
+                  {
+                    "type": "number",
+                    "const": 2
+                  },
+                  {
+                    "type": "number",
+                    "const": 3
+                  }
+                ]
+              },
+              "message": {
+                "type": "string"
+              },
+              "autoClose": {
+                "type": "boolean"
+              },
+              "keepAfterRouteChange": {
+                "type": "boolean"
+              },
+              "fade": {
+                "type": "boolean"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "alert"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate",
+      "global": true
+    },
+    {
+      "id": "/#AppComponent.logout:app-root button.btn.btn-link.nav-item.nav-link",
+      "fingerprint": "fe78ae9e981a5207326b0788bd58a31f90738db8803f902b5808264b28b7fe30",
+      "route": "/",
+      "component": "AppComponent",
+      "componentSelector": "app-root",
+      "action": {
+        "owner": "app-root",
+        "matchText": "Logout",
+        "kind": "button",
+        "selector": "app-root button.btn.btn-link.nav-item.nav-link",
+        "label": "Logout",
+        "event": "click",
+        "expression": "logout()",
+        "source": {
+          "file": "src/app/app.component.html",
+          "line": 8
+        }
+      },
+      "fields": [],
+      "handler": "logout",
+      "callPath": [
+        "AppComponent.logout",
+        "AccountService.logout"
+      ],
+      "bindings": [
+        {
+          "token": "AccountService",
+          "service": "AccountService",
+          "method": "logout",
+          "source": {
+            "file": "src/app/_services/account.service.ts",
+            "line": 38
+          },
+          "arguments": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate",
+      "global": true
+    },
+    {
+      "id": "/#AppComponent.navigate:app-root a[routerlink]",
+      "fingerprint": "b4747f729edcd60b9dc1c6cb826f73545fb5c5d75eb3b9050510ea0317847207",
+      "route": "/",
+      "component": "AppComponent",
+      "componentSelector": "app-root",
+      "action": {
+        "owner": "app-root",
+        "kind": "workflow",
+        "selector": "app-root",
+        "label": "Navigate through authored links",
+        "event": "click",
+        "expression": "routerLink",
+        "source": {
+          "file": "src/app/app.component.html",
+          "line": 5
+        }
+      },
+      "drive": {
+        "buttons": {
+          "param": "route",
+          "choices": [
+            {
+              "value": "/",
+              "selector": "app-root a.nav-item.nav-link",
+              "matchText": "Home"
+            },
+            {
+              "value": "/profile",
+              "selector": "app-root a.nav-item.nav-link",
+              "matchText": "Profile"
+            },
+            {
+              "value": "/admin",
+              "selector": "app-root a.nav-item.nav-link",
+              "matchText": "Admin"
+            }
+          ]
+        }
+      },
+      "fields": [],
+      "handler": "navigate",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "route": {
+            "type": "string",
+            "enum": [
+              "/",
+              "/profile",
+              "/admin"
+            ]
+          }
+        },
+        "required": [
+          "route"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate",
+      "global": true
+    },
+    {
+      "id": "/account/forgot-password#ForgotPasswordComponent.onSubmit:ng-component form",
+      "fingerprint": "c5cc55388e597e67fe2ec3e7924ed60ae042a5cc05970536ea6b40e78dcf8e5a",
+      "route": "/account/forgot-password",
+      "component": "ForgotPasswordComponent",
+      "componentSelector": "ng-component",
+      "action": {
+        "owner": "ng-component",
+        "kind": "form",
+        "selector": "ng-component form",
+        "submitSelector": "button.btn.btn-primary",
+        "label": "Submit",
+        "event": "ngSubmit",
+        "expression": "onSubmit()",
+        "source": {
+          "file": "src/app/account/forgot-password.component.html",
+          "line": 3
+        }
+      },
+      "fields": [
+        {
+          "name": "email",
+          "selector": "input[formcontrolname=\"email\"]",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+            "minLength": 1
+          }
+        }
+      ],
+      "handler": "onSubmit",
+      "callPath": [
+        "ForgotPasswordComponent.onSubmit",
+        "AlertService.clear",
+        "ForgotPasswordComponent.onSubmit",
+        "AccountService.forgotPassword",
+        "ForgotPasswordComponent.onSubmit",
+        "AlertService.success",
+        "ForgotPasswordComponent.onSubmit",
+        "AlertService.error"
+      ],
+      "bindings": [
+        {
+          "paramKeys": {
+            "id": "id"
+          },
+          "token": "AlertService",
+          "service": "AlertService",
+          "method": "clear",
+          "source": {
+            "file": "src/app/_services/alert.service.ts",
+            "line": 42
+          },
+          "arguments": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        },
+        {
+          "paramKeys": {
+            "email": "email"
+          },
+          "token": "AccountService",
+          "service": "AccountService",
+          "method": "forgotPassword",
+          "source": {
+            "file": "src/app/_services/account.service.ts",
+            "line": 62
+          },
+          "arguments": [
+            "this.f.email.value"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "email": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "email"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": false,
+          "schemaIssues": [
+            "Object has callable members: Function",
+            "Object has callable members: Object"
+          ]
+        },
+        {
+          "paramKeys": {
+            "message": "message"
+          },
+          "token": "AlertService",
+          "service": "AlertService",
+          "method": "success",
+          "source": {
+            "file": "src/app/_services/alert.service.ts",
+            "line": 18
+          },
+          "arguments": [
+            "'Please check your email for password reset instructions'"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string"
+              },
+              "options": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "autoClose": {
+                    "type": "boolean"
+                  },
+                  "keepAfterRouteChange": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "message"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        },
+        {
+          "paramKeys": {
+            "message": "message"
+          },
+          "token": "AlertService",
+          "service": "AlertService",
+          "method": "error",
+          "source": {
+            "file": "src/app/_services/alert.service.ts",
+            "line": 22
+          },
+          "arguments": [
+            "error"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string"
+              },
+              "options": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "autoClose": {
+                    "type": "boolean"
+                  },
+                  "keepAfterRouteChange": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "message"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "email"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/account/login#LoginComponent.onSubmit:ng-component form",
+      "fingerprint": "0d312914be6765d595a1db78f513c2eba926863fa274f0f419925519d2bd8969",
+      "route": "/account/login",
+      "component": "LoginComponent",
+      "componentSelector": "ng-component",
+      "action": {
+        "owner": "ng-component",
+        "kind": "form",
+        "selector": "ng-component form",
+        "submitSelector": "button.btn.btn-primary",
+        "label": "Login",
+        "event": "ngSubmit",
+        "expression": "onSubmit()",
+        "source": {
+          "file": "src/app/account/login.component.html",
+          "line": 3
+        }
+      },
+      "fields": [
+        {
+          "name": "email",
+          "selector": "input[formcontrolname=\"email\"]",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+            "minLength": 1
+          }
+        },
+        {
+          "name": "password",
+          "selector": "input[formcontrolname=\"password\"]",
+          "element": "input",
+          "type": "password",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "writeOnly": true,
+            "minLength": 1
+          }
+        }
+      ],
+      "handler": "onSubmit",
+      "callPath": [
+        "LoginComponent.onSubmit",
+        "AlertService.clear",
+        "LoginComponent.onSubmit",
+        "AccountService.login",
+        "LoginComponent.onSubmit",
+        "AlertService.error"
+      ],
+      "bindings": [
+        {
+          "paramKeys": {
+            "id": "id"
+          },
+          "token": "AlertService",
+          "service": "AlertService",
+          "method": "clear",
+          "source": {
+            "file": "src/app/_services/alert.service.ts",
+            "line": 42
+          },
+          "arguments": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        },
+        {
+          "paramKeys": {
+            "email": "email",
+            "password": "password"
+          },
+          "token": "AccountService",
+          "service": "AccountService",
+          "method": "login",
+          "source": {
+            "file": "src/app/_services/account.service.ts",
+            "line": 29
+          },
+          "arguments": [
+            "this.f.email.value",
+            "this.f.password.value"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "email": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "email",
+              "password"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": false,
+          "schemaIssues": [
+            "Unresolved type: any"
+          ]
+        },
+        {
+          "paramKeys": {
+            "message": "message"
+          },
+          "token": "AlertService",
+          "service": "AlertService",
+          "method": "error",
+          "source": {
+            "file": "src/app/_services/alert.service.ts",
+            "line": 22
+          },
+          "arguments": [
+            "error"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string"
+              },
+              "options": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "autoClose": {
+                    "type": "boolean"
+                  },
+                  "keepAfterRouteChange": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "message"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+            "minLength": 1
+          },
+          "password": {
+            "type": "string",
+            "writeOnly": true,
+            "minLength": 1
+          }
+        },
+        "required": [
+          "email",
+          "password"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/account/register#RegisterComponent.onSubmit:ng-component form",
+      "fingerprint": "2de15f36c0c8fd4a8f894965054cbc8e7d49ce77b11cb5919c65dfe37b961fd1",
+      "route": "/account/register",
+      "component": "RegisterComponent",
+      "componentSelector": "ng-component",
+      "action": {
+        "owner": "ng-component",
+        "kind": "form",
+        "selector": "ng-component form",
+        "submitSelector": "button.btn.btn-primary",
+        "label": "Register",
+        "event": "ngSubmit",
+        "expression": "onSubmit()",
+        "source": {
+          "file": "src/app/account/register.component.html",
+          "line": 3
+        }
+      },
+      "fields": [
+        {
+          "name": "title",
+          "selector": "select[formcontrolname=\"title\"]",
+          "element": "select",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "Mr",
+              "Mrs",
+              "Miss",
+              "Ms"
+            ]
+          }
+        },
+        {
+          "name": "firstName",
+          "selector": "input[formcontrolname=\"firstName\"]",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        {
+          "name": "lastName",
+          "selector": "input[formcontrolname=\"lastName\"]",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        {
+          "name": "email",
+          "selector": "input[formcontrolname=\"email\"]",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+            "minLength": 1
+          }
+        },
+        {
+          "name": "password",
+          "selector": "input[formcontrolname=\"password\"]",
+          "element": "input",
+          "type": "password",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "writeOnly": true,
+            "minLength": 6
+          }
+        },
+        {
+          "name": "confirmPassword",
+          "selector": "input[formcontrolname=\"confirmPassword\"]",
+          "element": "input",
+          "type": "password",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "writeOnly": true,
+            "minLength": 1
+          }
+        },
+        {
+          "name": "acceptTerms",
+          "selector": "input[formcontrolname=\"acceptTerms\"]",
+          "element": "input",
+          "type": "checkbox",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "boolean",
+            "const": true
+          }
+        }
+      ],
+      "handler": "onSubmit",
+      "callPath": [
+        "RegisterComponent.onSubmit",
+        "AlertService.clear",
+        "RegisterComponent.onSubmit",
+        "AccountService.register",
+        "RegisterComponent.onSubmit",
+        "AlertService.success",
+        "RegisterComponent.onSubmit",
+        "AlertService.error"
+      ],
+      "bindings": [
+        {
+          "paramKeys": {
+            "id": "id"
+          },
+          "token": "AlertService",
+          "service": "AlertService",
+          "method": "clear",
+          "source": {
+            "file": "src/app/_services/alert.service.ts",
+            "line": 42
+          },
+          "arguments": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        },
+        {
+          "token": "AccountService",
+          "service": "AccountService",
+          "method": "register",
+          "source": {
+            "file": "src/app/_services/account.service.ts",
+            "line": 54
+          },
+          "arguments": [
+            "this.form.value"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "account": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "firstName": {
+                    "type": "string"
+                  },
+                  "lastName": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  },
+                  "role": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "const": "User"
+                      },
+                      {
+                        "type": "string",
+                        "const": "Admin"
+                      }
+                    ]
+                  },
+                  "jwtToken": {
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "account"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": false,
+          "schemaIssues": [
+            "Object has callable members: Function",
+            "Object has callable members: Object"
+          ]
+        },
+        {
+          "paramKeys": {
+            "message": "message"
+          },
+          "token": "AlertService",
+          "service": "AlertService",
+          "method": "success",
+          "source": {
+            "file": "src/app/_services/alert.service.ts",
+            "line": 18
+          },
+          "arguments": [
+            "'Registration successful, please check your email for verification instructions'",
+            "{ keepAfterRouteChange: true }"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string"
+              },
+              "options": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "autoClose": {
+                    "type": "boolean"
+                  },
+                  "keepAfterRouteChange": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "message"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        },
+        {
+          "paramKeys": {
+            "message": "message"
+          },
+          "token": "AlertService",
+          "service": "AlertService",
+          "method": "error",
+          "source": {
+            "file": "src/app/_services/alert.service.ts",
+            "line": 22
+          },
+          "arguments": [
+            "error"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string"
+              },
+              "options": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "autoClose": {
+                    "type": "boolean"
+                  },
+                  "keepAfterRouteChange": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "message"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "enum": [
+              "Mr",
+              "Mrs",
+              "Miss",
+              "Ms"
+            ]
+          },
+          "firstName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "lastName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "email": {
+            "type": "string",
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+            "minLength": 1
+          },
+          "password": {
+            "type": "string",
+            "writeOnly": true,
+            "minLength": 6
+          },
+          "confirmPassword": {
+            "type": "string",
+            "writeOnly": true,
+            "minLength": 1
+          },
+          "acceptTerms": {
+            "type": "boolean",
+            "const": true
+          }
+        },
+        "required": [
+          "title",
+          "firstName",
+          "lastName",
+          "email",
+          "password",
+          "confirmPassword",
+          "acceptTerms"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/account/reset-password#ResetPasswordComponent.onSubmit:ng-component form",
+      "fingerprint": "dbbfa2ecd7d2fb1ebfdceeece254f35dbd95a93676f9d4b5a334bbea3abb2304",
+      "route": "/account/reset-password",
+      "component": "ResetPasswordComponent",
+      "componentSelector": "ng-component",
+      "action": {
+        "owner": "ng-component",
+        "kind": "form",
+        "selector": "ng-component form",
+        "submitSelector": "button.btn.btn-primary",
+        "label": "Reset Password",
+        "event": "ngSubmit",
+        "expression": "onSubmit()",
+        "source": {
+          "file": "src/app/account/reset-password.component.html",
+          "line": 9
+        }
+      },
+      "fields": [
+        {
+          "name": "password",
+          "selector": "input[formcontrolname=\"password\"]",
+          "element": "input",
+          "type": "password",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "writeOnly": true,
+            "minLength": 6
+          }
+        },
+        {
+          "name": "confirmPassword",
+          "selector": "input[formcontrolname=\"confirmPassword\"]",
+          "element": "input",
+          "type": "password",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "writeOnly": true,
+            "minLength": 1
+          }
+        }
+      ],
+      "handler": "onSubmit",
+      "callPath": [
+        "ResetPasswordComponent.onSubmit",
+        "AlertService.clear",
+        "ResetPasswordComponent.onSubmit",
+        "AccountService.resetPassword",
+        "ResetPasswordComponent.onSubmit",
+        "AlertService.success",
+        "ResetPasswordComponent.onSubmit",
+        "AlertService.error"
+      ],
+      "bindings": [
+        {
+          "paramKeys": {
+            "id": "id"
+          },
+          "token": "AlertService",
+          "service": "AlertService",
+          "method": "clear",
+          "source": {
+            "file": "src/app/_services/alert.service.ts",
+            "line": 42
+          },
+          "arguments": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        },
+        {
+          "paramKeys": {
+            "token": "token",
+            "password": "password",
+            "confirmPassword": "confirmPassword"
+          },
+          "token": "AccountService",
+          "service": "AccountService",
+          "method": "resetPassword",
+          "source": {
+            "file": "src/app/_services/account.service.ts",
+            "line": 70
+          },
+          "arguments": [
+            "this.token!",
+            "this.f.password.value",
+            "this.f.confirmPassword.value"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "token": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "confirmPassword": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "token",
+              "password",
+              "confirmPassword"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": false,
+          "schemaIssues": [
+            "Object has callable members: Function",
+            "Object has callable members: Object"
+          ]
+        },
+        {
+          "paramKeys": {
+            "message": "message"
+          },
+          "token": "AlertService",
+          "service": "AlertService",
+          "method": "success",
+          "source": {
+            "file": "src/app/_services/alert.service.ts",
+            "line": 18
+          },
+          "arguments": [
+            "'Password reset successful, you can now login'",
+            "{ keepAfterRouteChange: true }"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string"
+              },
+              "options": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "autoClose": {
+                    "type": "boolean"
+                  },
+                  "keepAfterRouteChange": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "message"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        },
+        {
+          "paramKeys": {
+            "message": "message"
+          },
+          "token": "AlertService",
+          "service": "AlertService",
+          "method": "error",
+          "source": {
+            "file": "src/app/_services/alert.service.ts",
+            "line": 22
+          },
+          "arguments": [
+            "error"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string"
+              },
+              "options": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "autoClose": {
+                    "type": "boolean"
+                  },
+                  "keepAfterRouteChange": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "message"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "password": {
+            "type": "string",
+            "writeOnly": true,
+            "minLength": 6
+          },
+          "confirmPassword": {
+            "type": "string",
+            "writeOnly": true,
+            "minLength": 1
+          }
+        },
+        "required": [
+          "password",
+          "confirmPassword"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/account/verify-email#VerifyEmailComponent.ngOnInit:ng-component",
+      "fingerprint": "db8d43325bfb4699fc5d0dc9baa98ef4439f3ce7df1db43c01b11c9c25e8118d",
+      "route": "/account/verify-email",
+      "queryParams": [
+        "token"
+      ],
+      "component": "VerifyEmailComponent",
+      "componentSelector": "ng-component",
+      "action": {
+        "kind": "navigation",
+        "selector": "ng-component",
+        "label": "Open /account/verify-email with token",
+        "event": "init",
+        "expression": "ngOnInit",
+        "source": {
+          "file": "src/app/account/verify-email.component.ts",
+          "line": 24
+        }
+      },
+      "fields": [],
+      "handler": "ngOnInit",
+      "callPath": [
+        "VerifyEmailComponent.ngOnInit",
+        "AccountService.verifyEmail",
+        "VerifyEmailComponent.ngOnInit",
+        "AlertService.success"
+      ],
+      "bindings": [
+        {
+          "paramKeys": {
+            "token": "token"
+          },
+          "token": "AccountService",
+          "service": "AccountService",
+          "method": "verifyEmail",
+          "source": {
+            "file": "src/app/_services/account.service.ts",
+            "line": 58
+          },
+          "arguments": [
+            "token"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "token": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "token"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": false,
+          "schemaIssues": [
+            "Object has callable members: Function",
+            "Object has callable members: Object"
+          ]
+        },
+        {
+          "paramKeys": {
+            "message": "message"
+          },
+          "token": "AlertService",
+          "service": "AlertService",
+          "method": "success",
+          "source": {
+            "file": "src/app/_services/alert.service.ts",
+            "line": 18
+          },
+          "arguments": [
+            "'Verification successful, you can now login'",
+            "{ keepAfterRouteChange: true }"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string"
+              },
+              "options": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "autoClose": {
+                    "type": "boolean"
+                  },
+                  "keepAfterRouteChange": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "message"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "token"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/admin/accounts/add#AddEditComponent.navigate:ng-component a[routerlink]",
+      "fingerprint": "bc6570dad82ee8202bb8b38007984a54cb8524c00aab9dfa97a384e56909d557",
+      "route": "/admin/accounts/add",
+      "component": "AddEditComponent",
+      "componentSelector": "ng-component",
+      "action": {
+        "owner": "ng-component",
+        "kind": "workflow",
+        "selector": "ng-component",
+        "label": "Navigate through authored links",
+        "event": "click",
+        "expression": "routerLink",
+        "source": {
+          "file": "src/app/admin/accounts/add-edit.component.html",
+          "line": 80
+        }
+      },
+      "drive": {
+        "buttons": {
+          "param": "route",
+          "choices": [
+            {
+              "value": "/admin/accounts",
+              "selector": "ng-component a.btn.btn-link",
+              "matchText": "Cancel"
+            }
+          ]
+        }
+      },
+      "fields": [],
+      "handler": "navigate",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "route": {
+            "type": "string",
+            "enum": [
+              "/admin/accounts"
+            ]
+          }
+        },
+        "required": [
+          "route"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [
+        "AuthGuard"
+      ],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/admin/accounts/add#AddEditComponent.onSubmit:ng-component form",
+      "fingerprint": "dd80ae76b4f2390bcb77e0f29c17a9c995c9fd5c8baf588beb3f94ed936cc27b",
+      "route": "/admin/accounts/add",
+      "component": "AddEditComponent",
+      "componentSelector": "ng-component",
+      "action": {
+        "owner": "ng-component",
+        "kind": "form",
+        "selector": "ng-component form",
+        "submitSelector": "button.btn.btn-primary",
+        "label": "Save",
+        "event": "ngSubmit",
+        "expression": "onSubmit()",
+        "source": {
+          "file": "src/app/admin/accounts/add-edit.component.html",
+          "line": 2
+        }
+      },
+      "fields": [
+        {
+          "name": "title",
+          "selector": "select[formcontrolname=\"title\"]",
+          "element": "select",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "Mr",
+              "Mrs",
+              "Miss",
+              "Ms"
+            ]
+          }
+        },
+        {
+          "name": "firstName",
+          "selector": "input[formcontrolname=\"firstName\"]",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        {
+          "name": "lastName",
+          "selector": "input[formcontrolname=\"lastName\"]",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        {
+          "name": "email",
+          "selector": "input[formcontrolname=\"email\"]",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+            "minLength": 1
+          }
+        },
+        {
+          "name": "role",
+          "selector": "select[formcontrolname=\"role\"]",
+          "element": "select",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "User",
+              "Admin"
+            ]
+          }
+        },
+        {
+          "name": "password",
+          "selector": "input[formcontrolname=\"password\"]",
+          "element": "input",
+          "type": "password",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "writeOnly": true,
+            "minLength": 6
+          }
+        },
+        {
+          "name": "confirmPassword",
+          "selector": "input[formcontrolname=\"confirmPassword\"]",
+          "element": "input",
+          "type": "password",
+          "required": false,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "writeOnly": true
+          }
+        }
+      ],
+      "handler": "onSubmit",
+      "callPath": [
+        "AddEditComponent.onSubmit",
+        "AlertService.clear",
+        "AddEditComponent.onSubmit",
+        "AccountService.update",
+        "AddEditComponent.onSubmit",
+        "AccountService.create",
+        "AddEditComponent.onSubmit",
+        "AlertService.success",
+        "AddEditComponent.onSubmit",
+        "AlertService.error"
+      ],
+      "bindings": [
+        {
+          "paramKeys": {
+            "id": "id"
+          },
+          "token": "AlertService",
+          "service": "AlertService",
+          "method": "clear",
+          "source": {
+            "file": "src/app/_services/alert.service.ts",
+            "line": 42
+          },
+          "arguments": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        },
+        {
+          "token": "AccountService",
+          "service": "AccountService",
+          "method": "update",
+          "source": {
+            "file": "src/app/_services/account.service.ts",
+            "line": 86
+          },
+          "arguments": [
+            "this.id!",
+            "this.form.value"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "params": false
+            },
+            "required": [
+              "id",
+              "params"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": false,
+          "schemaIssues": [
+            "Unresolved type: any"
+          ]
+        },
+        {
+          "token": "AccountService",
+          "service": "AccountService",
+          "method": "create",
+          "source": {
+            "file": "src/app/_services/account.service.ts",
+            "line": 82
+          },
+          "arguments": [
+            "this.form.value"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "params": false
+            },
+            "required": [
+              "params"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": false,
+          "schemaIssues": [
+            "Unresolved type: any",
+            "Object has callable members: Function",
+            "Object has callable members: Object"
+          ]
+        },
+        {
+          "paramKeys": {
+            "message": "message"
+          },
+          "token": "AlertService",
+          "service": "AlertService",
+          "method": "success",
+          "source": {
+            "file": "src/app/_services/alert.service.ts",
+            "line": 18
+          },
+          "arguments": [
+            "message",
+            "{ keepAfterRouteChange: true }"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string"
+              },
+              "options": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "autoClose": {
+                    "type": "boolean"
+                  },
+                  "keepAfterRouteChange": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "message"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        },
+        {
+          "paramKeys": {
+            "message": "message"
+          },
+          "token": "AlertService",
+          "service": "AlertService",
+          "method": "error",
+          "source": {
+            "file": "src/app/_services/alert.service.ts",
+            "line": 22
+          },
+          "arguments": [
+            "error"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string"
+              },
+              "options": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "autoClose": {
+                    "type": "boolean"
+                  },
+                  "keepAfterRouteChange": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "message"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "enum": [
+              "Mr",
+              "Mrs",
+              "Miss",
+              "Ms"
+            ]
+          },
+          "firstName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "lastName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "email": {
+            "type": "string",
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+            "minLength": 1
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "User",
+              "Admin"
+            ]
+          },
+          "password": {
+            "type": "string",
+            "writeOnly": true,
+            "minLength": 6
+          },
+          "confirmPassword": {
+            "type": "string",
+            "writeOnly": true
+          }
+        },
+        "required": [
+          "title",
+          "firstName",
+          "lastName",
+          "email",
+          "role",
+          "password"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [
+        "AuthGuard"
+      ],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/admin/accounts/edit/:id#AddEditComponent.navigate:ng-component a[routerlink]",
+      "fingerprint": "c2741de79194299c2bbe06d8a242512466e3dc7ca3954a77faedeba72f6e1360",
+      "route": "/admin/accounts/edit/:id",
+      "routeParams": [
+        "id"
+      ],
+      "component": "AddEditComponent",
+      "componentSelector": "ng-component",
+      "action": {
+        "owner": "ng-component",
+        "kind": "workflow",
+        "selector": "ng-component",
+        "label": "Navigate through authored links",
+        "event": "click",
+        "expression": "routerLink",
+        "source": {
+          "file": "src/app/admin/accounts/add-edit.component.html",
+          "line": 80
+        }
+      },
+      "drive": {
+        "buttons": {
+          "param": "route",
+          "choices": [
+            {
+              "value": "/admin/accounts",
+              "selector": "ng-component a.btn.btn-link",
+              "matchText": "Cancel"
+            }
+          ]
+        }
+      },
+      "fields": [],
+      "handler": "navigate",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          },
+          "route": {
+            "type": "string",
+            "enum": [
+              "/admin/accounts"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "route"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [
+        "AuthGuard"
+      ],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/admin/accounts/edit/:id#AddEditComponent.onSubmit:ng-component form",
+      "fingerprint": "390dfb55d6500199b0f886d450e04b8f585b477894c7484b634010ad88b49902",
+      "route": "/admin/accounts/edit/:id",
+      "routeParams": [
+        "id"
+      ],
+      "component": "AddEditComponent",
+      "componentSelector": "ng-component",
+      "action": {
+        "owner": "ng-component",
+        "kind": "form",
+        "selector": "ng-component form",
+        "submitSelector": "button.btn.btn-primary",
+        "label": "Save",
+        "event": "ngSubmit",
+        "expression": "onSubmit()",
+        "source": {
+          "file": "src/app/admin/accounts/add-edit.component.html",
+          "line": 2
+        }
+      },
+      "fields": [
+        {
+          "name": "title",
+          "selector": "select[formcontrolname=\"title\"]",
+          "element": "select",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "Mr",
+              "Mrs",
+              "Miss",
+              "Ms"
+            ]
+          }
+        },
+        {
+          "name": "firstName",
+          "selector": "input[formcontrolname=\"firstName\"]",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        {
+          "name": "lastName",
+          "selector": "input[formcontrolname=\"lastName\"]",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        {
+          "name": "email",
+          "selector": "input[formcontrolname=\"email\"]",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+            "minLength": 1
+          }
+        },
+        {
+          "name": "role",
+          "selector": "select[formcontrolname=\"role\"]",
+          "element": "select",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "User",
+              "Admin"
+            ]
+          }
+        },
+        {
+          "name": "password",
+          "selector": "input[formcontrolname=\"password\"]",
+          "element": "input",
+          "type": "password",
+          "required": false,
+          "supported": true,
+          "schema": {
+            "anyOf": [
+              {
+                "const": ""
+              },
+              {
+                "type": "string",
+                "writeOnly": true,
+                "minLength": 6
+              }
+            ]
+          }
+        },
+        {
+          "name": "confirmPassword",
+          "selector": "input[formcontrolname=\"confirmPassword\"]",
+          "element": "input",
+          "type": "password",
+          "required": false,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "writeOnly": true
+          }
+        }
+      ],
+      "handler": "onSubmit",
+      "callPath": [
+        "AddEditComponent.onSubmit",
+        "AlertService.clear",
+        "AddEditComponent.onSubmit",
+        "AccountService.update",
+        "AddEditComponent.onSubmit",
+        "AccountService.create",
+        "AddEditComponent.onSubmit",
+        "AlertService.success",
+        "AddEditComponent.onSubmit",
+        "AlertService.error"
+      ],
+      "bindings": [
+        {
+          "paramKeys": {
+            "id": "id"
+          },
+          "token": "AlertService",
+          "service": "AlertService",
+          "method": "clear",
+          "source": {
+            "file": "src/app/_services/alert.service.ts",
+            "line": 42
+          },
+          "arguments": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        },
+        {
+          "token": "AccountService",
+          "service": "AccountService",
+          "method": "update",
+          "source": {
+            "file": "src/app/_services/account.service.ts",
+            "line": 86
+          },
+          "arguments": [
+            "this.id!",
+            "this.form.value"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "params": false
+            },
+            "required": [
+              "id",
+              "params"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": false,
+          "schemaIssues": [
+            "Unresolved type: any"
+          ]
+        },
+        {
+          "token": "AccountService",
+          "service": "AccountService",
+          "method": "create",
+          "source": {
+            "file": "src/app/_services/account.service.ts",
+            "line": 82
+          },
+          "arguments": [
+            "this.form.value"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "params": false
+            },
+            "required": [
+              "params"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": false,
+          "schemaIssues": [
+            "Unresolved type: any",
+            "Object has callable members: Function",
+            "Object has callable members: Object"
+          ]
+        },
+        {
+          "paramKeys": {
+            "message": "message"
+          },
+          "token": "AlertService",
+          "service": "AlertService",
+          "method": "success",
+          "source": {
+            "file": "src/app/_services/alert.service.ts",
+            "line": 18
+          },
+          "arguments": [
+            "message",
+            "{ keepAfterRouteChange: true }"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string"
+              },
+              "options": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "autoClose": {
+                    "type": "boolean"
+                  },
+                  "keepAfterRouteChange": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "message"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        },
+        {
+          "paramKeys": {
+            "message": "message"
+          },
+          "token": "AlertService",
+          "service": "AlertService",
+          "method": "error",
+          "source": {
+            "file": "src/app/_services/alert.service.ts",
+            "line": 22
+          },
+          "arguments": [
+            "error"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string"
+              },
+              "options": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "autoClose": {
+                    "type": "boolean"
+                  },
+                  "keepAfterRouteChange": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "message"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          },
+          "title": {
+            "type": "string",
+            "enum": [
+              "Mr",
+              "Mrs",
+              "Miss",
+              "Ms"
+            ]
+          },
+          "firstName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "lastName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "email": {
+            "type": "string",
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+            "minLength": 1
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "User",
+              "Admin"
+            ]
+          },
+          "password": {
+            "anyOf": [
+              {
+                "const": ""
+              },
+              {
+                "type": "string",
+                "writeOnly": true,
+                "minLength": 6
+              }
+            ]
+          },
+          "confirmPassword": {
+            "type": "string",
+            "writeOnly": true
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "firstName",
+          "lastName",
+          "email",
+          "role"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [
+        "AuthGuard"
+      ],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/admin/accounts#ListComponent.deleteAccount:ng-component button.btn.btn-sm.btn-danger.btn-delete-account",
+      "fingerprint": "76d75016a5cb6fbfe6f8c1dc7cce4d24895b351d9a4039b1094922f21bb57f70",
+      "route": "/admin/accounts",
+      "target": {
+        "param": "id",
+        "source": "context",
+        "path": [
+          "id"
+        ],
+        "inputSchema": {
+          "type": "string"
+        }
+      },
+      "component": "ListComponent",
+      "componentSelector": "ng-component",
+      "action": {
+        "owner": "ng-component",
+        "matchText": "Delete",
+        "kind": "button",
+        "selector": "ng-component button.btn.btn-sm.btn-danger.btn-delete-account",
+        "label": "Delete",
+        "event": "click",
+        "expression": "deleteAccount(account.id)",
+        "source": {
+          "file": "src/app/admin/accounts/list.component.html",
+          "line": 20
+        }
+      },
+      "fields": [],
+      "handler": "deleteAccount",
+      "callPath": [
+        "ListComponent.deleteAccount",
+        "AccountService.delete"
+      ],
+      "bindings": [
+        {
+          "token": "AccountService",
+          "service": "AccountService",
+          "method": "delete",
+          "source": {
+            "file": "src/app/_services/account.service.ts",
+            "line": 99
+          },
+          "arguments": [
+            "id"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": false,
+          "schemaIssues": [
+            "Object has callable members: Function",
+            "Object has callable members: Object"
+          ]
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [
+        "AuthGuard"
+      ],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/profile/update#UpdateComponent.onDelete:ng-component button.btn.btn-danger",
+      "fingerprint": "00635cb65603104010399230c4068ba598a7ac0fb71de326849bd9a3328a5dba",
+      "route": "/profile/update",
+      "component": "UpdateComponent",
+      "componentSelector": "ng-component",
+      "action": {
+        "owner": "ng-component",
+        "matchText": "Delete",
+        "kind": "button",
+        "selector": "ng-component button.btn.btn-danger",
+        "label": "Delete",
+        "event": "click",
+        "expression": "onDelete()",
+        "source": {
+          "file": "src/app/profile/update.component.html",
+          "line": 65
+        }
+      },
+      "fields": [],
+      "handler": "onDelete",
+      "callPath": [
+        "UpdateComponent.onDelete",
+        "AccountService.delete",
+        "UpdateComponent.onDelete",
+        "AlertService.success"
+      ],
+      "bindings": [
+        {
+          "token": "AccountService",
+          "service": "AccountService",
+          "method": "delete",
+          "source": {
+            "file": "src/app/_services/account.service.ts",
+            "line": 99
+          },
+          "arguments": [
+            "this.account.id!"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": false,
+          "schemaIssues": [
+            "Object has callable members: Function",
+            "Object has callable members: Object"
+          ]
+        },
+        {
+          "paramKeys": {
+            "message": "message"
+          },
+          "token": "AlertService",
+          "service": "AlertService",
+          "method": "success",
+          "source": {
+            "file": "src/app/_services/alert.service.ts",
+            "line": 18
+          },
+          "arguments": [
+            "'Account deleted successfully'",
+            "{ keepAfterRouteChange: true }"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string"
+              },
+              "options": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "autoClose": {
+                    "type": "boolean"
+                  },
+                  "keepAfterRouteChange": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "message"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [
+        "AuthGuard"
+      ],
+      "workflow": {
+        "confirmation": "observed",
+        "evidence": [
+          "confirm('Are you sure?')"
+        ]
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/profile/update#UpdateComponent.onSubmit:ng-component form",
+      "fingerprint": "4192d755bc3027cb79033640d1c1e9f8f63d0edda35d42df9e6745828a090e95",
+      "route": "/profile/update",
+      "component": "UpdateComponent",
+      "componentSelector": "ng-component",
+      "action": {
+        "owner": "ng-component",
+        "kind": "form",
+        "selector": "ng-component form",
+        "submitSelector": "button.btn.btn-primary.me-2",
+        "label": "Update",
+        "event": "ngSubmit",
+        "expression": "onSubmit()",
+        "source": {
+          "file": "src/app/profile/update.component.html",
+          "line": 2
+        }
+      },
+      "fields": [
+        {
+          "name": "title",
+          "selector": "select[formcontrolname=\"title\"]",
+          "element": "select",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "Mr",
+              "Mrs",
+              "Miss",
+              "Ms"
+            ]
+          }
+        },
+        {
+          "name": "firstName",
+          "selector": "input[formcontrolname=\"firstName\"]",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        {
+          "name": "lastName",
+          "selector": "input[formcontrolname=\"lastName\"]",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        {
+          "name": "email",
+          "selector": "input[formcontrolname=\"email\"]",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+            "minLength": 1
+          }
+        },
+        {
+          "name": "password",
+          "selector": "input[formcontrolname=\"password\"]",
+          "element": "input",
+          "type": "password",
+          "required": false,
+          "supported": true,
+          "schema": {
+            "anyOf": [
+              {
+                "const": ""
+              },
+              {
+                "type": "string",
+                "writeOnly": true,
+                "minLength": 6
+              }
+            ]
+          }
+        },
+        {
+          "name": "confirmPassword",
+          "selector": "input[formcontrolname=\"confirmPassword\"]",
+          "element": "input",
+          "type": "password",
+          "required": false,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "writeOnly": true
+          }
+        }
+      ],
+      "handler": "onSubmit",
+      "callPath": [
+        "UpdateComponent.onSubmit",
+        "AlertService.clear",
+        "UpdateComponent.onSubmit",
+        "AccountService.update",
+        "UpdateComponent.onSubmit",
+        "AlertService.success",
+        "UpdateComponent.onSubmit",
+        "AlertService.error"
+      ],
+      "bindings": [
+        {
+          "paramKeys": {
+            "id": "id"
+          },
+          "token": "AlertService",
+          "service": "AlertService",
+          "method": "clear",
+          "source": {
+            "file": "src/app/_services/alert.service.ts",
+            "line": 42
+          },
+          "arguments": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        },
+        {
+          "token": "AccountService",
+          "service": "AccountService",
+          "method": "update",
+          "source": {
+            "file": "src/app/_services/account.service.ts",
+            "line": 86
+          },
+          "arguments": [
+            "this.account.id!",
+            "this.form.value"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "params": false
+            },
+            "required": [
+              "id",
+              "params"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": false,
+          "schemaIssues": [
+            "Unresolved type: any"
+          ]
+        },
+        {
+          "paramKeys": {
+            "message": "message"
+          },
+          "token": "AlertService",
+          "service": "AlertService",
+          "method": "success",
+          "source": {
+            "file": "src/app/_services/alert.service.ts",
+            "line": 18
+          },
+          "arguments": [
+            "'Update successful'",
+            "{ keepAfterRouteChange: true }"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string"
+              },
+              "options": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "autoClose": {
+                    "type": "boolean"
+                  },
+                  "keepAfterRouteChange": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "message"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        },
+        {
+          "paramKeys": {
+            "message": "message"
+          },
+          "token": "AlertService",
+          "service": "AlertService",
+          "method": "error",
+          "source": {
+            "file": "src/app/_services/alert.service.ts",
+            "line": 22
+          },
+          "arguments": [
+            "error"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string"
+              },
+              "options": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "autoClose": {
+                    "type": "boolean"
+                  },
+                  "keepAfterRouteChange": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "message"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "enum": [
+              "Mr",
+              "Mrs",
+              "Miss",
+              "Ms"
+            ]
+          },
+          "firstName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "lastName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "email": {
+            "type": "string",
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+            "minLength": 1
+          },
+          "password": {
+            "anyOf": [
+              {
+                "const": ""
+              },
+              {
+                "type": "string",
+                "writeOnly": true,
+                "minLength": 6
+              }
+            ]
+          },
+          "confirmPassword": {
+            "type": "string",
+            "writeOnly": true
+          }
+        },
+        "required": [
+          "title",
+          "firstName",
+          "lastName",
+          "email"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [
+        "AuthGuard"
+      ],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    }
+  ],
+  "diagnostics": []
+}

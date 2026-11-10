@@ -1,0 +1,40 @@
+{
+  "typecheck": "passed",
+  "testSuites": {
+    "compiler": "passed",
+    "browserProtocol": "passed"
+  },
+  "sampleProjects": 5,
+  "executedScenarios": 5,
+  "unsupportedScenarios": 0,
+  "upstreamBusinessSourceModified": false,
+  "extractedPackageSmokePassed": true,
+  "publicationPerformed": false,
+  "verified": [
+    {
+      "id": "user-crud",
+      "capability": "/users/add#AddEditComponent.onSubmit:ng-component form",
+      "outcome": "executed"
+    },
+    {
+      "id": "signup",
+      "capability": "/account/register#RegisterComponent.onSubmit:ng-component form",
+      "outcome": "executed"
+    },
+    {
+      "id": "forms-course",
+      "capability": "/add-new-course#CreateCourseStep1Component.edit_form:create-course-step-1",
+      "outcome": "executed"
+    },
+    {
+      "id": "course-crud",
+      "capability": "/courses/new#CourseForm.onSubmit:app-course-form form.min-width",
+      "outcome": "executed"
+    },
+    {
+      "id": "realworld",
+      "capability": "/register#AuthComponent.submitForm:app-auth-page form",
+      "outcome": "executed"
+    }
+  ]
+}

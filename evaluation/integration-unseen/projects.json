@@ -1,0 +1,79 @@
+{
+  "formatVersion": 1,
+  "selectedAt": "2026-11-10T09:32:33.729159+00:00",
+  "selection": "Chosen solely from public GitHub primary app sources, package/license/toolchain and repository diversity, before any new compiler/integration output was observed.",
+  "projects": [
+    {
+      "id": "finance",
+      "repository": "https://github.com/BrunoICosta/angular-finance-tracker",
+      "commit": "61c1bb87567df4245f0722713edabc8177121842",
+      "directory": "/tmp/integration-unseen-finance",
+      "license": "MIT",
+      "licenseFile": "LICENSE",
+      "port": 4351,
+      "tsconfig": "tsconfig.app.json",
+      "routes": "src/app/app.routes.ts#routes",
+      "angularProject": "angular-finance-tracker",
+      "angular": "^20.3.0",
+      "lockSha256": "5d0e481febf944a2e66a94f32119cfe5c188faf2a714144fecdebb1a051de46e",
+      "licenseSha256": "76cf8b722fecab0199afbd5b04d0b74cf8eef65902131c7aa63d25cfc05981d9",
+      "install": [
+        "npm",
+        "ci",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "sourceManifestSha256": "726a55d7254d3fb87b6292c85c7831e5e5e8cbcd20fa886c7f41724d79fb9a5b"
+    },
+    {
+      "id": "todo",
+      "repository": "https://github.com/diverintech/angular-todo-list",
+      "commit": "391435fc4edf819abf4f507187fc0364ac26e00b",
+      "directory": "/tmp/integration-unseen-todo",
+      "license": "MIT",
+      "licenseFile": "LICENSE",
+      "port": 4352,
+      "tsconfig": "tsconfig.app.json",
+      "routes": "src/app/app.routes.ts#routes",
+      "angularProject": "angular-projects",
+      "entryComponent": "src/app/app.component.ts#AppComponent",
+      "routesQualification": "Empty authored route array: app root contains all UI.",
+      "angular": "^20.1.2",
+      "lockSha256": "24e36fecae81dee3a3f51a728a10758637413592335b6f9e83bf5e55cf494155",
+      "licenseSha256": "25192d3f5c6ce526fa4d56574fa163322857d7b8b7976e522c10ac9d3fb13bae",
+      "install": [
+        "npm",
+        "ci",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "sourceManifestSha256": "6d3264bff61f331399a46945818988a6fc122e2a4c737b688b0bbab1917a87ed"
+    },
+    {
+      "id": "shopping",
+      "repository": "https://github.com/BlueIronGirl/shopping-list-frontend",
+      "commit": "3464f15ad53ede4de5673415ca9de68070bf78a1",
+      "directory": "/tmp/integration-unseen-shopping",
+      "license": "MIT",
+      "licenseFile": "LICENSE.txt",
+      "port": 4353,
+      "tsconfig": "tsconfig.app.json",
+      "routes": "src/app/app-routing.module.ts#routes",
+      "angularProject": "shoppinglist",
+      "angular": "^16.0.0",
+      "lockSha256": "1130119d7f8ce7577c1a35cc1bbb957e9daa2a5f2ff40b5bebf755cc0daf1a1d",
+      "licenseSha256": "6f54249d5c84a967cb3fae13de05e3bf926464a7a4ef58fdba01620f54821739",
+      "install": [
+        "npm",
+        "ci",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "sourceManifestSha256": "32c47fabae3db0cf2fdff0b9c9db56caff20aac7c7abafbcd2882e6206aa140e"
+    }
+  ],
+  "compilerOutputObservedBeforeFreeze": false
+}

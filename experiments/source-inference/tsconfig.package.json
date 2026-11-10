@@ -1,0 +1,25 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "rootDir": "src",
+    "outDir": "dist/types"
+  },
+  "include": [
+    "src/index.ts",
+    "src/cli.ts",
+    "src/serve.ts",
+    "src/browser-runtime.ts",
+    "src/browser-adapter.ts",
+    "src/mcp.ts",
+    "src/certify.ts"
+  ],
+  "exclude": [
+    "tests",
+    "samples",
+    "test-apps",
+    "artifacts"
+  ]
+}

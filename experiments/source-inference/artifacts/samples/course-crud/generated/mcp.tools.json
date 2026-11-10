@@ -1,0 +1,77 @@
+{
+  "tools": [
+    {
+      "name": "angular_onSubmit_3eeeb8907e",
+      "description": "Submit the existing Signal Forms course editor, including its Material category selection and repeated lesson rows, through isolated public-sample data.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 150
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "Front-end",
+              "Back-end"
+            ]
+          },
+          "lessons": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 100,
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "minLength": 5,
+                  "maxLength": 100
+                },
+                "youtubeUrl": {
+                  "type": "string",
+                  "minLength": 10,
+                  "maxLength": 11
+                }
+              },
+              "required": [
+                "name",
+                "youtubeUrl"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "name",
+          "category",
+          "lessons"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "openWorldHint": true
+      }
+    }
+  ]
+}

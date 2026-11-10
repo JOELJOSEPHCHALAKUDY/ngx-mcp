@@ -1,0 +1,57 @@
+{
+  "formatVersion": 1,
+  "kind": "integration-holdout-current-integrity",
+  "projectId": "notes-manager-holdout",
+  "repository": "https://github.com/dplocki/angular-notes-manager",
+  "commit": "f1aa7eb02e2dcee35be7684d7aebba647083fd98",
+  "capturedAt": "2026-11-10T10:43:29.784Z",
+  "compilerTreeDigest": "9f1040e74acb519df62edd02ae8b8815606fabc3f9a92316a8be1e584d27ff1a",
+  "labelFreeze": "23cd7896c6ff015f4f080c1e9d82c3a026e79bf78f3407a1e3336c3b936005d7",
+  "currentReport": "mcp-current-final.json",
+  "currentProvenance": "current-provenance-final.json",
+  "nativeReference": "reference-results.json",
+  "currentEvaluator": "mcp-runtime.mts",
+  "reportKind": "final-current-source-after-read-view-fix",
+  "preservedPasses": [
+    {
+      "report": "mcp-first-pass.json",
+      "evaluator": "mcp-runtime.first-pass.mts"
+    },
+    {
+      "report": "mcp-remediated-second-pass.json",
+      "evaluator": "mcp-runtime.second-pass.mts"
+    },
+    {
+      "report": "mcp-current.json",
+      "evaluator": "mcp-runtime.mts"
+    }
+  ],
+  "files": {
+    "check.mjs": "4807a22f9b42dde9139b46096b68114bc2308ff4cd92ba03a9190ce3f3295c2b",
+    "FREEZE.sha256": "27180e1da7490b0375f1b7f0495093831cc5c12d029e062c9e528d78ac848c92",
+    "labels.json": "23cd7896c6ff015f4f080c1e9d82c3a026e79bf78f3407a1e3336c3b936005d7",
+    "inventory.json": "f140f760b82f99a2b88cc131abc45fa305623f2558bddfdfc5a6175e4ef331b8",
+    "source-manifest.json": "752aaf0eae48f275064cfb8da9d8b584562dbc3c7af00e0048c81a60a11ccaa2",
+    "LICENSE": "f7743c10d298bb5b21d3a198bf9fa79a43d9cb845f2f670d699be90ab73f8c4a",
+    "package-lock.json": "9bbda90ff9092f57dce32612dc7135b284d36883d24225578ee5e9202de71e58",
+    "reference-results.json": "4ec51542243962734eedd05ba536f9b782916bf76fc3ca5d229e3883fba0eec8",
+    "mcp-first-pass.json": "097934052baba113b4d8fb27e5ea9e3a98026926c41b01692d3930be231b12cf",
+    "first-pass-provenance.json": "f29af5e17643c68078da7ba654ab9856029739e2f456a543bef0a7682002154e",
+    "mcp-remediated-second-pass.json": "374e3fd40f05d021303c40e9a5bc234079e786fdeb2a175942cbcd78b4d57ff9",
+    "second-pass-provenance.json": "acd7f08809328ebc79ae0706c499aee92ad8516b96357c4576588353bdf4ae42",
+    "mcp-current.json": "371b3a7b958fb0104ca7c6276eb3bf49e153ed5673d039b4817da6102219c93a",
+    "current-provenance.json": "c2b2eed133237adb7cadcc8d88ee54e84e6ebe97b1c4d6f5a489001be80776b8",
+    "mcp-current-final.json": "e87a20a79fae71d6b1e13091ae5914ed28db0fae84e2734f3759d22871d35ca0",
+    "current-provenance-final.json": "098c6dfb80d73926631c1981524e472e8d599fc7c82497e6d41a64a934e91533",
+    "mcp-current-final.log": "bc678dbce85ee14ca57460a8d96f2898b9f59096dcb44c59db0695ba2afc27bf",
+    "fixture.mjs": "45195f6ae3f5385122bb615db547003427b8fdd82cc599d2657b6433dec32349",
+    "reference.mjs": "68fcf3ecf0265b5fd53a44ac3ef026b0e867608eb5a009c708d7e49973e86f79",
+    "mcp-runtime.mts": "725d53ef845bca79a54e7b96644d3b9ecc124d0d47b42eb703a2287fd5219ab7",
+    "mcp-runtime.first-pass.mts": "d5227c20fcfbf849d389dbf8d5416bc6fd8751e30c7815a66648d84c89d356a6",
+    "mcp-runtime.second-pass.mts": "9b246cf440c372ae894d536a3e94a2145275090e8868f61ca772189b1f35bd40"
+  },
+  "projectFiles": {
+    "evaluation/metrics.ts": "b21cba328c3acf17338054849f510099f9ef8ee355b14c15636f0c0f53af1674",
+    "package-lock.json": "045f2965fa36714084c778f8f741c7f51fd1041264534e493f0f72eea8c874ec"
+  }
+}

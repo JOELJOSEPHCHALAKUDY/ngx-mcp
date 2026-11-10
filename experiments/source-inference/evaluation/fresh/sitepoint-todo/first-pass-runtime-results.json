@@ -1,0 +1,795 @@
+{
+  "startedAt": "2026-11-09T20:54:43.853Z",
+  "protocol": "Real MCP Client + createMcpServer over SDK InMemoryTransport linked pair; each invocation passes MCP callTool request and real browserAdapter",
+  "manifestSha256": "1e2093ccf94bbd722b6f248eeecd822d4483f7beaf3c11eec89d2e046d920c33",
+  "labelsSha256": "81e76cc46da4e7f874f6e001d43bf692ee90b408a4eede1abdac70304f76d65a",
+  "sourcePatches": [],
+  "manifestPatches": [],
+  "baseline": [
+    {
+      "id": "list_todos",
+      "phase": "frozen-label-exact-input",
+      "args": {},
+      "setup": "Source prerequisite: root page loaded with synthetic fixture",
+      "before": {
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "complete": false,
+            "class": ""
+          },
+          {
+            "title": "Clean fixture inbox",
+            "complete": false,
+            "class": ""
+          },
+          {
+            "title": "Reserve fixture table",
+            "complete": true,
+            "class": "completed"
+          }
+        ],
+        "fixture": [
+          {
+            "id": 1,
+            "title": "Read fixture article",
+            "complete": false
+          },
+          {
+            "id": 2,
+            "title": "Clean fixture inbox",
+            "complete": false
+          },
+          {
+            "id": 3,
+            "title": "Reserve fixture table",
+            "complete": true
+          }
+        ],
+        "calls": [
+          {
+            "method": "GET",
+            "url": "http://localhost:3000/todos",
+            "body": null
+          }
+        ]
+      },
+      "status": "missing",
+      "reason": "No candidate tool for frozen source operation",
+      "pageErrors": []
+    },
+    {
+      "id": "add_todo",
+      "phase": "frozen-label-exact-input",
+      "args": {
+        "title": "Frozen holdout task"
+      },
+      "setup": "Source prerequisite: root page loaded with synthetic fixture",
+      "before": {
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "complete": false,
+            "class": ""
+          },
+          {
+            "title": "Clean fixture inbox",
+            "complete": false,
+            "class": ""
+          },
+          {
+            "title": "Reserve fixture table",
+            "complete": true,
+            "class": "completed"
+          }
+        ],
+        "fixture": [
+          {
+            "id": 1,
+            "title": "Read fixture article",
+            "complete": false
+          },
+          {
+            "id": 2,
+            "title": "Clean fixture inbox",
+            "complete": false
+          },
+          {
+            "id": 3,
+            "title": "Reserve fixture table",
+            "complete": true
+          }
+        ],
+        "calls": [
+          {
+            "method": "GET",
+            "url": "http://localhost:3000/todos",
+            "body": null
+          }
+        ]
+      },
+      "status": "missing",
+      "reason": "No candidate tool for frozen source operation",
+      "pageErrors": []
+    },
+    {
+      "id": "toggle_todo_complete",
+      "phase": "frozen-label-exact-input",
+      "capability": "/#TodoListItemComponent.toggleTodoComplete:app-todo-list-item input.toggle",
+      "args": {
+        "todoId": 1
+      },
+      "setup": "Source prerequisite: root page loaded with synthetic fixture",
+      "before": {
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "complete": false,
+            "class": ""
+          },
+          {
+            "title": "Clean fixture inbox",
+            "complete": false,
+            "class": ""
+          },
+          {
+            "title": "Reserve fixture table",
+            "complete": true,
+            "class": "completed"
+          }
+        ],
+        "fixture": [
+          {
+            "id": 1,
+            "title": "Read fixture article",
+            "complete": false
+          },
+          {
+            "id": 2,
+            "title": "Clean fixture inbox",
+            "complete": false
+          },
+          {
+            "id": 3,
+            "title": "Reserve fixture table",
+            "complete": true
+          }
+        ],
+        "calls": [
+          {
+            "method": "GET",
+            "url": "http://localhost:3000/todos",
+            "body": null
+          }
+        ]
+      },
+      "tool": "angular_toggleTodoComplete_04401936f2",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "data must have required property 'todo', data must NOT have additional properties"
+          }
+        ],
+        "isError": true
+      },
+      "after": {
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "complete": false,
+            "class": ""
+          },
+          {
+            "title": "Clean fixture inbox",
+            "complete": false,
+            "class": ""
+          },
+          {
+            "title": "Reserve fixture table",
+            "complete": true,
+            "class": "completed"
+          }
+        ],
+        "fixture": [
+          {
+            "id": 1,
+            "title": "Read fixture article",
+            "complete": false
+          },
+          {
+            "id": 2,
+            "title": "Clean fixture inbox",
+            "complete": false
+          },
+          {
+            "id": 3,
+            "title": "Reserve fixture table",
+            "complete": true
+          }
+        ],
+        "calls": [
+          {
+            "method": "GET",
+            "url": "http://localhost:3000/todos",
+            "body": null
+          }
+        ]
+      },
+      "effectCalls": [],
+      "effectVerified": false,
+      "status": "tool-error",
+      "pageErrors": []
+    },
+    {
+      "id": "delete_todo",
+      "phase": "frozen-label-exact-input",
+      "capability": "/#TodoListItemComponent.removeTodo:app-todo-list-item button.destroy",
+      "args": {
+        "todoId": 2
+      },
+      "setup": "Source prerequisite: root page loaded with synthetic fixture",
+      "before": {
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "complete": false,
+            "class": ""
+          },
+          {
+            "title": "Clean fixture inbox",
+            "complete": false,
+            "class": ""
+          },
+          {
+            "title": "Reserve fixture table",
+            "complete": true,
+            "class": "completed"
+          }
+        ],
+        "fixture": [
+          {
+            "id": 1,
+            "title": "Read fixture article",
+            "complete": false
+          },
+          {
+            "id": 2,
+            "title": "Clean fixture inbox",
+            "complete": false
+          },
+          {
+            "id": 3,
+            "title": "Reserve fixture table",
+            "complete": true
+          }
+        ],
+        "calls": [
+          {
+            "method": "GET",
+            "url": "http://localhost:3000/todos",
+            "body": null
+          }
+        ]
+      },
+      "tool": "angular_removeTodo_dc674c2351",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "data must have required property 'todo', data must NOT have additional properties"
+          }
+        ],
+        "isError": true
+      },
+      "after": {
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "complete": false,
+            "class": ""
+          },
+          {
+            "title": "Clean fixture inbox",
+            "complete": false,
+            "class": ""
+          },
+          {
+            "title": "Reserve fixture table",
+            "complete": true,
+            "class": "completed"
+          }
+        ],
+        "fixture": [
+          {
+            "id": 1,
+            "title": "Read fixture article",
+            "complete": false
+          },
+          {
+            "id": 2,
+            "title": "Clean fixture inbox",
+            "complete": false
+          },
+          {
+            "id": 3,
+            "title": "Reserve fixture table",
+            "complete": true
+          }
+        ],
+        "calls": [
+          {
+            "method": "GET",
+            "url": "http://localhost:3000/todos",
+            "body": null
+          }
+        ]
+      },
+      "effectCalls": [],
+      "effectVerified": false,
+      "status": "tool-error",
+      "pageErrors": []
+    }
+  ],
+  "schemaNativeRetries": [
+    {
+      "id": "toggle_todo_complete",
+      "phase": "compiler-schema-native-payload",
+      "capability": "/#TodoListItemComponent.toggleTodoComplete:app-todo-list-item input.toggle",
+      "args": {
+        "todo": {
+          "id": 1,
+          "title": "Read fixture article",
+          "complete": false
+        }
+      },
+      "setup": "Source prerequisite: root page loaded with synthetic fixture",
+      "before": {
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "complete": false,
+            "class": ""
+          },
+          {
+            "title": "Clean fixture inbox",
+            "complete": false,
+            "class": ""
+          },
+          {
+            "title": "Reserve fixture table",
+            "complete": true,
+            "class": "completed"
+          }
+        ],
+        "fixture": [
+          {
+            "id": 1,
+            "title": "Read fixture article",
+            "complete": false
+          },
+          {
+            "id": 2,
+            "title": "Clean fixture inbox",
+            "complete": false
+          },
+          {
+            "id": 3,
+            "title": "Reserve fixture table",
+            "complete": true
+          }
+        ],
+        "calls": [
+          {
+            "method": "GET",
+            "url": "http://localhost:3000/todos",
+            "body": null
+          }
+        ]
+      },
+      "tool": "angular_toggleTodoComplete_04401936f2",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "page.evaluate: Error: Targeting a repeated item needs the Angular debug APIs (development build)\n    at Object.select (eval at evaluate (:290:30), <anonymous>:1:2705)\n    at executeDom (eval at evaluate (:290:30), <anonymous>:1:13417)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+          }
+        ],
+        "isError": true
+      },
+      "after": {
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "complete": false,
+            "class": ""
+          },
+          {
+            "title": "Clean fixture inbox",
+            "complete": false,
+            "class": ""
+          },
+          {
+            "title": "Reserve fixture table",
+            "complete": true,
+            "class": "completed"
+          }
+        ],
+        "fixture": [
+          {
+            "id": 1,
+            "title": "Read fixture article",
+            "complete": false
+          },
+          {
+            "id": 2,
+            "title": "Clean fixture inbox",
+            "complete": false
+          },
+          {
+            "id": 3,
+            "title": "Reserve fixture table",
+            "complete": true
+          }
+        ],
+        "calls": [
+          {
+            "method": "GET",
+            "url": "http://localhost:3000/todos",
+            "body": null
+          }
+        ]
+      },
+      "effectCalls": [],
+      "effectVerified": false,
+      "status": "tool-error",
+      "pageErrors": []
+    },
+    {
+      "id": "delete_todo",
+      "phase": "compiler-schema-native-payload",
+      "capability": "/#TodoListItemComponent.removeTodo:app-todo-list-item button.destroy",
+      "args": {
+        "todo": {
+          "id": 2,
+          "title": "Clean fixture inbox",
+          "complete": false
+        }
+      },
+      "setup": "Source prerequisite: root page loaded with synthetic fixture",
+      "before": {
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "complete": false,
+            "class": ""
+          },
+          {
+            "title": "Clean fixture inbox",
+            "complete": false,
+            "class": ""
+          },
+          {
+            "title": "Reserve fixture table",
+            "complete": true,
+            "class": "completed"
+          }
+        ],
+        "fixture": [
+          {
+            "id": 1,
+            "title": "Read fixture article",
+            "complete": false
+          },
+          {
+            "id": 2,
+            "title": "Clean fixture inbox",
+            "complete": false
+          },
+          {
+            "id": 3,
+            "title": "Reserve fixture table",
+            "complete": true
+          }
+        ],
+        "calls": [
+          {
+            "method": "GET",
+            "url": "http://localhost:3000/todos",
+            "body": null
+          }
+        ]
+      },
+      "tool": "angular_removeTodo_dc674c2351",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "locator.waitFor: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('app-todo-list-item button.destroy').first() to be visible\u001b[22m\n\u001b[2m    15 × locator resolved to hidden <button class=\"destroy\" _ngcontent-c4=\"\"></button>\u001b[22m\n"
+          }
+        ],
+        "isError": true
+      },
+      "after": {
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "complete": false,
+            "class": ""
+          },
+          {
+            "title": "Clean fixture inbox",
+            "complete": false,
+            "class": ""
+          },
+          {
+            "title": "Reserve fixture table",
+            "complete": true,
+            "class": "completed"
+          }
+        ],
+        "fixture": [
+          {
+            "id": 1,
+            "title": "Read fixture article",
+            "complete": false
+          },
+          {
+            "id": 2,
+            "title": "Clean fixture inbox",
+            "complete": false
+          },
+          {
+            "id": 3,
+            "title": "Reserve fixture table",
+            "complete": true
+          }
+        ],
+        "calls": [
+          {
+            "method": "GET",
+            "url": "http://localhost:3000/todos",
+            "body": null
+          }
+        ]
+      },
+      "effectCalls": [],
+      "effectVerified": false,
+      "status": "tool-error",
+      "pageErrors": []
+    }
+  ],
+  "contextRetries": [
+    {
+      "id": "delete_todo",
+      "phase": "compiler-schema-native-plus-first-row-hover",
+      "capability": "/#TodoListItemComponent.removeTodo:app-todo-list-item button.destroy",
+      "args": {
+        "todo": {
+          "id": 2,
+          "title": "Clean fixture inbox",
+          "complete": false
+        }
+      },
+      "setup": "Source prerequisite: root page loaded with synthetic fixture",
+      "before": {
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "complete": false,
+            "class": ""
+          },
+          {
+            "title": "Clean fixture inbox",
+            "complete": false,
+            "class": ""
+          },
+          {
+            "title": "Reserve fixture table",
+            "complete": true,
+            "class": "completed"
+          }
+        ],
+        "fixture": [
+          {
+            "id": 1,
+            "title": "Read fixture article",
+            "complete": false
+          },
+          {
+            "id": 2,
+            "title": "Clean fixture inbox",
+            "complete": false
+          },
+          {
+            "id": 3,
+            "title": "Reserve fixture table",
+            "complete": true
+          }
+        ],
+        "calls": [
+          {
+            "method": "GET",
+            "url": "http://localhost:3000/todos",
+            "body": null
+          }
+        ]
+      },
+      "tool": "angular_removeTodo_dc674c2351",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "page.evaluate: Error: Targeting a repeated item needs the Angular debug APIs (development build)\n    at Object.select (eval at evaluate (:290:30), <anonymous>:1:2705)\n    at executeDom (eval at evaluate (:290:30), <anonymous>:1:13417)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+          }
+        ],
+        "isError": true
+      },
+      "after": {
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "complete": false,
+            "class": ""
+          },
+          {
+            "title": "Clean fixture inbox",
+            "complete": false,
+            "class": ""
+          },
+          {
+            "title": "Reserve fixture table",
+            "complete": true,
+            "class": "completed"
+          }
+        ],
+        "fixture": [
+          {
+            "id": 1,
+            "title": "Read fixture article",
+            "complete": false
+          },
+          {
+            "id": 2,
+            "title": "Clean fixture inbox",
+            "complete": false
+          },
+          {
+            "id": 3,
+            "title": "Reserve fixture table",
+            "complete": true
+          }
+        ],
+        "calls": [
+          {
+            "method": "GET",
+            "url": "http://localhost:3000/todos",
+            "body": null
+          }
+        ]
+      },
+      "effectCalls": [],
+      "effectVerified": false,
+      "status": "tool-error",
+      "pageErrors": []
+    }
+  ],
+  "tools": [
+    {
+      "name": "angular_removeTodo_dc674c2351",
+      "description": "Independent synthetic holdout runtime check",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "todo": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "title": {
+                "type": "string"
+              },
+              "complete": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "complete"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "todo"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "angular_toggleTodoComplete_04401936f2",
+      "description": "Independent synthetic holdout runtime check",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "todo": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "title": {
+                "type": "string"
+              },
+              "complete": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "complete"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "todo"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "openWorldHint": true
+      }
+    }
+  ],
+  "finishedAt": "2026-11-09T20:54:54.358Z",
+  "totals": {
+    "frozenOperations": 4,
+    "candidateTools": 2,
+    "baselineEffectVerified": 0,
+    "schemaNativeEffectVerified": 0,
+    "contextEffectVerified": 0
+  }
+}

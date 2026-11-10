@@ -1,0 +1,17 @@
+{
+  "phase": "Independent source-only DOM reference, modern project compiler output not yet read",
+  "startedAt": "2026-11-09T20:59:27.836Z",
+  "operations": [],
+  "boundaries": [],
+  "errors": [],
+  "network": {
+    "blocked": [],
+    "apiRequests": []
+  },
+  "pass": false,
+  "failure": {
+    "message": "Expected values to be strictly equal:\n\n3 !== 2\n",
+    "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n3 !== 2\n\n    at file:///private/tmp/fresh-todomvc-modern-evaluation/reference.mjs:9:100"
+  },
+  "finishedAt": "2026-11-09T20:59:29.476Z"
+}

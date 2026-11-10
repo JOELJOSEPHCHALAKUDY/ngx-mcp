@@ -1,0 +1,37 @@
+❯ Building...
+✔ Building...
+Initial chunk files | Names                       |  Raw size
+chunk-PHM3WWYO.js   | -                           |  68.08 kB | 
+main.js             | main                        |  36.15 kB | 
+chunk-MZFRDZ4Y.js   | -                           |  15.52 kB | 
+styles.css          | styles                      |  11.46 kB | 
+chunk-EO3PP5K5.js   | -                           |   1.86 kB | 
+chunk-2VPK3HF4.js   | -                           |   1.74 kB | 
+chunk-CZJLB7T5.js   | -                           |   1.08 kB | 
+chunk-RJOQYBGH.js   | -                           | 571 bytes | 
+
+                    | Initial total               | 136.46 kB
+
+Lazy chunk files    | Names                       |  Raw size
+chunk-VKH7KFEL.js   | transactions-page-component | 106.29 kB | 
+chunk-3WDMUJAD.js   | dashboard-page-component    |  73.78 kB | 
+chunk-UQ4GIQKU.js   | categories-page-component   |  52.22 kB | 
+chunk-3JXP67UV.js   | budgets-page-component      |  51.23 kB | 
+chunk-5UBSUOVR.js   | settings-page-component     |  44.08 kB | 
+chunk-VOENK6QO.js   | -                           |  17.05 kB | 
+chunk-OR2CIHXW.js   | -                           |  10.45 kB | 
+chunk-6RB42FYX.js   | -                           |   7.82 kB | 
+chunk-EQDGTKUT.js   | -                           |   5.53 kB | 
+chunk-W4WFW4CV.js   | -                           |   4.61 kB | 
+chunk-PJSYYLZG.js   | transactions-routes         |   2.48 kB | 
+chunk-JMERPKZ7.js   | -                           |   1.05 kB | 
+chunk-D7HFF3ON.js   | dashboard-routes            | 973 bytes | 
+chunk-ZZPDXR7G.js   | categories-routes           | 449 bytes | 
+chunk-R2BX3NIY.js   | settings-routes             | 435 bytes | 
+...and 2 more lazy chunks files. Use "--verbose" to show all the files.
+
+Application bundle generation complete. [2.036 seconds] - 2026-11-10T11:38:19.139Z
+
+Watch mode enabled. Watching for file changes...
+NOTE: Raw file sizes do not reflect development server per-request transformations.
+  ➜  Local:   http://127.0.0.1:4461/

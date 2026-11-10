@@ -1,0 +1,21 @@
+node_modules/
+dist/
+.cache/
+test-apps/
+release/
+*.tgz
+*.tsbuildinfo
+.DS_Store
+
+# Local Angular/test caches and authentication state
+.angular/
+coverage/
+playwright-report/
+test-results/
+.auth/
+/.env
+/.env.*
+!/.env.example
+!/.env.sample
+/storage-state*.json
+/session.json

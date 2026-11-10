@@ -1,0 +1,9 @@
+{
+  "formatVersion": 1,
+  "report": "/Users/joeljoseph/Desktop/Personal Work/ai-experiments-apps/ngx-mcp/evaluation/production-fresh/runs/first-full-matrix-2026-11-10/report.json",
+  "sha256": "214917ae3073b993747521d77297cd550d5862cb2263462108537d4e3e644da9",
+  "exitCode": 1,
+  "browserCloseAwaited": true,
+  "basis": "Observed first subprocess exited 1. Its frozen run.mjs awaited browser.close before finishedAt; all nine serverStopped markers were true. The original report is unchanged.",
+  "firstReportHasExplicitResourcesClosed": false
+}

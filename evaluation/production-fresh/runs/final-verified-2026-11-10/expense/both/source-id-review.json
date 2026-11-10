@@ -1,0 +1,295 @@
+[
+  {
+    "sourceId": "ngmcp_05178a535e685dcdce380b8c",
+    "label": "button — src/app/features/expenses/pages/expense-form-page/expense-form-page.html:120",
+    "tag": "button",
+    "source": {
+      "file": "src/app/features/expenses/pages/expense-form-page/expense-form-page.html",
+      "start": 3791,
+      "end": 3856,
+      "line": 120,
+      "column": 5
+    },
+    "formId": "ngmcp_c27b3cf32e4bb955552a26f8",
+    "operations": [
+      "describe",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_33e6b7582d7a4a497f9921f0",
+    "label": "app-money-input — src/app/features/categories/components/budget-form/budget-form.html:11",
+    "tag": "app-money-input",
+    "source": {
+      "file": "src/app/features/categories/components/budget-form/budget-form.html",
+      "start": 573,
+      "end": 713,
+      "line": 11,
+      "column": 9
+    },
+    "formId": "ngmcp_c5c112e02dc5b18fd3f0ec56",
+    "operations": [
+      "describe",
+      "fill",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_46f5b3f54bfb6e7b686425fb",
+    "label": "select expense-category — src/app/features/expenses/pages/expense-form-page/expense-form-page.html:78",
+    "tag": "select",
+    "source": {
+      "file": "src/app/features/expenses/pages/expense-form-page/expense-form-page.html",
+      "start": 2452,
+      "end": 2640,
+      "line": 78,
+      "column": 5
+    },
+    "formId": "ngmcp_c27b3cf32e4bb955552a26f8",
+    "operations": [
+      "describe",
+      "fill",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_656d6542ef14897270b58505",
+    "label": "button — src/app/features/categories/components/budget-form/budget-form.html:22",
+    "tag": "button",
+    "source": {
+      "file": "src/app/features/categories/components/budget-form/budget-form.html",
+      "start": 802,
+      "end": 885,
+      "line": 22,
+      "column": 7
+    },
+    "formId": "ngmcp_c5c112e02dc5b18fd3f0ec56",
+    "operations": [
+      "describe",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_74cc7cd5aacd3a0659c87737",
+    "label": "button — src/app/features/categories/components/budget-form/budget-form.html:26",
+    "tag": "button",
+    "source": {
+      "file": "src/app/features/categories/components/budget-form/budget-form.html",
+      "start": 987,
+      "end": 1050,
+      "line": 26,
+      "column": 9
+    },
+    "formId": "ngmcp_c5c112e02dc5b18fd3f0ec56",
+    "operations": [
+      "describe",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_926af485fab3ebd0d05ef91e",
+    "label": "input category-name — src/app/features/categories/components/category-form/category-form.html:5",
+    "tag": "input",
+    "source": {
+      "file": "src/app/features/categories/components/category-form/category-form.html",
+      "start": 195,
+      "end": 518,
+      "line": 5,
+      "column": 7
+    },
+    "formId": "ngmcp_c55ef9b8a9efa350be4c7f6e",
+    "operations": [
+      "describe",
+      "fill",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_97c77102d551f2c7752a9ce2",
+    "label": "input — src/app/features/expenses/pages/expense-form-page/expense-form-page.html:109",
+    "tag": "input",
+    "source": {
+      "file": "src/app/features/expenses/pages/expense-form-page/expense-form-page.html",
+      "start": 3526,
+      "end": 3586,
+      "line": 109,
+      "column": 9
+    },
+    "formId": "ngmcp_c27b3cf32e4bb955552a26f8",
+    "operations": [
+      "describe",
+      "fill",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_a628f32c82d1d3939992d9e1",
+    "label": "input expense-date — src/app/features/expenses/pages/expense-form-page/expense-form-page.html:57",
+    "tag": "input",
+    "source": {
+      "file": "src/app/features/expenses/pages/expense-form-page/expense-form-page.html",
+      "start": 1896,
+      "end": 2092,
+      "line": 57,
+      "column": 7
+    },
+    "formId": "ngmcp_c27b3cf32e4bb955552a26f8",
+    "operations": [
+      "describe",
+      "fill",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_c27b3cf32e4bb955552a26f8",
+    "label": "form — src/app/features/expenses/pages/expense-form-page/expense-form-page.html:7",
+    "tag": "form",
+    "source": {
+      "file": "src/app/features/expenses/pages/expense-form-page/expense-form-page.html",
+      "start": 119,
+      "end": 190,
+      "line": 7,
+      "column": 1
+    },
+    "operations": [
+      "describe",
+      "submit"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_c55ef9b8a9efa350be4c7f6e",
+    "label": "form — src/app/features/categories/components/category-form/category-form.html:1",
+    "tag": "form",
+    "source": {
+      "file": "src/app/features/categories/components/category-form/category-form.html",
+      "start": 0,
+      "end": 71,
+      "line": 1,
+      "column": 1
+    },
+    "operations": [
+      "describe",
+      "submit"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_c5c112e02dc5b18fd3f0ec56",
+    "label": "form — src/app/features/categories/components/budget-form/budget-form.html:1",
+    "tag": "form",
+    "source": {
+      "file": "src/app/features/categories/components/budget-form/budget-form.html",
+      "start": 0,
+      "end": 72,
+      "line": 1,
+      "column": 1
+    },
+    "operations": [
+      "describe",
+      "submit"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_cd3966e71ada4f97c2d1673e",
+    "label": "input expense-description — src/app/features/expenses/pages/expense-form-page/expense-form-page.html:10",
+    "tag": "input",
+    "source": {
+      "file": "src/app/features/expenses/pages/expense-form-page/expense-form-page.html",
+      "start": 295,
+      "end": 695,
+      "line": 10,
+      "column": 5
+    },
+    "formId": "ngmcp_c27b3cf32e4bb955552a26f8",
+    "operations": [
+      "describe",
+      "fill",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_cd80570e38622283abcaf060",
+    "label": "input — src/app/shared/money-input/money-input.html:2",
+    "tag": "input",
+    "source": {
+      "file": "src/app/shared/money-input/money-input.html",
+      "start": 22,
+      "end": 400,
+      "line": 2,
+      "column": 3
+    },
+    "operations": [
+      "describe",
+      "fill",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_dc0d8e9fafc2b27b703732d6",
+    "label": "button — src/app/features/categories/components/category-form/category-form.html:16",
+    "tag": "button",
+    "source": {
+      "file": "src/app/features/categories/components/category-form/category-form.html",
+      "start": 535,
+      "end": 600,
+      "line": 16,
+      "column": 5
+    },
+    "formId": "ngmcp_c55ef9b8a9efa350be4c7f6e",
+    "operations": [
+      "describe",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_df0526add5c993c563aca672",
+    "label": "input color — src/app/features/categories/components/category-form/category-form.html:28",
+    "tag": "input",
+    "source": {
+      "file": "src/app/features/categories/components/category-form/category-form.html",
+      "start": 1142,
+      "end": 1217,
+      "line": 28,
+      "column": 9
+    },
+    "formId": "ngmcp_c55ef9b8a9efa350be4c7f6e",
+    "operations": [
+      "describe",
+      "fill",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  },
+  {
+    "sourceId": "ngmcp_f9a39ae4bd909d054249423f",
+    "label": "app-money-input — src/app/features/expenses/pages/expense-form-page/expense-form-page.html:38",
+    "tag": "app-money-input",
+    "source": {
+      "file": "src/app/features/expenses/pages/expense-form-page/expense-form-page.html",
+      "start": 1249,
+      "end": 1497,
+      "line": 38,
+      "column": 7
+    },
+    "formId": "ngmcp_c27b3cf32e4bb955552a26f8",
+    "operations": [
+      "describe",
+      "fill",
+      "activate"
+    ],
+    "basis": "Exact app-authored source element in a frozen, inspected selected workflow component. UI runtime determines actual supported operation; no arbitrary backend method is inferred."
+  }
+]

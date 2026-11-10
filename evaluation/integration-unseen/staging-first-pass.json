@@ -1,0 +1,33 @@
+{
+  "reportKind": "unseen-integration-first-pass-staging",
+  "recordedAt": "2026-11-10T09:42:17.583Z",
+  "compilerDigest": "d8c747813bcb15a000875831fbb9a22bc8b49e6056b9b33f4bfc85f9f03bb4b8",
+  "frozenLabelDigests": {
+    "finance": "157c3c0fd43a87e8aeddf0f232eed7ffcd32bb6c4eb78e6a24b5390bcb8256fd",
+    "todo": "e934aa2c5c445ec32d635bac3bcc04e151cc3dbde2642110123e1105737667c4",
+    "shopping": "42566e776738d25d6bee64a734111f325177d35d6da7b6f7196a1c6e9c329410"
+  },
+  "results": [
+    {
+      "id": "finance",
+      "angular": "20.3.18",
+      "status": "staged",
+      "nodes": 65,
+      "manifest": "/tmp/integration-unseen-finance-integrated/angular-mcp.integration.json"
+    },
+    {
+      "id": "todo",
+      "angular": "20.1.2",
+      "status": "compiler-error",
+      "error": "TypeError: ttc.getDirectivesOfNode is not a function",
+      "source": "src/integration-compiler.ts:155"
+    },
+    {
+      "id": "shopping",
+      "angular": "16.2.12",
+      "status": "compiler-error",
+      "error": "TypeError: ttc.getDirectivesOfNode is not a function",
+      "source": "src/integration-compiler.ts:155"
+    }
+  ]
+}

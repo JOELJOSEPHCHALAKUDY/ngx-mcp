@@ -1,0 +1,42 @@
+[
+  {
+    "component": "BaseButtonComponent",
+    "tag": "a",
+    "url": "",
+    "start": 7,
+    "end": 64,
+    "spanText": "<a (click)=\"invoke()\" (keypress)=\"invoke()\" tabindex=\"0\">",
+    "spanContent": "<span>[<a (click)=\"invoke()\" (keypress)=\"invoke()\" tabindex=\"0\">{{ label }}</a>]</span>",
+    "sourceSlice": "{ Component, EventEmitter, Input, Output } from '@angular"
+  },
+  {
+    "component": "DeleteButtonComponent",
+    "tag": "a",
+    "url": "",
+    "start": 7,
+    "end": 64,
+    "spanText": "<a (click)=\"invoke()\" (keypress)=\"invoke()\" tabindex=\"0\">",
+    "spanContent": "<span>[<a (click)=\"invoke()\" (keypress)=\"invoke()\" tabindex=\"0\">{{ label }}</a>]</span>",
+    "sourceSlice": "{ Component, EventEmitter, Input, Output } from '@angular"
+  },
+  {
+    "component": "NewButtonComponent",
+    "tag": "a",
+    "url": "",
+    "start": 7,
+    "end": 64,
+    "spanText": "<a (click)=\"invoke()\" (keypress)=\"invoke()\" tabindex=\"0\">",
+    "spanContent": "<span>[<a (click)=\"invoke()\" (keypress)=\"invoke()\" tabindex=\"0\">{{ label }}</a>]</span>",
+    "sourceSlice": "{ Component, EventEmitter, Input, Output } from '@angular"
+  },
+  {
+    "component": "SaveButtonComponent",
+    "tag": "a",
+    "url": "/private/tmp/integration-holdout-notes/src/app/base-button/base-button.component.ts",
+    "start": 1053,
+    "end": 1175,
+    "spanText": "<a tabindex=\"0\" [class.workInProgress]=\"isSavingInProgress\" (click)=\"invoke()\" (keypress)=\"invoke()\" (keydown)=\"invoke()\">",
+    "spanContent": "import { Component, EventEmitter, Input, Output } from '@angular/core';\n\nconst buttonTemplate = '<span>[<a (click)=\"invoke()\" (keypress)=\"invoke()\" tabindex=\"0\">{{ label }}</a>]</span>';\n\n@Component({\n    selector: 'app-button',\n    template: buttonTemplate,\n    styles: [],\n    standalone: false\n})\nabstract class BaseButtonComponent {\n\n  protected label!: string;\n\n  @Output() invokeEvent = new EventEmitter();\n\n  invoke(): boolean {\n    this.invokeEvent.emit();\n\n    return false;\n  }\n\n}\n\n@Component({\n    selector: 'app-delete-button',\n    template: buttonTemplate,\n    styles: [],\n    standalone: false\n})\nexport class DeleteButtonComponent extends BaseButtonComponent {\n\n  constructor() {\n    super();\n    this.label = 'Delete';\n  }\n\n}\n\n@Component({\n    selector: 'app-new-button',\n    template: buttonTemplate,\n    styles: [],\n    standalone: false\n})\nexport class NewButtonComponent extends BaseButtonComponent {\n\n  constructor() {\n    super();\n    this.label = 'New';\n  }\n\n}\n\n@Component({\n    selector: 'app-save-button',\n    template: `<span>[<a tabindex=\"0\" [class.workInProgress]=\"isSavingInProgress\" (click)=\"invoke()\" (keypress)=\"invoke()\" (keydown)=\"invoke()\">{{ isSavingInProgress ? '...' : label }}</a>]</span>`,\n    styles: [`a.workInProgress {\n    font-weight: bold;\n}`],\n    standalone: false\n})\nexport class SaveButtonComponent extends BaseButtonComponent {\n\n  @Input()\n  isSavingInProgress = false;\n\n  constructor() {\n    super();\n    this.label = 'Save';\n  }\n\n}\n",
+    "sourceSlice": "<a tabindex=\"0\" [class.workInProgress]=\"isSavingInProgress\" (click)=\"invoke()\" (keypress)=\"invoke()\" (keydown)=\"invoke()\">"
+  }
+]

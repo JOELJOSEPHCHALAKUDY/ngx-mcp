@@ -1,0 +1,944 @@
+{
+  "status": "passed",
+  "scope": "Original native keyboard opening and closing only; no model setters or option-selection claim",
+  "calls": [
+    {
+      "name": "angular_list_nodes",
+      "args": {},
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "[{\"sourceId\":\"ngmcp_861cbea91b681d3df8eaf989\",\"instanceId\":\"ngmcp_861cbea91b681d3df8eaf989@s2m9f8-1nwozn4-tcaj5s-6jxmd8:1\",\"kind\":\"action\",\"tagName\":\"button\",\"aria\":{\"expanded\":\"false\",\"controls\":\"mobile-menu\"},\"clickOrigin\":\"authored\",\"events\":[\"click\"],\"label\":\"\",\"visible\":false,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_2cbbded16163ad27e80e7c43\",\"instanceId\":\"ngmcp_2cbbded16163ad27e80e7c43@s2m9f8-1nwozn4-tcaj5s-6jxmd8:2\",\"kind\":\"action\",\"tagName\":\"a\",\"clickOrigin\":\"native-ui\",\"events\":[],\"label\":\"\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_ceaad68d23638db8ed82634c\",\"instanceId\":\"ngmcp_ceaad68d23638db8ed82634c@s2m9f8-1nwozn4-tcaj5s-6jxmd8:3\",\"kind\":\"action\",\"tagName\":\"a\",\"clickOrigin\":\"native-ui\",\"events\":[],\"label\":\"\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_79b836a9a64d072408340eb1\",\"instanceId\":\"ngmcp_79b836a9a64d072408340eb1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:4\",\"kind\":\"action\",\"tagName\":\"a\",\"clickOrigin\":\"native-ui\",\"events\":[],\"label\":\"Übersicht\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_2d2a422f366fbcdfa3b24070\",\"instanceId\":\"ngmcp_2d2a422f366fbcdfa3b24070@s2m9f8-1nwozn4-tcaj5s-6jxmd8:5\",\"kind\":\"action\",\"tagName\":\"a\",\"clickOrigin\":\"native-ui\",\"events\":[],\"label\":\"Einkaufszettel\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_561fe1046ba561cdb6cb0821\",\"instanceId\":\"ngmcp_561fe1046ba561cdb6cb0821@s2m9f8-1nwozn4-tcaj5s-6jxmd8:6\",\"kind\":\"action\",\"tagName\":\"a\",\"clickOrigin\":\"native-ui\",\"events\":[],\"label\":\"Archiv\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_f24e26dc8bd9f1e926be7820\",\"instanceId\":\"ngmcp_f24e26dc8bd9f1e926be7820@s2m9f8-1nwozn4-tcaj5s-6jxmd8:8\",\"kind\":\"form\",\"tagName\":\"form\",\"events\":[\"ngSubmit\"],\"label\":\"Name*BesitzerWähle Benutzer die Besitzer sein sollenPersonen mit ZugriffWähle Benutzer die auch Zugriff haben sollen Speichern\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"submit\"],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_10eb234d97e140501ec2f1c8\",\"instanceId\":\"ngmcp_10eb234d97e140501ec2f1c8@s2m9f8-1nwozn4-tcaj5s-6jxmd8:9\",\"path\":[\"name\"],\"status\":\"INVALID\",\"updateOn\":\"change\",\"errors\":[{\"code\":\"required\"}]},{\"sourceId\":\"ngmcp_372610e0a4185f7b18f8607e\",\"instanceId\":\"ngmcp_372610e0a4185f7b18f8607e@s2m9f8-1nwozn4-tcaj5s-6jxmd8:13\",\"path\":[\"owners\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]},{\"sourceId\":\"ngmcp_9eef01814d23d8c8f30b6329\",\"instanceId\":\"ngmcp_9eef01814d23d8c8f30b6329@s2m9f8-1nwozn4-tcaj5s-6jxmd8:14\",\"path\":[\"sharedWith\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]},{\"sourceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1\",\"instanceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15\",\"status\":\"UNKNOWN\",\"errors\":[]},{\"sourceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:2\",\"instanceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:2@s2m9f8-1nwozn4-tcaj5s-6jxmd8:16\",\"status\":\"UNKNOWN\",\"errors\":[]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}],\"unobservedFields\":[\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15\",\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:2@s2m9f8-1nwozn4-tcaj5s-6jxmd8:16\"]},\"fields\":[{\"sourceId\":\"ngmcp_10eb234d97e140501ec2f1c8\",\"instanceId\":\"ngmcp_10eb234d97e140501ec2f1c8@s2m9f8-1nwozn4-tcaj5s-6jxmd8:9\",\"kind\":\"control\",\"tagName\":\"input\",\"events\":[],\"label\":\"Name* Besitzer Personen mit Zugriff\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"fill\"],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_10eb234d97e140501ec2f1c8\",\"instanceId\":\"ngmcp_10eb234d97e140501ec2f1c8@s2m9f8-1nwozn4-tcaj5s-6jxmd8:9\",\"path\":[\"name\"],\"status\":\"INVALID\",\"updateOn\":\"change\",\"errors\":[{\"code\":\"required\"}]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"schema\":{\"type\":\"string\"},\"value\":\"\",\"path\":[\"name\"],\"transport\":\"native-ui\",\"customAccessor\":false,\"fillModes\":[\"paste\",\"input\"],\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_372610e0a4185f7b18f8607e\",\"instanceId\":\"ngmcp_372610e0a4185f7b18f8607e@s2m9f8-1nwozn4-tcaj5s-6jxmd8:13\",\"kind\":\"control\",\"tagName\":\"p-multiselect\",\"events\":[],\"label\":\"Wähle Benutzer die Besitzer sein sollen\",\"visible\":true,\"disabled\":false,\"readonly\":true,\"operations\":[],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_372610e0a4185f7b18f8607e\",\"instanceId\":\"ngmcp_372610e0a4185f7b18f8607e@s2m9f8-1nwozn4-tcaj5s-6jxmd8:13\",\"path\":[\"owners\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"schema\":false,\"value\":\"\",\"path\":[\"owners\"],\"unsupportedReason\":\"Custom value accessor needs a UI adapter; no model setter is used\",\"transport\":\"native-ui\",\"customAccessor\":true,\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_9eef01814d23d8c8f30b6329\",\"instanceId\":\"ngmcp_9eef01814d23d8c8f30b6329@s2m9f8-1nwozn4-tcaj5s-6jxmd8:14\",\"kind\":\"control\",\"tagName\":\"p-multiselect\",\"events\":[],\"label\":\"Wähle Benutzer die auch Zugriff haben sollen\",\"visible\":true,\"disabled\":false,\"readonly\":true,\"operations\":[],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_9eef01814d23d8c8f30b6329\",\"instanceId\":\"ngmcp_9eef01814d23d8c8f30b6329@s2m9f8-1nwozn4-tcaj5s-6jxmd8:14\",\"path\":[\"sharedWith\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"schema\":false,\"value\":\"\",\"path\":[\"sharedWith\"],\"unsupportedReason\":\"Custom value accessor needs a UI adapter; no model setter is used\",\"transport\":\"native-ui\",\"customAccessor\":true,\"provenance\":\"compiler\"},{\"sourceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1\",\"instanceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15\",\"kind\":\"control\",\"tagName\":\"input\",\"role\":\"listbox\",\"clickOrigin\":\"native-ui\",\"events\":[\"click\"],\"label\":\"\",\"visible\":true,\"disabled\":false,\"readonly\":true,\"operations\":[\"fill\",\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[{\"sourceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1\",\"instanceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15\",\"status\":\"UNKNOWN\",\"errors\":[]}],\"groups\":[],\"unobservedFields\":[\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15\"]},\"schema\":{\"type\":\"string\"},\"value\":\"\",\"transport\":\"native-ui\",\"customAccessor\":false,\"fillModes\":[\"paste\",\"input\"],\"provenance\":\"runtime-dom\"},{\"sourceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:2\",\"instanceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:2@s2m9f8-1nwozn4-tcaj5s-6jxmd8:16\",\"kind\":\"control\",\"tagName\":\"input\",\"role\":\"listbox\",\"clickOrigin\":\"native-ui\",\"events\":[\"click\"],\"label\":\"\",\"visible\":true,\"disabled\":false,\"readonly\":true,\"operations\":[\"fill\",\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[{\"sourceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:2\",\"instanceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:2@s2m9f8-1nwozn4-tcaj5s-6jxmd8:16\",\"status\":\"UNKNOWN\",\"errors\":[]}],\"groups\":[],\"unobservedFields\":[\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:2@s2m9f8-1nwozn4-tcaj5s-6jxmd8:16\"]},\"schema\":{\"type\":\"string\"},\"value\":\"\",\"transport\":\"native-ui\",\"customAccessor\":false,\"fillModes\":[\"paste\",\"input\"],\"provenance\":\"runtime-dom\"}],\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_10eb234d97e140501ec2f1c8\",\"instanceId\":\"ngmcp_10eb234d97e140501ec2f1c8@s2m9f8-1nwozn4-tcaj5s-6jxmd8:9\",\"kind\":\"control\",\"tagName\":\"input\",\"events\":[],\"label\":\"Name* Besitzer Personen mit Zugriff\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"fill\"],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_10eb234d97e140501ec2f1c8\",\"instanceId\":\"ngmcp_10eb234d97e140501ec2f1c8@s2m9f8-1nwozn4-tcaj5s-6jxmd8:9\",\"path\":[\"name\"],\"status\":\"INVALID\",\"updateOn\":\"change\",\"errors\":[{\"code\":\"required\"}]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"schema\":{\"type\":\"string\"},\"value\":\"\",\"path\":[\"name\"],\"transport\":\"native-ui\",\"customAccessor\":false,\"fillModes\":[\"paste\",\"input\"],\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_d7a533760ab2a67b614c71a0\",\"instanceId\":\"ngmcp_d7a533760ab2a67b614c71a0@s2m9f8-1nwozn4-tcaj5s-6jxmd8:10\",\"kind\":\"action\",\"tagName\":\"button\",\"clickOrigin\":\"native-ui\",\"events\":[],\"label\":\"Speichern\",\"visible\":true,\"disabled\":true,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_3d0e2acd99da754ab03a92ff\",\"instanceId\":\"ngmcp_3d0e2acd99da754ab03a92ff@s2m9f8-1nwozn4-tcaj5s-6jxmd8:11\",\"kind\":\"action\",\"tagName\":\"div\",\"clickOrigin\":\"authored\",\"events\":[\"click\"],\"label\":\"\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_495baed709b68555855a42c2\",\"instanceId\":\"ngmcp_495baed709b68555855a42c2@s2m9f8-1nwozn4-tcaj5s-6jxmd8:12\",\"kind\":\"action\",\"tagName\":\"a\",\"clickOrigin\":\"native-ui\",\"events\":[],\"label\":\"Userverwaltung\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_372610e0a4185f7b18f8607e\",\"instanceId\":\"ngmcp_372610e0a4185f7b18f8607e@s2m9f8-1nwozn4-tcaj5s-6jxmd8:13\",\"kind\":\"control\",\"tagName\":\"p-multiselect\",\"events\":[],\"label\":\"Wähle Benutzer die Besitzer sein sollen\",\"visible\":true,\"disabled\":false,\"readonly\":true,\"operations\":[],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_372610e0a4185f7b18f8607e\",\"instanceId\":\"ngmcp_372610e0a4185f7b18f8607e@s2m9f8-1nwozn4-tcaj5s-6jxmd8:13\",\"path\":[\"owners\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"schema\":false,\"value\":\"\",\"path\":[\"owners\"],\"unsupportedReason\":\"Custom value accessor needs a UI adapter; no model setter is used\",\"transport\":\"native-ui\",\"customAccessor\":true,\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_9eef01814d23d8c8f30b6329\",\"instanceId\":\"ngmcp_9eef01814d23d8c8f30b6329@s2m9f8-1nwozn4-tcaj5s-6jxmd8:14\",\"kind\":\"control\",\"tagName\":\"p-multiselect\",\"events\":[],\"label\":\"Wähle Benutzer die auch Zugriff haben sollen\",\"visible\":true,\"disabled\":false,\"readonly\":true,\"operations\":[],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_9eef01814d23d8c8f30b6329\",\"instanceId\":\"ngmcp_9eef01814d23d8c8f30b6329@s2m9f8-1nwozn4-tcaj5s-6jxmd8:14\",\"path\":[\"sharedWith\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"schema\":false,\"value\":\"\",\"path\":[\"sharedWith\"],\"unsupportedReason\":\"Custom value accessor needs a UI adapter; no model setter is used\",\"transport\":\"native-ui\",\"customAccessor\":true,\"provenance\":\"compiler\"},{\"sourceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1\",\"instanceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15\",\"kind\":\"control\",\"tagName\":\"input\",\"role\":\"listbox\",\"clickOrigin\":\"native-ui\",\"events\":[\"click\"],\"label\":\"\",\"visible\":true,\"disabled\":false,\"readonly\":true,\"operations\":[\"fill\",\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[{\"sourceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1\",\"instanceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15\",\"status\":\"UNKNOWN\",\"errors\":[]}],\"groups\":[],\"unobservedFields\":[\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15\"]},\"schema\":{\"type\":\"string\"},\"value\":\"\",\"transport\":\"native-ui\",\"customAccessor\":false,\"fillModes\":[\"paste\",\"input\"],\"provenance\":\"runtime-dom\"},{\"sourceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:2\",\"instanceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:2@s2m9f8-1nwozn4-tcaj5s-6jxmd8:16\",\"kind\":\"control\",\"tagName\":\"input\",\"role\":\"listbox\",\"clickOrigin\":\"native-ui\",\"events\":[\"click\"],\"label\":\"\",\"visible\":true,\"disabled\":false,\"readonly\":true,\"operations\":[\"fill\",\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[{\"sourceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:2\",\"instanceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:2@s2m9f8-1nwozn4-tcaj5s-6jxmd8:16\",\"status\":\"UNKNOWN\",\"errors\":[]}],\"groups\":[],\"unobservedFields\":[\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:2@s2m9f8-1nwozn4-tcaj5s-6jxmd8:16\"]},\"schema\":{\"type\":\"string\"},\"value\":\"\",\"transport\":\"native-ui\",\"customAccessor\":false,\"fillModes\":[\"paste\",\"input\"],\"provenance\":\"runtime-dom\"}]"
+          }
+        ],
+        "structuredContent": {
+          "nodes": [
+            {
+              "sourceId": "ngmcp_861cbea91b681d3df8eaf989",
+              "instanceId": "ngmcp_861cbea91b681d3df8eaf989@s2m9f8-1nwozn4-tcaj5s-6jxmd8:1",
+              "kind": "action",
+              "tagName": "button",
+              "aria": {
+                "expanded": "false",
+                "controls": "mobile-menu"
+              },
+              "clickOrigin": "authored",
+              "events": [
+                "click"
+              ],
+              "label": "",
+              "visible": false,
+              "disabled": false,
+              "readonly": false,
+              "operations": [
+                "activate"
+              ],
+              "validation": {
+                "status": "unknown",
+                "fields": [],
+                "groups": []
+              },
+              "provenance": "compiler"
+            },
+            {
+              "sourceId": "ngmcp_2cbbded16163ad27e80e7c43",
+              "instanceId": "ngmcp_2cbbded16163ad27e80e7c43@s2m9f8-1nwozn4-tcaj5s-6jxmd8:2",
+              "kind": "action",
+              "tagName": "a",
+              "clickOrigin": "native-ui",
+              "events": [],
+              "label": "",
+              "visible": true,
+              "disabled": false,
+              "readonly": false,
+              "operations": [
+                "activate"
+              ],
+              "validation": {
+                "status": "unknown",
+                "fields": [],
+                "groups": []
+              },
+              "provenance": "compiler"
+            },
+            {
+              "sourceId": "ngmcp_ceaad68d23638db8ed82634c",
+              "instanceId": "ngmcp_ceaad68d23638db8ed82634c@s2m9f8-1nwozn4-tcaj5s-6jxmd8:3",
+              "kind": "action",
+              "tagName": "a",
+              "clickOrigin": "native-ui",
+              "events": [],
+              "label": "",
+              "visible": true,
+              "disabled": false,
+              "readonly": false,
+              "operations": [
+                "activate"
+              ],
+              "validation": {
+                "status": "unknown",
+                "fields": [],
+                "groups": []
+              },
+              "provenance": "compiler"
+            },
+            {
+              "sourceId": "ngmcp_79b836a9a64d072408340eb1",
+              "instanceId": "ngmcp_79b836a9a64d072408340eb1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:4",
+              "kind": "action",
+              "tagName": "a",
+              "clickOrigin": "native-ui",
+              "events": [],
+              "label": "Übersicht",
+              "visible": true,
+              "disabled": false,
+              "readonly": false,
+              "operations": [
+                "activate"
+              ],
+              "validation": {
+                "status": "unknown",
+                "fields": [],
+                "groups": []
+              },
+              "provenance": "compiler"
+            },
+            {
+              "sourceId": "ngmcp_2d2a422f366fbcdfa3b24070",
+              "instanceId": "ngmcp_2d2a422f366fbcdfa3b24070@s2m9f8-1nwozn4-tcaj5s-6jxmd8:5",
+              "kind": "action",
+              "tagName": "a",
+              "clickOrigin": "native-ui",
+              "events": [],
+              "label": "Einkaufszettel",
+              "visible": true,
+              "disabled": false,
+              "readonly": false,
+              "operations": [
+                "activate"
+              ],
+              "validation": {
+                "status": "unknown",
+                "fields": [],
+                "groups": []
+              },
+              "provenance": "compiler"
+            },
+            {
+              "sourceId": "ngmcp_561fe1046ba561cdb6cb0821",
+              "instanceId": "ngmcp_561fe1046ba561cdb6cb0821@s2m9f8-1nwozn4-tcaj5s-6jxmd8:6",
+              "kind": "action",
+              "tagName": "a",
+              "clickOrigin": "native-ui",
+              "events": [],
+              "label": "Archiv",
+              "visible": true,
+              "disabled": false,
+              "readonly": false,
+              "operations": [
+                "activate"
+              ],
+              "validation": {
+                "status": "unknown",
+                "fields": [],
+                "groups": []
+              },
+              "provenance": "compiler"
+            },
+            {
+              "sourceId": "ngmcp_f24e26dc8bd9f1e926be7820",
+              "instanceId": "ngmcp_f24e26dc8bd9f1e926be7820@s2m9f8-1nwozn4-tcaj5s-6jxmd8:8",
+              "kind": "form",
+              "tagName": "form",
+              "events": [
+                "ngSubmit"
+              ],
+              "label": "Name*BesitzerWähle Benutzer die Besitzer sein sollenPersonen mit ZugriffWähle Benutzer die auch Zugriff haben sollen Speichern",
+              "visible": true,
+              "disabled": false,
+              "readonly": false,
+              "operations": [
+                "submit"
+              ],
+              "validation": {
+                "status": "invalid",
+                "fields": [
+                  {
+                    "sourceId": "ngmcp_10eb234d97e140501ec2f1c8",
+                    "instanceId": "ngmcp_10eb234d97e140501ec2f1c8@s2m9f8-1nwozn4-tcaj5s-6jxmd8:9",
+                    "path": [
+                      "name"
+                    ],
+                    "status": "INVALID",
+                    "updateOn": "change",
+                    "errors": [
+                      {
+                        "code": "required"
+                      }
+                    ]
+                  },
+                  {
+                    "sourceId": "ngmcp_372610e0a4185f7b18f8607e",
+                    "instanceId": "ngmcp_372610e0a4185f7b18f8607e@s2m9f8-1nwozn4-tcaj5s-6jxmd8:13",
+                    "path": [
+                      "owners"
+                    ],
+                    "status": "VALID",
+                    "updateOn": "change",
+                    "errors": []
+                  },
+                  {
+                    "sourceId": "ngmcp_9eef01814d23d8c8f30b6329",
+                    "instanceId": "ngmcp_9eef01814d23d8c8f30b6329@s2m9f8-1nwozn4-tcaj5s-6jxmd8:14",
+                    "path": [
+                      "sharedWith"
+                    ],
+                    "status": "VALID",
+                    "updateOn": "change",
+                    "errors": []
+                  },
+                  {
+                    "sourceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1",
+                    "instanceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15",
+                    "status": "UNKNOWN",
+                    "errors": []
+                  },
+                  {
+                    "sourceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:2",
+                    "instanceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:2@s2m9f8-1nwozn4-tcaj5s-6jxmd8:16",
+                    "status": "UNKNOWN",
+                    "errors": []
+                  }
+                ],
+                "groups": [
+                  {
+                    "path": [],
+                    "status": "INVALID",
+                    "errors": []
+                  }
+                ],
+                "unobservedFields": [
+                  "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15",
+                  "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:2@s2m9f8-1nwozn4-tcaj5s-6jxmd8:16"
+                ]
+              },
+              "fields": [
+                {
+                  "sourceId": "ngmcp_10eb234d97e140501ec2f1c8",
+                  "instanceId": "ngmcp_10eb234d97e140501ec2f1c8@s2m9f8-1nwozn4-tcaj5s-6jxmd8:9",
+                  "kind": "control",
+                  "tagName": "input",
+                  "events": [],
+                  "label": "Name* Besitzer Personen mit Zugriff",
+                  "visible": true,
+                  "disabled": false,
+                  "readonly": false,
+                  "operations": [
+                    "fill"
+                  ],
+                  "validation": {
+                    "status": "invalid",
+                    "fields": [
+                      {
+                        "sourceId": "ngmcp_10eb234d97e140501ec2f1c8",
+                        "instanceId": "ngmcp_10eb234d97e140501ec2f1c8@s2m9f8-1nwozn4-tcaj5s-6jxmd8:9",
+                        "path": [
+                          "name"
+                        ],
+                        "status": "INVALID",
+                        "updateOn": "change",
+                        "errors": [
+                          {
+                            "code": "required"
+                          }
+                        ]
+                      }
+                    ],
+                    "groups": [
+                      {
+                        "path": [],
+                        "status": "INVALID",
+                        "errors": []
+                      }
+                    ]
+                  },
+                  "schema": {
+                    "type": "string"
+                  },
+                  "value": "",
+                  "path": [
+                    "name"
+                  ],
+                  "transport": "native-ui",
+                  "customAccessor": false,
+                  "fillModes": [
+                    "paste",
+                    "input"
+                  ],
+                  "provenance": "compiler"
+                },
+                {
+                  "sourceId": "ngmcp_372610e0a4185f7b18f8607e",
+                  "instanceId": "ngmcp_372610e0a4185f7b18f8607e@s2m9f8-1nwozn4-tcaj5s-6jxmd8:13",
+                  "kind": "control",
+                  "tagName": "p-multiselect",
+                  "events": [],
+                  "label": "Wähle Benutzer die Besitzer sein sollen",
+                  "visible": true,
+                  "disabled": false,
+                  "readonly": true,
+                  "operations": [],
+                  "validation": {
+                    "status": "invalid",
+                    "fields": [
+                      {
+                        "sourceId": "ngmcp_372610e0a4185f7b18f8607e",
+                        "instanceId": "ngmcp_372610e0a4185f7b18f8607e@s2m9f8-1nwozn4-tcaj5s-6jxmd8:13",
+                        "path": [
+                          "owners"
+                        ],
+                        "status": "VALID",
+                        "updateOn": "change",
+                        "errors": []
+                      }
+                    ],
+                    "groups": [
+                      {
+                        "path": [],
+                        "status": "INVALID",
+                        "errors": []
+                      }
+                    ]
+                  },
+                  "schema": false,
+                  "value": "",
+                  "path": [
+                    "owners"
+                  ],
+                  "unsupportedReason": "Custom value accessor needs a UI adapter; no model setter is used",
+                  "transport": "native-ui",
+                  "customAccessor": true,
+                  "provenance": "compiler"
+                },
+                {
+                  "sourceId": "ngmcp_9eef01814d23d8c8f30b6329",
+                  "instanceId": "ngmcp_9eef01814d23d8c8f30b6329@s2m9f8-1nwozn4-tcaj5s-6jxmd8:14",
+                  "kind": "control",
+                  "tagName": "p-multiselect",
+                  "events": [],
+                  "label": "Wähle Benutzer die auch Zugriff haben sollen",
+                  "visible": true,
+                  "disabled": false,
+                  "readonly": true,
+                  "operations": [],
+                  "validation": {
+                    "status": "invalid",
+                    "fields": [
+                      {
+                        "sourceId": "ngmcp_9eef01814d23d8c8f30b6329",
+                        "instanceId": "ngmcp_9eef01814d23d8c8f30b6329@s2m9f8-1nwozn4-tcaj5s-6jxmd8:14",
+                        "path": [
+                          "sharedWith"
+                        ],
+                        "status": "VALID",
+                        "updateOn": "change",
+                        "errors": []
+                      }
+                    ],
+                    "groups": [
+                      {
+                        "path": [],
+                        "status": "INVALID",
+                        "errors": []
+                      }
+                    ]
+                  },
+                  "schema": false,
+                  "value": "",
+                  "path": [
+                    "sharedWith"
+                  ],
+                  "unsupportedReason": "Custom value accessor needs a UI adapter; no model setter is used",
+                  "transport": "native-ui",
+                  "customAccessor": true,
+                  "provenance": "compiler"
+                },
+                {
+                  "sourceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1",
+                  "instanceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15",
+                  "kind": "control",
+                  "tagName": "input",
+                  "role": "listbox",
+                  "clickOrigin": "native-ui",
+                  "events": [
+                    "click"
+                  ],
+                  "label": "",
+                  "visible": true,
+                  "disabled": false,
+                  "readonly": true,
+                  "operations": [
+                    "fill",
+                    "activate"
+                  ],
+                  "validation": {
+                    "status": "unknown",
+                    "fields": [
+                      {
+                        "sourceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1",
+                        "instanceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15",
+                        "status": "UNKNOWN",
+                        "errors": []
+                      }
+                    ],
+                    "groups": [],
+                    "unobservedFields": [
+                      "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15"
+                    ]
+                  },
+                  "schema": {
+                    "type": "string"
+                  },
+                  "value": "",
+                  "transport": "native-ui",
+                  "customAccessor": false,
+                  "fillModes": [
+                    "paste",
+                    "input"
+                  ],
+                  "provenance": "runtime-dom"
+                },
+                {
+                  "sourceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:2",
+                  "instanceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:2@s2m9f8-1nwozn4-tcaj5s-6jxmd8:16",
+                  "kind": "control",
+                  "tagName": "input",
+                  "role": "listbox",
+                  "clickOrigin": "native-ui",
+                  "events": [
+                    "click"
+                  ],
+                  "label": "",
+                  "visible": true,
+                  "disabled": false,
+                  "readonly": true,
+                  "operations": [
+                    "fill",
+                    "activate"
+                  ],
+                  "validation": {
+                    "status": "unknown",
+                    "fields": [
+                      {
+                        "sourceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:2",
+                        "instanceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:2@s2m9f8-1nwozn4-tcaj5s-6jxmd8:16",
+                        "status": "UNKNOWN",
+                        "errors": []
+                      }
+                    ],
+                    "groups": [],
+                    "unobservedFields": [
+                      "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:2@s2m9f8-1nwozn4-tcaj5s-6jxmd8:16"
+                    ]
+                  },
+                  "schema": {
+                    "type": "string"
+                  },
+                  "value": "",
+                  "transport": "native-ui",
+                  "customAccessor": false,
+                  "fillModes": [
+                    "paste",
+                    "input"
+                  ],
+                  "provenance": "runtime-dom"
+                }
+              ],
+              "provenance": "compiler"
+            },
+            {
+              "sourceId": "ngmcp_10eb234d97e140501ec2f1c8",
+              "instanceId": "ngmcp_10eb234d97e140501ec2f1c8@s2m9f8-1nwozn4-tcaj5s-6jxmd8:9",
+              "kind": "control",
+              "tagName": "input",
+              "events": [],
+              "label": "Name* Besitzer Personen mit Zugriff",
+              "visible": true,
+              "disabled": false,
+              "readonly": false,
+              "operations": [
+                "fill"
+              ],
+              "validation": {
+                "status": "invalid",
+                "fields": [
+                  {
+                    "sourceId": "ngmcp_10eb234d97e140501ec2f1c8",
+                    "instanceId": "ngmcp_10eb234d97e140501ec2f1c8@s2m9f8-1nwozn4-tcaj5s-6jxmd8:9",
+                    "path": [
+                      "name"
+                    ],
+                    "status": "INVALID",
+                    "updateOn": "change",
+                    "errors": [
+                      {
+                        "code": "required"
+                      }
+                    ]
+                  }
+                ],
+                "groups": [
+                  {
+                    "path": [],
+                    "status": "INVALID",
+                    "errors": []
+                  }
+                ]
+              },
+              "schema": {
+                "type": "string"
+              },
+              "value": "",
+              "path": [
+                "name"
+              ],
+              "transport": "native-ui",
+              "customAccessor": false,
+              "fillModes": [
+                "paste",
+                "input"
+              ],
+              "provenance": "compiler"
+            },
+            {
+              "sourceId": "ngmcp_d7a533760ab2a67b614c71a0",
+              "instanceId": "ngmcp_d7a533760ab2a67b614c71a0@s2m9f8-1nwozn4-tcaj5s-6jxmd8:10",
+              "kind": "action",
+              "tagName": "button",
+              "clickOrigin": "native-ui",
+              "events": [],
+              "label": "Speichern",
+              "visible": true,
+              "disabled": true,
+              "readonly": false,
+              "operations": [
+                "activate"
+              ],
+              "validation": {
+                "status": "unknown",
+                "fields": [],
+                "groups": []
+              },
+              "provenance": "compiler"
+            },
+            {
+              "sourceId": "ngmcp_3d0e2acd99da754ab03a92ff",
+              "instanceId": "ngmcp_3d0e2acd99da754ab03a92ff@s2m9f8-1nwozn4-tcaj5s-6jxmd8:11",
+              "kind": "action",
+              "tagName": "div",
+              "clickOrigin": "authored",
+              "events": [
+                "click"
+              ],
+              "label": "",
+              "visible": true,
+              "disabled": false,
+              "readonly": false,
+              "operations": [
+                "activate"
+              ],
+              "validation": {
+                "status": "unknown",
+                "fields": [],
+                "groups": []
+              },
+              "provenance": "compiler"
+            },
+            {
+              "sourceId": "ngmcp_495baed709b68555855a42c2",
+              "instanceId": "ngmcp_495baed709b68555855a42c2@s2m9f8-1nwozn4-tcaj5s-6jxmd8:12",
+              "kind": "action",
+              "tagName": "a",
+              "clickOrigin": "native-ui",
+              "events": [],
+              "label": "Userverwaltung",
+              "visible": true,
+              "disabled": false,
+              "readonly": false,
+              "operations": [
+                "activate"
+              ],
+              "validation": {
+                "status": "unknown",
+                "fields": [],
+                "groups": []
+              },
+              "provenance": "compiler"
+            },
+            {
+              "sourceId": "ngmcp_372610e0a4185f7b18f8607e",
+              "instanceId": "ngmcp_372610e0a4185f7b18f8607e@s2m9f8-1nwozn4-tcaj5s-6jxmd8:13",
+              "kind": "control",
+              "tagName": "p-multiselect",
+              "events": [],
+              "label": "Wähle Benutzer die Besitzer sein sollen",
+              "visible": true,
+              "disabled": false,
+              "readonly": true,
+              "operations": [],
+              "validation": {
+                "status": "invalid",
+                "fields": [
+                  {
+                    "sourceId": "ngmcp_372610e0a4185f7b18f8607e",
+                    "instanceId": "ngmcp_372610e0a4185f7b18f8607e@s2m9f8-1nwozn4-tcaj5s-6jxmd8:13",
+                    "path": [
+                      "owners"
+                    ],
+                    "status": "VALID",
+                    "updateOn": "change",
+                    "errors": []
+                  }
+                ],
+                "groups": [
+                  {
+                    "path": [],
+                    "status": "INVALID",
+                    "errors": []
+                  }
+                ]
+              },
+              "schema": false,
+              "value": "",
+              "path": [
+                "owners"
+              ],
+              "unsupportedReason": "Custom value accessor needs a UI adapter; no model setter is used",
+              "transport": "native-ui",
+              "customAccessor": true,
+              "provenance": "compiler"
+            },
+            {
+              "sourceId": "ngmcp_9eef01814d23d8c8f30b6329",
+              "instanceId": "ngmcp_9eef01814d23d8c8f30b6329@s2m9f8-1nwozn4-tcaj5s-6jxmd8:14",
+              "kind": "control",
+              "tagName": "p-multiselect",
+              "events": [],
+              "label": "Wähle Benutzer die auch Zugriff haben sollen",
+              "visible": true,
+              "disabled": false,
+              "readonly": true,
+              "operations": [],
+              "validation": {
+                "status": "invalid",
+                "fields": [
+                  {
+                    "sourceId": "ngmcp_9eef01814d23d8c8f30b6329",
+                    "instanceId": "ngmcp_9eef01814d23d8c8f30b6329@s2m9f8-1nwozn4-tcaj5s-6jxmd8:14",
+                    "path": [
+                      "sharedWith"
+                    ],
+                    "status": "VALID",
+                    "updateOn": "change",
+                    "errors": []
+                  }
+                ],
+                "groups": [
+                  {
+                    "path": [],
+                    "status": "INVALID",
+                    "errors": []
+                  }
+                ]
+              },
+              "schema": false,
+              "value": "",
+              "path": [
+                "sharedWith"
+              ],
+              "unsupportedReason": "Custom value accessor needs a UI adapter; no model setter is used",
+              "transport": "native-ui",
+              "customAccessor": true,
+              "provenance": "compiler"
+            },
+            {
+              "sourceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1",
+              "instanceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15",
+              "kind": "control",
+              "tagName": "input",
+              "role": "listbox",
+              "clickOrigin": "native-ui",
+              "events": [
+                "click"
+              ],
+              "label": "",
+              "visible": true,
+              "disabled": false,
+              "readonly": true,
+              "operations": [
+                "fill",
+                "activate"
+              ],
+              "validation": {
+                "status": "unknown",
+                "fields": [
+                  {
+                    "sourceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1",
+                    "instanceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15",
+                    "status": "UNKNOWN",
+                    "errors": []
+                  }
+                ],
+                "groups": [],
+                "unobservedFields": [
+                  "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15"
+                ]
+              },
+              "schema": {
+                "type": "string"
+              },
+              "value": "",
+              "transport": "native-ui",
+              "customAccessor": false,
+              "fillModes": [
+                "paste",
+                "input"
+              ],
+              "provenance": "runtime-dom"
+            },
+            {
+              "sourceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:2",
+              "instanceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:2@s2m9f8-1nwozn4-tcaj5s-6jxmd8:16",
+              "kind": "control",
+              "tagName": "input",
+              "role": "listbox",
+              "clickOrigin": "native-ui",
+              "events": [
+                "click"
+              ],
+              "label": "",
+              "visible": true,
+              "disabled": false,
+              "readonly": true,
+              "operations": [
+                "fill",
+                "activate"
+              ],
+              "validation": {
+                "status": "unknown",
+                "fields": [
+                  {
+                    "sourceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:2",
+                    "instanceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:2@s2m9f8-1nwozn4-tcaj5s-6jxmd8:16",
+                    "status": "UNKNOWN",
+                    "errors": []
+                  }
+                ],
+                "groups": [],
+                "unobservedFields": [
+                  "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:2@s2m9f8-1nwozn4-tcaj5s-6jxmd8:16"
+                ]
+              },
+              "schema": {
+                "type": "string"
+              },
+              "value": "",
+              "transport": "native-ui",
+              "customAccessor": false,
+              "fillModes": [
+                "paste",
+                "input"
+              ],
+              "provenance": "runtime-dom"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "angular_press_key",
+      "args": {
+        "target": {
+          "instanceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15"
+        },
+        "key": "Space"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"operation\":\"press-key\",\"target\":{\"sourceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1\",\"instanceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15\"},\"key\":\"Space\",\"url\":\"http://127.0.0.1:4383/einkaufszettel\",\"businessStatus\":\"unknown\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "operation": "press-key",
+          "target": {
+            "sourceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1",
+            "instanceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15"
+          },
+          "key": "Space",
+          "url": "http://127.0.0.1:4383/einkaufszettel",
+          "businessStatus": "unknown"
+        }
+      }
+    },
+    {
+      "name": "angular_describe_node",
+      "args": {
+        "target": {
+          "instanceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15"
+        }
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"sourceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1\",\"instanceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15\",\"kind\":\"control\",\"tagName\":\"input\",\"role\":\"listbox\",\"aria\":{\"expanded\":\"true\"},\"clickOrigin\":\"native-ui\",\"events\":[\"click\"],\"label\":\"\",\"visible\":true,\"disabled\":false,\"readonly\":true,\"operations\":[\"fill\",\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[{\"sourceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1\",\"instanceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15\",\"status\":\"UNKNOWN\",\"errors\":[]}],\"groups\":[],\"unobservedFields\":[\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15\"]},\"schema\":{\"type\":\"string\"},\"value\":\"\",\"transport\":\"native-ui\",\"customAccessor\":false,\"fillModes\":[\"paste\",\"input\"],\"provenance\":\"runtime-dom\"}"
+          }
+        ],
+        "structuredContent": {
+          "sourceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1",
+          "instanceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15",
+          "kind": "control",
+          "tagName": "input",
+          "role": "listbox",
+          "aria": {
+            "expanded": "true"
+          },
+          "clickOrigin": "native-ui",
+          "events": [
+            "click"
+          ],
+          "label": "",
+          "visible": true,
+          "disabled": false,
+          "readonly": true,
+          "operations": [
+            "fill",
+            "activate"
+          ],
+          "validation": {
+            "status": "unknown",
+            "fields": [
+              {
+                "sourceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1",
+                "instanceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15",
+                "status": "UNKNOWN",
+                "errors": []
+              }
+            ],
+            "groups": [],
+            "unobservedFields": [
+              "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15"
+            ]
+          },
+          "schema": {
+            "type": "string"
+          },
+          "value": "",
+          "transport": "native-ui",
+          "customAccessor": false,
+          "fillModes": [
+            "paste",
+            "input"
+          ],
+          "provenance": "runtime-dom"
+        }
+      }
+    },
+    {
+      "name": "angular_press_key",
+      "args": {
+        "target": {
+          "instanceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15"
+        },
+        "key": "Escape"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"operation\":\"press-key\",\"target\":{\"sourceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1\",\"instanceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15\"},\"key\":\"Escape\",\"url\":\"http://127.0.0.1:4383/einkaufszettel\",\"businessStatus\":\"unknown\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "operation": "press-key",
+          "target": {
+            "sourceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1",
+            "instanceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15"
+          },
+          "key": "Escape",
+          "url": "http://127.0.0.1:4383/einkaufszettel",
+          "businessStatus": "unknown"
+        }
+      }
+    },
+    {
+      "name": "angular_describe_node",
+      "args": {
+        "target": {
+          "instanceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15"
+        }
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"sourceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1\",\"instanceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15\",\"kind\":\"control\",\"tagName\":\"input\",\"role\":\"listbox\",\"aria\":{\"expanded\":\"false\"},\"clickOrigin\":\"native-ui\",\"events\":[\"click\"],\"label\":\"\",\"visible\":true,\"disabled\":false,\"readonly\":true,\"operations\":[\"fill\",\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[{\"sourceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1\",\"instanceId\":\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15\",\"status\":\"UNKNOWN\",\"errors\":[]}],\"groups\":[],\"unobservedFields\":[\"runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15\"]},\"schema\":{\"type\":\"string\"},\"value\":\"\",\"transport\":\"native-ui\",\"customAccessor\":false,\"fillModes\":[\"paste\",\"input\"],\"provenance\":\"runtime-dom\"}"
+          }
+        ],
+        "structuredContent": {
+          "sourceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1",
+          "instanceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15",
+          "kind": "control",
+          "tagName": "input",
+          "role": "listbox",
+          "aria": {
+            "expanded": "false"
+          },
+          "clickOrigin": "native-ui",
+          "events": [
+            "click"
+          ],
+          "label": "",
+          "visible": true,
+          "disabled": false,
+          "readonly": true,
+          "operations": [
+            "fill",
+            "activate"
+          ],
+          "validation": {
+            "status": "unknown",
+            "fields": [
+              {
+                "sourceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1",
+                "instanceId": "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15",
+                "status": "UNKNOWN",
+                "errors": []
+              }
+            ],
+            "groups": [],
+            "unobservedFields": [
+              "runtime-dom:x0yqil-1ffek8a-5a0syi-1vr49wt:1@s2m9f8-1nwozn4-tcaj5s-6jxmd8:15"
+            ]
+          },
+          "schema": {
+            "type": "string"
+          },
+          "value": "",
+          "transport": "native-ui",
+          "customAccessor": false,
+          "fillModes": [
+            "paste",
+            "input"
+          ],
+          "provenance": "runtime-dom"
+        }
+      }
+    }
+  ]
+}

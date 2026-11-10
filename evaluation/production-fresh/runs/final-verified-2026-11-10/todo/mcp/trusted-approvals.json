@@ -1,0 +1,122 @@
+[
+  {
+    "sessionId": "6be5d5e1ca603891b1e7f111dedc5590",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_b8ed434fb4e46c35b630495c",
+    "operation": "activate",
+    "requestHash": "a8864e20fd17a7e8aeabd8b264cc0372df4e0923663ba9d9ec551d9d31b960f1",
+    "approved": true
+  },
+  {
+    "sessionId": "6be5d5e1ca603891b1e7f111dedc5590",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_92680881d84f6a8d363cef47",
+    "operation": "fill",
+    "requestHash": "fa66ec2a2226c6e3016df52c4a157df8c5e66604b9c765782c5c45f35b545ee0",
+    "approved": true
+  },
+  {
+    "sessionId": "6be5d5e1ca603891b1e7f111dedc5590",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_ebb9802f6a4ab21ccea83fad",
+    "operation": "fill",
+    "requestHash": "9d0851f20ed18156ce01d16849736479c4e95b75423dd5a050a8ce40fb1c9dd6",
+    "approved": true
+  },
+  {
+    "sessionId": "6be5d5e1ca603891b1e7f111dedc5590",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_f5f8bb842172a53a71a0fa8c",
+    "operation": "fill",
+    "requestHash": "810eb4ffcb17ffd702c0a6cc4e9b77ce4e236488d8084d4eafa688df960f9409",
+    "approved": true
+  },
+  {
+    "sessionId": "6be5d5e1ca603891b1e7f111dedc5590",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_e18dd3072f5ee23e7118ebc1",
+    "operation": "activate",
+    "requestHash": "cf25066cad314495a02ae42d16d44b8822fdffcc9f2142443ab93ca4a2607294",
+    "approved": true
+  },
+  {
+    "sessionId": "8723d5381fde4a2f1879c870e1a11388",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_b4b620faece66dccf72551c2",
+    "operation": "activate",
+    "requestHash": "4e3cf0d08c7bd1bfa07f61265323fa62734deb65039c027fbe63a995ce80ee0c",
+    "approved": true
+  },
+  {
+    "sessionId": "558b8e416938893b0a1028ac4b0e7e84",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_01b0feb00a028d83a9b16c4b",
+    "operation": "activate",
+    "requestHash": "0b2bec2fff307ba6eb2508775c01879cf1edf5b4f7ba8e91f69bd84acd333634",
+    "approved": true
+  },
+  {
+    "sessionId": "4a11b5784afb7e7778ee35ca9f834e54",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_b8ed434fb4e46c35b630495c",
+    "operation": "activate",
+    "requestHash": "63b9f5f33cd666ea5da52dd86861132295688235a9e0de84935bc0c818f757d2",
+    "approved": true
+  },
+  {
+    "sessionId": "4a11b5784afb7e7778ee35ca9f834e54",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_92680881d84f6a8d363cef47",
+    "operation": "fill",
+    "requestHash": "70983754e4d5227d132bc1cd59ab2fb713140df1e79c8bfd5e46d9b82d834d52",
+    "approved": true
+  },
+  {
+    "sessionId": "4a11b5784afb7e7778ee35ca9f834e54",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_ebb9802f6a4ab21ccea83fad",
+    "operation": "fill",
+    "requestHash": "6349142e6c1949ecf7f553f75bd16aa431dc80659638dda96e9bb4af9b46ad3d",
+    "approved": true
+  },
+  {
+    "sessionId": "4a11b5784afb7e7778ee35ca9f834e54",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_f5f8bb842172a53a71a0fa8c",
+    "operation": "fill",
+    "requestHash": "b7933718bfac3af18a9125decaa8076ff8215bb2e3d70293d7b21290cb1b0db6",
+    "approved": true
+  },
+  {
+    "sessionId": "4a11b5784afb7e7778ee35ca9f834e54",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_e18dd3072f5ee23e7118ebc1",
+    "operation": "activate",
+    "requestHash": "0c8f036ff615719394be29c654d4b3670b3e67498e77e77942be06b13c9dc625",
+    "approved": true
+  },
+  {
+    "sessionId": "a79b58ddffffa427b46f3c2bdfcc9781",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_92680881d84f6a8d363cef47",
+    "operation": "fill",
+    "requestHash": "51ec9b70a5d14ec80f3d4dc49b9ffda65f5e7edf58faf22b9f5a9c96c80d3cf6",
+    "approved": true
+  },
+  {
+    "sessionId": "cf517365a30f15de8b049cebdc1dbc94",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_92680881d84f6a8d363cef47",
+    "operation": "fill",
+    "requestHash": "616f211642b279497234cd47f6479ef574b3345def546e81ce349011c1ced16e",
+    "approved": false
+  },
+  {
+    "sessionId": "319fc18c0bc1c6c967fe6a9959bd2ce8",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_92680881d84f6a8d363cef47",
+    "operation": "fill",
+    "requestHash": "9c8f9be89c84ca68860419faeed4f861da3f58c29a4c30952439705af0f76663",
+    "approved": true
+  }
+]

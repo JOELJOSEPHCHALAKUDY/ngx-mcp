@@ -1,0 +1,32 @@
+{
+  "repository": "https://github.com/tastejs/todomvc",
+  "commit": "ff43b02e59dfa604386bb382034b2cd07c2bcd8a",
+  "license": {
+    "spdx": "MIT",
+    "path": "license.md",
+    "sha256": "32238c5c6759b589ea768661b6eb0fcb42449b74d57cdf09928743f2e1eb748d",
+    "note": "Explicit root license applies repo-wide unless otherwise specified; none found in Angular example."
+  },
+  "angularVersion": "^21.2.11",
+  "routes": [
+    "/all",
+    "/active",
+    "/completed"
+  ],
+  "routing": "hash, root redirects /all",
+  "routeSource": {
+    "file": "src/app/app.routes.ts",
+    "lines": [
+      4,
+      9
+    ],
+    "sha256": "6bd0785fbb84660d7aeb4e5a1dcb7cd3203c57f7ac07a28beb6f361bf0be3926"
+  },
+  "sourceDirectory": "/private/tmp/fresh-todomvc-modern/examples/angular",
+  "businessOperations": 7,
+  "dependencyLock": {
+    "path": "examples/angular/package-lock.json",
+    "sha256": "4048fb1e9b90c71328542775c3cfdac043a75fe45f3e82de8ece87819a4963e0",
+    "upstream": true
+  }
+}

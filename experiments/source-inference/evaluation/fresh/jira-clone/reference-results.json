@@ -1,0 +1,726 @@
+{
+  "project": "jira-clone",
+  "sourceCommit": "20b50e9a1a4d9205af4641b66f544b81cd46873e",
+  "baseURL": "http://127.0.0.1:4332",
+  "unmodifiedUpstream": true,
+  "operationCount": 14,
+  "passed": 14,
+  "results": [
+    {
+      "id": "issue-create",
+      "status": "passed",
+      "actions": "DOM clicks/typing/pointer drag only",
+      "oracle": "read-only Angular Akita debug state + rendered UI",
+      "before": {
+        "projectName": "Angular Jira Clone",
+        "issue": {
+          "type": "Story",
+          "priority": "Highest",
+          "title": "Angular Spotify \ud83c\udfa7",
+          "description": "<h3>Hey Angular people, what's up? \ud83d\ude06</h3><p>I wanted to introduce you my latest application: <strong>Angular Spotify.</strong></p><p><br></p><p>It is a simple Spotify client built with Angular 11, Nx workspace, ngrx, TailwindCSS and ng-zorro.</p><p><br></p><p>Check out the&nbsp;live application&nbsp;-&gt; <a href=\"https://spotify.trungk18.com\" rel=\"noopener noreferrer\" target=\"_blank\">https://spotify.trungk18.com</a></p><p><span style=\"color: var(--color-text-link);\">Source code: </span><a href=\"https://github.com/trungk18/angular-spotify\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/trungk18/angular-spotify</a></p><p><br></p><p>Spotify premium&nbsp;is required for the Web Playback SDK to play music. If you are using a free account, you can still browse the app, but it couldn't play the music. Sorry about that&nbsp;\ud83e\udd23</p><h2><br></h2><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" alt=\"Angular Spotify Demo\"></a></p><p><br></p><p><br></p><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" alt=\"Angular Spotify Visualizer\"></a></p><p><br></p>",
+          "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "userIds": [
+            "d65047e5-f4cf-4caa-9a38-6073dcbab7d1"
+          ],
+          "id": "2021",
+          "status": "Backlog",
+          "createdAt": "2021-04-28T14:56:55.049Z",
+          "updatedAt": "2021-04-28T14:56:57.748Z",
+          "listPosition": 1
+        },
+        "count": 16
+      },
+      "createdIssue": {
+        "type": "Task",
+        "priority": "Medium",
+        "title": "Benchmark stock reconciliation",
+        "description": "<p>Reconcile&nbsp;test&nbsp;inventory</p>",
+        "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+        "userIds": [],
+        "id": "3437",
+        "status": "Backlog",
+        "createdAt": "2026-11-09T20:03:08.771Z",
+        "updatedAt": "2026-11-09T20:03:08.771Z"
+      },
+      "assertions": [
+        "new issue created with default type/priority",
+        "description assigned",
+        "reload restores fixture16"
+      ],
+      "after": {
+        "projectName": "Angular Jira Clone",
+        "issue": {
+          "type": "Story",
+          "priority": "Highest",
+          "title": "Angular Spotify \ud83c\udfa7",
+          "description": "<h3>Hey Angular people, what's up? \ud83d\ude06</h3><p>I wanted to introduce you my latest application: <strong>Angular Spotify.</strong></p><p><br></p><p>It is a simple Spotify client built with Angular 11, Nx workspace, ngrx, TailwindCSS and ng-zorro.</p><p><br></p><p>Check out the&nbsp;live application&nbsp;-&gt; <a href=\"https://spotify.trungk18.com\" rel=\"noopener noreferrer\" target=\"_blank\">https://spotify.trungk18.com</a></p><p><span style=\"color: var(--color-text-link);\">Source code: </span><a href=\"https://github.com/trungk18/angular-spotify\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/trungk18/angular-spotify</a></p><p><br></p><p>Spotify premium&nbsp;is required for the Web Playback SDK to play music. If you are using a free account, you can still browse the app, but it couldn't play the music. Sorry about that&nbsp;\ud83e\udd23</p><h2><br></h2><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" alt=\"Angular Spotify Demo\"></a></p><p><br></p><p><br></p><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" alt=\"Angular Spotify Visualizer\"></a></p><p><br></p>",
+          "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "userIds": [
+            "d65047e5-f4cf-4caa-9a38-6073dcbab7d1"
+          ],
+          "id": "2021",
+          "status": "Backlog",
+          "createdAt": "2021-04-28T14:56:55.049Z",
+          "updatedAt": "2021-04-28T14:56:57.748Z",
+          "listPosition": 1
+        },
+        "count": 16
+      }
+    },
+    {
+      "id": "issue-title-update",
+      "status": "passed",
+      "actions": "DOM clicks/typing/pointer drag only",
+      "oracle": "read-only Angular Akita debug state + rendered UI",
+      "before": {
+        "projectName": "Angular Jira Clone",
+        "issue": {
+          "type": "Story",
+          "priority": "Highest",
+          "title": "Angular Spotify \ud83c\udfa7",
+          "description": "<h3>Hey Angular people, what's up? \ud83d\ude06</h3><p>I wanted to introduce you my latest application: <strong>Angular Spotify.</strong></p><p><br></p><p>It is a simple Spotify client built with Angular 11, Nx workspace, ngrx, TailwindCSS and ng-zorro.</p><p><br></p><p>Check out the&nbsp;live application&nbsp;-&gt; <a href=\"https://spotify.trungk18.com\" rel=\"noopener noreferrer\" target=\"_blank\">https://spotify.trungk18.com</a></p><p><span style=\"color: var(--color-text-link);\">Source code: </span><a href=\"https://github.com/trungk18/angular-spotify\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/trungk18/angular-spotify</a></p><p><br></p><p>Spotify premium&nbsp;is required for the Web Playback SDK to play music. If you are using a free account, you can still browse the app, but it couldn't play the music. Sorry about that&nbsp;\ud83e\udd23</p><h2><br></h2><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" alt=\"Angular Spotify Demo\"></a></p><p><br></p><p><br></p><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" alt=\"Angular Spotify Visualizer\"></a></p><p><br></p>",
+          "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "userIds": [
+            "d65047e5-f4cf-4caa-9a38-6073dcbab7d1"
+          ],
+          "id": "2021",
+          "status": "Backlog",
+          "createdAt": "2021-04-28T14:56:55.049Z",
+          "updatedAt": "2021-04-28T14:56:57.748Z",
+          "listPosition": 1
+        },
+        "count": 16
+      },
+      "assertions": [
+        "title updated on blur",
+        "status preserved"
+      ],
+      "after": {
+        "projectName": "Angular Jira Clone",
+        "issue": {
+          "type": "Story",
+          "priority": "Highest",
+          "title": "Benchmark renamed task",
+          "description": "<h3>Hey Angular people, what's up? \ud83d\ude06</h3><p>I wanted to introduce you my latest application: <strong>Angular Spotify.</strong></p><p><br></p><p>It is a simple Spotify client built with Angular 11, Nx workspace, ngrx, TailwindCSS and ng-zorro.</p><p><br></p><p>Check out the&nbsp;live application&nbsp;-&gt; <a href=\"https://spotify.trungk18.com\" rel=\"noopener noreferrer\" target=\"_blank\">https://spotify.trungk18.com</a></p><p><span style=\"color: var(--color-text-link);\">Source code: </span><a href=\"https://github.com/trungk18/angular-spotify\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/trungk18/angular-spotify</a></p><p><br></p><p>Spotify premium&nbsp;is required for the Web Playback SDK to play music. If you are using a free account, you can still browse the app, but it couldn't play the music. Sorry about that&nbsp;\ud83e\udd23</p><h2><br></h2><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" alt=\"Angular Spotify Demo\"></a></p><p><br></p><p><br></p><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" alt=\"Angular Spotify Visualizer\"></a></p><p><br></p>",
+          "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "userIds": [
+            "d65047e5-f4cf-4caa-9a38-6073dcbab7d1"
+          ],
+          "id": "2021",
+          "status": "Backlog",
+          "createdAt": "2021-04-28T14:56:55.049Z",
+          "updatedAt": "2026-11-09T20:03:10.051Z",
+          "listPosition": 1
+        },
+        "count": 16
+      }
+    },
+    {
+      "id": "issue-description-update",
+      "status": "passed",
+      "actions": "DOM clicks/typing/pointer drag only",
+      "oracle": "read-only Angular Akita debug state + rendered UI",
+      "before": {
+        "projectName": "Angular Jira Clone",
+        "issue": {
+          "type": "Story",
+          "priority": "Highest",
+          "title": "Angular Spotify \ud83c\udfa7",
+          "description": "<h3>Hey Angular people, what's up? \ud83d\ude06</h3><p>I wanted to introduce you my latest application: <strong>Angular Spotify.</strong></p><p><br></p><p>It is a simple Spotify client built with Angular 11, Nx workspace, ngrx, TailwindCSS and ng-zorro.</p><p><br></p><p>Check out the&nbsp;live application&nbsp;-&gt; <a href=\"https://spotify.trungk18.com\" rel=\"noopener noreferrer\" target=\"_blank\">https://spotify.trungk18.com</a></p><p><span style=\"color: var(--color-text-link);\">Source code: </span><a href=\"https://github.com/trungk18/angular-spotify\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/trungk18/angular-spotify</a></p><p><br></p><p>Spotify premium&nbsp;is required for the Web Playback SDK to play music. If you are using a free account, you can still browse the app, but it couldn't play the music. Sorry about that&nbsp;\ud83e\udd23</p><h2><br></h2><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" alt=\"Angular Spotify Demo\"></a></p><p><br></p><p><br></p><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" alt=\"Angular Spotify Visualizer\"></a></p><p><br></p>",
+          "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "userIds": [
+            "d65047e5-f4cf-4caa-9a38-6073dcbab7d1"
+          ],
+          "id": "2021",
+          "status": "Backlog",
+          "createdAt": "2021-04-28T14:56:55.049Z",
+          "updatedAt": "2021-04-28T14:56:57.748Z",
+          "listPosition": 1
+        },
+        "count": 16
+      },
+      "assertions": [
+        "rich-text description updated",
+        "editor closed"
+      ],
+      "after": {
+        "projectName": "Angular Jira Clone",
+        "issue": {
+          "type": "Story",
+          "priority": "Highest",
+          "title": "Angular Spotify \ud83c\udfa7",
+          "description": "<h3>Benchmark&nbsp;description</h3>",
+          "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "userIds": [
+            "d65047e5-f4cf-4caa-9a38-6073dcbab7d1"
+          ],
+          "id": "2021",
+          "status": "Backlog",
+          "createdAt": "2021-04-28T14:56:55.049Z",
+          "updatedAt": "2026-11-09T20:03:11.242Z",
+          "listPosition": 1
+        },
+        "count": 16
+      }
+    },
+    {
+      "id": "issue-priority-update",
+      "status": "passed",
+      "actions": "DOM clicks/typing/pointer drag only",
+      "oracle": "read-only Angular Akita debug state + rendered UI",
+      "before": {
+        "projectName": "Angular Jira Clone",
+        "issue": {
+          "type": "Story",
+          "priority": "Highest",
+          "title": "Angular Spotify \ud83c\udfa7",
+          "description": "<h3>Hey Angular people, what's up? \ud83d\ude06</h3><p>I wanted to introduce you my latest application: <strong>Angular Spotify.</strong></p><p><br></p><p>It is a simple Spotify client built with Angular 11, Nx workspace, ngrx, TailwindCSS and ng-zorro.</p><p><br></p><p>Check out the&nbsp;live application&nbsp;-&gt; <a href=\"https://spotify.trungk18.com\" rel=\"noopener noreferrer\" target=\"_blank\">https://spotify.trungk18.com</a></p><p><span style=\"color: var(--color-text-link);\">Source code: </span><a href=\"https://github.com/trungk18/angular-spotify\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/trungk18/angular-spotify</a></p><p><br></p><p>Spotify premium&nbsp;is required for the Web Playback SDK to play music. If you are using a free account, you can still browse the app, but it couldn't play the music. Sorry about that&nbsp;\ud83e\udd23</p><h2><br></h2><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" alt=\"Angular Spotify Demo\"></a></p><p><br></p><p><br></p><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" alt=\"Angular Spotify Visualizer\"></a></p><p><br></p>",
+          "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "userIds": [
+            "d65047e5-f4cf-4caa-9a38-6073dcbab7d1"
+          ],
+          "id": "2021",
+          "status": "Backlog",
+          "createdAt": "2021-04-28T14:56:55.049Z",
+          "updatedAt": "2021-04-28T14:56:57.748Z",
+          "listPosition": 1
+        },
+        "count": 16
+      },
+      "assertions": [
+        "priority changed Highest to High"
+      ],
+      "after": {
+        "projectName": "Angular Jira Clone",
+        "issue": {
+          "type": "Story",
+          "priority": "High",
+          "title": "Angular Spotify \ud83c\udfa7",
+          "description": "<h3>Hey Angular people, what's up? \ud83d\ude06</h3><p>I wanted to introduce you my latest application: <strong>Angular Spotify.</strong></p><p><br></p><p>It is a simple Spotify client built with Angular 11, Nx workspace, ngrx, TailwindCSS and ng-zorro.</p><p><br></p><p>Check out the&nbsp;live application&nbsp;-&gt; <a href=\"https://spotify.trungk18.com\" rel=\"noopener noreferrer\" target=\"_blank\">https://spotify.trungk18.com</a></p><p><span style=\"color: var(--color-text-link);\">Source code: </span><a href=\"https://github.com/trungk18/angular-spotify\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/trungk18/angular-spotify</a></p><p><br></p><p>Spotify premium&nbsp;is required for the Web Playback SDK to play music. If you are using a free account, you can still browse the app, but it couldn't play the music. Sorry about that&nbsp;\ud83e\udd23</p><h2><br></h2><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" alt=\"Angular Spotify Demo\"></a></p><p><br></p><p><br></p><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" alt=\"Angular Spotify Visualizer\"></a></p><p><br></p>",
+          "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "userIds": [
+            "d65047e5-f4cf-4caa-9a38-6073dcbab7d1"
+          ],
+          "id": "2021",
+          "status": "Backlog",
+          "createdAt": "2021-04-28T14:56:55.049Z",
+          "updatedAt": "2026-11-09T20:03:12.818Z",
+          "listPosition": 1
+        },
+        "count": 16
+      }
+    },
+    {
+      "id": "issue-type-update",
+      "status": "passed",
+      "actions": "DOM clicks/typing/pointer drag only",
+      "oracle": "read-only Angular Akita debug state + rendered UI",
+      "before": {
+        "projectName": "Angular Jira Clone",
+        "issue": {
+          "type": "Story",
+          "priority": "Highest",
+          "title": "Angular Spotify \ud83c\udfa7",
+          "description": "<h3>Hey Angular people, what's up? \ud83d\ude06</h3><p>I wanted to introduce you my latest application: <strong>Angular Spotify.</strong></p><p><br></p><p>It is a simple Spotify client built with Angular 11, Nx workspace, ngrx, TailwindCSS and ng-zorro.</p><p><br></p><p>Check out the&nbsp;live application&nbsp;-&gt; <a href=\"https://spotify.trungk18.com\" rel=\"noopener noreferrer\" target=\"_blank\">https://spotify.trungk18.com</a></p><p><span style=\"color: var(--color-text-link);\">Source code: </span><a href=\"https://github.com/trungk18/angular-spotify\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/trungk18/angular-spotify</a></p><p><br></p><p>Spotify premium&nbsp;is required for the Web Playback SDK to play music. If you are using a free account, you can still browse the app, but it couldn't play the music. Sorry about that&nbsp;\ud83e\udd23</p><h2><br></h2><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" alt=\"Angular Spotify Demo\"></a></p><p><br></p><p><br></p><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" alt=\"Angular Spotify Visualizer\"></a></p><p><br></p>",
+          "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "userIds": [
+            "d65047e5-f4cf-4caa-9a38-6073dcbab7d1"
+          ],
+          "id": "2021",
+          "status": "Backlog",
+          "createdAt": "2021-04-28T14:56:55.049Z",
+          "updatedAt": "2021-04-28T14:56:57.748Z",
+          "listPosition": 1
+        },
+        "count": 16
+      },
+      "assertions": [
+        "type changed Story to Bug"
+      ],
+      "after": {
+        "projectName": "Angular Jira Clone",
+        "issue": {
+          "type": "Bug",
+          "priority": "Highest",
+          "title": "Angular Spotify \ud83c\udfa7",
+          "description": "<h3>Hey Angular people, what's up? \ud83d\ude06</h3><p>I wanted to introduce you my latest application: <strong>Angular Spotify.</strong></p><p><br></p><p>It is a simple Spotify client built with Angular 11, Nx workspace, ngrx, TailwindCSS and ng-zorro.</p><p><br></p><p>Check out the&nbsp;live application&nbsp;-&gt; <a href=\"https://spotify.trungk18.com\" rel=\"noopener noreferrer\" target=\"_blank\">https://spotify.trungk18.com</a></p><p><span style=\"color: var(--color-text-link);\">Source code: </span><a href=\"https://github.com/trungk18/angular-spotify\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/trungk18/angular-spotify</a></p><p><br></p><p>Spotify premium&nbsp;is required for the Web Playback SDK to play music. If you are using a free account, you can still browse the app, but it couldn't play the music. Sorry about that&nbsp;\ud83e\udd23</p><h2><br></h2><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" alt=\"Angular Spotify Demo\"></a></p><p><br></p><p><br></p><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" alt=\"Angular Spotify Visualizer\"></a></p><p><br></p>",
+          "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "userIds": [
+            "d65047e5-f4cf-4caa-9a38-6073dcbab7d1"
+          ],
+          "id": "2021",
+          "status": "Backlog",
+          "createdAt": "2021-04-28T14:56:55.049Z",
+          "updatedAt": "2026-11-09T20:03:14.393Z",
+          "listPosition": 1
+        },
+        "count": 16
+      }
+    },
+    {
+      "id": "issue-status-update",
+      "status": "passed",
+      "actions": "DOM clicks/typing/pointer drag only",
+      "oracle": "read-only Angular Akita debug state + rendered UI",
+      "before": {
+        "projectName": "Angular Jira Clone",
+        "issue": {
+          "type": "Story",
+          "priority": "Highest",
+          "title": "Angular Spotify \ud83c\udfa7",
+          "description": "<h3>Hey Angular people, what's up? \ud83d\ude06</h3><p>I wanted to introduce you my latest application: <strong>Angular Spotify.</strong></p><p><br></p><p>It is a simple Spotify client built with Angular 11, Nx workspace, ngrx, TailwindCSS and ng-zorro.</p><p><br></p><p>Check out the&nbsp;live application&nbsp;-&gt; <a href=\"https://spotify.trungk18.com\" rel=\"noopener noreferrer\" target=\"_blank\">https://spotify.trungk18.com</a></p><p><span style=\"color: var(--color-text-link);\">Source code: </span><a href=\"https://github.com/trungk18/angular-spotify\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/trungk18/angular-spotify</a></p><p><br></p><p>Spotify premium&nbsp;is required for the Web Playback SDK to play music. If you are using a free account, you can still browse the app, but it couldn't play the music. Sorry about that&nbsp;\ud83e\udd23</p><h2><br></h2><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" alt=\"Angular Spotify Demo\"></a></p><p><br></p><p><br></p><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" alt=\"Angular Spotify Visualizer\"></a></p><p><br></p>",
+          "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "userIds": [
+            "d65047e5-f4cf-4caa-9a38-6073dcbab7d1"
+          ],
+          "id": "2021",
+          "status": "Backlog",
+          "createdAt": "2021-04-28T14:56:55.049Z",
+          "updatedAt": "2021-04-28T14:56:57.748Z",
+          "listPosition": 1
+        },
+        "count": 16
+      },
+      "assertions": [
+        "status changed to Selected",
+        "position appended after previous maximum"
+      ],
+      "after": {
+        "projectName": "Angular Jira Clone",
+        "issue": {
+          "type": "Story",
+          "priority": "Highest",
+          "title": "Angular Spotify \ud83c\udfa7",
+          "description": "<h3>Hey Angular people, what's up? \ud83d\ude06</h3><p>I wanted to introduce you my latest application: <strong>Angular Spotify.</strong></p><p><br></p><p>It is a simple Spotify client built with Angular 11, Nx workspace, ngrx, TailwindCSS and ng-zorro.</p><p><br></p><p>Check out the&nbsp;live application&nbsp;-&gt; <a href=\"https://spotify.trungk18.com\" rel=\"noopener noreferrer\" target=\"_blank\">https://spotify.trungk18.com</a></p><p><span style=\"color: var(--color-text-link);\">Source code: </span><a href=\"https://github.com/trungk18/angular-spotify\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/trungk18/angular-spotify</a></p><p><br></p><p>Spotify premium&nbsp;is required for the Web Playback SDK to play music. If you are using a free account, you can still browse the app, but it couldn't play the music. Sorry about that&nbsp;\ud83e\udd23</p><h2><br></h2><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" alt=\"Angular Spotify Demo\"></a></p><p><br></p><p><br></p><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" alt=\"Angular Spotify Visualizer\"></a></p><p><br></p>",
+          "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "userIds": [
+            "d65047e5-f4cf-4caa-9a38-6073dcbab7d1"
+          ],
+          "id": "2021",
+          "status": "Selected",
+          "createdAt": "2021-04-28T14:56:55.049Z",
+          "updatedAt": "2026-11-09T20:03:15.960Z",
+          "listPosition": 3
+        },
+        "count": 16
+      }
+    },
+    {
+      "id": "issue-assignee-add",
+      "status": "passed",
+      "actions": "DOM clicks/typing/pointer drag only",
+      "oracle": "read-only Angular Akita debug state + rendered UI",
+      "before": {
+        "projectName": "Angular Jira Clone",
+        "issue": {
+          "type": "Story",
+          "priority": "Highest",
+          "title": "Angular Spotify \ud83c\udfa7",
+          "description": "<h3>Hey Angular people, what's up? \ud83d\ude06</h3><p>I wanted to introduce you my latest application: <strong>Angular Spotify.</strong></p><p><br></p><p>It is a simple Spotify client built with Angular 11, Nx workspace, ngrx, TailwindCSS and ng-zorro.</p><p><br></p><p>Check out the&nbsp;live application&nbsp;-&gt; <a href=\"https://spotify.trungk18.com\" rel=\"noopener noreferrer\" target=\"_blank\">https://spotify.trungk18.com</a></p><p><span style=\"color: var(--color-text-link);\">Source code: </span><a href=\"https://github.com/trungk18/angular-spotify\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/trungk18/angular-spotify</a></p><p><br></p><p>Spotify premium&nbsp;is required for the Web Playback SDK to play music. If you are using a free account, you can still browse the app, but it couldn't play the music. Sorry about that&nbsp;\ud83e\udd23</p><h2><br></h2><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" alt=\"Angular Spotify Demo\"></a></p><p><br></p><p><br></p><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" alt=\"Angular Spotify Visualizer\"></a></p><p><br></p>",
+          "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "userIds": [
+            "d65047e5-f4cf-4caa-9a38-6073dcbab7d1"
+          ],
+          "id": "2021",
+          "status": "Backlog",
+          "createdAt": "2021-04-28T14:56:55.049Z",
+          "updatedAt": "2021-04-28T14:56:57.748Z",
+          "listPosition": 1
+        },
+        "count": 16
+      },
+      "assertions": [
+        "selected loaded user assigned",
+        "prior assignments preserved"
+      ],
+      "after": {
+        "projectName": "Angular Jira Clone",
+        "issue": {
+          "type": "Story",
+          "priority": "Highest",
+          "title": "Angular Spotify \ud83c\udfa7",
+          "description": "<h3>Hey Angular people, what's up? \ud83d\ude06</h3><p>I wanted to introduce you my latest application: <strong>Angular Spotify.</strong></p><p><br></p><p>It is a simple Spotify client built with Angular 11, Nx workspace, ngrx, TailwindCSS and ng-zorro.</p><p><br></p><p>Check out the&nbsp;live application&nbsp;-&gt; <a href=\"https://spotify.trungk18.com\" rel=\"noopener noreferrer\" target=\"_blank\">https://spotify.trungk18.com</a></p><p><span style=\"color: var(--color-text-link);\">Source code: </span><a href=\"https://github.com/trungk18/angular-spotify\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/trungk18/angular-spotify</a></p><p><br></p><p>Spotify premium&nbsp;is required for the Web Playback SDK to play music. If you are using a free account, you can still browse the app, but it couldn't play the music. Sorry about that&nbsp;\ud83e\udd23</p><h2><br></h2><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" alt=\"Angular Spotify Demo\"></a></p><p><br></p><p><br></p><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" alt=\"Angular Spotify Visualizer\"></a></p><p><br></p>",
+          "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "userIds": [
+            "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+            "7ac265f9-b9ac-443f-a2b2-795682e579a4"
+          ],
+          "id": "2021",
+          "status": "Backlog",
+          "createdAt": "2021-04-28T14:56:55.049Z",
+          "updatedAt": "2026-11-09T20:03:17.551Z",
+          "listPosition": 1
+        },
+        "count": 16
+      }
+    },
+    {
+      "id": "issue-assignee-remove",
+      "status": "passed",
+      "actions": "DOM clicks/typing/pointer drag only",
+      "oracle": "read-only Angular Akita debug state + rendered UI",
+      "before": {
+        "projectName": "Angular Jira Clone",
+        "issue": {
+          "type": "Story",
+          "priority": "Highest",
+          "title": "Angular Spotify \ud83c\udfa7",
+          "description": "<h3>Hey Angular people, what's up? \ud83d\ude06</h3><p>I wanted to introduce you my latest application: <strong>Angular Spotify.</strong></p><p><br></p><p>It is a simple Spotify client built with Angular 11, Nx workspace, ngrx, TailwindCSS and ng-zorro.</p><p><br></p><p>Check out the&nbsp;live application&nbsp;-&gt; <a href=\"https://spotify.trungk18.com\" rel=\"noopener noreferrer\" target=\"_blank\">https://spotify.trungk18.com</a></p><p><span style=\"color: var(--color-text-link);\">Source code: </span><a href=\"https://github.com/trungk18/angular-spotify\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/trungk18/angular-spotify</a></p><p><br></p><p>Spotify premium&nbsp;is required for the Web Playback SDK to play music. If you are using a free account, you can still browse the app, but it couldn't play the music. Sorry about that&nbsp;\ud83e\udd23</p><h2><br></h2><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" alt=\"Angular Spotify Demo\"></a></p><p><br></p><p><br></p><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" alt=\"Angular Spotify Visualizer\"></a></p><p><br></p>",
+          "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "userIds": [
+            "d65047e5-f4cf-4caa-9a38-6073dcbab7d1"
+          ],
+          "id": "2021",
+          "status": "Backlog",
+          "createdAt": "2021-04-28T14:56:55.049Z",
+          "updatedAt": "2021-04-28T14:56:57.748Z",
+          "listPosition": 1
+        },
+        "count": 16
+      },
+      "assertions": [
+        "existing assignment removed"
+      ],
+      "after": {
+        "projectName": "Angular Jira Clone",
+        "issue": {
+          "type": "Story",
+          "priority": "Highest",
+          "title": "Angular Spotify \ud83c\udfa7",
+          "description": "<h3>Hey Angular people, what's up? \ud83d\ude06</h3><p>I wanted to introduce you my latest application: <strong>Angular Spotify.</strong></p><p><br></p><p>It is a simple Spotify client built with Angular 11, Nx workspace, ngrx, TailwindCSS and ng-zorro.</p><p><br></p><p>Check out the&nbsp;live application&nbsp;-&gt; <a href=\"https://spotify.trungk18.com\" rel=\"noopener noreferrer\" target=\"_blank\">https://spotify.trungk18.com</a></p><p><span style=\"color: var(--color-text-link);\">Source code: </span><a href=\"https://github.com/trungk18/angular-spotify\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/trungk18/angular-spotify</a></p><p><br></p><p>Spotify premium&nbsp;is required for the Web Playback SDK to play music. If you are using a free account, you can still browse the app, but it couldn't play the music. Sorry about that&nbsp;\ud83e\udd23</p><h2><br></h2><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" alt=\"Angular Spotify Demo\"></a></p><p><br></p><p><br></p><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" alt=\"Angular Spotify Visualizer\"></a></p><p><br></p>",
+          "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "userIds": [],
+          "id": "2021",
+          "status": "Backlog",
+          "createdAt": "2021-04-28T14:56:55.049Z",
+          "updatedAt": "2026-11-09T20:03:18.652Z",
+          "listPosition": 1
+        },
+        "count": 16
+      }
+    },
+    {
+      "id": "issue-reporter-update",
+      "status": "passed",
+      "actions": "DOM clicks/typing/pointer drag only",
+      "oracle": "read-only Angular Akita debug state + rendered UI",
+      "before": {
+        "projectName": "Angular Jira Clone",
+        "issue": {
+          "type": "Story",
+          "priority": "Highest",
+          "title": "Angular Spotify \ud83c\udfa7",
+          "description": "<h3>Hey Angular people, what's up? \ud83d\ude06</h3><p>I wanted to introduce you my latest application: <strong>Angular Spotify.</strong></p><p><br></p><p>It is a simple Spotify client built with Angular 11, Nx workspace, ngrx, TailwindCSS and ng-zorro.</p><p><br></p><p>Check out the&nbsp;live application&nbsp;-&gt; <a href=\"https://spotify.trungk18.com\" rel=\"noopener noreferrer\" target=\"_blank\">https://spotify.trungk18.com</a></p><p><span style=\"color: var(--color-text-link);\">Source code: </span><a href=\"https://github.com/trungk18/angular-spotify\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/trungk18/angular-spotify</a></p><p><br></p><p>Spotify premium&nbsp;is required for the Web Playback SDK to play music. If you are using a free account, you can still browse the app, but it couldn't play the music. Sorry about that&nbsp;\ud83e\udd23</p><h2><br></h2><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" alt=\"Angular Spotify Demo\"></a></p><p><br></p><p><br></p><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" alt=\"Angular Spotify Visualizer\"></a></p><p><br></p>",
+          "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "userIds": [
+            "d65047e5-f4cf-4caa-9a38-6073dcbab7d1"
+          ],
+          "id": "2021",
+          "status": "Backlog",
+          "createdAt": "2021-04-28T14:56:55.049Z",
+          "updatedAt": "2021-04-28T14:56:57.748Z",
+          "listPosition": 1
+        },
+        "count": 16
+      },
+      "assertions": [
+        "reporter changed to Iron Man",
+        "assignees unchanged"
+      ],
+      "after": {
+        "projectName": "Angular Jira Clone",
+        "issue": {
+          "type": "Story",
+          "priority": "Highest",
+          "title": "Angular Spotify \ud83c\udfa7",
+          "description": "<h3>Hey Angular people, what's up? \ud83d\ude06</h3><p>I wanted to introduce you my latest application: <strong>Angular Spotify.</strong></p><p><br></p><p>It is a simple Spotify client built with Angular 11, Nx workspace, ngrx, TailwindCSS and ng-zorro.</p><p><br></p><p>Check out the&nbsp;live application&nbsp;-&gt; <a href=\"https://spotify.trungk18.com\" rel=\"noopener noreferrer\" target=\"_blank\">https://spotify.trungk18.com</a></p><p><span style=\"color: var(--color-text-link);\">Source code: </span><a href=\"https://github.com/trungk18/angular-spotify\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/trungk18/angular-spotify</a></p><p><br></p><p>Spotify premium&nbsp;is required for the Web Playback SDK to play music. If you are using a free account, you can still browse the app, but it couldn't play the music. Sorry about that&nbsp;\ud83e\udd23</p><h2><br></h2><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" alt=\"Angular Spotify Demo\"></a></p><p><br></p><p><br></p><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" alt=\"Angular Spotify Visualizer\"></a></p><p><br></p>",
+          "reporterId": "7ac265f9-b9ac-443f-a2b2-795682e579a4",
+          "userIds": [
+            "d65047e5-f4cf-4caa-9a38-6073dcbab7d1"
+          ],
+          "id": "2021",
+          "status": "Backlog",
+          "createdAt": "2021-04-28T14:56:55.049Z",
+          "updatedAt": "2026-11-09T20:03:20.225Z",
+          "listPosition": 1
+        },
+        "count": 16
+      }
+    },
+    {
+      "id": "issue-comment-add",
+      "status": "passed",
+      "actions": "DOM clicks/typing/pointer drag only",
+      "oracle": "read-only Angular Akita debug state + rendered UI",
+      "before": {
+        "projectName": "Angular Jira Clone",
+        "issue": {
+          "type": "Story",
+          "priority": "Highest",
+          "title": "Angular Spotify \ud83c\udfa7",
+          "description": "<h3>Hey Angular people, what's up? \ud83d\ude06</h3><p>I wanted to introduce you my latest application: <strong>Angular Spotify.</strong></p><p><br></p><p>It is a simple Spotify client built with Angular 11, Nx workspace, ngrx, TailwindCSS and ng-zorro.</p><p><br></p><p>Check out the&nbsp;live application&nbsp;-&gt; <a href=\"https://spotify.trungk18.com\" rel=\"noopener noreferrer\" target=\"_blank\">https://spotify.trungk18.com</a></p><p><span style=\"color: var(--color-text-link);\">Source code: </span><a href=\"https://github.com/trungk18/angular-spotify\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/trungk18/angular-spotify</a></p><p><br></p><p>Spotify premium&nbsp;is required for the Web Playback SDK to play music. If you are using a free account, you can still browse the app, but it couldn't play the music. Sorry about that&nbsp;\ud83e\udd23</p><h2><br></h2><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" alt=\"Angular Spotify Demo\"></a></p><p><br></p><p><br></p><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" alt=\"Angular Spotify Visualizer\"></a></p><p><br></p>",
+          "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "userIds": [
+            "d65047e5-f4cf-4caa-9a38-6073dcbab7d1"
+          ],
+          "id": "2021",
+          "status": "Backlog",
+          "createdAt": "2021-04-28T14:56:55.049Z",
+          "updatedAt": "2021-04-28T14:56:57.748Z",
+          "listPosition": 1
+        },
+        "count": 16
+      },
+      "assertions": [
+        "comment appended with body",
+        "draft cleared"
+      ],
+      "after": {
+        "projectName": "Angular Jira Clone",
+        "issue": {
+          "type": "Story",
+          "priority": "Highest",
+          "title": "Angular Spotify \ud83c\udfa7",
+          "description": "<h3>Hey Angular people, what's up? \ud83d\ude06</h3><p>I wanted to introduce you my latest application: <strong>Angular Spotify.</strong></p><p><br></p><p>It is a simple Spotify client built with Angular 11, Nx workspace, ngrx, TailwindCSS and ng-zorro.</p><p><br></p><p>Check out the&nbsp;live application&nbsp;-&gt; <a href=\"https://spotify.trungk18.com\" rel=\"noopener noreferrer\" target=\"_blank\">https://spotify.trungk18.com</a></p><p><span style=\"color: var(--color-text-link);\">Source code: </span><a href=\"https://github.com/trungk18/angular-spotify\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/trungk18/angular-spotify</a></p><p><br></p><p>Spotify premium&nbsp;is required for the Web Playback SDK to play music. If you are using a free account, you can still browse the app, but it couldn't play the music. Sorry about that&nbsp;\ud83e\udd23</p><h2><br></h2><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" alt=\"Angular Spotify Demo\"></a></p><p><br></p><p><br></p><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" alt=\"Angular Spotify Visualizer\"></a></p><p><br></p>",
+          "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "userIds": [
+            "d65047e5-f4cf-4caa-9a38-6073dcbab7d1"
+          ],
+          "id": "2021",
+          "status": "Backlog",
+          "createdAt": "2021-04-28T14:56:55.049Z",
+          "updatedAt": "2026-11-09T20:03:21.360Z",
+          "listPosition": 1,
+          "comments": [
+            {
+              "id": "1794254601360",
+              "issueId": "2021",
+              "user": {
+                "token": "1794254600442",
+                "loading": false,
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "name": "Trung Vo",
+                "avatarUrl": "https://res.cloudinary.com/dvujyxh7e/image/upload/c_scale,w_48/v1593253478/trung-vo_bioxmc.png",
+                "createdAt": "2020-06-16T16:00:00.000Z",
+                "updatedAt": "2020-06-16T16:00:00.000Z"
+              },
+              "createdAt": "2026-11-09T20:03:21.360Z",
+              "updatedAt": "2026-11-09T20:03:21.360Z",
+              "body": "Benchmark reconciliation complete"
+            }
+          ]
+        },
+        "count": 16
+      }
+    },
+    {
+      "id": "issue-delete",
+      "status": "passed",
+      "actions": "DOM clicks/typing/pointer drag only",
+      "oracle": "read-only Angular Akita debug state + rendered UI",
+      "before": {
+        "projectName": "Angular Jira Clone",
+        "issue": {
+          "type": "Story",
+          "priority": "Highest",
+          "title": "Angular Spotify \ud83c\udfa7",
+          "description": "<h3>Hey Angular people, what's up? \ud83d\ude06</h3><p>I wanted to introduce you my latest application: <strong>Angular Spotify.</strong></p><p><br></p><p>It is a simple Spotify client built with Angular 11, Nx workspace, ngrx, TailwindCSS and ng-zorro.</p><p><br></p><p>Check out the&nbsp;live application&nbsp;-&gt; <a href=\"https://spotify.trungk18.com\" rel=\"noopener noreferrer\" target=\"_blank\">https://spotify.trungk18.com</a></p><p><span style=\"color: var(--color-text-link);\">Source code: </span><a href=\"https://github.com/trungk18/angular-spotify\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/trungk18/angular-spotify</a></p><p><br></p><p>Spotify premium&nbsp;is required for the Web Playback SDK to play music. If you are using a free account, you can still browse the app, but it couldn't play the music. Sorry about that&nbsp;\ud83e\udd23</p><h2><br></h2><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" alt=\"Angular Spotify Demo\"></a></p><p><br></p><p><br></p><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" alt=\"Angular Spotify Visualizer\"></a></p><p><br></p>",
+          "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "userIds": [
+            "d65047e5-f4cf-4caa-9a38-6073dcbab7d1"
+          ],
+          "id": "2021",
+          "status": "Backlog",
+          "createdAt": "2021-04-28T14:56:55.049Z",
+          "updatedAt": "2021-04-28T14:56:57.748Z",
+          "listPosition": 1
+        },
+        "count": 16
+      },
+      "assertions": [
+        "confirmed issue deleted",
+        "full-page route returned to board",
+        "reload restores fixture"
+      ],
+      "after": {
+        "projectName": "Angular Jira Clone",
+        "issue": {
+          "type": "Story",
+          "priority": "Highest",
+          "title": "Angular Spotify \ud83c\udfa7",
+          "description": "<h3>Hey Angular people, what's up? \ud83d\ude06</h3><p>I wanted to introduce you my latest application: <strong>Angular Spotify.</strong></p><p><br></p><p>It is a simple Spotify client built with Angular 11, Nx workspace, ngrx, TailwindCSS and ng-zorro.</p><p><br></p><p>Check out the&nbsp;live application&nbsp;-&gt; <a href=\"https://spotify.trungk18.com\" rel=\"noopener noreferrer\" target=\"_blank\">https://spotify.trungk18.com</a></p><p><span style=\"color: var(--color-text-link);\">Source code: </span><a href=\"https://github.com/trungk18/angular-spotify\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/trungk18/angular-spotify</a></p><p><br></p><p>Spotify premium&nbsp;is required for the Web Playback SDK to play music. If you are using a free account, you can still browse the app, but it couldn't play the music. Sorry about that&nbsp;\ud83e\udd23</p><h2><br></h2><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" alt=\"Angular Spotify Demo\"></a></p><p><br></p><p><br></p><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" alt=\"Angular Spotify Visualizer\"></a></p><p><br></p>",
+          "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "userIds": [
+            "d65047e5-f4cf-4caa-9a38-6073dcbab7d1"
+          ],
+          "id": "2021",
+          "status": "Backlog",
+          "createdAt": "2021-04-28T14:56:55.049Z",
+          "updatedAt": "2021-04-28T14:56:57.748Z",
+          "listPosition": 1
+        },
+        "count": 16
+      }
+    },
+    {
+      "id": "board-issue-reorder",
+      "status": "passed",
+      "actions": "DOM clicks/typing/pointer drag only",
+      "oracle": "read-only Angular Akita debug state + rendered UI",
+      "before": {
+        "projectName": "Angular Jira Clone",
+        "issue": {
+          "type": "Story",
+          "priority": "Highest",
+          "title": "Angular Spotify \ud83c\udfa7",
+          "description": "<h3>Hey Angular people, what's up? \ud83d\ude06</h3><p>I wanted to introduce you my latest application: <strong>Angular Spotify.</strong></p><p><br></p><p>It is a simple Spotify client built with Angular 11, Nx workspace, ngrx, TailwindCSS and ng-zorro.</p><p><br></p><p>Check out the&nbsp;live application&nbsp;-&gt; <a href=\"https://spotify.trungk18.com\" rel=\"noopener noreferrer\" target=\"_blank\">https://spotify.trungk18.com</a></p><p><span style=\"color: var(--color-text-link);\">Source code: </span><a href=\"https://github.com/trungk18/angular-spotify\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/trungk18/angular-spotify</a></p><p><br></p><p>Spotify premium&nbsp;is required for the Web Playback SDK to play music. If you are using a free account, you can still browse the app, but it couldn't play the music. Sorry about that&nbsp;\ud83e\udd23</p><h2><br></h2><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" alt=\"Angular Spotify Demo\"></a></p><p><br></p><p><br></p><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" alt=\"Angular Spotify Visualizer\"></a></p><p><br></p>",
+          "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "userIds": [
+            "d65047e5-f4cf-4caa-9a38-6073dcbab7d1"
+          ],
+          "id": "2021",
+          "status": "Backlog",
+          "createdAt": "2021-04-28T14:56:55.049Z",
+          "updatedAt": "2021-04-28T14:56:57.748Z",
+          "listPosition": 1
+        },
+        "count": 16
+      },
+      "orderBefore": [
+        "2021",
+        "9584",
+        "9554"
+      ],
+      "orderAfter": [
+        "9584",
+        "2021",
+        "9554"
+      ],
+      "assertions": [
+        "real pointer drag changed issue order",
+        "one-based positions rewritten",
+        "status preserved"
+      ],
+      "after": {
+        "projectName": "Angular Jira Clone",
+        "issue": {
+          "type": "Story",
+          "priority": "Highest",
+          "title": "Angular Spotify \ud83c\udfa7",
+          "description": "<h3>Hey Angular people, what's up? \ud83d\ude06</h3><p>I wanted to introduce you my latest application: <strong>Angular Spotify.</strong></p><p><br></p><p>It is a simple Spotify client built with Angular 11, Nx workspace, ngrx, TailwindCSS and ng-zorro.</p><p><br></p><p>Check out the&nbsp;live application&nbsp;-&gt; <a href=\"https://spotify.trungk18.com\" rel=\"noopener noreferrer\" target=\"_blank\">https://spotify.trungk18.com</a></p><p><span style=\"color: var(--color-text-link);\">Source code: </span><a href=\"https://github.com/trungk18/angular-spotify\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/trungk18/angular-spotify</a></p><p><br></p><p>Spotify premium&nbsp;is required for the Web Playback SDK to play music. If you are using a free account, you can still browse the app, but it couldn't play the music. Sorry about that&nbsp;\ud83e\udd23</p><h2><br></h2><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" alt=\"Angular Spotify Demo\"></a></p><p><br></p><p><br></p><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" alt=\"Angular Spotify Visualizer\"></a></p><p><br></p>",
+          "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "userIds": [
+            "d65047e5-f4cf-4caa-9a38-6073dcbab7d1"
+          ],
+          "id": "2021",
+          "status": "Backlog",
+          "createdAt": "2021-04-28T14:56:55.049Z",
+          "updatedAt": "2026-11-09T20:03:24.539Z",
+          "listPosition": 2
+        },
+        "count": 16
+      }
+    },
+    {
+      "id": "board-issue-move",
+      "status": "passed",
+      "actions": "DOM clicks/typing/pointer drag only",
+      "oracle": "read-only Angular Akita debug state + rendered UI",
+      "before": {
+        "projectName": "Angular Jira Clone",
+        "issue": {
+          "type": "Story",
+          "priority": "Highest",
+          "title": "Angular Spotify \ud83c\udfa7",
+          "description": "<h3>Hey Angular people, what's up? \ud83d\ude06</h3><p>I wanted to introduce you my latest application: <strong>Angular Spotify.</strong></p><p><br></p><p>It is a simple Spotify client built with Angular 11, Nx workspace, ngrx, TailwindCSS and ng-zorro.</p><p><br></p><p>Check out the&nbsp;live application&nbsp;-&gt; <a href=\"https://spotify.trungk18.com\" rel=\"noopener noreferrer\" target=\"_blank\">https://spotify.trungk18.com</a></p><p><span style=\"color: var(--color-text-link);\">Source code: </span><a href=\"https://github.com/trungk18/angular-spotify\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/trungk18/angular-spotify</a></p><p><br></p><p>Spotify premium&nbsp;is required for the Web Playback SDK to play music. If you are using a free account, you can still browse the app, but it couldn't play the music. Sorry about that&nbsp;\ud83e\udd23</p><h2><br></h2><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" alt=\"Angular Spotify Demo\"></a></p><p><br></p><p><br></p><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" alt=\"Angular Spotify Visualizer\"></a></p><p><br></p>",
+          "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "userIds": [
+            "d65047e5-f4cf-4caa-9a38-6073dcbab7d1"
+          ],
+          "id": "2021",
+          "status": "Backlog",
+          "createdAt": "2021-04-28T14:56:55.049Z",
+          "updatedAt": "2021-04-28T14:56:57.748Z",
+          "listPosition": 1
+        },
+        "count": 16
+      },
+      "assertions": [
+        "real pointer drag moved issue to Selected",
+        "count preserved",
+        "source old-position overwrite reproduced"
+      ],
+      "after": {
+        "projectName": "Angular Jira Clone",
+        "issue": {
+          "type": "Story",
+          "priority": "Highest",
+          "title": "Angular Spotify \ud83c\udfa7",
+          "description": "<h3>Hey Angular people, what's up? \ud83d\ude06</h3><p>I wanted to introduce you my latest application: <strong>Angular Spotify.</strong></p><p><br></p><p>It is a simple Spotify client built with Angular 11, Nx workspace, ngrx, TailwindCSS and ng-zorro.</p><p><br></p><p>Check out the&nbsp;live application&nbsp;-&gt; <a href=\"https://spotify.trungk18.com\" rel=\"noopener noreferrer\" target=\"_blank\">https://spotify.trungk18.com</a></p><p><span style=\"color: var(--color-text-link);\">Source code: </span><a href=\"https://github.com/trungk18/angular-spotify\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/trungk18/angular-spotify</a></p><p><br></p><p>Spotify premium&nbsp;is required for the Web Playback SDK to play music. If you are using a free account, you can still browse the app, but it couldn't play the music. Sorry about that&nbsp;\ud83e\udd23</p><h2><br></h2><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" alt=\"Angular Spotify Demo\"></a></p><p><br></p><p><br></p><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" alt=\"Angular Spotify Visualizer\"></a></p><p><br></p>",
+          "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "userIds": [
+            "d65047e5-f4cf-4caa-9a38-6073dcbab7d1"
+          ],
+          "id": "2021",
+          "status": "Selected",
+          "createdAt": "2021-04-28T14:56:55.049Z",
+          "updatedAt": "2026-11-09T20:03:26.223Z",
+          "listPosition": 1
+        },
+        "count": 16
+      }
+    },
+    {
+      "id": "project-settings-update",
+      "status": "passed",
+      "actions": "DOM clicks/typing/pointer drag only",
+      "oracle": "read-only Angular Akita debug state + rendered UI",
+      "before": {
+        "projectName": "Angular Jira Clone",
+        "issue": {
+          "type": "Story",
+          "priority": "Highest",
+          "title": "Angular Spotify \ud83c\udfa7",
+          "description": "<h3>Hey Angular people, what's up? \ud83d\ude06</h3><p>I wanted to introduce you my latest application: <strong>Angular Spotify.</strong></p><p><br></p><p>It is a simple Spotify client built with Angular 11, Nx workspace, ngrx, TailwindCSS and ng-zorro.</p><p><br></p><p>Check out the&nbsp;live application&nbsp;-&gt; <a href=\"https://spotify.trungk18.com\" rel=\"noopener noreferrer\" target=\"_blank\">https://spotify.trungk18.com</a></p><p><span style=\"color: var(--color-text-link);\">Source code: </span><a href=\"https://github.com/trungk18/angular-spotify\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/trungk18/angular-spotify</a></p><p><br></p><p>Spotify premium&nbsp;is required for the Web Playback SDK to play music. If you are using a free account, you can still browse the app, but it couldn't play the music. Sorry about that&nbsp;\ud83e\udd23</p><h2><br></h2><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" alt=\"Angular Spotify Demo\"></a></p><p><br></p><p><br></p><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" alt=\"Angular Spotify Visualizer\"></a></p><p><br></p>",
+          "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "userIds": [
+            "d65047e5-f4cf-4caa-9a38-6073dcbab7d1"
+          ],
+          "id": "2021",
+          "status": "Backlog",
+          "createdAt": "2021-04-28T14:56:55.049Z",
+          "updatedAt": "2021-04-28T14:56:57.748Z",
+          "listPosition": 1
+        },
+        "count": 16
+      },
+      "assertions": [
+        "project metadata updated",
+        "issues unchanged",
+        "reload discards edits"
+      ],
+      "after": {
+        "projectName": "Angular Jira Clone",
+        "issue": {
+          "type": "Story",
+          "priority": "Highest",
+          "title": "Angular Spotify \ud83c\udfa7",
+          "description": "<h3>Hey Angular people, what's up? \ud83d\ude06</h3><p>I wanted to introduce you my latest application: <strong>Angular Spotify.</strong></p><p><br></p><p>It is a simple Spotify client built with Angular 11, Nx workspace, ngrx, TailwindCSS and ng-zorro.</p><p><br></p><p>Check out the&nbsp;live application&nbsp;-&gt; <a href=\"https://spotify.trungk18.com\" rel=\"noopener noreferrer\" target=\"_blank\">https://spotify.trungk18.com</a></p><p><span style=\"color: var(--color-text-link);\">Source code: </span><a href=\"https://github.com/trungk18/angular-spotify\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/trungk18/angular-spotify</a></p><p><br></p><p>Spotify premium&nbsp;is required for the Web Playback SDK to play music. If you are using a free account, you can still browse the app, but it couldn't play the music. Sorry about that&nbsp;\ud83e\udd23</p><h2><br></h2><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-demo-short.gif\" alt=\"Angular Spotify Demo\"></a></p><p><br></p><p><br></p><p><a href=\"https://github.com/trungk18/angular-spotify/blob/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--color-text-link); background-color: var(--color-bg-primary);\"><img src=\"https://github.com/trungk18/angular-spotify/raw/main/libs/web/shared/assets/src/assets/readme/angular-spotify-visualization.gif\" alt=\"Angular Spotify Visualizer\"></a></p><p><br></p>",
+          "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "userIds": [
+            "d65047e5-f4cf-4caa-9a38-6073dcbab7d1"
+          ],
+          "id": "2021",
+          "status": "Backlog",
+          "createdAt": "2021-04-28T14:56:55.049Z",
+          "updatedAt": "2021-04-28T14:56:57.748Z",
+          "listPosition": 1
+        },
+        "count": 16
+      }
+    }
+  ],
+  "executedAt": "2026-11-09",
+  "runnerNode": "v24.15.0",
+  "recordedAt": "2026-11-09T20:04:07.695978+00:00"
+}

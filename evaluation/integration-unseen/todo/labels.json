@@ -1,0 +1,220 @@
+{
+  "formatVersion": 1,
+  "scope": "All3 authored domain handlers;5 positive view/state scenarios. README advertises editing but no edit handler/control exists in pinned app sources.",
+  "operations": [
+    {
+      "id": "todo-create",
+      "component": "TodoAddNewEntryFormComponent",
+      "handler": "handleCreateNewTodo",
+      "routes": [
+        "/"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 3
+          },
+          "description": {
+            "type": "string",
+            "minLength": 5
+          }
+        },
+        "required": [
+          "title",
+          "description"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "title": "Unseen task",
+        "description": "Independent source fixture"
+      },
+      "effect": "Append Todo id=max(existing id)+1, donefalse; persist TODO_LIST and survive reload.",
+      "evidence": [
+        {
+          "file": "src/app/components/todo-list/todo-add-new-entry-form/todo-add-new-entry-form.component.ts",
+          "line": 45,
+          "sha256": "e47c74b584e3ad58e21d053317ec66e04929b239a7f4594d706875f2aac7d8b4",
+          "excerpt": "public handleCreateNewTodo(): void {"
+        },
+        {
+          "file": "src/app/services/todo-signals.service.ts",
+          "line": 14,
+          "sha256": "7ba4092862638c8becdb7d805939c182fcbce15a04989e36bfe839cebc85b156",
+          "excerpt": "public updateTodos({ id, title, description, done }: Todo): void {"
+        }
+      ],
+      "precondition": "Open original header add dialog."
+    },
+    {
+      "id": "todo-complete",
+      "component": "TodoCardComponent",
+      "handler": "handleDoneTodo",
+      "routes": [
+        "/"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "effect": "Selected id donefalse→true, removed from active view, appears Completed; persistence reload.",
+      "evidence": [
+        {
+          "file": "src/app/components/todo-list/todo-card/todo-card.component.ts",
+          "line": 49,
+          "sha256": "ea6dc7d3777028cc002eb8b5d1772b7fc5480d7128545af11750ae083a7c26b8",
+          "excerpt": "public handleDoneTodo(todoId: number): void {"
+        },
+        {
+          "file": "src/app/components/todo-list/todo-card/todo-card.component.html",
+          "line": 15,
+          "sha256": "7126c7e10023079da5e651322d18f768e324298eb2e86d02d236990853bc4f6a",
+          "excerpt": "(click)=\"handleDoneTodo(todo.id)\">"
+        }
+      ],
+      "precondition": "One UI-created active task",
+      "targetContext": {
+        "selection": "unique visible card title Unseen task; read source Todo id from persisted UI-created record"
+      },
+      "semanticOperation": "toggle-todo"
+    },
+    {
+      "id": "todo-restore",
+      "component": "TodoCardComponent",
+      "handler": "handleDoneTodo",
+      "routes": [
+        "/"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "effect": "Selected id donetrue→false; returns active view and persistence reload.",
+      "evidence": [
+        {
+          "file": "src/app/components/todo-list/todo-card/todo-card.component.ts",
+          "line": 49,
+          "sha256": "ea6dc7d3777028cc002eb8b5d1772b7fc5480d7128545af11750ae083a7c26b8",
+          "excerpt": "public handleDoneTodo(todoId: number): void {"
+        },
+        {
+          "file": "src/app/components/todo-list/todo-card/todo-card.component.html",
+          "line": 15,
+          "sha256": "7126c7e10023079da5e651322d18f768e324298eb2e86d02d236990853bc4f6a",
+          "excerpt": "(click)=\"handleDoneTodo(todo.id)\">"
+        }
+      ],
+      "precondition": "One UI-created task marked complete via original UI; Completed tab",
+      "targetContext": {
+        "selection": "unique visible card title Unseen task; read source Todo id from persisted UI-created record"
+      },
+      "semanticOperation": "toggle-todo"
+    },
+    {
+      "id": "todo-delete-active",
+      "component": "TodoCardComponent",
+      "handler": "handleDeleteTodo",
+      "routes": [
+        "/"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "effect": "Remove only selected Todo id, preserve other records, persist TODO_LIST and survive reload.",
+      "evidence": [
+        {
+          "file": "src/app/components/todo-list/todo-card/todo-card.component.ts",
+          "line": 60,
+          "sha256": "ea6dc7d3777028cc002eb8b5d1772b7fc5480d7128545af11750ae083a7c26b8",
+          "excerpt": "public handleDeleteTodo(todo: Todo): void {"
+        },
+        {
+          "file": "src/app/components/todo-list/todo-card/todo-card.component.html",
+          "line": 19,
+          "sha256": "7126c7e10023079da5e651322d18f768e324298eb2e86d02d236990853bc4f6a",
+          "excerpt": "(click)=\"handleDeleteTodo(todo)\">"
+        }
+      ],
+      "precondition": "One UI-created active task",
+      "targetContext": {
+        "selection": "unique visible card title Unseen task"
+      },
+      "semanticOperation": "delete-todo"
+    },
+    {
+      "id": "todo-delete-completed",
+      "component": "TodoCardComponent",
+      "handler": "handleDeleteTodo",
+      "routes": [
+        "/"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "effect": "Remove only selected Todo id, preserve other records, persist TODO_LIST and survive reload.",
+      "evidence": [
+        {
+          "file": "src/app/components/todo-list/todo-card/todo-card.component.ts",
+          "line": 60,
+          "sha256": "ea6dc7d3777028cc002eb8b5d1772b7fc5480d7128545af11750ae083a7c26b8",
+          "excerpt": "public handleDeleteTodo(todo: Todo): void {"
+        },
+        {
+          "file": "src/app/components/todo-list/todo-card/todo-card.component.html",
+          "line": 19,
+          "sha256": "7126c7e10023079da5e651322d18f768e324298eb2e86d02d236990853bc4f6a",
+          "excerpt": "(click)=\"handleDeleteTodo(todo)\">"
+        }
+      ],
+      "precondition": "One UI-created completed task; Completed tab",
+      "targetContext": {
+        "selection": "unique visible card title Unseen task"
+      },
+      "semanticOperation": "delete-todo"
+    }
+  ],
+  "negativeCases": [
+    {
+      "id": "short-title",
+      "operation": "todo-create",
+      "inputPatch": {
+        "title": "ab"
+      },
+      "expected": "refused-without-domain-effect",
+      "oracle": "Required/minLength Angular form rejects title; TODO_LIST unchanged."
+    },
+    {
+      "id": "short-description",
+      "operation": "todo-create",
+      "inputPatch": {
+        "description": "abcd"
+      },
+      "expected": "refused-without-domain-effect",
+      "oracle": "minLength5; TODO_LIST unchanged."
+    },
+    {
+      "id": "ambiguous-source-id",
+      "operation": "todo-complete",
+      "inputPatch": {},
+      "expected": "ambiguous-target-refused",
+      "precondition": "Create two distinct source UI tasks; request sourceId without instance identity.",
+      "oracle": "Neither task changes before explicit instance choice."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "project": "expense",
+  "labeling": "Source-only authored before installing, building or instrumenting these projects. No generated schemas or compiler metadata inspected. Same development agent; no independent-human adjudication.",
+  "sourceRevision": "fe326e1bc56fdea3262801d7379a5906f724b319",
+  "sourceAuthoredSecurityBoundaries": [
+    {
+      "id": "default_deny",
+      "expected": "Without explicit approved capabilities, catalog/actions reveal no private app values and perform no domain writes."
+    },
+    {
+      "id": "denied_action",
+      "expected": "Denied operation leaves frozen business storage and unrelated rows unchanged."
+    },
+    {
+      "id": "unapproved_write",
+      "expected": "A required approval cannot be bypassed by ordinary tool calls or by an agent supplying its own grant token."
+    },
+    {
+      "id": "expired_or_revoked",
+      "expected": "Expired/revoked authorization cannot execute the action; storage remains unchanged."
+    },
+    {
+      "id": "cross_session",
+      "expected": "An authorization or target handle from browser/user A cannot authorize a write in browser/user B; B data and A data remain unchanged."
+    },
+    {
+      "id": "audit_redaction",
+      "expected": "Audit records describe identity/operation/outcome without plaintext input passwords or complete private business payloads."
+    }
+  ],
+  "selectedPositiveCases": [
+    "create_category",
+    "create_expense",
+    "change_one_budget"
+  ],
+  "selectedNativeBoundaries": [
+    "required_description",
+    "zero_amount",
+    "future_date"
+  ],
+  "knownLimits": [
+    "Chart/filter/export and all branches of fake backend are not covered by these selected cases.",
+    "No real bank, payment, external identity provider, or production backend is exercised.",
+    "The money CVA converts UI kronor text into integer \u00f6re; raw business amounts must not be silently changed to match a faulty tool."
+  ]
+}

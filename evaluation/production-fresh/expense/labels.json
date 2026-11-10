@@ -1,0 +1,255 @@
+{
+  "formatVersion": 1,
+  "project": "expense",
+  "storageKey": "expense-tracker.v1",
+  "cases": [
+    {
+      "id": "create_category",
+      "kind": "positive",
+      "route": "/categories",
+      "input": {
+        "name": "Fresh access category",
+        "color": "#0072B2"
+      },
+      "ui": {
+        "form": "app-category-form form",
+        "fields": {
+          "name": "#category-name"
+        },
+        "commit": "app-category-form button[type=submit]"
+      },
+      "expected": {
+        "categoryFields": {
+          "name": "Fresh access category",
+          "color": "#0072B2",
+          "monthlyBudgetOre": null,
+          "archived": false
+        },
+        "generatedCategoryId": "cat-0001",
+        "otherCategoriesUnchanged": true
+      },
+      "evidence": [
+        {
+          "file": "src/app/features/categories/components/category-form/category-form.ts",
+          "line": 38,
+          "anchor": "protected submit(): void",
+          "sha256": "85eee65566848267408275acd537945091021ba1e3cdc1913b29806a5eb7ca74"
+        },
+        {
+          "file": "src/app/core/backend/fake-backend.interceptor.ts",
+          "line": 275,
+          "anchor": "function categoryCollection(",
+          "sha256": "07c01a73d78b4b88630e777493193d7d46583856d074ed70b4d670a64c47c30f"
+        }
+      ]
+    },
+    {
+      "id": "create_expense",
+      "kind": "positive",
+      "route": "/expenses/new",
+      "input": {
+        "description": "Fresh access lunch",
+        "amountOre": 12345,
+        "date": "2026-11-09",
+        "categoryId": "cat-groceries"
+      },
+      "ui": {
+        "form": "app-expense-form-page form",
+        "fields": {
+          "description": "#expense-description",
+          "amountOre": "app-money-input input",
+          "date": "#expense-date",
+          "categoryId": "#expense-category"
+        },
+        "uiMappings": {
+          "amountOre": "123,45"
+        },
+        "commit": "button[type=submit]"
+      },
+      "expected": {
+        "expenseFields": {
+          "id": "exp-0001",
+          "description": "Fresh access lunch",
+          "amountOre": 12345,
+          "date": "2026-11-09",
+          "categoryId": "cat-groceries",
+          "createdAt": "2026-11-10T12:00:00.000Z"
+        },
+        "otherExpensesUnchanged": true,
+        "categoriesUnchanged": true
+      },
+      "evidence": [
+        {
+          "file": "src/app/features/expenses/pages/expense-form-page/expense-form-page.ts",
+          "line": 138,
+          "anchor": "protected submit(): void",
+          "sha256": "a9a097e2f00332659538f0ac3142b6a7e8d50cbfd229c6eb2a1434806b87bc84"
+        },
+        {
+          "file": "src/app/shared/money-input/money-input.ts",
+          "line": 73,
+          "anchor": "protected onInput(",
+          "sha256": "b9fb91d6b5595f8b39998b943b1030431c80e41a7ed37f7983cd9b0df1e52a31"
+        },
+        {
+          "file": "src/app/core/backend/fake-backend.interceptor.ts",
+          "line": 158,
+          "anchor": "function expenseCollection(",
+          "sha256": "07c01a73d78b4b88630e777493193d7d46583856d074ed70b4d670a64c47c30f"
+        }
+      ]
+    },
+    {
+      "id": "change_one_budget",
+      "kind": "positive",
+      "route": "/categories",
+      "input": {
+        "categoryId": "cat-groceries",
+        "monthlyBudgetOre": 45678
+      },
+      "ui": {
+        "form": "app-budget-form form",
+        "fields": {
+          "monthlyBudgetOre": "#budget-cat-groceries"
+        },
+        "uiMappings": {
+          "monthlyBudgetOre": "456,78"
+        },
+        "commit": "app-budget-form button[type=submit]"
+      },
+      "expected": {
+        "categoryChanged": {
+          "id": "cat-groceries",
+          "monthlyBudgetOre": 45678
+        },
+        "otherCategoryUnchanged": true,
+        "expensesUnchanged": true
+      },
+      "evidence": [
+        {
+          "file": "src/app/features/categories/components/budget-form/budget-form.ts",
+          "line": 89,
+          "anchor": "protected save(): void",
+          "sha256": "4d85195296d94e5a91a08ef4feffda181ee79d6e912e5809004e123f5027f673"
+        },
+        {
+          "file": "src/app/features/categories/components/budget-form/budget-form.ts",
+          "line": 127,
+          "anchor": "private changedRows()",
+          "sha256": "4d85195296d94e5a91a08ef4feffda181ee79d6e912e5809004e123f5027f673"
+        }
+      ]
+    },
+    {
+      "id": "required_description",
+      "kind": "negative-native",
+      "route": "/expenses/new",
+      "input": {
+        "description": "",
+        "amountOre": 12345,
+        "date": "2026-11-09",
+        "categoryId": "cat-groceries"
+      },
+      "ui": {
+        "uiMappings": {
+          "amountOre": "123,45"
+        },
+        "commit": "button[type=submit]"
+      },
+      "expected": {
+        "databaseUnchanged": true,
+        "visibleErrorContains": "Say what this expense was for."
+      },
+      "evidence": [
+        {
+          "file": "src/app/features/expenses/pages/expense-form-page/expense-form-page.ts",
+          "line": 78,
+          "anchor": "Validators.required, Validators.maxLength",
+          "sha256": "a9a097e2f00332659538f0ac3142b6a7e8d50cbfd229c6eb2a1434806b87bc84"
+        }
+      ]
+    },
+    {
+      "id": "zero_amount",
+      "kind": "negative-native",
+      "route": "/expenses/new",
+      "input": {
+        "description": "Must not save zero",
+        "amountOre": 0,
+        "date": "2026-11-09",
+        "categoryId": "cat-groceries"
+      },
+      "ui": {
+        "uiMappings": {
+          "amountOre": "0,00"
+        },
+        "commit": "button[type=submit]"
+      },
+      "expected": {
+        "databaseUnchanged": true,
+        "amountInvalid": true
+      },
+      "evidence": [
+        {
+          "file": "src/app/features/expenses/expense-validators.ts",
+          "line": 18,
+          "anchor": "export const positiveAmount",
+          "sha256": "875cd5fca60b829ca698e69e6c2d5f7e00dd237322059f7e7a6d4e050f19b6cd"
+        }
+      ]
+    },
+    {
+      "id": "future_date",
+      "kind": "negative-native",
+      "route": "/expenses/new",
+      "input": {
+        "description": "Must not save future",
+        "amountOre": 12345,
+        "date": "2026-11-11",
+        "categoryId": "cat-groceries"
+      },
+      "ui": {
+        "uiMappings": {
+          "amountOre": "123,45"
+        },
+        "commit": "button[type=submit]"
+      },
+      "expected": {
+        "databaseUnchanged": true,
+        "dateInvalid": true
+      },
+      "evidence": [
+        {
+          "file": "src/app/features/expenses/expense-validators.ts",
+          "line": 44,
+          "anchor": "export function notFutureDate",
+          "sha256": "875cd5fca60b829ca698e69e6c2d5f7e00dd237322059f7e7a6d4e050f19b6cd"
+        }
+      ]
+    }
+  ],
+  "fixtures": {
+    "categories": [
+      {
+        "id": "cat-groceries",
+        "name": "Groceries",
+        "color": "#0072B2",
+        "monthlyBudgetOre": 10000,
+        "archived": false
+      },
+      {
+        "id": "cat-transport",
+        "name": "Transport",
+        "color": "#7C3AED",
+        "monthlyBudgetOre": 20000,
+        "archived": false
+      }
+    ],
+    "expenses": []
+  },
+  "excluded": [
+    "Chart/filter/export and all branches of fake backend are not covered by these selected cases.",
+    "No real bank, payment, external identity provider, or production backend is exercised.",
+    "The money CVA converts UI kronor text into integer \u00f6re; raw business amounts must not be silently changed to match a faulty tool."
+  ]
+}

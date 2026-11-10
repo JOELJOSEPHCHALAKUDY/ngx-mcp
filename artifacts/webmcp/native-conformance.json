@@ -1,0 +1,70 @@
+{
+  "formatVersion": 1,
+  "compilerDigestBefore": "681b7df0277c15aa1086e8951f1339755f13d02e9025786ddc119f3816776d8e",
+  "harnessSha256Before": {
+    "tests/integration-webmcp-browser.test.ts": "16c4c8263ff28ee61169674423af7330671ac25be77e93b8daf6d5f55cd9b518",
+    "evaluation/digest.mjs": "144d34b528858cda3c9f22b1011282cc3085a70b46082a1f71b838f6aebd3fa1",
+    "tooling/check-webmcp-evidence.mjs": "2944d388c8132bdae96ef08ba88a135e306edc554cf838f4e4d6bcae39ed1446"
+  },
+  "kind": "native-webmcp-conformance",
+  "startedAt": "2026-11-10T16:54:41.747Z",
+  "nativeVerified": true,
+  "browserChannel": "chrome",
+  "browserFlags": [
+    "--enable-features=WebMCP",
+    "--enable-blink-features=WebMCP"
+  ],
+  "modes": [
+    {
+      "mode": "mcp",
+      "productionAot": true,
+      "sourcePreserved": true,
+      "nativePublished": false,
+      "nodeAvailable": true,
+      "nativeEffectsVerified": false,
+      "sharedPageParity": false,
+      "pageLifecycle": false
+    },
+    {
+      "mode": "webmcp",
+      "productionAot": true,
+      "sourcePreserved": true,
+      "nativePublished": true,
+      "nodeAvailable": false,
+      "nativeEffectsVerified": true,
+      "sharedPageParity": false,
+      "pageLifecycle": true
+    },
+    {
+      "mode": "both",
+      "productionAot": true,
+      "sourcePreserved": true,
+      "nativePublished": true,
+      "nodeAvailable": true,
+      "nativeEffectsVerified": true,
+      "sharedPageParity": true,
+      "pageLifecycle": true
+    }
+  ],
+  "scope": "Native browser API and production Angular fixtures; no claim of ChatGPT or Claude product interoperability. Publisher lifecycle uses persisted page events, not actual BFCache navigation.",
+  "browserVersion": "157.0.8103.39",
+  "capability": {
+    "secure": true,
+    "current": true,
+    "register": "function",
+    "getTools": "function",
+    "executeTool": "function",
+    "nativeMethods": true,
+    "legacy": false
+  },
+  "finishedAt": "2026-11-10T16:54:54.217Z",
+  "resourcesClosed": true,
+  "compilerDigestAfter": "681b7df0277c15aa1086e8951f1339755f13d02e9025786ddc119f3816776d8e",
+  "compilerStable": true,
+  "harnessSha256After": {
+    "tests/integration-webmcp-browser.test.ts": "16c4c8263ff28ee61169674423af7330671ac25be77e93b8daf6d5f55cd9b518",
+    "evaluation/digest.mjs": "144d34b528858cda3c9f22b1011282cc3085a70b46082a1f71b838f6aebd3fa1",
+    "tooling/check-webmcp-evidence.mjs": "2944d388c8132bdae96ef08ba88a135e306edc554cf838f4e4d6bcae39ed1446"
+  },
+  "harnessStable": true
+}

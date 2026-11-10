@@ -1,0 +1,668 @@
+{
+  "formatVersion": 1,
+  "compilerVersion": "0.1.0",
+  "sourceDigest": "ab759b6240a60eadbfdc987f484ba598dabcec4f99557eeb7a691c39a2840b3d",
+  "routes": [
+    {
+      "path": "/",
+      "component": "HomeComponent",
+      "guards": []
+    },
+    {
+      "path": "/about",
+      "component": "AboutComponent",
+      "guards": []
+    },
+    {
+      "path": "/add-new-course",
+      "component": "CreateCourseComponent",
+      "guards": []
+    },
+    {
+      "path": "/courses/:id",
+      "component": "CourseComponent",
+      "guards": []
+    },
+    {
+      "path": "/login",
+      "component": "LoginReactiveComponent",
+      "guards": []
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "/#AppComponent.navigate:app-root a[routerlink]",
+      "fingerprint": "43dd0c862d37017a24407ae11b4b286246386ac4839865de68089f4a7a2b17b2",
+      "route": "/",
+      "component": "AppComponent",
+      "componentSelector": "app-root",
+      "action": {
+        "owner": "app-root",
+        "kind": "workflow",
+        "selector": "app-root",
+        "label": "Navigate through authored links",
+        "event": "click",
+        "expression": "routerLink",
+        "source": {
+          "file": "app/app.component.html",
+          "line": 6
+        }
+      },
+      "drive": {
+        "buttons": {
+          "param": "route",
+          "choices": [
+            {
+              "value": "/",
+              "selector": "app-root a[routerlink=\"/\"]",
+              "matchText": "library_books Courses"
+            },
+            {
+              "value": "/about",
+              "selector": "app-root a[routerlink=\"/about\"]",
+              "matchText": "question_answer About"
+            },
+            {
+              "value": "/login",
+              "selector": "app-root a[routerlink=\"/login\"]",
+              "matchText": "account_circle Login"
+            }
+          ]
+        }
+      },
+      "fields": [],
+      "handler": "navigate",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "route": {
+            "type": "string",
+            "enum": [
+              "/",
+              "/about",
+              "/login"
+            ]
+          }
+        },
+        "required": [
+          "route"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate",
+      "global": true
+    },
+    {
+      "id": "/#CoursesCardListComponent.editCourse:courses-card-list button[color=\"accent\"]",
+      "fingerprint": "0fd3ea9a3e1598daee51dca17d9589bdeb5edc00c9ebd2a3344f82cdd0822a06",
+      "route": "/",
+      "target": {
+        "param": "id",
+        "source": "context",
+        "path": [
+          "id"
+        ]
+      },
+      "component": "CoursesCardListComponent",
+      "componentSelector": "courses-card-list",
+      "action": {
+        "owner": "courses-card-list",
+        "matchText": "EDIT",
+        "kind": "button",
+        "selector": "courses-card-list button[color=\"accent\"]",
+        "label": "EDIT",
+        "event": "click",
+        "expression": "editCourse(course)",
+        "source": {
+          "file": "app/courses-card-list/courses-card-list.component.html",
+          "line": 17
+        }
+      },
+      "fields": [],
+      "handler": "editCourse",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/add-new-course#CreateCourseStep1Component.edit_form:create-course-step-1",
+      "fingerprint": "a7fa9d0ec0b5f04f107b96122df059a84efad3670eba9dfaa71ec9ca410764df",
+      "route": "/add-new-course",
+      "component": "CreateCourseStep1Component",
+      "componentSelector": "create-course-step-1",
+      "action": {
+        "kind": "workflow",
+        "selector": "create-course-step-1",
+        "label": "Edit form and save draft",
+        "event": "valueChanges",
+        "expression": "form.valueChanges → localStorage.setItem(\"STEP_1\")",
+        "source": {
+          "file": "app/create-course/create-course-step-1/create-course-step-1.component.ts",
+          "line": 60
+        }
+      },
+      "plan": {
+        "mode": "edit",
+        "root": "create-course-step-1",
+        "repeats": [],
+        "effect": {
+          "kind": "local-storage",
+          "key": "STEP_1",
+          "source": {
+            "file": "app/create-course/create-course-step-1/create-course-step-1.component.ts",
+            "line": 60
+          }
+        }
+      },
+      "fields": [
+        {
+          "name": "title",
+          "selector": "input[formcontrolname=\"title\"]",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 60
+          },
+          "adapter": "native"
+        },
+        {
+          "name": "category",
+          "selector": "mat-select[formcontrolname=\"category\"]",
+          "element": "mat-select",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "description": "The visible option label in the current application.",
+            "minLength": 1
+          },
+          "adapter": "material-select",
+          "dynamicOptions": true
+        },
+        {
+          "name": "releasedAt",
+          "selector": "input[formcontrolname=\"releasedAt\"]",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "minLength": 1
+          },
+          "adapter": "datepicker"
+        },
+        {
+          "name": "downloadsAllowed",
+          "selector": "mat-checkbox[formcontrolname=\"downloadsAllowed\"]",
+          "element": "mat-checkbox",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "boolean",
+            "const": true
+          },
+          "adapter": "material-checkbox"
+        },
+        {
+          "name": "longDescription",
+          "selector": "textarea[formcontrolname=\"longDescription\"]",
+          "element": "textarea",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "minLength": 3
+          },
+          "adapter": "native"
+        }
+      ],
+      "handler": "edit_form",
+      "callPath": [
+        "CreateCourseStep1Component.form.valueChanges",
+        "localStorage.setItem"
+      ],
+      "bindings": [],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 60
+          },
+          "category": {
+            "type": "string",
+            "description": "The visible option label in the current application.",
+            "minLength": 1
+          },
+          "releasedAt": {
+            "type": "string",
+            "minLength": 1
+          },
+          "downloadsAllowed": {
+            "type": "boolean",
+            "const": true
+          },
+          "longDescription": {
+            "type": "string",
+            "minLength": 3
+          }
+        },
+        "required": [],
+        "additionalProperties": false,
+        "minProperties": 1
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/add-new-course#FileUploadComponent.onFileSelected:file-upload input.file-input",
+      "fingerprint": "b138b846dbbab1c5c5cdec55fddb9b56ba1c8eebcc1d89e82b5e81acff292ec5",
+      "route": "/add-new-course",
+      "component": "FileUploadComponent",
+      "componentSelector": "file-upload",
+      "action": {
+        "owner": "file-upload",
+        "kind": "workflow",
+        "selector": "file-upload input.file-input",
+        "label": "Choose file",
+        "event": "change",
+        "expression": "onFileSelected()",
+        "source": {
+          "file": "app/file-upload/file-upload.component.html",
+          "line": 3
+        }
+      },
+      "fields": [],
+      "drive": {
+        "file": {
+          "selector": "file-upload input.file-input",
+          "param": "file"
+        }
+      },
+      "handler": "onFileSelected",
+      "callPath": [
+        "FileUploadComponent.onFileSelected",
+        "HttpClient.post"
+      ],
+      "bindings": [
+        {
+          "token": "HttpClient",
+          "service": "HttpClient",
+          "method": "post",
+          "source": {
+            "file": "app/file-upload/file-upload.component.ts",
+            "line": 71
+          },
+          "arguments": [
+            "\"/api/thumbnail-upload\"",
+            "formData",
+            "{\n                reportProgress: true,\n                observe: 'events'\n            }"
+          ],
+          "inputSchema": {
+            "type": "object"
+          },
+          "outputSchema": true,
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "mimeType": {
+                "type": "string",
+                "minLength": 1
+              },
+              "base64": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 7000000
+              }
+            },
+            "required": [
+              "name",
+              "mimeType",
+              "base64"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "file"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/courses/:id#CourseComponent.loadLessonsPage:course",
+      "fingerprint": "63d7ef3fc6f10a363d88c00255eeb8c0cb44520fd8bc15f439e5314485a55261",
+      "route": "/courses/:id",
+      "routeParams": [
+        "id"
+      ],
+      "component": "CourseComponent",
+      "componentSelector": "course",
+      "action": {
+        "kind": "workflow",
+        "selector": "course",
+        "label": "Filter, sort or paginate",
+        "event": "widget",
+        "expression": "loadLessonsPage()",
+        "source": {
+          "file": "app/course/course.component.ts",
+          "line": 73
+        }
+      },
+      "fields": [],
+      "drive": {
+        "paginator": {
+          "selector": "course mat-paginator",
+          "page": "page",
+          "pageSize": "pageSize",
+          "sizes": [
+            3,
+            5,
+            10
+          ]
+        },
+        "sort": {
+          "selector": "course [matsort]",
+          "param": "sort"
+        },
+        "search": {
+          "selector": "course input[placeholder=\"Search lessons\"]",
+          "param": "filter"
+        }
+      },
+      "handler": "loadLessonsPage",
+      "callPath": [
+        "CourseComponent.loadLessonsPage"
+      ],
+      "bindings": [],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          },
+          "filter": {
+            "type": "string"
+          },
+          "sort": {
+            "type": "string",
+            "enum": [
+              "asc",
+              "desc"
+            ]
+          },
+          "page": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "pageSize": {
+            "type": "integer",
+            "enum": [
+              3,
+              5,
+              10
+            ]
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/login#LoginReactiveComponent.reset:login button",
+      "fingerprint": "1518aae28c528dfbc19062bf009e0edfbc40f84df6e0b967c311af30bc0ae3c1",
+      "route": "/login",
+      "component": "LoginReactiveComponent",
+      "componentSelector": "login",
+      "action": {
+        "owner": "login",
+        "kind": "form",
+        "selector": "login form.login-form.data-form",
+        "label": "Reset",
+        "event": "click",
+        "expression": "reset()",
+        "source": {
+          "file": "app/login-reactive/login-reactive.component.html",
+          "line": 58
+        }
+      },
+      "fields": [
+        {
+          "name": "email",
+          "selector": "input[formcontrolname=\"email\"]",
+          "element": "input",
+          "type": "email",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+            "minLength": 1
+          }
+        },
+        {
+          "name": "password",
+          "selector": "input[formcontrolname=\"password\"]",
+          "element": "input",
+          "type": "password",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "writeOnly": true,
+            "minLength": 8
+          }
+        }
+      ],
+      "plan": {
+        "mode": "submit",
+        "root": "login",
+        "submit": {
+          "selector": "form.login-form.data-form button",
+          "label": "Reset"
+        },
+        "repeats": []
+      },
+      "handler": "reset",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+            "minLength": 1
+          },
+          "password": {
+            "type": "string",
+            "writeOnly": true,
+            "minLength": 8
+          }
+        },
+        "required": [
+          "email",
+          "password"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    }
+  ],
+  "diagnostics": []
+}

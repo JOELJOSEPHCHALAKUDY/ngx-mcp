@@ -1,0 +1,1696 @@
+{
+  "reportKind": "first-pass-integration-mcp",
+  "startedAt": "2026-11-10T09:50:24.992Z",
+  "mode": "mcp",
+  "node": "v24.15.0",
+  "fixedBrowserTime": "2026-11-10T12:00:00Z",
+  "externalNetwork": "All origins blocked except designated local app; /api handled by deterministic in-process source-contract fixture.",
+  "sourceOverlays": [],
+  "frozenInputRewrites": [],
+  "harnessSha256": {
+    "run.mjs": "f0c4d2ff0f5adedb13a36ea7717d053f921e9191ffd534eb128155433e7ea980",
+    "fixtures.mjs": "7b72ec43cbce41869828da3ec2501c4deb336530ff234f3404a7b61638e04a45",
+    "cases.mjs": "dcca3bce75745356b5396c80a4654f6e26662e0febed92a46769b2db151a39fa"
+  },
+  "projects": [
+    {
+      "id": "todo",
+      "commit": "391435fc4edf819abf4f507187fc0364ac26e00b",
+      "integrity": {
+        "frozen": true,
+        "files": 42,
+        "labelsSha256": "e934aa2c5c445ec32d635bac3bcc04e151cc3dbde2642110123e1105737667c4"
+      },
+      "cases": [
+        {
+          "id": "todo-create",
+          "operation": "todo-create",
+          "kind": "positive",
+          "frozenInput": {
+            "title": "Unseen task",
+            "description": "Independent source fixture"
+          },
+          "calls": [
+            {
+              "name": "angular_list_nodes",
+              "args": {},
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "[{\"sourceId\":\"ngmcp_40d8cde29c7264fb5635ebcb\",\"instanceId\":\"ngmcp_40d8cde29c7264fb5635ebcb@1\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Add new task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}}]"
+                  }
+                ],
+                "structuredContent": {
+                  "nodes": [
+                    {
+                      "sourceId": "ngmcp_40d8cde29c7264fb5635ebcb",
+                      "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@1",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Add new task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_activate",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@1"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"status\":\"ui-dispatched\",\"operation\":\"activate\",\"target\":{\"sourceId\":\"ngmcp_40d8cde29c7264fb5635ebcb\",\"instanceId\":\"ngmcp_40d8cde29c7264fb5635ebcb@1\"},\"changed\":[],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"url\":\"http://127.0.0.1:4362/\",\"businessStatus\":\"unknown\"}"
+                  }
+                ],
+                "structuredContent": {
+                  "status": "ui-dispatched",
+                  "operation": "activate",
+                  "target": {
+                    "sourceId": "ngmcp_40d8cde29c7264fb5635ebcb",
+                    "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@1"
+                  },
+                  "changed": [],
+                  "validation": {
+                    "status": "unknown",
+                    "fields": [],
+                    "groups": []
+                  },
+                  "url": "http://127.0.0.1:4362/",
+                  "businessStatus": "unknown"
+                }
+              }
+            },
+            {
+              "name": "angular_submit",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_341ed2406654782eb89c556f@2"
+                },
+                "values": [
+                  {
+                    "target": {
+                      "instanceId": "ngmcp_9607436ceb44f02be38e98f5@3"
+                    },
+                    "value": "Unseen task"
+                  },
+                  {
+                    "target": {
+                      "instanceId": "ngmcp_0ab78608f4d0958404270cba@4"
+                    },
+                    "value": "Independent source fixture"
+                  }
+                ]
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"status\":\"ui-dispatched\",\"operation\":\"submit\",\"target\":{\"sourceId\":\"ngmcp_341ed2406654782eb89c556f\",\"instanceId\":\"ngmcp_341ed2406654782eb89c556f@2\"},\"changed\":[\"ngmcp_9607436ceb44f02be38e98f5@3\",\"ngmcp_0ab78608f4d0958404270cba@4\"],\"validation\":{\"status\":\"valid\",\"fields\":[{\"sourceId\":\"ngmcp_9607436ceb44f02be38e98f5\",\"instanceId\":\"ngmcp_9607436ceb44f02be38e98f5@3\",\"path\":[\"title\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]},{\"sourceId\":\"ngmcp_0ab78608f4d0958404270cba\",\"instanceId\":\"ngmcp_0ab78608f4d0958404270cba@4\",\"path\":[\"description\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[{\"path\":[],\"status\":\"VALID\",\"errors\":[]}]},\"url\":\"http://127.0.0.1:4362/\",\"businessStatus\":\"unknown\"}"
+                  }
+                ],
+                "structuredContent": {
+                  "status": "ui-dispatched",
+                  "operation": "submit",
+                  "target": {
+                    "sourceId": "ngmcp_341ed2406654782eb89c556f",
+                    "instanceId": "ngmcp_341ed2406654782eb89c556f@2"
+                  },
+                  "changed": [
+                    "ngmcp_9607436ceb44f02be38e98f5@3",
+                    "ngmcp_0ab78608f4d0958404270cba@4"
+                  ],
+                  "validation": {
+                    "status": "valid",
+                    "fields": [
+                      {
+                        "sourceId": "ngmcp_9607436ceb44f02be38e98f5",
+                        "instanceId": "ngmcp_9607436ceb44f02be38e98f5@3",
+                        "path": [
+                          "title"
+                        ],
+                        "status": "VALID",
+                        "updateOn": "change",
+                        "errors": []
+                      },
+                      {
+                        "sourceId": "ngmcp_0ab78608f4d0958404270cba",
+                        "instanceId": "ngmcp_0ab78608f4d0958404270cba@4",
+                        "path": [
+                          "description"
+                        ],
+                        "status": "VALID",
+                        "updateOn": "change",
+                        "errors": []
+                      }
+                    ],
+                    "groups": [
+                      {
+                        "path": [],
+                        "status": "VALID",
+                        "errors": []
+                      }
+                    ]
+                  },
+                  "url": "http://127.0.0.1:4362/",
+                  "businessStatus": "unknown"
+                }
+              }
+            }
+          ],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4362/",
+            "meta": {}
+          },
+          "before": null,
+          "businessInput": {
+            "title": "Unseen task",
+            "description": "Independent source fixture"
+          },
+          "after": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": false
+            }
+          ],
+          "oracle": {
+            "businessEffect": true
+          },
+          "persistedAfterReload": true,
+          "status": "passed",
+          "pageErrors": []
+        },
+        {
+          "id": "todo-complete",
+          "operation": "todo-complete",
+          "kind": "positive",
+          "frozenInput": {},
+          "targetContext": {
+            "selection": "unique visible card title Unseen task; read source Todo id from persisted UI-created record"
+          },
+          "calls": [
+            {
+              "name": "angular_list_nodes",
+              "args": {},
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "[{\"sourceId\":\"ngmcp_40d8cde29c7264fb5635ebcb\",\"instanceId\":\"ngmcp_40d8cde29c7264fb5635ebcb@1\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Add new task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_3f574704c520c7798bc3efed\",\"instanceId\":\"ngmcp_3f574704c520c7798bc3efed@7\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Complete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_c96203c38a8ee0740167488d\",\"instanceId\":\"ngmcp_c96203c38a8ee0740167488d@8\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Delete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}}]"
+                  }
+                ],
+                "structuredContent": {
+                  "nodes": [
+                    {
+                      "sourceId": "ngmcp_40d8cde29c7264fb5635ebcb",
+                      "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@1",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Add new task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_3f574704c520c7798bc3efed",
+                      "instanceId": "ngmcp_3f574704c520c7798bc3efed@7",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Complete Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_c96203c38a8ee0740167488d",
+                      "instanceId": "ngmcp_c96203c38a8ee0740167488d@8",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Delete Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_activate",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_3f574704c520c7798bc3efed@7"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"status\":\"ui-dispatched\",\"operation\":\"activate\",\"target\":{\"sourceId\":\"ngmcp_3f574704c520c7798bc3efed\",\"instanceId\":\"ngmcp_3f574704c520c7798bc3efed@7\"},\"changed\":[],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"url\":\"http://127.0.0.1:4362/\",\"businessStatus\":\"unknown\"}"
+                  }
+                ],
+                "structuredContent": {
+                  "status": "ui-dispatched",
+                  "operation": "activate",
+                  "target": {
+                    "sourceId": "ngmcp_3f574704c520c7798bc3efed",
+                    "instanceId": "ngmcp_3f574704c520c7798bc3efed@7"
+                  },
+                  "changed": [],
+                  "validation": {
+                    "status": "unknown",
+                    "fields": [],
+                    "groups": []
+                  },
+                  "url": "http://127.0.0.1:4362/",
+                  "businessStatus": "unknown"
+                }
+              }
+            }
+          ],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4362/",
+            "meta": {
+              "todo": {
+                "id": 1,
+                "title": "Unseen task",
+                "description": "Independent source fixture",
+                "done": false
+              }
+            }
+          },
+          "before": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": false
+            }
+          ],
+          "businessInput": {},
+          "after": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": true
+            }
+          ],
+          "oracle": {
+            "businessEffect": true
+          },
+          "persistedAfterReload": true,
+          "status": "passed",
+          "pageErrors": []
+        },
+        {
+          "id": "todo-restore",
+          "operation": "todo-restore",
+          "kind": "positive",
+          "frozenInput": {},
+          "targetContext": {
+            "selection": "unique visible card title Unseen task; read source Todo id from persisted UI-created record"
+          },
+          "calls": [
+            {
+              "name": "angular_list_nodes",
+              "args": {},
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "[{\"sourceId\":\"ngmcp_40d8cde29c7264fb5635ebcb\",\"instanceId\":\"ngmcp_40d8cde29c7264fb5635ebcb@1\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Add new task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_0bb7269bada85778da1eaad1\",\"instanceId\":\"ngmcp_0bb7269bada85778da1eaad1@9\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Restore Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_e6f6d0eaf4624331cb22bd15\",\"instanceId\":\"ngmcp_e6f6d0eaf4624331cb22bd15@10\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Delete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}}]"
+                  }
+                ],
+                "structuredContent": {
+                  "nodes": [
+                    {
+                      "sourceId": "ngmcp_40d8cde29c7264fb5635ebcb",
+                      "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@1",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Add new task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_0bb7269bada85778da1eaad1",
+                      "instanceId": "ngmcp_0bb7269bada85778da1eaad1@9",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Restore Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_e6f6d0eaf4624331cb22bd15",
+                      "instanceId": "ngmcp_e6f6d0eaf4624331cb22bd15@10",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Delete Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_activate",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_0bb7269bada85778da1eaad1@9"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"status\":\"ui-dispatched\",\"operation\":\"activate\",\"target\":{\"sourceId\":\"ngmcp_0bb7269bada85778da1eaad1\",\"instanceId\":\"ngmcp_0bb7269bada85778da1eaad1@9\"},\"changed\":[],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"url\":\"http://127.0.0.1:4362/\",\"businessStatus\":\"unknown\"}"
+                  }
+                ],
+                "structuredContent": {
+                  "status": "ui-dispatched",
+                  "operation": "activate",
+                  "target": {
+                    "sourceId": "ngmcp_0bb7269bada85778da1eaad1",
+                    "instanceId": "ngmcp_0bb7269bada85778da1eaad1@9"
+                  },
+                  "changed": [],
+                  "validation": {
+                    "status": "unknown",
+                    "fields": [],
+                    "groups": []
+                  },
+                  "url": "http://127.0.0.1:4362/",
+                  "businessStatus": "unknown"
+                }
+              }
+            }
+          ],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4362/",
+            "meta": {
+              "todo": {
+                "id": 1,
+                "title": "Unseen task",
+                "description": "Independent source fixture",
+                "done": false
+              }
+            }
+          },
+          "before": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": true
+            }
+          ],
+          "businessInput": {},
+          "after": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": false
+            }
+          ],
+          "oracle": {
+            "businessEffect": true
+          },
+          "persistedAfterReload": true,
+          "status": "passed",
+          "pageErrors": []
+        },
+        {
+          "id": "todo-delete-active",
+          "operation": "todo-delete-active",
+          "kind": "positive",
+          "frozenInput": {},
+          "targetContext": {
+            "selection": "unique visible card title Unseen task"
+          },
+          "calls": [
+            {
+              "name": "angular_list_nodes",
+              "args": {},
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "[{\"sourceId\":\"ngmcp_40d8cde29c7264fb5635ebcb\",\"instanceId\":\"ngmcp_40d8cde29c7264fb5635ebcb@1\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Add new task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_3f574704c520c7798bc3efed\",\"instanceId\":\"ngmcp_3f574704c520c7798bc3efed@7\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Complete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_c96203c38a8ee0740167488d\",\"instanceId\":\"ngmcp_c96203c38a8ee0740167488d@8\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Delete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}}]"
+                  }
+                ],
+                "structuredContent": {
+                  "nodes": [
+                    {
+                      "sourceId": "ngmcp_40d8cde29c7264fb5635ebcb",
+                      "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@1",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Add new task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_3f574704c520c7798bc3efed",
+                      "instanceId": "ngmcp_3f574704c520c7798bc3efed@7",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Complete Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_c96203c38a8ee0740167488d",
+                      "instanceId": "ngmcp_c96203c38a8ee0740167488d@8",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Delete Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_activate",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_c96203c38a8ee0740167488d@8"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"status\":\"ui-dispatched\",\"operation\":\"activate\",\"target\":{\"sourceId\":\"ngmcp_c96203c38a8ee0740167488d\",\"instanceId\":\"ngmcp_c96203c38a8ee0740167488d@8\"},\"changed\":[],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"url\":\"http://127.0.0.1:4362/\",\"businessStatus\":\"unknown\"}"
+                  }
+                ],
+                "structuredContent": {
+                  "status": "ui-dispatched",
+                  "operation": "activate",
+                  "target": {
+                    "sourceId": "ngmcp_c96203c38a8ee0740167488d",
+                    "instanceId": "ngmcp_c96203c38a8ee0740167488d@8"
+                  },
+                  "changed": [],
+                  "validation": {
+                    "status": "unknown",
+                    "fields": [],
+                    "groups": []
+                  },
+                  "url": "http://127.0.0.1:4362/",
+                  "businessStatus": "unknown"
+                }
+              }
+            }
+          ],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4362/",
+            "meta": {
+              "todo": {
+                "id": 1,
+                "title": "Unseen task",
+                "description": "Independent source fixture",
+                "done": false
+              }
+            }
+          },
+          "before": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": false
+            }
+          ],
+          "businessInput": {},
+          "after": [],
+          "oracle": {
+            "businessEffect": true
+          },
+          "persistedAfterReload": true,
+          "status": "passed",
+          "pageErrors": []
+        },
+        {
+          "id": "todo-delete-completed",
+          "operation": "todo-delete-completed",
+          "kind": "positive",
+          "frozenInput": {},
+          "targetContext": {
+            "selection": "unique visible card title Unseen task"
+          },
+          "calls": [
+            {
+              "name": "angular_list_nodes",
+              "args": {},
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "[{\"sourceId\":\"ngmcp_40d8cde29c7264fb5635ebcb\",\"instanceId\":\"ngmcp_40d8cde29c7264fb5635ebcb@1\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Add new task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_0bb7269bada85778da1eaad1\",\"instanceId\":\"ngmcp_0bb7269bada85778da1eaad1@9\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Restore Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_e6f6d0eaf4624331cb22bd15\",\"instanceId\":\"ngmcp_e6f6d0eaf4624331cb22bd15@10\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Delete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}}]"
+                  }
+                ],
+                "structuredContent": {
+                  "nodes": [
+                    {
+                      "sourceId": "ngmcp_40d8cde29c7264fb5635ebcb",
+                      "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@1",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Add new task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_0bb7269bada85778da1eaad1",
+                      "instanceId": "ngmcp_0bb7269bada85778da1eaad1@9",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Restore Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_e6f6d0eaf4624331cb22bd15",
+                      "instanceId": "ngmcp_e6f6d0eaf4624331cb22bd15@10",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Delete Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_activate",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_e6f6d0eaf4624331cb22bd15@10"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"status\":\"ui-dispatched\",\"operation\":\"activate\",\"target\":{\"sourceId\":\"ngmcp_e6f6d0eaf4624331cb22bd15\",\"instanceId\":\"ngmcp_e6f6d0eaf4624331cb22bd15@10\"},\"changed\":[],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"url\":\"http://127.0.0.1:4362/\",\"businessStatus\":\"unknown\"}"
+                  }
+                ],
+                "structuredContent": {
+                  "status": "ui-dispatched",
+                  "operation": "activate",
+                  "target": {
+                    "sourceId": "ngmcp_e6f6d0eaf4624331cb22bd15",
+                    "instanceId": "ngmcp_e6f6d0eaf4624331cb22bd15@10"
+                  },
+                  "changed": [],
+                  "validation": {
+                    "status": "unknown",
+                    "fields": [],
+                    "groups": []
+                  },
+                  "url": "http://127.0.0.1:4362/",
+                  "businessStatus": "unknown"
+                }
+              }
+            }
+          ],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4362/",
+            "meta": {
+              "todo": {
+                "id": 1,
+                "title": "Unseen task",
+                "description": "Independent source fixture",
+                "done": false
+              }
+            }
+          },
+          "before": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": true
+            }
+          ],
+          "businessInput": {},
+          "after": [],
+          "oracle": {
+            "businessEffect": true
+          },
+          "persistedAfterReload": true,
+          "status": "passed",
+          "pageErrors": []
+        },
+        {
+          "id": "short-title",
+          "operation": "todo-create",
+          "kind": "negative",
+          "frozenInput": {
+            "title": "Unseen task",
+            "description": "Independent source fixture"
+          },
+          "inputPatch": {
+            "title": "ab"
+          },
+          "calls": [
+            {
+              "name": "angular_list_nodes",
+              "args": {},
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "[{\"sourceId\":\"ngmcp_40d8cde29c7264fb5635ebcb\",\"instanceId\":\"ngmcp_40d8cde29c7264fb5635ebcb@1\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Add new task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}}]"
+                  }
+                ],
+                "structuredContent": {
+                  "nodes": [
+                    {
+                      "sourceId": "ngmcp_40d8cde29c7264fb5635ebcb",
+                      "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@1",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Add new task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_activate",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@1"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"status\":\"ui-dispatched\",\"operation\":\"activate\",\"target\":{\"sourceId\":\"ngmcp_40d8cde29c7264fb5635ebcb\",\"instanceId\":\"ngmcp_40d8cde29c7264fb5635ebcb@1\"},\"changed\":[],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"url\":\"http://127.0.0.1:4362/\",\"businessStatus\":\"unknown\"}"
+                  }
+                ],
+                "structuredContent": {
+                  "status": "ui-dispatched",
+                  "operation": "activate",
+                  "target": {
+                    "sourceId": "ngmcp_40d8cde29c7264fb5635ebcb",
+                    "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@1"
+                  },
+                  "changed": [],
+                  "validation": {
+                    "status": "unknown",
+                    "fields": [],
+                    "groups": []
+                  },
+                  "url": "http://127.0.0.1:4362/",
+                  "businessStatus": "unknown"
+                }
+              }
+            },
+            {
+              "name": "angular_submit",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_341ed2406654782eb89c556f@2"
+                },
+                "values": [
+                  {
+                    "target": {
+                      "instanceId": "ngmcp_9607436ceb44f02be38e98f5@3"
+                    },
+                    "value": "ab"
+                  },
+                  {
+                    "target": {
+                      "instanceId": "ngmcp_0ab78608f4d0958404270cba@4"
+                    },
+                    "value": "Independent source fixture"
+                  }
+                ]
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"status\":\"ui-dispatched\",\"operation\":\"submit\",\"target\":{\"sourceId\":\"ngmcp_341ed2406654782eb89c556f\",\"instanceId\":\"ngmcp_341ed2406654782eb89c556f@2\"},\"changed\":[\"ngmcp_9607436ceb44f02be38e98f5@3\",\"ngmcp_0ab78608f4d0958404270cba@4\"],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_9607436ceb44f02be38e98f5\",\"instanceId\":\"ngmcp_9607436ceb44f02be38e98f5@3\",\"path\":[\"title\"],\"status\":\"INVALID\",\"updateOn\":\"change\",\"errors\":[{\"code\":\"minlength\",\"details\":{\"requiredLength\":3}}]},{\"sourceId\":\"ngmcp_0ab78608f4d0958404270cba\",\"instanceId\":\"ngmcp_0ab78608f4d0958404270cba@4\",\"path\":[\"description\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"url\":\"http://127.0.0.1:4362/\",\"businessStatus\":\"unknown\"}"
+                  }
+                ],
+                "structuredContent": {
+                  "status": "ui-dispatched",
+                  "operation": "submit",
+                  "target": {
+                    "sourceId": "ngmcp_341ed2406654782eb89c556f",
+                    "instanceId": "ngmcp_341ed2406654782eb89c556f@2"
+                  },
+                  "changed": [
+                    "ngmcp_9607436ceb44f02be38e98f5@3",
+                    "ngmcp_0ab78608f4d0958404270cba@4"
+                  ],
+                  "validation": {
+                    "status": "invalid",
+                    "fields": [
+                      {
+                        "sourceId": "ngmcp_9607436ceb44f02be38e98f5",
+                        "instanceId": "ngmcp_9607436ceb44f02be38e98f5@3",
+                        "path": [
+                          "title"
+                        ],
+                        "status": "INVALID",
+                        "updateOn": "change",
+                        "errors": [
+                          {
+                            "code": "minlength",
+                            "details": {
+                              "requiredLength": 3
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "sourceId": "ngmcp_0ab78608f4d0958404270cba",
+                        "instanceId": "ngmcp_0ab78608f4d0958404270cba@4",
+                        "path": [
+                          "description"
+                        ],
+                        "status": "VALID",
+                        "updateOn": "change",
+                        "errors": []
+                      }
+                    ],
+                    "groups": [
+                      {
+                        "path": [],
+                        "status": "INVALID",
+                        "errors": []
+                      }
+                    ]
+                  },
+                  "url": "http://127.0.0.1:4362/",
+                  "businessStatus": "unknown"
+                }
+              }
+            }
+          ],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4362/",
+            "meta": {}
+          },
+          "before": null,
+          "businessInput": {
+            "title": "ab",
+            "description": "Independent source fixture"
+          },
+          "after": null,
+          "oracle": {
+            "unchanged": true
+          },
+          "negativeExercised": true,
+          "status": "passed",
+          "pageErrors": []
+        },
+        {
+          "id": "short-description",
+          "operation": "todo-create",
+          "kind": "negative",
+          "frozenInput": {
+            "title": "Unseen task",
+            "description": "Independent source fixture"
+          },
+          "inputPatch": {
+            "description": "abcd"
+          },
+          "calls": [
+            {
+              "name": "angular_list_nodes",
+              "args": {},
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "[{\"sourceId\":\"ngmcp_40d8cde29c7264fb5635ebcb\",\"instanceId\":\"ngmcp_40d8cde29c7264fb5635ebcb@1\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Add new task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}}]"
+                  }
+                ],
+                "structuredContent": {
+                  "nodes": [
+                    {
+                      "sourceId": "ngmcp_40d8cde29c7264fb5635ebcb",
+                      "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@1",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Add new task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_activate",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@1"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"status\":\"ui-dispatched\",\"operation\":\"activate\",\"target\":{\"sourceId\":\"ngmcp_40d8cde29c7264fb5635ebcb\",\"instanceId\":\"ngmcp_40d8cde29c7264fb5635ebcb@1\"},\"changed\":[],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"url\":\"http://127.0.0.1:4362/\",\"businessStatus\":\"unknown\"}"
+                  }
+                ],
+                "structuredContent": {
+                  "status": "ui-dispatched",
+                  "operation": "activate",
+                  "target": {
+                    "sourceId": "ngmcp_40d8cde29c7264fb5635ebcb",
+                    "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@1"
+                  },
+                  "changed": [],
+                  "validation": {
+                    "status": "unknown",
+                    "fields": [],
+                    "groups": []
+                  },
+                  "url": "http://127.0.0.1:4362/",
+                  "businessStatus": "unknown"
+                }
+              }
+            },
+            {
+              "name": "angular_submit",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_341ed2406654782eb89c556f@2"
+                },
+                "values": [
+                  {
+                    "target": {
+                      "instanceId": "ngmcp_9607436ceb44f02be38e98f5@3"
+                    },
+                    "value": "Unseen task"
+                  },
+                  {
+                    "target": {
+                      "instanceId": "ngmcp_0ab78608f4d0958404270cba@4"
+                    },
+                    "value": "abcd"
+                  }
+                ]
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"status\":\"ui-dispatched\",\"operation\":\"submit\",\"target\":{\"sourceId\":\"ngmcp_341ed2406654782eb89c556f\",\"instanceId\":\"ngmcp_341ed2406654782eb89c556f@2\"},\"changed\":[\"ngmcp_9607436ceb44f02be38e98f5@3\",\"ngmcp_0ab78608f4d0958404270cba@4\"],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_9607436ceb44f02be38e98f5\",\"instanceId\":\"ngmcp_9607436ceb44f02be38e98f5@3\",\"path\":[\"title\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]},{\"sourceId\":\"ngmcp_0ab78608f4d0958404270cba\",\"instanceId\":\"ngmcp_0ab78608f4d0958404270cba@4\",\"path\":[\"description\"],\"status\":\"INVALID\",\"updateOn\":\"change\",\"errors\":[{\"code\":\"minlength\",\"details\":{\"requiredLength\":5}}]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"url\":\"http://127.0.0.1:4362/\",\"businessStatus\":\"unknown\"}"
+                  }
+                ],
+                "structuredContent": {
+                  "status": "ui-dispatched",
+                  "operation": "submit",
+                  "target": {
+                    "sourceId": "ngmcp_341ed2406654782eb89c556f",
+                    "instanceId": "ngmcp_341ed2406654782eb89c556f@2"
+                  },
+                  "changed": [
+                    "ngmcp_9607436ceb44f02be38e98f5@3",
+                    "ngmcp_0ab78608f4d0958404270cba@4"
+                  ],
+                  "validation": {
+                    "status": "invalid",
+                    "fields": [
+                      {
+                        "sourceId": "ngmcp_9607436ceb44f02be38e98f5",
+                        "instanceId": "ngmcp_9607436ceb44f02be38e98f5@3",
+                        "path": [
+                          "title"
+                        ],
+                        "status": "VALID",
+                        "updateOn": "change",
+                        "errors": []
+                      },
+                      {
+                        "sourceId": "ngmcp_0ab78608f4d0958404270cba",
+                        "instanceId": "ngmcp_0ab78608f4d0958404270cba@4",
+                        "path": [
+                          "description"
+                        ],
+                        "status": "INVALID",
+                        "updateOn": "change",
+                        "errors": [
+                          {
+                            "code": "minlength",
+                            "details": {
+                              "requiredLength": 5
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "groups": [
+                      {
+                        "path": [],
+                        "status": "INVALID",
+                        "errors": []
+                      }
+                    ]
+                  },
+                  "url": "http://127.0.0.1:4362/",
+                  "businessStatus": "unknown"
+                }
+              }
+            }
+          ],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4362/",
+            "meta": {}
+          },
+          "before": null,
+          "businessInput": {
+            "title": "Unseen task",
+            "description": "abcd"
+          },
+          "after": null,
+          "oracle": {
+            "unchanged": true
+          },
+          "negativeExercised": true,
+          "status": "passed",
+          "pageErrors": []
+        },
+        {
+          "id": "ambiguous-source-id",
+          "operation": "todo-complete",
+          "kind": "negative",
+          "frozenInput": {},
+          "inputPatch": {},
+          "targetContext": {
+            "selection": "unique visible card title Unseen task; read source Todo id from persisted UI-created record"
+          },
+          "calls": [
+            {
+              "name": "angular_list_nodes",
+              "args": {},
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "[{\"sourceId\":\"ngmcp_40d8cde29c7264fb5635ebcb\",\"instanceId\":\"ngmcp_40d8cde29c7264fb5635ebcb@1\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Add new task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_3f574704c520c7798bc3efed\",\"instanceId\":\"ngmcp_3f574704c520c7798bc3efed@7\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Complete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_c96203c38a8ee0740167488d\",\"instanceId\":\"ngmcp_c96203c38a8ee0740167488d@8\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Delete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_3f574704c520c7798bc3efed\",\"instanceId\":\"ngmcp_3f574704c520c7798bc3efed@14\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Complete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_c96203c38a8ee0740167488d\",\"instanceId\":\"ngmcp_c96203c38a8ee0740167488d@15\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Delete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}}]"
+                  }
+                ],
+                "structuredContent": {
+                  "nodes": [
+                    {
+                      "sourceId": "ngmcp_40d8cde29c7264fb5635ebcb",
+                      "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@1",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Add new task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_3f574704c520c7798bc3efed",
+                      "instanceId": "ngmcp_3f574704c520c7798bc3efed@7",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Complete Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_c96203c38a8ee0740167488d",
+                      "instanceId": "ngmcp_c96203c38a8ee0740167488d@8",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Delete Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_3f574704c520c7798bc3efed",
+                      "instanceId": "ngmcp_3f574704c520c7798bc3efed@14",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Complete Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_c96203c38a8ee0740167488d",
+                      "instanceId": "ngmcp_c96203c38a8ee0740167488d@15",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Delete Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_describe_node",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_3f574704c520c7798bc3efed@7"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"sourceId\":\"ngmcp_3f574704c520c7798bc3efed\",\"instanceId\":\"ngmcp_3f574704c520c7798bc3efed@7\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Complete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}}"
+                  }
+                ],
+                "structuredContent": {
+                  "sourceId": "ngmcp_3f574704c520c7798bc3efed",
+                  "instanceId": "ngmcp_3f574704c520c7798bc3efed@7",
+                  "kind": "action",
+                  "tagName": "button",
+                  "events": [
+                    "click"
+                  ],
+                  "label": "Complete Task",
+                  "visible": true,
+                  "disabled": false,
+                  "readonly": false,
+                  "operations": [
+                    "activate"
+                  ],
+                  "validation": {
+                    "status": "unknown",
+                    "fields": [],
+                    "groups": []
+                  }
+                }
+              }
+            },
+            {
+              "name": "angular_list_nodes",
+              "args": {},
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "[{\"sourceId\":\"ngmcp_40d8cde29c7264fb5635ebcb\",\"instanceId\":\"ngmcp_40d8cde29c7264fb5635ebcb@1\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Add new task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_3f574704c520c7798bc3efed\",\"instanceId\":\"ngmcp_3f574704c520c7798bc3efed@7\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Complete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_c96203c38a8ee0740167488d\",\"instanceId\":\"ngmcp_c96203c38a8ee0740167488d@8\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Delete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_3f574704c520c7798bc3efed\",\"instanceId\":\"ngmcp_3f574704c520c7798bc3efed@14\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Complete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_c96203c38a8ee0740167488d\",\"instanceId\":\"ngmcp_c96203c38a8ee0740167488d@15\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Delete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}}]"
+                  }
+                ],
+                "structuredContent": {
+                  "nodes": [
+                    {
+                      "sourceId": "ngmcp_40d8cde29c7264fb5635ebcb",
+                      "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@1",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Add new task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_3f574704c520c7798bc3efed",
+                      "instanceId": "ngmcp_3f574704c520c7798bc3efed@7",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Complete Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_c96203c38a8ee0740167488d",
+                      "instanceId": "ngmcp_c96203c38a8ee0740167488d@8",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Delete Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_3f574704c520c7798bc3efed",
+                      "instanceId": "ngmcp_3f574704c520c7798bc3efed@14",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Complete Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_c96203c38a8ee0740167488d",
+                      "instanceId": "ngmcp_c96203c38a8ee0740167488d@15",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Delete Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_activate",
+              "args": {
+                "target": {
+                  "sourceId": "ngmcp_3f574704c520c7798bc3efed"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "page.evaluate: Error: Source target is missing or repeated; use an exact current instanceId\n    at Object.resolve (http://127.0.0.1:4362/main.js:98:15)\n    at Object.<anonymous> (http://127.0.0.1:4362/main.js:474:26)\n    at Generator.next (<anonymous>)\n    at http://127.0.0.1:4362/main.js:41:61\n    at new ZoneAwarePromise (http://127.0.0.1:4362/@fs/private/tmp/integration-unseen-todo-integrated-v2/.angular/cache/20.1.1/angular-projects/vite/deps/zone__js.js?v=5cc76863:2164:23)\n    at __async (http://127.0.0.1:4362/main.js:25:10)\n    at Object.execute (http://127.0.0.1:4362/main.js:469:14)\n    at eval (eval at evaluate (:290:30), <anonymous>:1:183)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+                  }
+                ],
+                "isError": true
+              }
+            }
+          ],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4362/",
+            "meta": {
+              "todo": {
+                "id": 1,
+                "title": "Unseen task",
+                "description": "Independent source fixture",
+                "done": false
+              }
+            }
+          },
+          "before": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": false
+            },
+            {
+              "id": 2,
+              "title": "Unseen second task",
+              "description": "Second independent source fixture",
+              "done": false
+            }
+          ],
+          "businessInput": {},
+          "actionError": "Error: page.evaluate: Error: Source target is missing or repeated; use an exact current instanceId\n    at Object.resolve (http://127.0.0.1:4362/main.js:98:15)\n    at Object.<anonymous> (http://127.0.0.1:4362/main.js:474:26)\n    at Generator.next (<anonymous>)\n    at http://127.0.0.1:4362/main.js:41:61\n    at new ZoneAwarePromise (http://127.0.0.1:4362/@fs/private/tmp/integration-unseen-todo-integrated-v2/.angular/cache/20.1.1/angular-projects/vite/deps/zone__js.js?v=5cc76863:2164:23)\n    at __async (http://127.0.0.1:4362/main.js:25:10)\n    at Object.execute (http://127.0.0.1:4362/main.js:469:14)\n    at eval (eval at evaluate (:290:30), <anonymous>:1:183)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "after": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": false
+            },
+            {
+              "id": 2,
+              "title": "Unseen second task",
+              "description": "Second independent source fixture",
+              "done": false
+            }
+          ],
+          "oracle": {
+            "protocolBoundary": true
+          },
+          "refusalReason": "page.evaluate: Error: Source target is missing or repeated; use an exact current instanceId\n    at Object.resolve (http://127.0.0.1:4362/main.js:98:15)\n    at Object.<anonymous> (http://127.0.0.1:4362/main.js:474:26)\n    at Generator.next (<anonymous>)\n    at http://127.0.0.1:4362/main.js:41:61\n    at new ZoneAwarePromise (http://127.0.0.1:4362/@fs/private/tmp/integration-unseen-todo-integrated-v2/.angular/cache/20.1.1/angular-projects/vite/deps/zone__js.js?v=5cc76863:2164:23)\n    at __async (http://127.0.0.1:4362/main.js:25:10)\n    at Object.execute (http://127.0.0.1:4362/main.js:469:14)\n    at eval (eval at evaluate (:290:30), <anonymous>:1:183)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "negativeExercised": true,
+          "status": "passed",
+          "pageErrors": []
+        }
+      ]
+    }
+  ],
+  "compilerDigestBefore": "bba6aaa628c661104260e45d417b188f64cf0e420475beb740bd87dea5c8e2eb",
+  "appSpecificSourcePatches": [],
+  "instrumentation": "Separate generic compiler-instrumented app staged copy; original source manifest is checked unchanged.",
+  "finishedAt": "2026-11-10T09:50:37.535Z",
+  "compilerDigestAfter": "bba6aaa628c661104260e45d417b188f64cf0e420475beb740bd87dea5c8e2eb",
+  "compilerStable": true,
+  "totals": {
+    "positive": 5,
+    "positivePassed": 5,
+    "negative": 3,
+    "negativePassed": 3,
+    "protocolBoundaryNotApplicable": 0
+  }
+}

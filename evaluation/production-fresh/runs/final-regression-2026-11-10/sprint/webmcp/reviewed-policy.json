@@ -1,0 +1,298 @@
+{
+  "buildId": "feb9506ee035aaa5996a1dd7be06a69cc0f68ef1a0387f03e1c3c5c210637117",
+  "policy": {
+    "version": 1,
+    "allowedOrigins": [
+      "http://127.0.0.1:54359"
+    ],
+    "rules": [
+      {
+        "sourceId": "ngmcp_07a613ae3b7cbdea7ee076ad",
+        "label": "button — src/app/components/dashboard/dashboard.component.ts:27",
+        "operations": [
+          "describe",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_14c6f2e47d28559ac41b1ae2",
+        "label": "button — src/app/components/kanban/kanban.component.ts:75",
+        "operations": [
+          "describe",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_14f4b3b54cda3d069d6b72fa",
+        "label": "button — src/app/components/kanban/kanban.component.ts:38",
+        "operations": [
+          "describe",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_1c2a5db927f225fbd232364f",
+        "label": "mat-option — src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts:44",
+        "operations": [
+          "describe",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_269d7015d750178c589db050",
+        "label": "input password — src/app/components/auth/login/login.component.ts:40",
+        "operations": [
+          "describe",
+          "fill",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_2a7e9b25e386d54a09784d68",
+        "label": "input username — src/app/components/auth/login/login.component.ts:35",
+        "operations": [
+          "describe",
+          "fill",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_3689ab2dbc10cdb2b1fe48b3",
+        "label": "input password — src/app/components/auth/register/register.component.ts:45",
+        "operations": [
+          "describe",
+          "fill",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_3f427051d54ea47294f1e3f5",
+        "label": "button — src/app/components/auth/login/login.component.ts:43",
+        "operations": [
+          "describe",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_485f38c18ad43d90fec9527c",
+        "label": "form — src/app/components/auth/register/register.component.ts:32",
+        "operations": [
+          "describe",
+          "submit"
+        ],
+        "writeFields": [
+          "ngmcp_3689ab2dbc10cdb2b1fe48b3",
+          "ngmcp_50c11cc7894b33e3c489e30e",
+          "ngmcp_d5767ca489688b254c9c3270"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_507c2f733c88fa44ef3666d8",
+        "label": "button — src/app/components/dashboard/dashboard.component.ts:47",
+        "operations": [
+          "describe",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_50c11cc7894b33e3c489e30e",
+        "label": "input username — src/app/components/auth/register/register.component.ts:35",
+        "operations": [
+          "describe",
+          "fill",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_51903f51076ea2d972bf08d8",
+        "label": "button — src/app/components/kanban/kanban.component.ts:151",
+        "operations": [
+          "describe",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_5b21ba19ec651c0375f057ca",
+        "label": "button — src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts:59",
+        "operations": [
+          "describe",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_5d2f57b5772e13223215dd5b",
+        "label": "form — src/app/components/auth/login/login.component.ts:32",
+        "operations": [
+          "describe",
+          "submit"
+        ],
+        "writeFields": [
+          "ngmcp_269d7015d750178c589db050",
+          "ngmcp_2a7e9b25e386d54a09784d68"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_6578ff961f1ceff5fe9cd59a",
+        "label": "input dueDate — src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts:52",
+        "operations": [
+          "describe",
+          "fill",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_66fc1f622ec7d39e8d4a4013",
+        "label": "button — src/app/components/dialogs/create-project-dialog/create-project-dialog.component.ts:36",
+        "operations": [
+          "describe",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_789a222a52c57b7495e8c00b",
+        "label": "form — src/app/components/dialogs/create-project-dialog/create-project-dialog.component.ts:23",
+        "operations": [
+          "describe",
+          "submit"
+        ],
+        "writeFields": [
+          "ngmcp_82fef9d9fab7a2124329753a",
+          "ngmcp_947f06861dc7434d5f730549"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_82fef9d9fab7a2124329753a",
+        "label": "input name — src/app/components/dialogs/create-project-dialog/create-project-dialog.component.ts:26",
+        "operations": [
+          "describe",
+          "fill",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_8b499b3c1b31c7582047456a",
+        "label": "form — src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts:30",
+        "operations": [
+          "describe",
+          "submit"
+        ],
+        "writeFields": [
+          "ngmcp_6578ff961f1ceff5fe9cd59a",
+          "ngmcp_c1972f251f59bbee501e6e89",
+          "ngmcp_d7393f3107e9de233af3681d"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_947f06861dc7434d5f730549",
+        "label": "textarea description — src/app/components/dialogs/create-project-dialog/create-project-dialog.component.ts:31",
+        "operations": [
+          "describe",
+          "fill",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_a9c18e09100ece75e048186f",
+        "label": "button — src/app/components/auth/register/register.component.ts:48",
+        "operations": [
+          "describe",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_b7ffe79e3201ca072a1b5011",
+        "label": "button — src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts:60",
+        "operations": [
+          "describe",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_c1972f251f59bbee501e6e89",
+        "label": "textarea description — src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts:38",
+        "operations": [
+          "describe",
+          "fill",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_c4048490b17e679fb3e9bef6",
+        "label": "mat-option — src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts:46",
+        "operations": [
+          "describe",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_c776685f67453c7bfd0b9c07",
+        "label": "button — src/app/components/kanban/kanban.component.ts:34",
+        "operations": [
+          "describe",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_c7a83416ed429a914843d893",
+        "label": "button — src/app/components/kanban/kanban.component.ts:113",
+        "operations": [
+          "describe",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_c90087235ecb54757de10a45",
+        "label": "mat-select status — src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts:43",
+        "operations": [
+          "describe",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_d5767ca489688b254c9c3270",
+        "label": "input email — src/app/components/auth/register/register.component.ts:40",
+        "operations": [
+          "describe",
+          "fill",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_d62a8c923a45a3fc2b623be3",
+        "label": "button — src/app/components/dashboard/dashboard.component.ts:43",
+        "operations": [
+          "describe",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_d7393f3107e9de233af3681d",
+        "label": "input title — src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts:33",
+        "operations": [
+          "describe",
+          "fill",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_dd62c3222903c68984b6a253",
+        "label": "mat-option — src/app/components/dialogs/create-task-dialog/create-task-dialog.component.ts:45",
+        "operations": [
+          "describe",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_eac740a9a710c232ff2584d0",
+        "label": "button — src/app/components/dialogs/create-project-dialog/create-project-dialog.component.ts:37",
+        "operations": [
+          "describe",
+          "activate"
+        ]
+      }
+    ],
+    "sessionMaxAgeMs": 3600000,
+    "approvalMaxAgeMs": 60000,
+    "maxAuditRecords": 100000
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "contextAdditions": [],
+  "argumentRenames": [
+    {
+      "id": "toggle_all",
+      "from": {
+        "completed": true
+      },
+      "to": {
+        "checked": true
+      },
+      "classification": "Argument rename only; boolean value preserved. This is separate from exact frozen-input baseline, not context or source/manifest augmentation."
+    }
+  ]
+}

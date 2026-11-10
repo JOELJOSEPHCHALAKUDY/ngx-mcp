@@ -1,0 +1,8 @@
+[
+  {
+    "id": "/courses/new#CourseForm.onSubmit:app-course-form form.min-width",
+    "fingerprint": "3dbc63426624e07d0284bf64b583a3bb41610f711ad4652a4625d3736e209f32",
+    "description": "Submit the existing Signal Forms course editor, including its Material category selection and repeated lesson rows, through isolated public-sample data.",
+    "effect": "write"
+  }
+]

@@ -1,0 +1,166 @@
+{
+  "formatVersion": 1,
+  "project": "todo",
+  "storageKey": "todo-items",
+  "cases": [
+    {
+      "id": "create_task",
+      "kind": "positive",
+      "route": "/",
+      "input": {
+        "title": "Fresh access task",
+        "description": "Synthetic task body",
+        "completed": false
+      },
+      "ui": {
+        "open": "button[data-bs-target=\"#addTodoModal\"]",
+        "fields": {
+          "title": "#todoTitle",
+          "description": "#todoDescription",
+          "completed": "#todoCompleted"
+        },
+        "commit": "#addTodoModal button:text-is(\"Add\")"
+      },
+      "expected": {
+        "storageAdded": {
+          "id": 1,
+          "title": "Fresh access task",
+          "description": "Synthetic task body",
+          "completed": false
+        },
+        "otherRowsUnchanged": true
+      },
+      "evidence": [
+        {
+          "file": "src/app/add-todo/add-todo.ts",
+          "line": 18,
+          "anchor": "saveTodo(): void",
+          "sha256": "bfa09639cdfea887ef898e5748d7815309ee5fda4c6cf121822c75422262ab08"
+        },
+        {
+          "file": "src/app/services/data-store-services.ts",
+          "line": 38,
+          "anchor": "public addTodoItem",
+          "sha256": "0267bb2ec3b359b46806f003fb9934c90bd57352ed8c01310c729b3a103619f0"
+        }
+      ]
+    },
+    {
+      "id": "toggle_second_task",
+      "kind": "positive",
+      "route": "/",
+      "input": {
+        "targetId": 2
+      },
+      "ui": {
+        "target": "app-item-view containing Second fixture task input[type=checkbox]"
+      },
+      "expected": {
+        "storageChanged": {
+          "id": 2,
+          "title": "Second fixture task",
+          "description": "Second body",
+          "completed": true
+        },
+        "id1Unchanged": true
+      },
+      "evidence": [
+        {
+          "file": "src/app/item-view/item-view.ts",
+          "line": 18,
+          "anchor": "toggleCompletion(): void",
+          "sha256": "b441e92f93c00ac67151416cf029df4769d27cddfccecd2cd6da3317253c6bc0"
+        }
+      ]
+    },
+    {
+      "id": "delete_second_task",
+      "kind": "positive",
+      "route": "/",
+      "input": {
+        "targetId": 2
+      },
+      "ui": {
+        "target": "app-item-view containing Second fixture task button[title=\"Delete item\"]"
+      },
+      "expected": {
+        "removedId": 2,
+        "remainingIds": [
+          1
+        ],
+        "id1Unchanged": true
+      },
+      "evidence": [
+        {
+          "file": "src/app/item-view/item-view.ts",
+          "line": 24,
+          "anchor": "deleteItem(): void",
+          "sha256": "b441e92f93c00ac67151416cf029df4769d27cddfccecd2cd6da3317253c6bc0"
+        },
+        {
+          "file": "src/app/services/data-store-services.ts",
+          "line": 45,
+          "anchor": "public deleteTodoItem",
+          "sha256": "0267bb2ec3b359b46806f003fb9934c90bd57352ed8c01310c729b3a103619f0"
+        }
+      ]
+    },
+    {
+      "id": "empty_title_native_quirk",
+      "kind": "positive-upstream-quirk",
+      "route": "/",
+      "input": {
+        "title": "",
+        "description": "Empty title native contract",
+        "completed": false
+      },
+      "ui": {
+        "open": "button[data-bs-target=\"#addTodoModal\"]",
+        "commit": "#addTodoModal button:text-is(\"Add\")"
+      },
+      "expected": {
+        "storageAdded": {
+          "id": 1,
+          "title": "",
+          "description": "Empty title native contract",
+          "completed": false
+        }
+      },
+      "evidence": [
+        {
+          "file": "src/app/add-todo/add-todo.html",
+          "line": 73,
+          "anchor": "(click)=\"saveTodo()\"",
+          "sha256": "99fda3c94df3492ca7a978ee2947c73cb85d5838af31b53090e8fbddc1b29c3a"
+        },
+        {
+          "file": "src/app/add-todo/add-todo.ts",
+          "line": 18,
+          "anchor": "saveTodo(): void",
+          "sha256": "bfa09639cdfea887ef898e5748d7815309ee5fda4c6cf121822c75422262ab08"
+        }
+      ],
+      "notes": "The required input belongs to a form but Add is a separate type=button and saveTodo has no validity guard. Do not count acceptance as a framework validation failure or invent a minLength rule."
+    }
+  ],
+  "fixtures": {
+    "twoTasks": [
+      {
+        "id": 1,
+        "title": "First fixture task",
+        "description": "First body",
+        "completed": false
+      },
+      {
+        "id": 2,
+        "title": "Second fixture task",
+        "description": "Second body",
+        "completed": false
+      }
+    ]
+  },
+  "excluded": [
+    "Summary/read-only presentation and RouterLink navigation are setup/context, not labelled writes.",
+    "Native form submission has no business add handler; use the separately authored Add click."
+  ]
+}

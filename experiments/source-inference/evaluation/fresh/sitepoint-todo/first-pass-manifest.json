@@ -1,0 +1,590 @@
+{
+  "formatVersion": 1,
+  "compilerVersion": "0.1.0",
+  "sourceDigest": "9de2ce9435d777d0032e89c9476ef79e6b26d3dcbf9a049ec677a3e636d83afc",
+  "routes": [],
+  "capabilities": [
+    {
+      "id": "/#AppComponent.onAddTodo:app-root app-todo-list-header",
+      "fingerprint": "6cace93e77f729286d3042fe5451edf8576262f3c6eaeeb5e7ad7d47c7c965dd",
+      "route": "/",
+      "component": "AppComponent",
+      "componentSelector": "app-root",
+      "action": {
+        "owner": "app-todo-list-header",
+        "kind": "button",
+        "selector": "app-root app-todo-list-header",
+        "label": "onAddTodo",
+        "event": "add",
+        "expression": "onAddTodo($event)",
+        "source": {
+          "file": "app/app.component.html",
+          "line": 3
+        }
+      },
+      "fields": [],
+      "handler": "onAddTodo",
+      "callPath": [
+        "AppComponent.onAddTodo",
+        "TodoDataService.addTodo"
+      ],
+      "bindings": [
+        {
+          "token": "TodoDataService",
+          "service": "TodoDataService",
+          "method": "addTodo",
+          "source": {
+            "file": "app/todo-data.service.ts",
+            "line": 15
+          },
+          "arguments": [
+            "todo"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "todo": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "complete": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "id",
+                  "title",
+                  "complete"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "todo"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "title": {
+                "type": "string"
+              },
+              "complete": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "complete"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [
+        "Forwarded event add needs exactly one emitting UI element (found 0)",
+        "Forwarded event needs a data identity for the item it acts on"
+      ],
+      "status": "blocked",
+      "global": true
+    },
+    {
+      "id": "/#AppComponent.onRemoveTodo:app-root app-todo-list",
+      "fingerprint": "4d5a9e6414fd3655d711d50b39251840eb21bcf5f3894bddd24cfc0680935293",
+      "route": "/",
+      "target": {
+        "param": "id",
+        "source": "context",
+        "path": [
+          "id"
+        ]
+      },
+      "component": "AppComponent",
+      "componentSelector": "app-root",
+      "action": {
+        "owner": "app-todo-list",
+        "kind": "button",
+        "selector": "app-root app-todo-list",
+        "label": "onRemoveTodo",
+        "event": "remove",
+        "expression": "onRemoveTodo($event)",
+        "source": {
+          "file": "app/app.component.html",
+          "line": 8
+        }
+      },
+      "fields": [],
+      "handler": "onRemoveTodo",
+      "callPath": [
+        "AppComponent.onRemoveTodo",
+        "TodoDataService.deleteTodoById"
+      ],
+      "bindings": [
+        {
+          "token": "TodoDataService",
+          "service": "TodoDataService",
+          "method": "deleteTodoById",
+          "source": {
+            "file": "app/todo-data.service.ts",
+            "line": 20
+          },
+          "arguments": [
+            "todo.id"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "todoId": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "todoId"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "title": {
+                "type": "string"
+              },
+              "complete": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "complete"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [
+        "Forwarded event remove needs exactly one emitting UI element (found 0)"
+      ],
+      "status": "blocked",
+      "global": true
+    },
+    {
+      "id": "/#AppComponent.onToggleTodoComplete:app-root app-todo-list",
+      "fingerprint": "d25744ceed1ce16125b9094ebd5433d2d136cb59266bde07740ae9b833496d29",
+      "route": "/",
+      "component": "AppComponent",
+      "componentSelector": "app-root",
+      "action": {
+        "owner": "app-todo-list",
+        "kind": "button",
+        "selector": "app-root app-todo-list",
+        "label": "onToggleTodoComplete",
+        "event": "toggleComplete",
+        "expression": "onToggleTodoComplete($event)",
+        "source": {
+          "file": "app/app.component.html",
+          "line": 7
+        }
+      },
+      "fields": [],
+      "handler": "onToggleTodoComplete",
+      "callPath": [
+        "AppComponent.onToggleTodoComplete",
+        "TodoDataService.toggleTodoComplete"
+      ],
+      "bindings": [
+        {
+          "token": "TodoDataService",
+          "service": "TodoDataService",
+          "method": "toggleTodoComplete",
+          "source": {
+            "file": "app/todo-data.service.ts",
+            "line": 40
+          },
+          "arguments": [
+            "todo"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "todo": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "complete": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "id",
+                  "title",
+                  "complete"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "todo"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "title": {
+                "type": "string"
+              },
+              "complete": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "complete"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [
+        "Forwarded event toggleComplete needs exactly one emitting UI element (found 0)",
+        "Forwarded event needs a data identity for the item it acts on"
+      ],
+      "status": "blocked",
+      "global": true
+    },
+    {
+      "id": "/#TodoListItemComponent.removeTodo:app-todo-list-item button.destroy",
+      "fingerprint": "9785ff171e614b7b0ae6a7d18e36e15fe7c769f66657589a7fbeb7317786e507",
+      "route": "/",
+      "target": {
+        "param": "todo",
+        "source": "component",
+        "path": [
+          "todo",
+          "id"
+        ],
+        "signals": [],
+        "valuePath": [
+          "id"
+        ],
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "number"
+            },
+            "title": {
+              "type": "string"
+            },
+            "complete": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "id",
+            "title",
+            "complete"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "component": "TodoListItemComponent",
+      "componentSelector": "app-todo-list-item",
+      "action": {
+        "owner": "app-todo-list-item",
+        "kind": "button",
+        "selector": "app-todo-list-item button.destroy",
+        "label": "removeTodo",
+        "event": "click",
+        "expression": "removeTodo(todo)",
+        "source": {
+          "file": "app/todo-list-item/todo-list-item.component.html",
+          "line": 4
+        }
+      },
+      "fields": [],
+      "handler": "removeTodo",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "todo": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "title": {
+                "type": "string"
+              },
+              "complete": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "complete"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "todo"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate",
+      "global": true
+    },
+    {
+      "id": "/#TodoListItemComponent.toggleTodoComplete:app-todo-list-item input.toggle",
+      "fingerprint": "8d23dd1a97065464c219a27c918b251c71305f2140689e9a865b7809928cbac0",
+      "route": "/",
+      "target": {
+        "param": "todo",
+        "source": "component",
+        "path": [
+          "todo",
+          "id"
+        ],
+        "signals": [],
+        "valuePath": [
+          "id"
+        ],
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "number"
+            },
+            "title": {
+              "type": "string"
+            },
+            "complete": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "id",
+            "title",
+            "complete"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "component": "TodoListItemComponent",
+      "componentSelector": "app-todo-list-item",
+      "action": {
+        "owner": "app-todo-list-item",
+        "kind": "button",
+        "selector": "app-todo-list-item input.toggle",
+        "label": "toggleTodoComplete",
+        "event": "click",
+        "expression": "toggleTodoComplete(todo)",
+        "source": {
+          "file": "app/todo-list-item/todo-list-item.component.html",
+          "line": 2
+        }
+      },
+      "fields": [],
+      "handler": "toggleTodoComplete",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "todo": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "title": {
+                "type": "string"
+              },
+              "complete": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "complete"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "todo"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate",
+      "global": true
+    }
+  ],
+  "diagnostics": []
+}

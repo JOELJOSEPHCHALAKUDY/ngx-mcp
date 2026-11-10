@@ -1,0 +1,20 @@
+{
+  "case": "shopping/profile-avatar",
+  "frozenInputUnchanged": true,
+  "nativeReferenceStatus": "blocked-source-ui-for-frozen-fixture",
+  "evidence": {
+    "naturalImageSize": [
+      1,
+      1
+    ],
+    "renderedCropperPreviewSize": [
+      100,
+      100
+    ],
+    "consoleError": "InvalidStateError: Failed to execute drawImage on CanvasRenderingContext2D: image argument is canvas with width or height0",
+    "source": "src/app/components/common/image-cropper/image-cropper.component.ts:61",
+    "sourceSha256": "5e739a089f7442dc8834133e51aeb0f836af1f38b0d5f58426015a7b884bce08",
+    "syntheticProfileMutationRequests": 0
+  },
+  "disposition": "Preserve frozen positive case failure. No app fix or frozen image rewrite. An optional larger-image extension must be separately labeled nonfrozen."
+}

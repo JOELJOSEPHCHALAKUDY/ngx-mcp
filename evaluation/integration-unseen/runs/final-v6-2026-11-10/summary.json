@@ -1,0 +1,79 @@
+{
+  "reportKind": "integration-unseen-measurement",
+  "startedAt": "2026-11-10T11:17:01.829Z",
+  "compilerDigestBefore": "2fbce447847952ce964a2d5dbb170e6ee4f8ce6020671505b7902f4b6b0873dd",
+  "evaluatorFilesBefore": {
+    "fixtures.mjs": "a1aae6c88be66e8d5c9863b5f48367391dae0fc9e13665ae1d6161380e2c74c2",
+    "cases.mjs": "bd4e615be4817518f0d3a1184bf9c157d566438915b086c23ef8d52aa2a0ace1",
+    "oracles.mjs": "77903660f1fa4839bc780bd70cc2fb530cf0ae28ac9a8d4450c7b2342d4313f1",
+    "evidence.mjs": "580799b50e21da1396439920eb739b7abba87369177e64edefa75830208c4ab7",
+    "shopping/avatar-reference-adjudication.json": "009f6e0d727ed17eb978d8be6241021370d586c4d7e700ef1df805231f3a9d33",
+    "run.mjs": "77af692480605188be4770741644588103b0de7b6a682e0b00e8da1fe0c3ef6c",
+    "mcp-driver.mjs": "57e0bf836da0e58708db217aac96bdfaa477039a7fc41a02e20bcd25c0df95b4",
+    "measure.mjs": "b168615a16b6d675e4980071f573b72167fdf9d9e7ed64167997d7a3492ba3ce",
+    "check.mjs": "05ce5fce5e3a858e63cea28914ae14dc27f7023c2031db251f78840ad7e09b84",
+    "fetch.mjs": "22290bc78d25551d747416d1f0a83d8e67022a9e1d416efeb5a65919651b8e8c",
+    "serve.mjs": "10d557d10870966198fcae9126b7114b60f400628852bf44e9239d0942cd88f2"
+  },
+  "goldPositiveScenarios": 35,
+  "goldNegativeOrBoundaryCases": 21,
+  "projects": [
+    {
+      "id": "finance",
+      "commit": "61c1bb87567df4245f0722713edabc8177121842",
+      "originalPort": 4451,
+      "stagedPort": 4461,
+      "source": "/tmp/integration-unseen-finance",
+      "staged": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-10T11-17-01-790Z-22581/finance",
+      "compilerDigestBeforeStage": "2fbce447847952ce964a2d5dbb170e6ee4f8ce6020671505b7902f4b6b0873dd",
+      "evidence": {
+        "reference": {
+          "path": "runs/final-v6-2026-11-10/finance/reference.json",
+          "sha256": "c771c5bdd02b5e270c16f6f7cfb362d8ad73533b6a64329fcf770e4bc0ff2a76"
+        },
+        "raw": {
+          "path": "runs/final-v6-2026-11-10/finance/raw.json",
+          "sha256": "87af29e784ab3a9bd97df9063f33c6001382f84a5581903d532454b7bdd63697"
+        }
+      },
+      "compilerDigestAfterStage": "2fbce447847952ce964a2d5dbb170e6ee4f8ce6020671505b7902f4b6b0873dd",
+      "runtimeModuleSha256": "daf579a9d29076e9664889f48a50df48a64191520db0ab1bab2838fd42a6ee26",
+      "manifestSha256": "a98a7e62cefd6b7d3f7d5568d295ff8b2d4c4e04226a0a2e17c0e271cc999b9f",
+      "serverOwnership": {
+        "original": {
+          "pid": 22603,
+          "cwd": "/tmp/integration-unseen-finance"
+        },
+        "staged": {
+          "pid": 22607,
+          "cwd": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-10T11-17-01-790Z-22581/finance"
+        }
+      },
+      "serversStopped": true
+    }
+  ],
+  "sourcePolicy": "Pinned originals unchanged; only generic staged compiler/runtime instrumentation. All action-under-test calls are actual SDK MCP with no native reference fallback.",
+  "infrastructureError": "Error: Command failed (1); see /Users/joeljoseph/Desktop/Personal Work/ai-experiments-apps/angular-mcp-compiler/evaluation/integration-unseen/runs/final-v6-2026-11-10/finance/ui.log",
+  "finishedAt": "2026-11-10T11:20:40.437Z",
+  "compilerDigestAfter": "2fbce447847952ce964a2d5dbb170e6ee4f8ce6020671505b7902f4b6b0873dd",
+  "evaluatorFilesAfter": {
+    "fixtures.mjs": "a1aae6c88be66e8d5c9863b5f48367391dae0fc9e13665ae1d6161380e2c74c2",
+    "cases.mjs": "bd4e615be4817518f0d3a1184bf9c157d566438915b086c23ef8d52aa2a0ace1",
+    "oracles.mjs": "77903660f1fa4839bc780bd70cc2fb530cf0ae28ac9a8d4450c7b2342d4313f1",
+    "evidence.mjs": "dfeadf2de6071a9d03551498f7f56858ba70e58ea0d36a491d547c65df525501",
+    "shopping/avatar-reference-adjudication.json": "009f6e0d727ed17eb978d8be6241021370d586c4d7e700ef1df805231f3a9d33",
+    "run.mjs": "77af692480605188be4770741644588103b0de7b6a682e0b00e8da1fe0c3ef6c",
+    "mcp-driver.mjs": "57e0bf836da0e58708db217aac96bdfaa477039a7fc41a02e20bcd25c0df95b4",
+    "measure.mjs": "b168615a16b6d675e4980071f573b72167fdf9d9e7ed64167997d7a3492ba3ce",
+    "check.mjs": "05ce5fce5e3a858e63cea28914ae14dc27f7023c2031db251f78840ad7e09b84",
+    "fetch.mjs": "22290bc78d25551d747416d1f0a83d8e67022a9e1d416efeb5a65919651b8e8c",
+    "serve.mjs": "10d557d10870966198fcae9126b7114b60f400628852bf44e9239d0942cd88f2"
+  },
+  "compilerStable": true,
+  "evaluatorStable": false,
+  "nativeParity": false,
+  "protocolBoundariesPassed": false,
+  "usableWithinNativePassingScope": false,
+  "releaseReady": false,
+  "scope": "Integrity and declared native-reference parity only. Frozen positive denominator remains35 including source-blocked1px avatar. Raw field values and explicit UI transport mappings are separate. This is not a production or full-schema guarantee."
+}

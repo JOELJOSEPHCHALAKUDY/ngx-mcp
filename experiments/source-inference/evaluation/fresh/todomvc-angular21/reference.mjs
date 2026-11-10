@@ -1,0 +1,28 @@
+import {chromium} from 'playwright';
+import {writeFile} from 'node:fs/promises';
+import assert from 'node:assert/strict';
+import {base as configuredBase,seedThroughUi,snapshot,installIsolation,startFixtureServer} from './fixture.mjs';
+import {resolve} from 'node:path';
+const out=new URL('./',import.meta.url);const report={phase:'Source-authored DOM reference replay; this runner does not import or call the compiler',startedAt:new Date().toISOString(),operations:[],boundaries:[],errors:[]};let browser;let fixtureServer;let base=configuredBase;
+try{
+ fixtureServer=process.env.HOLDOUT_SERVER_MODE==='external'?undefined:await startFixtureServer(resolve(process.env.HOLDOUT_SOURCE_DIR??resolve(process.cwd(),'test-apps/fresh-todomvc/examples/angular')));base=fixtureServer?.baseUrl??configuredBase;
+ browser=await chromium.launch({headless:true});const page=await browser.newPage();report.network=await installIsolation(page,base);page.on('pageerror',error=>report.errors.push(error.message));
+ await seedThroughUi(page,base);let state=await snapshot(page);assert.equal(state.rows.length,3);assert.equal(state.activeCount,'2');
+ await page.getByRole('link',{name:'Active',exact:true}).click();state=await snapshot(page);assert.equal(state.rows.length,2);assert(state.rows.every(row=>!row.completed));
+ await page.getByRole('link',{name:'Completed',exact:true}).click();state=await snapshot(page);assert.equal(state.rows.length,1);assert(state.rows.every(row=>row.completed));
+ await page.getByRole('link',{name:'All',exact:true}).click();state=await snapshot(page);assert.equal(state.rows.length,3);report.operations.push({id:'filter_todos',pass:true,observed:state,variants:['all','active','completed']});
+ await page.locator('.new-todo').fill('  Frozen holdout task  ');await page.locator('.new-todo').press('Enter');state=await snapshot(page);assert.equal(state.rows.at(-1).title,'Frozen holdout task');assert.equal(state.rows.at(-1).completed,false);assert.equal(state.input,'');report.operations.push({id:'add_todo',pass:true,observed:state});
+ const first=()=>page.locator('app-todo-item').filter({hasText:'Read fixture article'});
+ await first().locator('input.toggle').check();state=await snapshot(page);assert.equal(state.rows.find(row=>row.title==='Read fixture article').completed,true);assert.equal(state.activeCount,'2');report.operations.push({id:'toggle_todo',pass:true,observed:state});
+ const second=page.locator('app-todo-item').filter({hasText:'Clean fixture inbox'});await second.hover();await second.getByRole('button',{name:'Delete todo'}).click();state=await snapshot(page);assert.equal(state.rows.length,3);assert(!state.rows.some(row=>row.title==='Clean fixture inbox'));report.operations.push({id:'delete_todo',pass:true,observed:state});
+ await page.locator('input.toggle-all').check({force:true});state=await snapshot(page);assert(state.rows.every(row=>row.completed));assert.equal(state.activeCount,'0');report.operations.push({id:'toggle_all',pass:true,observed:state});
+ await first().locator('label').dblclick();await first().locator('input.edit').fill('  Revised fixture article  ');await first().locator('input.edit').press('Enter');state=await snapshot(page);assert(state.rows.some(row=>row.title==='Revised fixture article'&&row.completed));assert(!state.rows.some(row=>row.editing));report.operations.push({id:'edit_todo',pass:true,observed:state});
+ const revised=()=>page.locator('app-todo-item').filter({hasText:'Revised fixture article'});
+ await revised().locator('input.toggle').uncheck();
+ await page.getByRole('button',{name:'Clear completed'}).click();state=await snapshot(page);assert.deepEqual(state.rows.map(row=>row.title),['Revised fixture article']);assert.equal(state.activeCount,'1');assert.equal(await page.getByRole('button',{name:'Clear completed'}).isVisible(),false);report.operations.push({id:'clear_completed',pass:true,observed:state});
+ await page.locator('.new-todo').fill('   ');await page.locator('.new-todo').press('Enter');assert.equal((await snapshot(page)).rows.length,1);report.boundaries.push({id:'blank_add_noop',pass:true});
+ await revised().locator('label').dblclick();await revised().locator('input.edit').fill('Discarded edit');await revised().locator('input.edit').press('Escape');assert.equal((await snapshot(page)).rows[0].title,'Revised fixture article');report.boundaries.push({id:'escape_cancels_edit',pass:true});
+ await revised().locator('label').dblclick();await revised().locator('input.edit').fill('Blur committed');await page.getByRole('heading',{name:'Todos',exact:true}).click();assert.equal((await snapshot(page)).rows[0].title,'Blur committed');report.boundaries.push({id:'blur_commits_edit',pass:true});
+ const blur=page.locator('app-todo-item').filter({hasText:'Blur committed'});await blur.locator('label').dblclick();await blur.locator('input.edit').fill('  ');await blur.locator('input.edit').press('Enter');assert.equal((await snapshot(page)).rows.length,0);report.boundaries.push({id:'blank_edit_deletes',pass:true});
+ await page.screenshot({path:new URL('replay-reference.png',out).pathname,fullPage:true});report.final=await snapshot(page);report.pass=report.operations.length===7&&report.operations.every(row=>row.pass)&&report.errors.length===0;
+}catch(error){report.pass=false;report.failure={message:error.message,stack:error.stack};}finally{if(browser)await browser.close();if(fixtureServer)await fixtureServer.close();report.finishedAt=new Date().toISOString();await writeFile(new URL('replay-reference-results.json',out),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({pass:report.pass,operations:report.operations.map(({id,pass})=>({id,pass})),boundaries:report.boundaries,failure:report.failure},null,2));}

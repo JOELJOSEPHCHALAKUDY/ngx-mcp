@@ -1,0 +1,8 @@
+[
+  {
+    "id": "/register#AuthComponent.submitForm:app-auth-page form",
+    "fingerprint": "5bd581f5dcf5542a6aa3ec76b2012a98ffaf1667fca7a8fd51a13e18d823be4f",
+    "description": "Run the existing realworld form workflow using isolated public-sample data.",
+    "effect": "write"
+  }
+]

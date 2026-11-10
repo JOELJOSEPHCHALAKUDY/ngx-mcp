@@ -1,0 +1,5486 @@
+{
+  "measuredAt": "2026-11-09T18:57:11.054Z",
+  "scoringVersion": 2,
+  "project": "https://github.com/trungk18/jira-clone-angular",
+  "revision": "20b50e9a1a4d9205af4641b66f544b81cd46873e",
+  "labelsDigest": "76957f1008d7681bc47533be701b5eab32e1ce13d1876b6af0580c210adf4a40",
+  "compilerDigest": "704ef4921a8e304729ca971aef2e85511147a93e249dce9bb2c4e178eab40cfe",
+  "normalization": "Only remove explanatory route annotations and interpret frozen route wildcards; parameter names and object shapes are unchanged.",
+  "scope": "Independent source labels frozen before compiler scoring; this is discovery/schema only, not execution success.",
+  "totals": {
+    "gold": 14,
+    "discovered": 9,
+    "runnable": 0,
+    "correctSchemas": 0,
+    "labelErrors": 0,
+    "unmatchedRunnable": 0
+  },
+  "actions": [
+    {
+      "id": "issue-create",
+      "classification": "missing",
+      "predictions": [],
+      "schema": null
+    },
+    {
+      "id": "issue-title-update",
+      "classification": "missing",
+      "predictions": [],
+      "schema": null
+    },
+    {
+      "id": "issue-description-update",
+      "classification": "blocked",
+      "predictions": [
+        {
+          "id": "/project/issue/:issueId#IssueDescriptionComponent.save:issue-description j-button.mr-2",
+          "status": "blocked",
+          "issues": [
+            "Dynamic providers require review before code generation"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "issueId": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+              }
+            },
+            "required": [
+              "issueId"
+            ],
+            "additionalProperties": false
+          },
+          "action": {
+            "owner": "issue-description",
+            "kind": "button",
+            "selector": "issue-description j-button.mr-2",
+            "label": "Save",
+            "event": "click",
+            "expression": "save()",
+            "source": {
+              "file": "src/app/project/components/issues/issue-description/issue-description.component.html",
+              "line": 13
+            }
+          }
+        }
+      ],
+      "schema": {
+        "capability": "/project/issue/:issueId#IssueDescriptionComponent.save:issue-description j-button.mr-2",
+        "inputWellFormed": true,
+        "outputWellFormed": true,
+        "fieldsCorrect": false,
+        "requiredCorrect": false,
+        "expectedFields": [
+          "descriptionControl"
+        ],
+        "actualFields": [
+          "issueId"
+        ],
+        "expectedRequired": [
+          "descriptionControl"
+        ],
+        "actualRequired": [
+          "issueId"
+        ],
+        "passed": false,
+        "cases": [
+          {
+            "name": "valid representative input",
+            "input": {
+              "descriptionControl": "<p>Benchmark description</p>"
+            },
+            "accepted": true,
+            "actualAccepted": false,
+            "passed": false
+          },
+          {
+            "name": "unknown property",
+            "input": {
+              "descriptionControl": "<p>Benchmark description</p>",
+              "__unexpected": true
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "missing required descriptionControl",
+            "input": {},
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "wrong type descriptionControl",
+            "input": {
+              "descriptionControl": 42
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-priority-update",
+      "classification": "blocked",
+      "predictions": [
+        {
+          "id": "/project/issue/:issueId#IssuePriorityComponent.updateIssue:issue-priority li",
+          "status": "blocked",
+          "issues": [
+            "Dynamic providers require review before code generation"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "issueId": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+              },
+              "value": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+              }
+            },
+            "required": [
+              "issueId",
+              "value"
+            ],
+            "additionalProperties": false
+          },
+          "action": {
+            "owner": "issue-priority",
+            "kind": "button",
+            "selector": "issue-priority li",
+            "label": "updateIssue",
+            "event": "click",
+            "expression": "updateIssue(option.value)",
+            "source": {
+              "file": "src/app/project/components/issues/issue-priority/issue-priority.component.html",
+              "line": 24
+            }
+          },
+          "target": {
+            "param": "value",
+            "source": "context",
+            "path": [
+              "value"
+            ]
+          }
+        }
+      ],
+      "schema": {
+        "capability": "/project/issue/:issueId#IssuePriorityComponent.updateIssue:issue-priority li",
+        "inputWellFormed": true,
+        "outputWellFormed": true,
+        "fieldsCorrect": false,
+        "requiredCorrect": false,
+        "expectedFields": [
+          "priority"
+        ],
+        "actualFields": [
+          "issueId",
+          "value"
+        ],
+        "expectedRequired": [
+          "priority"
+        ],
+        "actualRequired": [
+          "issueId",
+          "value"
+        ],
+        "passed": false,
+        "cases": [
+          {
+            "name": "valid representative input",
+            "input": {
+              "priority": "High"
+            },
+            "accepted": true,
+            "actualAccepted": false,
+            "passed": false
+          },
+          {
+            "name": "unknown property",
+            "input": {
+              "priority": "High",
+              "__unexpected": true
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "missing required priority",
+            "input": {},
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "wrong type priority",
+            "input": {
+              "priority": 42
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "invalid enum priority",
+            "input": {
+              "priority": "__invalid__"
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "enum priority=Lowest",
+            "input": {
+              "priority": "Lowest"
+            },
+            "accepted": true,
+            "actualAccepted": false,
+            "passed": false
+          },
+          {
+            "name": "enum priority=Low",
+            "input": {
+              "priority": "Low"
+            },
+            "accepted": true,
+            "actualAccepted": false,
+            "passed": false
+          },
+          {
+            "name": "enum priority=Medium",
+            "input": {
+              "priority": "Medium"
+            },
+            "accepted": true,
+            "actualAccepted": false,
+            "passed": false
+          },
+          {
+            "name": "enum priority=High",
+            "input": {
+              "priority": "High"
+            },
+            "accepted": true,
+            "actualAccepted": false,
+            "passed": false
+          },
+          {
+            "name": "enum priority=Highest",
+            "input": {
+              "priority": "Highest"
+            },
+            "accepted": true,
+            "actualAccepted": false,
+            "passed": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-type-update",
+      "classification": "blocked",
+      "predictions": [
+        {
+          "id": "/project/issue/:issueId#IssueTypeComponent.updateIssue:issue-type li",
+          "status": "blocked",
+          "issues": [
+            "Dynamic providers require review before code generation"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "issueId": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+              },
+              "value": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+              }
+            },
+            "required": [
+              "issueId",
+              "value"
+            ],
+            "additionalProperties": false
+          },
+          "action": {
+            "owner": "issue-type",
+            "kind": "button",
+            "selector": "issue-type li",
+            "label": "updateIssue",
+            "event": "click",
+            "expression": "updateIssue(option.value)",
+            "source": {
+              "file": "src/app/project/components/issues/issue-type/issue-type.component.html",
+              "line": 18
+            }
+          },
+          "target": {
+            "param": "value",
+            "source": "context",
+            "path": [
+              "value"
+            ]
+          }
+        }
+      ],
+      "schema": {
+        "capability": "/project/issue/:issueId#IssueTypeComponent.updateIssue:issue-type li",
+        "inputWellFormed": true,
+        "outputWellFormed": true,
+        "fieldsCorrect": false,
+        "requiredCorrect": false,
+        "expectedFields": [
+          "issueType"
+        ],
+        "actualFields": [
+          "issueId",
+          "value"
+        ],
+        "expectedRequired": [
+          "issueType"
+        ],
+        "actualRequired": [
+          "issueId",
+          "value"
+        ],
+        "passed": false,
+        "cases": [
+          {
+            "name": "valid representative input",
+            "input": {
+              "issueType": "Bug"
+            },
+            "accepted": true,
+            "actualAccepted": false,
+            "passed": false
+          },
+          {
+            "name": "unknown property",
+            "input": {
+              "issueType": "Bug",
+              "__unexpected": true
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "missing required issueType",
+            "input": {},
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "wrong type issueType",
+            "input": {
+              "issueType": 42
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "invalid enum issueType",
+            "input": {
+              "issueType": "__invalid__"
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "enum issueType=Story",
+            "input": {
+              "issueType": "Story"
+            },
+            "accepted": true,
+            "actualAccepted": false,
+            "passed": false
+          },
+          {
+            "name": "enum issueType=Task",
+            "input": {
+              "issueType": "Task"
+            },
+            "accepted": true,
+            "actualAccepted": false,
+            "passed": false
+          },
+          {
+            "name": "enum issueType=Bug",
+            "input": {
+              "issueType": "Bug"
+            },
+            "accepted": true,
+            "actualAccepted": false,
+            "passed": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-status-update",
+      "classification": "blocked",
+      "predictions": [
+        {
+          "id": "/project/issue/:issueId#IssueStatusComponent.updateIssue:issue-status li",
+          "status": "blocked",
+          "issues": [
+            "Dynamic providers require review before code generation"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "issueId": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+              },
+              "value": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+              }
+            },
+            "required": [
+              "issueId",
+              "value"
+            ],
+            "additionalProperties": false
+          },
+          "action": {
+            "owner": "issue-status",
+            "kind": "button",
+            "selector": "issue-status li",
+            "label": "updateIssue",
+            "event": "click",
+            "expression": "updateIssue(option.value)",
+            "source": {
+              "file": "src/app/project/components/issues/issue-status/issue-status.component.html",
+              "line": 18
+            }
+          },
+          "target": {
+            "param": "value",
+            "source": "context",
+            "path": [
+              "value"
+            ]
+          }
+        }
+      ],
+      "schema": {
+        "capability": "/project/issue/:issueId#IssueStatusComponent.updateIssue:issue-status li",
+        "inputWellFormed": true,
+        "outputWellFormed": true,
+        "fieldsCorrect": false,
+        "requiredCorrect": false,
+        "expectedFields": [
+          "status"
+        ],
+        "actualFields": [
+          "issueId",
+          "value"
+        ],
+        "expectedRequired": [
+          "status"
+        ],
+        "actualRequired": [
+          "issueId",
+          "value"
+        ],
+        "passed": false,
+        "cases": [
+          {
+            "name": "valid representative input",
+            "input": {
+              "status": "Selected"
+            },
+            "accepted": true,
+            "actualAccepted": false,
+            "passed": false
+          },
+          {
+            "name": "unknown property",
+            "input": {
+              "status": "Selected",
+              "__unexpected": true
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "missing required status",
+            "input": {},
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "wrong type status",
+            "input": {
+              "status": 42
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "invalid enum status",
+            "input": {
+              "status": "__invalid__"
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "enum status=Backlog",
+            "input": {
+              "status": "Backlog"
+            },
+            "accepted": true,
+            "actualAccepted": false,
+            "passed": false
+          },
+          {
+            "name": "enum status=Selected",
+            "input": {
+              "status": "Selected"
+            },
+            "accepted": true,
+            "actualAccepted": false,
+            "passed": false
+          },
+          {
+            "name": "enum status=InProgress",
+            "input": {
+              "status": "InProgress"
+            },
+            "accepted": true,
+            "actualAccepted": false,
+            "passed": false
+          },
+          {
+            "name": "enum status=Done",
+            "input": {
+              "status": "Done"
+            },
+            "accepted": true,
+            "actualAccepted": false,
+            "passed": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-assignee-add",
+      "classification": "blocked",
+      "predictions": [
+        {
+          "id": "/project/issue/:issueId#IssueAssigneesComponent.addUserToIssue:issue-assignees li",
+          "status": "blocked",
+          "issues": [
+            "Dynamic providers require review before code generation"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "issueId": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+              },
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+              }
+            },
+            "required": [
+              "issueId",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "action": {
+            "owner": "issue-assignees",
+            "kind": "button",
+            "selector": "issue-assignees li",
+            "label": "addUserToIssue",
+            "event": "click",
+            "expression": "addUserToIssue(option)",
+            "source": {
+              "file": "src/app/project/components/issues/issue-assignees/issue-assignees.component.html",
+              "line": 38
+            }
+          },
+          "target": {
+            "param": "id",
+            "source": "context",
+            "path": [
+              "id"
+            ]
+          }
+        }
+      ],
+      "schema": {
+        "capability": "/project/issue/:issueId#IssueAssigneesComponent.addUserToIssue:issue-assignees li",
+        "inputWellFormed": true,
+        "outputWellFormed": true,
+        "fieldsCorrect": false,
+        "requiredCorrect": false,
+        "expectedFields": [
+          "user"
+        ],
+        "actualFields": [
+          "id",
+          "issueId"
+        ],
+        "expectedRequired": [
+          "user"
+        ],
+        "actualRequired": [
+          "id",
+          "issueId"
+        ],
+        "passed": false,
+        "cases": [
+          {
+            "name": "valid representative input",
+            "input": {
+              "user": {
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "name": "Benchmark Reporter",
+                "email": "benchmark@example.test",
+                "avatarUrl": "/assets/test-avatar.png",
+                "createdAt": "2026-01-01T00:00:00Z",
+                "updatedAt": "2026-01-01T00:00:00Z",
+                "issueIds": []
+              }
+            },
+            "accepted": true,
+            "actualAccepted": false,
+            "passed": false
+          },
+          {
+            "name": "unknown property",
+            "input": {
+              "user": {
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "name": "Benchmark Reporter",
+                "email": "benchmark@example.test",
+                "avatarUrl": "/assets/test-avatar.png",
+                "createdAt": "2026-01-01T00:00:00Z",
+                "updatedAt": "2026-01-01T00:00:00Z",
+                "issueIds": []
+              },
+              "__unexpected": true
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "missing required user",
+            "input": {},
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "missing required user.id",
+            "input": {
+              "user": {
+                "name": "Benchmark Reporter",
+                "email": "benchmark@example.test",
+                "avatarUrl": "/assets/test-avatar.png",
+                "createdAt": "2026-01-01T00:00:00Z",
+                "updatedAt": "2026-01-01T00:00:00Z",
+                "issueIds": []
+              }
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "missing required user.name",
+            "input": {
+              "user": {
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "email": "benchmark@example.test",
+                "avatarUrl": "/assets/test-avatar.png",
+                "createdAt": "2026-01-01T00:00:00Z",
+                "updatedAt": "2026-01-01T00:00:00Z",
+                "issueIds": []
+              }
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "missing required user.email",
+            "input": {
+              "user": {
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "name": "Benchmark Reporter",
+                "avatarUrl": "/assets/test-avatar.png",
+                "createdAt": "2026-01-01T00:00:00Z",
+                "updatedAt": "2026-01-01T00:00:00Z",
+                "issueIds": []
+              }
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "missing required user.avatarUrl",
+            "input": {
+              "user": {
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "name": "Benchmark Reporter",
+                "email": "benchmark@example.test",
+                "createdAt": "2026-01-01T00:00:00Z",
+                "updatedAt": "2026-01-01T00:00:00Z",
+                "issueIds": []
+              }
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "missing required user.createdAt",
+            "input": {
+              "user": {
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "name": "Benchmark Reporter",
+                "email": "benchmark@example.test",
+                "avatarUrl": "/assets/test-avatar.png",
+                "updatedAt": "2026-01-01T00:00:00Z",
+                "issueIds": []
+              }
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "missing required user.updatedAt",
+            "input": {
+              "user": {
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "name": "Benchmark Reporter",
+                "email": "benchmark@example.test",
+                "avatarUrl": "/assets/test-avatar.png",
+                "createdAt": "2026-01-01T00:00:00Z",
+                "issueIds": []
+              }
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "missing required user.issueIds",
+            "input": {
+              "user": {
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "name": "Benchmark Reporter",
+                "email": "benchmark@example.test",
+                "avatarUrl": "/assets/test-avatar.png",
+                "createdAt": "2026-01-01T00:00:00Z",
+                "updatedAt": "2026-01-01T00:00:00Z"
+              }
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "wrong type user.id",
+            "input": {
+              "user": {
+                "id": 42,
+                "name": "Benchmark Reporter",
+                "email": "benchmark@example.test",
+                "avatarUrl": "/assets/test-avatar.png",
+                "createdAt": "2026-01-01T00:00:00Z",
+                "updatedAt": "2026-01-01T00:00:00Z",
+                "issueIds": []
+              }
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "wrong type user.name",
+            "input": {
+              "user": {
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "name": 42,
+                "email": "benchmark@example.test",
+                "avatarUrl": "/assets/test-avatar.png",
+                "createdAt": "2026-01-01T00:00:00Z",
+                "updatedAt": "2026-01-01T00:00:00Z",
+                "issueIds": []
+              }
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "wrong type user.email",
+            "input": {
+              "user": {
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "name": "Benchmark Reporter",
+                "email": 42,
+                "avatarUrl": "/assets/test-avatar.png",
+                "createdAt": "2026-01-01T00:00:00Z",
+                "updatedAt": "2026-01-01T00:00:00Z",
+                "issueIds": []
+              }
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "wrong type user.avatarUrl",
+            "input": {
+              "user": {
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "name": "Benchmark Reporter",
+                "email": "benchmark@example.test",
+                "avatarUrl": 42,
+                "createdAt": "2026-01-01T00:00:00Z",
+                "updatedAt": "2026-01-01T00:00:00Z",
+                "issueIds": []
+              }
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "wrong type user.createdAt",
+            "input": {
+              "user": {
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "name": "Benchmark Reporter",
+                "email": "benchmark@example.test",
+                "avatarUrl": "/assets/test-avatar.png",
+                "createdAt": 42,
+                "updatedAt": "2026-01-01T00:00:00Z",
+                "issueIds": []
+              }
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "wrong type user.updatedAt",
+            "input": {
+              "user": {
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "name": "Benchmark Reporter",
+                "email": "benchmark@example.test",
+                "avatarUrl": "/assets/test-avatar.png",
+                "createdAt": "2026-01-01T00:00:00Z",
+                "updatedAt": 42,
+                "issueIds": []
+              }
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "wrong type user.issueIds",
+            "input": {
+              "user": {
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "name": "Benchmark Reporter",
+                "email": "benchmark@example.test",
+                "avatarUrl": "/assets/test-avatar.png",
+                "createdAt": "2026-01-01T00:00:00Z",
+                "updatedAt": "2026-01-01T00:00:00Z",
+                "issueIds": {}
+              }
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-assignee-remove",
+      "classification": "blocked",
+      "predictions": [
+        {
+          "id": "/project/issue/:issueId#IssueAssigneesComponent.removeUser:issue-assignees svg-icon.text-textLight",
+          "status": "blocked",
+          "issues": [
+            "Dynamic providers require review before code generation"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "issueId": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+              },
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+              }
+            },
+            "required": [
+              "issueId",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "action": {
+            "owner": "issue-assignees",
+            "kind": "button",
+            "selector": "issue-assignees svg-icon.text-textLight",
+            "label": "removeUser",
+            "event": "click",
+            "expression": "removeUser(assignee.id)",
+            "source": {
+              "file": "src/app/project/components/issues/issue-assignees/issue-assignees.component.html",
+              "line": 10
+            }
+          },
+          "target": {
+            "param": "id",
+            "source": "context",
+            "path": [
+              "id"
+            ]
+          }
+        }
+      ],
+      "schema": {
+        "capability": "/project/issue/:issueId#IssueAssigneesComponent.removeUser:issue-assignees svg-icon.text-textLight",
+        "inputWellFormed": true,
+        "outputWellFormed": true,
+        "fieldsCorrect": false,
+        "requiredCorrect": false,
+        "expectedFields": [
+          "userId"
+        ],
+        "actualFields": [
+          "id",
+          "issueId"
+        ],
+        "expectedRequired": [
+          "userId"
+        ],
+        "actualRequired": [
+          "id",
+          "issueId"
+        ],
+        "passed": false,
+        "cases": [
+          {
+            "name": "valid representative input",
+            "input": {
+              "userId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1"
+            },
+            "accepted": true,
+            "actualAccepted": false,
+            "passed": false
+          },
+          {
+            "name": "unknown property",
+            "input": {
+              "userId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+              "__unexpected": true
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "missing required userId",
+            "input": {},
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "wrong type userId",
+            "input": {
+              "userId": 42
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-reporter-update",
+      "classification": "blocked",
+      "predictions": [
+        {
+          "id": "/project/issue/:issueId#IssueReporterComponent.updateIssue:issue-reporter li",
+          "status": "blocked",
+          "issues": [
+            "Dynamic providers require review before code generation"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "issueId": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+              },
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+              }
+            },
+            "required": [
+              "issueId",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "action": {
+            "owner": "issue-reporter",
+            "kind": "button",
+            "selector": "issue-reporter li",
+            "label": "updateIssue",
+            "event": "click",
+            "expression": "updateIssue(option)",
+            "source": {
+              "file": "src/app/project/components/issues/issue-reporter/issue-reporter.component.html",
+              "line": 17
+            }
+          },
+          "target": {
+            "param": "id",
+            "source": "context",
+            "path": [
+              "id"
+            ]
+          }
+        }
+      ],
+      "schema": {
+        "capability": "/project/issue/:issueId#IssueReporterComponent.updateIssue:issue-reporter li",
+        "inputWellFormed": true,
+        "outputWellFormed": true,
+        "fieldsCorrect": false,
+        "requiredCorrect": false,
+        "expectedFields": [
+          "user"
+        ],
+        "actualFields": [
+          "id",
+          "issueId"
+        ],
+        "expectedRequired": [
+          "user"
+        ],
+        "actualRequired": [
+          "id",
+          "issueId"
+        ],
+        "passed": false,
+        "cases": [
+          {
+            "name": "valid representative input",
+            "input": {
+              "user": {
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "name": "Benchmark Reporter",
+                "email": "benchmark@example.test",
+                "avatarUrl": "/assets/test-avatar.png",
+                "createdAt": "2026-01-01T00:00:00Z",
+                "updatedAt": "2026-01-01T00:00:00Z",
+                "issueIds": []
+              }
+            },
+            "accepted": true,
+            "actualAccepted": false,
+            "passed": false
+          },
+          {
+            "name": "unknown property",
+            "input": {
+              "user": {
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "name": "Benchmark Reporter",
+                "email": "benchmark@example.test",
+                "avatarUrl": "/assets/test-avatar.png",
+                "createdAt": "2026-01-01T00:00:00Z",
+                "updatedAt": "2026-01-01T00:00:00Z",
+                "issueIds": []
+              },
+              "__unexpected": true
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "missing required user",
+            "input": {},
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "missing required user.id",
+            "input": {
+              "user": {
+                "name": "Benchmark Reporter",
+                "email": "benchmark@example.test",
+                "avatarUrl": "/assets/test-avatar.png",
+                "createdAt": "2026-01-01T00:00:00Z",
+                "updatedAt": "2026-01-01T00:00:00Z",
+                "issueIds": []
+              }
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "missing required user.name",
+            "input": {
+              "user": {
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "email": "benchmark@example.test",
+                "avatarUrl": "/assets/test-avatar.png",
+                "createdAt": "2026-01-01T00:00:00Z",
+                "updatedAt": "2026-01-01T00:00:00Z",
+                "issueIds": []
+              }
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "missing required user.email",
+            "input": {
+              "user": {
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "name": "Benchmark Reporter",
+                "avatarUrl": "/assets/test-avatar.png",
+                "createdAt": "2026-01-01T00:00:00Z",
+                "updatedAt": "2026-01-01T00:00:00Z",
+                "issueIds": []
+              }
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "missing required user.avatarUrl",
+            "input": {
+              "user": {
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "name": "Benchmark Reporter",
+                "email": "benchmark@example.test",
+                "createdAt": "2026-01-01T00:00:00Z",
+                "updatedAt": "2026-01-01T00:00:00Z",
+                "issueIds": []
+              }
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "missing required user.createdAt",
+            "input": {
+              "user": {
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "name": "Benchmark Reporter",
+                "email": "benchmark@example.test",
+                "avatarUrl": "/assets/test-avatar.png",
+                "updatedAt": "2026-01-01T00:00:00Z",
+                "issueIds": []
+              }
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "missing required user.updatedAt",
+            "input": {
+              "user": {
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "name": "Benchmark Reporter",
+                "email": "benchmark@example.test",
+                "avatarUrl": "/assets/test-avatar.png",
+                "createdAt": "2026-01-01T00:00:00Z",
+                "issueIds": []
+              }
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "missing required user.issueIds",
+            "input": {
+              "user": {
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "name": "Benchmark Reporter",
+                "email": "benchmark@example.test",
+                "avatarUrl": "/assets/test-avatar.png",
+                "createdAt": "2026-01-01T00:00:00Z",
+                "updatedAt": "2026-01-01T00:00:00Z"
+              }
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "wrong type user.id",
+            "input": {
+              "user": {
+                "id": 42,
+                "name": "Benchmark Reporter",
+                "email": "benchmark@example.test",
+                "avatarUrl": "/assets/test-avatar.png",
+                "createdAt": "2026-01-01T00:00:00Z",
+                "updatedAt": "2026-01-01T00:00:00Z",
+                "issueIds": []
+              }
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "wrong type user.name",
+            "input": {
+              "user": {
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "name": 42,
+                "email": "benchmark@example.test",
+                "avatarUrl": "/assets/test-avatar.png",
+                "createdAt": "2026-01-01T00:00:00Z",
+                "updatedAt": "2026-01-01T00:00:00Z",
+                "issueIds": []
+              }
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "wrong type user.email",
+            "input": {
+              "user": {
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "name": "Benchmark Reporter",
+                "email": 42,
+                "avatarUrl": "/assets/test-avatar.png",
+                "createdAt": "2026-01-01T00:00:00Z",
+                "updatedAt": "2026-01-01T00:00:00Z",
+                "issueIds": []
+              }
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "wrong type user.avatarUrl",
+            "input": {
+              "user": {
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "name": "Benchmark Reporter",
+                "email": "benchmark@example.test",
+                "avatarUrl": 42,
+                "createdAt": "2026-01-01T00:00:00Z",
+                "updatedAt": "2026-01-01T00:00:00Z",
+                "issueIds": []
+              }
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "wrong type user.createdAt",
+            "input": {
+              "user": {
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "name": "Benchmark Reporter",
+                "email": "benchmark@example.test",
+                "avatarUrl": "/assets/test-avatar.png",
+                "createdAt": 42,
+                "updatedAt": "2026-01-01T00:00:00Z",
+                "issueIds": []
+              }
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "wrong type user.updatedAt",
+            "input": {
+              "user": {
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "name": "Benchmark Reporter",
+                "email": "benchmark@example.test",
+                "avatarUrl": "/assets/test-avatar.png",
+                "createdAt": "2026-01-01T00:00:00Z",
+                "updatedAt": 42,
+                "issueIds": []
+              }
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "wrong type user.issueIds",
+            "input": {
+              "user": {
+                "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+                "name": "Benchmark Reporter",
+                "email": "benchmark@example.test",
+                "avatarUrl": "/assets/test-avatar.png",
+                "createdAt": "2026-01-01T00:00:00Z",
+                "updatedAt": "2026-01-01T00:00:00Z",
+                "issueIds": {}
+              }
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-comment-add",
+      "classification": "blocked",
+      "predictions": [
+        {
+          "id": "/project/issue/:issueId#IssueCommentComponent.addComment:issue-comment j-button",
+          "status": "blocked",
+          "issues": [
+            "Dynamic providers require review before code generation"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "issueId": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+              }
+            },
+            "required": [
+              "issueId"
+            ],
+            "additionalProperties": false
+          },
+          "action": {
+            "owner": "issue-comment",
+            "matchText": "Save",
+            "kind": "button",
+            "selector": "issue-comment j-button",
+            "label": "Save",
+            "event": "click",
+            "expression": "addComment()",
+            "source": {
+              "file": "src/app/project/components/issues/issue-comment/issue-comment.component.html",
+              "line": 38
+            }
+          }
+        }
+      ],
+      "schema": {
+        "capability": "/project/issue/:issueId#IssueCommentComponent.addComment:issue-comment j-button",
+        "inputWellFormed": true,
+        "outputWellFormed": true,
+        "fieldsCorrect": false,
+        "requiredCorrect": false,
+        "expectedFields": [
+          "commentControl"
+        ],
+        "actualFields": [
+          "issueId"
+        ],
+        "expectedRequired": [
+          "commentControl"
+        ],
+        "actualRequired": [
+          "issueId"
+        ],
+        "passed": false,
+        "cases": [
+          {
+            "name": "valid representative input",
+            "input": {
+              "commentControl": "Benchmark reconciliation complete"
+            },
+            "accepted": true,
+            "actualAccepted": false,
+            "passed": false
+          },
+          {
+            "name": "unknown property",
+            "input": {
+              "commentControl": "Benchmark reconciliation complete",
+              "__unexpected": true
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "missing required commentControl",
+            "input": {},
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "wrong type commentControl",
+            "input": {
+              "commentControl": 42
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-delete",
+      "classification": "missing",
+      "predictions": [],
+      "schema": null
+    },
+    {
+      "id": "board-issue-reorder",
+      "classification": "missing",
+      "predictions": [],
+      "schema": null
+    },
+    {
+      "id": "board-issue-move",
+      "classification": "missing",
+      "predictions": [],
+      "schema": null
+    },
+    {
+      "id": "project-settings-update",
+      "classification": "blocked",
+      "predictions": [
+        {
+          "id": "/project/settings#SettingsComponent.submitForm:ng-component form.project-form",
+          "status": "blocked",
+          "issues": [
+            "Form requires exactly one identifiable submit button",
+            "Dynamic providers require review before code generation"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "action": {
+            "owner": "ng-component",
+            "kind": "form",
+            "selector": "ng-component form.project-form",
+            "label": "Name URL Category @for (category of categories; track category) { } Description Save Cancel",
+            "event": "ngSubmit",
+            "expression": "submitForm()",
+            "source": {
+              "file": "src/app/project/pages/settings/settings.component.html",
+              "line": 5
+            }
+          }
+        }
+      ],
+      "schema": {
+        "capability": "/project/settings#SettingsComponent.submitForm:ng-component form.project-form",
+        "inputWellFormed": true,
+        "outputWellFormed": true,
+        "fieldsCorrect": true,
+        "requiredCorrect": false,
+        "expectedFields": [
+          "category",
+          "description",
+          "name",
+          "url"
+        ],
+        "actualFields": [
+          "category",
+          "description",
+          "name",
+          "url"
+        ],
+        "expectedRequired": [
+          "name"
+        ],
+        "actualRequired": [],
+        "passed": false,
+        "cases": [
+          {
+            "name": "valid representative input",
+            "input": {
+              "name": "Benchmark Operations",
+              "url": "https://example.test/project",
+              "description": "Synthetic benchmark project",
+              "category": "Business"
+            },
+            "accepted": true,
+            "actualAccepted": true,
+            "passed": true
+          },
+          {
+            "name": "unknown property",
+            "input": {
+              "name": "Benchmark Operations",
+              "url": "https://example.test/project",
+              "description": "Synthetic benchmark project",
+              "category": "Business",
+              "__unexpected": true
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "missing required name",
+            "input": {
+              "url": "https://example.test/project",
+              "description": "Synthetic benchmark project",
+              "category": "Business"
+            },
+            "accepted": false,
+            "actualAccepted": true,
+            "passed": false
+          },
+          {
+            "name": "wrong type name",
+            "input": {
+              "name": 42,
+              "url": "https://example.test/project",
+              "description": "Synthetic benchmark project",
+              "category": "Business"
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "below minLength name",
+            "input": {
+              "name": "",
+              "url": "https://example.test/project",
+              "description": "Synthetic benchmark project",
+              "category": "Business"
+            },
+            "accepted": false,
+            "actualAccepted": true,
+            "passed": false
+          },
+          {
+            "name": "pattern example name 0",
+            "input": {
+              "name": "",
+              "url": "https://example.test/project",
+              "description": "Synthetic benchmark project",
+              "category": "Business"
+            },
+            "accepted": false,
+            "actualAccepted": true,
+            "passed": false
+          },
+          {
+            "name": "pattern example name 1",
+            "input": {
+              "name": "__invalid__",
+              "url": "https://example.test/project",
+              "description": "Synthetic benchmark project",
+              "category": "Business"
+            },
+            "accepted": true,
+            "expectationAdjusted": true,
+            "actualAccepted": true,
+            "passed": true
+          },
+          {
+            "name": "pattern example name 2",
+            "input": {
+              "name": "Benchmark Operations!",
+              "url": "https://example.test/project",
+              "description": "Synthetic benchmark project",
+              "category": "Business"
+            },
+            "accepted": true,
+            "expectationAdjusted": true,
+            "actualAccepted": true,
+            "passed": true
+          },
+          {
+            "name": "pattern example name 3",
+            "input": {
+              "name": "enchmark Operations",
+              "url": "https://example.test/project",
+              "description": "Synthetic benchmark project",
+              "category": "Business"
+            },
+            "accepted": true,
+            "expectationAdjusted": true,
+            "actualAccepted": true,
+            "passed": true
+          },
+          {
+            "name": "wrong type url",
+            "input": {
+              "name": "Benchmark Operations",
+              "url": 42,
+              "description": "Synthetic benchmark project",
+              "category": "Business"
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "wrong type description",
+            "input": {
+              "name": "Benchmark Operations",
+              "url": "https://example.test/project",
+              "description": 42,
+              "category": "Business"
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "wrong type category",
+            "input": {
+              "name": "Benchmark Operations",
+              "url": "https://example.test/project",
+              "description": "Synthetic benchmark project",
+              "category": 42
+            },
+            "accepted": false,
+            "actualAccepted": false,
+            "passed": true
+          },
+          {
+            "name": "invalid enum category",
+            "input": {
+              "name": "Benchmark Operations",
+              "url": "https://example.test/project",
+              "description": "Synthetic benchmark project",
+              "category": "__invalid__"
+            },
+            "accepted": false,
+            "actualAccepted": true,
+            "passed": false
+          },
+          {
+            "name": "enum category=Business",
+            "input": {
+              "name": "Benchmark Operations",
+              "url": "https://example.test/project",
+              "description": "Synthetic benchmark project",
+              "category": "Business"
+            },
+            "accepted": true,
+            "actualAccepted": true,
+            "passed": true
+          },
+          {
+            "name": "enum category=Marketing",
+            "input": {
+              "name": "Benchmark Operations",
+              "url": "https://example.test/project",
+              "description": "Synthetic benchmark project",
+              "category": "Marketing"
+            },
+            "accepted": true,
+            "actualAccepted": true,
+            "passed": true
+          },
+          {
+            "name": "enum category=Software",
+            "input": {
+              "name": "Benchmark Operations",
+              "url": "https://example.test/project",
+              "description": "Synthetic benchmark project",
+              "category": "Software"
+            },
+            "accepted": true,
+            "actualAccepted": true,
+            "passed": true
+          }
+        ]
+      }
+    }
+  ],
+  "unknown": [],
+  "manifest": {
+    "formatVersion": 1,
+    "compilerVersion": "0.1.0",
+    "sourceDigest": "d59924c97338d4885c979034cf0e447e06d57c1d9c6cf9a59797b2c7b077269e",
+    "routes": [
+      {
+        "path": "/project",
+        "component": "ProjectComponent",
+        "guards": []
+      },
+      {
+        "path": "/project/board",
+        "component": "BoardComponent",
+        "guards": []
+      },
+      {
+        "path": "/project/issue/:issueId",
+        "component": "FullIssueDetailComponent",
+        "guards": []
+      },
+      {
+        "path": "/project/settings",
+        "component": "SettingsComponent",
+        "guards": []
+      },
+      {
+        "path": "/wip",
+        "component": "WorkInProgressComponent",
+        "guards": []
+      }
+    ],
+    "capabilities": [
+      {
+        "id": "/project/board#BoardFilterComponent.ignoreResolvedChanged:board-filter j-button.ml-3",
+        "fingerprint": "1713350585b781d5df32108ac52d346307d003fa0a0a7f0e0768ccd6c0b961c7",
+        "route": "/project/board",
+        "component": "BoardFilterComponent",
+        "componentSelector": "board-filter",
+        "action": {
+          "owner": "board-filter",
+          "matchText": "Ignore Resolved",
+          "kind": "button",
+          "selector": "board-filter j-button.ml-3",
+          "label": "Ignore Resolved",
+          "event": "click",
+          "expression": "ignoreResolvedChanged()",
+          "source": {
+            "file": "src/app/project/components/board/board-filter/board-filter.component.html",
+            "line": 33
+          }
+        },
+        "fields": [],
+        "handler": "ignoreResolvedChanged",
+        "callPath": [
+          "BoardFilterComponent.ignoreResolvedChanged",
+          "FilterService.toggleIgnoreResolve"
+        ],
+        "bindings": [
+          {
+            "token": "FilterService",
+            "service": "FilterService",
+            "method": "toggleIgnoreResolve",
+            "source": {
+              "file": "src/app/project/state/filter/filter.service.ts",
+              "line": 39
+            },
+            "arguments": [],
+            "inputSchema": {
+              "type": "object",
+              "properties": {},
+              "required": [],
+              "additionalProperties": false
+            },
+            "outputSchema": {
+              "type": "null"
+            },
+            "schemaIssues": []
+          }
+        ],
+        "inputSchema": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "ui-dispatched"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "url"
+          ],
+          "additionalProperties": false
+        },
+        "guards": [],
+        "workflow": {
+          "confirmation": "not-observed",
+          "evidence": []
+        },
+        "issues": [
+          "Dynamic providers require review before code generation"
+        ],
+        "status": "blocked"
+      },
+      {
+        "id": "/project/board#BoardFilterComponent.onlyMyIssueChanged:board-filter j-button.ml-3",
+        "fingerprint": "59cb6cb634d1ec3f890eafcff0b5d9da912dc3acdeb533a938d136ffbb68239b",
+        "route": "/project/board",
+        "component": "BoardFilterComponent",
+        "componentSelector": "board-filter",
+        "action": {
+          "owner": "board-filter",
+          "matchText": "Only My Issues",
+          "kind": "button",
+          "selector": "board-filter j-button.ml-3",
+          "label": "Only My Issues",
+          "event": "click",
+          "expression": "onlyMyIssueChanged()",
+          "source": {
+            "file": "src/app/project/components/board/board-filter/board-filter.component.html",
+            "line": 28
+          }
+        },
+        "fields": [],
+        "handler": "onlyMyIssueChanged",
+        "callPath": [
+          "BoardFilterComponent.onlyMyIssueChanged",
+          "FilterService.toggleOnlyMyIssue"
+        ],
+        "bindings": [
+          {
+            "token": "FilterService",
+            "service": "FilterService",
+            "method": "toggleOnlyMyIssue",
+            "source": {
+              "file": "src/app/project/state/filter/filter.service.ts",
+              "line": 29
+            },
+            "arguments": [],
+            "inputSchema": {
+              "type": "object",
+              "properties": {},
+              "required": [],
+              "additionalProperties": false
+            },
+            "outputSchema": {
+              "type": "null"
+            },
+            "schemaIssues": []
+          }
+        ],
+        "inputSchema": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "ui-dispatched"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "url"
+          ],
+          "additionalProperties": false
+        },
+        "guards": [],
+        "workflow": {
+          "confirmation": "not-observed",
+          "evidence": []
+        },
+        "issues": [
+          "Dynamic providers require review before code generation"
+        ],
+        "status": "blocked"
+      },
+      {
+        "id": "/project/board#BoardFilterComponent.resetAll:board-filter j-button",
+        "fingerprint": "ab109195fa31c93d3f3da0a48161740111266af3f4704652cc6f5915edf3ddbc",
+        "route": "/project/board",
+        "component": "BoardFilterComponent",
+        "componentSelector": "board-filter",
+        "action": {
+          "owner": "board-filter",
+          "kind": "button",
+          "selector": "board-filter j-button",
+          "label": "Clear all",
+          "event": "click",
+          "expression": "resetAll()",
+          "source": {
+            "file": "src/app/project/components/board/board-filter/board-filter.component.html",
+            "line": 42
+          }
+        },
+        "fields": [],
+        "handler": "resetAll",
+        "callPath": [
+          "BoardFilterComponent.resetAll",
+          "FilterService.resetAll"
+        ],
+        "bindings": [
+          {
+            "token": "FilterService",
+            "service": "FilterService",
+            "method": "resetAll",
+            "source": {
+              "file": "src/app/project/state/filter/filter.service.ts",
+              "line": 49
+            },
+            "arguments": [],
+            "inputSchema": {
+              "type": "object",
+              "properties": {},
+              "required": [],
+              "additionalProperties": false
+            },
+            "outputSchema": {
+              "type": "null"
+            },
+            "schemaIssues": []
+          }
+        ],
+        "inputSchema": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "ui-dispatched"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "url"
+          ],
+          "additionalProperties": false
+        },
+        "guards": [],
+        "workflow": {
+          "confirmation": "not-observed",
+          "evidence": []
+        },
+        "issues": [
+          "Dynamic providers require review before code generation"
+        ],
+        "status": "blocked"
+      },
+      {
+        "id": "/project/board#BoardFilterComponent.userChanged:board-filter j-avatar.flex",
+        "fingerprint": "a088b58ba4835c394b5dd39f5ec1ce8746c6618ee2c83578d6a2c9722c1677fc",
+        "route": "/project/board",
+        "target": {
+          "param": "id",
+          "source": "context",
+          "path": [
+            "id"
+          ]
+        },
+        "component": "BoardFilterComponent",
+        "componentSelector": "board-filter",
+        "action": {
+          "owner": "board-filter",
+          "kind": "button",
+          "selector": "board-filter j-avatar.flex",
+          "label": "userChanged",
+          "event": "click",
+          "expression": "userChanged(user)",
+          "source": {
+            "file": "src/app/project/components/board/board-filter/board-filter.component.html",
+            "line": 20
+          }
+        },
+        "fields": [],
+        "handler": "userChanged",
+        "callPath": [
+          "BoardFilterComponent.userChanged",
+          "FilterService.toggleUserId"
+        ],
+        "bindings": [
+          {
+            "token": "FilterService",
+            "service": "FilterService",
+            "method": "toggleUserId",
+            "source": {
+              "file": "src/app/project/state/filter/filter.service.ts",
+              "line": 16
+            },
+            "arguments": [
+              "user.id"
+            ],
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "userId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "userId"
+              ],
+              "additionalProperties": false
+            },
+            "outputSchema": {
+              "type": "null"
+            },
+            "schemaIssues": []
+          }
+        ],
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "additionalProperties": false
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "ui-dispatched"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "url"
+          ],
+          "additionalProperties": false
+        },
+        "guards": [],
+        "workflow": {
+          "confirmation": "not-observed",
+          "evidence": []
+        },
+        "issues": [
+          "Dynamic providers require review before code generation"
+        ],
+        "status": "blocked"
+      },
+      {
+        "id": "/project/board#InputComponent.clear:j-input i[nztype=\"close\"][nztheme=\"outline\"]",
+        "fingerprint": "40f5efb9c033b7e9bcecff0355521599a4176dfee9986fd58d16841219891c9c",
+        "route": "/project/board",
+        "component": "InputComponent",
+        "componentSelector": "j-input",
+        "action": {
+          "owner": "j-input",
+          "kind": "button",
+          "selector": "j-input i[nztype=\"close\"][nztheme=\"outline\"]",
+          "label": "clear",
+          "event": "click",
+          "expression": "clear()",
+          "source": {
+            "file": "src/app/jira-control/input/input.component.html",
+            "line": 25
+          }
+        },
+        "fields": [],
+        "handler": "clear",
+        "callPath": [],
+        "bindings": [],
+        "effectKind": "ui-state",
+        "inputSchema": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "ui-dispatched"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "url"
+          ],
+          "additionalProperties": false
+        },
+        "guards": [],
+        "workflow": {
+          "confirmation": "not-observed",
+          "evidence": []
+        },
+        "issues": [
+          "Dynamic providers require review before code generation"
+        ],
+        "status": "blocked"
+      },
+      {
+        "id": "/project/issue/:issueId#FullIssueDetailComponent.deleteIssue:full-issue-detail issue-detail",
+        "fingerprint": "9ada56d8826a06dd644191dada170520e14d64ab6d07830c516a0759beaa5cb3",
+        "route": "/project/issue/:issueId",
+        "routeParams": [
+          "issueId"
+        ],
+        "component": "FullIssueDetailComponent",
+        "componentSelector": "full-issue-detail",
+        "action": {
+          "owner": "issue-detail",
+          "kind": "button",
+          "selector": "full-issue-detail issue-detail",
+          "label": "deleteIssue",
+          "event": "onDelete",
+          "expression": "deleteIssue($event)",
+          "source": {
+            "file": "src/app/project/pages/full-issue-detail/full-issue-detail.component.html",
+            "line": 8
+          }
+        },
+        "fields": [],
+        "handler": "deleteIssue",
+        "callPath": [
+          "FullIssueDetailComponent.deleteIssue",
+          "ProjectService.deleteIssue"
+        ],
+        "bindings": [
+          {
+            "token": "ProjectService",
+            "service": "ProjectService",
+            "method": "deleteIssue",
+            "source": {
+              "file": "src/app/project/state/project/project.service.ts",
+              "line": 64
+            },
+            "arguments": [
+              "issueId"
+            ],
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "issueId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "issueId"
+              ],
+              "additionalProperties": false
+            },
+            "outputSchema": {
+              "type": "null"
+            },
+            "schemaIssues": []
+          }
+        ],
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "issueId": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+            }
+          },
+          "required": [
+            "issueId"
+          ],
+          "additionalProperties": false
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "ui-dispatched"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "url"
+          ],
+          "additionalProperties": false
+        },
+        "guards": [],
+        "workflow": {
+          "confirmation": "not-observed",
+          "evidence": []
+        },
+        "issues": [
+          "Forwarded event onDelete needs exactly one emitting UI element (found 0)",
+          "Forwarded event needs a data identity for the item it acts on",
+          "Dynamic providers require review before code generation"
+        ],
+        "status": "blocked"
+      },
+      {
+        "id": "/project/issue/:issueId#IssueAssigneesComponent.addUserToIssue:issue-assignees li",
+        "fingerprint": "7a15f11b2a2505dcdecda3f11f5c291ea2fb86f76c02674b4954a330ad0b3e95",
+        "route": "/project/issue/:issueId",
+        "routeParams": [
+          "issueId"
+        ],
+        "target": {
+          "param": "id",
+          "source": "context",
+          "path": [
+            "id"
+          ]
+        },
+        "component": "IssueAssigneesComponent",
+        "componentSelector": "issue-assignees",
+        "action": {
+          "owner": "issue-assignees",
+          "kind": "button",
+          "selector": "issue-assignees li",
+          "label": "addUserToIssue",
+          "event": "click",
+          "expression": "addUserToIssue(option)",
+          "source": {
+            "file": "src/app/project/components/issues/issue-assignees/issue-assignees.component.html",
+            "line": 38
+          }
+        },
+        "fields": [],
+        "handler": "addUserToIssue",
+        "callPath": [
+          "IssueAssigneesComponent.addUserToIssue",
+          "ProjectService.updateIssue"
+        ],
+        "bindings": [
+          {
+            "token": "ProjectService",
+            "service": "ProjectService",
+            "method": "updateIssue",
+            "source": {
+              "file": "src/app/project/state/project/project.service.ts",
+              "line": 53
+            },
+            "arguments": [
+              "{\n      ...this.issue,\n      userIds: [...this.issue.userIds, user.id]\n    }"
+            ],
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "issue": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "const": "Story"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Task"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Bug"
+                        }
+                      ]
+                    },
+                    "status": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "const": "Backlog"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Selected"
+                        },
+                        {
+                          "type": "string",
+                          "const": "InProgress"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Done"
+                        }
+                      ]
+                    },
+                    "priority": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "const": "Lowest"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Low"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Medium"
+                        },
+                        {
+                          "type": "string",
+                          "const": "High"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Highest"
+                        }
+                      ]
+                    },
+                    "listPosition": {
+                      "type": "number"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "estimate": {
+                      "type": "number"
+                    },
+                    "timeSpent": {
+                      "type": "number"
+                    },
+                    "timeRemaining": {
+                      "type": "number"
+                    },
+                    "createdAt": {
+                      "type": "string"
+                    },
+                    "updatedAt": {
+                      "type": "string"
+                    },
+                    "reporterId": {
+                      "type": "string"
+                    },
+                    "userIds": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "comments": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "body": {
+                            "type": "string"
+                          },
+                          "createdAt": {
+                            "type": "string"
+                          },
+                          "updatedAt": {
+                            "type": "string"
+                          },
+                          "issueId": {
+                            "type": "string"
+                          },
+                          "userId": {
+                            "type": "string"
+                          },
+                          "user": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "email": {
+                                "type": "string"
+                              },
+                              "avatarUrl": {
+                                "type": "string"
+                              },
+                              "createdAt": {
+                                "type": "string"
+                              },
+                              "updatedAt": {
+                                "type": "string"
+                              },
+                              "issueIds": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "required": [
+                              "id",
+                              "name",
+                              "email",
+                              "avatarUrl",
+                              "createdAt",
+                              "updatedAt",
+                              "issueIds"
+                            ],
+                            "additionalProperties": false
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "body",
+                          "createdAt",
+                          "updatedAt",
+                          "issueId",
+                          "userId",
+                          "user"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "projectId": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "title",
+                    "type",
+                    "status",
+                    "priority",
+                    "listPosition",
+                    "description",
+                    "estimate",
+                    "timeSpent",
+                    "timeRemaining",
+                    "createdAt",
+                    "updatedAt",
+                    "reporterId",
+                    "userIds",
+                    "comments",
+                    "projectId"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "issue"
+              ],
+              "additionalProperties": false
+            },
+            "outputSchema": {
+              "type": "null"
+            },
+            "schemaIssues": []
+          }
+        ],
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "issueId": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+            },
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+            }
+          },
+          "required": [
+            "issueId",
+            "id"
+          ],
+          "additionalProperties": false
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "ui-dispatched"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "url"
+          ],
+          "additionalProperties": false
+        },
+        "guards": [],
+        "workflow": {
+          "confirmation": "not-observed",
+          "evidence": []
+        },
+        "issues": [
+          "Dynamic providers require review before code generation"
+        ],
+        "status": "blocked"
+      },
+      {
+        "id": "/project/issue/:issueId#IssueAssigneesComponent.removeUser:issue-assignees svg-icon.text-textLight",
+        "fingerprint": "869d6a8b6d5c8b0e3ca8ab63ffec11786ec280ca993677403ada36869eac319e",
+        "route": "/project/issue/:issueId",
+        "routeParams": [
+          "issueId"
+        ],
+        "target": {
+          "param": "id",
+          "source": "context",
+          "path": [
+            "id"
+          ]
+        },
+        "component": "IssueAssigneesComponent",
+        "componentSelector": "issue-assignees",
+        "action": {
+          "owner": "issue-assignees",
+          "kind": "button",
+          "selector": "issue-assignees svg-icon.text-textLight",
+          "label": "removeUser",
+          "event": "click",
+          "expression": "removeUser(assignee.id)",
+          "source": {
+            "file": "src/app/project/components/issues/issue-assignees/issue-assignees.component.html",
+            "line": 10
+          }
+        },
+        "fields": [],
+        "handler": "removeUser",
+        "callPath": [
+          "IssueAssigneesComponent.removeUser",
+          "ProjectService.updateIssue"
+        ],
+        "bindings": [
+          {
+            "token": "ProjectService",
+            "service": "ProjectService",
+            "method": "updateIssue",
+            "source": {
+              "file": "src/app/project/state/project/project.service.ts",
+              "line": 53
+            },
+            "arguments": [
+              "{\n      ...this.issue,\n      userIds: newUserIds\n    }"
+            ],
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "issue": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "const": "Story"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Task"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Bug"
+                        }
+                      ]
+                    },
+                    "status": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "const": "Backlog"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Selected"
+                        },
+                        {
+                          "type": "string",
+                          "const": "InProgress"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Done"
+                        }
+                      ]
+                    },
+                    "priority": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "const": "Lowest"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Low"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Medium"
+                        },
+                        {
+                          "type": "string",
+                          "const": "High"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Highest"
+                        }
+                      ]
+                    },
+                    "listPosition": {
+                      "type": "number"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "estimate": {
+                      "type": "number"
+                    },
+                    "timeSpent": {
+                      "type": "number"
+                    },
+                    "timeRemaining": {
+                      "type": "number"
+                    },
+                    "createdAt": {
+                      "type": "string"
+                    },
+                    "updatedAt": {
+                      "type": "string"
+                    },
+                    "reporterId": {
+                      "type": "string"
+                    },
+                    "userIds": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "comments": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "body": {
+                            "type": "string"
+                          },
+                          "createdAt": {
+                            "type": "string"
+                          },
+                          "updatedAt": {
+                            "type": "string"
+                          },
+                          "issueId": {
+                            "type": "string"
+                          },
+                          "userId": {
+                            "type": "string"
+                          },
+                          "user": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "email": {
+                                "type": "string"
+                              },
+                              "avatarUrl": {
+                                "type": "string"
+                              },
+                              "createdAt": {
+                                "type": "string"
+                              },
+                              "updatedAt": {
+                                "type": "string"
+                              },
+                              "issueIds": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "required": [
+                              "id",
+                              "name",
+                              "email",
+                              "avatarUrl",
+                              "createdAt",
+                              "updatedAt",
+                              "issueIds"
+                            ],
+                            "additionalProperties": false
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "body",
+                          "createdAt",
+                          "updatedAt",
+                          "issueId",
+                          "userId",
+                          "user"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "projectId": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "title",
+                    "type",
+                    "status",
+                    "priority",
+                    "listPosition",
+                    "description",
+                    "estimate",
+                    "timeSpent",
+                    "timeRemaining",
+                    "createdAt",
+                    "updatedAt",
+                    "reporterId",
+                    "userIds",
+                    "comments",
+                    "projectId"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "issue"
+              ],
+              "additionalProperties": false
+            },
+            "outputSchema": {
+              "type": "null"
+            },
+            "schemaIssues": []
+          }
+        ],
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "issueId": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+            },
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+            }
+          },
+          "required": [
+            "issueId",
+            "id"
+          ],
+          "additionalProperties": false
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "ui-dispatched"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "url"
+          ],
+          "additionalProperties": false
+        },
+        "guards": [],
+        "workflow": {
+          "confirmation": "not-observed",
+          "evidence": []
+        },
+        "issues": [
+          "Dynamic providers require review before code generation"
+        ],
+        "status": "blocked"
+      },
+      {
+        "id": "/project/issue/:issueId#IssueCommentComponent.addComment:issue-comment j-button",
+        "fingerprint": "b698151d3e48b51c553b61a3eb65521031f4ad25db952dc8e1e90b6bde813bb4",
+        "route": "/project/issue/:issueId",
+        "routeParams": [
+          "issueId"
+        ],
+        "component": "IssueCommentComponent",
+        "componentSelector": "issue-comment",
+        "action": {
+          "owner": "issue-comment",
+          "matchText": "Save",
+          "kind": "button",
+          "selector": "issue-comment j-button",
+          "label": "Save",
+          "event": "click",
+          "expression": "addComment()",
+          "source": {
+            "file": "src/app/project/components/issues/issue-comment/issue-comment.component.html",
+            "line": 38
+          }
+        },
+        "fields": [],
+        "handler": "addComment",
+        "callPath": [
+          "IssueCommentComponent.addComment",
+          "ProjectService.updateIssueComment"
+        ],
+        "bindings": [
+          {
+            "token": "ProjectService",
+            "service": "ProjectService",
+            "method": "updateIssueComment",
+            "source": {
+              "file": "src/app/project/state/project/project.service.ts",
+              "line": 74
+            },
+            "arguments": [
+              "this.issueId",
+              "{\n      ...this.comment,\n      id: `${now.getTime()}`,\n      createdAt: now.toISOString(),\n      updatedAt: now.toISOString(),\n      body: this.commentControl.value\n    }"
+            ],
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "issueId": {
+                  "type": "string"
+                },
+                "comment": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "body": {
+                      "type": "string"
+                    },
+                    "createdAt": {
+                      "type": "string"
+                    },
+                    "updatedAt": {
+                      "type": "string"
+                    },
+                    "issueId": {
+                      "type": "string"
+                    },
+                    "userId": {
+                      "type": "string"
+                    },
+                    "user": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "email": {
+                          "type": "string"
+                        },
+                        "avatarUrl": {
+                          "type": "string"
+                        },
+                        "createdAt": {
+                          "type": "string"
+                        },
+                        "updatedAt": {
+                          "type": "string"
+                        },
+                        "issueIds": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "name",
+                        "email",
+                        "avatarUrl",
+                        "createdAt",
+                        "updatedAt",
+                        "issueIds"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "body",
+                    "createdAt",
+                    "updatedAt",
+                    "issueId",
+                    "userId",
+                    "user"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "issueId",
+                "comment"
+              ],
+              "additionalProperties": false
+            },
+            "outputSchema": {
+              "type": "null"
+            },
+            "schemaIssues": []
+          }
+        ],
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "issueId": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+            }
+          },
+          "required": [
+            "issueId"
+          ],
+          "additionalProperties": false
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "ui-dispatched"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "url"
+          ],
+          "additionalProperties": false
+        },
+        "guards": [],
+        "workflow": {
+          "confirmation": "not-observed",
+          "evidence": []
+        },
+        "issues": [
+          "Dynamic providers require review before code generation"
+        ],
+        "status": "blocked"
+      },
+      {
+        "id": "/project/issue/:issueId#IssueCommentComponent.cancelAddComment:issue-comment j-button",
+        "fingerprint": "d09979ba9dc859cef8a8c117a79296be82221f3ace9a38ea3380524cc46d7bd6",
+        "route": "/project/issue/:issueId",
+        "routeParams": [
+          "issueId"
+        ],
+        "component": "IssueCommentComponent",
+        "componentSelector": "issue-comment",
+        "action": {
+          "owner": "issue-comment",
+          "matchText": "Cancel",
+          "kind": "button",
+          "selector": "issue-comment j-button",
+          "label": "Cancel",
+          "event": "click",
+          "expression": "cancelAddComment()",
+          "source": {
+            "file": "src/app/project/components/issues/issue-comment/issue-comment.component.html",
+            "line": 42
+          }
+        },
+        "fields": [],
+        "handler": "cancelAddComment",
+        "callPath": [],
+        "bindings": [],
+        "effectKind": "ui-state",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "issueId": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+            }
+          },
+          "required": [
+            "issueId"
+          ],
+          "additionalProperties": false
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "ui-dispatched"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "url"
+          ],
+          "additionalProperties": false
+        },
+        "guards": [],
+        "workflow": {
+          "confirmation": "not-observed",
+          "evidence": []
+        },
+        "issues": [
+          "Dynamic providers require review before code generation"
+        ],
+        "status": "blocked"
+      },
+      {
+        "id": "/project/issue/:issueId#IssueCommentComponent.setCommentEdit:issue-comment textarea.textarea-inline-control.textarea-border",
+        "fingerprint": "d5d81c2113d8efd1c036689027f07a3a10f93fa17d9c3366c7f14b89ed6aed4b",
+        "route": "/project/issue/:issueId",
+        "routeParams": [
+          "issueId"
+        ],
+        "component": "IssueCommentComponent",
+        "componentSelector": "issue-comment",
+        "action": {
+          "owner": "issue-comment",
+          "kind": "button",
+          "selector": "issue-comment textarea.textarea-inline-control.textarea-border",
+          "label": "setCommentEdit",
+          "event": "click",
+          "expression": "setCommentEdit(true)",
+          "source": {
+            "file": "src/app/project/components/issues/issue-comment/issue-comment.component.html",
+            "line": 27
+          }
+        },
+        "fields": [],
+        "handler": "setCommentEdit",
+        "callPath": [],
+        "bindings": [],
+        "effectKind": "ui-state",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "issueId": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+            }
+          },
+          "required": [
+            "issueId"
+          ],
+          "additionalProperties": false
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "ui-dispatched"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "url"
+          ],
+          "additionalProperties": false
+        },
+        "guards": [],
+        "workflow": {
+          "confirmation": "not-observed",
+          "evidence": []
+        },
+        "issues": [
+          "Dynamic providers require review before code generation"
+        ],
+        "status": "blocked"
+      },
+      {
+        "id": "/project/issue/:issueId#IssueDescriptionComponent.cancel:issue-description j-button",
+        "fingerprint": "beedaa95f55725ecfe7caa4ee2b9d694fd0ed71a0eeddd96b23f7208f08f9386",
+        "route": "/project/issue/:issueId",
+        "routeParams": [
+          "issueId"
+        ],
+        "component": "IssueDescriptionComponent",
+        "componentSelector": "issue-description",
+        "action": {
+          "owner": "issue-description",
+          "kind": "button",
+          "selector": "issue-description j-button",
+          "label": "Cancel",
+          "event": "click",
+          "expression": "cancel()",
+          "source": {
+            "file": "src/app/project/components/issues/issue-description/issue-description.component.html",
+            "line": 15
+          }
+        },
+        "fields": [],
+        "handler": "cancel",
+        "callPath": [],
+        "bindings": [],
+        "effectKind": "ui-state",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "issueId": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+            }
+          },
+          "required": [
+            "issueId"
+          ],
+          "additionalProperties": false
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "ui-dispatched"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "url"
+          ],
+          "additionalProperties": false
+        },
+        "guards": [],
+        "workflow": {
+          "confirmation": "not-observed",
+          "evidence": []
+        },
+        "issues": [
+          "Dynamic providers require review before code generation"
+        ],
+        "status": "blocked"
+      },
+      {
+        "id": "/project/issue/:issueId#IssueDescriptionComponent.save:issue-description j-button.mr-2",
+        "fingerprint": "c694b4273c0d3391a9faf74c901d2ad26f01bda05957b66e16d8d69ed322f605",
+        "route": "/project/issue/:issueId",
+        "routeParams": [
+          "issueId"
+        ],
+        "component": "IssueDescriptionComponent",
+        "componentSelector": "issue-description",
+        "action": {
+          "owner": "issue-description",
+          "kind": "button",
+          "selector": "issue-description j-button.mr-2",
+          "label": "Save",
+          "event": "click",
+          "expression": "save()",
+          "source": {
+            "file": "src/app/project/components/issues/issue-description/issue-description.component.html",
+            "line": 13
+          }
+        },
+        "fields": [],
+        "handler": "save",
+        "callPath": [
+          "IssueDescriptionComponent.save",
+          "ProjectService.updateIssue"
+        ],
+        "bindings": [
+          {
+            "token": "ProjectService",
+            "service": "ProjectService",
+            "method": "updateIssue",
+            "source": {
+              "file": "src/app/project/state/project/project.service.ts",
+              "line": 53
+            },
+            "arguments": [
+              "{\n      ...this.issue,\n      description: this.descriptionControl.value\n    }"
+            ],
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "issue": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "const": "Story"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Task"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Bug"
+                        }
+                      ]
+                    },
+                    "status": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "const": "Backlog"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Selected"
+                        },
+                        {
+                          "type": "string",
+                          "const": "InProgress"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Done"
+                        }
+                      ]
+                    },
+                    "priority": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "const": "Lowest"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Low"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Medium"
+                        },
+                        {
+                          "type": "string",
+                          "const": "High"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Highest"
+                        }
+                      ]
+                    },
+                    "listPosition": {
+                      "type": "number"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "estimate": {
+                      "type": "number"
+                    },
+                    "timeSpent": {
+                      "type": "number"
+                    },
+                    "timeRemaining": {
+                      "type": "number"
+                    },
+                    "createdAt": {
+                      "type": "string"
+                    },
+                    "updatedAt": {
+                      "type": "string"
+                    },
+                    "reporterId": {
+                      "type": "string"
+                    },
+                    "userIds": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "comments": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "body": {
+                            "type": "string"
+                          },
+                          "createdAt": {
+                            "type": "string"
+                          },
+                          "updatedAt": {
+                            "type": "string"
+                          },
+                          "issueId": {
+                            "type": "string"
+                          },
+                          "userId": {
+                            "type": "string"
+                          },
+                          "user": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "email": {
+                                "type": "string"
+                              },
+                              "avatarUrl": {
+                                "type": "string"
+                              },
+                              "createdAt": {
+                                "type": "string"
+                              },
+                              "updatedAt": {
+                                "type": "string"
+                              },
+                              "issueIds": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "required": [
+                              "id",
+                              "name",
+                              "email",
+                              "avatarUrl",
+                              "createdAt",
+                              "updatedAt",
+                              "issueIds"
+                            ],
+                            "additionalProperties": false
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "body",
+                          "createdAt",
+                          "updatedAt",
+                          "issueId",
+                          "userId",
+                          "user"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "projectId": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "title",
+                    "type",
+                    "status",
+                    "priority",
+                    "listPosition",
+                    "description",
+                    "estimate",
+                    "timeSpent",
+                    "timeRemaining",
+                    "createdAt",
+                    "updatedAt",
+                    "reporterId",
+                    "userIds",
+                    "comments",
+                    "projectId"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "issue"
+              ],
+              "additionalProperties": false
+            },
+            "outputSchema": {
+              "type": "null"
+            },
+            "schemaIssues": []
+          }
+        ],
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "issueId": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+            }
+          },
+          "required": [
+            "issueId"
+          ],
+          "additionalProperties": false
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "ui-dispatched"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "url"
+          ],
+          "additionalProperties": false
+        },
+        "guards": [],
+        "workflow": {
+          "confirmation": "not-observed",
+          "evidence": []
+        },
+        "issues": [
+          "Dynamic providers require review before code generation"
+        ],
+        "status": "blocked"
+      },
+      {
+        "id": "/project/issue/:issueId#IssueDescriptionComponent.setEditMode:issue-description div.ql-snow.content-readonly",
+        "fingerprint": "4b88d3e5ee1979c2516597fd4c126cbb873ced2641f9d84c91979ea46dfd1737",
+        "route": "/project/issue/:issueId",
+        "routeParams": [
+          "issueId"
+        ],
+        "component": "IssueDescriptionComponent",
+        "componentSelector": "issue-description",
+        "action": {
+          "owner": "issue-description",
+          "kind": "button",
+          "selector": "issue-description div.ql-snow.content-readonly",
+          "label": "setEditMode",
+          "event": "click",
+          "expression": "setEditMode(true)",
+          "source": {
+            "file": "src/app/project/components/issues/issue-description/issue-description.component.html",
+            "line": 23
+          }
+        },
+        "fields": [],
+        "handler": "setEditMode",
+        "callPath": [],
+        "bindings": [],
+        "effectKind": "ui-state",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "issueId": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+            }
+          },
+          "required": [
+            "issueId"
+          ],
+          "additionalProperties": false
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "ui-dispatched"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "url"
+          ],
+          "additionalProperties": false
+        },
+        "guards": [],
+        "workflow": {
+          "confirmation": "not-observed",
+          "evidence": []
+        },
+        "issues": [
+          "Dynamic providers require review before code generation"
+        ],
+        "status": "blocked"
+      },
+      {
+        "id": "/project/issue/:issueId#IssueDetailComponent.closeModal:issue-detail j-button[icon=\"times\"]",
+        "fingerprint": "19fec1ee8ec69aeed7f18c0039ace7e360586b3a7f07ee08aae34280f5d032a4",
+        "route": "/project/issue/:issueId",
+        "routeParams": [
+          "issueId"
+        ],
+        "component": "IssueDetailComponent",
+        "componentSelector": "issue-detail",
+        "action": {
+          "owner": "issue-detail",
+          "kind": "button",
+          "selector": "issue-detail j-button[icon=\"times\"]",
+          "label": "closeModal",
+          "event": "click",
+          "expression": "closeModal()",
+          "source": {
+            "file": "src/app/project/components/issues/issue-detail/issue-detail.component.html",
+            "line": 30
+          }
+        },
+        "fields": [],
+        "handler": "closeModal",
+        "callPath": [],
+        "bindings": [],
+        "effectKind": "ui-state",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "issueId": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+            }
+          },
+          "required": [
+            "issueId"
+          ],
+          "additionalProperties": false
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "ui-dispatched"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "url"
+          ],
+          "additionalProperties": false
+        },
+        "guards": [],
+        "workflow": {
+          "confirmation": "not-observed",
+          "evidence": []
+        },
+        "issues": [
+          "Dynamic providers require review before code generation"
+        ],
+        "status": "blocked"
+      },
+      {
+        "id": "/project/issue/:issueId#IssueDetailComponent.openIssuePage:issue-detail j-button[icon=\"expand\"]",
+        "fingerprint": "a4b20174d6b54e07fb397517d734148b5f87ab963c9f4adc5856c31f2d7ace2c",
+        "route": "/project/issue/:issueId",
+        "routeParams": [
+          "issueId"
+        ],
+        "component": "IssueDetailComponent",
+        "componentSelector": "issue-detail",
+        "action": {
+          "owner": "issue-detail",
+          "kind": "button",
+          "selector": "issue-detail j-button[icon=\"expand\"]",
+          "label": "openIssuePage",
+          "event": "click",
+          "expression": "openIssuePage()",
+          "source": {
+            "file": "src/app/project/components/issues/issue-detail/issue-detail.component.html",
+            "line": 21
+          }
+        },
+        "fields": [],
+        "handler": "openIssuePage",
+        "callPath": [],
+        "bindings": [],
+        "effectKind": "ui-state",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "issueId": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+            }
+          },
+          "required": [
+            "issueId"
+          ],
+          "additionalProperties": false
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "ui-dispatched"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "url"
+          ],
+          "additionalProperties": false
+        },
+        "guards": [],
+        "workflow": {
+          "confirmation": "not-observed",
+          "evidence": []
+        },
+        "issues": [
+          "Dynamic providers require review before code generation"
+        ],
+        "status": "blocked"
+      },
+      {
+        "id": "/project/issue/:issueId#IssuePriorityComponent.updateIssue:issue-priority li",
+        "fingerprint": "69692abb134163bca45446641176402a3a60b06349ff3e76ef8a7bf8fc2e0214",
+        "route": "/project/issue/:issueId",
+        "routeParams": [
+          "issueId"
+        ],
+        "target": {
+          "param": "value",
+          "source": "context",
+          "path": [
+            "value"
+          ]
+        },
+        "component": "IssuePriorityComponent",
+        "componentSelector": "issue-priority",
+        "action": {
+          "owner": "issue-priority",
+          "kind": "button",
+          "selector": "issue-priority li",
+          "label": "updateIssue",
+          "event": "click",
+          "expression": "updateIssue(option.value)",
+          "source": {
+            "file": "src/app/project/components/issues/issue-priority/issue-priority.component.html",
+            "line": 24
+          }
+        },
+        "fields": [],
+        "handler": "updateIssue",
+        "callPath": [
+          "IssuePriorityComponent.updateIssue",
+          "ProjectService.updateIssue"
+        ],
+        "bindings": [
+          {
+            "token": "ProjectService",
+            "service": "ProjectService",
+            "method": "updateIssue",
+            "source": {
+              "file": "src/app/project/state/project/project.service.ts",
+              "line": 53
+            },
+            "arguments": [
+              "{\n      ...this.issue,\n      priority: this.selectedPriority\n    }"
+            ],
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "issue": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "const": "Story"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Task"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Bug"
+                        }
+                      ]
+                    },
+                    "status": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "const": "Backlog"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Selected"
+                        },
+                        {
+                          "type": "string",
+                          "const": "InProgress"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Done"
+                        }
+                      ]
+                    },
+                    "priority": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "const": "Lowest"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Low"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Medium"
+                        },
+                        {
+                          "type": "string",
+                          "const": "High"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Highest"
+                        }
+                      ]
+                    },
+                    "listPosition": {
+                      "type": "number"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "estimate": {
+                      "type": "number"
+                    },
+                    "timeSpent": {
+                      "type": "number"
+                    },
+                    "timeRemaining": {
+                      "type": "number"
+                    },
+                    "createdAt": {
+                      "type": "string"
+                    },
+                    "updatedAt": {
+                      "type": "string"
+                    },
+                    "reporterId": {
+                      "type": "string"
+                    },
+                    "userIds": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "comments": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "body": {
+                            "type": "string"
+                          },
+                          "createdAt": {
+                            "type": "string"
+                          },
+                          "updatedAt": {
+                            "type": "string"
+                          },
+                          "issueId": {
+                            "type": "string"
+                          },
+                          "userId": {
+                            "type": "string"
+                          },
+                          "user": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "email": {
+                                "type": "string"
+                              },
+                              "avatarUrl": {
+                                "type": "string"
+                              },
+                              "createdAt": {
+                                "type": "string"
+                              },
+                              "updatedAt": {
+                                "type": "string"
+                              },
+                              "issueIds": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "required": [
+                              "id",
+                              "name",
+                              "email",
+                              "avatarUrl",
+                              "createdAt",
+                              "updatedAt",
+                              "issueIds"
+                            ],
+                            "additionalProperties": false
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "body",
+                          "createdAt",
+                          "updatedAt",
+                          "issueId",
+                          "userId",
+                          "user"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "projectId": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "title",
+                    "type",
+                    "status",
+                    "priority",
+                    "listPosition",
+                    "description",
+                    "estimate",
+                    "timeSpent",
+                    "timeRemaining",
+                    "createdAt",
+                    "updatedAt",
+                    "reporterId",
+                    "userIds",
+                    "comments",
+                    "projectId"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "issue"
+              ],
+              "additionalProperties": false
+            },
+            "outputSchema": {
+              "type": "null"
+            },
+            "schemaIssues": []
+          }
+        ],
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "issueId": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+            },
+            "value": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+            }
+          },
+          "required": [
+            "issueId",
+            "value"
+          ],
+          "additionalProperties": false
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "ui-dispatched"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "url"
+          ],
+          "additionalProperties": false
+        },
+        "guards": [],
+        "workflow": {
+          "confirmation": "not-observed",
+          "evidence": []
+        },
+        "issues": [
+          "Dynamic providers require review before code generation"
+        ],
+        "status": "blocked"
+      },
+      {
+        "id": "/project/issue/:issueId#IssueReporterComponent.updateIssue:issue-reporter li",
+        "fingerprint": "fb14996e56b33b1add8d5e2e93ed5b67b75f629951e783c8d6d6a67a70faccef",
+        "route": "/project/issue/:issueId",
+        "routeParams": [
+          "issueId"
+        ],
+        "target": {
+          "param": "id",
+          "source": "context",
+          "path": [
+            "id"
+          ]
+        },
+        "component": "IssueReporterComponent",
+        "componentSelector": "issue-reporter",
+        "action": {
+          "owner": "issue-reporter",
+          "kind": "button",
+          "selector": "issue-reporter li",
+          "label": "updateIssue",
+          "event": "click",
+          "expression": "updateIssue(option)",
+          "source": {
+            "file": "src/app/project/components/issues/issue-reporter/issue-reporter.component.html",
+            "line": 17
+          }
+        },
+        "fields": [],
+        "handler": "updateIssue",
+        "callPath": [
+          "IssueReporterComponent.updateIssue",
+          "ProjectService.updateIssue"
+        ],
+        "bindings": [
+          {
+            "token": "ProjectService",
+            "service": "ProjectService",
+            "method": "updateIssue",
+            "source": {
+              "file": "src/app/project/state/project/project.service.ts",
+              "line": 53
+            },
+            "arguments": [
+              "{\n      ...this.issue,\n      reporterId: user.id\n    }"
+            ],
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "issue": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "const": "Story"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Task"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Bug"
+                        }
+                      ]
+                    },
+                    "status": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "const": "Backlog"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Selected"
+                        },
+                        {
+                          "type": "string",
+                          "const": "InProgress"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Done"
+                        }
+                      ]
+                    },
+                    "priority": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "const": "Lowest"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Low"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Medium"
+                        },
+                        {
+                          "type": "string",
+                          "const": "High"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Highest"
+                        }
+                      ]
+                    },
+                    "listPosition": {
+                      "type": "number"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "estimate": {
+                      "type": "number"
+                    },
+                    "timeSpent": {
+                      "type": "number"
+                    },
+                    "timeRemaining": {
+                      "type": "number"
+                    },
+                    "createdAt": {
+                      "type": "string"
+                    },
+                    "updatedAt": {
+                      "type": "string"
+                    },
+                    "reporterId": {
+                      "type": "string"
+                    },
+                    "userIds": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "comments": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "body": {
+                            "type": "string"
+                          },
+                          "createdAt": {
+                            "type": "string"
+                          },
+                          "updatedAt": {
+                            "type": "string"
+                          },
+                          "issueId": {
+                            "type": "string"
+                          },
+                          "userId": {
+                            "type": "string"
+                          },
+                          "user": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "email": {
+                                "type": "string"
+                              },
+                              "avatarUrl": {
+                                "type": "string"
+                              },
+                              "createdAt": {
+                                "type": "string"
+                              },
+                              "updatedAt": {
+                                "type": "string"
+                              },
+                              "issueIds": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "required": [
+                              "id",
+                              "name",
+                              "email",
+                              "avatarUrl",
+                              "createdAt",
+                              "updatedAt",
+                              "issueIds"
+                            ],
+                            "additionalProperties": false
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "body",
+                          "createdAt",
+                          "updatedAt",
+                          "issueId",
+                          "userId",
+                          "user"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "projectId": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "title",
+                    "type",
+                    "status",
+                    "priority",
+                    "listPosition",
+                    "description",
+                    "estimate",
+                    "timeSpent",
+                    "timeRemaining",
+                    "createdAt",
+                    "updatedAt",
+                    "reporterId",
+                    "userIds",
+                    "comments",
+                    "projectId"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "issue"
+              ],
+              "additionalProperties": false
+            },
+            "outputSchema": {
+              "type": "null"
+            },
+            "schemaIssues": []
+          }
+        ],
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "issueId": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+            },
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+            }
+          },
+          "required": [
+            "issueId",
+            "id"
+          ],
+          "additionalProperties": false
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "ui-dispatched"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "url"
+          ],
+          "additionalProperties": false
+        },
+        "guards": [],
+        "workflow": {
+          "confirmation": "not-observed",
+          "evidence": []
+        },
+        "issues": [
+          "Dynamic providers require review before code generation"
+        ],
+        "status": "blocked"
+      },
+      {
+        "id": "/project/issue/:issueId#IssueStatusComponent.updateIssue:issue-status li",
+        "fingerprint": "8ba5f316c1b5a585108d98bab259aca382fae4d67b41ab1989285e17c5d74ac1",
+        "route": "/project/issue/:issueId",
+        "routeParams": [
+          "issueId"
+        ],
+        "target": {
+          "param": "value",
+          "source": "context",
+          "path": [
+            "value"
+          ]
+        },
+        "component": "IssueStatusComponent",
+        "componentSelector": "issue-status",
+        "action": {
+          "owner": "issue-status",
+          "kind": "button",
+          "selector": "issue-status li",
+          "label": "updateIssue",
+          "event": "click",
+          "expression": "updateIssue(option.value)",
+          "source": {
+            "file": "src/app/project/components/issues/issue-status/issue-status.component.html",
+            "line": 18
+          }
+        },
+        "fields": [],
+        "handler": "updateIssue",
+        "callPath": [
+          "IssueStatusComponent.updateIssue",
+          "ProjectService.updateIssue"
+        ],
+        "bindings": [
+          {
+            "token": "ProjectService",
+            "service": "ProjectService",
+            "method": "updateIssue",
+            "source": {
+              "file": "src/app/project/state/project/project.service.ts",
+              "line": 53
+            },
+            "arguments": [
+              "{\n      ...this.issue,\n      status,\n      listPosition: newPosition + 1\n    }"
+            ],
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "issue": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "const": "Story"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Task"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Bug"
+                        }
+                      ]
+                    },
+                    "status": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "const": "Backlog"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Selected"
+                        },
+                        {
+                          "type": "string",
+                          "const": "InProgress"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Done"
+                        }
+                      ]
+                    },
+                    "priority": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "const": "Lowest"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Low"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Medium"
+                        },
+                        {
+                          "type": "string",
+                          "const": "High"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Highest"
+                        }
+                      ]
+                    },
+                    "listPosition": {
+                      "type": "number"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "estimate": {
+                      "type": "number"
+                    },
+                    "timeSpent": {
+                      "type": "number"
+                    },
+                    "timeRemaining": {
+                      "type": "number"
+                    },
+                    "createdAt": {
+                      "type": "string"
+                    },
+                    "updatedAt": {
+                      "type": "string"
+                    },
+                    "reporterId": {
+                      "type": "string"
+                    },
+                    "userIds": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "comments": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "body": {
+                            "type": "string"
+                          },
+                          "createdAt": {
+                            "type": "string"
+                          },
+                          "updatedAt": {
+                            "type": "string"
+                          },
+                          "issueId": {
+                            "type": "string"
+                          },
+                          "userId": {
+                            "type": "string"
+                          },
+                          "user": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "email": {
+                                "type": "string"
+                              },
+                              "avatarUrl": {
+                                "type": "string"
+                              },
+                              "createdAt": {
+                                "type": "string"
+                              },
+                              "updatedAt": {
+                                "type": "string"
+                              },
+                              "issueIds": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "required": [
+                              "id",
+                              "name",
+                              "email",
+                              "avatarUrl",
+                              "createdAt",
+                              "updatedAt",
+                              "issueIds"
+                            ],
+                            "additionalProperties": false
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "body",
+                          "createdAt",
+                          "updatedAt",
+                          "issueId",
+                          "userId",
+                          "user"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "projectId": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "title",
+                    "type",
+                    "status",
+                    "priority",
+                    "listPosition",
+                    "description",
+                    "estimate",
+                    "timeSpent",
+                    "timeRemaining",
+                    "createdAt",
+                    "updatedAt",
+                    "reporterId",
+                    "userIds",
+                    "comments",
+                    "projectId"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "issue"
+              ],
+              "additionalProperties": false
+            },
+            "outputSchema": {
+              "type": "null"
+            },
+            "schemaIssues": []
+          }
+        ],
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "issueId": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+            },
+            "value": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+            }
+          },
+          "required": [
+            "issueId",
+            "value"
+          ],
+          "additionalProperties": false
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "ui-dispatched"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "url"
+          ],
+          "additionalProperties": false
+        },
+        "guards": [],
+        "workflow": {
+          "confirmation": "not-observed",
+          "evidence": []
+        },
+        "issues": [
+          "Dynamic providers require review before code generation"
+        ],
+        "status": "blocked"
+      },
+      {
+        "id": "/project/issue/:issueId#IssueTypeComponent.updateIssue:issue-type li",
+        "fingerprint": "ac6e019d14ad2145c0995200837545c68e4f18d1d68d09d99fa4306345d8a898",
+        "route": "/project/issue/:issueId",
+        "routeParams": [
+          "issueId"
+        ],
+        "target": {
+          "param": "value",
+          "source": "context",
+          "path": [
+            "value"
+          ]
+        },
+        "component": "IssueTypeComponent",
+        "componentSelector": "issue-type",
+        "action": {
+          "owner": "issue-type",
+          "kind": "button",
+          "selector": "issue-type li",
+          "label": "updateIssue",
+          "event": "click",
+          "expression": "updateIssue(option.value)",
+          "source": {
+            "file": "src/app/project/components/issues/issue-type/issue-type.component.html",
+            "line": 18
+          }
+        },
+        "fields": [],
+        "handler": "updateIssue",
+        "callPath": [
+          "IssueTypeComponent.updateIssue",
+          "ProjectService.updateIssue"
+        ],
+        "bindings": [
+          {
+            "token": "ProjectService",
+            "service": "ProjectService",
+            "method": "updateIssue",
+            "source": {
+              "file": "src/app/project/state/project/project.service.ts",
+              "line": 53
+            },
+            "arguments": [
+              "{\n      ...this.issue,\n      type: issueType\n    }"
+            ],
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "issue": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "const": "Story"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Task"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Bug"
+                        }
+                      ]
+                    },
+                    "status": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "const": "Backlog"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Selected"
+                        },
+                        {
+                          "type": "string",
+                          "const": "InProgress"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Done"
+                        }
+                      ]
+                    },
+                    "priority": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "const": "Lowest"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Low"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Medium"
+                        },
+                        {
+                          "type": "string",
+                          "const": "High"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Highest"
+                        }
+                      ]
+                    },
+                    "listPosition": {
+                      "type": "number"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "estimate": {
+                      "type": "number"
+                    },
+                    "timeSpent": {
+                      "type": "number"
+                    },
+                    "timeRemaining": {
+                      "type": "number"
+                    },
+                    "createdAt": {
+                      "type": "string"
+                    },
+                    "updatedAt": {
+                      "type": "string"
+                    },
+                    "reporterId": {
+                      "type": "string"
+                    },
+                    "userIds": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "comments": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "body": {
+                            "type": "string"
+                          },
+                          "createdAt": {
+                            "type": "string"
+                          },
+                          "updatedAt": {
+                            "type": "string"
+                          },
+                          "issueId": {
+                            "type": "string"
+                          },
+                          "userId": {
+                            "type": "string"
+                          },
+                          "user": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "email": {
+                                "type": "string"
+                              },
+                              "avatarUrl": {
+                                "type": "string"
+                              },
+                              "createdAt": {
+                                "type": "string"
+                              },
+                              "updatedAt": {
+                                "type": "string"
+                              },
+                              "issueIds": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "required": [
+                              "id",
+                              "name",
+                              "email",
+                              "avatarUrl",
+                              "createdAt",
+                              "updatedAt",
+                              "issueIds"
+                            ],
+                            "additionalProperties": false
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "body",
+                          "createdAt",
+                          "updatedAt",
+                          "issueId",
+                          "userId",
+                          "user"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "projectId": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "title",
+                    "type",
+                    "status",
+                    "priority",
+                    "listPosition",
+                    "description",
+                    "estimate",
+                    "timeSpent",
+                    "timeRemaining",
+                    "createdAt",
+                    "updatedAt",
+                    "reporterId",
+                    "userIds",
+                    "comments",
+                    "projectId"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "issue"
+              ],
+              "additionalProperties": false
+            },
+            "outputSchema": {
+              "type": "null"
+            },
+            "schemaIssues": []
+          }
+        ],
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "issueId": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+            },
+            "value": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+            }
+          },
+          "required": [
+            "issueId",
+            "value"
+          ],
+          "additionalProperties": false
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "ui-dispatched"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "url"
+          ],
+          "additionalProperties": false
+        },
+        "guards": [],
+        "workflow": {
+          "confirmation": "not-observed",
+          "evidence": []
+        },
+        "issues": [
+          "Dynamic providers require review before code generation"
+        ],
+        "status": "blocked"
+      },
+      {
+        "id": "/project/settings#SettingsComponent.submitForm:ng-component form.project-form",
+        "fingerprint": "f6234a8a13d78344328b22d274ab17460118a79ffe80c63f3cf62070c512cc60",
+        "route": "/project/settings",
+        "component": "SettingsComponent",
+        "componentSelector": "ng-component",
+        "action": {
+          "owner": "ng-component",
+          "kind": "form",
+          "selector": "ng-component form.project-form",
+          "label": "Name URL Category @for (category of categories; track category) { } Description Save Cancel",
+          "event": "ngSubmit",
+          "expression": "submitForm()",
+          "source": {
+            "file": "src/app/project/pages/settings/settings.component.html",
+            "line": 5
+          }
+        },
+        "fields": [
+          {
+            "name": "name",
+            "selector": "input[formcontrolname=\"name\"]",
+            "element": "input",
+            "type": "text",
+            "required": false,
+            "supported": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "url",
+            "selector": "input[formcontrolname=\"url\"]",
+            "element": "input",
+            "type": "text",
+            "required": false,
+            "supported": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "category",
+            "selector": "select[formcontrolname=\"category\"]",
+            "element": "select",
+            "type": "text",
+            "required": false,
+            "supported": true,
+            "dynamicOptions": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "description",
+            "selector": "textarea[formcontrolname=\"description\"]",
+            "element": "textarea",
+            "type": "text",
+            "required": false,
+            "supported": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "handler": "submitForm",
+        "callPath": [
+          "SettingsComponent.submitForm",
+          "ProjectService.updateProject"
+        ],
+        "bindings": [
+          {
+            "token": "ProjectService",
+            "service": "ProjectService",
+            "method": "updateProject",
+            "source": {
+              "file": "src/app/project/state/project/project.service.ts",
+              "line": 46
+            },
+            "arguments": [
+              "formValue"
+            ],
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "project": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "category": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "const": "Software"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Marketing"
+                        },
+                        {
+                          "type": "string",
+                          "const": "Business"
+                        }
+                      ]
+                    },
+                    "createdAt": {
+                      "type": "string"
+                    },
+                    "updateAt": {
+                      "type": "string"
+                    },
+                    "issues": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "title": {
+                            "type": "string"
+                          },
+                          "type": {
+                            "anyOf": [
+                              {
+                                "type": "string",
+                                "const": "Story"
+                              },
+                              {
+                                "type": "string",
+                                "const": "Task"
+                              },
+                              {
+                                "type": "string",
+                                "const": "Bug"
+                              }
+                            ]
+                          },
+                          "status": {
+                            "anyOf": [
+                              {
+                                "type": "string",
+                                "const": "Backlog"
+                              },
+                              {
+                                "type": "string",
+                                "const": "Selected"
+                              },
+                              {
+                                "type": "string",
+                                "const": "InProgress"
+                              },
+                              {
+                                "type": "string",
+                                "const": "Done"
+                              }
+                            ]
+                          },
+                          "priority": {
+                            "anyOf": [
+                              {
+                                "type": "string",
+                                "const": "Lowest"
+                              },
+                              {
+                                "type": "string",
+                                "const": "Low"
+                              },
+                              {
+                                "type": "string",
+                                "const": "Medium"
+                              },
+                              {
+                                "type": "string",
+                                "const": "High"
+                              },
+                              {
+                                "type": "string",
+                                "const": "Highest"
+                              }
+                            ]
+                          },
+                          "listPosition": {
+                            "type": "number"
+                          },
+                          "description": {
+                            "type": "string"
+                          },
+                          "estimate": {
+                            "type": "number"
+                          },
+                          "timeSpent": {
+                            "type": "number"
+                          },
+                          "timeRemaining": {
+                            "type": "number"
+                          },
+                          "createdAt": {
+                            "type": "string"
+                          },
+                          "updatedAt": {
+                            "type": "string"
+                          },
+                          "reporterId": {
+                            "type": "string"
+                          },
+                          "userIds": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "comments": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "string"
+                                },
+                                "body": {
+                                  "type": "string"
+                                },
+                                "createdAt": {
+                                  "type": "string"
+                                },
+                                "updatedAt": {
+                                  "type": "string"
+                                },
+                                "issueId": {
+                                  "type": "string"
+                                },
+                                "userId": {
+                                  "type": "string"
+                                },
+                                "user": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "name": {
+                                      "type": "string"
+                                    },
+                                    "email": {
+                                      "type": "string"
+                                    },
+                                    "avatarUrl": {
+                                      "type": "string"
+                                    },
+                                    "createdAt": {
+                                      "type": "string"
+                                    },
+                                    "updatedAt": {
+                                      "type": "string"
+                                    },
+                                    "issueIds": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  },
+                                  "required": [
+                                    "id",
+                                    "name",
+                                    "email",
+                                    "avatarUrl",
+                                    "createdAt",
+                                    "updatedAt",
+                                    "issueIds"
+                                  ],
+                                  "additionalProperties": false
+                                }
+                              },
+                              "required": [
+                                "id",
+                                "body",
+                                "createdAt",
+                                "updatedAt",
+                                "issueId",
+                                "userId",
+                                "user"
+                              ],
+                              "additionalProperties": false
+                            }
+                          },
+                          "projectId": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "title",
+                          "type",
+                          "status",
+                          "priority",
+                          "listPosition",
+                          "description",
+                          "estimate",
+                          "timeSpent",
+                          "timeRemaining",
+                          "createdAt",
+                          "updatedAt",
+                          "reporterId",
+                          "userIds",
+                          "comments",
+                          "projectId"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "users": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "email": {
+                            "type": "string"
+                          },
+                          "avatarUrl": {
+                            "type": "string"
+                          },
+                          "createdAt": {
+                            "type": "string"
+                          },
+                          "updatedAt": {
+                            "type": "string"
+                          },
+                          "issueIds": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "name",
+                          "email",
+                          "avatarUrl",
+                          "createdAt",
+                          "updatedAt",
+                          "issueIds"
+                        ],
+                        "additionalProperties": false
+                      }
+                    }
+                  },
+                  "required": [],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "project"
+              ],
+              "additionalProperties": false
+            },
+            "outputSchema": {
+              "type": "null"
+            },
+            "schemaIssues": []
+          }
+        ],
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            },
+            "category": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "ui-dispatched"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "url"
+          ],
+          "additionalProperties": false
+        },
+        "guards": [],
+        "workflow": {
+          "confirmation": "not-observed",
+          "evidence": []
+        },
+        "issues": [
+          "Form requires exactly one identifiable submit button",
+          "Dynamic providers require review before code generation"
+        ],
+        "status": "blocked"
+      },
+      {
+        "id": "/project#NavigationComponent.toggle:app-navigation app-resizer",
+        "fingerprint": "1856e6173306636c62132f0a06ae965a4d7145284f299b9242ff9a4c64fb73d3",
+        "route": "/project",
+        "component": "NavigationComponent",
+        "componentSelector": "app-navigation",
+        "action": {
+          "owner": "app-navigation",
+          "kind": "button",
+          "selector": "app-navigation app-resizer",
+          "label": "toggle",
+          "event": "click",
+          "expression": "toggle()",
+          "source": {
+            "file": "src/app/project/components/navigation/navigation/navigation.component.html",
+            "line": 6
+          }
+        },
+        "fields": [],
+        "handler": "toggle",
+        "callPath": [],
+        "bindings": [],
+        "effectKind": "ui-state",
+        "inputSchema": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "ui-dispatched"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "url"
+          ],
+          "additionalProperties": false
+        },
+        "guards": [],
+        "workflow": {
+          "confirmation": "not-observed",
+          "evidence": []
+        },
+        "issues": [
+          "Dynamic providers require review before code generation"
+        ],
+        "status": "blocked"
+      }
+    ],
+    "diagnostics": []
+  }
+}

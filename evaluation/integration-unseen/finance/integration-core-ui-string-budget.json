@@ -1,0 +1,1253 @@
+{
+  "reportKind": "first-pass-integration-mcp",
+  "startedAt": "2026-11-10T10:02:39.889Z",
+  "mode": "mcp",
+  "transport": "native-string",
+  "node": "v24.15.0",
+  "fixedBrowserTime": "2026-11-10T12:00:00Z",
+  "externalNetwork": "All origins blocked except designated local app; /api handled by deterministic in-process source-contract fixture.",
+  "sourceOverlays": [],
+  "frozenInputRewrites": [],
+  "harnessSha256": {
+    "run.mjs": "d473732e3d587892fd43e3ba50fd83daae71afe148e947605a6445ec9d4db3be",
+    "fixtures.mjs": "7b72ec43cbce41869828da3ec2501c4deb336530ff234f3404a7b61638e04a45",
+    "cases.mjs": "78b6a5da456cc6cf3b93e9f1594f8f955972b7db06c3f24596750ab744f89870"
+  },
+  "projects": [
+    {
+      "id": "finance",
+      "commit": "61c1bb87567df4245f0722713edabc8177121842",
+      "stage": {
+        "directory": "/tmp/integration-unseen-finance-integrated-v3",
+        "manifestSha256": "8c5f802764f22ecfd632047e9b1a21148e81097e76680ba149ef877e9de21f86",
+        "runtimeModule": "/private/tmp/integration-unseen-finance-integrated-v3/src/angular-mcp.generated.ts",
+        "runtimeSha256": "626fc7af49e3acef28888562ceefc4d24151b5768d6cc6003ed9d33b707e383e"
+      },
+      "integrity": {
+        "frozen": true,
+        "files": 159,
+        "labelsSha256": "157c3c0fd43a87e8aeddf0f232eed7ffcd32bb6c4eb78e6a24b5390bcb8256fd"
+      },
+      "cases": [
+        {
+          "id": "budget-set",
+          "operation": "budget-set",
+          "kind": "positive",
+          "frozenInput": {
+            "limit": 125.5
+          },
+          "calls": [
+            {
+              "name": "angular_list_nodes",
+              "args": {},
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "[{\"sourceId\":\"ngmcp_9c412ada9bab91701c58a20a\",\"instanceId\":\"ngmcp_9c412ada9bab91701c58a20a@75lohk-2wxbkp-cl9yoj-10jj2sj:1\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Skip to content\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_66d39b9676cf404dee68c3e6\",\"instanceId\":\"ngmcp_66d39b9676cf404dee68c3e6@75lohk-2wxbkp-cl9yoj-10jj2sj:2\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Switch to dark theme\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_ac94122dc08777cf2fd943e6\",\"instanceId\":\"ngmcp_ac94122dc08777cf2fd943e6@75lohk-2wxbkp-cl9yoj-10jj2sj:3\",\"kind\":\"action\",\"tagName\":\"a\",\"events\":[\"click\"],\"label\":\"space_dashboardOverview\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_ac94122dc08777cf2fd943e6\",\"instanceId\":\"ngmcp_ac94122dc08777cf2fd943e6@75lohk-2wxbkp-cl9yoj-10jj2sj:4\",\"kind\":\"action\",\"tagName\":\"a\",\"events\":[\"click\"],\"label\":\"receipt_longTransactions\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_ac94122dc08777cf2fd943e6\",\"instanceId\":\"ngmcp_ac94122dc08777cf2fd943e6@75lohk-2wxbkp-cl9yoj-10jj2sj:5\",\"kind\":\"action\",\"tagName\":\"a\",\"events\":[\"click\"],\"label\":\"savingsBudgets\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_ac94122dc08777cf2fd943e6\",\"instanceId\":\"ngmcp_ac94122dc08777cf2fd943e6@75lohk-2wxbkp-cl9yoj-10jj2sj:6\",\"kind\":\"action\",\"tagName\":\"a\",\"events\":[\"click\"],\"label\":\"categoryCategories\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_ac94122dc08777cf2fd943e6\",\"instanceId\":\"ngmcp_ac94122dc08777cf2fd943e6@75lohk-2wxbkp-cl9yoj-10jj2sj:7\",\"kind\":\"action\",\"tagName\":\"a\",\"events\":[\"click\"],\"label\":\"settingsSettings\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_852ef14a0908c9a02db57feb\",\"instanceId\":\"ngmcp_852ef14a0908c9a02db57feb@75lohk-2wxbkp-cl9yoj-10jj2sj:8\",\"kind\":\"element\",\"tagName\":\"mat-button-toggle-group\",\"events\":[\"change\"],\"label\":\"Theme\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_0904336433ccb7fecc67b311\",\"instanceId\":\"ngmcp_0904336433ccb7fecc67b311@75lohk-2wxbkp-cl9yoj-10jj2sj:9\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"download Export transactions\",\"visible\":true,\"disabled\":true,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_85610b824855fad66cb98160\",\"instanceId\":\"ngmcp_85610b824855fad66cb98160@75lohk-2wxbkp-cl9yoj-10jj2sj:10\",\"kind\":\"control\",\"tagName\":\"input\",\"events\":[\"change\"],\"label\":\"\",\"visible\":false,\"disabled\":false,\"readonly\":false,\"operations\":[],\"validation\":{\"status\":\"unknown\",\"fields\":[{\"sourceId\":\"ngmcp_85610b824855fad66cb98160\",\"instanceId\":\"ngmcp_85610b824855fad66cb98160@75lohk-2wxbkp-cl9yoj-10jj2sj:10\",\"status\":\"UNKNOWN\",\"errors\":[]}],\"groups\":[],\"unobservedFields\":[\"ngmcp_85610b824855fad66cb98160@75lohk-2wxbkp-cl9yoj-10jj2sj:10\"]},\"schema\":false,\"unsupportedReason\":\"This native control has no supported JSON fill operation\",\"transport\":\"native-ui\",\"customAccessor\":false},{\"sourceId\":\"ngmcp_d7f0be9cb6121a4bd168b5b2\",\"instanceId\":\"ngmcp_d7f0be9cb6121a4bd168b5b2@75lohk-2wxbkp-cl9yoj-10jj2sj:11\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"upload_file Choose file\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_68536099e468733db5955d0c\",\"instanceId\":\"ngmcp_68536099e468733db5955d0c@75lohk-2wxbkp-cl9yoj-10jj2sj:12\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"delete_forever Clear data\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_0f0fba9e39a624f210e6ff31\",\"instanceId\":\"ngmcp_0f0fba9e39a624f210e6ff31@75lohk-2wxbkp-cl9yoj-10jj2sj:13\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"restart_alt Restore demo data\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_c74db49ca279ffb7df2dfdf6\",\"instanceId\":\"ngmcp_c74db49ca279ffb7df2dfdf6@75lohk-2wxbkp-cl9yoj-10jj2sj:14\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\",\"keydown\"],\"label\":\"Português (Brasil)\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_c74db49ca279ffb7df2dfdf6\",\"instanceId\":\"ngmcp_c74db49ca279ffb7df2dfdf6@75lohk-2wxbkp-cl9yoj-10jj2sj:15\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\",\"keydown\"],\"label\":\"English\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_c74db49ca279ffb7df2dfdf6\",\"instanceId\":\"ngmcp_c74db49ca279ffb7df2dfdf6@75lohk-2wxbkp-cl9yoj-10jj2sj:16\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\",\"keydown\"],\"label\":\"Português (Brasil)\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_c74db49ca279ffb7df2dfdf6\",\"instanceId\":\"ngmcp_c74db49ca279ffb7df2dfdf6@75lohk-2wxbkp-cl9yoj-10jj2sj:17\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\",\"keydown\"],\"label\":\"English\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}}]"
+                  }
+                ],
+                "structuredContent": {
+                  "nodes": [
+                    {
+                      "sourceId": "ngmcp_9c412ada9bab91701c58a20a",
+                      "instanceId": "ngmcp_9c412ada9bab91701c58a20a@75lohk-2wxbkp-cl9yoj-10jj2sj:1",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Skip to content",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_66d39b9676cf404dee68c3e6",
+                      "instanceId": "ngmcp_66d39b9676cf404dee68c3e6@75lohk-2wxbkp-cl9yoj-10jj2sj:2",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Switch to dark theme",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_ac94122dc08777cf2fd943e6",
+                      "instanceId": "ngmcp_ac94122dc08777cf2fd943e6@75lohk-2wxbkp-cl9yoj-10jj2sj:3",
+                      "kind": "action",
+                      "tagName": "a",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "space_dashboardOverview",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_ac94122dc08777cf2fd943e6",
+                      "instanceId": "ngmcp_ac94122dc08777cf2fd943e6@75lohk-2wxbkp-cl9yoj-10jj2sj:4",
+                      "kind": "action",
+                      "tagName": "a",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "receipt_longTransactions",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_ac94122dc08777cf2fd943e6",
+                      "instanceId": "ngmcp_ac94122dc08777cf2fd943e6@75lohk-2wxbkp-cl9yoj-10jj2sj:5",
+                      "kind": "action",
+                      "tagName": "a",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "savingsBudgets",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_ac94122dc08777cf2fd943e6",
+                      "instanceId": "ngmcp_ac94122dc08777cf2fd943e6@75lohk-2wxbkp-cl9yoj-10jj2sj:6",
+                      "kind": "action",
+                      "tagName": "a",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "categoryCategories",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_ac94122dc08777cf2fd943e6",
+                      "instanceId": "ngmcp_ac94122dc08777cf2fd943e6@75lohk-2wxbkp-cl9yoj-10jj2sj:7",
+                      "kind": "action",
+                      "tagName": "a",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "settingsSettings",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_852ef14a0908c9a02db57feb",
+                      "instanceId": "ngmcp_852ef14a0908c9a02db57feb@75lohk-2wxbkp-cl9yoj-10jj2sj:8",
+                      "kind": "element",
+                      "tagName": "mat-button-toggle-group",
+                      "events": [
+                        "change"
+                      ],
+                      "label": "Theme",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_0904336433ccb7fecc67b311",
+                      "instanceId": "ngmcp_0904336433ccb7fecc67b311@75lohk-2wxbkp-cl9yoj-10jj2sj:9",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "download Export transactions",
+                      "visible": true,
+                      "disabled": true,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_85610b824855fad66cb98160",
+                      "instanceId": "ngmcp_85610b824855fad66cb98160@75lohk-2wxbkp-cl9yoj-10jj2sj:10",
+                      "kind": "control",
+                      "tagName": "input",
+                      "events": [
+                        "change"
+                      ],
+                      "label": "",
+                      "visible": false,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [
+                          {
+                            "sourceId": "ngmcp_85610b824855fad66cb98160",
+                            "instanceId": "ngmcp_85610b824855fad66cb98160@75lohk-2wxbkp-cl9yoj-10jj2sj:10",
+                            "status": "UNKNOWN",
+                            "errors": []
+                          }
+                        ],
+                        "groups": [],
+                        "unobservedFields": [
+                          "ngmcp_85610b824855fad66cb98160@75lohk-2wxbkp-cl9yoj-10jj2sj:10"
+                        ]
+                      },
+                      "schema": false,
+                      "unsupportedReason": "This native control has no supported JSON fill operation",
+                      "transport": "native-ui",
+                      "customAccessor": false
+                    },
+                    {
+                      "sourceId": "ngmcp_d7f0be9cb6121a4bd168b5b2",
+                      "instanceId": "ngmcp_d7f0be9cb6121a4bd168b5b2@75lohk-2wxbkp-cl9yoj-10jj2sj:11",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "upload_file Choose file",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_68536099e468733db5955d0c",
+                      "instanceId": "ngmcp_68536099e468733db5955d0c@75lohk-2wxbkp-cl9yoj-10jj2sj:12",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "delete_forever Clear data",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_0f0fba9e39a624f210e6ff31",
+                      "instanceId": "ngmcp_0f0fba9e39a624f210e6ff31@75lohk-2wxbkp-cl9yoj-10jj2sj:13",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "restart_alt Restore demo data",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_c74db49ca279ffb7df2dfdf6",
+                      "instanceId": "ngmcp_c74db49ca279ffb7df2dfdf6@75lohk-2wxbkp-cl9yoj-10jj2sj:14",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click",
+                        "keydown"
+                      ],
+                      "label": "Português (Brasil)",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_c74db49ca279ffb7df2dfdf6",
+                      "instanceId": "ngmcp_c74db49ca279ffb7df2dfdf6@75lohk-2wxbkp-cl9yoj-10jj2sj:15",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click",
+                        "keydown"
+                      ],
+                      "label": "English",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_c74db49ca279ffb7df2dfdf6",
+                      "instanceId": "ngmcp_c74db49ca279ffb7df2dfdf6@75lohk-2wxbkp-cl9yoj-10jj2sj:16",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click",
+                        "keydown"
+                      ],
+                      "label": "Português (Brasil)",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_c74db49ca279ffb7df2dfdf6",
+                      "instanceId": "ngmcp_c74db49ca279ffb7df2dfdf6@75lohk-2wxbkp-cl9yoj-10jj2sj:17",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click",
+                        "keydown"
+                      ],
+                      "label": "English",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_activate",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_0f13e5cd9e076e25adb813b8@nky7xc-1haarcy-1p2bgzc-5necvl:11"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"status\":\"ui-dispatched\",\"operation\":\"activate\",\"target\":{\"sourceId\":\"ngmcp_0f13e5cd9e076e25adb813b8\",\"instanceId\":\"ngmcp_0f13e5cd9e076e25adb813b8@nky7xc-1haarcy-1p2bgzc-5necvl:11\"},\"changed\":[],\"values\":[],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"url\":\"http://127.0.0.1:4371/orcamentos\",\"businessStatus\":\"unknown\"}"
+                  }
+                ],
+                "structuredContent": {
+                  "status": "ui-dispatched",
+                  "operation": "activate",
+                  "target": {
+                    "sourceId": "ngmcp_0f13e5cd9e076e25adb813b8",
+                    "instanceId": "ngmcp_0f13e5cd9e076e25adb813b8@nky7xc-1haarcy-1p2bgzc-5necvl:11"
+                  },
+                  "changed": [],
+                  "values": [],
+                  "validation": {
+                    "status": "unknown",
+                    "fields": [],
+                    "groups": []
+                  },
+                  "url": "http://127.0.0.1:4371/orcamentos",
+                  "businessStatus": "unknown"
+                }
+              }
+            },
+            {
+              "name": "angular_describe_node",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_218df8d02dcbff24ebf352ef@nky7xc-1haarcy-1p2bgzc-5necvl:22"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"sourceId\":\"ngmcp_218df8d02dcbff24ebf352ef\",\"instanceId\":\"ngmcp_218df8d02dcbff24ebf352ef@nky7xc-1haarcy-1p2bgzc-5necvl:22\",\"kind\":\"control\",\"tagName\":\"input\",\"events\":[],\"label\":\"Monthly limit\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"fill\"],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_218df8d02dcbff24ebf352ef\",\"instanceId\":\"ngmcp_218df8d02dcbff24ebf352ef@nky7xc-1haarcy-1p2bgzc-5necvl:22\",\"path\":[\"limit\"],\"status\":\"INVALID\",\"updateOn\":\"change\",\"errors\":[{\"code\":\"required\"}],\"nativeErrors\":[\"valueMissing\"]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"schema\":{\"type\":\"string\"},\"value\":\"\",\"path\":[\"limit\"],\"transport\":\"native-ui\",\"customAccessor\":true,\"fillModes\":[\"paste\",\"input\"]}"
+                  }
+                ],
+                "structuredContent": {
+                  "sourceId": "ngmcp_218df8d02dcbff24ebf352ef",
+                  "instanceId": "ngmcp_218df8d02dcbff24ebf352ef@nky7xc-1haarcy-1p2bgzc-5necvl:22",
+                  "kind": "control",
+                  "tagName": "input",
+                  "events": [],
+                  "label": "Monthly limit",
+                  "visible": true,
+                  "disabled": false,
+                  "readonly": false,
+                  "operations": [
+                    "fill"
+                  ],
+                  "validation": {
+                    "status": "invalid",
+                    "fields": [
+                      {
+                        "sourceId": "ngmcp_218df8d02dcbff24ebf352ef",
+                        "instanceId": "ngmcp_218df8d02dcbff24ebf352ef@nky7xc-1haarcy-1p2bgzc-5necvl:22",
+                        "path": [
+                          "limit"
+                        ],
+                        "status": "INVALID",
+                        "updateOn": "change",
+                        "errors": [
+                          {
+                            "code": "required"
+                          }
+                        ],
+                        "nativeErrors": [
+                          "valueMissing"
+                        ]
+                      }
+                    ],
+                    "groups": [
+                      {
+                        "path": [],
+                        "status": "INVALID",
+                        "errors": []
+                      }
+                    ]
+                  },
+                  "schema": {
+                    "type": "string"
+                  },
+                  "value": "",
+                  "path": [
+                    "limit"
+                  ],
+                  "transport": "native-ui",
+                  "customAccessor": true,
+                  "fillModes": [
+                    "paste",
+                    "input"
+                  ]
+                }
+              }
+            },
+            {
+              "transportNormalization": {
+                "target": {
+                  "instanceId": "ngmcp_218df8d02dcbff24ebf352ef@nky7xc-1haarcy-1p2bgzc-5necvl:22"
+                },
+                "original": 125.5,
+                "value": "125.5",
+                "basis": "Live structural string schema; number converted to UI text without application-specific semantics"
+              }
+            },
+            {
+              "name": "tools/list",
+              "result": {
+                "tools": [
+                  {
+                    "name": "angular_list_nodes",
+                    "description": "List live Angular nodes registered by the application build. Read exact instance IDs, current form fields, options, schemas and validation before acting.",
+                    "inputSchema": {
+                      "type": "object",
+                      "properties": {},
+                      "additionalProperties": false
+                    },
+                    "annotations": {
+                      "readOnlyHint": true
+                    }
+                  },
+                  {
+                    "name": "angular_describe_node",
+                    "description": "Read a live registered Angular node. A source ID shared by repeated instances requires an exact instance ID.",
+                    "inputSchema": {
+                      "type": "object",
+                      "properties": {
+                        "target": {
+                          "type": "object",
+                          "properties": {
+                            "sourceId": {
+                              "type": "string"
+                            },
+                            "instanceId": {
+                              "type": "string"
+                            }
+                          },
+                          "anyOf": [
+                            {
+                              "required": [
+                                "sourceId"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "instanceId"
+                              ]
+                            }
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "required": [
+                        "target"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "annotations": {
+                      "readOnlyHint": true
+                    }
+                  },
+                  {
+                    "name": "angular_fill",
+                    "description": "Fill an exact live control using its original DOM interaction path. Angular owns validation. This may trigger application input/change effects.",
+                    "inputSchema": {
+                      "type": "object",
+                      "properties": {
+                        "target": {
+                          "type": "object",
+                          "properties": {
+                            "sourceId": {
+                              "type": "string"
+                            },
+                            "instanceId": {
+                              "type": "string"
+                            }
+                          },
+                          "anyOf": [
+                            {
+                              "required": [
+                                "sourceId"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "instanceId"
+                              ]
+                            }
+                          ],
+                          "additionalProperties": false
+                        },
+                        "value": {},
+                        "mode": {
+                          "type": "string",
+                          "enum": [
+                            "paste",
+                            "input"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "target",
+                        "value"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "annotations": {
+                      "readOnlyHint": false
+                    }
+                  },
+                  {
+                    "name": "angular_activate",
+                    "description": "Activate an exact live action through its original UI event. Dispatch does not establish business success.",
+                    "inputSchema": {
+                      "type": "object",
+                      "properties": {
+                        "target": {
+                          "type": "object",
+                          "properties": {
+                            "sourceId": {
+                              "type": "string"
+                            },
+                            "instanceId": {
+                              "type": "string"
+                            }
+                          },
+                          "anyOf": [
+                            {
+                              "required": [
+                                "sourceId"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "instanceId"
+                              ]
+                            }
+                          ],
+                          "additionalProperties": false
+                        },
+                        "event": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "target"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "annotations": {
+                      "readOnlyHint": false,
+                      "destructiveHint": true
+                    }
+                  },
+                  {
+                    "name": "angular_submit",
+                    "description": "Fill exact registered controls and submit their live form through the original Angular submission path. Return validation and dispatch evidence; business outcome remains unknown.",
+                    "inputSchema": {
+                      "type": "object",
+                      "properties": {
+                        "target": {
+                          "type": "object",
+                          "properties": {
+                            "sourceId": {
+                              "type": "string"
+                            },
+                            "instanceId": {
+                              "type": "string"
+                            }
+                          },
+                          "anyOf": [
+                            {
+                              "required": [
+                                "sourceId"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "instanceId"
+                              ]
+                            }
+                          ],
+                          "additionalProperties": false
+                        },
+                        "values": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "target": {
+                                "type": "object",
+                                "properties": {
+                                  "sourceId": {
+                                    "type": "string"
+                                  },
+                                  "instanceId": {
+                                    "type": "string"
+                                  }
+                                },
+                                "anyOf": [
+                                  {
+                                    "required": [
+                                      "sourceId"
+                                    ]
+                                  },
+                                  {
+                                    "required": [
+                                      "instanceId"
+                                    ]
+                                  }
+                                ],
+                                "additionalProperties": false
+                              },
+                              "value": {},
+                              "mode": {
+                                "type": "string",
+                                "enum": [
+                                  "paste",
+                                  "input"
+                                ]
+                              }
+                            },
+                            "required": [
+                              "target",
+                              "value"
+                            ],
+                            "additionalProperties": false
+                          }
+                        },
+                        "submitter": {
+                          "type": "object",
+                          "properties": {
+                            "sourceId": {
+                              "type": "string"
+                            },
+                            "instanceId": {
+                              "type": "string"
+                            }
+                          },
+                          "anyOf": [
+                            {
+                              "required": [
+                                "sourceId"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "instanceId"
+                              ]
+                            }
+                          ],
+                          "additionalProperties": false
+                        },
+                        "timeoutMs": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 30000
+                        }
+                      },
+                      "required": [
+                        "target"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "annotations": {
+                      "readOnlyHint": false,
+                      "destructiveHint": true
+                    }
+                  },
+                  {
+                    "name": "angular_navigate",
+                    "description": "Open a path on the same application origin. This changes page state and rebuilds the live node registry.",
+                    "inputSchema": {
+                      "type": "object",
+                      "properties": {
+                        "path": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "path"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "annotations": {
+                      "readOnlyHint": false
+                    }
+                  },
+                  {
+                    "name": "angular_form_0544f7b70da151a8",
+                    "title": "Set how much you plan to spend per month in this category.Monthly limitCancelSav",
+                    "description": "Submit this exact live Angular form through its original UI. Omitted fields retain current values. Angular evaluates dynamic and cross-field validation at runtime. Business success requires observing the app outcome.",
+                    "inputSchema": {
+                      "type": "object",
+                      "properties": {
+                        "limit": {
+                          "type": "string",
+                          "title": "Monthly limit"
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "annotations": {
+                      "readOnlyHint": false,
+                      "destructiveHint": true
+                    },
+                    "_meta": {
+                      "angularMcpTarget": {
+                        "sourceId": "ngmcp_0e8b7c563caa368b086a6380",
+                        "instanceId": "ngmcp_0e8b7c563caa368b086a6380@nky7xc-1haarcy-1p2bgzc-5necvl:21"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "angular_describe_node",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_218df8d02dcbff24ebf352ef@nky7xc-1haarcy-1p2bgzc-5necvl:22"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"sourceId\":\"ngmcp_218df8d02dcbff24ebf352ef\",\"instanceId\":\"ngmcp_218df8d02dcbff24ebf352ef@nky7xc-1haarcy-1p2bgzc-5necvl:22\",\"kind\":\"control\",\"tagName\":\"input\",\"events\":[],\"label\":\"Monthly limit\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"fill\"],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_218df8d02dcbff24ebf352ef\",\"instanceId\":\"ngmcp_218df8d02dcbff24ebf352ef@nky7xc-1haarcy-1p2bgzc-5necvl:22\",\"path\":[\"limit\"],\"status\":\"INVALID\",\"updateOn\":\"change\",\"errors\":[{\"code\":\"required\"}],\"nativeErrors\":[\"valueMissing\"]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"schema\":{\"type\":\"string\"},\"value\":\"\",\"path\":[\"limit\"],\"transport\":\"native-ui\",\"customAccessor\":true,\"fillModes\":[\"paste\",\"input\"]}"
+                  }
+                ],
+                "structuredContent": {
+                  "sourceId": "ngmcp_218df8d02dcbff24ebf352ef",
+                  "instanceId": "ngmcp_218df8d02dcbff24ebf352ef@nky7xc-1haarcy-1p2bgzc-5necvl:22",
+                  "kind": "control",
+                  "tagName": "input",
+                  "events": [],
+                  "label": "Monthly limit",
+                  "visible": true,
+                  "disabled": false,
+                  "readonly": false,
+                  "operations": [
+                    "fill"
+                  ],
+                  "validation": {
+                    "status": "invalid",
+                    "fields": [
+                      {
+                        "sourceId": "ngmcp_218df8d02dcbff24ebf352ef",
+                        "instanceId": "ngmcp_218df8d02dcbff24ebf352ef@nky7xc-1haarcy-1p2bgzc-5necvl:22",
+                        "path": [
+                          "limit"
+                        ],
+                        "status": "INVALID",
+                        "updateOn": "change",
+                        "errors": [
+                          {
+                            "code": "required"
+                          }
+                        ],
+                        "nativeErrors": [
+                          "valueMissing"
+                        ]
+                      }
+                    ],
+                    "groups": [
+                      {
+                        "path": [],
+                        "status": "INVALID",
+                        "errors": []
+                      }
+                    ]
+                  },
+                  "schema": {
+                    "type": "string"
+                  },
+                  "value": "",
+                  "path": [
+                    "limit"
+                  ],
+                  "transport": "native-ui",
+                  "customAccessor": true,
+                  "fillModes": [
+                    "paste",
+                    "input"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_form_0544f7b70da151a8",
+              "args": {
+                "limit": "125.5"
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"status\":\"ui-dispatched\",\"operation\":\"submit\",\"target\":{\"sourceId\":\"ngmcp_0e8b7c563caa368b086a6380\",\"instanceId\":\"ngmcp_0e8b7c563caa368b086a6380@nky7xc-1haarcy-1p2bgzc-5necvl:21\"},\"changed\":[\"ngmcp_218df8d02dcbff24ebf352ef@nky7xc-1haarcy-1p2bgzc-5necvl:22\"],\"values\":[{\"sourceId\":\"ngmcp_218df8d02dcbff24ebf352ef\",\"instanceId\":\"ngmcp_218df8d02dcbff24ebf352ef@nky7xc-1haarcy-1p2bgzc-5necvl:22\",\"value\":\"R$125.50\"}],\"validation\":{\"status\":\"valid\",\"fields\":[{\"sourceId\":\"ngmcp_218df8d02dcbff24ebf352ef\",\"instanceId\":\"ngmcp_218df8d02dcbff24ebf352ef@nky7xc-1haarcy-1p2bgzc-5necvl:22\",\"path\":[\"limit\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[{\"path\":[],\"status\":\"VALID\",\"errors\":[]}]},\"url\":\"http://127.0.0.1:4371/orcamentos\",\"businessStatus\":\"unknown\"}"
+                  }
+                ],
+                "structuredContent": {
+                  "status": "ui-dispatched",
+                  "operation": "submit",
+                  "target": {
+                    "sourceId": "ngmcp_0e8b7c563caa368b086a6380",
+                    "instanceId": "ngmcp_0e8b7c563caa368b086a6380@nky7xc-1haarcy-1p2bgzc-5necvl:21"
+                  },
+                  "changed": [
+                    "ngmcp_218df8d02dcbff24ebf352ef@nky7xc-1haarcy-1p2bgzc-5necvl:22"
+                  ],
+                  "values": [
+                    {
+                      "sourceId": "ngmcp_218df8d02dcbff24ebf352ef",
+                      "instanceId": "ngmcp_218df8d02dcbff24ebf352ef@nky7xc-1haarcy-1p2bgzc-5necvl:22",
+                      "value": "R$125.50"
+                    }
+                  ],
+                  "validation": {
+                    "status": "valid",
+                    "fields": [
+                      {
+                        "sourceId": "ngmcp_218df8d02dcbff24ebf352ef",
+                        "instanceId": "ngmcp_218df8d02dcbff24ebf352ef@nky7xc-1haarcy-1p2bgzc-5necvl:22",
+                        "path": [
+                          "limit"
+                        ],
+                        "status": "VALID",
+                        "updateOn": "change",
+                        "errors": []
+                      }
+                    ],
+                    "groups": [
+                      {
+                        "path": [],
+                        "status": "VALID",
+                        "errors": []
+                      }
+                    ]
+                  },
+                  "url": "http://127.0.0.1:4371/orcamentos",
+                  "businessStatus": "unknown"
+                }
+              }
+            }
+          ],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,300..500,0..1,0&display=block",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,300..500,0..1,0&display=block",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,300..500,0..1,0&display=block",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4371/configuracoes",
+            "meta": {}
+          },
+          "before": {
+            "version": 1,
+            "transactions": [],
+            "categories": [
+              {
+                "id": "cat-salary",
+                "name": "Salary",
+                "type": "income",
+                "color": "#2e9d5b",
+                "icon": "payments"
+              },
+              {
+                "id": "cat-freelance",
+                "name": "Freelance",
+                "type": "income",
+                "color": "#1f8fb3",
+                "icon": "work"
+              },
+              {
+                "id": "cat-investments",
+                "name": "Investments",
+                "type": "income",
+                "color": "#7a5cd6",
+                "icon": "trending_up"
+              },
+              {
+                "id": "cat-other-income",
+                "name": "Other income",
+                "type": "income",
+                "color": "#5f7d8c",
+                "icon": "savings"
+              },
+              {
+                "id": "cat-housing",
+                "name": "Housing",
+                "type": "expense",
+                "color": "#6d5bd0",
+                "icon": "home"
+              },
+              {
+                "id": "cat-food",
+                "name": "Food",
+                "type": "expense",
+                "color": "#e8772e",
+                "icon": "restaurant"
+              },
+              {
+                "id": "cat-transport",
+                "name": "Transportation",
+                "type": "expense",
+                "color": "#2f80ed",
+                "icon": "directions_car"
+              },
+              {
+                "id": "cat-health",
+                "name": "Health",
+                "type": "expense",
+                "color": "#e0457b",
+                "icon": "favorite"
+              },
+              {
+                "id": "cat-leisure",
+                "name": "Leisure",
+                "type": "expense",
+                "color": "#14a89c",
+                "icon": "sports_esports"
+              },
+              {
+                "id": "cat-education",
+                "name": "Education",
+                "type": "expense",
+                "color": "#c99a06",
+                "icon": "school"
+              },
+              {
+                "id": "cat-subscriptions",
+                "name": "Subscriptions",
+                "type": "expense",
+                "color": "#9b51e0",
+                "icon": "subscriptions"
+              },
+              {
+                "id": "cat-shopping",
+                "name": "Shopping",
+                "type": "expense",
+                "color": "#d64545",
+                "icon": "shopping_bag"
+              },
+              {
+                "id": "cat-other-expense",
+                "name": "Other expenses",
+                "type": "expense",
+                "color": "#7b8794",
+                "icon": "more_horiz"
+              }
+            ],
+            "budgets": []
+          },
+          "businessInput": {
+            "limit": 125.5
+          },
+          "after": {
+            "version": 1,
+            "transactions": [],
+            "categories": [
+              {
+                "id": "cat-salary",
+                "name": "Salary",
+                "type": "income",
+                "color": "#2e9d5b",
+                "icon": "payments"
+              },
+              {
+                "id": "cat-freelance",
+                "name": "Freelance",
+                "type": "income",
+                "color": "#1f8fb3",
+                "icon": "work"
+              },
+              {
+                "id": "cat-investments",
+                "name": "Investments",
+                "type": "income",
+                "color": "#7a5cd6",
+                "icon": "trending_up"
+              },
+              {
+                "id": "cat-other-income",
+                "name": "Other income",
+                "type": "income",
+                "color": "#5f7d8c",
+                "icon": "savings"
+              },
+              {
+                "id": "cat-housing",
+                "name": "Housing",
+                "type": "expense",
+                "color": "#6d5bd0",
+                "icon": "home"
+              },
+              {
+                "id": "cat-food",
+                "name": "Food",
+                "type": "expense",
+                "color": "#e8772e",
+                "icon": "restaurant"
+              },
+              {
+                "id": "cat-transport",
+                "name": "Transportation",
+                "type": "expense",
+                "color": "#2f80ed",
+                "icon": "directions_car"
+              },
+              {
+                "id": "cat-health",
+                "name": "Health",
+                "type": "expense",
+                "color": "#e0457b",
+                "icon": "favorite"
+              },
+              {
+                "id": "cat-leisure",
+                "name": "Leisure",
+                "type": "expense",
+                "color": "#14a89c",
+                "icon": "sports_esports"
+              },
+              {
+                "id": "cat-education",
+                "name": "Education",
+                "type": "expense",
+                "color": "#c99a06",
+                "icon": "school"
+              },
+              {
+                "id": "cat-subscriptions",
+                "name": "Subscriptions",
+                "type": "expense",
+                "color": "#9b51e0",
+                "icon": "subscriptions"
+              },
+              {
+                "id": "cat-shopping",
+                "name": "Shopping",
+                "type": "expense",
+                "color": "#d64545",
+                "icon": "shopping_bag"
+              },
+              {
+                "id": "cat-other-expense",
+                "name": "Other expenses",
+                "type": "expense",
+                "color": "#7b8794",
+                "icon": "more_horiz"
+              }
+            ],
+            "budgets": [
+              {
+                "categoryId": "cat-food",
+                "limitCents": 12550
+              }
+            ]
+          },
+          "oracle": {
+            "businessEffect": true
+          },
+          "persistedAfterReload": true,
+          "status": "passed",
+          "pageErrors": [],
+          "consoleErrors": [
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        }
+      ]
+    }
+  ],
+  "compilerDigestBefore": "58c004545a7a7cb102637694850d623fe63ecb981339cb35ae5f6ec273bb326c",
+  "appSpecificSourcePatches": [],
+  "instrumentation": "Separate generic compiler-instrumented app staged copy; original source manifest is checked unchanged.",
+  "finishedAt": "2026-11-10T10:02:42.616Z",
+  "compilerDigestAfter": "58c004545a7a7cb102637694850d623fe63ecb981339cb35ae5f6ec273bb326c",
+  "compilerStable": true,
+  "totals": {
+    "positive": 1,
+    "positivePassed": 1,
+    "negative": 0,
+    "negativePassed": 0,
+    "protocolBoundaryNotApplicable": 0
+  }
+}

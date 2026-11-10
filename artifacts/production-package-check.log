@@ -1,0 +1,50 @@
+
+> ngx-mcp@0.1.0 pack:check
+> npm run build && node tooling/check-package.mjs
+
+
+> ngx-mcp@0.1.0 build
+> node tooling/build.mjs
+
+{
+  "compilerDigest": "681b7df0277c15aa1086e8951f1339755f13d02e9025786ddc119f3816776d8e",
+  "packageJsonSha256": "5e1517c40eb6ff39b782bb2fe9f14d087340fa40f53adbb25700b882e392254f",
+  "lockSha256": "a5c0687a727f45b964b3078af4c00483432dbd7fb46f8c63f1e3eccf3f342e8c",
+  "name": "ngx-mcp",
+  "version": "0.1.0",
+  "compressedBytes": 75266,
+  "unpackedBytes": 282884,
+  "files": [
+    "LICENSE",
+    "PRODUCTION.md",
+    "README.md",
+    "RELEASING.md",
+    "THIRD_PARTY_NOTICES.md",
+    "dist/chunk-7NTGT3IO.js",
+    "dist/chunk-F545LJQ4.js",
+    "dist/chunk-TMNZAXEX.js",
+    "dist/index.js",
+    "dist/integrate.js",
+    "dist/integrated-serve.js",
+    "dist/integration-hosted-VITNZSH3.js",
+    "dist/ngx-mcp.js",
+    "dist/types/index.d.ts",
+    "dist/types/integrate.d.ts",
+    "dist/types/integrated-serve.d.ts",
+    "dist/types/integration-access.d.ts",
+    "dist/types/integration-catalog.d.ts",
+    "dist/types/integration-compiler.d.ts",
+    "dist/types/integration-hosted.d.ts",
+    "dist/types/integration-mcp.d.ts",
+    "dist/types/integration-production.d.ts",
+    "dist/types/integration-project.d.ts",
+    "dist/types/integration-runtime.d.ts",
+    "dist/types/integration-ui.d.ts",
+    "dist/types/integration-webmcp.d.ts",
+    "package.json"
+  ],
+  "sampleApplicationsIncluded": false,
+  "legacyExperimentIncluded": false,
+  "published": false
+}
+Extracted current-integration CLI, API, and code generation passed.

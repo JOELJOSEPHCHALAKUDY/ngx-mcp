@@ -1,0 +1,259 @@
+
+> ngx-mcp@0.1.0 verify
+> npm run check && npm test && npm run pack:check
+
+
+> ngx-mcp@0.1.0 check
+> tsc --noEmit
+
+
+> ngx-mcp@0.1.0 test
+> npm run test:integration && npm run test:integration-eval
+
+
+> ngx-mcp@0.1.0 test:integration
+> tsx --test tests/integration*.test.ts
+
+✔ access is default-deny and validates exact origins, routes, policy keys and mandatory hooks (10.892125ms)
+✔ catalog session checks and source/field data scopes are independent (30.9715ms)
+✔ metadata and nested forms redact values; explicit object-model paths limit returned data (1.213916ms)
+✔ metadata hides private control paths and ARIA values recursively while authorized reads retain them (0.65325ms)
+✔ metadata schemas omit private choice and annotation values without corrupting property names (0.545917ms)
+✔ mutation approval is bound to immutable canonical arguments and one-use session permits (23.5555ms)
+✔ permissions and expiry are rechecked after approval; cross-session, revoked and stale permits fail (12.597625ms)
+✔ approval refusal and audit outage cannot mutate; later audit failure never claims no execution (1.967333ms)
+✔ audit records omit raw arguments, subjects, errors and unsalted request identifiers (2.054708ms)
+✔ JSON getters, cycles, prototype objects and mutable policy/hook replacement cannot bypass the gate (1.486791ms)
+✔ optional backend authorization applies to catalogs, requests and a previously approved permit (2.193ms)
+✔ trusted callback deadlines reject late approval and bound pending authorization work (24.837625ms)
+✔ emitted access controls compile with strict target flags and contain no Node imports or eval (608.361042ms)
+✔ timed-out trusted callbacks retain slots until their underlying work settles (604.35925ms)
+✔ shared form catalog preserves names, exact ownership, optional fields, and current visibility policy (1.445375ms)
+✔ unsupported visible fields and duplicate control paths suppress a form instead of inventing ownership (0.168917ms)
+✔ schema and binding keys remain data when a control is named __proto__ or constructor (0.173333ms)
+✔ browser argument validation covers current target alternatives, nullable fields, arrays and primitive choices (0.585791ms)
+✔ browser validation fails closed on unknown rules, getters, non-JSON objects and cycles (0.196834ms)
+✔ the exact emitted catalog compiles with strict application flags and executes without Node closures (1289.111125ms)
+✔ the real project compiler resolves aliases, NgModel and output consumers, with stable source IDs (3327.431375ms)
+✔ shared resources have one edit and explicit per-component scopes, and form/view associations are preserved (0.228375ms)
+✔ only actual Angular standalone/component module scopes change; source originals remain untouched (0.431416ms)
+✔ constant and imported templates use explicit evaluated mappings and preserve shared declarations (830.752791ms)
+✔ escaped inline templates and shared-template instrumentation compile through the real AOT compiler (922.988708ms)
+✔ JWT access verification checks signature, issuer, audience, client, expiry, scopes and revocation (84.057208ms)
+✔ HTTP gateway authenticates every request and isolates principals, clients, scopes and sessions (156.56675ms)
+✔ HTTP boundaries reject hostile origins/hosts, oversized bodies, unsupported methods and excessive sessions (34.962125ms)
+✔ per-request app authorization failure closes the session before a tool can run (13.636875ms)
+✔ expired sessions and failed audit sinks fail closed without mutations (75.9805ms)
+✔ browser session factory uses distinct contexts and rejects account changes and unapproved network destinations (1114.489375ms)
+✔ official MCP HTTP client works with verified JWT access and session termination (47.362958ms)
+✔ pending session creation counts against limits and revocation cancels creation (11.213542ms)
+✔ session concurrency is reserved before asynchronous app authorization (17.781916ms)
+✔ authentication deadlines do not release slots while verifier work is still pending (68.338584ms)
+✔ session creation deadlines retain reservations and close late-created resources (54.002208ms)
+✔ authorization and cleanup deadlines prevent dispatch and retain closing capacity (84.418541ms)
+✔ failed cleanup does not advertise success or free capacity for leaked resources (22.179417ms)
+✔ a standard input submitter does not suppress the generated native form tool (1528.522625ms)
+✔ file upload uses the exact live element atomically and refuses copied stale handles (310.345167ms)
+✔ native keyboard MCP dispatch opens an exact focusable zero-size readonly ARIA listbox (366.220542ms)
+✔ declared focusable option rows receive passive exact identities and original keyboard events without an invented click action (385.020459ms)
+✔ native keyboard dispatch through an exact CVA host uses only its unique original native delegate (369.703542ms)
+✔ production bootstrap locks by default and never exposes owner errors or runtime environments (912.327667ms)
+✔ production catalog/inspect use reviewed labels and metadata; explicit model reads project data (279.666083ms)
+✔ explicit descriptor values also require backend read-value authorization (159.467334ms)
+✔ approved execution uses exact UI state, blocks cross-field writes, and never returns mutation values or URLs (203.767833ms)
+✔ external operations have one-use completion, identity binding, and fail-closed navigation (122.450083ms)
+✔ NumpadEnter cannot bypass the containing form submit permission (137.005958ms)
+✔ production generation rejects private policy fields and compiles with strict flags (857.011625ms)
+✔ staging dereferences editable source symlinks and leaves original targets unchanged (2726.178791ms)
+✔ a destination through a symlink into the source workspace is rejected before staging writes (1.893417ms)
+✔ generation selects mcp and preserves the source (784.900125ms)
+✔ generation selects webmcp and preserves the source (836.012125ms)
+✔ generation selects both and preserves the source (700.032833ms)
+✔ unknown transport mode is rejected before staging writes (2.747125ms)
+✔ production generation binds a reviewed policy and bootstrap to the exact app build (894.745292ms)
+✔ production access configuration fails closed before staging (356.452917ms)
+✔ an application source or trusted bootstrap change invalidates its reviewed build identity (1071.821375ms)
+✔ registry uses exact directive instances without debug APIs; repeated controls need instance IDs (1452.156375ms)
+✔ form fill preserves checkbox clicks and conditional validation then submits exactly once (422.287958ms)
+✔ group and nested validation errors are reported by the real model and disabled submission is respected (357.59825ms)
+✔ async validators settle before activation and pending timeouts are explicit (510.236583ms)
+✔ updateOn submit is committed by the original Angular submit lifecycle (327.593167ms)
+✔ custom CVAs remain explicit unsupported fields; readonly and cross-form edits refuse (307.400042ms)
+✔ template driven forms use their actual NgForm controls and native submit (346.236459ms)
+✔ removed repeated view handles become stale instead of selecting another row (336.126666ms)
+✔ the original submit button click handler runs once before the normal form submit (338.038625ms)
+✔ native number and multiple-select transports remain structural and validate current options (349.319792ms)
+✔ a pending async validator returns an explicit partial result without submitting (384.6545ms)
+✔ the generated bridge module works in an actual NgModule-bootstrapped application (278.424167ms)
+✔ optional public signal-forms registration reports field and root validation without changing rules (329.347334ms)
+✔ runtime instance IDs cannot be reused after a document reload (388.854833ms)
+✔ transparent CVAs delegate only through their unique native UI and hidden checkbox label (352.979667ms)
+✔ full text fill preserves a canceled original paste handler and reports normalized UI text (275.099167ms)
+✔ an unqualified authored keyup receives the supplied native key and preserves dirty-state handlers (340.640417ms)
+✔ native input command buttons are actions, not data fields, and their original submit works (357.796417ms)
+✔ element returns the actual registered node and refuses a replacement clone despite copied instance attributes (297.060958ms)
+✔ source-identified ARIA controls expose native affordances and live state without inventing authored events (289.274583ms)
+✔ hidden native radios activate through their one visible label and disabled radios retain guards (280.368292ms)
+✔ readonly native comboboxes retain original clicks while refusing value edits (313.917958ms)
+✔ public control model observations expose only primitives and primitive arrays while withholding sensitive delegates and objects (279.934542ms)
+✔ explicit model snapshots read plain object arrays without getters or sensitive data and report incomplete budgets honestly (288.682208ms)
+✔ an exact CVA may use its one visible ARIA checkbox for its unique hidden native delegate while preserving guards and ambiguity refusal (305.628125ms)
+✔ generated runtime compiles with all strict application flags (signals=false) (2000.380042ms)
+✔ generated runtime compiles with all strict application flags (signals=true) (1234.370416ms)
+✔ real Material snackbar Undo is a distinct runtime-DOM action and invokes its original callback (1514.44425ms)
+✔ library-owned confirmation buttons retain disabled guards and stale overlay identities are removed (368.0995ms)
+✔ public ARIA affordances and native anchors activate exact original DOM listeners (415.700292ms)
+✔ compiler registrations win and transparent source CVAs have no duplicate runtime-DOM control (307.703167ms)
+✔ runtime-DOM instances downgrade to passive focus targets when a role is removed and disappear when semantics are removed (480.656167ms)
+✔ library-owned native file inputs receive passive exact identities without advertising JSON fill or click (278.692709ms)
+✔ a readonly focus delegate is not advertised as fillable and does not hide the public picker affordance (414.940208ms)
+✔ readonly native ARIA listboxes retain exact runtime identities and original clicks (287.482167ms)
+❯ Building...
+✔ Building...
+Initial chunk files | Names         |  Raw size | Estimated transfer size
+main.js             | main          | 210.24 kB |                57.69 kB
+
+                    | Initial total | 210.24 kB |                57.69 kB
+
+Application bundle generation complete. [2.116 seconds] - 2026-11-10T16:54:47.473Z
+
+Output location: /private/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/ngx-mcp-native-webmcp-51fFdX/mcp-generated/build
+
+▶ native browser WebMCP: production AOT, explicit modes, original effects and lifecycle
+  ✔ mcp (4532.098708ms)
+❯ Building...
+✔ Building...
+Initial chunk files | Names         |  Raw size | Estimated transfer size
+main.js             | main          | 226.61 kB |                61.89 kB
+
+                    | Initial total | 226.61 kB |                61.89 kB
+
+Application bundle generation complete. [1.643 seconds] - 2026-11-10T16:54:50.544Z
+
+Output location: /private/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/ngx-mcp-native-webmcp-51fFdX/webmcp-generated/build
+
+  ✔ webmcp (3205.79075ms)
+❯ Building...
+✔ Building...
+Initial chunk files | Names         |  Raw size | Estimated transfer size
+main.js             | main          | 226.60 kB |                61.88 kB
+
+                    | Initial total | 226.60 kB |                61.88 kB
+
+Application bundle generation complete. [1.561 seconds] - 2026-11-10T16:54:53.446Z
+
+Output location: /private/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/ngx-mcp-native-webmcp-51fFdX/both-generated/build
+
+  ✔ both (2918.174792ms)
+✔ native browser WebMCP: production AOT, explicit modes, original effects and lifecycle (12508.418667ms)
+✔ publisher is opt-in and prefers the document WebMCP API over legacy navigator (284.620042ms)
+✔ deployed development builds do not publish native tools (65.86375ms)
+✔ production catalog denial withdraws registrations and retained callbacks fail closed (31.36925ms)
+✔ browser calls validate arguments and every submitted field before any mutation (77.550792ms)
+✔ cancellation during catalog refresh prevents a mutation from starting (23.595667ms)
+✔ catalog schema changes replace registrations and retained callbacks cannot execute (18.343459ms)
+✔ persisted page restoration republishes tools once without reviving explicit disposal (25.814667ms)
+✔ registration collisions leave an existing foreign tool intact (18.428084ms)
+✔ generated publisher compiles under strict application flags without Node or external runtime dependencies (523.716459ms)
+❯ Building...
+✔ Building...
+Initial chunk files | Names         |  Raw size | Estimated transfer size
+main.js             | main          | 260.34 kB |                69.09 kB
+
+                    | Initial total | 260.34 kB |                69.09 kB
+
+Application bundle generation complete. [2.309 seconds] - 2026-11-10T16:54:47.651Z
+
+Output location: /private/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/ngx-mcp-conformance-D5iTAv/instrumented/build
+
+✔ AOT production runtime: exact controls, dynamic validation, submit timing, async rules and repeated instances over MCP (6284.337084ms)
+ℹ tests 108
+ℹ suites 0
+ℹ pass 108
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 15871.72975
+
+> ngx-mcp@0.1.0 test:integration-eval
+> node --test tests/integration-evaluator.test.mjs evaluation/integration-unseen/oracles.test.mjs
+
+✔ transaction edit verifies every frozen payload field and identity (2.709708ms)
+✔ admin row save verifies every frozen field and preserves neighbor (1.155042ms)
+✔ list create compares empty owners/sharedWith instead of ignoring arrays (0.650042ms)
+✔ registration checks password and display name as well as identity (0.44275ms)
+✔ list deletion refuses loss of an unrelated list (0.154542ms)
+✔ unknown chooser error cannot become a validator pass from unchanged data and preexisting invalid UI (1.206417ms)
+✔ a patched-invalid control still cannot hide a failure before actual submit (0.127459ms)
+✔ actual requested field and exact disabled-submit refusal establish validation coverage (0.0865ms)
+✔ an unrelated invalid field or wrong requested value cannot establish coverage (0.081458ms)
+✔ unknown transport failures cannot reuse stale app rejection feedback (0.086208ms)
+✔ actual group-validator errors cover reached fields whose own controls remain valid (0.151792ms)
+✔ todo MCP-only boundary must pass in both raw and UI matrices (1.730666ms)
+✔ shopping MCP-only boundary must pass in both raw and UI matrices (0.398583ms)
+✔ strict native quality cannot become vacuous after source reference failures (0.969083ms)
+✔ effective business input is checked alongside frozenInput (0.394958ms)
+✔ valid repeated-source refusal and native quality pass strict validation (0.133333ms)
+✔ native tracing includes nested real driver calls and remains JSON serializable (0.540875ms)
+✔ gate recomputes exact business payload instead of trusting passed/payloadVerified booleans (0.414833ms)
+✔ a mid-fill unsupported mapper error cannot masquerade as disabled-submit validation (0.089ms)
+✔ disabled readiness while filling a different field cannot masquerade as submit readiness (0.059291ms)
+✔ native invalid state is refreshed after action on the exact successfully filled owner (0.3295ms)
+✔ an unrelated invalid form never substitutes for a still-valid patched owner (0.172875ms)
+✔ a replaced patched field cannot borrow a new invalid element from its locator (0.108833ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 74.743042
+
+> ngx-mcp@0.1.0 pack:check
+> npm run build && node tooling/check-package.mjs
+
+
+> ngx-mcp@0.1.0 build
+> node tooling/build.mjs
+
+{
+  "name": "ngx-mcp",
+  "version": "0.1.0",
+  "compressedBytes": 75187,
+  "unpackedBytes": 282521,
+  "files": [
+    "LICENSE",
+    "PRODUCTION.md",
+    "README.md",
+    "RELEASING.md",
+    "THIRD_PARTY_NOTICES.md",
+    "dist/chunk-7NTGT3IO.js",
+    "dist/chunk-F545LJQ4.js",
+    "dist/chunk-TMNZAXEX.js",
+    "dist/index.js",
+    "dist/integrate.js",
+    "dist/integrated-serve.js",
+    "dist/integration-hosted-VITNZSH3.js",
+    "dist/ngx-mcp.js",
+    "dist/types/index.d.ts",
+    "dist/types/integrate.d.ts",
+    "dist/types/integrated-serve.d.ts",
+    "dist/types/integration-access.d.ts",
+    "dist/types/integration-catalog.d.ts",
+    "dist/types/integration-compiler.d.ts",
+    "dist/types/integration-hosted.d.ts",
+    "dist/types/integration-mcp.d.ts",
+    "dist/types/integration-production.d.ts",
+    "dist/types/integration-project.d.ts",
+    "dist/types/integration-runtime.d.ts",
+    "dist/types/integration-ui.d.ts",
+    "dist/types/integration-webmcp.d.ts",
+    "package.json"
+  ],
+  "sampleApplicationsIncluded": false,
+  "legacyExperimentIncluded": false,
+  "published": false
+}
+Extracted current-integration CLI, API, and code generation passed.

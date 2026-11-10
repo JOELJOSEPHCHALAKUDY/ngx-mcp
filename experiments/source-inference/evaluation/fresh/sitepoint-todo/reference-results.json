@@ -1,0 +1,360 @@
+{
+  "phase": "source-only DOM reference",
+  "compilerSourceRead": false,
+  "compilerManifestRead": false,
+  "sourcePatches": [],
+  "startedAt": "2026-11-09T20:52:14.167Z",
+  "operations": [
+    {
+      "id": "list_todos",
+      "pass": true,
+      "observed": {
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "checked": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "checked": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "checked": true
+          }
+        ],
+        "footer": "3 items left",
+        "input": "",
+        "fixture": [
+          {
+            "id": 1,
+            "title": "Read fixture article",
+            "complete": false
+          },
+          {
+            "id": 2,
+            "title": "Clean fixture inbox",
+            "complete": false
+          },
+          {
+            "id": 3,
+            "title": "Reserve fixture table",
+            "complete": true
+          }
+        ]
+      },
+      "calls": [
+        {
+          "method": "GET",
+          "url": "http://localhost:3000/todos",
+          "body": null
+        }
+      ]
+    },
+    {
+      "id": "add_todo",
+      "pass": true,
+      "observed": {
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "checked": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "checked": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "checked": true
+          },
+          {
+            "title": "Frozen holdout task",
+            "completed": false,
+            "checked": false
+          }
+        ],
+        "footer": "4 items left",
+        "input": "",
+        "fixture": [
+          {
+            "id": 1,
+            "title": "Read fixture article",
+            "complete": false
+          },
+          {
+            "id": 2,
+            "title": "Clean fixture inbox",
+            "complete": false
+          },
+          {
+            "id": 3,
+            "title": "Reserve fixture table",
+            "complete": true
+          },
+          {
+            "title": "Frozen holdout task",
+            "complete": false,
+            "id": 4
+          }
+        ]
+      },
+      "calls": [
+        {
+          "method": "POST",
+          "url": "http://localhost:3000/todos",
+          "body": {
+            "title": "Frozen holdout task",
+            "complete": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "toggle_todo_complete",
+      "pass": true,
+      "observed": {
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": true,
+            "checked": true
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "checked": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "checked": true
+          },
+          {
+            "title": "Frozen holdout task",
+            "completed": false,
+            "checked": false
+          }
+        ],
+        "footer": "4 items left",
+        "input": "",
+        "fixture": [
+          {
+            "title": "Read fixture article",
+            "complete": true,
+            "id": 1
+          },
+          {
+            "id": 2,
+            "title": "Clean fixture inbox",
+            "complete": false
+          },
+          {
+            "id": 3,
+            "title": "Reserve fixture table",
+            "complete": true
+          },
+          {
+            "title": "Frozen holdout task",
+            "complete": false,
+            "id": 4
+          }
+        ]
+      },
+      "calls": [
+        {
+          "method": "PUT",
+          "url": "http://localhost:3000/todos/1",
+          "body": {
+            "title": "Read fixture article",
+            "complete": true,
+            "id": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "delete_todo",
+      "pass": true,
+      "observed": {
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": true,
+            "checked": true
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "checked": true
+          },
+          {
+            "title": "Frozen holdout task",
+            "completed": false,
+            "checked": false
+          }
+        ],
+        "footer": "3 items left",
+        "input": "",
+        "fixture": [
+          {
+            "title": "Read fixture article",
+            "complete": true,
+            "id": 1
+          },
+          {
+            "id": 3,
+            "title": "Reserve fixture table",
+            "complete": true
+          },
+          {
+            "title": "Frozen holdout task",
+            "complete": false,
+            "id": 4
+          }
+        ]
+      },
+      "calls": [
+        {
+          "method": "DELETE",
+          "url": "http://localhost:3000/todos/2",
+          "body": null
+        }
+      ]
+    }
+  ],
+  "boundaryChecks": [
+    {
+      "id": "toggle_again_reverses",
+      "pass": true,
+      "calls": [
+        {
+          "method": "PUT",
+          "url": "http://localhost:3000/todos/1",
+          "body": {
+            "title": "Read fixture article",
+            "complete": false,
+            "id": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "blank_title_source_has_no_guard",
+      "pass": true,
+      "calls": [
+        {
+          "method": "POST",
+          "url": "http://localhost:3000/todos",
+          "body": {
+            "title": "",
+            "complete": false
+          }
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "final": {
+    "rows": [
+      {
+        "title": "Read fixture article",
+        "completed": false,
+        "checked": false
+      },
+      {
+        "title": "Reserve fixture table",
+        "completed": true,
+        "checked": true
+      },
+      {
+        "title": "Frozen holdout task",
+        "completed": false,
+        "checked": false
+      },
+      {
+        "title": "",
+        "completed": false,
+        "checked": false
+      }
+    ],
+    "footer": "4 items left",
+    "input": "",
+    "fixture": [
+      {
+        "title": "Read fixture article",
+        "complete": false,
+        "id": 1
+      },
+      {
+        "id": 3,
+        "title": "Reserve fixture table",
+        "complete": true
+      },
+      {
+        "title": "Frozen holdout task",
+        "complete": false,
+        "id": 4
+      },
+      {
+        "title": "",
+        "complete": false,
+        "id": 5
+      }
+    ]
+  },
+  "calls": [
+    {
+      "method": "GET",
+      "url": "http://localhost:3000/todos",
+      "body": null
+    },
+    {
+      "method": "POST",
+      "url": "http://localhost:3000/todos",
+      "body": {
+        "title": "Frozen holdout task",
+        "complete": false
+      }
+    },
+    {
+      "method": "PUT",
+      "url": "http://localhost:3000/todos/1",
+      "body": {
+        "title": "Read fixture article",
+        "complete": true,
+        "id": 1
+      }
+    },
+    {
+      "method": "DELETE",
+      "url": "http://localhost:3000/todos/2",
+      "body": null
+    },
+    {
+      "method": "PUT",
+      "url": "http://localhost:3000/todos/1",
+      "body": {
+        "title": "Read fixture article",
+        "complete": false,
+        "id": 1
+      }
+    },
+    {
+      "method": "POST",
+      "url": "http://localhost:3000/todos",
+      "body": {
+        "title": "",
+        "complete": false
+      }
+    }
+  ],
+  "pass": true,
+  "finishedAt": "2026-11-09T20:52:15.622Z"
+}

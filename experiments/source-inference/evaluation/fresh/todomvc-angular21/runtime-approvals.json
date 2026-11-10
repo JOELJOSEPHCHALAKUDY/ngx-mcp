@@ -1,0 +1,38 @@
+[
+  {
+    "id": "/active#FooterComponent.clearCompleted:app-todo-footer button.clear-completed",
+    "fingerprint": "b5232b1ae460dd9e88cac2398005366290a7fccf6f62486e4b496d9eec4ca148",
+    "effect": "write",
+    "description": "Independent modern holdout synthetic runtime"
+  },
+  {
+    "id": "/active#TodoListComponent.toggleAll:app-todo-list input.toggle-all",
+    "fingerprint": "29a4509da82ef5c3d587328dcb807fec159bad8fb16800d015f319b274c60895",
+    "effect": "write",
+    "description": "Independent modern holdout synthetic runtime"
+  },
+  {
+    "id": "/all#FooterComponent.clearCompleted:app-todo-footer button.clear-completed",
+    "fingerprint": "749eac60404c198f3a70527d2b7c49d0b7d16b81c245c265340e61c299dc31d0",
+    "effect": "write",
+    "description": "Independent modern holdout synthetic runtime"
+  },
+  {
+    "id": "/all#TodoListComponent.toggleAll:app-todo-list input.toggle-all",
+    "fingerprint": "3b6eb30844f7d9a39227a55384c20030304dba913e395a1e2a43b0bf9a36be6c",
+    "effect": "write",
+    "description": "Independent modern holdout synthetic runtime"
+  },
+  {
+    "id": "/completed#FooterComponent.clearCompleted:app-todo-footer button.clear-completed",
+    "fingerprint": "e90e0129fa0bcb15136cdef1a0b83b4cf31a61774bfb4e45a6c8c9e204ffe645",
+    "effect": "write",
+    "description": "Independent modern holdout synthetic runtime"
+  },
+  {
+    "id": "/completed#TodoListComponent.toggleAll:app-todo-list input.toggle-all",
+    "fingerprint": "64aaad4ad4e20b72040306937e1ee2d26edc9eafcdd09b43d43fc3f9e3d00167",
+    "effect": "write",
+    "description": "Independent modern holdout synthetic runtime"
+  }
+]

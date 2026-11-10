@@ -1,0 +1,23 @@
+{
+  "id": "shopping",
+  "repository": "https://github.com/BlueIronGirl/shopping-list-frontend",
+  "commit": "3464f15ad53ede4de5673415ca9de68070bf78a1",
+  "directory": "/tmp/integration-unseen-shopping",
+  "license": "MIT",
+  "licenseFile": "LICENSE.txt",
+  "port": 4353,
+  "tsconfig": "tsconfig.app.json",
+  "routes": "src/app/app-routing.module.ts#routes",
+  "angularProject": "shoppinglist",
+  "angular": "^16.0.0",
+  "lockSha256": "1130119d7f8ce7577c1a35cc1bbb957e9daa2a5f2ff40b5bebf755cc0daf1a1d",
+  "licenseSha256": "6f54249d5c84a967cb3fae13de05e3bf926464a7a4ef58fdba01620f54821739",
+  "install": [
+    "npm",
+    "ci",
+    "--ignore-scripts",
+    "--no-audit",
+    "--no-fund"
+  ],
+  "sourceManifestSha256": "32c47fabae3db0cf2fdff0b9c9db56caff20aac7c7abafbcd2882e6206aa140e"
+}

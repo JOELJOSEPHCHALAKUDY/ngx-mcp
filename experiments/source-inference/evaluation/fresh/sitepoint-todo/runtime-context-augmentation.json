@@ -1,0 +1,27 @@
+{
+  "note": "Separate from frozen-label baseline. Additional payload object data comes from the frozen synthetic fixture because compiler leaf schemas require complete Todo objects. No manifest changes or component calls.",
+  "cases": [
+    {
+      "id": "toggle_todo_complete",
+      "args": {
+        "todo": {
+          "id": 1,
+          "title": "Read fixture article",
+          "complete": false
+        }
+      },
+      "source": "prerequisites.json fixtureTodos[0]"
+    },
+    {
+      "id": "delete_todo",
+      "args": {
+        "todo": {
+          "id": 2,
+          "title": "Clean fixture inbox",
+          "complete": false
+        }
+      },
+      "source": "prerequisites.json fixtureTodos[1]"
+    }
+  ]
+}

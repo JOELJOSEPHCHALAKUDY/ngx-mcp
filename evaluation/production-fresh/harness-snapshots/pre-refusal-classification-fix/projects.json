@@ -1,0 +1,61 @@
+{
+  "formatVersion": 1,
+  "selectedAt": "2026-11-10T16:05:18.701935+00:00",
+  "clock": "2026-11-10T12:00:00.000Z",
+  "projects": [
+    {
+      "id": "todo",
+      "repository": "https://github.com/dilanka-rathnasiri/todo-app",
+      "commit": "dc0a75b46d4940ebfe96a6b306423857c38e98fd",
+      "complexity": "small: standalone signal-bound NgModel, Bootstrap modal, repeated rows, localStorage",
+      "storageKeys": [
+        "todo-items"
+      ],
+      "angular": "20.3.12",
+      "target": "todo-app",
+      "typescript": "5.9.3",
+      "lockSha256": "72325b80213184a325a19c74d0e421a1e3064a6b086d84454c6e5a093ee23f6a",
+      "sourceDefault": "/tmp/ngx-mcp-fresh-access-todo",
+      "tsconfig": "tsconfig.app.json",
+      "license": "MIT",
+      "licenseSha256": "68d2bdb9220b0927d5d34b5898ec61d7f507a37112a4962b5b24596c29aeca64"
+    },
+    {
+      "id": "sprint",
+      "repository": "https://github.com/rajdhokai/EasySprint",
+      "commit": "22f4ce92e1ae18f885e5153c945255443419d656",
+      "complexity": "medium: Material dialogs/select/datepicker, guarded routes, local demo login, project ownership and task state",
+      "storageKeys": [
+        "users",
+        "currentUser",
+        "projects",
+        "tasks"
+      ],
+      "angular": "20.0.0",
+      "target": "demo",
+      "typescript": "5.8.2",
+      "lockSha256": "fa8bc8dc42dc87c9be90bf917c00e398b0372ed9dfde44c449ffd41144d9845c",
+      "sourceDefault": "/tmp/ngx-mcp-fresh-access-sprint",
+      "tsconfig": "tsconfig.app.json",
+      "license": "MIT",
+      "licenseSha256": "f719028bba7aa0e3e861f583ca82d4b714997211caf84677a7d3599f6b23b35a"
+    },
+    {
+      "id": "expense",
+      "repository": "https://github.com/julianNordin/expense-tracker-angular",
+      "commit": "fe326e1bc56fdea3262801d7379a5906f724b319",
+      "complexity": "larger: lazy reactive forms, zoneless state, money CVA, async duplicate validator, HTTP-like local backend, radios, nested budget FormArray",
+      "storageKeys": [
+        "expense-tracker.v1"
+      ],
+      "angular": "22.1.3",
+      "target": "expense-tracker",
+      "typescript": "6.0.3",
+      "lockSha256": "16d725dbc8ca0181a6b9f5859802d6abeea70dddb672f296c97b23d5e9ab9e90",
+      "sourceDefault": "/tmp/ngx-mcp-fresh-access-expense",
+      "tsconfig": "tsconfig.app.json",
+      "license": "MIT",
+      "licenseSha256": "12d98b22602986ca992acc18a8e76f35c270c6ace9c4f59437f9b277363032f0"
+    }
+  ]
+}

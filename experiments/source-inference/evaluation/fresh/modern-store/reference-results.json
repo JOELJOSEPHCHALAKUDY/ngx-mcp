@@ -1,0 +1,724 @@
+{
+  "project": "modern-store",
+  "sourceCommit": "5bface390202c117a30bb7de06839735d3b9f013",
+  "baseURL": "http://127.0.0.1:4331",
+  "unmodifiedUpstream": true,
+  "operationCount": 13,
+  "passed": 13,
+  "results": [
+    {
+      "id": "cart-add-card",
+      "status": "passed",
+      "actions": "DOM interactions only",
+      "oracle": "read-only Angular dev state + localStorage + rendered UI",
+      "before": {
+        "cartItems": [],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": []
+        }
+      },
+      "assertions": [
+        "same row incremented to2",
+        "cart persisted after reload"
+      ],
+      "after": {
+        "cartItems": [
+          {
+            "product": {
+              "id": "1",
+              "name": "Wireless Headphones",
+              "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+              "price": 299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+              "rating": 4.5,
+              "reviewCount": 128,
+              "inStock": true,
+              "category": "electronics"
+            },
+            "quantity": 2
+          }
+        ],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 2,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": [
+            {
+              "product": {
+                "id": "1",
+                "name": "Wireless Headphones",
+                "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+                "price": 299.99,
+                "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+                "rating": 4.5,
+                "reviewCount": 128,
+                "inStock": true,
+                "category": "electronics"
+              },
+              "quantity": 2
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cart-add-detail",
+      "status": "passed",
+      "actions": "DOM interactions only",
+      "oracle": "read-only Angular dev state + localStorage + rendered UI",
+      "before": {
+        "cartItems": [],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": []
+        }
+      },
+      "assertions": [
+        "detail quantity2 reaches cart"
+      ],
+      "after": {
+        "cartItems": [
+          {
+            "product": {
+              "id": "1",
+              "name": "Wireless Headphones",
+              "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+              "price": 299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+              "rating": 4.5,
+              "reviewCount": 128,
+              "inStock": true,
+              "category": "electronics"
+            },
+            "quantity": 2
+          }
+        ],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 2,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": [
+            {
+              "product": {
+                "id": "1",
+                "name": "Wireless Headphones",
+                "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+                "price": 299.99,
+                "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+                "rating": 4.5,
+                "reviewCount": 128,
+                "inStock": true,
+                "category": "electronics"
+              },
+              "quantity": 2
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "wishlist-toggle",
+      "status": "passed",
+      "actions": "DOM interactions only",
+      "oracle": "read-only Angular dev state + localStorage + rendered UI",
+      "before": {
+        "cartItems": [],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": []
+        }
+      },
+      "assertions": [
+        "toggle adds then removes",
+        "membership persisted",
+        "cart unchanged"
+      ],
+      "after": {
+        "cartItems": [],
+        "wishlistItems": [
+          {
+            "id": "1",
+            "name": "Wireless Headphones",
+            "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+            "price": 299.99,
+            "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+            "rating": 4.5,
+            "reviewCount": 128,
+            "inStock": true,
+            "category": "electronics"
+          }
+        ],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [
+            {
+              "id": "1",
+              "name": "Wireless Headphones",
+              "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+              "price": 299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+              "rating": 4.5,
+              "reviewCount": 128,
+              "inStock": true,
+              "category": "electronics"
+            }
+          ],
+          "cartItems": []
+        }
+      }
+    },
+    {
+      "id": "wishlist-remove",
+      "status": "passed",
+      "actions": "DOM interactions only",
+      "oracle": "read-only Angular dev state + localStorage + rendered UI",
+      "before": {
+        "cartItems": [],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": []
+        }
+      },
+      "assertions": [
+        "selected row removed",
+        "other row preserved"
+      ],
+      "after": {
+        "cartItems": [],
+        "wishlistItems": [
+          {
+            "id": "2",
+            "name": "Professional Camera",
+            "description": "Mirrorless camera with 24MP sensor and 4K video recording",
+            "price": 1299.99,
+            "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500",
+            "rating": 4.7,
+            "reviewCount": 256,
+            "inStock": true,
+            "category": "electronics"
+          }
+        ],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [
+            {
+              "id": "2",
+              "name": "Professional Camera",
+              "description": "Mirrorless camera with 24MP sensor and 4K video recording",
+              "price": 1299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500",
+              "rating": 4.7,
+              "reviewCount": 256,
+              "inStock": true,
+              "category": "electronics"
+            }
+          ],
+          "cartItems": []
+        }
+      }
+    },
+    {
+      "id": "wishlist-clear",
+      "status": "passed",
+      "actions": "DOM interactions only",
+      "oracle": "read-only Angular dev state + localStorage + rendered UI",
+      "before": {
+        "cartItems": [],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": []
+        }
+      },
+      "assertions": [
+        "all rows cleared",
+        "empty wishlist persisted"
+      ],
+      "after": {
+        "cartItems": [],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": []
+        }
+      }
+    },
+    {
+      "id": "cart-set-quantity",
+      "status": "passed",
+      "actions": "DOM interactions only",
+      "oracle": "read-only Angular dev state + localStorage + rendered UI",
+      "before": {
+        "cartItems": [],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": []
+        }
+      },
+      "assertions": [
+        "quantity replaced at3",
+        "row count1",
+        "UI minimum1 prevents decrement"
+      ],
+      "after": {
+        "cartItems": [
+          {
+            "product": {
+              "id": "1",
+              "name": "Wireless Headphones",
+              "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+              "price": 299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+              "rating": 4.5,
+              "reviewCount": 128,
+              "inStock": true,
+              "category": "electronics"
+            },
+            "quantity": 1
+          }
+        ],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 1,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": [
+            {
+              "product": {
+                "id": "1",
+                "name": "Wireless Headphones",
+                "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+                "price": 299.99,
+                "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+                "rating": 4.5,
+                "reviewCount": 128,
+                "inStock": true,
+                "category": "electronics"
+              },
+              "quantity": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cart-move-to-wishlist",
+      "status": "passed",
+      "actions": "DOM interactions only",
+      "oracle": "read-only Angular dev state + localStorage + rendered UI",
+      "before": {
+        "cartItems": [],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": []
+        }
+      },
+      "assertions": [
+        "removed from cart",
+        "added once to wishlist"
+      ],
+      "after": {
+        "cartItems": [],
+        "wishlistItems": [
+          {
+            "id": "1",
+            "name": "Wireless Headphones",
+            "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+            "price": 299.99,
+            "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+            "rating": 4.5,
+            "reviewCount": 128,
+            "inStock": true,
+            "category": "electronics"
+          }
+        ],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [
+            {
+              "id": "1",
+              "name": "Wireless Headphones",
+              "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+              "price": 299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+              "rating": 4.5,
+              "reviewCount": 128,
+              "inStock": true,
+              "category": "electronics"
+            }
+          ],
+          "cartItems": []
+        }
+      }
+    },
+    {
+      "id": "cart-remove",
+      "status": "passed",
+      "actions": "DOM interactions only",
+      "oracle": "read-only Angular dev state + localStorage + rendered UI",
+      "before": {
+        "cartItems": [],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": []
+        }
+      },
+      "assertions": [
+        "selected cart row removed",
+        "other preserved"
+      ],
+      "after": {
+        "cartItems": [
+          {
+            "product": {
+              "id": "2",
+              "name": "Professional Camera",
+              "description": "Mirrorless camera with 24MP sensor and 4K video recording",
+              "price": 1299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500",
+              "rating": 4.7,
+              "reviewCount": 256,
+              "inStock": true,
+              "category": "electronics"
+            },
+            "quantity": 1
+          }
+        ],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 1,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": [
+            {
+              "product": {
+                "id": "2",
+                "name": "Professional Camera",
+                "description": "Mirrorless camera with 24MP sensor and 4K video recording",
+                "price": 1299.99,
+                "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500",
+                "rating": 4.7,
+                "reviewCount": 256,
+                "inStock": true,
+                "category": "electronics"
+              },
+              "quantity": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "wishlist-add-all-to-cart",
+      "status": "passed",
+      "actions": "DOM interactions only",
+      "oracle": "read-only Angular dev state + localStorage + rendered UI",
+      "before": {
+        "cartItems": [],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": []
+        }
+      },
+      "assertions": [
+        "existing cart quantity unchanged",
+        "missing wishlist item added at1",
+        "wishlist cleared"
+      ],
+      "after": {
+        "cartItems": [
+          {
+            "product": {
+              "id": "1",
+              "name": "Wireless Headphones",
+              "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+              "price": 299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+              "rating": 4.5,
+              "reviewCount": 128,
+              "inStock": true,
+              "category": "electronics"
+            },
+            "quantity": 2
+          },
+          {
+            "product": {
+              "id": "2",
+              "name": "Professional Camera",
+              "description": "Mirrorless camera with 24MP sensor and 4K video recording",
+              "price": 1299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500",
+              "rating": 4.7,
+              "reviewCount": 256,
+              "inStock": true,
+              "category": "electronics"
+            },
+            "quantity": 1
+          }
+        ],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 3,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": [
+            {
+              "product": {
+                "id": "1",
+                "name": "Wireless Headphones",
+                "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+                "price": 299.99,
+                "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+                "rating": 4.5,
+                "reviewCount": 128,
+                "inStock": true,
+                "category": "electronics"
+              },
+              "quantity": 2
+            },
+            {
+              "product": {
+                "id": "2",
+                "name": "Professional Camera",
+                "description": "Mirrorless camera with 24MP sensor and 4K video recording",
+                "price": 1299.99,
+                "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500",
+                "rating": 4.7,
+                "reviewCount": 256,
+                "inStock": true,
+                "category": "electronics"
+              },
+              "quantity": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "session-sign-in",
+      "status": "passed",
+      "actions": "DOM interactions only",
+      "oracle": "read-only Angular dev state + localStorage + rendered UI",
+      "before": {
+        "cartItems": [],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": []
+        }
+      },
+      "assertions": [
+        "mock user email applied",
+        "fixed id1",
+        "user not persisted"
+      ],
+      "after": {
+        "cartItems": [],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": []
+        }
+      }
+    },
+    {
+      "id": "session-sign-up",
+      "status": "passed",
+      "actions": "DOM interactions only",
+      "oracle": "read-only Angular dev state + localStorage + rendered UI",
+      "before": {
+        "cartItems": [],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": []
+        }
+      },
+      "assertions": [
+        "mock signup applies email",
+        "source ignores supplied name and uses John Doe",
+        "no external account created"
+      ],
+      "after": {
+        "cartItems": [],
+        "wishlistItems": [],
+        "user": {
+          "id": "1",
+          "email": "signup@example.test",
+          "name": "John Doe",
+          "imageUrl": "https://randomuser.me/api/portraits/men/1.jpg"
+        },
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": []
+        }
+      }
+    },
+    {
+      "id": "session-sign-out",
+      "status": "passed",
+      "actions": "DOM interactions only",
+      "oracle": "read-only Angular dev state + localStorage + rendered UI",
+      "before": {
+        "cartItems": [],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": []
+        }
+      },
+      "assertions": [
+        "session cleared",
+        "cart retained"
+      ],
+      "after": {
+        "cartItems": [
+          {
+            "product": {
+              "id": "1",
+              "name": "Wireless Headphones",
+              "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+              "price": 299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+              "rating": 4.5,
+              "reviewCount": 128,
+              "inStock": true,
+              "category": "electronics"
+            },
+            "quantity": 1
+          }
+        ],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 1,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": [
+            {
+              "product": {
+                "id": "1",
+                "name": "Wireless Headphones",
+                "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+                "price": 299.99,
+                "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+                "rating": 4.5,
+                "reviewCount": 128,
+                "inStock": true,
+                "category": "electronics"
+              },
+              "quantity": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "order-place",
+      "status": "passed",
+      "actions": "DOM interactions only",
+      "oracle": "read-only Angular dev state + localStorage + rendered UI",
+      "before": {
+        "cartItems": [],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": []
+        }
+      },
+      "assertions": [
+        "mock order completes",
+        "cart cleared and persisted",
+        "success route reached with untouched shipping/payment draft"
+      ],
+      "after": {
+        "cartItems": [],
+        "wishlistItems": [],
+        "user": {
+          "id": "1",
+          "email": "benchmark@example.test",
+          "name": "John Doe",
+          "imageUrl": "https://randomuser.me/api/portraits/men/1.jpg"
+        },
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": []
+        }
+      }
+    }
+  ],
+  "executedAt": "2026-11-09",
+  "runnerNode": "v24.15.0",
+  "recordedAt": "2026-11-09T20:04:07.694327+00:00"
+}

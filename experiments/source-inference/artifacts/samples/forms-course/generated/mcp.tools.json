@@ -1,0 +1,59 @@
+{
+  "tools": [
+    {
+      "name": "angular_edit_form_0e8ff7ced0",
+      "description": "Execute the original forms-course workflow using the compiler-derived UI plan and isolated sample data.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 60
+          },
+          "category": {
+            "type": "string",
+            "description": "The visible option label in the current application.",
+            "minLength": 1
+          },
+          "releasedAt": {
+            "type": "string",
+            "minLength": 1
+          },
+          "downloadsAllowed": {
+            "type": "boolean",
+            "const": true
+          },
+          "longDescription": {
+            "type": "string",
+            "minLength": 3
+          }
+        },
+        "required": [],
+        "additionalProperties": false,
+        "minProperties": 1
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "openWorldHint": true
+      }
+    }
+  ]
+}

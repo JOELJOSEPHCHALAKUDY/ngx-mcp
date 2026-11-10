@@ -1,0 +1,2157 @@
+{
+  "formatVersion": 1,
+  "compilerVersion": "0.1.0",
+  "sourceDigest": "fce856518298623990f1f675e98c1f970b1e34b198a0b73a1ff3b07436f455fb",
+  "routes": [
+    {
+      "path": "/courses",
+      "component": "Courses",
+      "guards": []
+    },
+    {
+      "path": "/courses/edit/:id",
+      "component": "CourseForm",
+      "guards": []
+    },
+    {
+      "path": "/courses/new",
+      "component": "CourseForm",
+      "guards": []
+    },
+    {
+      "path": "/courses/view/:id",
+      "component": "CourseView",
+      "guards": []
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "/courses/edit/:id#CourseForm.addLesson:app-course-form button[type=\"button\"]",
+      "fingerprint": "fe328540f345dee924f82c3450170d815b7b04fa6a43b0a2de12919dce6fb60d",
+      "route": "/courses/edit/:id",
+      "routeParams": [
+        "id"
+      ],
+      "component": "CourseForm",
+      "componentSelector": "app-course-form",
+      "action": {
+        "owner": "app-course-form",
+        "matchText": "add",
+        "kind": "button",
+        "selector": "app-course-form button[type=\"button\"]",
+        "label": "add",
+        "event": "click",
+        "expression": "addLesson()",
+        "source": {
+          "file": "src/app/courses/containers/course-form/course-form.html",
+          "line": 31
+        }
+      },
+      "fields": [],
+      "handler": "addLesson",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [
+        "Use the compiled form workflow for this Signal Forms action"
+      ],
+      "status": "blocked"
+    },
+    {
+      "id": "/courses/edit/:id#CourseForm.onSubmit:app-course-form button[matbutton=\"filled\"][type=\"submit\"]",
+      "fingerprint": "8c598928b26c99205e82a6a8c7fbcf0b49f3baee53e088e54ef642be115de6e1",
+      "route": "/courses/edit/:id",
+      "routeParams": [
+        "id"
+      ],
+      "component": "CourseForm",
+      "componentSelector": "app-course-form",
+      "action": {
+        "owner": "app-course-form",
+        "matchText": "Save",
+        "kind": "button",
+        "selector": "app-course-form button[matbutton=\"filled\"][type=\"submit\"]",
+        "label": "Save",
+        "event": "click",
+        "expression": "onSubmit()",
+        "source": {
+          "file": "src/app/courses/containers/course-form/course-form.html",
+          "line": 80
+        }
+      },
+      "fields": [],
+      "handler": "onSubmit",
+      "callPath": [
+        "CourseForm.onSubmit",
+        "CoursesService.save"
+      ],
+      "bindings": [
+        {
+          "token": "CoursesService",
+          "service": "CoursesService",
+          "method": "save",
+          "source": {
+            "file": "src/app/courses/services/courses.ts",
+            "line": 24
+          },
+          "arguments": [
+            "this.model()"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "record": {
+                "type": "object",
+                "properties": {
+                  "_id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "category": {
+                    "type": "string"
+                  },
+                  "lessons": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "_id": {
+                          "type": "number"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "youtubeUrl": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "_id",
+                        "name",
+                        "youtubeUrl"
+                      ],
+                      "additionalProperties": false
+                    }
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "record"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "_id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              },
+              "lessons": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "_id": {
+                      "type": "number"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "youtubeUrl": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "_id",
+                    "name",
+                    "youtubeUrl"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "_id",
+              "name",
+              "category"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [
+        "Use the compiled form workflow for this Signal Forms action"
+      ],
+      "status": "blocked"
+    },
+    {
+      "id": "/courses/edit/:id#CourseForm.onSubmit:app-course-form form.min-width",
+      "fingerprint": "4667f575b766046337118f7da3893da22247a28842d7481029cebc1e02699f8a",
+      "route": "/courses/edit/:id",
+      "routeParams": [
+        "id"
+      ],
+      "component": "CourseForm",
+      "componentSelector": "app-course-form",
+      "action": {
+        "owner": "app-course-form",
+        "kind": "form",
+        "selector": "app-course-form form.min-width",
+        "label": "Name / @if (courseForm.name().invalid() && courseForm.name().touched()) { } Category Front-End Back-End @if (courseForm.category().invalid() && courseForm.category().touched()) { } Lessons add @if (courseForm.lessons().errors().length && courseForm.lessons().touched()) { } @for (lessonForm of courseForm.lessons; track $index; let i = $index) { Lesson Name @if (lessonForm.name().invalid() && lessonForm.name().touched()) { } URL https://youtu.be/ @if (lessonForm.youtubeUrl().invalid() && lessonForm.youtubeUrl().touched()) { } delete }",
+        "event": "submit",
+        "expression": "$event.preventDefault(); onSubmit()",
+        "source": {
+          "file": "src/app/courses/containers/course-form/course-form.html",
+          "line": 5
+        }
+      },
+      "fields": [
+        {
+          "name": "name",
+          "selector": "input",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 150
+          },
+          "adapter": "native",
+          "label": "Name"
+        },
+        {
+          "name": "category",
+          "selector": "mat-select",
+          "element": "mat-select",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "Front-end",
+              "Back-end"
+            ]
+          },
+          "adapter": "material-select",
+          "label": "Category",
+          "options": [
+            {
+              "value": "Front-end",
+              "label": "Front-End"
+            },
+            {
+              "value": "Back-end",
+              "label": "Back-End"
+            }
+          ]
+        }
+      ],
+      "plan": {
+        "mode": "submit",
+        "root": "app-course-form",
+        "submit": {
+          "selector": "button[type=\"submit\"]"
+        },
+        "repeats": [
+          {
+            "name": "lessons",
+            "rowSelector": "table.full-width",
+            "fields": [
+              {
+                "name": "name",
+                "selector": "input",
+                "element": "input",
+                "type": "text",
+                "required": true,
+                "supported": true,
+                "schema": {
+                  "type": "string",
+                  "minLength": 5,
+                  "maxLength": 100
+                },
+                "adapter": "native",
+                "label": "Lesson Name"
+              },
+              {
+                "name": "youtubeUrl",
+                "selector": "input",
+                "element": "input",
+                "type": "text",
+                "required": true,
+                "supported": true,
+                "schema": {
+                  "type": "string",
+                  "minLength": 10,
+                  "maxLength": 11
+                },
+                "adapter": "native",
+                "label": "URL"
+              }
+            ],
+            "add": {
+              "selector": "mat-toolbar.lessons-toolbar button",
+              "label": "add"
+            },
+            "remove": {
+              "selector": "button.danger-action"
+            },
+            "maxItems": 100
+          }
+        ]
+      },
+      "handler": "onSubmit",
+      "callPath": [
+        "CourseForm.onSubmit",
+        "CoursesService.save"
+      ],
+      "bindings": [
+        {
+          "token": "CoursesService",
+          "service": "CoursesService",
+          "method": "save",
+          "source": {
+            "file": "src/app/courses/services/courses.ts",
+            "line": 24
+          },
+          "arguments": [
+            "this.model()"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "record": {
+                "type": "object",
+                "properties": {
+                  "_id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "category": {
+                    "type": "string"
+                  },
+                  "lessons": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "_id": {
+                          "type": "number"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "youtubeUrl": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "_id",
+                        "name",
+                        "youtubeUrl"
+                      ],
+                      "additionalProperties": false
+                    }
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "record"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "_id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              },
+              "lessons": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "_id": {
+                      "type": "number"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "youtubeUrl": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "_id",
+                    "name",
+                    "youtubeUrl"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "_id",
+              "name",
+              "category"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 150
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "Front-end",
+              "Back-end"
+            ]
+          },
+          "lessons": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 100,
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "minLength": 5,
+                  "maxLength": 100
+                },
+                "youtubeUrl": {
+                  "type": "string",
+                  "minLength": 10,
+                  "maxLength": 11
+                }
+              },
+              "required": [
+                "name",
+                "youtubeUrl"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "category",
+          "lessons"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/courses/edit/:id#CourseForm.removeLesson:app-course-form button.danger-action",
+      "fingerprint": "60f06e9c2d7745c29b0a60352d83958ffe4f43733750f7ac593938b14d760c7d",
+      "route": "/courses/edit/:id",
+      "routeParams": [
+        "id"
+      ],
+      "component": "CourseForm",
+      "componentSelector": "app-course-form",
+      "action": {
+        "owner": "app-course-form",
+        "matchText": "delete",
+        "kind": "button",
+        "selector": "app-course-form button.danger-action",
+        "label": "delete",
+        "event": "click",
+        "expression": "removeLesson(i)",
+        "source": {
+          "file": "src/app/courses/containers/course-form/course-form.html",
+          "line": 69
+        }
+      },
+      "fields": [],
+      "handler": "removeLesson",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [
+        "Use the compiled form workflow for this Signal Forms action",
+        "Repeated/template-scoped UI requires an explicit row selection binding"
+      ],
+      "status": "blocked"
+    },
+    {
+      "id": "/courses/new#CourseForm.addLesson:app-course-form button[type=\"button\"]",
+      "fingerprint": "a9e26a9dc9f19d8a00b84a2911834ef8fab3270ec5fff22e7b3fc99621d842b7",
+      "route": "/courses/new",
+      "component": "CourseForm",
+      "componentSelector": "app-course-form",
+      "action": {
+        "owner": "app-course-form",
+        "matchText": "add",
+        "kind": "button",
+        "selector": "app-course-form button[type=\"button\"]",
+        "label": "add",
+        "event": "click",
+        "expression": "addLesson()",
+        "source": {
+          "file": "src/app/courses/containers/course-form/course-form.html",
+          "line": 31
+        }
+      },
+      "fields": [],
+      "handler": "addLesson",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [
+        "Use the compiled form workflow for this Signal Forms action"
+      ],
+      "status": "blocked"
+    },
+    {
+      "id": "/courses/new#CourseForm.onSubmit:app-course-form button[matbutton=\"filled\"][type=\"submit\"]",
+      "fingerprint": "d6d1fff19c756acc298bbc72b94644fa564962be419127e993950b5b1d733bda",
+      "route": "/courses/new",
+      "component": "CourseForm",
+      "componentSelector": "app-course-form",
+      "action": {
+        "owner": "app-course-form",
+        "matchText": "Save",
+        "kind": "button",
+        "selector": "app-course-form button[matbutton=\"filled\"][type=\"submit\"]",
+        "label": "Save",
+        "event": "click",
+        "expression": "onSubmit()",
+        "source": {
+          "file": "src/app/courses/containers/course-form/course-form.html",
+          "line": 80
+        }
+      },
+      "fields": [],
+      "handler": "onSubmit",
+      "callPath": [
+        "CourseForm.onSubmit",
+        "CoursesService.save"
+      ],
+      "bindings": [
+        {
+          "token": "CoursesService",
+          "service": "CoursesService",
+          "method": "save",
+          "source": {
+            "file": "src/app/courses/services/courses.ts",
+            "line": 24
+          },
+          "arguments": [
+            "this.model()"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "record": {
+                "type": "object",
+                "properties": {
+                  "_id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "category": {
+                    "type": "string"
+                  },
+                  "lessons": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "_id": {
+                          "type": "number"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "youtubeUrl": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "_id",
+                        "name",
+                        "youtubeUrl"
+                      ],
+                      "additionalProperties": false
+                    }
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "record"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "_id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              },
+              "lessons": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "_id": {
+                      "type": "number"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "youtubeUrl": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "_id",
+                    "name",
+                    "youtubeUrl"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "_id",
+              "name",
+              "category"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [
+        "Use the compiled form workflow for this Signal Forms action"
+      ],
+      "status": "blocked"
+    },
+    {
+      "id": "/courses/new#CourseForm.onSubmit:app-course-form form.min-width",
+      "fingerprint": "3dbc63426624e07d0284bf64b583a3bb41610f711ad4652a4625d3736e209f32",
+      "route": "/courses/new",
+      "component": "CourseForm",
+      "componentSelector": "app-course-form",
+      "action": {
+        "owner": "app-course-form",
+        "kind": "form",
+        "selector": "app-course-form form.min-width",
+        "label": "Name / @if (courseForm.name().invalid() && courseForm.name().touched()) { } Category Front-End Back-End @if (courseForm.category().invalid() && courseForm.category().touched()) { } Lessons add @if (courseForm.lessons().errors().length && courseForm.lessons().touched()) { } @for (lessonForm of courseForm.lessons; track $index; let i = $index) { Lesson Name @if (lessonForm.name().invalid() && lessonForm.name().touched()) { } URL https://youtu.be/ @if (lessonForm.youtubeUrl().invalid() && lessonForm.youtubeUrl().touched()) { } delete }",
+        "event": "submit",
+        "expression": "$event.preventDefault(); onSubmit()",
+        "source": {
+          "file": "src/app/courses/containers/course-form/course-form.html",
+          "line": 5
+        }
+      },
+      "fields": [
+        {
+          "name": "name",
+          "selector": "input",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 150
+          },
+          "adapter": "native",
+          "label": "Name"
+        },
+        {
+          "name": "category",
+          "selector": "mat-select",
+          "element": "mat-select",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "Front-end",
+              "Back-end"
+            ]
+          },
+          "adapter": "material-select",
+          "label": "Category",
+          "options": [
+            {
+              "value": "Front-end",
+              "label": "Front-End"
+            },
+            {
+              "value": "Back-end",
+              "label": "Back-End"
+            }
+          ]
+        }
+      ],
+      "plan": {
+        "mode": "submit",
+        "root": "app-course-form",
+        "submit": {
+          "selector": "button[type=\"submit\"]"
+        },
+        "repeats": [
+          {
+            "name": "lessons",
+            "rowSelector": "table.full-width",
+            "fields": [
+              {
+                "name": "name",
+                "selector": "input",
+                "element": "input",
+                "type": "text",
+                "required": true,
+                "supported": true,
+                "schema": {
+                  "type": "string",
+                  "minLength": 5,
+                  "maxLength": 100
+                },
+                "adapter": "native",
+                "label": "Lesson Name"
+              },
+              {
+                "name": "youtubeUrl",
+                "selector": "input",
+                "element": "input",
+                "type": "text",
+                "required": true,
+                "supported": true,
+                "schema": {
+                  "type": "string",
+                  "minLength": 10,
+                  "maxLength": 11
+                },
+                "adapter": "native",
+                "label": "URL"
+              }
+            ],
+            "add": {
+              "selector": "mat-toolbar.lessons-toolbar button",
+              "label": "add"
+            },
+            "remove": {
+              "selector": "button.danger-action"
+            },
+            "maxItems": 100
+          }
+        ]
+      },
+      "handler": "onSubmit",
+      "callPath": [
+        "CourseForm.onSubmit",
+        "CoursesService.save"
+      ],
+      "bindings": [
+        {
+          "token": "CoursesService",
+          "service": "CoursesService",
+          "method": "save",
+          "source": {
+            "file": "src/app/courses/services/courses.ts",
+            "line": 24
+          },
+          "arguments": [
+            "this.model()"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "record": {
+                "type": "object",
+                "properties": {
+                  "_id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "category": {
+                    "type": "string"
+                  },
+                  "lessons": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "_id": {
+                          "type": "number"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "youtubeUrl": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "_id",
+                        "name",
+                        "youtubeUrl"
+                      ],
+                      "additionalProperties": false
+                    }
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "record"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "_id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              },
+              "lessons": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "_id": {
+                      "type": "number"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "youtubeUrl": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "_id",
+                    "name",
+                    "youtubeUrl"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "_id",
+              "name",
+              "category"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 150
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "Front-end",
+              "Back-end"
+            ]
+          },
+          "lessons": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 100,
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "minLength": 5,
+                  "maxLength": 100
+                },
+                "youtubeUrl": {
+                  "type": "string",
+                  "minLength": 10,
+                  "maxLength": 11
+                }
+              },
+              "required": [
+                "name",
+                "youtubeUrl"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "name",
+          "category",
+          "lessons"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/courses/new#CourseForm.removeLesson:app-course-form button.danger-action",
+      "fingerprint": "a3409f47e399c2df3c9f988deb31aaadefb127f8ecb8cc4b209956dad4a7f4a3",
+      "route": "/courses/new",
+      "component": "CourseForm",
+      "componentSelector": "app-course-form",
+      "action": {
+        "owner": "app-course-form",
+        "matchText": "delete",
+        "kind": "button",
+        "selector": "app-course-form button.danger-action",
+        "label": "delete",
+        "event": "click",
+        "expression": "removeLesson(i)",
+        "source": {
+          "file": "src/app/courses/containers/course-form/course-form.html",
+          "line": 69
+        }
+      },
+      "fields": [],
+      "handler": "removeLesson",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [
+        "Use the compiled form workflow for this Signal Forms action",
+        "Repeated/template-scoped UI requires an explicit row selection binding"
+      ],
+      "status": "blocked"
+    },
+    {
+      "id": "/courses/view/:id#CourseView.display:app-course-view mat-list-item.list-with-border",
+      "fingerprint": "46a9a1b3504f0ba273703b5d84f5b1802ad0279e591842e7d9eb37ac8a752965",
+      "route": "/courses/view/:id",
+      "routeParams": [
+        "id"
+      ],
+      "target": {
+        "param": "lesson",
+        "source": "context",
+        "path": [
+          "_id"
+        ],
+        "valuePath": [
+          "_id"
+        ],
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "_id": {
+              "type": "number"
+            },
+            "name": {
+              "type": "string"
+            },
+            "youtubeUrl": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "_id",
+            "name",
+            "youtubeUrl"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "component": "CourseView",
+      "componentSelector": "app-course-view",
+      "action": {
+        "owner": "app-course-view",
+        "kind": "button",
+        "selector": "app-course-view mat-list-item.list-with-border",
+        "label": "display",
+        "event": "click",
+        "expression": "display(lesson)",
+        "source": {
+          "file": "src/app/courses/components/course-view/course-view.html",
+          "line": 11
+        }
+      },
+      "fields": [],
+      "handler": "display",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          },
+          "lesson": {
+            "type": "object",
+            "properties": {
+              "_id": {
+                "type": "number"
+              },
+              "name": {
+                "type": "string"
+              },
+              "youtubeUrl": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "_id",
+              "name",
+              "youtubeUrl"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "id",
+          "lesson"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/courses#Courses.coursesResource.reload:app-courses button[matbutton=\"filled\"][type=\"button\"]",
+      "fingerprint": "7c3ba310c099d8a70c59896cb8f3ee24e4ea0361a57a41c1f1924e9fe201d733",
+      "route": "/courses",
+      "component": "Courses",
+      "componentSelector": "app-courses",
+      "action": {
+        "owner": "app-courses",
+        "matchText": "Try again",
+        "kind": "button",
+        "selector": "app-courses button[matbutton=\"filled\"][type=\"button\"]",
+        "label": "Try again",
+        "event": "click",
+        "expression": "coursesResource.reload()",
+        "source": {
+          "file": "src/app/courses/containers/courses/courses.html",
+          "line": 29
+        }
+      },
+      "fields": [],
+      "handler": "coursesResource.reload",
+      "callPath": [
+        "Courses.coursesResource.reload",
+        "CoursesService.list"
+      ],
+      "bindings": [
+        {
+          "token": "CoursesService",
+          "service": "CoursesService",
+          "method": "list",
+          "source": {
+            "file": "src/app/courses/services/courses.ts",
+            "line": 13
+          },
+          "arguments": [
+            "this.pageIndex",
+            "this.pageSize"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "page": false,
+              "pageSize": false
+            },
+            "required": [
+              "page",
+              "pageSize"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": false,
+          "schemaIssues": [
+            "Non-JSON type: Signal<number>",
+            "Non-JSON type: Signal<HttpHeaders | undefined>",
+            "Non-JSON type: Signal<number | undefined>",
+            "Non-JSON type: Signal<HttpProgressEvent | undefined>",
+            "Object has callable members: HttpResourceRef<CoursePage | undefined>"
+          ]
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/courses#Courses.onPageChange:app-courses mat-paginator",
+      "fingerprint": "24163a3411155006f603ac86ba91f81f0ef478e6ca5dce4a97d129a0e116af8d",
+      "route": "/courses",
+      "component": "Courses",
+      "componentSelector": "app-courses",
+      "action": {
+        "owner": "app-courses",
+        "kind": "workflow",
+        "selector": "app-courses mat-paginator",
+        "label": "Change page",
+        "event": "page",
+        "expression": "onPageChange()",
+        "source": {
+          "file": "src/app/courses/containers/courses/courses.html",
+          "line": 19
+        }
+      },
+      "fields": [],
+      "drive": {
+        "paginator": {
+          "selector": "app-courses mat-paginator",
+          "page": "page",
+          "pageSize": "pageSize",
+          "sizes": [
+            5,
+            10,
+            15
+          ]
+        }
+      },
+      "handler": "onPageChange",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "pageSize": {
+            "type": "integer",
+            "enum": [
+              5,
+              10,
+              15
+            ]
+          }
+        },
+        "required": [
+          "page",
+          "pageSize"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/courses#Courses.onRemove:app-courses app-courses-list button.danger-action",
+      "fingerprint": "bc1e423c4b57975274e3df8d997766f0dbb24255bff2ea81b7e2f2aa46c27934",
+      "route": "/courses",
+      "target": {
+        "param": "id",
+        "source": "context",
+        "path": [
+          "_id"
+        ]
+      },
+      "component": "Courses",
+      "componentSelector": "app-courses",
+      "action": {
+        "owner": "app-courses-list",
+        "kind": "button",
+        "selector": "app-courses app-courses-list button.danger-action",
+        "label": "Remove Course",
+        "event": "remove",
+        "expression": "onRemove($event)",
+        "source": {
+          "file": "src/app/courses/containers/courses/courses.html",
+          "line": 11
+        }
+      },
+      "fields": [],
+      "handler": "onRemove",
+      "callPath": [
+        "Courses.onRemove",
+        "CoursesService.remove"
+      ],
+      "bindings": [
+        {
+          "token": "CoursesService",
+          "service": "CoursesService",
+          "method": "remove",
+          "source": {
+            "file": "src/app/courses/services/courses.ts",
+            "line": 39
+          },
+          "arguments": [
+            "course._id"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "_id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              },
+              "lessons": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "_id": {
+                      "type": "number"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "youtubeUrl": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "_id",
+                    "name",
+                    "youtubeUrl"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "_id",
+              "name",
+              "category"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/courses#CoursesList.onAdd:app-courses-list button.action-column-header",
+      "fingerprint": "92d5702d2da5a342d79be8d10e72bd4f191d7521669b03891741f77aac9772e1",
+      "route": "/courses",
+      "component": "CoursesList",
+      "componentSelector": "app-courses-list",
+      "action": {
+        "owner": "app-courses-list",
+        "matchText": "add",
+        "kind": "button",
+        "selector": "app-courses-list button.action-column-header",
+        "label": "add",
+        "event": "click",
+        "expression": "onAdd()",
+        "source": {
+          "file": "src/app/courses/components/courses-list/courses-list.html",
+          "line": 29
+        }
+      },
+      "fields": [],
+      "handler": "onAdd",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/courses#CoursesList.onEdit:app-courses-list button[aria-label=\"Update Course\"]",
+      "fingerprint": "486342140a9b74224fca3f08b470e6a321df9e0ae31a6d56e9ebf2e0ba378166",
+      "route": "/courses",
+      "target": {
+        "param": "record",
+        "source": "context",
+        "path": [
+          "_id"
+        ],
+        "valuePath": [
+          "_id"
+        ],
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "_id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "category": {
+              "type": "string"
+            },
+            "lessons": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "_id": {
+                    "type": "number"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "youtubeUrl": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "_id",
+                  "name",
+                  "youtubeUrl"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "_id",
+            "name",
+            "category"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "component": "CoursesList",
+      "componentSelector": "app-courses-list",
+      "action": {
+        "owner": "app-courses-list",
+        "matchText": "edit",
+        "kind": "button",
+        "selector": "app-courses-list button[aria-label=\"Update Course\"]",
+        "label": "edit",
+        "event": "click",
+        "expression": "onEdit(course)",
+        "source": {
+          "file": "src/app/courses/components/courses-list/courses-list.html",
+          "line": 39
+        }
+      },
+      "fields": [],
+      "handler": "onEdit",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "record": {
+            "type": "object",
+            "properties": {
+              "_id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              },
+              "lessons": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "_id": {
+                      "type": "number"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "youtubeUrl": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "_id",
+                    "name",
+                    "youtubeUrl"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "_id",
+              "name",
+              "category"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "record"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/courses#CoursesList.onRemove:app-courses-list button.danger-action",
+      "fingerprint": "9e19307fd42660f0992c95514fd5cb9499cd84c16af474fde16dc2f32310f828",
+      "route": "/courses",
+      "target": {
+        "param": "record",
+        "source": "context",
+        "path": [
+          "_id"
+        ],
+        "valuePath": [
+          "_id"
+        ],
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "_id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "category": {
+              "type": "string"
+            },
+            "lessons": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "_id": {
+                    "type": "number"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "youtubeUrl": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "_id",
+                  "name",
+                  "youtubeUrl"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "_id",
+            "name",
+            "category"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "component": "CoursesList",
+      "componentSelector": "app-courses-list",
+      "action": {
+        "owner": "app-courses-list",
+        "matchText": "delete",
+        "kind": "button",
+        "selector": "app-courses-list button.danger-action",
+        "label": "delete",
+        "event": "click",
+        "expression": "onRemove(course)",
+        "source": {
+          "file": "src/app/courses/components/courses-list/courses-list.html",
+          "line": 47
+        }
+      },
+      "fields": [],
+      "handler": "onRemove",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "record": {
+            "type": "object",
+            "properties": {
+              "_id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              },
+              "lessons": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "_id": {
+                      "type": "number"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "youtubeUrl": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "_id",
+                    "name",
+                    "youtubeUrl"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "_id",
+              "name",
+              "category"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "record"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/courses#CoursesList.onView:app-courses-list button.link-button",
+      "fingerprint": "55b53ee8cf8a620a0b837822f5440abc5f6c2e61424584ab5ee5c1427f25ff37",
+      "route": "/courses",
+      "target": {
+        "param": "record",
+        "source": "context",
+        "path": [
+          "_id"
+        ],
+        "valuePath": [
+          "_id"
+        ],
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "_id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "category": {
+              "type": "string"
+            },
+            "lessons": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "_id": {
+                    "type": "number"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "youtubeUrl": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "_id",
+                  "name",
+                  "youtubeUrl"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "_id",
+            "name",
+            "category"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "component": "CoursesList",
+      "componentSelector": "app-courses-list",
+      "action": {
+        "owner": "app-courses-list",
+        "kind": "button",
+        "selector": "app-courses-list button.link-button",
+        "label": "onView",
+        "event": "click",
+        "expression": "onView(course)",
+        "source": {
+          "file": "src/app/courses/components/courses-list/courses-list.html",
+          "line": 6
+        }
+      },
+      "fields": [],
+      "handler": "onView",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "record": {
+            "type": "object",
+            "properties": {
+              "_id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              },
+              "lessons": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "_id": {
+                      "type": "number"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "youtubeUrl": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "_id",
+                    "name",
+                    "youtubeUrl"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "_id",
+              "name",
+              "category"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "record"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    }
+  ],
+  "diagnostics": []
+}

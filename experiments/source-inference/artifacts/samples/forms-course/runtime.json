@@ -1,0 +1,28 @@
+{
+  "id": "forms-course",
+  "repository": "https://github.com/angular-university/angular-forms-course",
+  "revision": "ed20366d7be3ffffd852f28536e3ed58e86fb46d",
+  "complexity": "3 — Composite forms",
+  "outcome": "executed",
+  "capability": {
+    "id": "/add-new-course#CreateCourseStep1Component.edit_form:create-course-step-1",
+    "fingerprint": "a7fa9d0ec0b5f04f107b96122df059a84efad3670eba9dfaa71ec9ca410764df"
+  },
+  "routes": 5,
+  "candidates": 6,
+  "reviewedTools": 1,
+  "finalPath": "/add-new-course",
+  "evidence": {
+    "draft": {
+      "title": "Agentic Angular Course",
+      "releasedAt": "2026-11-10T11:31:40.465Z",
+      "category": "ADVANCED",
+      "downloadsAllowed": true,
+      "longDescription": "A course draft saved through the original Angular wizard."
+    },
+    "restoredTitle": "Agentic Angular Course"
+  },
+  "pageErrors": [],
+  "offOriginRequestsBlocked": 4,
+  "applicationSourceModified": false
+}

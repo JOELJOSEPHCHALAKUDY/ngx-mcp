@@ -1,0 +1,61 @@
+{
+  "formatVersion": 1,
+  "verifiedAt": "2026-11-10T12:00:15.492Z",
+  "compilerDigest": "6405f73911b4aab10abe5b8e6e11668d764a7658d43ef1548097b8799cdab13f",
+  "typecheck": "passed",
+  "fullRepositoryVerification": {
+    "status": "passed",
+    "coreTests": 132,
+    "probeTests": 24,
+    "browserTestsPassed": 50,
+    "browserTestsSkipped": 7,
+    "skippedScope": "Optional frozen Jira/Quill/projected-row browser cases; separate fresh-project benchmark remains passing."
+  },
+  "finalIntegrationTests": {
+    "passed": 48,
+    "total": 48,
+    "includesStrictCompilerVariants": true
+  },
+  "finalEvaluatorRegressionTests": {
+    "passed": 23,
+    "total": 23
+  },
+  "metricsTests": {
+    "passed": 10,
+    "total": 10
+  },
+  "gates": {
+    "originalFive": "passed",
+    "previousFreshThree": "passed",
+    "integrationIntegrity": "passed",
+    "integrationStrictNativeParity": "passed",
+    "fourthProjectIntegrityParity": "passed"
+  },
+  "newPublicProjects": {
+    "positiveScenarios": 35,
+    "uiTransportPassed": 34,
+    "rawFrozenPassed": 25,
+    "rejectionCancelProtocolPassed": 21,
+    "rejectionCancelProtocolTotal": 21,
+    "nativePassingPositives": 34,
+    "nativeRejectionCancelPassed": 19,
+    "nativeProtocolExclusions": 2,
+    "sourceBlocked": [
+      "shopping/profile-avatar"
+    ],
+    "nativeParity": true,
+    "evidence": "evaluation/integration-unseen/runs/final-v8-2026-11-10/summary.json"
+  },
+  "fourthProject": {
+    "frozenPassed": 9,
+    "frozenTotal": 12,
+    "nativeSnapshotParity": 12,
+    "nativeSnapshotTotal": 12,
+    "upstreamFailures": 3,
+    "additionalIntegrationFailures": 0,
+    "externalConfirmationSteps": 4,
+    "evidence": "evaluation/integration-holdout/notes-manager/current-integrity.json"
+  },
+  "sourcePolicy": "Original pinned application sources and frozen labels unchanged; shared integration contains no per-project branches.",
+  "publicationPerformed": false
+}

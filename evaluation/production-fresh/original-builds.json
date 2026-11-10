@@ -1,0 +1,33 @@
+{
+  "kind": "unchanged-production-build-baselines",
+  "recordedAt": "2026-11-10T16:16:14.647995+00:00",
+  "projects": [
+    {
+      "id": "todo",
+      "installPassed": true,
+      "productionBuildPassed": true,
+      "logs": [
+        "baseline-logs/todo-install.log",
+        "baseline-logs/todo-original-build.log"
+      ]
+    },
+    {
+      "id": "sprint",
+      "installPassed": true,
+      "productionBuildPassed": true,
+      "logs": [
+        "baseline-logs/sprint-install.log",
+        "baseline-logs/sprint-original-build.log"
+      ]
+    },
+    {
+      "id": "expense",
+      "installPassed": true,
+      "productionBuildPassed": true,
+      "logs": [
+        "baseline-logs/expense-install.log",
+        "baseline-logs/expense-original-build.log"
+      ]
+    }
+  ]
+}

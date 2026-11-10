@@ -1,0 +1,29 @@
+{
+  "result": {
+    "status": "ui-dispatched",
+    "url": "http://127.0.0.1:4321/courses"
+  },
+  "writes": [
+    {
+      "method": "POST",
+      "path": "/api/courses",
+      "body": {
+        "_id": "",
+        "name": "Compiler Workflow Course",
+        "category": "Front-end",
+        "lessons": [
+          {
+            "_id": 0,
+            "name": "Introduction to Angular",
+            "youtubeUrl": "dQw4w9WgXcQ"
+          },
+          {
+            "_id": 0,
+            "name": "Understanding Signals",
+            "youtubeUrl": "aqz-KE-bpKQ"
+          }
+        ]
+      }
+    }
+  ]
+}

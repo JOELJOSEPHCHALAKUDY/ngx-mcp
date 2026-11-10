@@ -1,0 +1,249 @@
+{
+  "measuredAt": "2026-11-09T18:56:34.358Z",
+  "scoringVersion": 2,
+  "project": "https://github.com/Ankur071/Modern-Store",
+  "revision": "5bface390202c117a30bb7de06839735d3b9f013",
+  "labelsDigest": "aecacb8704ca8a0dc3a85f3d184e8eb63ea452d08b816638e41eadb2f4bb5de9",
+  "compilerDigest": "9d07b4d89766d9362ef928f4793610b2d8a873ca3a9151818493aae5900c610d",
+  "normalization": "Only remove explanatory route annotations and interpret frozen route wildcards; parameter names and object shapes are unchanged.",
+  "scope": "Independent source labels frozen before compiler scoring; this is discovery/schema only, not execution success.",
+  "totals": {
+    "gold": 13,
+    "discovered": 0,
+    "runnable": 0,
+    "correctSchemas": 0,
+    "labelErrors": 0,
+    "unmatchedRunnable": 0
+  },
+  "actions": [
+    {
+      "id": "cart-add-card",
+      "classification": "missing",
+      "predictions": [],
+      "schema": null
+    },
+    {
+      "id": "cart-add-detail",
+      "classification": "missing",
+      "predictions": [],
+      "schema": null
+    },
+    {
+      "id": "wishlist-toggle",
+      "classification": "missing",
+      "predictions": [],
+      "schema": null
+    },
+    {
+      "id": "wishlist-remove",
+      "classification": "missing",
+      "predictions": [],
+      "schema": null
+    },
+    {
+      "id": "wishlist-clear",
+      "classification": "missing",
+      "predictions": [],
+      "schema": null
+    },
+    {
+      "id": "cart-set-quantity",
+      "classification": "missing",
+      "predictions": [],
+      "schema": null
+    },
+    {
+      "id": "cart-move-to-wishlist",
+      "classification": "missing",
+      "predictions": [],
+      "schema": null
+    },
+    {
+      "id": "cart-remove",
+      "classification": "missing",
+      "predictions": [],
+      "schema": null
+    },
+    {
+      "id": "wishlist-add-all-to-cart",
+      "classification": "missing",
+      "predictions": [],
+      "schema": null
+    },
+    {
+      "id": "session-sign-in",
+      "classification": "missing",
+      "predictions": [],
+      "schema": null
+    },
+    {
+      "id": "session-sign-up",
+      "classification": "missing",
+      "predictions": [],
+      "schema": null
+    },
+    {
+      "id": "session-sign-out",
+      "classification": "missing",
+      "predictions": [],
+      "schema": null
+    },
+    {
+      "id": "order-place",
+      "classification": "missing",
+      "predictions": [],
+      "schema": null
+    }
+  ],
+  "unknown": [],
+  "manifest": {
+    "formatVersion": 1,
+    "compilerVersion": "0.1.0",
+    "sourceDigest": "f262724f41d901e2662b7bf7e90a92faebe249945454d075830038a823264e7d",
+    "routes": [
+      {
+        "path": "/cart",
+        "component": "ViewCart",
+        "guards": []
+      },
+      {
+        "path": "/checkout",
+        "component": "Checkout",
+        "guards": []
+      },
+      {
+        "path": "/order-success",
+        "component": "OrderSuccess",
+        "guards": []
+      },
+      {
+        "path": "/product/:productId",
+        "component": "ViewProductDetail",
+        "guards": []
+      },
+      {
+        "path": "/products/:category",
+        "component": "ProductsGrid",
+        "guards": []
+      },
+      {
+        "path": "/wishlist",
+        "component": "MyWishlist",
+        "guards": []
+      }
+    ],
+    "capabilities": [
+      {
+        "id": "/#HeaderActions.openSignInDialog:app-header-actions button",
+        "fingerprint": "f175fe29940f25e30ae81411e414490debe1249c3194a3a3eeb8673da0e7d80e",
+        "route": "/",
+        "component": "HeaderActions",
+        "componentSelector": "app-header-actions",
+        "action": {
+          "owner": "app-header-actions",
+          "kind": "button",
+          "selector": "app-header-actions button",
+          "label": "Sign In",
+          "event": "click",
+          "expression": "openSignInDialog()",
+          "source": {
+            "file": "src/app/layout/header-actions/header-actions.ts",
+            "line": 62
+          }
+        },
+        "fields": [],
+        "handler": "openSignInDialog",
+        "callPath": [],
+        "bindings": [],
+        "effectKind": "ui-state",
+        "inputSchema": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "ui-dispatched"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "url"
+          ],
+          "additionalProperties": false
+        },
+        "guards": [],
+        "workflow": {
+          "confirmation": "not-observed",
+          "evidence": []
+        },
+        "issues": [
+          "The template has multiple controls matching this selector"
+        ],
+        "status": "blocked",
+        "global": true
+      },
+      {
+        "id": "/#HeaderActions.openSignUpDialog:app-header-actions button[matbutton=\"filled\"]",
+        "fingerprint": "15a3efbaa7d21526885317ce3cd8e4ac3e1975b5129212a04a2ee4bd377983a6",
+        "route": "/",
+        "component": "HeaderActions",
+        "componentSelector": "app-header-actions",
+        "action": {
+          "owner": "app-header-actions",
+          "kind": "button",
+          "selector": "app-header-actions button[matbutton=\"filled\"]",
+          "label": "Sign Up",
+          "event": "click",
+          "expression": "openSignUpDialog()",
+          "source": {
+            "file": "src/app/layout/header-actions/header-actions.ts",
+            "line": 63
+          }
+        },
+        "fields": [],
+        "handler": "openSignUpDialog",
+        "callPath": [],
+        "bindings": [],
+        "effectKind": "ui-state",
+        "inputSchema": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "ui-dispatched"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "url"
+          ],
+          "additionalProperties": false
+        },
+        "guards": [],
+        "workflow": {
+          "confirmation": "not-observed",
+          "evidence": []
+        },
+        "issues": [],
+        "status": "candidate",
+        "global": true
+      }
+    ],
+    "diagnostics": []
+  }
+}

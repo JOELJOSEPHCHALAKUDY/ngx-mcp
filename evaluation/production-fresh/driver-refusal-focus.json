@@ -1,0 +1,1154 @@
+{
+  "kind": "focused-redacted-ui-refusal-driver",
+  "sourceBefore": {
+    "source": "/tmp/ngx-mcp-fresh-access-sprint",
+    "commit": "22f4ce92e1ae18f885e5153c945255443419d656",
+    "sourceFiles": 27,
+    "labelsSha256": "b71cc36370902ddfe9d3ed3374fbb613dce7a8423dc0a10c2f35b7587be49c95",
+    "lockSha256": "fa8bc8dc42dc87c9be90bf917c00e398b0372ed9dfde44c449ffd41144d9845c"
+  },
+  "cases": [
+    {
+      "id": "original_disabled",
+      "status": "passed",
+      "calls": [
+        {
+          "transport": "authenticated-streamable-http",
+          "publicUrl": "http://127.0.0.1:55982/mcp",
+          "issuer": "https://identity.example",
+          "subject": "synthetic-owner-a",
+          "algorithm": "ES256",
+          "trustedLocalKeyId": "fresh-fixture-es256",
+          "networkScope": "Explicit loopback HTTP fixture; real TLS proxy and external IdP deployment are not exercised.",
+          "audit": [
+            {
+              "at": "2026-11-10T17:02:47.398Z",
+              "event": "session-opening",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369"
+            },
+            {
+              "at": "2026-11-10T17:02:47.417Z",
+              "event": "session-created",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "fe570adbcfd79c76def7748e6315de2b8fe73dabe3476b30f75dad9f1e0d19be"
+            },
+            {
+              "at": "2026-11-10T17:02:47.435Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "fe570adbcfd79c76def7748e6315de2b8fe73dabe3476b30f75dad9f1e0d19be"
+            },
+            {
+              "at": "2026-11-10T17:02:47.458Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "fe570adbcfd79c76def7748e6315de2b8fe73dabe3476b30f75dad9f1e0d19be"
+            },
+            {
+              "at": "2026-11-10T17:02:47.479Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "fe570adbcfd79c76def7748e6315de2b8fe73dabe3476b30f75dad9f1e0d19be"
+            },
+            {
+              "at": "2026-11-10T17:02:47.491Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "fe570adbcfd79c76def7748e6315de2b8fe73dabe3476b30f75dad9f1e0d19be"
+            },
+            {
+              "at": "2026-11-10T17:02:47.819Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "fe570adbcfd79c76def7748e6315de2b8fe73dabe3476b30f75dad9f1e0d19be"
+            },
+            {
+              "at": "2026-11-10T17:02:48.132Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "fe570adbcfd79c76def7748e6315de2b8fe73dabe3476b30f75dad9f1e0d19be"
+            },
+            {
+              "at": "2026-11-10T17:02:48.452Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "fe570adbcfd79c76def7748e6315de2b8fe73dabe3476b30f75dad9f1e0d19be"
+            },
+            {
+              "at": "2026-11-10T17:02:48.507Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "fe570adbcfd79c76def7748e6315de2b8fe73dabe3476b30f75dad9f1e0d19be"
+            },
+            {
+              "at": "2026-11-10T17:02:48.583Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "fe570adbcfd79c76def7748e6315de2b8fe73dabe3476b30f75dad9f1e0d19be"
+            },
+            {
+              "at": "2026-11-10T17:02:49.217Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "fe570adbcfd79c76def7748e6315de2b8fe73dabe3476b30f75dad9f1e0d19be"
+            },
+            {
+              "at": "2026-11-10T17:02:49.218Z",
+              "event": "session-closed",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "fe570adbcfd79c76def7748e6315de2b8fe73dabe3476b30f75dad9f1e0d19be",
+              "reason": "transport_closed"
+            }
+          ]
+        },
+        {
+          "transport": "mcp",
+          "name": "angular_activate",
+          "args": {
+            "target": {
+              "instanceId": "ngmcp_07a613ae3b7cbdea7ee076ad@xan4d7-1jiguob-4lnxxb-1c00ah:18",
+              "sourceId": "ngmcp_07a613ae3b7cbdea7ee076ad"
+            }
+          },
+          "result": {
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"status\":\"ui-dispatched\",\"operation\":\"activate\",\"target\":{\"sourceId\":\"ngmcp_07a613ae3b7cbdea7ee076ad\",\"instanceId\":\"ngmcp_07a613ae3b7cbdea7ee076ad@xan4d7-1jiguob-4lnxxb-1c00ah:18\"},\"changed\":[],\"values\":[],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"businessStatus\":\"unknown\"}"
+              }
+            ],
+            "structuredContent": {
+              "status": "ui-dispatched",
+              "operation": "activate",
+              "target": {
+                "sourceId": "ngmcp_07a613ae3b7cbdea7ee076ad",
+                "instanceId": "ngmcp_07a613ae3b7cbdea7ee076ad@xan4d7-1jiguob-4lnxxb-1c00ah:18"
+              },
+              "changed": [],
+              "values": [],
+              "validation": {
+                "status": "unknown",
+                "fields": [],
+                "groups": []
+              },
+              "businessStatus": "unknown"
+            }
+          }
+        },
+        {
+          "transport": "mcp",
+          "name": "angular_fill",
+          "args": {
+            "target": {
+              "instanceId": "ngmcp_82fef9d9fab7a2124329753a@xan4d7-1jiguob-4lnxxb-1c00ah:30",
+              "sourceId": "ngmcp_82fef9d9fab7a2124329753a"
+            },
+            "value": ""
+          },
+          "result": {
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"status\":\"ui-dispatched\",\"operation\":\"fill\",\"target\":{\"sourceId\":\"ngmcp_82fef9d9fab7a2124329753a\",\"instanceId\":\"ngmcp_82fef9d9fab7a2124329753a@xan4d7-1jiguob-4lnxxb-1c00ah:30\"},\"changed\":[\"ngmcp_82fef9d9fab7a2124329753a@xan4d7-1jiguob-4lnxxb-1c00ah:30\"],\"values\":[{\"sourceId\":\"ngmcp_82fef9d9fab7a2124329753a\",\"instanceId\":\"ngmcp_82fef9d9fab7a2124329753a@xan4d7-1jiguob-4lnxxb-1c00ah:30\"}],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_82fef9d9fab7a2124329753a\",\"instanceId\":\"ngmcp_82fef9d9fab7a2124329753a@xan4d7-1jiguob-4lnxxb-1c00ah:30\",\"status\":\"INVALID\",\"updateOn\":\"change\",\"errors\":[{\"code\":\"required\"}],\"nativeErrors\":[\"valueMissing\"]}],\"groups\":[{\"status\":\"INVALID\",\"errors\":[]}]},\"businessStatus\":\"unknown\"}"
+              }
+            ],
+            "structuredContent": {
+              "status": "ui-dispatched",
+              "operation": "fill",
+              "target": {
+                "sourceId": "ngmcp_82fef9d9fab7a2124329753a",
+                "instanceId": "ngmcp_82fef9d9fab7a2124329753a@xan4d7-1jiguob-4lnxxb-1c00ah:30"
+              },
+              "changed": [
+                "ngmcp_82fef9d9fab7a2124329753a@xan4d7-1jiguob-4lnxxb-1c00ah:30"
+              ],
+              "values": [
+                {
+                  "sourceId": "ngmcp_82fef9d9fab7a2124329753a",
+                  "instanceId": "ngmcp_82fef9d9fab7a2124329753a@xan4d7-1jiguob-4lnxxb-1c00ah:30"
+                }
+              ],
+              "validation": {
+                "status": "invalid",
+                "fields": [
+                  {
+                    "sourceId": "ngmcp_82fef9d9fab7a2124329753a",
+                    "instanceId": "ngmcp_82fef9d9fab7a2124329753a@xan4d7-1jiguob-4lnxxb-1c00ah:30",
+                    "status": "INVALID",
+                    "updateOn": "change",
+                    "errors": [
+                      {
+                        "code": "required"
+                      }
+                    ],
+                    "nativeErrors": [
+                      "valueMissing"
+                    ]
+                  }
+                ],
+                "groups": [
+                  {
+                    "status": "INVALID",
+                    "errors": []
+                  }
+                ]
+              },
+              "businessStatus": "unknown"
+            }
+          }
+        },
+        {
+          "transport": "mcp",
+          "name": "angular_fill",
+          "args": {
+            "target": {
+              "instanceId": "ngmcp_947f06861dc7434d5f730549@xan4d7-1jiguob-4lnxxb-1c00ah:33",
+              "sourceId": "ngmcp_947f06861dc7434d5f730549"
+            },
+            "value": "Must not save"
+          },
+          "result": {
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"status\":\"ui-dispatched\",\"operation\":\"fill\",\"target\":{\"sourceId\":\"ngmcp_947f06861dc7434d5f730549\",\"instanceId\":\"ngmcp_947f06861dc7434d5f730549@xan4d7-1jiguob-4lnxxb-1c00ah:33\"},\"changed\":[\"ngmcp_947f06861dc7434d5f730549@xan4d7-1jiguob-4lnxxb-1c00ah:33\"],\"values\":[{\"sourceId\":\"ngmcp_947f06861dc7434d5f730549\",\"instanceId\":\"ngmcp_947f06861dc7434d5f730549@xan4d7-1jiguob-4lnxxb-1c00ah:33\"}],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_947f06861dc7434d5f730549\",\"instanceId\":\"ngmcp_947f06861dc7434d5f730549@xan4d7-1jiguob-4lnxxb-1c00ah:33\",\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[{\"status\":\"INVALID\",\"errors\":[]}]},\"businessStatus\":\"unknown\"}"
+              }
+            ],
+            "structuredContent": {
+              "status": "ui-dispatched",
+              "operation": "fill",
+              "target": {
+                "sourceId": "ngmcp_947f06861dc7434d5f730549",
+                "instanceId": "ngmcp_947f06861dc7434d5f730549@xan4d7-1jiguob-4lnxxb-1c00ah:33"
+              },
+              "changed": [
+                "ngmcp_947f06861dc7434d5f730549@xan4d7-1jiguob-4lnxxb-1c00ah:33"
+              ],
+              "values": [
+                {
+                  "sourceId": "ngmcp_947f06861dc7434d5f730549",
+                  "instanceId": "ngmcp_947f06861dc7434d5f730549@xan4d7-1jiguob-4lnxxb-1c00ah:33"
+                }
+              ],
+              "validation": {
+                "status": "invalid",
+                "fields": [
+                  {
+                    "sourceId": "ngmcp_947f06861dc7434d5f730549",
+                    "instanceId": "ngmcp_947f06861dc7434d5f730549@xan4d7-1jiguob-4lnxxb-1c00ah:33",
+                    "status": "VALID",
+                    "updateOn": "change",
+                    "errors": []
+                  }
+                ],
+                "groups": [
+                  {
+                    "status": "INVALID",
+                    "errors": []
+                  }
+                ]
+              },
+              "businessStatus": "unknown"
+            }
+          }
+        },
+        {
+          "transport": "mcp",
+          "name": "angular_describe_node",
+          "args": {
+            "target": {
+              "instanceId": "ngmcp_eac740a9a710c232ff2584d0@xan4d7-1jiguob-4lnxxb-1c00ah:36",
+              "sourceId": "ngmcp_eac740a9a710c232ff2584d0"
+            }
+          },
+          "result": {
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"clickOrigin\":\"authored\",\"disabled\":true,\"events\":[\"click\"],\"instanceId\":\"ngmcp_eac740a9a710c232ff2584d0@xan4d7-1jiguob-4lnxxb-1c00ah:36\",\"keyboardFocusable\":true,\"kind\":\"action\",\"label\":\"button — src/app/components/dialogs/create-project-dialog/create-project-dialog.component.ts:37\",\"operations\":[\"activate\"],\"provenance\":\"compiler\",\"readonly\":false,\"sourceId\":\"ngmcp_eac740a9a710c232ff2584d0\",\"tabIndex\":0,\"tagName\":\"button\",\"validation\":{\"fields\":[],\"groups\":[],\"status\":\"unknown\"},\"visible\":true}"
+              }
+            ],
+            "structuredContent": {
+              "clickOrigin": "authored",
+              "disabled": true,
+              "events": [
+                "click"
+              ],
+              "instanceId": "ngmcp_eac740a9a710c232ff2584d0@xan4d7-1jiguob-4lnxxb-1c00ah:36",
+              "keyboardFocusable": true,
+              "kind": "action",
+              "label": "button — src/app/components/dialogs/create-project-dialog/create-project-dialog.component.ts:37",
+              "operations": [
+                "activate"
+              ],
+              "provenance": "compiler",
+              "readonly": false,
+              "sourceId": "ngmcp_eac740a9a710c232ff2584d0",
+              "tabIndex": 0,
+              "tagName": "button",
+              "validation": {
+                "fields": [],
+                "groups": [],
+                "status": "unknown"
+              },
+              "visible": true
+            }
+          }
+        },
+        {
+          "transport": "mcp",
+          "name": "angular_activate",
+          "args": {
+            "target": {
+              "instanceId": "ngmcp_eac740a9a710c232ff2584d0@xan4d7-1jiguob-4lnxxb-1c00ah:36",
+              "sourceId": "ngmcp_eac740a9a710c232ff2584d0"
+            }
+          },
+          "result": {
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"status\":\"not-dispatched\",\"operation\":\"activate\",\"target\":{\"sourceId\":\"ngmcp_eac740a9a710c232ff2584d0\",\"instanceId\":\"ngmcp_eac740a9a710c232ff2584d0@xan4d7-1jiguob-4lnxxb-1c00ah:36\"},\"changed\":[],\"values\":[],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"businessStatus\":\"unknown\"}"
+              }
+            ],
+            "structuredContent": {
+              "status": "not-dispatched",
+              "operation": "activate",
+              "target": {
+                "sourceId": "ngmcp_eac740a9a710c232ff2584d0",
+                "instanceId": "ngmcp_eac740a9a710c232ff2584d0@xan4d7-1jiguob-4lnxxb-1c00ah:36"
+              },
+              "changed": [],
+              "values": [],
+              "validation": {
+                "status": "unknown",
+                "fields": [],
+                "groups": []
+              },
+              "businessStatus": "unknown"
+            },
+            "isError": true
+          }
+        },
+        {
+          "transport": "mcp",
+          "name": "angular_describe_node",
+          "args": {
+            "target": {
+              "instanceId": "ngmcp_eac740a9a710c232ff2584d0@xan4d7-1jiguob-4lnxxb-1c00ah:36",
+              "sourceId": "ngmcp_eac740a9a710c232ff2584d0"
+            }
+          },
+          "result": {
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"clickOrigin\":\"authored\",\"disabled\":true,\"events\":[\"click\"],\"instanceId\":\"ngmcp_eac740a9a710c232ff2584d0@xan4d7-1jiguob-4lnxxb-1c00ah:36\",\"keyboardFocusable\":true,\"kind\":\"action\",\"label\":\"button — src/app/components/dialogs/create-project-dialog/create-project-dialog.component.ts:37\",\"operations\":[\"activate\"],\"provenance\":\"compiler\",\"readonly\":false,\"sourceId\":\"ngmcp_eac740a9a710c232ff2584d0\",\"tabIndex\":0,\"tagName\":\"button\",\"validation\":{\"fields\":[],\"groups\":[],\"status\":\"unknown\"},\"visible\":true}"
+              }
+            ],
+            "structuredContent": {
+              "clickOrigin": "authored",
+              "disabled": true,
+              "events": [
+                "click"
+              ],
+              "instanceId": "ngmcp_eac740a9a710c232ff2584d0@xan4d7-1jiguob-4lnxxb-1c00ah:36",
+              "keyboardFocusable": true,
+              "kind": "action",
+              "label": "button — src/app/components/dialogs/create-project-dialog/create-project-dialog.component.ts:37",
+              "operations": [
+                "activate"
+              ],
+              "provenance": "compiler",
+              "readonly": false,
+              "sourceId": "ngmcp_eac740a9a710c232ff2584d0",
+              "tabIndex": 0,
+              "tagName": "button",
+              "validation": {
+                "fields": [],
+                "groups": [],
+                "status": "unknown"
+              },
+              "visible": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "denied_approval_not_native",
+      "status": "passed",
+      "calls": [
+        {
+          "transport": "authenticated-streamable-http",
+          "publicUrl": "http://127.0.0.1:55990/mcp",
+          "issuer": "https://identity.example",
+          "subject": "synthetic-owner-a",
+          "algorithm": "ES256",
+          "trustedLocalKeyId": "fresh-fixture-es256",
+          "networkScope": "Explicit loopback HTTP fixture; real TLS proxy and external IdP deployment are not exercised.",
+          "audit": [
+            {
+              "at": "2026-11-10T17:02:49.831Z",
+              "event": "session-opening",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369"
+            },
+            {
+              "at": "2026-11-10T17:02:49.845Z",
+              "event": "session-created",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "b6f10d6263ee0b115ea0f8acbe07703300a7bc3bb4d54a71237a3d19613a451e"
+            },
+            {
+              "at": "2026-11-10T17:02:49.861Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "b6f10d6263ee0b115ea0f8acbe07703300a7bc3bb4d54a71237a3d19613a451e"
+            },
+            {
+              "at": "2026-11-10T17:02:49.878Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "b6f10d6263ee0b115ea0f8acbe07703300a7bc3bb4d54a71237a3d19613a451e"
+            },
+            {
+              "at": "2026-11-10T17:02:49.898Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "b6f10d6263ee0b115ea0f8acbe07703300a7bc3bb4d54a71237a3d19613a451e"
+            },
+            {
+              "at": "2026-11-10T17:02:49.904Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "b6f10d6263ee0b115ea0f8acbe07703300a7bc3bb4d54a71237a3d19613a451e"
+            },
+            {
+              "at": "2026-11-10T17:02:50.234Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "b6f10d6263ee0b115ea0f8acbe07703300a7bc3bb4d54a71237a3d19613a451e"
+            },
+            {
+              "at": "2026-11-10T17:02:50.544Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "b6f10d6263ee0b115ea0f8acbe07703300a7bc3bb4d54a71237a3d19613a451e"
+            },
+            {
+              "at": "2026-11-10T17:02:50.864Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "b6f10d6263ee0b115ea0f8acbe07703300a7bc3bb4d54a71237a3d19613a451e"
+            },
+            {
+              "at": "2026-11-10T17:02:50.912Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "b6f10d6263ee0b115ea0f8acbe07703300a7bc3bb4d54a71237a3d19613a451e"
+            },
+            {
+              "at": "2026-11-10T17:02:50.960Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "b6f10d6263ee0b115ea0f8acbe07703300a7bc3bb4d54a71237a3d19613a451e"
+            },
+            {
+              "at": "2026-11-10T17:02:50.961Z",
+              "event": "session-closed",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "b6f10d6263ee0b115ea0f8acbe07703300a7bc3bb4d54a71237a3d19613a451e",
+              "reason": "transport_closed"
+            }
+          ]
+        },
+        {
+          "transport": "mcp",
+          "name": "angular_activate",
+          "args": {
+            "target": {
+              "instanceId": "ngmcp_07a613ae3b7cbdea7ee076ad@iyzvnu-1c9m947-n3iml4-45wt0d:18",
+              "sourceId": "ngmcp_07a613ae3b7cbdea7ee076ad"
+            }
+          },
+          "result": {
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"status\":\"ui-dispatched\",\"operation\":\"activate\",\"target\":{\"sourceId\":\"ngmcp_07a613ae3b7cbdea7ee076ad\",\"instanceId\":\"ngmcp_07a613ae3b7cbdea7ee076ad@iyzvnu-1c9m947-n3iml4-45wt0d:18\"},\"changed\":[],\"values\":[],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"businessStatus\":\"unknown\"}"
+              }
+            ],
+            "structuredContent": {
+              "status": "ui-dispatched",
+              "operation": "activate",
+              "target": {
+                "sourceId": "ngmcp_07a613ae3b7cbdea7ee076ad",
+                "instanceId": "ngmcp_07a613ae3b7cbdea7ee076ad@iyzvnu-1c9m947-n3iml4-45wt0d:18"
+              },
+              "changed": [],
+              "values": [],
+              "validation": {
+                "status": "unknown",
+                "fields": [],
+                "groups": []
+              },
+              "businessStatus": "unknown"
+            }
+          }
+        },
+        {
+          "transport": "mcp",
+          "name": "angular_fill",
+          "args": {
+            "target": {
+              "instanceId": "ngmcp_82fef9d9fab7a2124329753a@iyzvnu-1c9m947-n3iml4-45wt0d:30",
+              "sourceId": "ngmcp_82fef9d9fab7a2124329753a"
+            },
+            "value": ""
+          },
+          "result": {
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"status\":\"ui-dispatched\",\"operation\":\"fill\",\"target\":{\"sourceId\":\"ngmcp_82fef9d9fab7a2124329753a\",\"instanceId\":\"ngmcp_82fef9d9fab7a2124329753a@iyzvnu-1c9m947-n3iml4-45wt0d:30\"},\"changed\":[\"ngmcp_82fef9d9fab7a2124329753a@iyzvnu-1c9m947-n3iml4-45wt0d:30\"],\"values\":[{\"sourceId\":\"ngmcp_82fef9d9fab7a2124329753a\",\"instanceId\":\"ngmcp_82fef9d9fab7a2124329753a@iyzvnu-1c9m947-n3iml4-45wt0d:30\"}],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_82fef9d9fab7a2124329753a\",\"instanceId\":\"ngmcp_82fef9d9fab7a2124329753a@iyzvnu-1c9m947-n3iml4-45wt0d:30\",\"status\":\"INVALID\",\"updateOn\":\"change\",\"errors\":[{\"code\":\"required\"}],\"nativeErrors\":[\"valueMissing\"]}],\"groups\":[{\"status\":\"INVALID\",\"errors\":[]}]},\"businessStatus\":\"unknown\"}"
+              }
+            ],
+            "structuredContent": {
+              "status": "ui-dispatched",
+              "operation": "fill",
+              "target": {
+                "sourceId": "ngmcp_82fef9d9fab7a2124329753a",
+                "instanceId": "ngmcp_82fef9d9fab7a2124329753a@iyzvnu-1c9m947-n3iml4-45wt0d:30"
+              },
+              "changed": [
+                "ngmcp_82fef9d9fab7a2124329753a@iyzvnu-1c9m947-n3iml4-45wt0d:30"
+              ],
+              "values": [
+                {
+                  "sourceId": "ngmcp_82fef9d9fab7a2124329753a",
+                  "instanceId": "ngmcp_82fef9d9fab7a2124329753a@iyzvnu-1c9m947-n3iml4-45wt0d:30"
+                }
+              ],
+              "validation": {
+                "status": "invalid",
+                "fields": [
+                  {
+                    "sourceId": "ngmcp_82fef9d9fab7a2124329753a",
+                    "instanceId": "ngmcp_82fef9d9fab7a2124329753a@iyzvnu-1c9m947-n3iml4-45wt0d:30",
+                    "status": "INVALID",
+                    "updateOn": "change",
+                    "errors": [
+                      {
+                        "code": "required"
+                      }
+                    ],
+                    "nativeErrors": [
+                      "valueMissing"
+                    ]
+                  }
+                ],
+                "groups": [
+                  {
+                    "status": "INVALID",
+                    "errors": []
+                  }
+                ]
+              },
+              "businessStatus": "unknown"
+            }
+          }
+        },
+        {
+          "transport": "mcp",
+          "name": "angular_fill",
+          "args": {
+            "target": {
+              "instanceId": "ngmcp_947f06861dc7434d5f730549@iyzvnu-1c9m947-n3iml4-45wt0d:33",
+              "sourceId": "ngmcp_947f06861dc7434d5f730549"
+            },
+            "value": "Must not save"
+          },
+          "result": {
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"status\":\"ui-dispatched\",\"operation\":\"fill\",\"target\":{\"sourceId\":\"ngmcp_947f06861dc7434d5f730549\",\"instanceId\":\"ngmcp_947f06861dc7434d5f730549@iyzvnu-1c9m947-n3iml4-45wt0d:33\"},\"changed\":[\"ngmcp_947f06861dc7434d5f730549@iyzvnu-1c9m947-n3iml4-45wt0d:33\"],\"values\":[{\"sourceId\":\"ngmcp_947f06861dc7434d5f730549\",\"instanceId\":\"ngmcp_947f06861dc7434d5f730549@iyzvnu-1c9m947-n3iml4-45wt0d:33\"}],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_947f06861dc7434d5f730549\",\"instanceId\":\"ngmcp_947f06861dc7434d5f730549@iyzvnu-1c9m947-n3iml4-45wt0d:33\",\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[{\"status\":\"INVALID\",\"errors\":[]}]},\"businessStatus\":\"unknown\"}"
+              }
+            ],
+            "structuredContent": {
+              "status": "ui-dispatched",
+              "operation": "fill",
+              "target": {
+                "sourceId": "ngmcp_947f06861dc7434d5f730549",
+                "instanceId": "ngmcp_947f06861dc7434d5f730549@iyzvnu-1c9m947-n3iml4-45wt0d:33"
+              },
+              "changed": [
+                "ngmcp_947f06861dc7434d5f730549@iyzvnu-1c9m947-n3iml4-45wt0d:33"
+              ],
+              "values": [
+                {
+                  "sourceId": "ngmcp_947f06861dc7434d5f730549",
+                  "instanceId": "ngmcp_947f06861dc7434d5f730549@iyzvnu-1c9m947-n3iml4-45wt0d:33"
+                }
+              ],
+              "validation": {
+                "status": "invalid",
+                "fields": [
+                  {
+                    "sourceId": "ngmcp_947f06861dc7434d5f730549",
+                    "instanceId": "ngmcp_947f06861dc7434d5f730549@iyzvnu-1c9m947-n3iml4-45wt0d:33",
+                    "status": "VALID",
+                    "updateOn": "change",
+                    "errors": []
+                  }
+                ],
+                "groups": [
+                  {
+                    "status": "INVALID",
+                    "errors": []
+                  }
+                ]
+              },
+              "businessStatus": "unknown"
+            }
+          }
+        },
+        {
+          "transport": "mcp",
+          "name": "angular_describe_node",
+          "args": {
+            "target": {
+              "instanceId": "ngmcp_eac740a9a710c232ff2584d0@iyzvnu-1c9m947-n3iml4-45wt0d:36",
+              "sourceId": "ngmcp_eac740a9a710c232ff2584d0"
+            }
+          },
+          "result": {
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"clickOrigin\":\"authored\",\"disabled\":true,\"events\":[\"click\"],\"instanceId\":\"ngmcp_eac740a9a710c232ff2584d0@iyzvnu-1c9m947-n3iml4-45wt0d:36\",\"keyboardFocusable\":true,\"kind\":\"action\",\"label\":\"button — src/app/components/dialogs/create-project-dialog/create-project-dialog.component.ts:37\",\"operations\":[\"activate\"],\"provenance\":\"compiler\",\"readonly\":false,\"sourceId\":\"ngmcp_eac740a9a710c232ff2584d0\",\"tabIndex\":0,\"tagName\":\"button\",\"validation\":{\"fields\":[],\"groups\":[],\"status\":\"unknown\"},\"visible\":true}"
+              }
+            ],
+            "structuredContent": {
+              "clickOrigin": "authored",
+              "disabled": true,
+              "events": [
+                "click"
+              ],
+              "instanceId": "ngmcp_eac740a9a710c232ff2584d0@iyzvnu-1c9m947-n3iml4-45wt0d:36",
+              "keyboardFocusable": true,
+              "kind": "action",
+              "label": "button — src/app/components/dialogs/create-project-dialog/create-project-dialog.component.ts:37",
+              "operations": [
+                "activate"
+              ],
+              "provenance": "compiler",
+              "readonly": false,
+              "sourceId": "ngmcp_eac740a9a710c232ff2584d0",
+              "tabIndex": 0,
+              "tagName": "button",
+              "validation": {
+                "fields": [],
+                "groups": [],
+                "status": "unknown"
+              },
+              "visible": true
+            }
+          }
+        },
+        {
+          "transport": "mcp",
+          "name": "angular_activate",
+          "args": {
+            "target": {
+              "instanceId": "ngmcp_eac740a9a710c232ff2584d0@iyzvnu-1c9m947-n3iml4-45wt0d:36",
+              "sourceId": "ngmcp_eac740a9a710c232ff2584d0"
+            }
+          },
+          "result": {
+            "content": [
+              {
+                "type": "text",
+                "text": "page.evaluate: Error: approval-denied\n    at http://127.0.0.1:55097/main-24BE2YQN.js:8:2932\n    at next (<anonymous>)\n    at o (http://127.0.0.1:55097/main-24BE2YQN.js:1:665)\n    at f.invoke (http://127.0.0.1:55097/polyfills-JXOSM7H6.js:1:6450)\n    at Y.run (http://127.0.0.1:55097/polyfills-JXOSM7H6.js:1:1715)\n    at http://127.0.0.1:55097/polyfills-JXOSM7H6.js:2:553\n    at f.invokeTask (http://127.0.0.1:55097/polyfills-JXOSM7H6.js:1:7075)\n    at Y.runTask (http://127.0.0.1:55097/polyfills-JXOSM7H6.js:1:2355)\n    at J (http://127.0.0.1:55097/polyfills-JXOSM7H6.js:1:9113)"
+              }
+            ],
+            "isError": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "revoked_auth_not_native",
+      "status": "passed",
+      "calls": [
+        {
+          "transport": "authenticated-streamable-http",
+          "publicUrl": "http://127.0.0.1:55998/mcp",
+          "issuer": "https://identity.example",
+          "subject": "synthetic-owner-a",
+          "algorithm": "ES256",
+          "trustedLocalKeyId": "fresh-fixture-es256",
+          "networkScope": "Explicit loopback HTTP fixture; real TLS proxy and external IdP deployment are not exercised.",
+          "audit": [
+            {
+              "at": "2026-11-10T17:02:51.572Z",
+              "event": "session-opening",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369"
+            },
+            {
+              "at": "2026-11-10T17:02:51.585Z",
+              "event": "session-created",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "53da45e7ed3556c78a237bc9970adf8b3051882840d85ac784aa35240c0a345f"
+            },
+            {
+              "at": "2026-11-10T17:02:51.604Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "53da45e7ed3556c78a237bc9970adf8b3051882840d85ac784aa35240c0a345f"
+            },
+            {
+              "at": "2026-11-10T17:02:51.622Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "53da45e7ed3556c78a237bc9970adf8b3051882840d85ac784aa35240c0a345f"
+            },
+            {
+              "at": "2026-11-10T17:02:51.637Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "53da45e7ed3556c78a237bc9970adf8b3051882840d85ac784aa35240c0a345f"
+            },
+            {
+              "at": "2026-11-10T17:02:51.645Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "53da45e7ed3556c78a237bc9970adf8b3051882840d85ac784aa35240c0a345f"
+            },
+            {
+              "at": "2026-11-10T17:02:51.966Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "53da45e7ed3556c78a237bc9970adf8b3051882840d85ac784aa35240c0a345f"
+            },
+            {
+              "at": "2026-11-10T17:02:52.269Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "53da45e7ed3556c78a237bc9970adf8b3051882840d85ac784aa35240c0a345f"
+            },
+            {
+              "at": "2026-11-10T17:02:52.563Z",
+              "event": "session-closed",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "53da45e7ed3556c78a237bc9970adf8b3051882840d85ac784aa35240c0a345f",
+              "reason": "app_session_denied"
+            },
+            {
+              "at": "2026-11-10T17:02:52.567Z",
+              "event": "request-denied",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "reason": "unknown_session"
+            }
+          ]
+        },
+        {
+          "transport": "mcp",
+          "name": "angular_activate",
+          "args": {
+            "target": {
+              "instanceId": "ngmcp_07a613ae3b7cbdea7ee076ad@b5of0e-1x55xy0-pl6ovo-1y1zdde:18",
+              "sourceId": "ngmcp_07a613ae3b7cbdea7ee076ad"
+            }
+          },
+          "result": {
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"status\":\"ui-dispatched\",\"operation\":\"activate\",\"target\":{\"sourceId\":\"ngmcp_07a613ae3b7cbdea7ee076ad\",\"instanceId\":\"ngmcp_07a613ae3b7cbdea7ee076ad@b5of0e-1x55xy0-pl6ovo-1y1zdde:18\"},\"changed\":[],\"values\":[],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"businessStatus\":\"unknown\"}"
+              }
+            ],
+            "structuredContent": {
+              "status": "ui-dispatched",
+              "operation": "activate",
+              "target": {
+                "sourceId": "ngmcp_07a613ae3b7cbdea7ee076ad",
+                "instanceId": "ngmcp_07a613ae3b7cbdea7ee076ad@b5of0e-1x55xy0-pl6ovo-1y1zdde:18"
+              },
+              "changed": [],
+              "values": [],
+              "validation": {
+                "status": "unknown",
+                "fields": [],
+                "groups": []
+              },
+              "businessStatus": "unknown"
+            }
+          }
+        },
+        {
+          "transport": "mcp",
+          "name": "angular_fill",
+          "args": {
+            "target": {
+              "instanceId": "ngmcp_82fef9d9fab7a2124329753a@b5of0e-1x55xy0-pl6ovo-1y1zdde:30",
+              "sourceId": "ngmcp_82fef9d9fab7a2124329753a"
+            },
+            "value": ""
+          },
+          "result": {
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"status\":\"ui-dispatched\",\"operation\":\"fill\",\"target\":{\"sourceId\":\"ngmcp_82fef9d9fab7a2124329753a\",\"instanceId\":\"ngmcp_82fef9d9fab7a2124329753a@b5of0e-1x55xy0-pl6ovo-1y1zdde:30\"},\"changed\":[\"ngmcp_82fef9d9fab7a2124329753a@b5of0e-1x55xy0-pl6ovo-1y1zdde:30\"],\"values\":[{\"sourceId\":\"ngmcp_82fef9d9fab7a2124329753a\",\"instanceId\":\"ngmcp_82fef9d9fab7a2124329753a@b5of0e-1x55xy0-pl6ovo-1y1zdde:30\"}],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_82fef9d9fab7a2124329753a\",\"instanceId\":\"ngmcp_82fef9d9fab7a2124329753a@b5of0e-1x55xy0-pl6ovo-1y1zdde:30\",\"status\":\"INVALID\",\"updateOn\":\"change\",\"errors\":[{\"code\":\"required\"}],\"nativeErrors\":[\"valueMissing\"]}],\"groups\":[{\"status\":\"INVALID\",\"errors\":[]}]},\"businessStatus\":\"unknown\"}"
+              }
+            ],
+            "structuredContent": {
+              "status": "ui-dispatched",
+              "operation": "fill",
+              "target": {
+                "sourceId": "ngmcp_82fef9d9fab7a2124329753a",
+                "instanceId": "ngmcp_82fef9d9fab7a2124329753a@b5of0e-1x55xy0-pl6ovo-1y1zdde:30"
+              },
+              "changed": [
+                "ngmcp_82fef9d9fab7a2124329753a@b5of0e-1x55xy0-pl6ovo-1y1zdde:30"
+              ],
+              "values": [
+                {
+                  "sourceId": "ngmcp_82fef9d9fab7a2124329753a",
+                  "instanceId": "ngmcp_82fef9d9fab7a2124329753a@b5of0e-1x55xy0-pl6ovo-1y1zdde:30"
+                }
+              ],
+              "validation": {
+                "status": "invalid",
+                "fields": [
+                  {
+                    "sourceId": "ngmcp_82fef9d9fab7a2124329753a",
+                    "instanceId": "ngmcp_82fef9d9fab7a2124329753a@b5of0e-1x55xy0-pl6ovo-1y1zdde:30",
+                    "status": "INVALID",
+                    "updateOn": "change",
+                    "errors": [
+                      {
+                        "code": "required"
+                      }
+                    ],
+                    "nativeErrors": [
+                      "valueMissing"
+                    ]
+                  }
+                ],
+                "groups": [
+                  {
+                    "status": "INVALID",
+                    "errors": []
+                  }
+                ]
+              },
+              "businessStatus": "unknown"
+            }
+          }
+        },
+        {
+          "transport": "mcp",
+          "name": "angular_fill",
+          "args": {
+            "target": {
+              "instanceId": "ngmcp_947f06861dc7434d5f730549@b5of0e-1x55xy0-pl6ovo-1y1zdde:33",
+              "sourceId": "ngmcp_947f06861dc7434d5f730549"
+            },
+            "value": "Must not save"
+          },
+          "result": {
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"status\":\"ui-dispatched\",\"operation\":\"fill\",\"target\":{\"sourceId\":\"ngmcp_947f06861dc7434d5f730549\",\"instanceId\":\"ngmcp_947f06861dc7434d5f730549@b5of0e-1x55xy0-pl6ovo-1y1zdde:33\"},\"changed\":[\"ngmcp_947f06861dc7434d5f730549@b5of0e-1x55xy0-pl6ovo-1y1zdde:33\"],\"values\":[{\"sourceId\":\"ngmcp_947f06861dc7434d5f730549\",\"instanceId\":\"ngmcp_947f06861dc7434d5f730549@b5of0e-1x55xy0-pl6ovo-1y1zdde:33\"}],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_947f06861dc7434d5f730549\",\"instanceId\":\"ngmcp_947f06861dc7434d5f730549@b5of0e-1x55xy0-pl6ovo-1y1zdde:33\",\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[{\"status\":\"INVALID\",\"errors\":[]}]},\"businessStatus\":\"unknown\"}"
+              }
+            ],
+            "structuredContent": {
+              "status": "ui-dispatched",
+              "operation": "fill",
+              "target": {
+                "sourceId": "ngmcp_947f06861dc7434d5f730549",
+                "instanceId": "ngmcp_947f06861dc7434d5f730549@b5of0e-1x55xy0-pl6ovo-1y1zdde:33"
+              },
+              "changed": [
+                "ngmcp_947f06861dc7434d5f730549@b5of0e-1x55xy0-pl6ovo-1y1zdde:33"
+              ],
+              "values": [
+                {
+                  "sourceId": "ngmcp_947f06861dc7434d5f730549",
+                  "instanceId": "ngmcp_947f06861dc7434d5f730549@b5of0e-1x55xy0-pl6ovo-1y1zdde:33"
+                }
+              ],
+              "validation": {
+                "status": "invalid",
+                "fields": [
+                  {
+                    "sourceId": "ngmcp_947f06861dc7434d5f730549",
+                    "instanceId": "ngmcp_947f06861dc7434d5f730549@b5of0e-1x55xy0-pl6ovo-1y1zdde:33",
+                    "status": "VALID",
+                    "updateOn": "change",
+                    "errors": []
+                  }
+                ],
+                "groups": [
+                  {
+                    "status": "INVALID",
+                    "errors": []
+                  }
+                ]
+              },
+              "businessStatus": "unknown"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "closed_transport_not_native",
+      "status": "passed",
+      "calls": [
+        {
+          "transport": "authenticated-streamable-http",
+          "publicUrl": "http://127.0.0.1:56008/mcp",
+          "issuer": "https://identity.example",
+          "subject": "synthetic-owner-a",
+          "algorithm": "ES256",
+          "trustedLocalKeyId": "fresh-fixture-es256",
+          "networkScope": "Explicit loopback HTTP fixture; real TLS proxy and external IdP deployment are not exercised.",
+          "audit": [
+            {
+              "at": "2026-11-10T17:02:53.169Z",
+              "event": "session-opening",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369"
+            },
+            {
+              "at": "2026-11-10T17:02:53.178Z",
+              "event": "session-created",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "6559b5ba48de3918221714be785cdf71f91b3d53bf154446ae0cb46eb2ced2ba"
+            },
+            {
+              "at": "2026-11-10T17:02:53.194Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "6559b5ba48de3918221714be785cdf71f91b3d53bf154446ae0cb46eb2ced2ba"
+            },
+            {
+              "at": "2026-11-10T17:02:53.212Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "6559b5ba48de3918221714be785cdf71f91b3d53bf154446ae0cb46eb2ced2ba"
+            },
+            {
+              "at": "2026-11-10T17:02:53.230Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "6559b5ba48de3918221714be785cdf71f91b3d53bf154446ae0cb46eb2ced2ba"
+            },
+            {
+              "at": "2026-11-10T17:02:53.238Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "6559b5ba48de3918221714be785cdf71f91b3d53bf154446ae0cb46eb2ced2ba"
+            },
+            {
+              "at": "2026-11-10T17:02:53.562Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "6559b5ba48de3918221714be785cdf71f91b3d53bf154446ae0cb46eb2ced2ba"
+            },
+            {
+              "at": "2026-11-10T17:02:53.864Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "6559b5ba48de3918221714be785cdf71f91b3d53bf154446ae0cb46eb2ced2ba"
+            },
+            {
+              "at": "2026-11-10T17:02:54.169Z",
+              "event": "request-authorized",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "6559b5ba48de3918221714be785cdf71f91b3d53bf154446ae0cb46eb2ced2ba"
+            },
+            {
+              "at": "2026-11-10T17:02:54.169Z",
+              "event": "session-closed",
+              "principal": "7ce00d6bf784f562c34457ab20ab652dc9339a52b756b48806be8f240eb90369",
+              "session": "6559b5ba48de3918221714be785cdf71f91b3d53bf154446ae0cb46eb2ced2ba",
+              "reason": "transport_closed"
+            }
+          ]
+        },
+        {
+          "transport": "mcp",
+          "name": "angular_activate",
+          "args": {
+            "target": {
+              "instanceId": "ngmcp_07a613ae3b7cbdea7ee076ad@ceodwe-bc17p8-i3sia6-pvov2b:18",
+              "sourceId": "ngmcp_07a613ae3b7cbdea7ee076ad"
+            }
+          },
+          "result": {
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"status\":\"ui-dispatched\",\"operation\":\"activate\",\"target\":{\"sourceId\":\"ngmcp_07a613ae3b7cbdea7ee076ad\",\"instanceId\":\"ngmcp_07a613ae3b7cbdea7ee076ad@ceodwe-bc17p8-i3sia6-pvov2b:18\"},\"changed\":[],\"values\":[],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"businessStatus\":\"unknown\"}"
+              }
+            ],
+            "structuredContent": {
+              "status": "ui-dispatched",
+              "operation": "activate",
+              "target": {
+                "sourceId": "ngmcp_07a613ae3b7cbdea7ee076ad",
+                "instanceId": "ngmcp_07a613ae3b7cbdea7ee076ad@ceodwe-bc17p8-i3sia6-pvov2b:18"
+              },
+              "changed": [],
+              "values": [],
+              "validation": {
+                "status": "unknown",
+                "fields": [],
+                "groups": []
+              },
+              "businessStatus": "unknown"
+            }
+          }
+        },
+        {
+          "transport": "mcp",
+          "name": "angular_fill",
+          "args": {
+            "target": {
+              "instanceId": "ngmcp_82fef9d9fab7a2124329753a@ceodwe-bc17p8-i3sia6-pvov2b:30",
+              "sourceId": "ngmcp_82fef9d9fab7a2124329753a"
+            },
+            "value": ""
+          },
+          "result": {
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"status\":\"ui-dispatched\",\"operation\":\"fill\",\"target\":{\"sourceId\":\"ngmcp_82fef9d9fab7a2124329753a\",\"instanceId\":\"ngmcp_82fef9d9fab7a2124329753a@ceodwe-bc17p8-i3sia6-pvov2b:30\"},\"changed\":[\"ngmcp_82fef9d9fab7a2124329753a@ceodwe-bc17p8-i3sia6-pvov2b:30\"],\"values\":[{\"sourceId\":\"ngmcp_82fef9d9fab7a2124329753a\",\"instanceId\":\"ngmcp_82fef9d9fab7a2124329753a@ceodwe-bc17p8-i3sia6-pvov2b:30\"}],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_82fef9d9fab7a2124329753a\",\"instanceId\":\"ngmcp_82fef9d9fab7a2124329753a@ceodwe-bc17p8-i3sia6-pvov2b:30\",\"status\":\"INVALID\",\"updateOn\":\"change\",\"errors\":[{\"code\":\"required\"}],\"nativeErrors\":[\"valueMissing\"]}],\"groups\":[{\"status\":\"INVALID\",\"errors\":[]}]},\"businessStatus\":\"unknown\"}"
+              }
+            ],
+            "structuredContent": {
+              "status": "ui-dispatched",
+              "operation": "fill",
+              "target": {
+                "sourceId": "ngmcp_82fef9d9fab7a2124329753a",
+                "instanceId": "ngmcp_82fef9d9fab7a2124329753a@ceodwe-bc17p8-i3sia6-pvov2b:30"
+              },
+              "changed": [
+                "ngmcp_82fef9d9fab7a2124329753a@ceodwe-bc17p8-i3sia6-pvov2b:30"
+              ],
+              "values": [
+                {
+                  "sourceId": "ngmcp_82fef9d9fab7a2124329753a",
+                  "instanceId": "ngmcp_82fef9d9fab7a2124329753a@ceodwe-bc17p8-i3sia6-pvov2b:30"
+                }
+              ],
+              "validation": {
+                "status": "invalid",
+                "fields": [
+                  {
+                    "sourceId": "ngmcp_82fef9d9fab7a2124329753a",
+                    "instanceId": "ngmcp_82fef9d9fab7a2124329753a@ceodwe-bc17p8-i3sia6-pvov2b:30",
+                    "status": "INVALID",
+                    "updateOn": "change",
+                    "errors": [
+                      {
+                        "code": "required"
+                      }
+                    ],
+                    "nativeErrors": [
+                      "valueMissing"
+                    ]
+                  }
+                ],
+                "groups": [
+                  {
+                    "status": "INVALID",
+                    "errors": []
+                  }
+                ]
+              },
+              "businessStatus": "unknown"
+            }
+          }
+        },
+        {
+          "transport": "mcp",
+          "name": "angular_fill",
+          "args": {
+            "target": {
+              "instanceId": "ngmcp_947f06861dc7434d5f730549@ceodwe-bc17p8-i3sia6-pvov2b:33",
+              "sourceId": "ngmcp_947f06861dc7434d5f730549"
+            },
+            "value": "Must not save"
+          },
+          "result": {
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"status\":\"ui-dispatched\",\"operation\":\"fill\",\"target\":{\"sourceId\":\"ngmcp_947f06861dc7434d5f730549\",\"instanceId\":\"ngmcp_947f06861dc7434d5f730549@ceodwe-bc17p8-i3sia6-pvov2b:33\"},\"changed\":[\"ngmcp_947f06861dc7434d5f730549@ceodwe-bc17p8-i3sia6-pvov2b:33\"],\"values\":[{\"sourceId\":\"ngmcp_947f06861dc7434d5f730549\",\"instanceId\":\"ngmcp_947f06861dc7434d5f730549@ceodwe-bc17p8-i3sia6-pvov2b:33\"}],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_947f06861dc7434d5f730549\",\"instanceId\":\"ngmcp_947f06861dc7434d5f730549@ceodwe-bc17p8-i3sia6-pvov2b:33\",\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[{\"status\":\"INVALID\",\"errors\":[]}]},\"businessStatus\":\"unknown\"}"
+              }
+            ],
+            "structuredContent": {
+              "status": "ui-dispatched",
+              "operation": "fill",
+              "target": {
+                "sourceId": "ngmcp_947f06861dc7434d5f730549",
+                "instanceId": "ngmcp_947f06861dc7434d5f730549@ceodwe-bc17p8-i3sia6-pvov2b:33"
+              },
+              "changed": [
+                "ngmcp_947f06861dc7434d5f730549@ceodwe-bc17p8-i3sia6-pvov2b:33"
+              ],
+              "values": [
+                {
+                  "sourceId": "ngmcp_947f06861dc7434d5f730549",
+                  "instanceId": "ngmcp_947f06861dc7434d5f730549@ceodwe-bc17p8-i3sia6-pvov2b:33"
+                }
+              ],
+              "validation": {
+                "status": "invalid",
+                "fields": [
+                  {
+                    "sourceId": "ngmcp_947f06861dc7434d5f730549",
+                    "instanceId": "ngmcp_947f06861dc7434d5f730549@ceodwe-bc17p8-i3sia6-pvov2b:33",
+                    "status": "VALID",
+                    "updateOn": "change",
+                    "errors": []
+                  }
+                ],
+                "groups": [
+                  {
+                    "status": "INVALID",
+                    "errors": []
+                  }
+                ]
+              },
+              "businessStatus": "unknown"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "scope": "Existing unchanged production packet; guarded disabled metadata plus actual authenticated HTTP calls, no DOM-action fallback. Policy/auth/network failures must not be accepted as a native UI refusal.",
+  "classifierBoundaryChecks": "passed",
+  "sourceAfter": {
+    "source": "/tmp/ngx-mcp-fresh-access-sprint",
+    "commit": "22f4ce92e1ae18f885e5153c945255443419d656",
+    "sourceFiles": 27,
+    "labelsSha256": "b71cc36370902ddfe9d3ed3374fbb613dce7a8423dc0a10c2f35b7587be49c95",
+    "lockSha256": "fa8bc8dc42dc87c9be90bf917c00e398b0372ed9dfde44c449ffd41144d9845c"
+  },
+  "resourcesClosed": true,
+  "harnessSha256": {
+    "driver.mjs": "1713b9ef23f1b48a102d9498947842c97a9f90b733f2b4084659fbe7c088c931",
+    "fixtures.mjs": "233990ee9d54e613a1842ea729a9e809993c7f50022019f1a2d11508c780ef37",
+    "access-fixture.mjs": "2af192ef4d4ea9170f5d56e4c064482571fa1d7dd6246e03d556eb28335ae175",
+    "focus-disabled.mjs": "1e3ff1aae6ed1caffd0b7472ce9fba43ae59006797c36fdd180d472ba1472e47"
+  },
+  "passed": true
+}

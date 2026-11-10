@@ -1,0 +1,871 @@
+{
+  "reportKind": "first-pass-integration-mcp",
+  "startedAt": "2026-11-10T10:28:49.459Z",
+  "mode": "mcp",
+  "transport": "raw-frozen",
+  "node": "v24.15.0",
+  "fixedBrowserTime": "2026-11-10T12:00:00Z",
+  "externalNetwork": "All origins blocked except designated local app; /api handled by deterministic in-process source-contract fixture.",
+  "sourceOverlays": [],
+  "frozenInputRewrites": [],
+  "harnessSha256": {
+    "run.mjs": "1cac97809285601ca362537aad595677a9a9049990315a44d0c2247e3868638b",
+    "fixtures.mjs": "7b72ec43cbce41869828da3ec2501c4deb336530ff234f3404a7b61638e04a45",
+    "cases.mjs": "e6e725bb280acbde78aeb2f4638590f1ad2c1ae999a100252ee3173475c15feb",
+    "mcp-driver.mjs": "fd0a414aa8319838dee24977557b28f73a1b4e4cb0e8b680a3b2f2804ba997b9"
+  },
+  "projects": [
+    {
+      "id": "shopping",
+      "commit": "3464f15ad53ede4de5673415ca9de68070bf78a1",
+      "stage": {
+        "directory": "/tmp/integration-unseen-shopping-integrated-v5",
+        "manifestSha256": "0866c29e2c48eee79ae635c2c766cca7f9a79c339bd32d960aa3666a76df88d6",
+        "runtimeModule": "/private/tmp/integration-unseen-shopping-integrated-v5/src/angular-mcp.generated.ts",
+        "runtimeSha256": "7802370ef168446d0564b77281f5d7c2b47b9d41c354d31bacba7b86df51258a"
+      },
+      "integrity": {
+        "frozen": true,
+        "files": 106,
+        "labelsSha256": "42566e776738d25d6bee64a734111f325177d35d6da7b6f7196a1c6e9c329410"
+      },
+      "cases": [
+        {
+          "id": "list-create",
+          "operation": "list-create",
+          "kind": "positive",
+          "frozenInput": {
+            "name": "Unseen shopping list",
+            "owners": [],
+            "sharedWith": []
+          },
+          "routeContext": {},
+          "calls": [
+            {
+              "name": "angular_list_nodes",
+              "args": {},
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "[{\"sourceId\":\"ngmcp_861cbea91b681d3df8eaf989\",\"instanceId\":\"ngmcp_861cbea91b681d3df8eaf989@1bwwkqx-1g10nid-phsbkc-1jghok2:1\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"\",\"visible\":false,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_2cbbded16163ad27e80e7c43\",\"instanceId\":\"ngmcp_2cbbded16163ad27e80e7c43@1bwwkqx-1g10nid-phsbkc-1jghok2:2\",\"kind\":\"action\",\"tagName\":\"a\",\"events\":[],\"label\":\"\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_ceaad68d23638db8ed82634c\",\"instanceId\":\"ngmcp_ceaad68d23638db8ed82634c@1bwwkqx-1g10nid-phsbkc-1jghok2:3\",\"kind\":\"action\",\"tagName\":\"a\",\"events\":[],\"label\":\"\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_79b836a9a64d072408340eb1\",\"instanceId\":\"ngmcp_79b836a9a64d072408340eb1@1bwwkqx-1g10nid-phsbkc-1jghok2:4\",\"kind\":\"action\",\"tagName\":\"a\",\"events\":[],\"label\":\"Übersicht\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_2d2a422f366fbcdfa3b24070\",\"instanceId\":\"ngmcp_2d2a422f366fbcdfa3b24070@1bwwkqx-1g10nid-phsbkc-1jghok2:5\",\"kind\":\"action\",\"tagName\":\"a\",\"events\":[],\"label\":\"Einkaufszettel\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_561fe1046ba561cdb6cb0821\",\"instanceId\":\"ngmcp_561fe1046ba561cdb6cb0821@1bwwkqx-1g10nid-phsbkc-1jghok2:6\",\"kind\":\"action\",\"tagName\":\"a\",\"events\":[],\"label\":\"Archiv\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_f24e26dc8bd9f1e926be7820\",\"instanceId\":\"ngmcp_f24e26dc8bd9f1e926be7820@1bwwkqx-1g10nid-phsbkc-1jghok2:8\",\"kind\":\"form\",\"tagName\":\"form\",\"events\":[\"ngSubmit\"],\"label\":\"Name*BesitzerWähle Benutzer die Besitzer sein sollenPersonen mit ZugriffWähle Benutzer die auch Zugriff haben sollen Speichern\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"submit\"],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_10eb234d97e140501ec2f1c8\",\"instanceId\":\"ngmcp_10eb234d97e140501ec2f1c8@1bwwkqx-1g10nid-phsbkc-1jghok2:9\",\"path\":[\"name\"],\"status\":\"INVALID\",\"updateOn\":\"change\",\"errors\":[{\"code\":\"required\"}]},{\"sourceId\":\"ngmcp_372610e0a4185f7b18f8607e\",\"instanceId\":\"ngmcp_372610e0a4185f7b18f8607e@1bwwkqx-1g10nid-phsbkc-1jghok2:13\",\"path\":[\"owners\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]},{\"sourceId\":\"ngmcp_9eef01814d23d8c8f30b6329\",\"instanceId\":\"ngmcp_9eef01814d23d8c8f30b6329@1bwwkqx-1g10nid-phsbkc-1jghok2:14\",\"path\":[\"sharedWith\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"fields\":[{\"sourceId\":\"ngmcp_10eb234d97e140501ec2f1c8\",\"instanceId\":\"ngmcp_10eb234d97e140501ec2f1c8@1bwwkqx-1g10nid-phsbkc-1jghok2:9\",\"kind\":\"control\",\"tagName\":\"input\",\"events\":[],\"label\":\"Name* Besitzer Personen mit Zugriff\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"fill\"],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_10eb234d97e140501ec2f1c8\",\"instanceId\":\"ngmcp_10eb234d97e140501ec2f1c8@1bwwkqx-1g10nid-phsbkc-1jghok2:9\",\"path\":[\"name\"],\"status\":\"INVALID\",\"updateOn\":\"change\",\"errors\":[{\"code\":\"required\"}]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"schema\":{\"type\":\"string\"},\"value\":\"\",\"path\":[\"name\"],\"transport\":\"native-ui\",\"customAccessor\":false,\"fillModes\":[\"paste\",\"input\"],\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_372610e0a4185f7b18f8607e\",\"instanceId\":\"ngmcp_372610e0a4185f7b18f8607e@1bwwkqx-1g10nid-phsbkc-1jghok2:13\",\"kind\":\"control\",\"tagName\":\"p-multiselect\",\"events\":[],\"label\":\"Wähle Benutzer die Besitzer sein sollen\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"fill\"],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_372610e0a4185f7b18f8607e\",\"instanceId\":\"ngmcp_372610e0a4185f7b18f8607e@1bwwkqx-1g10nid-phsbkc-1jghok2:13\",\"path\":[\"owners\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"schema\":{\"type\":\"string\"},\"value\":\"\",\"path\":[\"owners\"],\"transport\":\"native-ui\",\"customAccessor\":true,\"fillModes\":[\"paste\",\"input\"],\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_9eef01814d23d8c8f30b6329\",\"instanceId\":\"ngmcp_9eef01814d23d8c8f30b6329@1bwwkqx-1g10nid-phsbkc-1jghok2:14\",\"kind\":\"control\",\"tagName\":\"p-multiselect\",\"events\":[],\"label\":\"Wähle Benutzer die auch Zugriff haben sollen\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"fill\"],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_9eef01814d23d8c8f30b6329\",\"instanceId\":\"ngmcp_9eef01814d23d8c8f30b6329@1bwwkqx-1g10nid-phsbkc-1jghok2:14\",\"path\":[\"sharedWith\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"schema\":{\"type\":\"string\"},\"value\":\"\",\"path\":[\"sharedWith\"],\"transport\":\"native-ui\",\"customAccessor\":true,\"fillModes\":[\"paste\",\"input\"],\"provenance\":\"compiler\"}],\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_10eb234d97e140501ec2f1c8\",\"instanceId\":\"ngmcp_10eb234d97e140501ec2f1c8@1bwwkqx-1g10nid-phsbkc-1jghok2:9\",\"kind\":\"control\",\"tagName\":\"input\",\"events\":[],\"label\":\"Name* Besitzer Personen mit Zugriff\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"fill\"],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_10eb234d97e140501ec2f1c8\",\"instanceId\":\"ngmcp_10eb234d97e140501ec2f1c8@1bwwkqx-1g10nid-phsbkc-1jghok2:9\",\"path\":[\"name\"],\"status\":\"INVALID\",\"updateOn\":\"change\",\"errors\":[{\"code\":\"required\"}]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"schema\":{\"type\":\"string\"},\"value\":\"\",\"path\":[\"name\"],\"transport\":\"native-ui\",\"customAccessor\":false,\"fillModes\":[\"paste\",\"input\"],\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_d7a533760ab2a67b614c71a0\",\"instanceId\":\"ngmcp_d7a533760ab2a67b614c71a0@1bwwkqx-1g10nid-phsbkc-1jghok2:10\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[],\"label\":\"Speichern\",\"visible\":true,\"disabled\":true,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_3d0e2acd99da754ab03a92ff\",\"instanceId\":\"ngmcp_3d0e2acd99da754ab03a92ff@1bwwkqx-1g10nid-phsbkc-1jghok2:11\",\"kind\":\"action\",\"tagName\":\"div\",\"events\":[\"click\"],\"label\":\"\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_495baed709b68555855a42c2\",\"instanceId\":\"ngmcp_495baed709b68555855a42c2@1bwwkqx-1g10nid-phsbkc-1jghok2:12\",\"kind\":\"action\",\"tagName\":\"a\",\"events\":[],\"label\":\"Userverwaltung\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_372610e0a4185f7b18f8607e\",\"instanceId\":\"ngmcp_372610e0a4185f7b18f8607e@1bwwkqx-1g10nid-phsbkc-1jghok2:13\",\"kind\":\"control\",\"tagName\":\"p-multiselect\",\"events\":[],\"label\":\"Wähle Benutzer die Besitzer sein sollen\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"fill\"],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_372610e0a4185f7b18f8607e\",\"instanceId\":\"ngmcp_372610e0a4185f7b18f8607e@1bwwkqx-1g10nid-phsbkc-1jghok2:13\",\"path\":[\"owners\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"schema\":{\"type\":\"string\"},\"value\":\"\",\"path\":[\"owners\"],\"transport\":\"native-ui\",\"customAccessor\":true,\"fillModes\":[\"paste\",\"input\"],\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_9eef01814d23d8c8f30b6329\",\"instanceId\":\"ngmcp_9eef01814d23d8c8f30b6329@1bwwkqx-1g10nid-phsbkc-1jghok2:14\",\"kind\":\"control\",\"tagName\":\"p-multiselect\",\"events\":[],\"label\":\"Wähle Benutzer die auch Zugriff haben sollen\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"fill\"],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_9eef01814d23d8c8f30b6329\",\"instanceId\":\"ngmcp_9eef01814d23d8c8f30b6329@1bwwkqx-1g10nid-phsbkc-1jghok2:14\",\"path\":[\"sharedWith\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"schema\":{\"type\":\"string\"},\"value\":\"\",\"path\":[\"sharedWith\"],\"transport\":\"native-ui\",\"customAccessor\":true,\"fillModes\":[\"paste\",\"input\"],\"provenance\":\"compiler\"}]"
+                  }
+                ],
+                "structuredContent": {
+                  "nodes": [
+                    {
+                      "sourceId": "ngmcp_861cbea91b681d3df8eaf989",
+                      "instanceId": "ngmcp_861cbea91b681d3df8eaf989@1bwwkqx-1g10nid-phsbkc-1jghok2:1",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "",
+                      "visible": false,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_2cbbded16163ad27e80e7c43",
+                      "instanceId": "ngmcp_2cbbded16163ad27e80e7c43@1bwwkqx-1g10nid-phsbkc-1jghok2:2",
+                      "kind": "action",
+                      "tagName": "a",
+                      "events": [],
+                      "label": "",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_ceaad68d23638db8ed82634c",
+                      "instanceId": "ngmcp_ceaad68d23638db8ed82634c@1bwwkqx-1g10nid-phsbkc-1jghok2:3",
+                      "kind": "action",
+                      "tagName": "a",
+                      "events": [],
+                      "label": "",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_79b836a9a64d072408340eb1",
+                      "instanceId": "ngmcp_79b836a9a64d072408340eb1@1bwwkqx-1g10nid-phsbkc-1jghok2:4",
+                      "kind": "action",
+                      "tagName": "a",
+                      "events": [],
+                      "label": "Übersicht",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_2d2a422f366fbcdfa3b24070",
+                      "instanceId": "ngmcp_2d2a422f366fbcdfa3b24070@1bwwkqx-1g10nid-phsbkc-1jghok2:5",
+                      "kind": "action",
+                      "tagName": "a",
+                      "events": [],
+                      "label": "Einkaufszettel",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_561fe1046ba561cdb6cb0821",
+                      "instanceId": "ngmcp_561fe1046ba561cdb6cb0821@1bwwkqx-1g10nid-phsbkc-1jghok2:6",
+                      "kind": "action",
+                      "tagName": "a",
+                      "events": [],
+                      "label": "Archiv",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_f24e26dc8bd9f1e926be7820",
+                      "instanceId": "ngmcp_f24e26dc8bd9f1e926be7820@1bwwkqx-1g10nid-phsbkc-1jghok2:8",
+                      "kind": "form",
+                      "tagName": "form",
+                      "events": [
+                        "ngSubmit"
+                      ],
+                      "label": "Name*BesitzerWähle Benutzer die Besitzer sein sollenPersonen mit ZugriffWähle Benutzer die auch Zugriff haben sollen Speichern",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "submit"
+                      ],
+                      "validation": {
+                        "status": "invalid",
+                        "fields": [
+                          {
+                            "sourceId": "ngmcp_10eb234d97e140501ec2f1c8",
+                            "instanceId": "ngmcp_10eb234d97e140501ec2f1c8@1bwwkqx-1g10nid-phsbkc-1jghok2:9",
+                            "path": [
+                              "name"
+                            ],
+                            "status": "INVALID",
+                            "updateOn": "change",
+                            "errors": [
+                              {
+                                "code": "required"
+                              }
+                            ]
+                          },
+                          {
+                            "sourceId": "ngmcp_372610e0a4185f7b18f8607e",
+                            "instanceId": "ngmcp_372610e0a4185f7b18f8607e@1bwwkqx-1g10nid-phsbkc-1jghok2:13",
+                            "path": [
+                              "owners"
+                            ],
+                            "status": "VALID",
+                            "updateOn": "change",
+                            "errors": []
+                          },
+                          {
+                            "sourceId": "ngmcp_9eef01814d23d8c8f30b6329",
+                            "instanceId": "ngmcp_9eef01814d23d8c8f30b6329@1bwwkqx-1g10nid-phsbkc-1jghok2:14",
+                            "path": [
+                              "sharedWith"
+                            ],
+                            "status": "VALID",
+                            "updateOn": "change",
+                            "errors": []
+                          }
+                        ],
+                        "groups": [
+                          {
+                            "path": [],
+                            "status": "INVALID",
+                            "errors": []
+                          }
+                        ]
+                      },
+                      "fields": [
+                        {
+                          "sourceId": "ngmcp_10eb234d97e140501ec2f1c8",
+                          "instanceId": "ngmcp_10eb234d97e140501ec2f1c8@1bwwkqx-1g10nid-phsbkc-1jghok2:9",
+                          "kind": "control",
+                          "tagName": "input",
+                          "events": [],
+                          "label": "Name* Besitzer Personen mit Zugriff",
+                          "visible": true,
+                          "disabled": false,
+                          "readonly": false,
+                          "operations": [
+                            "fill"
+                          ],
+                          "validation": {
+                            "status": "invalid",
+                            "fields": [
+                              {
+                                "sourceId": "ngmcp_10eb234d97e140501ec2f1c8",
+                                "instanceId": "ngmcp_10eb234d97e140501ec2f1c8@1bwwkqx-1g10nid-phsbkc-1jghok2:9",
+                                "path": [
+                                  "name"
+                                ],
+                                "status": "INVALID",
+                                "updateOn": "change",
+                                "errors": [
+                                  {
+                                    "code": "required"
+                                  }
+                                ]
+                              }
+                            ],
+                            "groups": [
+                              {
+                                "path": [],
+                                "status": "INVALID",
+                                "errors": []
+                              }
+                            ]
+                          },
+                          "schema": {
+                            "type": "string"
+                          },
+                          "value": "",
+                          "path": [
+                            "name"
+                          ],
+                          "transport": "native-ui",
+                          "customAccessor": false,
+                          "fillModes": [
+                            "paste",
+                            "input"
+                          ],
+                          "provenance": "compiler"
+                        },
+                        {
+                          "sourceId": "ngmcp_372610e0a4185f7b18f8607e",
+                          "instanceId": "ngmcp_372610e0a4185f7b18f8607e@1bwwkqx-1g10nid-phsbkc-1jghok2:13",
+                          "kind": "control",
+                          "tagName": "p-multiselect",
+                          "events": [],
+                          "label": "Wähle Benutzer die Besitzer sein sollen",
+                          "visible": true,
+                          "disabled": false,
+                          "readonly": false,
+                          "operations": [
+                            "fill"
+                          ],
+                          "validation": {
+                            "status": "invalid",
+                            "fields": [
+                              {
+                                "sourceId": "ngmcp_372610e0a4185f7b18f8607e",
+                                "instanceId": "ngmcp_372610e0a4185f7b18f8607e@1bwwkqx-1g10nid-phsbkc-1jghok2:13",
+                                "path": [
+                                  "owners"
+                                ],
+                                "status": "VALID",
+                                "updateOn": "change",
+                                "errors": []
+                              }
+                            ],
+                            "groups": [
+                              {
+                                "path": [],
+                                "status": "INVALID",
+                                "errors": []
+                              }
+                            ]
+                          },
+                          "schema": {
+                            "type": "string"
+                          },
+                          "value": "",
+                          "path": [
+                            "owners"
+                          ],
+                          "transport": "native-ui",
+                          "customAccessor": true,
+                          "fillModes": [
+                            "paste",
+                            "input"
+                          ],
+                          "provenance": "compiler"
+                        },
+                        {
+                          "sourceId": "ngmcp_9eef01814d23d8c8f30b6329",
+                          "instanceId": "ngmcp_9eef01814d23d8c8f30b6329@1bwwkqx-1g10nid-phsbkc-1jghok2:14",
+                          "kind": "control",
+                          "tagName": "p-multiselect",
+                          "events": [],
+                          "label": "Wähle Benutzer die auch Zugriff haben sollen",
+                          "visible": true,
+                          "disabled": false,
+                          "readonly": false,
+                          "operations": [
+                            "fill"
+                          ],
+                          "validation": {
+                            "status": "invalid",
+                            "fields": [
+                              {
+                                "sourceId": "ngmcp_9eef01814d23d8c8f30b6329",
+                                "instanceId": "ngmcp_9eef01814d23d8c8f30b6329@1bwwkqx-1g10nid-phsbkc-1jghok2:14",
+                                "path": [
+                                  "sharedWith"
+                                ],
+                                "status": "VALID",
+                                "updateOn": "change",
+                                "errors": []
+                              }
+                            ],
+                            "groups": [
+                              {
+                                "path": [],
+                                "status": "INVALID",
+                                "errors": []
+                              }
+                            ]
+                          },
+                          "schema": {
+                            "type": "string"
+                          },
+                          "value": "",
+                          "path": [
+                            "sharedWith"
+                          ],
+                          "transport": "native-ui",
+                          "customAccessor": true,
+                          "fillModes": [
+                            "paste",
+                            "input"
+                          ],
+                          "provenance": "compiler"
+                        }
+                      ],
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_10eb234d97e140501ec2f1c8",
+                      "instanceId": "ngmcp_10eb234d97e140501ec2f1c8@1bwwkqx-1g10nid-phsbkc-1jghok2:9",
+                      "kind": "control",
+                      "tagName": "input",
+                      "events": [],
+                      "label": "Name* Besitzer Personen mit Zugriff",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "fill"
+                      ],
+                      "validation": {
+                        "status": "invalid",
+                        "fields": [
+                          {
+                            "sourceId": "ngmcp_10eb234d97e140501ec2f1c8",
+                            "instanceId": "ngmcp_10eb234d97e140501ec2f1c8@1bwwkqx-1g10nid-phsbkc-1jghok2:9",
+                            "path": [
+                              "name"
+                            ],
+                            "status": "INVALID",
+                            "updateOn": "change",
+                            "errors": [
+                              {
+                                "code": "required"
+                              }
+                            ]
+                          }
+                        ],
+                        "groups": [
+                          {
+                            "path": [],
+                            "status": "INVALID",
+                            "errors": []
+                          }
+                        ]
+                      },
+                      "schema": {
+                        "type": "string"
+                      },
+                      "value": "",
+                      "path": [
+                        "name"
+                      ],
+                      "transport": "native-ui",
+                      "customAccessor": false,
+                      "fillModes": [
+                        "paste",
+                        "input"
+                      ],
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_d7a533760ab2a67b614c71a0",
+                      "instanceId": "ngmcp_d7a533760ab2a67b614c71a0@1bwwkqx-1g10nid-phsbkc-1jghok2:10",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [],
+                      "label": "Speichern",
+                      "visible": true,
+                      "disabled": true,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_3d0e2acd99da754ab03a92ff",
+                      "instanceId": "ngmcp_3d0e2acd99da754ab03a92ff@1bwwkqx-1g10nid-phsbkc-1jghok2:11",
+                      "kind": "action",
+                      "tagName": "div",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_495baed709b68555855a42c2",
+                      "instanceId": "ngmcp_495baed709b68555855a42c2@1bwwkqx-1g10nid-phsbkc-1jghok2:12",
+                      "kind": "action",
+                      "tagName": "a",
+                      "events": [],
+                      "label": "Userverwaltung",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_372610e0a4185f7b18f8607e",
+                      "instanceId": "ngmcp_372610e0a4185f7b18f8607e@1bwwkqx-1g10nid-phsbkc-1jghok2:13",
+                      "kind": "control",
+                      "tagName": "p-multiselect",
+                      "events": [],
+                      "label": "Wähle Benutzer die Besitzer sein sollen",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "fill"
+                      ],
+                      "validation": {
+                        "status": "invalid",
+                        "fields": [
+                          {
+                            "sourceId": "ngmcp_372610e0a4185f7b18f8607e",
+                            "instanceId": "ngmcp_372610e0a4185f7b18f8607e@1bwwkqx-1g10nid-phsbkc-1jghok2:13",
+                            "path": [
+                              "owners"
+                            ],
+                            "status": "VALID",
+                            "updateOn": "change",
+                            "errors": []
+                          }
+                        ],
+                        "groups": [
+                          {
+                            "path": [],
+                            "status": "INVALID",
+                            "errors": []
+                          }
+                        ]
+                      },
+                      "schema": {
+                        "type": "string"
+                      },
+                      "value": "",
+                      "path": [
+                        "owners"
+                      ],
+                      "transport": "native-ui",
+                      "customAccessor": true,
+                      "fillModes": [
+                        "paste",
+                        "input"
+                      ],
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_9eef01814d23d8c8f30b6329",
+                      "instanceId": "ngmcp_9eef01814d23d8c8f30b6329@1bwwkqx-1g10nid-phsbkc-1jghok2:14",
+                      "kind": "control",
+                      "tagName": "p-multiselect",
+                      "events": [],
+                      "label": "Wähle Benutzer die auch Zugriff haben sollen",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "fill"
+                      ],
+                      "validation": {
+                        "status": "invalid",
+                        "fields": [
+                          {
+                            "sourceId": "ngmcp_9eef01814d23d8c8f30b6329",
+                            "instanceId": "ngmcp_9eef01814d23d8c8f30b6329@1bwwkqx-1g10nid-phsbkc-1jghok2:14",
+                            "path": [
+                              "sharedWith"
+                            ],
+                            "status": "VALID",
+                            "updateOn": "change",
+                            "errors": []
+                          }
+                        ],
+                        "groups": [
+                          {
+                            "path": [],
+                            "status": "INVALID",
+                            "errors": []
+                          }
+                        ]
+                      },
+                      "schema": {
+                        "type": "string"
+                      },
+                      "value": "",
+                      "path": [
+                        "sharedWith"
+                      ],
+                      "transport": "native-ui",
+                      "customAccessor": true,
+                      "fillModes": [
+                        "paste",
+                        "input"
+                      ],
+                      "provenance": "compiler"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_fill",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_372610e0a4185f7b18f8607e@1bwwkqx-1g10nid-phsbkc-1jghok2:13"
+                },
+                "value": []
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"status\":\"not-dispatched\",\"operation\":\"fill\",\"target\":{\"sourceId\":\"ngmcp_372610e0a4185f7b18f8607e\",\"instanceId\":\"ngmcp_372610e0a4185f7b18f8607e@1bwwkqx-1g10nid-phsbkc-1jghok2:13\"},\"changed\":[],\"values\":[],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_372610e0a4185f7b18f8607e\",\"instanceId\":\"ngmcp_372610e0a4185f7b18f8607e@1bwwkqx-1g10nid-phsbkc-1jghok2:13\",\"path\":[\"owners\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"url\":\"http://127.0.0.1:4373/einkaufszettel\",\"businessStatus\":\"unknown\",\"reason\":\"The application made this target unavailable, disabled, or readonly\"}"
+                  }
+                ],
+                "structuredContent": {
+                  "status": "not-dispatched",
+                  "operation": "fill",
+                  "target": {
+                    "sourceId": "ngmcp_372610e0a4185f7b18f8607e",
+                    "instanceId": "ngmcp_372610e0a4185f7b18f8607e@1bwwkqx-1g10nid-phsbkc-1jghok2:13"
+                  },
+                  "changed": [],
+                  "values": [],
+                  "validation": {
+                    "status": "invalid",
+                    "fields": [
+                      {
+                        "sourceId": "ngmcp_372610e0a4185f7b18f8607e",
+                        "instanceId": "ngmcp_372610e0a4185f7b18f8607e@1bwwkqx-1g10nid-phsbkc-1jghok2:13",
+                        "path": [
+                          "owners"
+                        ],
+                        "status": "VALID",
+                        "updateOn": "change",
+                        "errors": []
+                      }
+                    ],
+                    "groups": [
+                      {
+                        "path": [],
+                        "status": "INVALID",
+                        "errors": []
+                      }
+                    ]
+                  },
+                  "url": "http://127.0.0.1:4373/einkaufszettel",
+                  "businessStatus": "unknown",
+                  "reason": "The application made this target unavailable, disabled, or readonly"
+                },
+                "isError": true
+              }
+            }
+          ],
+          "network": [
+            {
+              "method": "POST",
+              "path": "/api/auth/login",
+              "body": {
+                "username": "unseen-admin",
+                "password": "Synthetic-123"
+              }
+            },
+            {
+              "method": "GET",
+              "path": "/api/einkaufszettel",
+              "body": null
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            },
+            {
+              "method": "GET",
+              "path": "/api/einkaufszettel",
+              "body": null
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            },
+            {
+              "method": "GET",
+              "path": "/api/user/friends",
+              "body": null
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4373/einkaufszettel",
+            "meta": {}
+          },
+          "before": {
+            "domain": {
+              "users": [
+                {
+                  "id": 1,
+                  "username": "unseen-admin",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Admin",
+                  "email": "admin@example.test",
+                  "token": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic",
+                  "roles": [
+                    {
+                      "id": 1,
+                      "name": "ROLE_ADMIN"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                },
+                {
+                  "id": 2,
+                  "username": "unseen-member",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Member",
+                  "email": "member@example.test",
+                  "roles": [
+                    {
+                      "id": 2,
+                      "name": "ROLE_USER"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                }
+              ],
+              "lists": [
+                {
+                  "id": 101,
+                  "name": "Unseen fixture list",
+                  "owners": [],
+                  "sharedWith": [],
+                  "artikels": [
+                    {
+                      "id": 201,
+                      "name": "Unseen milk",
+                      "anzahl": 1,
+                      "gekauft": false
+                    },
+                    {
+                      "id": 202,
+                      "name": "Unseen bread",
+                      "anzahl": 1,
+                      "gekauft": false
+                    }
+                  ]
+                }
+              ],
+              "archived": [],
+              "confirmations": []
+            },
+            "user": "{\"id\":1,\"username\":\"unseen-admin\",\"password\":\"Synthetic-123\",\"name\":\"Unseen Admin\",\"email\":\"admin@example.test\",\"token\":\"eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic\",\"roles\":[{\"id\":1,\"name\":\"ROLE_ADMIN\"}],\"avatar\":\"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII=\"}"
+          },
+          "businessInput": {
+            "name": "Unseen shopping list",
+            "owners": [],
+            "sharedWith": []
+          },
+          "actionError": "Error: {\"status\":\"not-dispatched\",\"operation\":\"fill\",\"target\":{\"sourceId\":\"ngmcp_372610e0a4185f7b18f8607e\",\"instanceId\":\"ngmcp_372610e0a4185f7b18f8607e@1bwwkqx-1g10nid-phsbkc-1jghok2:13\"},\"changed\":[],\"values\":[],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_372610e0a4185f7b18f8607e\",\"instanceId\":\"ngmcp_372610e0a4185f7b18f8607e@1bwwkqx-1g10nid-phsbkc-1jghok2:13\",\"path\":[\"owners\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"url\":\"http://127.0.0.1:4373/einkaufszettel\",\"businessStatus\":\"unknown\",\"reason\":\"The application made this target unavailable, disabled, or readonly\"}",
+          "status": "integration-failed",
+          "error": "Error: {\"status\":\"not-dispatched\",\"operation\":\"fill\",\"target\":{\"sourceId\":\"ngmcp_372610e0a4185f7b18f8607e\",\"instanceId\":\"ngmcp_372610e0a4185f7b18f8607e@1bwwkqx-1g10nid-phsbkc-1jghok2:13\"},\"changed\":[],\"values\":[],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_372610e0a4185f7b18f8607e\",\"instanceId\":\"ngmcp_372610e0a4185f7b18f8607e@1bwwkqx-1g10nid-phsbkc-1jghok2:13\",\"path\":[\"owners\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"url\":\"http://127.0.0.1:4373/einkaufszettel\",\"businessStatus\":\"unknown\",\"reason\":\"The application made this target unavailable, disabled, or readonly\"}",
+          "after": {
+            "domain": {
+              "users": [
+                {
+                  "id": 1,
+                  "username": "unseen-admin",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Admin",
+                  "email": "admin@example.test",
+                  "token": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic",
+                  "roles": [
+                    {
+                      "id": 1,
+                      "name": "ROLE_ADMIN"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                },
+                {
+                  "id": 2,
+                  "username": "unseen-member",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Member",
+                  "email": "member@example.test",
+                  "roles": [
+                    {
+                      "id": 2,
+                      "name": "ROLE_USER"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                }
+              ],
+              "lists": [
+                {
+                  "id": 101,
+                  "name": "Unseen fixture list",
+                  "owners": [],
+                  "sharedWith": [],
+                  "artikels": [
+                    {
+                      "id": 201,
+                      "name": "Unseen milk",
+                      "anzahl": 1,
+                      "gekauft": false
+                    },
+                    {
+                      "id": 202,
+                      "name": "Unseen bread",
+                      "anzahl": 1,
+                      "gekauft": false
+                    }
+                  ]
+                }
+              ],
+              "archived": [],
+              "confirmations": []
+            },
+            "user": "{\"id\":1,\"username\":\"unseen-admin\",\"password\":\"Synthetic-123\",\"name\":\"Unseen Admin\",\"email\":\"admin@example.test\",\"token\":\"eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic\",\"roles\":[{\"id\":1,\"name\":\"ROLE_ADMIN\"}],\"avatar\":\"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII=\"}"
+          },
+          "rendered": " Übersicht\n Einkaufszettel\n Archiv\n Userverwaltung\nName*\nBesitzer\nWähle Benutzer die Besitzer sein sollen\nPersonen mit Zugriff\nWähle Benutzer die auch Zugriff haben sollen\nSpeichern\nAlice Bedow",
+          "pageErrors": [],
+          "consoleErrors": []
+        }
+      ]
+    }
+  ],
+  "compilerDigestBefore": "23029b562d7c739bd93777cf95ebcdfbc27f87a9932c91c16a12e3b5b8015a3c",
+  "appSpecificSourcePatches": [],
+  "instrumentation": "Separate generic compiler-instrumented app staged copy; original source manifest is checked unchanged.",
+  "browser": "145.0.7632.6",
+  "finishedAt": "2026-11-10T10:28:51.102Z",
+  "harnessSha256After": {
+    "run.mjs": "1cac97809285601ca362537aad595677a9a9049990315a44d0c2247e3868638b",
+    "fixtures.mjs": "7b72ec43cbce41869828da3ec2501c4deb336530ff234f3404a7b61638e04a45",
+    "cases.mjs": "e6e725bb280acbde78aeb2f4638590f1ad2c1ae999a100252ee3173475c15feb",
+    "mcp-driver.mjs": "fd0a414aa8319838dee24977557b28f73a1b4e4cb0e8b680a3b2f2804ba997b9"
+  },
+  "harnessStable": true,
+  "compilerDigestAfter": "23029b562d7c739bd93777cf95ebcdfbc27f87a9932c91c16a12e3b5b8015a3c",
+  "compilerStable": true,
+  "totals": {
+    "positive": 1,
+    "positivePassed": 0,
+    "negative": 0,
+    "negativePassed": 0,
+    "protocolBoundaryNotApplicable": 0
+  }
+}

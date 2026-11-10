@@ -1,0 +1,1412 @@
+{
+  "formatVersion": 1,
+  "compilerVersion": "0.1.0",
+  "sourceDigest": "7b310df41546b81beb3e7e8564b23ae97a4cf9fbbd3c32216b840898c379849d",
+  "routes": [
+    {
+      "path": "/",
+      "component": "HomeComponent",
+      "guards": []
+    },
+    {
+      "path": "/users",
+      "component": "LayoutComponent",
+      "guards": []
+    },
+    {
+      "path": "/users",
+      "component": "ListComponent",
+      "guards": []
+    },
+    {
+      "path": "/users/add",
+      "component": "AddEditComponent",
+      "guards": []
+    },
+    {
+      "path": "/users/edit/:id",
+      "component": "AddEditComponent",
+      "guards": []
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "/#AlertComponent.removeAlert:alert button.btn-close",
+      "fingerprint": "a3399f1349ac0b933ef6fc3ea1fc9edd364d3808cff66bf194abd4b73f4cbc3f",
+      "route": "/",
+      "target": {
+        "param": "alert",
+        "source": "context",
+        "path": [
+          "id"
+        ],
+        "valuePath": [
+          "id"
+        ],
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "type": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "const": 0
+                },
+                {
+                  "type": "number",
+                  "const": 1
+                },
+                {
+                  "type": "number",
+                  "const": 2
+                },
+                {
+                  "type": "number",
+                  "const": 3
+                }
+              ]
+            },
+            "message": {
+              "type": "string"
+            },
+            "autoClose": {
+              "type": "boolean"
+            },
+            "keepAfterRouteChange": {
+              "type": "boolean"
+            },
+            "fade": {
+              "type": "boolean"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "component": "AlertComponent",
+      "componentSelector": "alert",
+      "action": {
+        "owner": "alert",
+        "kind": "button",
+        "selector": "alert button.btn-close",
+        "label": "removeAlert",
+        "event": "click",
+        "expression": "removeAlert(alert)",
+        "source": {
+          "file": "src/app/_components/alert.component.html",
+          "line": 3
+        }
+      },
+      "fields": [],
+      "handler": "removeAlert",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "alert": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "type": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "const": 0
+                  },
+                  {
+                    "type": "number",
+                    "const": 1
+                  },
+                  {
+                    "type": "number",
+                    "const": 2
+                  },
+                  {
+                    "type": "number",
+                    "const": 3
+                  }
+                ]
+              },
+              "message": {
+                "type": "string"
+              },
+              "autoClose": {
+                "type": "boolean"
+              },
+              "keepAfterRouteChange": {
+                "type": "boolean"
+              },
+              "fade": {
+                "type": "boolean"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "alert"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate",
+      "global": true
+    },
+    {
+      "id": "/#AppComponent.navigate:app-root a[routerlink]",
+      "fingerprint": "6e10d3382ea768698f2ba7d5bb7be9f44c39d6e0270e2723b5c8dd5e19ee54d3",
+      "route": "/",
+      "component": "AppComponent",
+      "componentSelector": "app-root",
+      "action": {
+        "owner": "app-root",
+        "kind": "workflow",
+        "selector": "app-root",
+        "label": "Navigate through authored links",
+        "event": "click",
+        "expression": "routerLink",
+        "source": {
+          "file": "src/app/app.component.html",
+          "line": 4
+        }
+      },
+      "drive": {
+        "buttons": {
+          "param": "route",
+          "choices": [
+            {
+              "value": "/",
+              "selector": "app-root a.nav-item.nav-link",
+              "matchText": "Home"
+            },
+            {
+              "value": "/users",
+              "selector": "app-root a.nav-item.nav-link",
+              "matchText": "Users"
+            }
+          ]
+        }
+      },
+      "fields": [],
+      "handler": "navigate",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "route": {
+            "type": "string",
+            "enum": [
+              "/",
+              "/users"
+            ]
+          }
+        },
+        "required": [
+          "route"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate",
+      "global": true
+    },
+    {
+      "id": "/#HomeComponent.navigate:ng-component a[routerlink]",
+      "fingerprint": "433d15986f50b7b087b59b5c37379061b9f1ba097dea223c7c16c00d671efaa3",
+      "route": "/",
+      "component": "HomeComponent",
+      "componentSelector": "ng-component",
+      "action": {
+        "owner": "ng-component",
+        "kind": "workflow",
+        "selector": "ng-component",
+        "label": "Navigate through authored links",
+        "event": "click",
+        "expression": "routerLink",
+        "source": {
+          "file": "src/app/home/home.component.html",
+          "line": 5
+        }
+      },
+      "drive": {
+        "buttons": {
+          "param": "route",
+          "choices": [
+            {
+              "value": "/users",
+              "selector": "ng-component a[routerlink=\"/users\"]",
+              "matchText": "Manage Users"
+            }
+          ]
+        }
+      },
+      "fields": [],
+      "handler": "navigate",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "route": {
+            "type": "string",
+            "enum": [
+              "/users"
+            ]
+          }
+        },
+        "required": [
+          "route"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/users/add#AddEditComponent.navigate:ng-component a[routerlink]",
+      "fingerprint": "e173e57143abdb61ef20ffd66970836a2361cf62aa460f3aa3ebfe65e3f2e57a",
+      "route": "/users/add",
+      "component": "AddEditComponent",
+      "componentSelector": "ng-component",
+      "action": {
+        "owner": "ng-component",
+        "kind": "workflow",
+        "selector": "ng-component",
+        "label": "Navigate through authored links",
+        "event": "click",
+        "expression": "routerLink",
+        "source": {
+          "file": "src/app/users/add-edit.component.html",
+          "line": 80
+        }
+      },
+      "drive": {
+        "buttons": {
+          "param": "route",
+          "choices": [
+            {
+              "value": "/users",
+              "selector": "ng-component a.btn.btn-link",
+              "matchText": "Cancel"
+            }
+          ]
+        }
+      },
+      "fields": [],
+      "handler": "navigate",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "route": {
+            "type": "string",
+            "enum": [
+              "/users"
+            ]
+          }
+        },
+        "required": [
+          "route"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/users/add#AddEditComponent.onSubmit:ng-component form",
+      "fingerprint": "9406a72acfdd316b79c94e86bee073bdf2e4816ccbdf8f7fb5f9f4d1f0e6bda9",
+      "route": "/users/add",
+      "component": "AddEditComponent",
+      "componentSelector": "ng-component",
+      "action": {
+        "owner": "ng-component",
+        "kind": "form",
+        "selector": "ng-component form",
+        "submitSelector": "button.btn.btn-primary",
+        "label": "Save",
+        "event": "ngSubmit",
+        "expression": "onSubmit()",
+        "source": {
+          "file": "src/app/users/add-edit.component.html",
+          "line": 2
+        }
+      },
+      "fields": [
+        {
+          "name": "title",
+          "selector": "select[formcontrolname=\"title\"]",
+          "element": "select",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "Mr",
+              "Mrs",
+              "Miss",
+              "Ms"
+            ]
+          }
+        },
+        {
+          "name": "firstName",
+          "selector": "input[formcontrolname=\"firstName\"]",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        {
+          "name": "lastName",
+          "selector": "input[formcontrolname=\"lastName\"]",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        {
+          "name": "email",
+          "selector": "input[formcontrolname=\"email\"]",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+            "minLength": 1
+          }
+        },
+        {
+          "name": "role",
+          "selector": "select[formcontrolname=\"role\"]",
+          "element": "select",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "User",
+              "Admin"
+            ]
+          }
+        },
+        {
+          "name": "password",
+          "selector": "input[formcontrolname=\"password\"]",
+          "element": "input",
+          "type": "password",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "writeOnly": true,
+            "minLength": 6
+          }
+        },
+        {
+          "name": "confirmPassword",
+          "selector": "input[formcontrolname=\"confirmPassword\"]",
+          "element": "input",
+          "type": "password",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "writeOnly": true,
+            "minLength": 1
+          }
+        }
+      ],
+      "handler": "onSubmit",
+      "callPath": [
+        "AddEditComponent.onSubmit",
+        "AlertService.clear",
+        "AddEditComponent.onSubmit",
+        "AddEditComponent.saveUser",
+        "UserService.update",
+        "AddEditComponent.onSubmit",
+        "AddEditComponent.saveUser",
+        "UserService.create",
+        "AddEditComponent.onSubmit",
+        "AlertService.success",
+        "AddEditComponent.onSubmit",
+        "AlertService.error"
+      ],
+      "bindings": [
+        {
+          "paramKeys": {
+            "id": "id"
+          },
+          "token": "AlertService",
+          "service": "AlertService",
+          "method": "clear",
+          "source": {
+            "file": "src/app/_services/alert.service.ts",
+            "line": 41
+          },
+          "arguments": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        },
+        {
+          "token": "UserService",
+          "service": "UserService",
+          "method": "update",
+          "source": {
+            "file": "src/app/_services/user.service.ts",
+            "line": 25
+          },
+          "arguments": [
+            "this.id!",
+            "this.form.value"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "params": false
+            },
+            "required": [
+              "id",
+              "params"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": false,
+          "schemaIssues": [
+            "Unresolved type: any",
+            "Object has callable members: Function",
+            "Object has callable members: Object"
+          ]
+        },
+        {
+          "token": "UserService",
+          "service": "UserService",
+          "method": "create",
+          "source": {
+            "file": "src/app/_services/user.service.ts",
+            "line": 21
+          },
+          "arguments": [
+            "this.form.value"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "params": false
+            },
+            "required": [
+              "params"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": false,
+          "schemaIssues": [
+            "Unresolved type: any",
+            "Object has callable members: Function",
+            "Object has callable members: Object"
+          ]
+        },
+        {
+          "paramKeys": {
+            "message": "message"
+          },
+          "token": "AlertService",
+          "service": "AlertService",
+          "method": "success",
+          "source": {
+            "file": "src/app/_services/alert.service.ts",
+            "line": 18
+          },
+          "arguments": [
+            "'User saved'",
+            "{ keepAfterRouteChange: true }"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string"
+              },
+              "options": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "autoClose": {
+                    "type": "boolean"
+                  },
+                  "keepAfterRouteChange": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "message"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        },
+        {
+          "paramKeys": {
+            "message": "message"
+          },
+          "token": "AlertService",
+          "service": "AlertService",
+          "method": "error",
+          "source": {
+            "file": "src/app/_services/alert.service.ts",
+            "line": 22
+          },
+          "arguments": [
+            "error"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string"
+              },
+              "options": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "autoClose": {
+                    "type": "boolean"
+                  },
+                  "keepAfterRouteChange": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "message"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "enum": [
+              "Mr",
+              "Mrs",
+              "Miss",
+              "Ms"
+            ]
+          },
+          "firstName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "lastName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "email": {
+            "type": "string",
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+            "minLength": 1
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "User",
+              "Admin"
+            ]
+          },
+          "password": {
+            "type": "string",
+            "writeOnly": true,
+            "minLength": 6
+          },
+          "confirmPassword": {
+            "type": "string",
+            "writeOnly": true,
+            "minLength": 1
+          }
+        },
+        "required": [
+          "title",
+          "firstName",
+          "lastName",
+          "email",
+          "role",
+          "password",
+          "confirmPassword"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/users/edit/:id#AddEditComponent.navigate:ng-component a[routerlink]",
+      "fingerprint": "ffe4f513deaee84cbc55dd7d7bf828943d25183ed5e90e6e428b8ef0de4cc724",
+      "route": "/users/edit/:id",
+      "routeParams": [
+        "id"
+      ],
+      "component": "AddEditComponent",
+      "componentSelector": "ng-component",
+      "action": {
+        "owner": "ng-component",
+        "kind": "workflow",
+        "selector": "ng-component",
+        "label": "Navigate through authored links",
+        "event": "click",
+        "expression": "routerLink",
+        "source": {
+          "file": "src/app/users/add-edit.component.html",
+          "line": 80
+        }
+      },
+      "drive": {
+        "buttons": {
+          "param": "route",
+          "choices": [
+            {
+              "value": "/users",
+              "selector": "ng-component a.btn.btn-link",
+              "matchText": "Cancel"
+            }
+          ]
+        }
+      },
+      "fields": [],
+      "handler": "navigate",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          },
+          "route": {
+            "type": "string",
+            "enum": [
+              "/users"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "route"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/users/edit/:id#AddEditComponent.onSubmit:ng-component form",
+      "fingerprint": "07eaad5c17f1a1c9173707dd5c37bfa6316d00f73bd9c38c45c53ee383e8f6a2",
+      "route": "/users/edit/:id",
+      "routeParams": [
+        "id"
+      ],
+      "component": "AddEditComponent",
+      "componentSelector": "ng-component",
+      "action": {
+        "owner": "ng-component",
+        "kind": "form",
+        "selector": "ng-component form",
+        "submitSelector": "button.btn.btn-primary",
+        "label": "Save",
+        "event": "ngSubmit",
+        "expression": "onSubmit()",
+        "source": {
+          "file": "src/app/users/add-edit.component.html",
+          "line": 2
+        }
+      },
+      "fields": [
+        {
+          "name": "title",
+          "selector": "select[formcontrolname=\"title\"]",
+          "element": "select",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "Mr",
+              "Mrs",
+              "Miss",
+              "Ms"
+            ]
+          }
+        },
+        {
+          "name": "firstName",
+          "selector": "input[formcontrolname=\"firstName\"]",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        {
+          "name": "lastName",
+          "selector": "input[formcontrolname=\"lastName\"]",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        {
+          "name": "email",
+          "selector": "input[formcontrolname=\"email\"]",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+            "minLength": 1
+          }
+        },
+        {
+          "name": "role",
+          "selector": "select[formcontrolname=\"role\"]",
+          "element": "select",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "User",
+              "Admin"
+            ]
+          }
+        },
+        {
+          "name": "password",
+          "selector": "input[formcontrolname=\"password\"]",
+          "element": "input",
+          "type": "password",
+          "required": false,
+          "supported": true,
+          "schema": {
+            "anyOf": [
+              {
+                "const": ""
+              },
+              {
+                "type": "string",
+                "writeOnly": true,
+                "minLength": 6
+              }
+            ]
+          }
+        },
+        {
+          "name": "confirmPassword",
+          "selector": "input[formcontrolname=\"confirmPassword\"]",
+          "element": "input",
+          "type": "password",
+          "required": false,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "writeOnly": true
+          }
+        }
+      ],
+      "handler": "onSubmit",
+      "callPath": [
+        "AddEditComponent.onSubmit",
+        "AlertService.clear",
+        "AddEditComponent.onSubmit",
+        "AddEditComponent.saveUser",
+        "UserService.update",
+        "AddEditComponent.onSubmit",
+        "AddEditComponent.saveUser",
+        "UserService.create",
+        "AddEditComponent.onSubmit",
+        "AlertService.success",
+        "AddEditComponent.onSubmit",
+        "AlertService.error"
+      ],
+      "bindings": [
+        {
+          "paramKeys": {
+            "id": "id"
+          },
+          "token": "AlertService",
+          "service": "AlertService",
+          "method": "clear",
+          "source": {
+            "file": "src/app/_services/alert.service.ts",
+            "line": 41
+          },
+          "arguments": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        },
+        {
+          "token": "UserService",
+          "service": "UserService",
+          "method": "update",
+          "source": {
+            "file": "src/app/_services/user.service.ts",
+            "line": 25
+          },
+          "arguments": [
+            "this.id!",
+            "this.form.value"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "params": false
+            },
+            "required": [
+              "id",
+              "params"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": false,
+          "schemaIssues": [
+            "Unresolved type: any",
+            "Object has callable members: Function",
+            "Object has callable members: Object"
+          ]
+        },
+        {
+          "token": "UserService",
+          "service": "UserService",
+          "method": "create",
+          "source": {
+            "file": "src/app/_services/user.service.ts",
+            "line": 21
+          },
+          "arguments": [
+            "this.form.value"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "params": false
+            },
+            "required": [
+              "params"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": false,
+          "schemaIssues": [
+            "Unresolved type: any",
+            "Object has callable members: Function",
+            "Object has callable members: Object"
+          ]
+        },
+        {
+          "paramKeys": {
+            "message": "message"
+          },
+          "token": "AlertService",
+          "service": "AlertService",
+          "method": "success",
+          "source": {
+            "file": "src/app/_services/alert.service.ts",
+            "line": 18
+          },
+          "arguments": [
+            "'User saved'",
+            "{ keepAfterRouteChange: true }"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string"
+              },
+              "options": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "autoClose": {
+                    "type": "boolean"
+                  },
+                  "keepAfterRouteChange": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "message"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        },
+        {
+          "paramKeys": {
+            "message": "message"
+          },
+          "token": "AlertService",
+          "service": "AlertService",
+          "method": "error",
+          "source": {
+            "file": "src/app/_services/alert.service.ts",
+            "line": 22
+          },
+          "arguments": [
+            "error"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string"
+              },
+              "options": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "autoClose": {
+                    "type": "boolean"
+                  },
+                  "keepAfterRouteChange": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "message"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          },
+          "title": {
+            "type": "string",
+            "enum": [
+              "Mr",
+              "Mrs",
+              "Miss",
+              "Ms"
+            ]
+          },
+          "firstName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "lastName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "email": {
+            "type": "string",
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+            "minLength": 1
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "User",
+              "Admin"
+            ]
+          },
+          "password": {
+            "anyOf": [
+              {
+                "const": ""
+              },
+              {
+                "type": "string",
+                "writeOnly": true,
+                "minLength": 6
+              }
+            ]
+          },
+          "confirmPassword": {
+            "type": "string",
+            "writeOnly": true
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "firstName",
+          "lastName",
+          "email",
+          "role"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/users#ListComponent.deleteUser:ng-component button.btn.btn-sm.btn-danger.btn-delete-user",
+      "fingerprint": "079360c0c45134b266b1f8c1ca0665ac0ac38b0368807b605977aa0784316eab",
+      "route": "/users",
+      "target": {
+        "param": "id",
+        "source": "context",
+        "path": [
+          "id"
+        ],
+        "inputSchema": {
+          "type": "string"
+        }
+      },
+      "component": "ListComponent",
+      "componentSelector": "ng-component",
+      "action": {
+        "owner": "ng-component",
+        "matchText": "Delete",
+        "kind": "button",
+        "selector": "ng-component button.btn.btn-sm.btn-danger.btn-delete-user",
+        "label": "Delete",
+        "event": "click",
+        "expression": "deleteUser(user.id)",
+        "source": {
+          "file": "src/app/users/list.component.html",
+          "line": 19
+        }
+      },
+      "fields": [],
+      "handler": "deleteUser",
+      "callPath": [
+        "ListComponent.deleteUser",
+        "UserService.delete"
+      ],
+      "bindings": [
+        {
+          "token": "UserService",
+          "service": "UserService",
+          "method": "delete",
+          "source": {
+            "file": "src/app/_services/user.service.ts",
+            "line": 29
+          },
+          "arguments": [
+            "id"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": false,
+          "schemaIssues": [
+            "Object has callable members: Function",
+            "Object has callable members: Object"
+          ]
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate",
+      "allowedRoutes": [
+        "/users/add",
+        "/users/edit/:id"
+      ]
+    }
+  ],
+  "diagnostics": []
+}

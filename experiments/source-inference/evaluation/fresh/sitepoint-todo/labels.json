@@ -1,0 +1,422 @@
+{
+  "schemaVersion": 1,
+  "projectId": "sitepoint-todo",
+  "frozenAt": "2026-11-09T20:50:37.100257+00:00",
+  "sourceOnly": true,
+  "compilerSourceReadBeforeFreeze": false,
+  "compilerManifestReadBeforeFreeze": false,
+  "repository": "https://github.com/sitepoint-editors/angular-todo-app",
+  "commit": "7069b9be885821f2811f0fed8581a37e3b21f6c8",
+  "operationPolicy": "All user-reachable business effects including initial load; forwarding component EventEmitters are one effect, not extra operations. UI contract and transport object contract are separate. No inference from compiler output.",
+  "operations": [
+    {
+      "id": "list_todos",
+      "description": "Load and render all persisted todos at the root screen",
+      "route": "/",
+      "kind": "read",
+      "trigger": {
+        "type": "navigation",
+        "path": "/",
+        "handler": "AppComponent.ngOnInit"
+      },
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "validation": [],
+      "required": [],
+      "preconditions": [
+        "API fixture supplies a synthetic todo array"
+      ],
+      "effect": {
+        "http": {
+          "method": "GET",
+          "url": "http://localhost:3000/todos"
+        },
+        "observable": [
+          "Each returned todo title is rendered in a .todo-list li",
+          "Todo complete status controls completed class and checkbox",
+          "Footer displays todos.length, including completed todos"
+        ]
+      },
+      "source": [
+        {
+          "file": "src/app/app.component.ts",
+          "lines": [
+            20,
+            28
+          ],
+          "sha256": "2d34a7559d6dc337a37adca0ae6a4ac4bb7d19d90df75fdfa251a9e446f1f07d"
+        },
+        {
+          "file": "src/app/api.service.ts",
+          "lines": [
+            20,
+            28
+          ],
+          "sha256": "7c27d0cb4fec16a58aa4fe4bf842dd60505083a32646f36516e34715d82b0f0f"
+        },
+        {
+          "file": "src/app/todo-list/todo-list.component.html",
+          "lines": [
+            1,
+            10
+          ],
+          "sha256": "45876b97b017c7729e9b0aedacc40f96edac34f497bb2dc554e0f1663f8a77b9"
+        },
+        {
+          "file": "src/app/todo-list-footer/todo-list-footer.component.html",
+          "lines": [
+            1,
+            3
+          ],
+          "sha256": "c6bf658c9b13936536987c6c53dda0885e56f088b5a46f95dd9d19ba21f2a530"
+        }
+      ],
+      "excluded": [
+        "getTodoById is unused by UI",
+        "Root navigation itself is not a separate business mutation"
+      ]
+    },
+    {
+      "id": "add_todo",
+      "description": "Add a new todo by entering a title and pressing Enter",
+      "route": "/",
+      "kind": "create",
+      "trigger": {
+        "type": "keyup.enter",
+        "selector": "input.new-todo",
+        "handler": "TodoListHeaderComponent.addTodo"
+      },
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "default": ""
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "title": "Frozen holdout task"
+      },
+      "required": [],
+      "validation": [],
+      "validationNotes": [
+        "No required, minlength, trimming, blank guard, or form validity guard exists. Blank title is accepted by source.",
+        "title is UI-bound text; default complete=false comes from Todo constructor and id is assigned by synthetic API."
+      ],
+      "preconditions": [
+        "Root screen is loaded"
+      ],
+      "effect": {
+        "http": {
+          "method": "POST",
+          "url": "http://localhost:3000/todos",
+          "body": {
+            "title": "Frozen holdout task",
+            "complete": false
+          }
+        },
+        "observable": [
+          "Response todo is appended to the visible list",
+          "Header input resets to blank",
+          "Footer count increments"
+        ]
+      },
+      "transportSchema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "complete": {
+            "type": "boolean",
+            "const": false
+          }
+        },
+        "required": [
+          "title",
+          "complete"
+        ]
+      },
+      "source": [
+        {
+          "file": "src/app/todo-list-header/todo-list-header.component.html",
+          "lines": [
+            1,
+            5
+          ],
+          "sha256": "3332e15df8ebbd8e1b9444e188eece53434f4473875d7353ceea174e8771aca0"
+        },
+        {
+          "file": "src/app/todo-list-header/todo-list-header.component.ts",
+          "lines": [
+            11,
+            22
+          ],
+          "sha256": "483c30b5d817ba70c54992ac3fd4245d7373b003b6a8f3b6760985af209dd016"
+        },
+        {
+          "file": "src/app/todo.ts",
+          "lines": [
+            1,
+            9
+          ],
+          "sha256": "be550bfa9ae24c827942cf0310329cc1bc625989442cafc0ecbe89a26d30187b"
+        },
+        {
+          "file": "src/app/app.component.ts",
+          "lines": [
+            30,
+            38
+          ],
+          "sha256": "2d34a7559d6dc337a37adca0ae6a4ac4bb7d19d90df75fdfa251a9e446f1f07d"
+        },
+        {
+          "file": "src/app/api.service.ts",
+          "lines": [
+            30,
+            37
+          ],
+          "sha256": "7c27d0cb4fec16a58aa4fe4bf842dd60505083a32646f36516e34715d82b0f0f"
+        }
+      ],
+      "excluded": [
+        "No description, status selector, id input, edit operation, or Save button exists",
+        "Direct API service create is not another UI operation"
+      ]
+    },
+    {
+      "id": "toggle_todo_complete",
+      "description": "Toggle completion of the selected existing todo",
+      "route": "/",
+      "kind": "update",
+      "trigger": {
+        "type": "click",
+        "selector": ".todo-list li input.toggle",
+        "handler": "TodoListItemComponent.toggleTodoComplete(todo)"
+      },
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "todoId": {
+            "type": "number",
+            "description": "Identity of an existing displayed row; inferred from selection, not a text input"
+          }
+        },
+        "required": [
+          "todoId"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "todoId": 1
+      },
+      "required": [
+        "todoId"
+      ],
+      "validation": [],
+      "preconditions": [
+        "Synthetic todo id 1 is displayed with complete=false",
+        "The operation is row-scoped and must choose the intended todo"
+      ],
+      "effect": {
+        "http": {
+          "method": "PUT",
+          "url": "http://localhost:3000/todos/1",
+          "body": {
+            "id": 1,
+            "title": "Read fixture article",
+            "complete": true
+          }
+        },
+        "observable": [
+          "Selected row checkbox is checked",
+          "Selected li gains completed class",
+          "Fixture persists complete=true",
+          "Repeating toggles back to false"
+        ]
+      },
+      "transportSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "title": {
+            "type": "string"
+          },
+          "complete": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "complete"
+        ]
+      },
+      "source": [
+        {
+          "file": "src/app/todo-list-item/todo-list-item.component.html",
+          "lines": [
+            1,
+            5
+          ],
+          "sha256": "9fc5ca41cf6836ac7e7898b84ca7ae731d846cbc13759cf8185a8c66a8b0b699"
+        },
+        {
+          "file": "src/app/todo-list-item/todo-list-item.component.ts",
+          "lines": [
+            11,
+            23
+          ],
+          "sha256": "db947f8d27d2d378d0d197186b7b94c24cee7feb2e3549927430391e57e2ffe8"
+        },
+        {
+          "file": "src/app/todo-list/todo-list.component.ts",
+          "lines": [
+            25,
+            27
+          ],
+          "sha256": "0103dba42813ee5ec34b33214e8b007898939a8c644cc69b30ad3a52661bfb45"
+        },
+        {
+          "file": "src/app/app.component.ts",
+          "lines": [
+            40,
+            48
+          ],
+          "sha256": "2d34a7559d6dc337a37adca0ae6a4ac4bb7d19d90df75fdfa251a9e446f1f07d"
+        },
+        {
+          "file": "src/app/todo-data.service.ts",
+          "lines": [
+            39,
+            43
+          ],
+          "sha256": "647455c1decdfdcc2f2df1a2c2f045f9d1fd169c49bd30415ee4a62f895aeadc"
+        },
+        {
+          "file": "src/app/api.service.ts",
+          "lines": [
+            48,
+            55
+          ],
+          "sha256": "7c27d0cb4fec16a58aa4fe4bf842dd60505083a32646f36516e34715d82b0f0f"
+        }
+      ],
+      "excluded": [
+        "No explicit complete=true/false form field exists; the source toggles current value",
+        "Forwarding toggleComplete EventEmitters are not separate operations",
+        "Generic updateTodo service method is not an exposed title-edit operation"
+      ]
+    },
+    {
+      "id": "delete_todo",
+      "description": "Remove the selected existing todo",
+      "route": "/",
+      "kind": "delete",
+      "trigger": {
+        "type": "click",
+        "selector": ".todo-list li button.destroy",
+        "handler": "TodoListItemComponent.removeTodo(todo)"
+      },
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "todoId": {
+            "type": "number",
+            "description": "Identity of existing displayed row; row selection context"
+          }
+        },
+        "required": [
+          "todoId"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "todoId": 2
+      },
+      "required": [
+        "todoId"
+      ],
+      "validation": [],
+      "preconditions": [
+        "Synthetic todo id 2 is displayed",
+        "Hover row to expose the CSS-hidden destroy button if needed"
+      ],
+      "effect": {
+        "http": {
+          "method": "DELETE",
+          "url": "http://localhost:3000/todos/2",
+          "body": null
+        },
+        "observable": [
+          "Selected row is removed",
+          "Other rows remain",
+          "Fixture no longer contains id 2",
+          "Footer count decrements"
+        ]
+      },
+      "source": [
+        {
+          "file": "src/app/todo-list-item/todo-list-item.component.html",
+          "lines": [
+            1,
+            5
+          ],
+          "sha256": "9fc5ca41cf6836ac7e7898b84ca7ae731d846cbc13759cf8185a8c66a8b0b699"
+        },
+        {
+          "file": "src/app/todo-list-item/todo-list-item.component.ts",
+          "lines": [
+            26,
+            28
+          ],
+          "sha256": "db947f8d27d2d378d0d197186b7b94c24cee7feb2e3549927430391e57e2ffe8"
+        },
+        {
+          "file": "src/app/todo-list/todo-list.component.ts",
+          "lines": [
+            29,
+            31
+          ],
+          "sha256": "0103dba42813ee5ec34b33214e8b007898939a8c644cc69b30ad3a52661bfb45"
+        },
+        {
+          "file": "src/app/app.component.ts",
+          "lines": [
+            50,
+            58
+          ],
+          "sha256": "2d34a7559d6dc337a37adca0ae6a4ac4bb7d19d90df75fdfa251a9e446f1f07d"
+        },
+        {
+          "file": "src/app/api.service.ts",
+          "lines": [
+            57,
+            62
+          ],
+          "sha256": "7c27d0cb4fec16a58aa4fe4bf842dd60505083a32646f36516e34715d82b0f0f"
+        }
+      ],
+      "excluded": [
+        "No bulk delete, confirmation dialog, clear-completed or undo control exists",
+        "Forwarding remove EventEmitters are one operation"
+      ]
+    }
+  ],
+  "globalExclusions": [
+    "No Angular Router is imported or configured; root app only",
+    "ApiMockService is unused in AppModule and is not the fixture",
+    "No authentication or live backend account required",
+    "Todo count is total array length, not incomplete count despite footer wording",
+    "No UI filters or todo title editing exist in this pinned checkout"
+  ]
+}

@@ -1,0 +1,771 @@
+{
+  "measuredAt": "2026-11-09T21:54:00.634Z",
+  "scope": "Static regression on previously developed seeded idioms; not an unseen-project estimate or execution test. Normalization permits source parameter-name and integer-vs-number differences; raw strict scores remain separate.",
+  "compilerDigest": "5857c384efcc28da0f766f1f13256a0066f67f5bb8fec631670a65c0a6d1c33b",
+  "generatorDigest": "cf7bd79e0e81772e998961174d370b65737dbc1c7c2850880c929b4d973200c5",
+  "truthDigest": "c016b3f438aa7c923829bd55d64cb8940d86b02dcda1f804d3b07b856cdc4069",
+  "totals": {
+    "ops": 31,
+    "found": 31,
+    "runnable": 31,
+    "strict": 24,
+    "lenient": 31,
+    "decoys": 13,
+    "decoyHits": 0,
+    "extra": 0
+  },
+  "byIdiom": [
+    [
+      "tab-group",
+      {
+        "ops": 2,
+        "found": 2,
+        "runnable": 2,
+        "strict": 2,
+        "lenient": 2
+      }
+    ],
+    [
+      "detail-route-action",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "signal-component",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "mat-table-row-action",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 1
+      }
+    ],
+    [
+      "login-form",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "select-setting",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "reactive-form",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 1
+      }
+    ],
+    [
+      "toggle-setting",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "reactive-mat-select-checkbox",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "list-row-action-ngfor",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 1
+      }
+    ],
+    [
+      "paginator",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "child-output-parent-handler",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "conditional-validator-route",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "number-stepper",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "radio-setting",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "query-param-init",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "template-form-ngmodel",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 1
+      }
+    ],
+    [
+      "mat-sort",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "confirm-delete",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "shared-form-new-edit",
+      {
+        "ops": 2,
+        "found": 2,
+        "runnable": 2,
+        "strict": 0,
+        "lenient": 2
+      }
+    ],
+    [
+      "list-row-action-at-for",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "search-input",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "inline-rename",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "dialog-form",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "bulk-action",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "nested-control-flow",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "logout-button",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "button-toggle-setting",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "template-fields-click",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 1
+      }
+    ]
+  ],
+  "miss": [],
+  "strictFailures": [
+    {
+      "component": "ArchiveTicketGridComponent",
+      "handler": "onCancel",
+      "idiom": "mat-table-row-action",
+      "generatedSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "goldSchema": {
+        "type": "object",
+        "properties": {
+          "ticketId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "ticketId"
+        ],
+        "additionalProperties": false
+      },
+      "failedChecks": [
+        "valid representative input"
+      ]
+    },
+    {
+      "component": "InternalCourseEditorComponent",
+      "handler": "onSubmit",
+      "idiom": "reactive-form",
+      "generatedSchema": {
+        "type": "object",
+        "properties": {
+          "sectionId": {
+            "type": "string",
+            "pattern": "^(?:\\d{6})$",
+            "minLength": 1
+          },
+          "courseTitle": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 80
+          },
+          "courseCode": {
+            "type": "string",
+            "pattern": "^(?:[A-Z]{2}\\d{4})$",
+            "minLength": 1
+          },
+          "credits": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 6
+          }
+        },
+        "required": [
+          "sectionId",
+          "courseTitle",
+          "courseCode",
+          "credits"
+        ],
+        "additionalProperties": false
+      },
+      "goldSchema": {
+        "type": "object",
+        "properties": {
+          "sectionId": {
+            "type": "string",
+            "pattern": "^\\d{6}$"
+          },
+          "courseTitle": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 80
+          },
+          "courseCode": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}\\d{4}$"
+          },
+          "credits": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 6
+          }
+        },
+        "required": [
+          "sectionId",
+          "courseTitle",
+          "courseCode",
+          "credits"
+        ],
+        "additionalProperties": false
+      },
+      "failedChecks": [
+        "fractional credits"
+      ]
+    },
+    {
+      "component": "InternalInvoiceOverviewComponent",
+      "handler": "resolveInvoice",
+      "idiom": "list-row-action-ngfor",
+      "generatedSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "goldSchema": {
+        "type": "object",
+        "properties": {
+          "invoiceId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "invoiceId"
+        ],
+        "additionalProperties": false
+      },
+      "failedChecks": [
+        "valid representative input"
+      ]
+    },
+    {
+      "component": "PendingRecipeIntakeComponent",
+      "handler": "addRecipe",
+      "idiom": "template-form-ngmodel",
+      "generatedSchema": {
+        "type": "object",
+        "properties": {
+          "dishName": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 50
+          },
+          "recipeCode": {
+            "type": "string",
+            "pattern": "^(?:[A-Z]{3}-\\d{3})$",
+            "minLength": 1
+          },
+          "servings": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 24
+          },
+          "recipeTitle": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 100
+          }
+        },
+        "required": [
+          "dishName",
+          "recipeCode",
+          "servings",
+          "recipeTitle"
+        ],
+        "additionalProperties": false
+      },
+      "goldSchema": {
+        "type": "object",
+        "properties": {
+          "dishName": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 50
+          },
+          "recipeCode": {
+            "type": "string",
+            "pattern": "^[A-Z]{3}-\\d{3}$"
+          },
+          "servings": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 24
+          },
+          "recipeTitle": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 100
+          }
+        },
+        "required": [
+          "dishName",
+          "recipeCode",
+          "servings",
+          "recipeTitle"
+        ],
+        "additionalProperties": false
+      },
+      "failedChecks": [
+        "fractional servings"
+      ]
+    },
+    {
+      "component": "UrgentBookingUpsertComponent",
+      "handler": "submit",
+      "idiom": "shared-form-new-edit",
+      "generatedSchema": {
+        "type": "object",
+        "properties": {
+          "bookingRef": {
+            "type": "string",
+            "pattern": "^(?:[A-Z]{2}\\d{4})$",
+            "minLength": 1
+          },
+          "guestName": {
+            "type": "string",
+            "minLength": 4,
+            "maxLength": 100
+          },
+          "meal": {
+            "type": "string",
+            "enum": [
+              "none",
+              "breakfast",
+              "half-board"
+            ]
+          },
+          "guests": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 20
+          },
+          "notes": {
+            "type": "string",
+            "maxLength": 300
+          }
+        },
+        "required": [
+          "bookingRef",
+          "guestName",
+          "meal",
+          "guests"
+        ],
+        "additionalProperties": false
+      },
+      "goldSchema": {
+        "type": "object",
+        "properties": {
+          "bookingRef": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}\\d{4}$"
+          },
+          "guestName": {
+            "type": "string",
+            "minLength": 4,
+            "maxLength": 100
+          },
+          "meal": {
+            "type": "string",
+            "enum": [
+              "none",
+              "breakfast",
+              "half-board"
+            ]
+          },
+          "guests": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 20
+          },
+          "notes": {
+            "type": "string",
+            "maxLength": 300
+          }
+        },
+        "required": [
+          "bookingRef",
+          "guestName",
+          "meal",
+          "guests"
+        ],
+        "additionalProperties": false
+      },
+      "failedChecks": [
+        "fractional guests"
+      ]
+    },
+    {
+      "component": "UrgentBookingUpsertComponent",
+      "handler": "submit",
+      "idiom": "shared-form-new-edit",
+      "generatedSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          },
+          "bookingRef": {
+            "type": "string",
+            "pattern": "^(?:[A-Z]{2}\\d{4})$",
+            "minLength": 1
+          },
+          "guestName": {
+            "type": "string",
+            "minLength": 4,
+            "maxLength": 100
+          },
+          "meal": {
+            "type": "string",
+            "enum": [
+              "none",
+              "breakfast",
+              "half-board"
+            ]
+          },
+          "guests": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 20
+          },
+          "notes": {
+            "type": "string",
+            "maxLength": 300
+          }
+        },
+        "required": [
+          "id",
+          "bookingRef",
+          "guestName",
+          "meal",
+          "guests"
+        ],
+        "additionalProperties": false
+      },
+      "goldSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "bookingRef": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}\\d{4}$"
+          },
+          "guestName": {
+            "type": "string",
+            "minLength": 4,
+            "maxLength": 100
+          },
+          "meal": {
+            "type": "string",
+            "enum": [
+              "none",
+              "breakfast",
+              "half-board"
+            ]
+          },
+          "guests": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 20
+          },
+          "notes": {
+            "type": "string",
+            "maxLength": 300
+          }
+        },
+        "required": [
+          "id",
+          "bookingRef",
+          "guestName",
+          "meal",
+          "guests"
+        ],
+        "additionalProperties": false
+      },
+      "failedChecks": [
+        "fractional guests"
+      ]
+    },
+    {
+      "component": "RegionalTicketPanelComponent",
+      "handler": "saveDraft",
+      "idiom": "template-fields-click",
+      "generatedSchema": {
+        "type": "object",
+        "properties": {
+          "reporterEmail": {
+            "type": "string",
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+            "minLength": 1,
+            "allOf": [
+              {
+                "pattern": "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$"
+              }
+            ]
+          },
+          "details": {
+            "type": "string",
+            "maxLength": 500
+          },
+          "reporterName": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 80
+          },
+          "severity": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 4
+          }
+        },
+        "required": [
+          "reporterEmail",
+          "reporterName",
+          "severity"
+        ],
+        "additionalProperties": false
+      },
+      "goldSchema": {
+        "type": "object",
+        "properties": {
+          "reporterEmail": {
+            "type": "string",
+            "format": "email"
+          },
+          "details": {
+            "type": "string",
+            "maxLength": 500
+          },
+          "reporterName": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 80
+          },
+          "severity": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4
+          }
+        },
+        "required": [
+          "reporterEmail",
+          "reporterName",
+          "severity"
+        ],
+        "additionalProperties": false
+      },
+      "failedChecks": [
+        "fractional severity"
+      ]
+    }
+  ]
+}

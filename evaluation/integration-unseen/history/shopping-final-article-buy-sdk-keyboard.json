@@ -1,0 +1,1032 @@
+{
+  "reportKind": "integration-mcp-replay",
+  "startedAt": "2026-11-10T11:15:03.557Z",
+  "mode": "mcp",
+  "transport": "native-ui",
+  "node": "v24.15.0",
+  "fixedBrowserTime": "2026-11-10T12:00:00Z",
+  "externalNetwork": "All origins blocked except designated local app; /api handled by deterministic in-process source-contract fixture.",
+  "sourceOverlays": [],
+  "frozenInputRewrites": [],
+  "harnessSha256": {
+    "run.mjs": "a74d8e52b31c3395812b2b98633d266920a6d856905ed1aa2bbb6595ae86a622",
+    "fixtures.mjs": "a1aae6c88be66e8d5c9863b5f48367391dae0fc9e13665ae1d6161380e2c74c2",
+    "cases.mjs": "bd4e615be4817518f0d3a1184bf9c157d566438915b086c23ef8d52aa2a0ace1",
+    "oracles.mjs": "77903660f1fa4839bc780bd70cc2fb530cf0ae28ac9a8d4450c7b2342d4313f1",
+    "mcp-driver.mjs": "57e0bf836da0e58708db217aac96bdfaa477039a7fc41a02e20bcd25c0df95b4",
+    "evidence.mjs": "e0cca463021dc4a75a472d57d8c7f694559097f1efee02068abc3f49d4c5f9a7"
+  },
+  "projects": [
+    {
+      "id": "shopping",
+      "commit": "3464f15ad53ede4de5673415ca9de68070bf78a1",
+      "stage": {
+        "directory": "/tmp/integration-unseen-shopping-probe-final-checkbox",
+        "manifestSha256": "e2c58c798b1b1844ab6f35d4dc989e623bfeb2c3d7254b54ab921ffeb92bac97",
+        "runtimeModule": "/private/tmp/integration-unseen-shopping-probe-final-checkbox/src/angular-mcp.generated.ts",
+        "runtimeSha256": "daf579a9d29076e9664889f48a50df48a64191520db0ab1bab2838fd42a6ee26"
+      },
+      "integrity": {
+        "frozen": true,
+        "files": 106,
+        "labelsSha256": "42566e776738d25d6bee64a734111f325177d35d6da7b6f7196a1c6e9c329410"
+      },
+      "cases": [
+        {
+          "id": "article-buy",
+          "operation": "article-buy",
+          "kind": "positive",
+          "frozenInput": {},
+          "targetContext": {
+            "listId": 101,
+            "articleId": 201,
+            "selection": "unique source-visible article row Unseen milk"
+          },
+          "calls": [
+            {
+              "name": "angular_list_nodes",
+              "args": {},
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "[{\"sourceId\":\"ngmcp_861cbea91b681d3df8eaf989\",\"instanceId\":\"ngmcp_861cbea91b681d3df8eaf989@1kve5u0-125tsqt-9g0msb-1qeqzjp:1\",\"kind\":\"action\",\"tagName\":\"button\",\"aria\":{\"expanded\":\"false\",\"controls\":\"mobile-menu\"},\"clickOrigin\":\"authored\",\"tabIndex\":0,\"keyboardFocusable\":true,\"events\":[\"click\"],\"label\":\"\",\"visible\":false,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_2cbbded16163ad27e80e7c43\",\"instanceId\":\"ngmcp_2cbbded16163ad27e80e7c43@1kve5u0-125tsqt-9g0msb-1qeqzjp:2\",\"kind\":\"action\",\"tagName\":\"a\",\"clickOrigin\":\"native-ui\",\"tabIndex\":0,\"keyboardFocusable\":true,\"events\":[],\"label\":\"\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_ceaad68d23638db8ed82634c\",\"instanceId\":\"ngmcp_ceaad68d23638db8ed82634c@1kve5u0-125tsqt-9g0msb-1qeqzjp:3\",\"kind\":\"action\",\"tagName\":\"a\",\"clickOrigin\":\"native-ui\",\"tabIndex\":0,\"keyboardFocusable\":true,\"events\":[],\"label\":\"\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_79b836a9a64d072408340eb1\",\"instanceId\":\"ngmcp_79b836a9a64d072408340eb1@1kve5u0-125tsqt-9g0msb-1qeqzjp:4\",\"kind\":\"action\",\"tagName\":\"a\",\"clickOrigin\":\"native-ui\",\"tabIndex\":0,\"keyboardFocusable\":true,\"events\":[],\"label\":\"Übersicht\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_2d2a422f366fbcdfa3b24070\",\"instanceId\":\"ngmcp_2d2a422f366fbcdfa3b24070@1kve5u0-125tsqt-9g0msb-1qeqzjp:5\",\"kind\":\"action\",\"tagName\":\"a\",\"clickOrigin\":\"native-ui\",\"tabIndex\":0,\"keyboardFocusable\":true,\"events\":[],\"label\":\"Einkaufszettel\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_561fe1046ba561cdb6cb0821\",\"instanceId\":\"ngmcp_561fe1046ba561cdb6cb0821@1kve5u0-125tsqt-9g0msb-1qeqzjp:6\",\"kind\":\"action\",\"tagName\":\"a\",\"clickOrigin\":\"native-ui\",\"tabIndex\":0,\"keyboardFocusable\":true,\"events\":[],\"label\":\"Archiv\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_3d0e2acd99da754ab03a92ff\",\"instanceId\":\"ngmcp_3d0e2acd99da754ab03a92ff@1kve5u0-125tsqt-9g0msb-1qeqzjp:8\",\"kind\":\"action\",\"tagName\":\"div\",\"clickOrigin\":\"authored\",\"tabIndex\":-1,\"keyboardFocusable\":false,\"events\":[\"click\"],\"label\":\"\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_495baed709b68555855a42c2\",\"instanceId\":\"ngmcp_495baed709b68555855a42c2@1kve5u0-125tsqt-9g0msb-1qeqzjp:10\",\"kind\":\"action\",\"tagName\":\"a\",\"clickOrigin\":\"native-ui\",\"tabIndex\":0,\"keyboardFocusable\":true,\"events\":[],\"label\":\"Userverwaltung\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_661f064e64f832a09149ef0d\",\"instanceId\":\"ngmcp_661f064e64f832a09149ef0d@1kve5u0-125tsqt-9g0msb-1qeqzjp:11\",\"kind\":\"action\",\"tagName\":\"button\",\"clickOrigin\":\"native-ui\",\"tabIndex\":0,\"keyboardFocusable\":true,\"events\":[],\"label\":\"\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_661f064e64f832a09149ef0d\",\"instanceId\":\"ngmcp_661f064e64f832a09149ef0d@1kve5u0-125tsqt-9g0msb-1qeqzjp:12\",\"kind\":\"action\",\"tagName\":\"button\",\"clickOrigin\":\"native-ui\",\"tabIndex\":0,\"keyboardFocusable\":true,\"events\":[],\"label\":\"\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_bfb65bdc059642369cf252b2\",\"instanceId\":\"ngmcp_bfb65bdc059642369cf252b2@1kve5u0-125tsqt-9g0msb-1qeqzjp:13\",\"kind\":\"action\",\"tagName\":\"button\",\"aria\":{\"expanded\":\"true\"},\"clickOrigin\":\"authored\",\"tabIndex\":0,\"keyboardFocusable\":true,\"events\":[\"click\"],\"label\":\"\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_b3e6766e27fbb681f7194255\",\"instanceId\":\"ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:14\",\"kind\":\"control\",\"tagName\":\"p-checkbox\",\"tabIndex\":-1,\"keyboardFocusable\":false,\"events\":[\"onChange\"],\"label\":\"\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"fill\"],\"validation\":{\"status\":\"valid\",\"fields\":[{\"sourceId\":\"ngmcp_b3e6766e27fbb681f7194255\",\"instanceId\":\"ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:14\",\"path\":[\"\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[]},\"schema\":{\"type\":\"boolean\"},\"value\":false,\"modelKind\":\"boolean\",\"modelValue\":false,\"path\":[\"\"],\"transport\":\"native-ui\",\"customAccessor\":true,\"fillModes\":[\"input\"],\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_b3e6766e27fbb681f7194255\",\"instanceId\":\"ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:15\",\"kind\":\"control\",\"tagName\":\"p-checkbox\",\"tabIndex\":-1,\"keyboardFocusable\":false,\"events\":[\"onChange\"],\"label\":\"\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"fill\"],\"validation\":{\"status\":\"valid\",\"fields\":[{\"sourceId\":\"ngmcp_b3e6766e27fbb681f7194255\",\"instanceId\":\"ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:15\",\"path\":[\"\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[]},\"schema\":{\"type\":\"boolean\"},\"value\":false,\"modelKind\":\"boolean\",\"modelValue\":false,\"path\":[\"\"],\"transport\":\"native-ui\",\"customAccessor\":true,\"fillModes\":[\"input\"],\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_bfb65bdc059642369cf252b2\",\"instanceId\":\"ngmcp_bfb65bdc059642369cf252b2@1kve5u0-125tsqt-9g0msb-1qeqzjp:16\",\"kind\":\"action\",\"tagName\":\"button\",\"aria\":{\"expanded\":\"true\"},\"clickOrigin\":\"authored\",\"tabIndex\":0,\"keyboardFocusable\":true,\"events\":[\"click\"],\"label\":\"\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_b3e6766e27fbb681f7194255\",\"instanceId\":\"ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:17\",\"kind\":\"control\",\"tagName\":\"p-checkbox\",\"tabIndex\":-1,\"keyboardFocusable\":false,\"events\":[\"onChange\"],\"label\":\"\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"fill\"],\"validation\":{\"status\":\"valid\",\"fields\":[{\"sourceId\":\"ngmcp_b3e6766e27fbb681f7194255\",\"instanceId\":\"ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:17\",\"path\":[\"\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[]},\"schema\":{\"type\":\"boolean\"},\"value\":false,\"modelKind\":\"boolean\",\"modelValue\":false,\"path\":[\"\"],\"transport\":\"native-ui\",\"customAccessor\":true,\"fillModes\":[\"input\"],\"provenance\":\"compiler\"},{\"sourceId\":\"runtime-dom:w7ubaa-1fdyj5l-rmmymg-ckkz29:1\",\"instanceId\":\"runtime-dom:w7ubaa-1fdyj5l-rmmymg-ckkz29:1@1kve5u0-125tsqt-9g0msb-1qeqzjp:18\",\"kind\":\"element\",\"tagName\":\"span\",\"tabIndex\":0,\"keyboardFocusable\":true,\"events\":[],\"label\":\"Unseen milk\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"runtime-dom\"},{\"sourceId\":\"runtime-dom:w7ubaa-1fdyj5l-rmmymg-ckkz29:2\",\"instanceId\":\"runtime-dom:w7ubaa-1fdyj5l-rmmymg-ckkz29:2@1kve5u0-125tsqt-9g0msb-1qeqzjp:19\",\"kind\":\"element\",\"tagName\":\"span\",\"tabIndex\":0,\"keyboardFocusable\":true,\"events\":[],\"label\":\"Unseen bread\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"runtime-dom\"},{\"sourceId\":\"runtime-dom:w7ubaa-1fdyj5l-rmmymg-ckkz29:3\",\"instanceId\":\"runtime-dom:w7ubaa-1fdyj5l-rmmymg-ckkz29:3@1kve5u0-125tsqt-9g0msb-1qeqzjp:20\",\"kind\":\"element\",\"tagName\":\"span\",\"tabIndex\":0,\"keyboardFocusable\":true,\"events\":[],\"label\":\"Unseen untouched apple\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"runtime-dom\"}]"
+                  }
+                ],
+                "structuredContent": {
+                  "nodes": [
+                    {
+                      "sourceId": "ngmcp_861cbea91b681d3df8eaf989",
+                      "instanceId": "ngmcp_861cbea91b681d3df8eaf989@1kve5u0-125tsqt-9g0msb-1qeqzjp:1",
+                      "kind": "action",
+                      "tagName": "button",
+                      "aria": {
+                        "expanded": "false",
+                        "controls": "mobile-menu"
+                      },
+                      "clickOrigin": "authored",
+                      "tabIndex": 0,
+                      "keyboardFocusable": true,
+                      "events": [
+                        "click"
+                      ],
+                      "label": "",
+                      "visible": false,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_2cbbded16163ad27e80e7c43",
+                      "instanceId": "ngmcp_2cbbded16163ad27e80e7c43@1kve5u0-125tsqt-9g0msb-1qeqzjp:2",
+                      "kind": "action",
+                      "tagName": "a",
+                      "clickOrigin": "native-ui",
+                      "tabIndex": 0,
+                      "keyboardFocusable": true,
+                      "events": [],
+                      "label": "",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_ceaad68d23638db8ed82634c",
+                      "instanceId": "ngmcp_ceaad68d23638db8ed82634c@1kve5u0-125tsqt-9g0msb-1qeqzjp:3",
+                      "kind": "action",
+                      "tagName": "a",
+                      "clickOrigin": "native-ui",
+                      "tabIndex": 0,
+                      "keyboardFocusable": true,
+                      "events": [],
+                      "label": "",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_79b836a9a64d072408340eb1",
+                      "instanceId": "ngmcp_79b836a9a64d072408340eb1@1kve5u0-125tsqt-9g0msb-1qeqzjp:4",
+                      "kind": "action",
+                      "tagName": "a",
+                      "clickOrigin": "native-ui",
+                      "tabIndex": 0,
+                      "keyboardFocusable": true,
+                      "events": [],
+                      "label": "Übersicht",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_2d2a422f366fbcdfa3b24070",
+                      "instanceId": "ngmcp_2d2a422f366fbcdfa3b24070@1kve5u0-125tsqt-9g0msb-1qeqzjp:5",
+                      "kind": "action",
+                      "tagName": "a",
+                      "clickOrigin": "native-ui",
+                      "tabIndex": 0,
+                      "keyboardFocusable": true,
+                      "events": [],
+                      "label": "Einkaufszettel",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_561fe1046ba561cdb6cb0821",
+                      "instanceId": "ngmcp_561fe1046ba561cdb6cb0821@1kve5u0-125tsqt-9g0msb-1qeqzjp:6",
+                      "kind": "action",
+                      "tagName": "a",
+                      "clickOrigin": "native-ui",
+                      "tabIndex": 0,
+                      "keyboardFocusable": true,
+                      "events": [],
+                      "label": "Archiv",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_3d0e2acd99da754ab03a92ff",
+                      "instanceId": "ngmcp_3d0e2acd99da754ab03a92ff@1kve5u0-125tsqt-9g0msb-1qeqzjp:8",
+                      "kind": "action",
+                      "tagName": "div",
+                      "clickOrigin": "authored",
+                      "tabIndex": -1,
+                      "keyboardFocusable": false,
+                      "events": [
+                        "click"
+                      ],
+                      "label": "",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_495baed709b68555855a42c2",
+                      "instanceId": "ngmcp_495baed709b68555855a42c2@1kve5u0-125tsqt-9g0msb-1qeqzjp:10",
+                      "kind": "action",
+                      "tagName": "a",
+                      "clickOrigin": "native-ui",
+                      "tabIndex": 0,
+                      "keyboardFocusable": true,
+                      "events": [],
+                      "label": "Userverwaltung",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_661f064e64f832a09149ef0d",
+                      "instanceId": "ngmcp_661f064e64f832a09149ef0d@1kve5u0-125tsqt-9g0msb-1qeqzjp:11",
+                      "kind": "action",
+                      "tagName": "button",
+                      "clickOrigin": "native-ui",
+                      "tabIndex": 0,
+                      "keyboardFocusable": true,
+                      "events": [],
+                      "label": "",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_661f064e64f832a09149ef0d",
+                      "instanceId": "ngmcp_661f064e64f832a09149ef0d@1kve5u0-125tsqt-9g0msb-1qeqzjp:12",
+                      "kind": "action",
+                      "tagName": "button",
+                      "clickOrigin": "native-ui",
+                      "tabIndex": 0,
+                      "keyboardFocusable": true,
+                      "events": [],
+                      "label": "",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_bfb65bdc059642369cf252b2",
+                      "instanceId": "ngmcp_bfb65bdc059642369cf252b2@1kve5u0-125tsqt-9g0msb-1qeqzjp:13",
+                      "kind": "action",
+                      "tagName": "button",
+                      "aria": {
+                        "expanded": "true"
+                      },
+                      "clickOrigin": "authored",
+                      "tabIndex": 0,
+                      "keyboardFocusable": true,
+                      "events": [
+                        "click"
+                      ],
+                      "label": "",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_b3e6766e27fbb681f7194255",
+                      "instanceId": "ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:14",
+                      "kind": "control",
+                      "tagName": "p-checkbox",
+                      "tabIndex": -1,
+                      "keyboardFocusable": false,
+                      "events": [
+                        "onChange"
+                      ],
+                      "label": "",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "fill"
+                      ],
+                      "validation": {
+                        "status": "valid",
+                        "fields": [
+                          {
+                            "sourceId": "ngmcp_b3e6766e27fbb681f7194255",
+                            "instanceId": "ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:14",
+                            "path": [
+                              ""
+                            ],
+                            "status": "VALID",
+                            "updateOn": "change",
+                            "errors": []
+                          }
+                        ],
+                        "groups": []
+                      },
+                      "schema": {
+                        "type": "boolean"
+                      },
+                      "value": false,
+                      "modelKind": "boolean",
+                      "modelValue": false,
+                      "path": [
+                        ""
+                      ],
+                      "transport": "native-ui",
+                      "customAccessor": true,
+                      "fillModes": [
+                        "input"
+                      ],
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_b3e6766e27fbb681f7194255",
+                      "instanceId": "ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:15",
+                      "kind": "control",
+                      "tagName": "p-checkbox",
+                      "tabIndex": -1,
+                      "keyboardFocusable": false,
+                      "events": [
+                        "onChange"
+                      ],
+                      "label": "",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "fill"
+                      ],
+                      "validation": {
+                        "status": "valid",
+                        "fields": [
+                          {
+                            "sourceId": "ngmcp_b3e6766e27fbb681f7194255",
+                            "instanceId": "ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:15",
+                            "path": [
+                              ""
+                            ],
+                            "status": "VALID",
+                            "updateOn": "change",
+                            "errors": []
+                          }
+                        ],
+                        "groups": []
+                      },
+                      "schema": {
+                        "type": "boolean"
+                      },
+                      "value": false,
+                      "modelKind": "boolean",
+                      "modelValue": false,
+                      "path": [
+                        ""
+                      ],
+                      "transport": "native-ui",
+                      "customAccessor": true,
+                      "fillModes": [
+                        "input"
+                      ],
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_bfb65bdc059642369cf252b2",
+                      "instanceId": "ngmcp_bfb65bdc059642369cf252b2@1kve5u0-125tsqt-9g0msb-1qeqzjp:16",
+                      "kind": "action",
+                      "tagName": "button",
+                      "aria": {
+                        "expanded": "true"
+                      },
+                      "clickOrigin": "authored",
+                      "tabIndex": 0,
+                      "keyboardFocusable": true,
+                      "events": [
+                        "click"
+                      ],
+                      "label": "",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_b3e6766e27fbb681f7194255",
+                      "instanceId": "ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:17",
+                      "kind": "control",
+                      "tagName": "p-checkbox",
+                      "tabIndex": -1,
+                      "keyboardFocusable": false,
+                      "events": [
+                        "onChange"
+                      ],
+                      "label": "",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "fill"
+                      ],
+                      "validation": {
+                        "status": "valid",
+                        "fields": [
+                          {
+                            "sourceId": "ngmcp_b3e6766e27fbb681f7194255",
+                            "instanceId": "ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:17",
+                            "path": [
+                              ""
+                            ],
+                            "status": "VALID",
+                            "updateOn": "change",
+                            "errors": []
+                          }
+                        ],
+                        "groups": []
+                      },
+                      "schema": {
+                        "type": "boolean"
+                      },
+                      "value": false,
+                      "modelKind": "boolean",
+                      "modelValue": false,
+                      "path": [
+                        ""
+                      ],
+                      "transport": "native-ui",
+                      "customAccessor": true,
+                      "fillModes": [
+                        "input"
+                      ],
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "runtime-dom:w7ubaa-1fdyj5l-rmmymg-ckkz29:1",
+                      "instanceId": "runtime-dom:w7ubaa-1fdyj5l-rmmymg-ckkz29:1@1kve5u0-125tsqt-9g0msb-1qeqzjp:18",
+                      "kind": "element",
+                      "tagName": "span",
+                      "tabIndex": 0,
+                      "keyboardFocusable": true,
+                      "events": [],
+                      "label": "Unseen milk",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "runtime-dom"
+                    },
+                    {
+                      "sourceId": "runtime-dom:w7ubaa-1fdyj5l-rmmymg-ckkz29:2",
+                      "instanceId": "runtime-dom:w7ubaa-1fdyj5l-rmmymg-ckkz29:2@1kve5u0-125tsqt-9g0msb-1qeqzjp:19",
+                      "kind": "element",
+                      "tagName": "span",
+                      "tabIndex": 0,
+                      "keyboardFocusable": true,
+                      "events": [],
+                      "label": "Unseen bread",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "runtime-dom"
+                    },
+                    {
+                      "sourceId": "runtime-dom:w7ubaa-1fdyj5l-rmmymg-ckkz29:3",
+                      "instanceId": "runtime-dom:w7ubaa-1fdyj5l-rmmymg-ckkz29:3@1kve5u0-125tsqt-9g0msb-1qeqzjp:20",
+                      "kind": "element",
+                      "tagName": "span",
+                      "tabIndex": 0,
+                      "keyboardFocusable": true,
+                      "events": [],
+                      "label": "Unseen untouched apple",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "runtime-dom"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_describe_node",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:14"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"sourceId\":\"ngmcp_b3e6766e27fbb681f7194255\",\"instanceId\":\"ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:14\",\"kind\":\"control\",\"tagName\":\"p-checkbox\",\"tabIndex\":-1,\"keyboardFocusable\":false,\"events\":[\"onChange\"],\"label\":\"\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"fill\"],\"validation\":{\"status\":\"valid\",\"fields\":[{\"sourceId\":\"ngmcp_b3e6766e27fbb681f7194255\",\"instanceId\":\"ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:14\",\"path\":[\"\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[]},\"schema\":{\"type\":\"boolean\"},\"value\":false,\"modelKind\":\"boolean\",\"modelValue\":false,\"path\":[\"\"],\"transport\":\"native-ui\",\"customAccessor\":true,\"fillModes\":[\"input\"],\"provenance\":\"compiler\"}"
+                  }
+                ],
+                "structuredContent": {
+                  "sourceId": "ngmcp_b3e6766e27fbb681f7194255",
+                  "instanceId": "ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:14",
+                  "kind": "control",
+                  "tagName": "p-checkbox",
+                  "tabIndex": -1,
+                  "keyboardFocusable": false,
+                  "events": [
+                    "onChange"
+                  ],
+                  "label": "",
+                  "visible": true,
+                  "disabled": false,
+                  "readonly": false,
+                  "operations": [
+                    "fill"
+                  ],
+                  "validation": {
+                    "status": "valid",
+                    "fields": [
+                      {
+                        "sourceId": "ngmcp_b3e6766e27fbb681f7194255",
+                        "instanceId": "ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:14",
+                        "path": [
+                          ""
+                        ],
+                        "status": "VALID",
+                        "updateOn": "change",
+                        "errors": []
+                      }
+                    ],
+                    "groups": []
+                  },
+                  "schema": {
+                    "type": "boolean"
+                  },
+                  "value": false,
+                  "modelKind": "boolean",
+                  "modelValue": false,
+                  "path": [
+                    ""
+                  ],
+                  "transport": "native-ui",
+                  "customAccessor": true,
+                  "fillModes": [
+                    "input"
+                  ],
+                  "provenance": "compiler"
+                }
+              }
+            },
+            {
+              "transportNormalization": {
+                "target": {
+                  "instanceId": "ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:14"
+                },
+                "original": "activate original checkbox",
+                "value": true,
+                "basis": "Current live Boolean UI contract; explicit desired state for original toggle"
+              }
+            },
+            {
+              "name": "angular_fill",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:14"
+                },
+                "value": true
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"status\":\"not-dispatched\",\"operation\":\"fill\",\"target\":{\"sourceId\":\"ngmcp_b3e6766e27fbb681f7194255\",\"instanceId\":\"ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:14\"},\"changed\":[],\"values\":[],\"validation\":{\"status\":\"valid\",\"fields\":[{\"sourceId\":\"ngmcp_b3e6766e27fbb681f7194255\",\"instanceId\":\"ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:14\",\"path\":[\"\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[]},\"url\":\"http://127.0.0.1:4383/home\",\"businessStatus\":\"unknown\",\"reason\":\"The hidden checkbox or radio needs one visible associated label or an exact control-owned checkbox affordance\"}"
+                  }
+                ],
+                "structuredContent": {
+                  "status": "not-dispatched",
+                  "operation": "fill",
+                  "target": {
+                    "sourceId": "ngmcp_b3e6766e27fbb681f7194255",
+                    "instanceId": "ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:14"
+                  },
+                  "changed": [],
+                  "values": [],
+                  "validation": {
+                    "status": "valid",
+                    "fields": [
+                      {
+                        "sourceId": "ngmcp_b3e6766e27fbb681f7194255",
+                        "instanceId": "ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:14",
+                        "path": [
+                          ""
+                        ],
+                        "status": "VALID",
+                        "updateOn": "change",
+                        "errors": []
+                      }
+                    ],
+                    "groups": []
+                  },
+                  "url": "http://127.0.0.1:4383/home",
+                  "businessStatus": "unknown",
+                  "reason": "The hidden checkbox or radio needs one visible associated label or an exact control-owned checkbox affordance"
+                },
+                "isError": true
+              }
+            },
+            {
+              "name": "angular_describe_node",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:14"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"sourceId\":\"ngmcp_b3e6766e27fbb681f7194255\",\"instanceId\":\"ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:14\",\"kind\":\"control\",\"tagName\":\"p-checkbox\",\"tabIndex\":-1,\"keyboardFocusable\":false,\"events\":[\"onChange\"],\"label\":\"\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"fill\"],\"validation\":{\"status\":\"valid\",\"fields\":[{\"sourceId\":\"ngmcp_b3e6766e27fbb681f7194255\",\"instanceId\":\"ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:14\",\"path\":[\"\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[]},\"schema\":{\"type\":\"boolean\"},\"value\":false,\"modelKind\":\"boolean\",\"modelValue\":false,\"path\":[\"\"],\"transport\":\"native-ui\",\"customAccessor\":true,\"fillModes\":[\"input\"],\"provenance\":\"compiler\"}"
+                  }
+                ],
+                "structuredContent": {
+                  "sourceId": "ngmcp_b3e6766e27fbb681f7194255",
+                  "instanceId": "ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:14",
+                  "kind": "control",
+                  "tagName": "p-checkbox",
+                  "tabIndex": -1,
+                  "keyboardFocusable": false,
+                  "events": [
+                    "onChange"
+                  ],
+                  "label": "",
+                  "visible": true,
+                  "disabled": false,
+                  "readonly": false,
+                  "operations": [
+                    "fill"
+                  ],
+                  "validation": {
+                    "status": "valid",
+                    "fields": [
+                      {
+                        "sourceId": "ngmcp_b3e6766e27fbb681f7194255",
+                        "instanceId": "ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:14",
+                        "path": [
+                          ""
+                        ],
+                        "status": "VALID",
+                        "updateOn": "change",
+                        "errors": []
+                      }
+                    ],
+                    "groups": []
+                  },
+                  "schema": {
+                    "type": "boolean"
+                  },
+                  "value": false,
+                  "modelKind": "boolean",
+                  "modelValue": false,
+                  "path": [
+                    ""
+                  ],
+                  "transport": "native-ui",
+                  "customAccessor": true,
+                  "fillModes": [
+                    "input"
+                  ],
+                  "provenance": "compiler"
+                }
+              }
+            },
+            {
+              "keyboardTransport": {
+                "target": {
+                  "instanceId": "ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:14"
+                },
+                "key": "Space",
+                "desired": true,
+                "observed": false,
+                "basis": "Exact source native Boolean CVA; pointer refused without dispatch, original keyboard route"
+              }
+            },
+            {
+              "name": "angular_press_key",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:14"
+                },
+                "key": "Space"
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"status\":\"ui-dispatched\",\"operation\":\"press-key\",\"target\":{\"sourceId\":\"ngmcp_b3e6766e27fbb681f7194255\",\"instanceId\":\"ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:14\"},\"key\":\"Space\",\"url\":\"http://127.0.0.1:4383/home\",\"businessStatus\":\"unknown\"}"
+                  }
+                ],
+                "structuredContent": {
+                  "status": "ui-dispatched",
+                  "operation": "press-key",
+                  "target": {
+                    "sourceId": "ngmcp_b3e6766e27fbb681f7194255",
+                    "instanceId": "ngmcp_b3e6766e27fbb681f7194255@1kve5u0-125tsqt-9g0msb-1qeqzjp:14"
+                  },
+                  "key": "Space",
+                  "url": "http://127.0.0.1:4383/home",
+                  "businessStatus": "unknown"
+                }
+              }
+            }
+          ],
+          "network": [
+            {
+              "method": "POST",
+              "path": "/api/auth/login",
+              "body": {
+                "username": "unseen-admin",
+                "password": "Synthetic-123"
+              }
+            },
+            {
+              "method": "GET",
+              "path": "/api/einkaufszettel",
+              "body": null
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            },
+            {
+              "method": "GET",
+              "path": "/api/einkaufszettel",
+              "body": null
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            },
+            {
+              "method": "PUT",
+              "path": "/api/einkaufszettel/101/artikel/201",
+              "body": {
+                "id": 201,
+                "name": "Unseen milk",
+                "anzahl": 1,
+                "gekauft": true
+              }
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            },
+            {
+              "method": "GET",
+              "path": "/api/einkaufszettel",
+              "body": null
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4383/home",
+            "meta": {}
+          },
+          "before": {
+            "domain": {
+              "users": [
+                {
+                  "id": 1,
+                  "username": "unseen-admin",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Admin",
+                  "email": "admin@example.test",
+                  "token": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic",
+                  "roles": [
+                    {
+                      "id": 1,
+                      "name": "ROLE_ADMIN"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                },
+                {
+                  "id": 2,
+                  "username": "unseen-member",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Member",
+                  "email": "member@example.test",
+                  "roles": [
+                    {
+                      "id": 2,
+                      "name": "ROLE_USER"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                }
+              ],
+              "lists": [
+                {
+                  "id": 101,
+                  "name": "Unseen fixture list",
+                  "owners": [],
+                  "sharedWith": [],
+                  "artikels": [
+                    {
+                      "id": 201,
+                      "name": "Unseen milk",
+                      "anzahl": 1,
+                      "gekauft": false
+                    },
+                    {
+                      "id": 202,
+                      "name": "Unseen bread",
+                      "anzahl": 1,
+                      "gekauft": false
+                    }
+                  ]
+                },
+                {
+                  "id": 102,
+                  "name": "Unseen untouched list",
+                  "owners": [],
+                  "sharedWith": [],
+                  "artikels": [
+                    {
+                      "id": 203,
+                      "name": "Unseen untouched apple",
+                      "anzahl": 3,
+                      "gekauft": false
+                    }
+                  ]
+                }
+              ],
+              "archived": [],
+              "confirmations": []
+            },
+            "user": "{\"id\":1,\"username\":\"unseen-admin\",\"password\":\"Synthetic-123\",\"name\":\"Unseen Admin\",\"email\":\"admin@example.test\",\"token\":\"eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic\",\"roles\":[{\"id\":1,\"name\":\"ROLE_ADMIN\"}],\"avatar\":\"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII=\"}"
+          },
+          "businessInput": {},
+          "after": {
+            "domain": {
+              "users": [
+                {
+                  "id": 1,
+                  "username": "unseen-admin",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Admin",
+                  "email": "admin@example.test",
+                  "token": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic",
+                  "roles": [
+                    {
+                      "id": 1,
+                      "name": "ROLE_ADMIN"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                },
+                {
+                  "id": 2,
+                  "username": "unseen-member",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Member",
+                  "email": "member@example.test",
+                  "roles": [
+                    {
+                      "id": 2,
+                      "name": "ROLE_USER"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                }
+              ],
+              "lists": [
+                {
+                  "id": 101,
+                  "name": "Unseen fixture list",
+                  "owners": [],
+                  "sharedWith": [],
+                  "artikels": [
+                    {
+                      "id": 201,
+                      "name": "Unseen milk",
+                      "anzahl": 1,
+                      "gekauft": true
+                    },
+                    {
+                      "id": 202,
+                      "name": "Unseen bread",
+                      "anzahl": 1,
+                      "gekauft": false
+                    }
+                  ]
+                },
+                {
+                  "id": 102,
+                  "name": "Unseen untouched list",
+                  "owners": [],
+                  "sharedWith": [],
+                  "artikels": [
+                    {
+                      "id": 203,
+                      "name": "Unseen untouched apple",
+                      "anzahl": 3,
+                      "gekauft": false
+                    }
+                  ]
+                }
+              ],
+              "archived": [],
+              "confirmations": []
+            },
+            "user": "{\"id\":1,\"username\":\"unseen-admin\",\"password\":\"Synthetic-123\",\"name\":\"Unseen Admin\",\"email\":\"admin@example.test\",\"token\":\"eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic\",\"roles\":[{\"id\":1,\"name\":\"ROLE_ADMIN\"}],\"avatar\":\"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII=\"}"
+          },
+          "oracle": {
+            "businessEffect": true,
+            "payloadVerified": true
+          },
+          "status": "passed",
+          "pageErrors": [],
+          "consoleErrors": []
+        }
+      ]
+    }
+  ],
+  "compilerDigestBefore": "2fbce447847952ce964a2d5dbb170e6ee4f8ce6020671505b7902f4b6b0873dd",
+  "appSpecificSourcePatches": [],
+  "instrumentation": "Separate generic compiler-instrumented app staged copy; original source manifest is checked unchanged.",
+  "browser": "145.0.7632.6",
+  "finishedAt": "2026-11-10T11:15:05.212Z",
+  "harnessSha256After": {
+    "run.mjs": "a74d8e52b31c3395812b2b98633d266920a6d856905ed1aa2bbb6595ae86a622",
+    "fixtures.mjs": "a1aae6c88be66e8d5c9863b5f48367391dae0fc9e13665ae1d6161380e2c74c2",
+    "cases.mjs": "bd4e615be4817518f0d3a1184bf9c157d566438915b086c23ef8d52aa2a0ace1",
+    "oracles.mjs": "77903660f1fa4839bc780bd70cc2fb530cf0ae28ac9a8d4450c7b2342d4313f1",
+    "mcp-driver.mjs": "57e0bf836da0e58708db217aac96bdfaa477039a7fc41a02e20bcd25c0df95b4",
+    "evidence.mjs": "e0cca463021dc4a75a472d57d8c7f694559097f1efee02068abc3f49d4c5f9a7"
+  },
+  "harnessStable": true,
+  "compilerDigestAfter": "2fbce447847952ce964a2d5dbb170e6ee4f8ce6020671505b7902f4b6b0873dd",
+  "compilerStable": true,
+  "totals": {
+    "positive": 1,
+    "positivePassed": 1,
+    "negative": 0,
+    "negativePassed": 0,
+    "protocolBoundaryNotApplicable": 0
+  }
+}

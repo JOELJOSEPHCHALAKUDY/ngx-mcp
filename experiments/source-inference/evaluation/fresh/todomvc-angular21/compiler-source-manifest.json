@@ -1,0 +1,131 @@
+{
+  "capture": "after modern first-pass runtime; compared with capture after legacy pass",
+  "files": [
+    {
+      "path": "src/approval.ts",
+      "sha256": "db2f436ced733363ef508c6c0babb0f55eeb7af4d0678cc99ce94249dc83ba77"
+    },
+    {
+      "path": "src/baseline.ts",
+      "sha256": "49fa9ab1a98dd9c9ab1e0c4745e0fe66934c864c6fd4228da599d8984bbfc0e9"
+    },
+    {
+      "path": "src/browser-adapter.ts",
+      "sha256": "53d54676884c3c1e0149236ec4b308916b7503d96c9da943a679f641f6215ddc"
+    },
+    {
+      "path": "src/browser-runtime.ts",
+      "sha256": "eae67a4eaccde62835961af5843f07fa23cd00e05a4f54b457305f5bbcdcca36"
+    },
+    {
+      "path": "src/cli.ts",
+      "sha256": "b1dbe6de7cec92e68e50022406246c349ac4c6d5bf8fec43437220546d4721b6"
+    },
+    {
+      "path": "src/codegen.ts",
+      "sha256": "db98f36c3a51b2e7795a4653f79ff511e912d455969e632c447dc7f2851a776d"
+    },
+    {
+      "path": "src/compiler.ts",
+      "sha256": "46791d784837a1f64abf91af8bcbf9da1d471e47b6f960e0c6ff5e5f900a8ae6"
+    },
+    {
+      "path": "src/counter-compiler.ts",
+      "sha256": "c4edf04aa02daed7eabe0d0ab834cbea1967e3f635e4d520f963c62725cac69c"
+    },
+    {
+      "path": "src/demo.ts",
+      "sha256": "2e6342cb070fc0f20112122811b2cfd8b899f0e7bd3d38209e0024d9f3541101"
+    },
+    {
+      "path": "src/experiment.ts",
+      "sha256": "32235451a9e0525668e4b00bd86e2cc35ebaa69282a978589f6459a903a899c4"
+    },
+    {
+      "path": "src/handler-constraints.ts",
+      "sha256": "48ca4df5a2a8bdf466cfa1d2b5eb9fefca3aa49c355688e028e71bdc60223e9e"
+    },
+    {
+      "path": "src/hash.ts",
+      "sha256": "910057cdcad237e56529705a4530b3d6836168aaf25a073e2ef77ade53fecefc"
+    },
+    {
+      "path": "src/host-context.ts",
+      "sha256": "86ac8dd23670185d15f08c52cadc80390da4d4727ebc6097d321c258090692de"
+    },
+    {
+      "path": "src/index.ts",
+      "sha256": "ae71ac9e2874e829996422361b2d62a799cf20303a0f623cee83727d35ee678f"
+    },
+    {
+      "path": "src/inline-reveal.ts",
+      "sha256": "6d3504a2630d6ec0549fcdac53bde414c949f83dd9bcf39d394ba15841b1a204"
+    },
+    {
+      "path": "src/local-app.ts",
+      "sha256": "42e903e95b5d9c3d9a18940a15bc20ce9fadfc194ade3532fdbea66dfdef875e"
+    },
+    {
+      "path": "src/mcp.ts",
+      "sha256": "376e00b1aef8f60edb19aa0b2ee542dfe675fdcb6e66dcc1b027856368a162b5"
+    },
+    {
+      "path": "src/model.ts",
+      "sha256": "d9511957ad59077e30ad7e0c5847409811f2f41936c9fbe1b0d8dd8efe89b069"
+    },
+    {
+      "path": "src/native-submit.ts",
+      "sha256": "c81edf5a1a5d9c07fccea08082be1ae8eaa6980204e96da08f3efaac846293bd"
+    },
+    {
+      "path": "src/probe-learning.ts",
+      "sha256": "9e54f6402581fedb97cf879b09a11f56f74fb9c1e7744a6a05c61d66609200f8"
+    },
+    {
+      "path": "src/probe.ts",
+      "sha256": "84800446bd262fcb5a59323207dd03613904bf8b97e89f2f046f07930d8115e6"
+    },
+    {
+      "path": "src/project.ts",
+      "sha256": "563fe9f409039f7ede638a4cd3c643d092ea684efc7bccae1939e8b3653554d8"
+    },
+    {
+      "path": "src/projected-target.ts",
+      "sha256": "a9c73157ebe5161e8c4acc20202ad72d8286e2f7824bd02b06e2d4967a6057dc"
+    },
+    {
+      "path": "src/refine.ts",
+      "sha256": "5063f07b48a588856b0590fe1c1ad8da3041483739587eed97517014b1d2376f"
+    },
+    {
+      "path": "src/samples.ts",
+      "sha256": "9b0eed10d1b4527454d1401d8560f24c32545b00223bc85ffef6f6a6e76f9f93"
+    },
+    {
+      "path": "src/schema.ts",
+      "sha256": "cb65837a7f4776034c21ba29483b6c5c0a0e5d96fd0105cb7558588defca606f"
+    },
+    {
+      "path": "src/serve.ts",
+      "sha256": "03c31bdc2814293d939fc7d469c67def2908649aa48a828a68681ba1d4f9281e"
+    },
+    {
+      "path": "src/template-callbacks.ts",
+      "sha256": "221bc0084bb5164bb5c2c99ebab870df198a073c3e118c4edb0a3d551f947a3f"
+    },
+    {
+      "path": "src/template-components.ts",
+      "sha256": "137b5759ab4232a98bad202c6c83e8b356cbd2751429c8556fbfa9432dbc7de0"
+    },
+    {
+      "path": "src/workflow-compiler.ts",
+      "sha256": "23138abc5b0725fb5552a383e4238075a03b21a20f6d9379983abedda20b22b8"
+    },
+    {
+      "path": "src/wrapped-controls.ts",
+      "sha256": "73899545ca24dec439f9f9655b86088aadf498e22472448d3890a63ee960b5ab"
+    }
+  ],
+  "digest": "551409472519afbc681aa4d8bfc40282abf088883a7c2230bcd9c9b19c26c3c7",
+  "unchangedSinceLegacyCapture": false
+}

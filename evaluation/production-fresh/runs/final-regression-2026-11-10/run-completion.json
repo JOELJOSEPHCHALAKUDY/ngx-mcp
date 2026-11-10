@@ -1,0 +1,8 @@
+{
+  "formatVersion": 1,
+  "report": "/Users/joeljoseph/Desktop/Personal Work/ai-experiments-apps/ngx-mcp/evaluation/production-fresh/runs/final-regression-2026-11-10/report.json",
+  "sha256": "528cc88dbffdf20b77f19ea35b4b69867172734e67126fa4a75ecfe34b0f2f87",
+  "exitCode": 1,
+  "browserCloseAwaited": true,
+  "basis": "Frozen run.mjs awaits browser.close before finishedAt; exitCode is the finalized process.exitCode."
+}

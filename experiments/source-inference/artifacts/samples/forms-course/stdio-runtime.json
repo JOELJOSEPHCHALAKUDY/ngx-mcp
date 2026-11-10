@@ -1,0 +1,14 @@
+{
+  "result": {
+    "status": "ui-dispatched",
+    "url": "http://127.0.0.1:4320/add-new-course"
+  },
+  "writes": [],
+  "storage": {
+    "title": "Agentic Angular Course",
+    "releasedAt": "2026-11-10T11:32:21.361Z",
+    "category": "ADVANCED",
+    "downloadsAllowed": true,
+    "longDescription": "A course draft saved through the original Angular wizard."
+  }
+}

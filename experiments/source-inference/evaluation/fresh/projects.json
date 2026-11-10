@@ -1,0 +1,77 @@
+{
+  "formatVersion": 1,
+  "recommendedNode": "24.15.0",
+  "fixtures": [
+    {
+      "id": "modern-store",
+      "repository": "https://github.com/Ankur071/Modern-Store",
+      "commit": "5bface390202c117a30bb7de06839735d3b9f013",
+      "destination": "test-apps/fresh-modern-store",
+      "subdirectory": ".",
+      "sourceManifest": "evaluation/fresh/modern-store/source-manifest.sha256.json",
+      "license": "MIT",
+      "licenseEvidence": "README.md",
+      "licenseQualification": "README-only explicit MIT declaration; no standalone LICENSE file. Source retained locally for benchmark; do not redistribute this app through the compiler npm package.",
+      "tsconfig": "tsconfig.app.json",
+      "routes": "src/app/app.routes.ts#routes",
+      "angularProject": "ng-ecommerce",
+      "port": 4311,
+      "install": [
+        "ci",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "lockSha256": "e265c84a9163810a9b93bf461d92919a6ab2f57300a946e064139eab6aea6065"
+    },
+    {
+      "id": "jira-clone",
+      "repository": "https://github.com/trungk18/jira-clone-angular",
+      "commit": "20b50e9a1a4d9205af4641b66f544b81cd46873e",
+      "destination": "test-apps/fresh-jira-clone",
+      "subdirectory": ".",
+      "sourceManifest": "evaluation/fresh/jira-clone/source-manifest.sha256.json",
+      "license": "MIT",
+      "licenseEvidence": "LICENSE",
+      "licenseQualification": "Explicit upstream MIT license file",
+      "tsconfig": "tsconfig.app.json",
+      "routes": "src/app/app.routes.ts#appRoutes",
+      "angularProject": "frontend",
+      "port": 4312,
+      "install": [
+        "ci",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "lockSha256": "18ad9622c9b38921e8c2d3042f9177e1157afdc0940b30f3b1c677009f42f336"
+    },
+    {
+      "id": "todomvc-angular21",
+      "repository": "https://github.com/tastejs/todomvc",
+      "commit": "ff43b02e59dfa604386bb382034b2cd07c2bcd8a",
+      "destination": "test-apps/fresh-todomvc",
+      "subdirectory": "examples/angular",
+      "sparsePaths": [
+        "examples/angular/",
+        "license.md"
+      ],
+      "sourceManifest": "evaluation/fresh/todomvc-angular21/source-manifest.json",
+      "license": "MIT",
+      "licenseEvidence": "license.md",
+      "licenseQualification": "Explicit upstream root MIT license applies to the pinned repository",
+      "tsconfig": "tsconfig.app.json",
+      "routes": "src/app/app.routes.ts#routes",
+      "angularProject": "todo-mvc",
+      "port": 4342,
+      "hashRouting": true,
+      "install": [
+        "ci",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "lockSha256": "4048fb1e9b90c71328542775c3cfdac043a75fe45f3e82de8ece87819a4963e0"
+    }
+  ]
+}

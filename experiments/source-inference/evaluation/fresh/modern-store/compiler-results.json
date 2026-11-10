@@ -1,0 +1,3324 @@
+{
+  "formatVersion": 1,
+  "kind": "fresh-frozen-business-payload-mcp-checks",
+  "reportKind": "fresh-frozen-business-payload-mcp-checks",
+  "compilerDigest": "5857c384efcc28da0f766f1f13256a0066f67f5bb8fec631670a65c0a6d1c33b",
+  "compilerDigestBefore": "5857c384efcc28da0f766f1f13256a0066f67f5bb8fec631670a65c0a6d1c33b",
+  "compilerDigestAfter": "5857c384efcc28da0f766f1f13256a0066f67f5bb8fec631670a65c0a6d1c33b",
+  "validForFinalGate": true,
+  "measuredAt": "2026-11-09T21:52:16.143Z",
+  "project": "modern-store",
+  "baseURL": "http://127.0.0.1:4311",
+  "node": "v24.15.0",
+  "sourceCommit": "5bface390202c117a30bb7de06839735d3b9f013",
+  "labelsSha256": "aecacb8704ca8a0dc3a85f3d184e8eb63ea452d08b816638e41eadb2f4bb5de9",
+  "appSource": {
+    "files": 52,
+    "verified": true
+  },
+  "compilerBefore": {
+    "src/approval.ts": "db2f436ced733363ef508c6c0babb0f55eeb7af4d0678cc99ce94249dc83ba77",
+    "src/baseline.ts": "49fa9ab1a98dd9c9ab1e0c4745e0fe66934c864c6fd4228da599d8984bbfc0e9",
+    "src/browser-adapter.ts": "75cba09eadc9a2e451f8c966b563c6cc1903f0f9bcddd8607b89f502ba2315f5",
+    "src/browser-runtime.ts": "f479de154c73c913e5b5e534497d177341e71ff0bc6f103400cdcba48347db7d",
+    "src/cli.ts": "b1dbe6de7cec92e68e50022406246c349ac4c6d5bf8fec43437220546d4721b6",
+    "src/codegen.ts": "db98f36c3a51b2e7795a4653f79ff511e912d455969e632c447dc7f2851a776d",
+    "src/compiler.ts": "26233887fb53d01d3918a257d3c31fd89b35fce1cd6cc525aab4972ce658aeec",
+    "src/counter-compiler.ts": "c4edf04aa02daed7eabe0d0ab834cbea1967e3f635e4d520f963c62725cac69c",
+    "src/demo.ts": "2e6342cb070fc0f20112122811b2cfd8b899f0e7bd3d38209e0024d9f3541101",
+    "src/event-workflows.ts": "3ebea61b1b0b487d7078a283da465e9324e5ee278a2dbb41ac77f7b3f391680b",
+    "src/experiment.ts": "32235451a9e0525668e4b00bd86e2cc35ebaa69282a978589f6459a903a899c4",
+    "src/handler-constraints.ts": "390220fa090a5bb5278d6633695e2482b9c5b266689452e8237fee0b47413f22",
+    "src/hash.ts": "910057cdcad237e56529705a4530b3d6836168aaf25a073e2ef77ade53fecefc",
+    "src/host-context.ts": "86ac8dd23670185d15f08c52cadc80390da4d4727ebc6097d321c258090692de",
+    "src/index.ts": "ae71ac9e2874e829996422361b2d62a799cf20303a0f623cee83727d35ee678f",
+    "src/inline-reveal.ts": "6d3504a2630d6ec0549fcdac53bde414c949f83dd9bcf39d394ba15841b1a204",
+    "src/local-app.ts": "42e903e95b5d9c3d9a18940a15bc20ce9fadfc194ade3532fdbea66dfdef875e",
+    "src/mcp.ts": "376e00b1aef8f60edb19aa0b2ee542dfe675fdcb6e66dcc1b027856368a162b5",
+    "src/model.ts": "ed7c852c354c2fe5b667004c836fe90075ff8ed7b419dd1262fbc52c972717a8",
+    "src/native-submit.ts": "c81edf5a1a5d9c07fccea08082be1ae8eaa6980204e96da08f3efaac846293bd",
+    "src/probe-learning.ts": "9e54f6402581fedb97cf879b09a11f56f74fb9c1e7744a6a05c61d66609200f8",
+    "src/probe.ts": "84800446bd262fcb5a59323207dd03613904bf8b97e89f2f046f07930d8115e6",
+    "src/project.ts": "563fe9f409039f7ede638a4cd3c643d092ea684efc7bccae1939e8b3653554d8",
+    "src/projected-target.ts": "a9c73157ebe5161e8c4acc20202ad72d8286e2f7824bd02b06e2d4967a6057dc",
+    "src/refine.ts": "e7b43087781f1033a1a8d7bfb34897e9d1c72c317d5ce4c9520dc7ad9d991194",
+    "src/router-links.ts": "7da0ab6e045d889675566ddd9b94014cc9f1feda9e488a195de77054d88e87fc",
+    "src/samples.ts": "9b0eed10d1b4527454d1401d8560f24c32545b00223bc85ffef6f6a6e76f9f93",
+    "src/scalar-model-workflow.ts": "02fb4e7cd9daa646a506ef8decc09bfe26f1e20cc19213aa0a73fdda068f95d3",
+    "src/schema.ts": "cb65837a7f4776034c21ba29483b6c5c0a0e5d96fd0105cb7558588defca606f",
+    "src/serve.ts": "03c31bdc2814293d939fc7d469c67def2908649aa48a828a68681ba1d4f9281e",
+    "src/template-callbacks.ts": "221bc0084bb5164bb5c2c99ebab870df198a073c3e118c4edb0a3d551f947a3f",
+    "src/template-components.ts": "137b5759ab4232a98bad202c6c83e8b356cbd2751429c8556fbfa9432dbc7de0",
+    "src/validator-constraints.ts": "12088f48761d182523ab869036180b2af2738d82cfe0512f59ad71aff24ee313",
+    "src/workflow-compiler.ts": "c614c213e952202875b42b33413ea7ae30d88a351c7e7307909c54475c47e688",
+    "src/wrapped-controls.ts": "73899545ca24dec439f9f9655b86088aadf498e22472448d3890a63ee960b5ab"
+  },
+  "compilerAfter": {
+    "src/approval.ts": "db2f436ced733363ef508c6c0babb0f55eeb7af4d0678cc99ce94249dc83ba77",
+    "src/baseline.ts": "49fa9ab1a98dd9c9ab1e0c4745e0fe66934c864c6fd4228da599d8984bbfc0e9",
+    "src/browser-adapter.ts": "75cba09eadc9a2e451f8c966b563c6cc1903f0f9bcddd8607b89f502ba2315f5",
+    "src/browser-runtime.ts": "f479de154c73c913e5b5e534497d177341e71ff0bc6f103400cdcba48347db7d",
+    "src/cli.ts": "b1dbe6de7cec92e68e50022406246c349ac4c6d5bf8fec43437220546d4721b6",
+    "src/codegen.ts": "db98f36c3a51b2e7795a4653f79ff511e912d455969e632c447dc7f2851a776d",
+    "src/compiler.ts": "26233887fb53d01d3918a257d3c31fd89b35fce1cd6cc525aab4972ce658aeec",
+    "src/counter-compiler.ts": "c4edf04aa02daed7eabe0d0ab834cbea1967e3f635e4d520f963c62725cac69c",
+    "src/demo.ts": "2e6342cb070fc0f20112122811b2cfd8b899f0e7bd3d38209e0024d9f3541101",
+    "src/event-workflows.ts": "3ebea61b1b0b487d7078a283da465e9324e5ee278a2dbb41ac77f7b3f391680b",
+    "src/experiment.ts": "32235451a9e0525668e4b00bd86e2cc35ebaa69282a978589f6459a903a899c4",
+    "src/handler-constraints.ts": "390220fa090a5bb5278d6633695e2482b9c5b266689452e8237fee0b47413f22",
+    "src/hash.ts": "910057cdcad237e56529705a4530b3d6836168aaf25a073e2ef77ade53fecefc",
+    "src/host-context.ts": "86ac8dd23670185d15f08c52cadc80390da4d4727ebc6097d321c258090692de",
+    "src/index.ts": "ae71ac9e2874e829996422361b2d62a799cf20303a0f623cee83727d35ee678f",
+    "src/inline-reveal.ts": "6d3504a2630d6ec0549fcdac53bde414c949f83dd9bcf39d394ba15841b1a204",
+    "src/local-app.ts": "42e903e95b5d9c3d9a18940a15bc20ce9fadfc194ade3532fdbea66dfdef875e",
+    "src/mcp.ts": "376e00b1aef8f60edb19aa0b2ee542dfe675fdcb6e66dcc1b027856368a162b5",
+    "src/model.ts": "ed7c852c354c2fe5b667004c836fe90075ff8ed7b419dd1262fbc52c972717a8",
+    "src/native-submit.ts": "c81edf5a1a5d9c07fccea08082be1ae8eaa6980204e96da08f3efaac846293bd",
+    "src/probe-learning.ts": "9e54f6402581fedb97cf879b09a11f56f74fb9c1e7744a6a05c61d66609200f8",
+    "src/probe.ts": "84800446bd262fcb5a59323207dd03613904bf8b97e89f2f046f07930d8115e6",
+    "src/project.ts": "563fe9f409039f7ede638a4cd3c643d092ea684efc7bccae1939e8b3653554d8",
+    "src/projected-target.ts": "a9c73157ebe5161e8c4acc20202ad72d8286e2f7824bd02b06e2d4967a6057dc",
+    "src/refine.ts": "e7b43087781f1033a1a8d7bfb34897e9d1c72c317d5ce4c9520dc7ad9d991194",
+    "src/router-links.ts": "7da0ab6e045d889675566ddd9b94014cc9f1feda9e488a195de77054d88e87fc",
+    "src/samples.ts": "9b0eed10d1b4527454d1401d8560f24c32545b00223bc85ffef6f6a6e76f9f93",
+    "src/scalar-model-workflow.ts": "02fb4e7cd9daa646a506ef8decc09bfe26f1e20cc19213aa0a73fdda068f95d3",
+    "src/schema.ts": "cb65837a7f4776034c21ba29483b6c5c0a0e5d96fd0105cb7558588defca606f",
+    "src/serve.ts": "03c31bdc2814293d939fc7d469c67def2908649aa48a828a68681ba1d4f9281e",
+    "src/template-callbacks.ts": "221bc0084bb5164bb5c2c99ebab870df198a073c3e118c4edb0a3d551f947a3f",
+    "src/template-components.ts": "137b5759ab4232a98bad202c6c83e8b356cbd2751429c8556fbfa9432dbc7de0",
+    "src/validator-constraints.ts": "12088f48761d182523ab869036180b2af2738d82cfe0512f59ad71aff24ee313",
+    "src/workflow-compiler.ts": "c614c213e952202875b42b33413ea7ae30d88a351c7e7307909c54475c47e688",
+    "src/wrapped-controls.ts": "73899545ca24dec439f9f9655b86088aadf498e22472448d3890a63ee960b5ab"
+  },
+  "compilerChangedDuringRun": false,
+  "manifestSha256": "b221737e4aa30b3238dddacfb6f3f71fb2be92fdf097be9ea27ed24c30ea3c75",
+  "staticManifestSha256": "b221737e4aa30b3238dddacfb6f3f71fb2be92fdf097be9ea27ed24c30ea3c75",
+  "refinement": {
+    "method": "Official refineManifest; source-bound live option discovery only, before benchmark review/approval",
+    "applied": false,
+    "changedCapabilities": []
+  },
+  "evaluationSource": {
+    "harness": "c9920b6960d5e80d0ff2b9ac627f7d343f5fe45035d2237262fc4ebda0ddeb70",
+    "projectChecks": "987da0709020fecd0f9740c466c2bc4f7e8cb168d6f7718679e78f0d7a46a13b"
+  },
+  "method": "Official compiler + refineManifest option discovery before review, then MCP SDK Client+InMemoryTransport+createMcpServer+browserAdapter. Frozen validInput business args copied unchanged. Declared route parameters extracted from the source fixture setup URL are augmented separately; explicitly declared adapter runtime context and exact-capability synthetic confirmation review are independently selected from original source UI fixtures and validated separately from tool arguments. Setup uses original source UI/static fixtures. Tested actions invoke generated MCP tools only; no alias/shape rewriting, manifest patch or reference fallback. Domain oracles independently read UI/storage/dev state.",
+  "operationCount": 13,
+  "counts": {
+    "success": 13,
+    "missing": 0,
+    "blocked": 0,
+    "schema-rejected": 0,
+    "failed": 0
+  },
+  "results": [
+    {
+      "id": "cart-add-card",
+      "component": "ProductCard",
+      "handler": "store.addToCart",
+      "status": "success",
+      "businessArgs": {
+        "product": {
+          "id": "1",
+          "name": "Wireless Headphones",
+          "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+          "price": 299.99,
+          "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+          "rating": 4.5,
+          "reviewCount": 128,
+          "inStock": true,
+          "category": "electronics"
+        }
+      },
+      "contextAugmentation": {
+        "category": "all"
+      },
+      "runtimeContext": {},
+      "variantSelection": null,
+      "matches": [
+        {
+          "id": "/products/:category#ProductCard.store.addToCart:app-product-card button.flex.items-center.gap-2",
+          "route": "/products/:category",
+          "status": "candidate",
+          "issues": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "category": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+              },
+              "product": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "price": {
+                    "type": "number"
+                  },
+                  "imageUrl": {
+                    "type": "string"
+                  },
+                  "rating": {
+                    "type": "number"
+                  },
+                  "reviewCount": {
+                    "type": "number"
+                  },
+                  "inStock": {
+                    "type": "boolean"
+                  },
+                  "category": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "name",
+                  "description",
+                  "price",
+                  "imageUrl",
+                  "rating",
+                  "reviewCount",
+                  "inStock",
+                  "category"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "category",
+              "product"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "id": "/wishlist#ProductCard.store.addToCart:app-product-card button.flex.items-center.gap-2",
+          "route": "/wishlist",
+          "status": "candidate",
+          "issues": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "product": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "price": {
+                    "type": "number"
+                  },
+                  "imageUrl": {
+                    "type": "string"
+                  },
+                  "rating": {
+                    "type": "number"
+                  },
+                  "reviewCount": {
+                    "type": "number"
+                  },
+                  "inStock": {
+                    "type": "boolean"
+                  },
+                  "category": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "name",
+                  "description",
+                  "price",
+                  "imageUrl",
+                  "rating",
+                  "reviewCount",
+                  "inStock",
+                  "category"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "product"
+            ],
+            "additionalProperties": false
+          }
+        }
+      ],
+      "setupURL": "http://127.0.0.1:4311/products/all",
+      "setupEvidence": [],
+      "before": {
+        "cartItems": [],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": []
+        }
+      },
+      "capabilityId": "/products/:category#ProductCard.store.addToCart:app-product-card button.flex.items-center.gap-2",
+      "generatedInputSchema": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          },
+          "product": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "price": {
+                "type": "number"
+              },
+              "imageUrl": {
+                "type": "string"
+              },
+              "rating": {
+                "type": "number"
+              },
+              "reviewCount": {
+                "type": "number"
+              },
+              "inStock": {
+                "type": "boolean"
+              },
+              "category": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "description",
+              "price",
+              "imageUrl",
+              "rating",
+              "reviewCount",
+              "inStock",
+              "category"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "category",
+          "product"
+        ],
+        "additionalProperties": false
+      },
+      "generatedOutputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "selection": {
+        "source": "Declared direct route preferred over allowed child-route representation, then visible source control; no oracle/output scoring",
+        "route": "/products/:category"
+      },
+      "transportArgs": {
+        "product": {
+          "id": "1",
+          "name": "Wireless Headphones",
+          "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+          "price": 299.99,
+          "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+          "rating": 4.5,
+          "reviewCount": 128,
+          "inStock": true,
+          "category": "electronics"
+        },
+        "category": "all"
+      },
+      "schemaAccepted": true,
+      "schemaErrors": null,
+      "toolName": "angular_store_addToCart_6f1cd7ac81",
+      "dispatch": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:4311/product/1\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:4311/product/1"
+        }
+      },
+      "oracle": {
+        "quantity": 1,
+        "persisted": true
+      },
+      "after": {
+        "cartItems": [
+          {
+            "product": {
+              "id": "1",
+              "name": "Wireless Headphones",
+              "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+              "price": 299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+              "rating": 4.5,
+              "reviewCount": 128,
+              "inStock": true,
+              "category": "electronics"
+            },
+            "quantity": 1
+          }
+        ],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 1,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": [
+            {
+              "product": {
+                "id": "1",
+                "name": "Wireless Headphones",
+                "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+                "price": 299.99,
+                "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+                "rating": 4.5,
+                "reviewCount": 128,
+                "inStock": true,
+                "category": "electronics"
+              },
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "outputConforms": true,
+      "finalURL": "http://127.0.0.1:4311/product/1",
+      "deniedExternalRequests": {
+        "count": 35,
+        "origins": [
+          "https://fonts.googleapis.com",
+          "https://images.unsplash.com"
+        ]
+      },
+      "pageErrors": []
+    },
+    {
+      "id": "cart-add-detail",
+      "component": "ProductInfo",
+      "handler": "store.addToCart",
+      "status": "success",
+      "businessArgs": {
+        "product": {
+          "id": "1",
+          "name": "Wireless Headphones",
+          "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+          "price": 299.99,
+          "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+          "rating": 4.5,
+          "reviewCount": 128,
+          "inStock": true,
+          "category": "electronics"
+        },
+        "quantity": 2
+      },
+      "contextAugmentation": {
+        "productId": "1"
+      },
+      "runtimeContext": {},
+      "variantSelection": null,
+      "matches": [
+        {
+          "id": "/product/:productId#ProductInfo.store.addToCart:app-product-info button.flex.items-center.gap-2",
+          "route": "/product/:productId",
+          "status": "candidate",
+          "issues": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "productId": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+              },
+              "product": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "price": {
+                    "type": "number"
+                  },
+                  "imageUrl": {
+                    "type": "string"
+                  },
+                  "rating": {
+                    "type": "number"
+                  },
+                  "reviewCount": {
+                    "type": "number"
+                  },
+                  "inStock": {
+                    "type": "boolean"
+                  },
+                  "category": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "name",
+                  "description",
+                  "price",
+                  "imageUrl",
+                  "rating",
+                  "reviewCount",
+                  "inStock",
+                  "category"
+                ],
+                "additionalProperties": false
+              },
+              "quantity": {
+                "type": "integer",
+                "minimum": 1
+              }
+            },
+            "required": [
+              "productId",
+              "product"
+            ],
+            "additionalProperties": false
+          }
+        }
+      ],
+      "setupURL": "http://127.0.0.1:4311/product/1",
+      "setupEvidence": [],
+      "before": {
+        "cartItems": [],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": []
+        }
+      },
+      "capabilityId": "/product/:productId#ProductInfo.store.addToCart:app-product-info button.flex.items-center.gap-2",
+      "generatedInputSchema": {
+        "type": "object",
+        "properties": {
+          "productId": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          },
+          "product": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "price": {
+                "type": "number"
+              },
+              "imageUrl": {
+                "type": "string"
+              },
+              "rating": {
+                "type": "number"
+              },
+              "reviewCount": {
+                "type": "number"
+              },
+              "inStock": {
+                "type": "boolean"
+              },
+              "category": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "description",
+              "price",
+              "imageUrl",
+              "rating",
+              "reviewCount",
+              "inStock",
+              "category"
+            ],
+            "additionalProperties": false
+          },
+          "quantity": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "productId",
+          "product"
+        ],
+        "additionalProperties": false
+      },
+      "generatedOutputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "selection": {
+        "source": "Declared direct route preferred over allowed child-route representation, then visible source control; no oracle/output scoring",
+        "route": "/product/:productId"
+      },
+      "transportArgs": {
+        "product": {
+          "id": "1",
+          "name": "Wireless Headphones",
+          "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+          "price": 299.99,
+          "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+          "rating": 4.5,
+          "reviewCount": 128,
+          "inStock": true,
+          "category": "electronics"
+        },
+        "quantity": 2,
+        "productId": "1"
+      },
+      "schemaAccepted": true,
+      "schemaErrors": null,
+      "toolName": "angular_store_addToCart_eefbf2486e",
+      "dispatch": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:4311/product/1\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:4311/product/1"
+        }
+      },
+      "oracle": {
+        "quantity": 2,
+        "cartCount": 2
+      },
+      "after": {
+        "cartItems": [
+          {
+            "product": {
+              "id": "1",
+              "name": "Wireless Headphones",
+              "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+              "price": 299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+              "rating": 4.5,
+              "reviewCount": 128,
+              "inStock": true,
+              "category": "electronics"
+            },
+            "quantity": 2
+          }
+        ],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 2,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": [
+            {
+              "product": {
+                "id": "1",
+                "name": "Wireless Headphones",
+                "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+                "price": 299.99,
+                "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+                "rating": 4.5,
+                "reviewCount": 128,
+                "inStock": true,
+                "category": "electronics"
+              },
+              "quantity": 2
+            }
+          ]
+        }
+      },
+      "outputConforms": true,
+      "finalURL": "http://127.0.0.1:4311/product/1",
+      "deniedExternalRequests": {
+        "count": 35,
+        "origins": [
+          "https://fonts.googleapis.com",
+          "https://images.unsplash.com"
+        ]
+      },
+      "pageErrors": []
+    },
+    {
+      "id": "wishlist-toggle",
+      "component": "ToggleWishlistButton",
+      "handler": "toggleWishlist",
+      "status": "success",
+      "businessArgs": {
+        "product": {
+          "id": "1",
+          "name": "Wireless Headphones",
+          "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+          "price": 299.99,
+          "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+          "rating": 4.5,
+          "reviewCount": 128,
+          "inStock": true,
+          "category": "electronics"
+        }
+      },
+      "contextAugmentation": {
+        "category": "all"
+      },
+      "runtimeContext": {},
+      "variantSelection": null,
+      "matches": [
+        {
+          "id": "/product/:productId#ToggleWishlistButton.toggleWishlist:app-toggle-wishlist-button button",
+          "route": "/product/:productId",
+          "status": "candidate",
+          "issues": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "productId": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+              },
+              "product": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "price": {
+                    "type": "number"
+                  },
+                  "imageUrl": {
+                    "type": "string"
+                  },
+                  "rating": {
+                    "type": "number"
+                  },
+                  "reviewCount": {
+                    "type": "number"
+                  },
+                  "inStock": {
+                    "type": "boolean"
+                  },
+                  "category": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "name",
+                  "description",
+                  "price",
+                  "imageUrl",
+                  "rating",
+                  "reviewCount",
+                  "inStock",
+                  "category"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "productId",
+              "product"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "id": "/products/:category#ToggleWishlistButton.toggleWishlist:app-toggle-wishlist-button button",
+          "route": "/products/:category",
+          "status": "candidate",
+          "issues": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "category": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+              },
+              "product": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "price": {
+                    "type": "number"
+                  },
+                  "imageUrl": {
+                    "type": "string"
+                  },
+                  "rating": {
+                    "type": "number"
+                  },
+                  "reviewCount": {
+                    "type": "number"
+                  },
+                  "inStock": {
+                    "type": "boolean"
+                  },
+                  "category": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "name",
+                  "description",
+                  "price",
+                  "imageUrl",
+                  "rating",
+                  "reviewCount",
+                  "inStock",
+                  "category"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "category",
+              "product"
+            ],
+            "additionalProperties": false
+          }
+        }
+      ],
+      "setupURL": "http://127.0.0.1:4311/products/all",
+      "setupEvidence": [],
+      "before": {
+        "cartItems": [],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": []
+        }
+      },
+      "capabilityId": "/products/:category#ToggleWishlistButton.toggleWishlist:app-toggle-wishlist-button button",
+      "generatedInputSchema": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          },
+          "product": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "price": {
+                "type": "number"
+              },
+              "imageUrl": {
+                "type": "string"
+              },
+              "rating": {
+                "type": "number"
+              },
+              "reviewCount": {
+                "type": "number"
+              },
+              "inStock": {
+                "type": "boolean"
+              },
+              "category": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "description",
+              "price",
+              "imageUrl",
+              "rating",
+              "reviewCount",
+              "inStock",
+              "category"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "category",
+          "product"
+        ],
+        "additionalProperties": false
+      },
+      "generatedOutputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "selection": {
+        "source": "Declared direct route preferred over allowed child-route representation, then visible source control; no oracle/output scoring",
+        "route": "/products/:category"
+      },
+      "transportArgs": {
+        "product": {
+          "id": "1",
+          "name": "Wireless Headphones",
+          "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+          "price": 299.99,
+          "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+          "rating": 4.5,
+          "reviewCount": 128,
+          "inStock": true,
+          "category": "electronics"
+        },
+        "category": "all"
+      },
+      "schemaAccepted": true,
+      "schemaErrors": null,
+      "toolName": "angular_toggleWishlist_b6d5494585",
+      "dispatch": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:4311/products/all\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:4311/products/all"
+        }
+      },
+      "oracle": {
+        "addedProductId": "1",
+        "persisted": true,
+        "cartUnchanged": true
+      },
+      "after": {
+        "cartItems": [],
+        "wishlistItems": [
+          {
+            "id": "1",
+            "name": "Wireless Headphones",
+            "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+            "price": 299.99,
+            "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+            "rating": 4.5,
+            "reviewCount": 128,
+            "inStock": true,
+            "category": "electronics"
+          }
+        ],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [
+            {
+              "id": "1",
+              "name": "Wireless Headphones",
+              "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+              "price": 299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+              "rating": 4.5,
+              "reviewCount": 128,
+              "inStock": true,
+              "category": "electronics"
+            }
+          ],
+          "cartItems": []
+        }
+      },
+      "outputConforms": true,
+      "finalURL": "http://127.0.0.1:4311/products/all",
+      "deniedExternalRequests": {
+        "count": 34,
+        "origins": [
+          "https://fonts.googleapis.com",
+          "https://images.unsplash.com"
+        ]
+      },
+      "pageErrors": []
+    },
+    {
+      "id": "wishlist-remove",
+      "component": "MyWishlist",
+      "handler": "store.removeFromWishlist",
+      "status": "success",
+      "businessArgs": {
+        "product": {
+          "id": "1",
+          "name": "Wireless Headphones",
+          "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+          "price": 299.99,
+          "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+          "rating": 4.5,
+          "reviewCount": 128,
+          "inStock": true,
+          "category": "electronics"
+        }
+      },
+      "contextAugmentation": {},
+      "runtimeContext": {},
+      "variantSelection": null,
+      "matches": [
+        {
+          "id": "/wishlist#MyWishlist.store.removeFromWishlist:app-my-wishlist button.top-3.right-3.z-10.w-10.h-10.rounded-full.border-0.shadow-md.flex.items-center.justify-center.cursor-pointer.transition-all.duration-200",
+          "route": "/wishlist",
+          "status": "candidate",
+          "issues": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "product": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "price": {
+                    "type": "number"
+                  },
+                  "imageUrl": {
+                    "type": "string"
+                  },
+                  "rating": {
+                    "type": "number"
+                  },
+                  "reviewCount": {
+                    "type": "number"
+                  },
+                  "inStock": {
+                    "type": "boolean"
+                  },
+                  "category": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "name",
+                  "description",
+                  "price",
+                  "imageUrl",
+                  "rating",
+                  "reviewCount",
+                  "inStock",
+                  "category"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "product"
+            ],
+            "additionalProperties": false
+          }
+        }
+      ],
+      "setupURL": "http://127.0.0.1:4311/wishlist",
+      "setupEvidence": [
+        {
+          "kind": "source-ui-precondition",
+          "action": "Toggle wishlist through original catalog button",
+          "productName": "Wireless Headphones",
+          "url": "http://127.0.0.1:4311/products/all"
+        },
+        {
+          "kind": "source-ui-precondition",
+          "action": "Toggle wishlist through original catalog button",
+          "productName": "Professional Camera",
+          "url": "http://127.0.0.1:4311/products/all"
+        }
+      ],
+      "before": {
+        "cartItems": [],
+        "wishlistItems": [
+          {
+            "id": "1",
+            "name": "Wireless Headphones",
+            "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+            "price": 299.99,
+            "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+            "rating": 4.5,
+            "reviewCount": 128,
+            "inStock": true,
+            "category": "electronics"
+          },
+          {
+            "id": "2",
+            "name": "Professional Camera",
+            "description": "Mirrorless camera with 24MP sensor and 4K video recording",
+            "price": 1299.99,
+            "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500",
+            "rating": 4.7,
+            "reviewCount": 256,
+            "inStock": true,
+            "category": "electronics"
+          }
+        ],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [
+            {
+              "id": "1",
+              "name": "Wireless Headphones",
+              "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+              "price": 299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+              "rating": 4.5,
+              "reviewCount": 128,
+              "inStock": true,
+              "category": "electronics"
+            },
+            {
+              "id": "2",
+              "name": "Professional Camera",
+              "description": "Mirrorless camera with 24MP sensor and 4K video recording",
+              "price": 1299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500",
+              "rating": 4.7,
+              "reviewCount": 256,
+              "inStock": true,
+              "category": "electronics"
+            }
+          ],
+          "cartItems": []
+        }
+      },
+      "capabilityId": "/wishlist#MyWishlist.store.removeFromWishlist:app-my-wishlist button.top-3.right-3.z-10.w-10.h-10.rounded-full.border-0.shadow-md.flex.items-center.justify-center.cursor-pointer.transition-all.duration-200",
+      "generatedInputSchema": {
+        "type": "object",
+        "properties": {
+          "product": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "price": {
+                "type": "number"
+              },
+              "imageUrl": {
+                "type": "string"
+              },
+              "rating": {
+                "type": "number"
+              },
+              "reviewCount": {
+                "type": "number"
+              },
+              "inStock": {
+                "type": "boolean"
+              },
+              "category": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "description",
+              "price",
+              "imageUrl",
+              "rating",
+              "reviewCount",
+              "inStock",
+              "category"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "product"
+        ],
+        "additionalProperties": false
+      },
+      "generatedOutputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "selection": {
+        "source": "Declared direct route preferred over allowed child-route representation, then visible source control; no oracle/output scoring",
+        "route": "/wishlist"
+      },
+      "transportArgs": {
+        "product": {
+          "id": "1",
+          "name": "Wireless Headphones",
+          "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+          "price": 299.99,
+          "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+          "rating": 4.5,
+          "reviewCount": 128,
+          "inStock": true,
+          "category": "electronics"
+        }
+      },
+      "schemaAccepted": true,
+      "schemaErrors": null,
+      "toolName": "angular_store_removeFromWishlist_bcafb5df1f",
+      "dispatch": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:4311/wishlist\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:4311/wishlist"
+        }
+      },
+      "oracle": {
+        "remainingIds": [
+          "2"
+        ]
+      },
+      "after": {
+        "cartItems": [],
+        "wishlistItems": [
+          {
+            "id": "2",
+            "name": "Professional Camera",
+            "description": "Mirrorless camera with 24MP sensor and 4K video recording",
+            "price": 1299.99,
+            "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500",
+            "rating": 4.7,
+            "reviewCount": 256,
+            "inStock": true,
+            "category": "electronics"
+          }
+        ],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [
+            {
+              "id": "2",
+              "name": "Professional Camera",
+              "description": "Mirrorless camera with 24MP sensor and 4K video recording",
+              "price": 1299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500",
+              "rating": 4.7,
+              "reviewCount": 256,
+              "inStock": true,
+              "category": "electronics"
+            }
+          ],
+          "cartItems": []
+        }
+      },
+      "outputConforms": true,
+      "finalURL": "http://127.0.0.1:4311/wishlist",
+      "deniedExternalRequests": {
+        "count": 36,
+        "origins": [
+          "https://fonts.googleapis.com",
+          "https://images.unsplash.com"
+        ]
+      },
+      "pageErrors": []
+    },
+    {
+      "id": "wishlist-clear",
+      "component": "MyWishlist",
+      "handler": "store.clearWishlist",
+      "status": "success",
+      "businessArgs": {},
+      "contextAugmentation": {},
+      "runtimeContext": {},
+      "variantSelection": null,
+      "matches": [
+        {
+          "id": "/wishlist#MyWishlist.store.clearWishlist:app-my-wishlist button.danger",
+          "route": "/wishlist",
+          "status": "candidate",
+          "issues": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": false
+          }
+        }
+      ],
+      "setupURL": "http://127.0.0.1:4311/wishlist",
+      "setupEvidence": [
+        {
+          "kind": "source-ui-precondition",
+          "action": "Toggle wishlist through original catalog button",
+          "productName": "Wireless Headphones",
+          "url": "http://127.0.0.1:4311/products/all"
+        },
+        {
+          "kind": "source-ui-precondition",
+          "action": "Toggle wishlist through original catalog button",
+          "productName": "Professional Camera",
+          "url": "http://127.0.0.1:4311/products/all"
+        }
+      ],
+      "before": {
+        "cartItems": [],
+        "wishlistItems": [
+          {
+            "id": "1",
+            "name": "Wireless Headphones",
+            "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+            "price": 299.99,
+            "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+            "rating": 4.5,
+            "reviewCount": 128,
+            "inStock": true,
+            "category": "electronics"
+          },
+          {
+            "id": "2",
+            "name": "Professional Camera",
+            "description": "Mirrorless camera with 24MP sensor and 4K video recording",
+            "price": 1299.99,
+            "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500",
+            "rating": 4.7,
+            "reviewCount": 256,
+            "inStock": true,
+            "category": "electronics"
+          }
+        ],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [
+            {
+              "id": "1",
+              "name": "Wireless Headphones",
+              "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+              "price": 299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+              "rating": 4.5,
+              "reviewCount": 128,
+              "inStock": true,
+              "category": "electronics"
+            },
+            {
+              "id": "2",
+              "name": "Professional Camera",
+              "description": "Mirrorless camera with 24MP sensor and 4K video recording",
+              "price": 1299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500",
+              "rating": 4.7,
+              "reviewCount": 256,
+              "inStock": true,
+              "category": "electronics"
+            }
+          ],
+          "cartItems": []
+        }
+      },
+      "capabilityId": "/wishlist#MyWishlist.store.clearWishlist:app-my-wishlist button.danger",
+      "generatedInputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "generatedOutputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "selection": {
+        "source": "Declared direct route preferred over allowed child-route representation, then visible source control; no oracle/output scoring",
+        "route": "/wishlist"
+      },
+      "transportArgs": {},
+      "schemaAccepted": true,
+      "schemaErrors": null,
+      "toolName": "angular_store_clearWishlist_83ccd74490",
+      "dispatch": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:4311/wishlist\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:4311/wishlist"
+        }
+      },
+      "oracle": {
+        "empty": true,
+        "persisted": true
+      },
+      "after": {
+        "cartItems": [],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": []
+        }
+      },
+      "outputConforms": true,
+      "finalURL": "http://127.0.0.1:4311/wishlist",
+      "deniedExternalRequests": {
+        "count": 36,
+        "origins": [
+          "https://fonts.googleapis.com",
+          "https://images.unsplash.com"
+        ]
+      },
+      "pageErrors": []
+    },
+    {
+      "id": "cart-set-quantity",
+      "component": "ShowCartItem",
+      "handler": "store.setItemQuantity",
+      "status": "success",
+      "businessArgs": {
+        "params": {
+          "productId": "1",
+          "quantity": 3
+        }
+      },
+      "contextAugmentation": {},
+      "runtimeContext": {},
+      "variantSelection": null,
+      "matches": [
+        {
+          "id": "/cart#ShowCartItem.store.setItemQuantity:app-show-cart-item app-qty-selector",
+          "route": "/cart",
+          "status": "candidate",
+          "issues": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "params": {
+                "type": "object",
+                "properties": {
+                  "productId": {
+                    "type": "string"
+                  },
+                  "quantity": {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                },
+                "required": [
+                  "productId",
+                  "quantity"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "params"
+            ],
+            "additionalProperties": false
+          }
+        }
+      ],
+      "setupURL": "http://127.0.0.1:4311/cart",
+      "setupEvidence": [
+        {
+          "kind": "source-ui-precondition",
+          "action": "Add product through original catalog button",
+          "productName": "Wireless Headphones",
+          "url": "http://127.0.0.1:4311/products/all"
+        }
+      ],
+      "before": {
+        "cartItems": [
+          {
+            "product": {
+              "id": "1",
+              "name": "Wireless Headphones",
+              "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+              "price": 299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+              "rating": 4.5,
+              "reviewCount": 128,
+              "inStock": true,
+              "category": "electronics"
+            },
+            "quantity": 1
+          }
+        ],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 1,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": [
+            {
+              "product": {
+                "id": "1",
+                "name": "Wireless Headphones",
+                "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+                "price": 299.99,
+                "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+                "rating": 4.5,
+                "reviewCount": 128,
+                "inStock": true,
+                "category": "electronics"
+              },
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "capabilityId": "/cart#ShowCartItem.store.setItemQuantity:app-show-cart-item app-qty-selector",
+      "generatedInputSchema": {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "productId": {
+                "type": "string"
+              },
+              "quantity": {
+                "type": "integer",
+                "minimum": 1
+              }
+            },
+            "required": [
+              "productId",
+              "quantity"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "params"
+        ],
+        "additionalProperties": false
+      },
+      "generatedOutputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "selection": {
+        "source": "Declared direct route preferred over allowed child-route representation, then visible source control; no oracle/output scoring",
+        "route": "/cart"
+      },
+      "transportArgs": {
+        "params": {
+          "productId": "1",
+          "quantity": 3
+        }
+      },
+      "schemaAccepted": true,
+      "schemaErrors": null,
+      "toolName": "angular_store_setItemQuantity_0bfe283320",
+      "dispatch": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:4311/cart\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:4311/cart"
+        }
+      },
+      "oracle": {
+        "quantity": 3,
+        "rowCount": 1
+      },
+      "after": {
+        "cartItems": [
+          {
+            "product": {
+              "id": "1",
+              "name": "Wireless Headphones",
+              "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+              "price": 299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+              "rating": 4.5,
+              "reviewCount": 128,
+              "inStock": true,
+              "category": "electronics"
+            },
+            "quantity": 3
+          }
+        ],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 3,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": [
+            {
+              "product": {
+                "id": "1",
+                "name": "Wireless Headphones",
+                "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+                "price": 299.99,
+                "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+                "rating": 4.5,
+                "reviewCount": 128,
+                "inStock": true,
+                "category": "electronics"
+              },
+              "quantity": 3
+            }
+          ]
+        }
+      },
+      "outputConforms": true,
+      "finalURL": "http://127.0.0.1:4311/cart",
+      "deniedExternalRequests": {
+        "count": 36,
+        "origins": [
+          "https://fonts.googleapis.com",
+          "https://images.unsplash.com"
+        ]
+      },
+      "pageErrors": []
+    },
+    {
+      "id": "cart-move-to-wishlist",
+      "component": "ShowCartItem",
+      "handler": "store.moveToWishlist",
+      "status": "success",
+      "businessArgs": {
+        "product": {
+          "id": "1",
+          "name": "Wireless Headphones",
+          "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+          "price": 299.99,
+          "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+          "rating": 4.5,
+          "reviewCount": 128,
+          "inStock": true,
+          "category": "electronics"
+        }
+      },
+      "contextAugmentation": {},
+      "runtimeContext": {},
+      "variantSelection": null,
+      "matches": [
+        {
+          "id": "/cart#ShowCartItem.store.moveToWishlist:app-show-cart-item button",
+          "route": "/cart",
+          "status": "candidate",
+          "issues": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "product": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "price": {
+                    "type": "number"
+                  },
+                  "imageUrl": {
+                    "type": "string"
+                  },
+                  "rating": {
+                    "type": "number"
+                  },
+                  "reviewCount": {
+                    "type": "number"
+                  },
+                  "inStock": {
+                    "type": "boolean"
+                  },
+                  "category": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "name",
+                  "description",
+                  "price",
+                  "imageUrl",
+                  "rating",
+                  "reviewCount",
+                  "inStock",
+                  "category"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "product"
+            ],
+            "additionalProperties": false
+          }
+        }
+      ],
+      "setupURL": "http://127.0.0.1:4311/cart",
+      "setupEvidence": [
+        {
+          "kind": "source-ui-precondition",
+          "action": "Add product through original catalog button",
+          "productName": "Wireless Headphones",
+          "url": "http://127.0.0.1:4311/products/all"
+        }
+      ],
+      "before": {
+        "cartItems": [
+          {
+            "product": {
+              "id": "1",
+              "name": "Wireless Headphones",
+              "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+              "price": 299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+              "rating": 4.5,
+              "reviewCount": 128,
+              "inStock": true,
+              "category": "electronics"
+            },
+            "quantity": 1
+          }
+        ],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 1,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": [
+            {
+              "product": {
+                "id": "1",
+                "name": "Wireless Headphones",
+                "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+                "price": 299.99,
+                "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+                "rating": 4.5,
+                "reviewCount": 128,
+                "inStock": true,
+                "category": "electronics"
+              },
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "capabilityId": "/cart#ShowCartItem.store.moveToWishlist:app-show-cart-item button",
+      "generatedInputSchema": {
+        "type": "object",
+        "properties": {
+          "product": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "price": {
+                "type": "number"
+              },
+              "imageUrl": {
+                "type": "string"
+              },
+              "rating": {
+                "type": "number"
+              },
+              "reviewCount": {
+                "type": "number"
+              },
+              "inStock": {
+                "type": "boolean"
+              },
+              "category": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "description",
+              "price",
+              "imageUrl",
+              "rating",
+              "reviewCount",
+              "inStock",
+              "category"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "product"
+        ],
+        "additionalProperties": false
+      },
+      "generatedOutputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "selection": {
+        "source": "Declared direct route preferred over allowed child-route representation, then visible source control; no oracle/output scoring",
+        "route": "/cart"
+      },
+      "transportArgs": {
+        "product": {
+          "id": "1",
+          "name": "Wireless Headphones",
+          "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+          "price": 299.99,
+          "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+          "rating": 4.5,
+          "reviewCount": 128,
+          "inStock": true,
+          "category": "electronics"
+        }
+      },
+      "schemaAccepted": true,
+      "schemaErrors": null,
+      "toolName": "angular_store_moveToWishlist_cfb3ae9cc7",
+      "dispatch": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:4311/cart\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:4311/cart"
+        }
+      },
+      "oracle": {
+        "cartEmpty": true,
+        "wishlistProductId": "1"
+      },
+      "after": {
+        "cartItems": [],
+        "wishlistItems": [
+          {
+            "id": "1",
+            "name": "Wireless Headphones",
+            "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+            "price": 299.99,
+            "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+            "rating": 4.5,
+            "reviewCount": 128,
+            "inStock": true,
+            "category": "electronics"
+          }
+        ],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [
+            {
+              "id": "1",
+              "name": "Wireless Headphones",
+              "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+              "price": 299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+              "rating": 4.5,
+              "reviewCount": 128,
+              "inStock": true,
+              "category": "electronics"
+            }
+          ],
+          "cartItems": []
+        }
+      },
+      "outputConforms": true,
+      "finalURL": "http://127.0.0.1:4311/cart",
+      "deniedExternalRequests": {
+        "count": 36,
+        "origins": [
+          "https://fonts.googleapis.com",
+          "https://images.unsplash.com"
+        ]
+      },
+      "pageErrors": []
+    },
+    {
+      "id": "cart-remove",
+      "component": "ShowCartItem",
+      "handler": "store.removeFromCart",
+      "status": "success",
+      "businessArgs": {
+        "product": {
+          "id": "1",
+          "name": "Wireless Headphones",
+          "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+          "price": 299.99,
+          "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+          "rating": 4.5,
+          "reviewCount": 128,
+          "inStock": true,
+          "category": "electronics"
+        }
+      },
+      "contextAugmentation": {},
+      "runtimeContext": {},
+      "variantSelection": null,
+      "matches": [
+        {
+          "id": "/cart#ShowCartItem.store.removeFromCart:app-show-cart-item button.danger",
+          "route": "/cart",
+          "status": "candidate",
+          "issues": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "product": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "price": {
+                    "type": "number"
+                  },
+                  "imageUrl": {
+                    "type": "string"
+                  },
+                  "rating": {
+                    "type": "number"
+                  },
+                  "reviewCount": {
+                    "type": "number"
+                  },
+                  "inStock": {
+                    "type": "boolean"
+                  },
+                  "category": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "name",
+                  "description",
+                  "price",
+                  "imageUrl",
+                  "rating",
+                  "reviewCount",
+                  "inStock",
+                  "category"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "product"
+            ],
+            "additionalProperties": false
+          }
+        }
+      ],
+      "setupURL": "http://127.0.0.1:4311/cart",
+      "setupEvidence": [
+        {
+          "kind": "source-ui-precondition",
+          "action": "Add product through original catalog button",
+          "productName": "Wireless Headphones",
+          "url": "http://127.0.0.1:4311/products/all"
+        },
+        {
+          "kind": "source-ui-precondition",
+          "action": "Add product through original catalog button",
+          "productName": "Professional Camera",
+          "url": "http://127.0.0.1:4311/products/all"
+        }
+      ],
+      "before": {
+        "cartItems": [
+          {
+            "product": {
+              "id": "1",
+              "name": "Wireless Headphones",
+              "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+              "price": 299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+              "rating": 4.5,
+              "reviewCount": 128,
+              "inStock": true,
+              "category": "electronics"
+            },
+            "quantity": 1
+          },
+          {
+            "product": {
+              "id": "2",
+              "name": "Professional Camera",
+              "description": "Mirrorless camera with 24MP sensor and 4K video recording",
+              "price": 1299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500",
+              "rating": 4.7,
+              "reviewCount": 256,
+              "inStock": true,
+              "category": "electronics"
+            },
+            "quantity": 1
+          }
+        ],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 2,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": [
+            {
+              "product": {
+                "id": "1",
+                "name": "Wireless Headphones",
+                "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+                "price": 299.99,
+                "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+                "rating": 4.5,
+                "reviewCount": 128,
+                "inStock": true,
+                "category": "electronics"
+              },
+              "quantity": 1
+            },
+            {
+              "product": {
+                "id": "2",
+                "name": "Professional Camera",
+                "description": "Mirrorless camera with 24MP sensor and 4K video recording",
+                "price": 1299.99,
+                "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500",
+                "rating": 4.7,
+                "reviewCount": 256,
+                "inStock": true,
+                "category": "electronics"
+              },
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "capabilityId": "/cart#ShowCartItem.store.removeFromCart:app-show-cart-item button.danger",
+      "generatedInputSchema": {
+        "type": "object",
+        "properties": {
+          "product": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "price": {
+                "type": "number"
+              },
+              "imageUrl": {
+                "type": "string"
+              },
+              "rating": {
+                "type": "number"
+              },
+              "reviewCount": {
+                "type": "number"
+              },
+              "inStock": {
+                "type": "boolean"
+              },
+              "category": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "description",
+              "price",
+              "imageUrl",
+              "rating",
+              "reviewCount",
+              "inStock",
+              "category"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "product"
+        ],
+        "additionalProperties": false
+      },
+      "generatedOutputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "selection": {
+        "source": "Declared direct route preferred over allowed child-route representation, then visible source control; no oracle/output scoring",
+        "route": "/cart"
+      },
+      "transportArgs": {
+        "product": {
+          "id": "1",
+          "name": "Wireless Headphones",
+          "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+          "price": 299.99,
+          "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+          "rating": 4.5,
+          "reviewCount": 128,
+          "inStock": true,
+          "category": "electronics"
+        }
+      },
+      "schemaAccepted": true,
+      "schemaErrors": null,
+      "toolName": "angular_store_removeFromCart_1aa1f58f31",
+      "dispatch": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:4311/cart\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:4311/cart"
+        }
+      },
+      "oracle": {
+        "remainingCartId": "2"
+      },
+      "after": {
+        "cartItems": [
+          {
+            "product": {
+              "id": "2",
+              "name": "Professional Camera",
+              "description": "Mirrorless camera with 24MP sensor and 4K video recording",
+              "price": 1299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500",
+              "rating": 4.7,
+              "reviewCount": 256,
+              "inStock": true,
+              "category": "electronics"
+            },
+            "quantity": 1
+          }
+        ],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 1,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": [
+            {
+              "product": {
+                "id": "2",
+                "name": "Professional Camera",
+                "description": "Mirrorless camera with 24MP sensor and 4K video recording",
+                "price": 1299.99,
+                "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500",
+                "rating": 4.7,
+                "reviewCount": 256,
+                "inStock": true,
+                "category": "electronics"
+              },
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "outputConforms": true,
+      "finalURL": "http://127.0.0.1:4311/cart",
+      "deniedExternalRequests": {
+        "count": 70,
+        "origins": [
+          "https://fonts.googleapis.com",
+          "https://images.unsplash.com"
+        ]
+      },
+      "pageErrors": []
+    },
+    {
+      "id": "wishlist-add-all-to-cart",
+      "component": "TeaseWishlist",
+      "handler": "store.addAllWishlistToCart",
+      "status": "success",
+      "businessArgs": {},
+      "contextAugmentation": {},
+      "runtimeContext": {},
+      "variantSelection": null,
+      "matches": [
+        {
+          "id": "/cart#TeaseWishlist.store.addAllWishlistToCart:app-tease-wishlist button.flex-items-center.gap-2",
+          "route": "/cart",
+          "status": "candidate",
+          "issues": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": false
+          }
+        }
+      ],
+      "setupURL": "http://127.0.0.1:4311/cart",
+      "setupEvidence": [
+        {
+          "kind": "source-ui-precondition",
+          "action": "Toggle wishlist through original catalog button",
+          "productName": "Wireless Headphones",
+          "url": "http://127.0.0.1:4311/products/all"
+        },
+        {
+          "kind": "source-ui-precondition",
+          "action": "Toggle wishlist through original catalog button",
+          "productName": "Professional Camera",
+          "url": "http://127.0.0.1:4311/products/all"
+        },
+        {
+          "kind": "source-ui-precondition",
+          "action": "Add product through original catalog button",
+          "productName": "Wireless Headphones",
+          "url": "http://127.0.0.1:4311/products/all"
+        }
+      ],
+      "before": {
+        "cartItems": [
+          {
+            "product": {
+              "id": "1",
+              "name": "Wireless Headphones",
+              "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+              "price": 299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+              "rating": 4.5,
+              "reviewCount": 128,
+              "inStock": true,
+              "category": "electronics"
+            },
+            "quantity": 3
+          }
+        ],
+        "wishlistItems": [
+          {
+            "id": "1",
+            "name": "Wireless Headphones",
+            "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+            "price": 299.99,
+            "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+            "rating": 4.5,
+            "reviewCount": 128,
+            "inStock": true,
+            "category": "electronics"
+          },
+          {
+            "id": "2",
+            "name": "Professional Camera",
+            "description": "Mirrorless camera with 24MP sensor and 4K video recording",
+            "price": 1299.99,
+            "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500",
+            "rating": 4.7,
+            "reviewCount": 256,
+            "inStock": true,
+            "category": "electronics"
+          }
+        ],
+        "user": null,
+        "cartCount": 3,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [
+            {
+              "id": "1",
+              "name": "Wireless Headphones",
+              "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+              "price": 299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+              "rating": 4.5,
+              "reviewCount": 128,
+              "inStock": true,
+              "category": "electronics"
+            },
+            {
+              "id": "2",
+              "name": "Professional Camera",
+              "description": "Mirrorless camera with 24MP sensor and 4K video recording",
+              "price": 1299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500",
+              "rating": 4.7,
+              "reviewCount": 256,
+              "inStock": true,
+              "category": "electronics"
+            }
+          ],
+          "cartItems": [
+            {
+              "product": {
+                "id": "1",
+                "name": "Wireless Headphones",
+                "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+                "price": 299.99,
+                "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+                "rating": 4.5,
+                "reviewCount": 128,
+                "inStock": true,
+                "category": "electronics"
+              },
+              "quantity": 3
+            }
+          ]
+        }
+      },
+      "capabilityId": "/cart#TeaseWishlist.store.addAllWishlistToCart:app-tease-wishlist button.flex-items-center.gap-2",
+      "generatedInputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "generatedOutputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "selection": {
+        "source": "Declared direct route preferred over allowed child-route representation, then visible source control; no oracle/output scoring",
+        "route": "/cart"
+      },
+      "transportArgs": {},
+      "schemaAccepted": true,
+      "schemaErrors": null,
+      "toolName": "angular_store_addAllWishlistToCart_d2a4edb379",
+      "dispatch": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:4311/cart\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:4311/cart"
+        }
+      },
+      "oracle": {
+        "existingQuantity": 3,
+        "addedQuantity": 1,
+        "wishlistEmpty": true
+      },
+      "after": {
+        "cartItems": [
+          {
+            "product": {
+              "id": "1",
+              "name": "Wireless Headphones",
+              "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+              "price": 299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+              "rating": 4.5,
+              "reviewCount": 128,
+              "inStock": true,
+              "category": "electronics"
+            },
+            "quantity": 3
+          },
+          {
+            "product": {
+              "id": "2",
+              "name": "Professional Camera",
+              "description": "Mirrorless camera with 24MP sensor and 4K video recording",
+              "price": 1299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500",
+              "rating": 4.7,
+              "reviewCount": 256,
+              "inStock": true,
+              "category": "electronics"
+            },
+            "quantity": 1
+          }
+        ],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 4,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": [
+            {
+              "product": {
+                "id": "1",
+                "name": "Wireless Headphones",
+                "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+                "price": 299.99,
+                "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+                "rating": 4.5,
+                "reviewCount": 128,
+                "inStock": true,
+                "category": "electronics"
+              },
+              "quantity": 3
+            },
+            {
+              "product": {
+                "id": "2",
+                "name": "Professional Camera",
+                "description": "Mirrorless camera with 24MP sensor and 4K video recording",
+                "price": 1299.99,
+                "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500",
+                "rating": 4.7,
+                "reviewCount": 256,
+                "inStock": true,
+                "category": "electronics"
+              },
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "outputConforms": true,
+      "finalURL": "http://127.0.0.1:4311/cart",
+      "deniedExternalRequests": {
+        "count": 37,
+        "origins": [
+          "https://fonts.googleapis.com",
+          "https://images.unsplash.com"
+        ]
+      },
+      "pageErrors": []
+    },
+    {
+      "id": "session-sign-in",
+      "component": "SignInDialog",
+      "handler": "signIn",
+      "status": "success",
+      "businessArgs": {
+        "email": "benchmark@example.test",
+        "password": "sample123"
+      },
+      "contextAugmentation": {},
+      "runtimeContext": {},
+      "variantSelection": null,
+      "matches": [
+        {
+          "id": "/#SignInDialog.signIn:app-sign-in-dialog form.flex.flex-col.gap-4@app-header-actions button",
+          "route": "/",
+          "status": "candidate",
+          "issues": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "email": {
+                "type": "string",
+                "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+                "minLength": 1
+              },
+              "password": {
+                "type": "string",
+                "minLength": 6
+              }
+            },
+            "required": [
+              "email",
+              "password"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "id": "/#SignInDialog.signIn:app-sign-in-dialog form.flex.flex-col.gap-4@app-sign-up-dialog a.text-blue-600.cursor-pointer",
+          "route": "/",
+          "status": "candidate",
+          "issues": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "email": {
+                "type": "string",
+                "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+                "minLength": 1
+              },
+              "password": {
+                "type": "string",
+                "minLength": 6
+              }
+            },
+            "required": [
+              "email",
+              "password"
+            ],
+            "additionalProperties": false
+          }
+        }
+      ],
+      "setupURL": "http://127.0.0.1:4311/products/all",
+      "setupEvidence": [],
+      "before": {
+        "cartItems": [],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": []
+        }
+      },
+      "capabilityId": "/#SignInDialog.signIn:app-sign-in-dialog form.flex.flex-col.gap-4@app-header-actions button",
+      "generatedInputSchema": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+            "minLength": 1
+          },
+          "password": {
+            "type": "string",
+            "minLength": 6
+          }
+        },
+        "required": [
+          "email",
+          "password"
+        ],
+        "additionalProperties": false
+      },
+      "generatedOutputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "selection": {
+        "source": "Declared direct route preferred over allowed child-route representation, then visible source control; no oracle/output scoring",
+        "route": "/"
+      },
+      "transportArgs": {
+        "email": "benchmark@example.test",
+        "password": "sample123"
+      },
+      "schemaAccepted": true,
+      "schemaErrors": null,
+      "toolName": "angular_signIn_be3e1bb76f",
+      "dispatch": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:4311/products/all\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:4311/products/all"
+        }
+      },
+      "oracle": {
+        "userEmail": "benchmark@example.test",
+        "fixedId": "1"
+      },
+      "after": {
+        "cartItems": [],
+        "wishlistItems": [],
+        "user": {
+          "id": "1",
+          "email": "benchmark@example.test",
+          "name": "John Doe",
+          "imageUrl": "https://randomuser.me/api/portraits/men/1.jpg"
+        },
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": []
+        }
+      },
+      "outputConforms": true,
+      "finalURL": "http://127.0.0.1:4311/products/all",
+      "deniedExternalRequests": {
+        "count": 35,
+        "origins": [
+          "https://fonts.googleapis.com",
+          "https://images.unsplash.com",
+          "https://randomuser.me"
+        ]
+      },
+      "pageErrors": []
+    },
+    {
+      "id": "session-sign-up",
+      "component": "SignUpDialog",
+      "handler": "signUp",
+      "status": "success",
+      "businessArgs": {
+        "name": "Benchmark User",
+        "email": "benchmark@example.test",
+        "password": "sample123",
+        "confirmPassword": "sample123"
+      },
+      "contextAugmentation": {},
+      "runtimeContext": {},
+      "variantSelection": null,
+      "matches": [
+        {
+          "id": "/#SignUpDialog.signUp:app-sign-up-dialog form.flex.flex-col.gap-4@app-header-actions button[matbutton=\"filled\"]",
+          "route": "/",
+          "status": "candidate",
+          "issues": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 2
+              },
+              "email": {
+                "type": "string",
+                "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+                "minLength": 1
+              },
+              "password": {
+                "type": "string",
+                "minLength": 6
+              },
+              "confirmPassword": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "name",
+              "email",
+              "password",
+              "confirmPassword"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "id": "/#SignUpDialog.signUp:app-sign-up-dialog form.flex.flex-col.gap-4@app-sign-in-dialog a.text-blue-600.cursor-pointer",
+          "route": "/",
+          "status": "candidate",
+          "issues": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 2
+              },
+              "email": {
+                "type": "string",
+                "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+                "minLength": 1
+              },
+              "password": {
+                "type": "string",
+                "minLength": 6
+              },
+              "confirmPassword": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "name",
+              "email",
+              "password",
+              "confirmPassword"
+            ],
+            "additionalProperties": false
+          }
+        }
+      ],
+      "setupURL": "http://127.0.0.1:4311/products/all",
+      "setupEvidence": [],
+      "before": {
+        "cartItems": [],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": []
+        }
+      },
+      "capabilityId": "/#SignUpDialog.signUp:app-sign-up-dialog form.flex.flex-col.gap-4@app-header-actions button[matbutton=\"filled\"]",
+      "generatedInputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 2
+          },
+          "email": {
+            "type": "string",
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+            "minLength": 1
+          },
+          "password": {
+            "type": "string",
+            "minLength": 6
+          },
+          "confirmPassword": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "name",
+          "email",
+          "password",
+          "confirmPassword"
+        ],
+        "additionalProperties": false
+      },
+      "generatedOutputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "selection": {
+        "source": "Declared direct route preferred over allowed child-route representation, then visible source control; no oracle/output scoring",
+        "route": "/"
+      },
+      "transportArgs": {
+        "name": "Benchmark User",
+        "email": "benchmark@example.test",
+        "password": "sample123",
+        "confirmPassword": "sample123"
+      },
+      "schemaAccepted": true,
+      "schemaErrors": null,
+      "toolName": "angular_signUp_0b24d090fd",
+      "dispatch": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:4311/products/all\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:4311/products/all"
+        }
+      },
+      "oracle": {
+        "userEmail": "benchmark@example.test",
+        "sourceFixedName": "John Doe"
+      },
+      "after": {
+        "cartItems": [],
+        "wishlistItems": [],
+        "user": {
+          "id": "1",
+          "email": "benchmark@example.test",
+          "name": "John Doe",
+          "imageUrl": "https://randomuser.me/api/portraits/men/1.jpg"
+        },
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": []
+        }
+      },
+      "outputConforms": true,
+      "finalURL": "http://127.0.0.1:4311/products/all",
+      "deniedExternalRequests": {
+        "count": 35,
+        "origins": [
+          "https://fonts.googleapis.com",
+          "https://images.unsplash.com",
+          "https://randomuser.me"
+        ]
+      },
+      "pageErrors": []
+    },
+    {
+      "id": "session-sign-out",
+      "component": "HeaderActions",
+      "handler": "store.signOut",
+      "status": "success",
+      "businessArgs": {},
+      "contextAugmentation": {},
+      "runtimeContext": {},
+      "variantSelection": null,
+      "matches": [
+        {
+          "id": "/#HeaderActions.store.signOut:.mat-mdc-menu-panel button",
+          "route": "/",
+          "status": "candidate",
+          "issues": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": false
+          }
+        }
+      ],
+      "setupURL": "http://127.0.0.1:4311/product/1",
+      "setupEvidence": [
+        {
+          "kind": "source-ui-precondition",
+          "action": "Add product through original catalog button",
+          "productName": "Wireless Headphones",
+          "url": "http://127.0.0.1:4311/products/all"
+        },
+        {
+          "kind": "source-ui-auth-precondition",
+          "action": "Original mock SignInDialog submission",
+          "email": "benchmark@example.test",
+          "noExternalAccount": true,
+          "url": "http://127.0.0.1:4311/product/1"
+        }
+      ],
+      "before": {
+        "cartItems": [
+          {
+            "product": {
+              "id": "1",
+              "name": "Wireless Headphones",
+              "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+              "price": 299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+              "rating": 4.5,
+              "reviewCount": 128,
+              "inStock": true,
+              "category": "electronics"
+            },
+            "quantity": 1
+          }
+        ],
+        "wishlistItems": [],
+        "user": {
+          "id": "1",
+          "email": "benchmark@example.test",
+          "name": "John Doe",
+          "imageUrl": "https://randomuser.me/api/portraits/men/1.jpg"
+        },
+        "cartCount": 1,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": [
+            {
+              "product": {
+                "id": "1",
+                "name": "Wireless Headphones",
+                "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+                "price": 299.99,
+                "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+                "rating": 4.5,
+                "reviewCount": 128,
+                "inStock": true,
+                "category": "electronics"
+              },
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "capabilityId": "/#HeaderActions.store.signOut:.mat-mdc-menu-panel button",
+      "generatedInputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "generatedOutputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "selection": {
+        "source": "Declared direct route preferred over allowed child-route representation, then visible source control; no oracle/output scoring",
+        "route": "/"
+      },
+      "transportArgs": {},
+      "schemaAccepted": true,
+      "schemaErrors": null,
+      "toolName": "angular_store_signOut_cff93d7d24",
+      "dispatch": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:4311/product/1\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:4311/product/1"
+        }
+      },
+      "oracle": {
+        "sessionCleared": true,
+        "cartRetained": true
+      },
+      "after": {
+        "cartItems": [
+          {
+            "product": {
+              "id": "1",
+              "name": "Wireless Headphones",
+              "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+              "price": 299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+              "rating": 4.5,
+              "reviewCount": 128,
+              "inStock": true,
+              "category": "electronics"
+            },
+            "quantity": 1
+          }
+        ],
+        "wishlistItems": [],
+        "user": null,
+        "cartCount": 1,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": [
+            {
+              "product": {
+                "id": "1",
+                "name": "Wireless Headphones",
+                "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+                "price": 299.99,
+                "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+                "rating": 4.5,
+                "reviewCount": 128,
+                "inStock": true,
+                "category": "electronics"
+              },
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "outputConforms": true,
+      "finalURL": "http://127.0.0.1:4311/product/1",
+      "deniedExternalRequests": {
+        "count": 36,
+        "origins": [
+          "https://fonts.googleapis.com",
+          "https://images.unsplash.com",
+          "https://randomuser.me"
+        ]
+      },
+      "pageErrors": []
+    },
+    {
+      "id": "order-place",
+      "component": "Checkout",
+      "handler": "store.placeOrder",
+      "status": "success",
+      "businessArgs": {},
+      "contextAugmentation": {},
+      "runtimeContext": {},
+      "variantSelection": null,
+      "matches": [
+        {
+          "id": "/checkout#Checkout.store.placeOrder:app-checkout button.w-full.mt-6.py-3",
+          "route": "/checkout",
+          "status": "candidate",
+          "issues": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": false
+          }
+        }
+      ],
+      "setupURL": "http://127.0.0.1:4311/checkout",
+      "setupEvidence": [
+        {
+          "kind": "source-ui-precondition",
+          "action": "Add product through original catalog button",
+          "productName": "Wireless Headphones",
+          "url": "http://127.0.0.1:4311/products/all"
+        },
+        {
+          "kind": "source-ui-auth-precondition",
+          "action": "Original mock SignInDialog submission",
+          "email": "benchmark@example.test",
+          "noExternalAccount": true,
+          "url": "http://127.0.0.1:4311/cart"
+        }
+      ],
+      "before": {
+        "cartItems": [
+          {
+            "product": {
+              "id": "1",
+              "name": "Wireless Headphones",
+              "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+              "price": 299.99,
+              "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+              "rating": 4.5,
+              "reviewCount": 128,
+              "inStock": true,
+              "category": "electronics"
+            },
+            "quantity": 1
+          }
+        ],
+        "wishlistItems": [],
+        "user": {
+          "id": "1",
+          "email": "benchmark@example.test",
+          "name": "John Doe",
+          "imageUrl": "https://randomuser.me/api/portraits/men/1.jpg"
+        },
+        "cartCount": 1,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": [
+            {
+              "product": {
+                "id": "1",
+                "name": "Wireless Headphones",
+                "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+                "price": 299.99,
+                "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+                "rating": 4.5,
+                "reviewCount": 128,
+                "inStock": true,
+                "category": "electronics"
+              },
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "capabilityId": "/checkout#Checkout.store.placeOrder:app-checkout button.w-full.mt-6.py-3",
+      "generatedInputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "generatedOutputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "selection": {
+        "source": "Declared direct route preferred over allowed child-route representation, then visible source control; no oracle/output scoring",
+        "route": "/checkout"
+      },
+      "transportArgs": {},
+      "schemaAccepted": true,
+      "schemaErrors": null,
+      "toolName": "angular_store_placeOrder_64a71fa9bf",
+      "dispatch": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:4311/checkout\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:4311/checkout"
+        }
+      },
+      "oracle": {
+        "successRoute": true,
+        "cartEmpty": true,
+        "persisted": true
+      },
+      "after": {
+        "cartItems": [],
+        "wishlistItems": [],
+        "user": {
+          "id": "1",
+          "email": "benchmark@example.test",
+          "name": "John Doe",
+          "imageUrl": "https://randomuser.me/api/portraits/men/1.jpg"
+        },
+        "cartCount": 0,
+        "loading": false,
+        "storage": {
+          "wishlistItems": [],
+          "cartItems": []
+        }
+      },
+      "outputConforms": true,
+      "finalURL": "http://127.0.0.1:4311/order-success",
+      "deniedExternalRequests": {
+        "count": 37,
+        "origins": [
+          "https://fonts.googleapis.com",
+          "https://images.unsplash.com",
+          "https://randomuser.me"
+        ]
+      },
+      "pageErrors": []
+    }
+  ]
+}

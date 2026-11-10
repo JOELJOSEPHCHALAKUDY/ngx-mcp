@@ -1,0 +1,43 @@
+{
+  "frozenLabelsModified": false,
+  "contextAdditions": [],
+  "mappings": {
+    "toggle_all": {
+      "source": {
+        "completed": true
+      },
+      "compilerNative": {
+        "checked": true
+      },
+      "kind": "source control-name rename only"
+    },
+    "toggle_todo": {
+      "source": {
+        "todo": {
+          "title": "Read fixture article",
+          "completed": false
+        }
+      },
+      "compilerNative": {
+        "todo": {
+          "title": "Read fixture article",
+          "completed": false
+        },
+        "value": true
+      },
+      "kind": "explicit desired checkbox value, derived as !source.todo.completed"
+    },
+    "filter_todos": {
+      "source": {
+        "filter": "active"
+      },
+      "compilerNative": {
+        "route": "/active"
+      },
+      "kind": "semantic filter selection mapped to authored RouterLink path"
+    }
+  },
+  "sourcePreconditions": {
+    "delete_todo": "Hover selected row as already frozen in labels; runtime tool still performs real destroy click"
+  }
+}

@@ -1,0 +1,1 @@
+This pinned application uses Angular4. It is outside the intended Angular16+ compiler support range. All frozen labels, source-only4/4 reference results, and0/4 first-pass MCP failures are preserved as legacy compatibility evidence. Do not blend this project into modern-scope accuracy metrics.

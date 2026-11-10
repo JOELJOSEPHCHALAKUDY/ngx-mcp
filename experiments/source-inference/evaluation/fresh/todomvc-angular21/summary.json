@@ -1,0 +1,474 @@
+{
+  "projectId": "todomvc-angular21",
+  "scope": "Angular21; within intended Angular16+ range",
+  "repository": "https://github.com/tastejs/todomvc",
+  "commit": "ff43b02e59dfa604386bb382034b2cd07c2bcd8a",
+  "frozenOperationCount": 7,
+  "sourceReferenceEffectsPassed": 7,
+  "referenceBoundaryChecksPassed": 4,
+  "firstCompilerPass": {
+    "routeCount": 3,
+    "capabilityCount": 18,
+    "uniqueBusinessOperations": {
+      "missing": [
+        "filter_todos",
+        "add_todo"
+      ],
+      "blocked": [
+        "toggle_todo",
+        "delete_todo",
+        "edit_todo"
+      ],
+      "candidate": [
+        "toggle_all",
+        "clear_completed"
+      ]
+    },
+    "exactFrozenArgumentEffectsPassed": 1,
+    "effectsPassedWithDocumentedArgumentRename": 2,
+    "argumentRename": {
+      "from": "completed",
+      "to": "checked",
+      "value": true
+    },
+    "noSourcePatches": true,
+    "noManifestPatches": true,
+    "runtimeContextAdditions": []
+  },
+  "results": [
+    {
+      "id": "filter_todos",
+      "phase": "exact-frozen-input",
+      "args": {
+        "filter": "active"
+      },
+      "before": {
+        "url": "http://127.0.0.1:4342/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "network": {
+        "blocked": [],
+        "apiRequests": []
+      },
+      "setup": "Fresh empty in-memory app, synthetic rows created through UI; third row completed",
+      "tools": [],
+      "status": "missing",
+      "reason": "No source-derived capability for this operation"
+    },
+    {
+      "id": "add_todo",
+      "phase": "exact-frozen-input",
+      "args": {
+        "title": "  Frozen holdout task  "
+      },
+      "before": {
+        "url": "http://127.0.0.1:4342/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "network": {
+        "blocked": [],
+        "apiRequests": []
+      },
+      "setup": "Fresh empty in-memory app, synthetic rows created through UI; third row completed",
+      "tools": [],
+      "status": "missing",
+      "reason": "No source-derived capability for this operation"
+    },
+    {
+      "id": "toggle_todo",
+      "phase": "exact-frozen-input",
+      "args": {
+        "todo": {
+          "title": "Read fixture article",
+          "completed": false
+        }
+      },
+      "capability": "/all#TodoItemComponent.toggleTodo:app-todo-item input.toggle",
+      "before": {
+        "url": "http://127.0.0.1:4342/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "network": {
+        "blocked": [],
+        "apiRequests": []
+      },
+      "setup": "Fresh empty in-memory app, synthetic rows created through UI; third row completed",
+      "tools": [],
+      "status": "blocked",
+      "issues": [
+        "Repeated/template-scoped UI requires an explicit row selection binding"
+      ]
+    },
+    {
+      "id": "delete_todo",
+      "phase": "exact-frozen-input",
+      "args": {
+        "todo": {
+          "title": "Clean fixture inbox",
+          "completed": false
+        }
+      },
+      "capability": "/all#TodoListComponent.removeTodo:app-todo-list app-todo-item button.destroy",
+      "before": {
+        "url": "http://127.0.0.1:4342/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "network": {
+        "blocked": [],
+        "apiRequests": []
+      },
+      "setup": "Fresh empty in-memory app, synthetic rows created through UI; third row completed",
+      "tools": [],
+      "status": "blocked",
+      "issues": [
+        "Forwarded event needs a data identity for the item it acts on"
+      ]
+    },
+    {
+      "id": "toggle_all",
+      "phase": "exact-frozen-input",
+      "args": {
+        "completed": true
+      },
+      "capability": "/all#TodoListComponent.toggleAll:app-todo-list input.toggle-all",
+      "before": {
+        "url": "http://127.0.0.1:4342/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "network": {
+        "blocked": [],
+        "apiRequests": []
+      },
+      "setup": "Fresh empty in-memory app, synthetic rows created through UI; third row completed",
+      "tools": [
+        {
+          "name": "angular_toggleAll_ed9a1b7336",
+          "description": "Independent modern holdout synthetic runtime",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "checked": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "checked"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "const": "ui-dispatched"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "status",
+              "url"
+            ],
+            "additionalProperties": false
+          },
+          "annotations": {
+            "readOnlyHint": false,
+            "destructiveHint": true,
+            "openWorldHint": true
+          }
+        }
+      ],
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "data must have required property 'checked', data must NOT have additional properties"
+          }
+        ],
+        "isError": true
+      },
+      "after": {
+        "url": "http://127.0.0.1:4342/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "effectVerified": false,
+      "status": "tool-error"
+    },
+    {
+      "id": "edit_todo",
+      "phase": "exact-frozen-input",
+      "args": {
+        "todo": {
+          "title": "Read fixture article",
+          "completed": false
+        },
+        "title": "  Revised fixture article  "
+      },
+      "capability": "/all#TodoItemComponent.commitEdit:app-todo-item input.edit",
+      "before": {
+        "url": "http://127.0.0.1:4342/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "network": {
+        "blocked": [],
+        "apiRequests": []
+      },
+      "setup": "Fresh empty in-memory app, synthetic rows created through UI; third row completed",
+      "tools": [],
+      "status": "blocked",
+      "issues": [
+        "Repeated/template-scoped UI requires an explicit row selection binding"
+      ]
+    },
+    {
+      "id": "clear_completed",
+      "phase": "exact-frozen-input",
+      "args": {},
+      "capability": "/all#FooterComponent.clearCompleted:app-todo-footer button.clear-completed",
+      "before": {
+        "url": "http://127.0.0.1:4342/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "network": {
+        "blocked": [],
+        "apiRequests": []
+      },
+      "setup": "Fresh empty in-memory app, synthetic rows created through UI; third row completed",
+      "tools": [
+        {
+          "name": "angular_clearCompleted_a2b2bcb43e",
+          "description": "Independent modern holdout synthetic runtime",
+          "inputSchema": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "const": "ui-dispatched"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "status",
+              "url"
+            ],
+            "additionalProperties": false
+          },
+          "annotations": {
+            "readOnlyHint": false,
+            "destructiveHint": true,
+            "openWorldHint": true
+          }
+        }
+      ],
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:4342/#/all\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:4342/#/all"
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4342/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "effectVerified": true,
+      "status": "effect-verified"
+    }
+  ],
+  "limitations": [
+    "Fresh project first-pass evidence was measured against the current shared compiler; author had previously integrated the separate legacy sample. No compiler source revisits or this-project output were used in modern label authoring.",
+    "Three route variants share the same operation implementations and are not triple-counted.",
+    "Edit workflow reveal/cancel are source-tested boundaries of one business edit operation.",
+    "No backend exists in the app; synthetic tasks are seeded exclusively through DOM and off-origin requests are aborted."
+  ],
+  "compilerDigest": "551409472519afbc681aa4d8bfc40282abf088883a7c2230bcd9c9b19c26c3c7",
+  "firstReferenceHarnessAttempt": "Retained unchanged: snapshot was taken before Angular render after route click. Snapshot then waited two animation frames, and reference passed7/7+4 boundaries.",
+  "remediatedRegression": {
+    "status": "Known-project regression; first-pass holdout score remains unchanged",
+    "compilerNativeEffectsPassed": 7,
+    "exactFrozenInputEffectsPassed": 4,
+    "boundariesPassed": 4,
+    "requiredInputMappings": [
+      "filter enum -> authored route path",
+      "completed -> checked control-name rename",
+      "row toggle -> explicit desired value boolean"
+    ],
+    "applicationSourcePatches": [],
+    "manifestPatches": [],
+    "runtimeContextAdditions": [],
+    "resultArtifact": "replay-runtime-results.json",
+    "provenanceArtifact": "replay-provenance.json",
+    "replayCommand": "FRESH_FINAL=1 node_modules/.bin/node --import tsx evaluation/fresh/todomvc-angular21/mcp-runtime.mts",
+    "note": "Read replay-provenance.json for the exact source/evaluator digests from the latest run; summaries do not substitute for the immutable first-pass artifacts."
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "included": [
+    "transaction-create",
+    "transaction-edit",
+    "transaction-delete",
+    "transaction-undo",
+    "category-create",
+    "category-edit",
+    "category-delete",
+    "budget-set",
+    "budget-remove",
+    "transactions-import",
+    "transactions-export",
+    "data-clear",
+    "data-restore-demo"
+  ],
+  "excluded": [
+    {
+      "kind": "transient UI",
+      "items": [
+        "routing",
+        "dashboard/month selection",
+        "transaction search/filter/sort/pagination",
+        "dialog opening/closing",
+        "snackbar dismiss"
+      ]
+    },
+    {
+      "kind": "presentation preference",
+      "items": [
+        "theme",
+        "language"
+      ],
+      "reason": "Preferences persist separately but do not change finance records; explicitly outside domain-state scope."
+    },
+    {
+      "kind": "exceptional recovery",
+      "items": [
+        "FinanceStore.reset from corrupted-storage error screen"
+      ],
+      "reason": "No valid FinanceData state; separate recovery branch outside normal ready-state scope, retained as exclusion before scoring."
+    }
+  ]
+}

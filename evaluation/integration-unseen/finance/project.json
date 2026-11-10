@@ -1,0 +1,23 @@
+{
+  "id": "finance",
+  "repository": "https://github.com/BrunoICosta/angular-finance-tracker",
+  "commit": "61c1bb87567df4245f0722713edabc8177121842",
+  "directory": "/tmp/integration-unseen-finance",
+  "license": "MIT",
+  "licenseFile": "LICENSE",
+  "port": 4351,
+  "tsconfig": "tsconfig.app.json",
+  "routes": "src/app/app.routes.ts#routes",
+  "angularProject": "angular-finance-tracker",
+  "angular": "^20.3.0",
+  "lockSha256": "5d0e481febf944a2e66a94f32119cfe5c188faf2a714144fecdebb1a051de46e",
+  "licenseSha256": "76cf8b722fecab0199afbd5b04d0b74cf8eef65902131c7aa63d25cfc05981d9",
+  "install": [
+    "npm",
+    "ci",
+    "--ignore-scripts",
+    "--no-audit",
+    "--no-fund"
+  ],
+  "sourceManifestSha256": "726a55d7254d3fb87b6292c85c7831e5e5e8cbcd20fa886c7f41724d79fb9a5b"
+}

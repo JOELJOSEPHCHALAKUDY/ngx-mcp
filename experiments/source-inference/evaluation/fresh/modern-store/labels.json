@@ -1,0 +1,1218 @@
+{
+  "schemaVersion": "fresh-source-labels-v1",
+  "project": {
+    "repository": "https://github.com/Ankur071/Modern-Store",
+    "commit": "5bface390202c117a30bb7de06839735d3b9f013",
+    "license": {
+      "spdx": "MIT",
+      "evidence": [
+        {
+          "file": "README.md",
+          "startLine": 278,
+          "endLine": 280,
+          "sha256": "a9dac0f16a0f8e21268b9eb001da66896ed392325bdd273a6dd8f9ad1a4c48c4",
+          "reason": ""
+        }
+      ],
+      "qualification": "README-only explicit MIT declaration; no standalone LICENSE file. Source retained locally for benchmark; do not redistribute this app through the compiler npm package."
+    },
+    "localSource": "test-apps/fresh-modern-store",
+    "angularProject": "ng-ecommerce",
+    "port": 4311,
+    "entryRoute": "/products/all",
+    "routeEvidence": [
+      {
+        "file": "src/app/app.routes.ts",
+        "startLine": 3,
+        "endLine": 36,
+        "sha256": "dbf73e030e3721748136790f72faa2afe4d07de2ee2e294ce3c68a4b268d1fe5",
+        "reason": ""
+      }
+    ],
+    "toolchain": {
+      "node": "22.21.1 isolated /tmp; root Node24 is also available",
+      "npm": "10.5.0",
+      "angularCoreLock": "20.3.9",
+      "angularCliLock": "20.3.8",
+      "typescriptLock": "5.9.3",
+      "dependencies": {
+        "name": "ng-ecommerce",
+        "version": "0.0.0",
+        "scripts": {
+          "ng": "ng",
+          "start": "ng serve",
+          "build": "ng build",
+          "watch": "ng build --watch --configuration development",
+          "test": "ng test"
+        },
+        "prettier": {
+          "printWidth": 100,
+          "singleQuote": true,
+          "overrides": [
+            {
+              "files": "*.html",
+              "options": {
+                "parser": "angular"
+              }
+            }
+          ]
+        },
+        "private": true,
+        "dependencies": {
+          "@angular-architects/ngrx-toolkit": "^20.4.2",
+          "@angular/cdk": "^20.2.11",
+          "@angular/common": "^20.3.0",
+          "@angular/compiler": "^20.3.0",
+          "@angular/core": "^20.3.0",
+          "@angular/forms": "^20.3.0",
+          "@angular/material": "^20.2.11",
+          "@angular/platform-browser": "^20.3.0",
+          "@angular/router": "^20.3.0",
+          "@ngneat/overview": "6.1.1",
+          "@ngrx/signals": "^20.1.0",
+          "@ngxpert/hot-toast": "^5.1.2",
+          "@tailwindcss/postcss": "^4.1.16",
+          "immer": "^10.2.0",
+          "postcss": "^8.5.6",
+          "rxjs": "~7.8.0",
+          "tailwindcss": "^4.1.16",
+          "tslib": "^2.3.0"
+        },
+        "devDependencies": {
+          "@angular/build": "^20.3.8",
+          "@angular/cli": "^20.3.8",
+          "@angular/compiler-cli": "^20.3.0",
+          "@types/jasmine": "~5.1.0",
+          "jasmine-core": "~5.9.0",
+          "karma": "~6.4.0",
+          "karma-chrome-launcher": "~3.2.0",
+          "karma-coverage": "~2.2.0",
+          "karma-jasmine": "~5.1.0",
+          "karma-jasmine-html-reporter": "~2.1.0",
+          "typescript": "~5.9.2"
+        }
+      },
+      "lockfileSha256": "e265c84a9163810a9b93bf461d92919a6ab2f57300a946e064139eab6aea6065"
+    },
+    "complexity": "Small commerce app; standalone inline-template components, NgRx signal store, Immer, localStorage cart/wishlist, mock authentication/checkout.",
+    "runtime": {
+      "backend": "none",
+      "serve": "node node_modules/@angular/cli/bin/ng.js serve ng-ecommerce --host 127.0.0.1 --port 4311",
+      "build": "node node_modules/@angular/cli/bin/ng.js build ng-ecommerce --configuration development",
+      "persistence": "withStorageSync key modern-store saves only wishlistItems/cartItems. User is explicitly omitted from select; authentication resets after reload. Place order is a mock operation and creates no durable order record."
+    }
+  },
+  "scope": {
+    "included": "All user-invokable operations that change application domain state within the complete shipped app. Repeated entry points have distinct labels when handler argument contracts differ; common effects use aliases. Domain state includes in-memory app state; backend/persistence claims are separately stated.",
+    "excluded": "Presentation, draft-only edits, route navigation, search/filter state, infrastructure lifecycle and automatic data loading.",
+    "labelingMethod": "Independent read of only the pinned public app source, models, templates, routes and local fixtures. No compiler source, generated capabilities, current benchmark labels or compiler outputs were read. Schemas describe the user or explicit handler input; implicit component/route dependencies are context, and UI-only limits are marked separately."
+  },
+  "actions": [
+    {
+      "id": "cart-add-card",
+      "component": "ProductCard",
+      "handler": "store.addToCart",
+      "routes": [
+        "/products/:category",
+        "/wishlist"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "product": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "price": {
+                "type": "number"
+              },
+              "imageUrl": {
+                "type": "string"
+              },
+              "rating": {
+                "type": "number"
+              },
+              "reviewCount": {
+                "type": "number"
+              },
+              "inStock": {
+                "type": "boolean"
+              },
+              "category": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "description",
+              "price",
+              "imageUrl",
+              "rating",
+              "reviewCount",
+              "inStock",
+              "category"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "product"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "product": {
+          "id": "1",
+          "name": "Wireless Headphones",
+          "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+          "price": 299.99,
+          "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+          "rating": 4.5,
+          "reviewCount": 128,
+          "inStock": true,
+          "category": "electronics"
+        }
+      },
+      "effect": "Insert a quantity-one cart row or increment the existing product row by one.",
+      "evidence": [
+        {
+          "file": "src/app/components/product-card/product-card.ts",
+          "startLine": 38,
+          "endLine": 45,
+          "sha256": "55005c9d6835bccd6a3e452b61e46d3d39f8a0ce5c285d6700087be182d008f6",
+          "reason": ""
+        },
+        {
+          "file": "src/app/ecommerce-store.ts",
+          "startLine": 441,
+          "endLine": 460,
+          "sha256": "c8e353de1eaaec1098b5f7f47784059ef8a94139e9ca69212b7b0e96d32ce645",
+          "reason": ""
+        }
+      ],
+      "context": {
+        "product": "input.required<Product>() bound to rendered row"
+      },
+      "oracle": {
+        "setup": "Empty cart; rendered product id 1.",
+        "assertions": [
+          "After first invocation cartItems has product.id=1 and quantity=1.",
+          "After second invocation same id has quantity=2; no duplicate row.",
+          "Serialized modern-store localStorage cartItems reflects the change."
+        ]
+      },
+      "parameterSemantics": "The Product argument is context-bound; payload may use adapter-resolved productId only if recorded as adapter behavior."
+    },
+    {
+      "id": "cart-add-detail",
+      "component": "ProductInfo",
+      "handler": "store.addToCart",
+      "routes": [
+        "/product/:productId"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "product": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "price": {
+                "type": "number"
+              },
+              "imageUrl": {
+                "type": "string"
+              },
+              "rating": {
+                "type": "number"
+              },
+              "reviewCount": {
+                "type": "number"
+              },
+              "inStock": {
+                "type": "boolean"
+              },
+              "category": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "description",
+              "price",
+              "imageUrl",
+              "rating",
+              "reviewCount",
+              "inStock",
+              "category"
+            ],
+            "additionalProperties": false
+          },
+          "quantity": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "UI-reachable positive integer. Store parameter is number and has no bound validation; QtySelector prevents decrement from one."
+          }
+        },
+        "required": [
+          "product"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "product": {
+          "id": "1",
+          "name": "Wireless Headphones",
+          "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+          "price": 299.99,
+          "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+          "rating": 4.5,
+          "reviewCount": 128,
+          "inStock": true,
+          "category": "electronics"
+        },
+        "quantity": 2
+      },
+      "effect": "Insert the selected product at requested quantity or add that quantity to the existing cart row.",
+      "evidence": [
+        {
+          "file": "src/app/pages/view-product-detail/product-info/product-info.ts",
+          "startLine": 31,
+          "endLine": 45,
+          "sha256": "bc2784def6716c16385735b2a91147ef94bff6b32b1a1bf8f0f4e3320c398dab",
+          "reason": ""
+        },
+        {
+          "file": "src/app/ecommerce-store.ts",
+          "startLine": 441,
+          "endLine": 460,
+          "sha256": "c8e353de1eaaec1098b5f7f47784059ef8a94139e9ca69212b7b0e96d32ce645",
+          "reason": ""
+        }
+      ],
+      "context": {
+        "product": "ProductInfo.product input",
+        "quantity": "ProductInfo.quantity signal; default 1"
+      },
+      "oracle": {
+        "setup": "Use inStock product 1 and empty cart.",
+        "assertions": [
+          "Cart row quantity is 2; cartCount is 2.",
+          "Second call adds to existing quantity rather than replacing it."
+        ]
+      },
+      "uiConstraints": {
+        "quantityMinimum": 1,
+        "quantityMaximum": null,
+        "inStock": "Detail Add button disabled when false; ProductCard variant lacks this gate."
+      },
+      "schemaQualification": "Quantity optional in store signature (default 1); compiler may expose both context-bound arguments."
+    },
+    {
+      "id": "wishlist-toggle",
+      "component": "ToggleWishlistButton",
+      "handler": "toggleWishlist",
+      "routes": [
+        "/products/:category",
+        "/product/:productId"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "product": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "price": {
+                "type": "number"
+              },
+              "imageUrl": {
+                "type": "string"
+              },
+              "rating": {
+                "type": "number"
+              },
+              "reviewCount": {
+                "type": "number"
+              },
+              "inStock": {
+                "type": "boolean"
+              },
+              "category": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "description",
+              "price",
+              "imageUrl",
+              "rating",
+              "reviewCount",
+              "inStock",
+              "category"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "product"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "product": {
+          "id": "1",
+          "name": "Wireless Headphones",
+          "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+          "price": 299.99,
+          "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+          "rating": 4.5,
+          "reviewCount": 128,
+          "inStock": true,
+          "category": "electronics"
+        }
+      },
+      "effect": "Toggle the product membership of wishlist; preserve cart.",
+      "evidence": [
+        {
+          "file": "src/app/components/toggle-wishlist-button/toggle-wishlist-button.ts",
+          "startLine": 25,
+          "endLine": 32,
+          "sha256": "ceba736d746d2c7ad0b61fdc868c382b030917e08c2d6a70dd0fa68c9c481fde",
+          "reason": ""
+        },
+        {
+          "file": "src/app/ecommerce-store.ts",
+          "startLine": 420,
+          "endLine": 435,
+          "sha256": "c8e353de1eaaec1098b5f7f47784059ef8a94139e9ca69212b7b0e96d32ce645",
+          "reason": ""
+        }
+      ],
+      "oracle": {
+        "setup": "Product 1 absent from wishlist.",
+        "assertions": [
+          "First invocation adds exactly one product 1.",
+          "Second invocation removes product 1.",
+          "Cart does not change.",
+          "Membership persists under localStorage modern-store."
+        ]
+      },
+      "branches": [
+        "addToWishlist",
+        "removeFromWishlist"
+      ]
+    },
+    {
+      "id": "wishlist-remove",
+      "component": "MyWishlist",
+      "handler": "store.removeFromWishlist",
+      "routes": [
+        "/wishlist"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "product": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "price": {
+                "type": "number"
+              },
+              "imageUrl": {
+                "type": "string"
+              },
+              "rating": {
+                "type": "number"
+              },
+              "reviewCount": {
+                "type": "number"
+              },
+              "inStock": {
+                "type": "boolean"
+              },
+              "category": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "description",
+              "price",
+              "imageUrl",
+              "rating",
+              "reviewCount",
+              "inStock",
+              "category"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "product"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "product": {
+          "id": "1",
+          "name": "Wireless Headphones",
+          "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+          "price": 299.99,
+          "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+          "rating": 4.5,
+          "reviewCount": 128,
+          "inStock": true,
+          "category": "electronics"
+        }
+      },
+      "effect": "Remove matching product id from wishlist.",
+      "evidence": [
+        {
+          "file": "src/app/pages/my-wishlist/my-wishlist.ts",
+          "startLine": 21,
+          "endLine": 29,
+          "sha256": "869aaa47b456bed88eaf183e1b86dd5e40c02ea1637c7e5b70b8a56c77e3c5da",
+          "reason": ""
+        },
+        {
+          "file": "src/app/ecommerce-store.ts",
+          "startLine": 430,
+          "endLine": 435,
+          "sha256": "c8e353de1eaaec1098b5f7f47784059ef8a94139e9ca69212b7b0e96d32ce645",
+          "reason": ""
+        }
+      ],
+      "oracle": {
+        "setup": "Wishlist contains products 1 and 2.",
+        "assertions": [
+          "Product 1 absent, product 2 remains; removal is persisted."
+        ]
+      }
+    },
+    {
+      "id": "wishlist-clear",
+      "component": "MyWishlist",
+      "handler": "store.clearWishlist",
+      "routes": [
+        "/wishlist"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "effect": "Clear all wishlist rows.",
+      "evidence": [
+        {
+          "file": "src/app/pages/my-wishlist/my-wishlist.ts",
+          "startLine": 33,
+          "endLine": 36,
+          "sha256": "869aaa47b456bed88eaf183e1b86dd5e40c02ea1637c7e5b70b8a56c77e3c5da",
+          "reason": ""
+        },
+        {
+          "file": "src/app/ecommerce-store.ts",
+          "startLine": 437,
+          "endLine": 439,
+          "sha256": "c8e353de1eaaec1098b5f7f47784059ef8a94139e9ca69212b7b0e96d32ce645",
+          "reason": ""
+        }
+      ],
+      "oracle": {
+        "setup": "Wishlist has two products; cart has one.",
+        "assertions": [
+          "wishlistItems=[] and wishlistCount=0.",
+          "cartItems unchanged.",
+          "Empty wishlist is persisted."
+        ]
+      }
+    },
+    {
+      "id": "cart-set-quantity",
+      "component": "ShowCartItem",
+      "handler": "store.setItemQuantity",
+      "routes": [
+        "/cart"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "productId": {
+                "type": "string"
+              },
+              "quantity": {
+                "type": "integer",
+                "minimum": 1,
+                "description": "UI-reachable positive integer. Store parameter is number and has no bound validation; QtySelector prevents decrement from one."
+              }
+            },
+            "required": [
+              "productId",
+              "quantity"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "params"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "params": {
+          "productId": "1",
+          "quantity": 3
+        }
+      },
+      "effect": "Replace existing cart row quantity with selected quantity.",
+      "evidence": [
+        {
+          "file": "src/app/pages/show-cart-item/show-cart-item.ts",
+          "startLine": 21,
+          "endLine": 24,
+          "sha256": "d524e00878a1049100e78f03dbd36a58e907f1bac5e2563c2bc925aaf8b6fad5",
+          "reason": ""
+        },
+        {
+          "file": "src/app/ecommerce-store.ts",
+          "startLine": 462,
+          "endLine": 469,
+          "sha256": "c8e353de1eaaec1098b5f7f47784059ef8a94139e9ca69212b7b0e96d32ce645",
+          "reason": ""
+        },
+        {
+          "file": "src/app/components/qty-selector/qty-selector.ts",
+          "startLine": 11,
+          "endLine": 21,
+          "sha256": "c6fc07cbf97fa209db2db38e6474a6d3070b05dec426a9b93870c11e7a05bd35",
+          "reason": ""
+        }
+      ],
+      "context": {
+        "productId": "Existing ShowCartItem.item.product.id",
+        "quantity": "qtyUpdated output"
+      },
+      "oracle": {
+        "setup": "Existing cart row id 1 quantity 1.",
+        "assertions": [
+          "Row id 1 quantity becomes 3 and row count remains one.",
+          "cartCount becomes 3; amount is price*3; persisted value changes."
+        ]
+      },
+      "uiConstraints": {
+        "minimum": 1,
+        "maximum": null
+      },
+      "limitations": [
+        "Missing productId is not handled; store attempts draft[-1].quantity and can throw.",
+        "Store itself accepts arbitrary number; positive-integer bound is imposed only by the shipped UI flow."
+      ]
+    },
+    {
+      "id": "cart-move-to-wishlist",
+      "component": "ShowCartItem",
+      "handler": "store.moveToWishlist",
+      "routes": [
+        "/cart"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "product": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "price": {
+                "type": "number"
+              },
+              "imageUrl": {
+                "type": "string"
+              },
+              "rating": {
+                "type": "number"
+              },
+              "reviewCount": {
+                "type": "number"
+              },
+              "inStock": {
+                "type": "boolean"
+              },
+              "category": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "description",
+              "price",
+              "imageUrl",
+              "rating",
+              "reviewCount",
+              "inStock",
+              "category"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "product"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "product": {
+          "id": "1",
+          "name": "Wireless Headphones",
+          "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+          "price": 299.99,
+          "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+          "rating": 4.5,
+          "reviewCount": 128,
+          "inStock": true,
+          "category": "electronics"
+        }
+      },
+      "effect": "Remove cart row and add product once to wishlist.",
+      "evidence": [
+        {
+          "file": "src/app/pages/show-cart-item/show-cart-item.ts",
+          "startLine": 30,
+          "endLine": 35,
+          "sha256": "d524e00878a1049100e78f03dbd36a58e907f1bac5e2563c2bc925aaf8b6fad5",
+          "reason": ""
+        },
+        {
+          "file": "src/app/ecommerce-store.ts",
+          "startLine": 482,
+          "endLine": 490,
+          "sha256": "c8e353de1eaaec1098b5f7f47784059ef8a94139e9ca69212b7b0e96d32ce645",
+          "reason": ""
+        }
+      ],
+      "oracle": {
+        "setup": "Cart contains id 1 quantity 3; wishlist lacks id 1.",
+        "assertions": [
+          "Cart no longer contains id 1.",
+          "Wishlist contains id 1 exactly once; quantity is not retained in wishlist.",
+          "Both collections persist."
+        ]
+      }
+    },
+    {
+      "id": "cart-remove",
+      "component": "ShowCartItem",
+      "handler": "store.removeFromCart",
+      "routes": [
+        "/cart"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "product": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "price": {
+                "type": "number"
+              },
+              "imageUrl": {
+                "type": "string"
+              },
+              "rating": {
+                "type": "number"
+              },
+              "reviewCount": {
+                "type": "number"
+              },
+              "inStock": {
+                "type": "boolean"
+              },
+              "category": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "description",
+              "price",
+              "imageUrl",
+              "rating",
+              "reviewCount",
+              "inStock",
+              "category"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "product"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "product": {
+          "id": "1",
+          "name": "Wireless Headphones",
+          "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+          "price": 299.99,
+          "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+          "rating": 4.5,
+          "reviewCount": 128,
+          "inStock": true,
+          "category": "electronics"
+        }
+      },
+      "effect": "Remove all cart rows for matching product id.",
+      "evidence": [
+        {
+          "file": "src/app/pages/show-cart-item/show-cart-item.ts",
+          "startLine": 34,
+          "endLine": 36,
+          "sha256": "d524e00878a1049100e78f03dbd36a58e907f1bac5e2563c2bc925aaf8b6fad5",
+          "reason": ""
+        },
+        {
+          "file": "src/app/ecommerce-store.ts",
+          "startLine": 492,
+          "endLine": 496,
+          "sha256": "c8e353de1eaaec1098b5f7f47784059ef8a94139e9ca69212b7b0e96d32ce645",
+          "reason": ""
+        }
+      ],
+      "oracle": {
+        "setup": "Cart contains id 1 and 2.",
+        "assertions": [
+          "Cart lacks id 1 and retains id 2.",
+          "Wishlist unchanged; cart removal persists."
+        ]
+      }
+    },
+    {
+      "id": "wishlist-add-all-to-cart",
+      "component": "TeaseWishlist",
+      "handler": "store.addAllWishlistToCart",
+      "routes": [
+        "/cart"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "effect": "Add wishlist products absent from cart at quantity one and then clear entire wishlist.",
+      "evidence": [
+        {
+          "file": "src/app/pages/view-cart/tease-wishlist/tease-wishlist.ts",
+          "startLine": 23,
+          "endLine": 27,
+          "sha256": "141e95ff498f51ad73d2ade35d040867248ccaf7e8a128ba66a15c7d3ea56ecf",
+          "reason": ""
+        },
+        {
+          "file": "src/app/ecommerce-store.ts",
+          "startLine": 471,
+          "endLine": 480,
+          "sha256": "c8e353de1eaaec1098b5f7f47784059ef8a94139e9ca69212b7b0e96d32ce645",
+          "reason": ""
+        }
+      ],
+      "oracle": {
+        "setup": "Wishlist products 1 and 2; existing cart product 1 quantity 3.",
+        "assertions": [
+          "Cart product 1 remains quantity 3.",
+          "Cart product 2 appears at quantity 1.",
+          "Wishlist emptied; both collections persisted."
+        ]
+      }
+    },
+    {
+      "id": "session-sign-in",
+      "component": "SignInDialog",
+      "handler": "signIn",
+      "routes": [
+        "*"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email",
+            "minLength": 1
+          },
+          "password": {
+            "type": "string",
+            "minLength": 6
+          }
+        },
+        "required": [
+          "email",
+          "password"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "email": "benchmark@example.test",
+        "password": "sample123"
+      },
+      "effect": "Set mock session user email, fixed id/name/avatar, close sign-in dialog; checkout context navigates to checkout.",
+      "evidence": [
+        {
+          "file": "src/app/components/sign-in-dialog/sign-in-dialog.ts",
+          "startLine": 87,
+          "endLine": 105,
+          "sha256": "3b919eb43a13cbb2b8f3eacbbc4066dc28bd9b3985858a777402e0aa25376207",
+          "reason": ""
+        },
+        {
+          "file": "src/app/ecommerce-store.ts",
+          "startLine": 538,
+          "endLine": 553,
+          "sha256": "c8e353de1eaaec1098b5f7f47784059ef8a94139e9ca69212b7b0e96d32ce645",
+          "reason": ""
+        }
+      ],
+      "bindings": {
+        "email": "signInForm.email",
+        "password": "signInForm.password"
+      },
+      "context": {
+        "checkout": "MAT_DIALOG_DATA optional boolean",
+        "dialogId": "MatDialogRef.id, generated by framework; not user input"
+      },
+      "oracle": {
+        "setup": "Open sign-in dialog.",
+        "assertions": [
+          "user.email equals benchmark@example.test and user.id=1.",
+          "Dialog closes.",
+          "When opened by proceedToCheckout, route becomes /checkout.",
+          "After page reload user is absent; only cart/wishlist are persisted."
+        ]
+      },
+      "limitations": [
+        "No authentication API and password is ignored by the store."
+      ]
+    },
+    {
+      "id": "session-sign-up",
+      "component": "SignUpDialog",
+      "handler": "signUp",
+      "routes": [
+        "*"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 2
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "minLength": 1
+          },
+          "password": {
+            "type": "string",
+            "minLength": 6
+          },
+          "confirmPassword": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "name",
+          "email",
+          "password",
+          "confirmPassword"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "name": "Benchmark User",
+        "email": "benchmark@example.test",
+        "password": "sample123",
+        "confirmPassword": "sample123"
+      },
+      "effect": "Set mock session user and close dialog; require matching password confirmation before store invocation.",
+      "evidence": [
+        {
+          "file": "src/app/components/sign-up-dialog/sign-up-dialog.ts",
+          "startLine": 112,
+          "endLine": 138,
+          "sha256": "e1651145f4164a91e564402af62eeafb4e8baa2fce477f39aefcf788c1d12963",
+          "reason": ""
+        },
+        {
+          "file": "src/app/ecommerce-store.ts",
+          "startLine": 559,
+          "endLine": 574,
+          "sha256": "c8e353de1eaaec1098b5f7f47784059ef8a94139e9ca69212b7b0e96d32ce645",
+          "reason": ""
+        }
+      ],
+      "bindings": {
+        "name": "signUpForm.name",
+        "email": "signUpForm.email",
+        "password": "signUpForm.password",
+        "confirmPassword": "signUpForm.confirmPassword"
+      },
+      "crossFieldConstraints": [
+        "confirmPassword must equal password; JSON Schema standard cannot express this equality without an extension."
+      ],
+      "oracle": {
+        "setup": "Open sign-up dialog.",
+        "assertions": [
+          "user.email equals supplied email.",
+          "user.name is John Doe because source ignores supplied name.",
+          "Mismatch alert leaves user unchanged.",
+          "No backend account is created and user is not persisted."
+        ]
+      }
+    },
+    {
+      "id": "session-sign-out",
+      "component": "HeaderActions",
+      "handler": "store.signOut",
+      "routes": [
+        "*"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "effect": "Clear in-memory session user.",
+      "evidence": [
+        {
+          "file": "src/app/layout/header-actions/header-actions.ts",
+          "startLine": 49,
+          "endLine": 58,
+          "sha256": "81e5bcf0abb461b4a46e375dac1c133ebb2b999828f1ef63ec43e3d9d2a75542",
+          "reason": ""
+        },
+        {
+          "file": "src/app/ecommerce-store.ts",
+          "startLine": 555,
+          "endLine": 557,
+          "sha256": "c8e353de1eaaec1098b5f7f47784059ef8a94139e9ca69212b7b0e96d32ce645",
+          "reason": ""
+        }
+      ],
+      "oracle": {
+        "setup": "Signed-in mock session; nonempty cart/wishlist.",
+        "assertions": [
+          "user is undefined; Sign In and Sign Up controls render.",
+          "Cart and wishlist remain unchanged."
+        ]
+      }
+    },
+    {
+      "id": "order-place",
+      "component": "Checkout",
+      "handler": "store.placeOrder",
+      "routes": [
+        "/checkout"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "effect": "Simulate order processing, then clear cart and navigate to order success if a mock user exists.",
+      "evidence": [
+        {
+          "file": "src/app/pages/checkout/checkout.ts",
+          "startLine": 32,
+          "endLine": 37,
+          "sha256": "9967b319fa0ce0277e15949b9210d1d741a519e5e5ece3248cd0937086dff74a",
+          "reason": ""
+        },
+        {
+          "file": "src/app/ecommerce-store.ts",
+          "startLine": 511,
+          "endLine": 536,
+          "sha256": "c8e353de1eaaec1098b5f7f47784059ef8a94139e9ca69212b7b0e96d32ce645",
+          "reason": ""
+        }
+      ],
+      "oracle": {
+        "setup": "Mock signed-in user and cart product1 quantity2.",
+        "assertions": [
+          "loading becomes true during 1 second delay and false afterward.",
+          "Cart becomes empty, persisted as empty; route becomes /order-success.",
+          "Wishlist unchanged.",
+          "Without user: error toast, cart retained, loading false; no success navigation."
+        ]
+      },
+      "limitations": [
+        "Local const order is discarded. No durable order, server checkout, charge or account operation occurs.",
+        "Shipping form validity and selected payment method are not consulted by placeOrder. Do not infer shipping/payment fields as order input."
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "catalog-and-route-navigation",
+      "reason": "Category route, detail route, header links and BackButton change navigation or query state only.",
+      "evidence": [
+        {
+          "file": "src/app/pages/products-grid/products-grid.ts",
+          "startLine": 30,
+          "endLine": 35,
+          "sha256": "c0edad087e22314601d16516b6382b61967646829fc35b55d3af354358e5a6f0",
+          "reason": ""
+        },
+        {
+          "file": "src/app/pages/products-grid/products-grid.ts",
+          "startLine": 70,
+          "endLine": 78,
+          "sha256": "c0edad087e22314601d16516b6382b61967646829fc35b55d3af354358e5a6f0",
+          "reason": ""
+        }
+      ]
+    },
+    {
+      "id": "proceed-to-checkout",
+      "reason": "Opens a SignInDialog or navigates to /checkout; does not mutate business data. The subsequent signIn/placeOrder operations are included.",
+      "evidence": [
+        {
+          "file": "src/app/ecommerce-store.ts",
+          "startLine": 498,
+          "endLine": 509,
+          "sha256": "c8e353de1eaaec1098b5f7f47784059ef8a94139e9ca69212b7b0e96d32ce645",
+          "reason": ""
+        }
+      ]
+    },
+    {
+      "id": "draft-quantity",
+      "reason": "ProductInfo.quantity.set edits draft purchase quantity; business mutation happens at addToCart. QtySelector output on an existing cart row is included via setItemQuantity.",
+      "evidence": [
+        {
+          "file": "src/app/pages/view-product-detail/product-info/product-info.ts",
+          "startLine": 31,
+          "endLine": 39,
+          "sha256": "bc2784def6716c16385735b2a91147ef94bff6b32b1a1bf8f0f4e3320c398dab",
+          "reason": ""
+        }
+      ]
+    },
+    {
+      "id": "shipping-and-payment-drafts",
+      "reason": "ShippingForm validators and PaymentForm stripe selection have no submit handler, no output and no read in placeOrder. Inputs are disconnected drafts, not valid order-operation parameters.",
+      "evidence": [
+        {
+          "file": "src/app/pages/checkout/shipping-form/shipping-form.ts",
+          "startLine": 63,
+          "endLine": 70,
+          "sha256": "7c5f055d79e4e93519b297428fb9b0569c56b6c26e815349279274ee9581fe9b",
+          "reason": ""
+        },
+        {
+          "file": "src/app/pages/checkout/payment-form/payment-form.ts",
+          "startLine": 22,
+          "endLine": 34,
+          "sha256": "e37cedc7eef28b759d0914ba8636da307d481bd4f7b08297299ed1b28aa6bb37",
+          "reason": ""
+        }
+      ]
+    },
+    {
+      "id": "presentation-and-dialog-controls",
+      "reason": "Password visibility, open/close sign-in/sign-up dialogs, menu toggles, share button without handler, image transitions, toasts and loading presentation do not change domain state.",
+      "evidence": [
+        {
+          "file": "src/app/components/sign-in-dialog/sign-in-dialog.ts",
+          "startLine": 55,
+          "endLine": 63,
+          "sha256": "3b919eb43a13cbb2b8f3eacbbc4066dc28bd9b3985858a777402e0aa25376207",
+          "reason": ""
+        },
+        {
+          "file": "src/app/components/sign-up-dialog/sign-up-dialog.ts",
+          "startLine": 141,
+          "endLine": 149,
+          "sha256": "e1651145f4164a91e564402af62eeafb4e8baa2fce477f39aefcf788c1d12963",
+          "reason": ""
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "All 13 source-defined business operation variants are included; main storage methods are 11 unique handlers plus quantity-specific add variant and wishlist-specific remove entry. No compiler output has influenced selection.",
+    "Schemas intentionally separate context-bound typed Product arguments from user-editable form fields. UI bounds are not falsely attributed to missing store validation.",
+    "Mock sign-up ignores provided name; authentication does not persist; order data is not saved. These are observed source limitations and part of business oracles, not benchmark exclusions.",
+    "No new account, backend service or network payment is required. Unsplash/randomuser image requests may be intercepted without changing business semantics."
+  ],
+  "sourceManifest": "source-manifest.sha256.json"
+}

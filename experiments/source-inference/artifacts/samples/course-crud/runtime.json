@@ -1,0 +1,41 @@
+{
+  "id": "course-crud",
+  "repository": "https://github.com/loiane/crud-angular-spring",
+  "revision": "e2b9c5a08a57f149689c8ef79b0b7935287e8fbf",
+  "complexity": "4 — Signal Forms and nested state",
+  "outcome": "executed",
+  "capability": {
+    "id": "/courses/new#CourseForm.onSubmit:app-course-form form.min-width",
+    "fingerprint": "3dbc63426624e07d0284bf64b583a3bb41610f711ad4652a4625d3736e209f32"
+  },
+  "routes": 4,
+  "candidates": 16,
+  "reviewedTools": 1,
+  "finalPath": "/courses",
+  "evidence": [
+    {
+      "method": "POST",
+      "path": "/api/courses",
+      "body": {
+        "_id": "",
+        "name": "Compiler Workflow Course",
+        "category": "Front-end",
+        "lessons": [
+          {
+            "_id": 0,
+            "name": "Introduction to Angular",
+            "youtubeUrl": "dQw4w9WgXcQ"
+          },
+          {
+            "_id": 0,
+            "name": "Understanding Signals",
+            "youtubeUrl": "aqz-KE-bpKQ"
+          }
+        ]
+      }
+    }
+  ],
+  "pageErrors": [],
+  "offOriginRequestsBlocked": 6,
+  "applicationSourceModified": false
+}

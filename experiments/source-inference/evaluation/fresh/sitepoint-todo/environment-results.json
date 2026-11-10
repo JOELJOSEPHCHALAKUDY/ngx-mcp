@@ -1,0 +1,27 @@
+{
+  "node": "v24.15.0",
+  "npm": "10.5.0",
+  "dependencyLock": {
+    "path": "package-lock.json",
+    "sha256": "93376cb65061d2aa0f9760e9fb9f62483bdf99a89e868457e310d5d31bfbcd85",
+    "lockfileVersion": 3,
+    "upstreamLock": false
+  },
+  "sourceDiff": "",
+  "attempts": [
+    {
+      "command": "ng serve --host 127.0.0.1 --port 4341 --disable-host-check",
+      "result": "failed",
+      "reason": "CLI 1.0 has no disable-host-check option; Node24 removed http_parser required by spdy/http-deceiver"
+    },
+    {
+      "command": "NODE_OPTIONS=--openssl-legacy-provider ng build --aot=false",
+      "result": "success",
+      "sourcePatches": []
+    },
+    {
+      "command": "python3 -m http.server 4341 --bind 127.0.0.1 --directory dist",
+      "result": "serving unmodified built application"
+    }
+  ]
+}

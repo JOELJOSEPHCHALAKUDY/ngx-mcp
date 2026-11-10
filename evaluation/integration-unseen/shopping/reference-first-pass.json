@@ -1,0 +1,1563 @@
+{
+  "reportKind": "independent-native-reference",
+  "startedAt": "2026-11-10T09:41:43.412Z",
+  "mode": "reference",
+  "node": "v24.15.0",
+  "fixedBrowserTime": "2026-11-10T12:00:00Z",
+  "externalNetwork": "All origins blocked except designated local app; /api handled by deterministic in-process source-contract fixture.",
+  "sourceOverlays": [],
+  "frozenInputRewrites": [],
+  "harnessSha256": {
+    "run.mjs": "03f3b19b092af1f89e86fca242a55ad1a1c332c2b0dad3597b8218f7c5bb41d0",
+    "fixtures.mjs": "87c00cbba1d5ebacf8de809c722691ed5ead2d22f4a4726abcf95d6743b56ef2",
+    "cases.mjs": "967d7182e31da8be6f7ea8661b7ca3f6a19a8fb4a8e627ccb205081e79d12f91"
+  },
+  "projects": [
+    {
+      "id": "shopping",
+      "commit": "3464f15ad53ede4de5673415ca9de68070bf78a1",
+      "integrity": {
+        "frozen": true,
+        "files": 106,
+        "labelsSha256": "42566e776738d25d6bee64a734111f325177d35d6da7b6f7196a1c6e9c329410"
+      },
+      "cases": [
+        {
+          "id": "session-login",
+          "operation": "session-login",
+          "kind": "positive",
+          "frozenInput": {
+            "username": "unseen-admin",
+            "password": "Synthetic-123"
+          },
+          "calls": [],
+          "network": [
+            {
+              "method": "POST",
+              "path": "/api/auth/login",
+              "body": {
+                "username": "unseen-admin",
+                "password": "Synthetic-123"
+              }
+            },
+            {
+              "method": "GET",
+              "path": "/api/einkaufszettel",
+              "body": null
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4353/login",
+            "meta": {}
+          },
+          "before": {
+            "domain": {
+              "users": [
+                {
+                  "id": 1,
+                  "username": "unseen-admin",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Admin",
+                  "email": "admin@example.test",
+                  "token": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic",
+                  "roles": [
+                    {
+                      "id": 1,
+                      "name": "ROLE_ADMIN"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                },
+                {
+                  "id": 2,
+                  "username": "unseen-member",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Member",
+                  "email": "member@example.test",
+                  "roles": [
+                    {
+                      "id": 2,
+                      "name": "ROLE_USER"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                }
+              ],
+              "lists": [
+                {
+                  "id": 101,
+                  "name": "Unseen fixture list",
+                  "owners": [],
+                  "sharedWith": [],
+                  "artikels": [
+                    {
+                      "id": 201,
+                      "name": "Unseen milk",
+                      "anzahl": 1,
+                      "gekauft": false
+                    },
+                    {
+                      "id": 202,
+                      "name": "Unseen bread",
+                      "anzahl": 1,
+                      "gekauft": false
+                    }
+                  ]
+                }
+              ],
+              "archived": [],
+              "confirmations": []
+            },
+            "user": null
+          },
+          "businessInput": {
+            "username": "unseen-admin",
+            "password": "Synthetic-123"
+          },
+          "after": {
+            "domain": {
+              "users": [
+                {
+                  "id": 1,
+                  "username": "unseen-admin",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Admin",
+                  "email": "admin@example.test",
+                  "token": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic",
+                  "roles": [
+                    {
+                      "id": 1,
+                      "name": "ROLE_ADMIN"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                },
+                {
+                  "id": 2,
+                  "username": "unseen-member",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Member",
+                  "email": "member@example.test",
+                  "roles": [
+                    {
+                      "id": 2,
+                      "name": "ROLE_USER"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                }
+              ],
+              "lists": [
+                {
+                  "id": 101,
+                  "name": "Unseen fixture list",
+                  "owners": [],
+                  "sharedWith": [],
+                  "artikels": [
+                    {
+                      "id": 201,
+                      "name": "Unseen milk",
+                      "anzahl": 1,
+                      "gekauft": false
+                    },
+                    {
+                      "id": 202,
+                      "name": "Unseen bread",
+                      "anzahl": 1,
+                      "gekauft": false
+                    }
+                  ]
+                }
+              ],
+              "archived": [],
+              "confirmations": []
+            },
+            "user": "{\"id\":1,\"username\":\"unseen-admin\",\"password\":\"Synthetic-123\",\"name\":\"Unseen Admin\",\"email\":\"admin@example.test\",\"token\":\"eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic\",\"roles\":[{\"id\":1,\"name\":\"ROLE_ADMIN\"}],\"avatar\":\"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII=\"}"
+          },
+          "oracle": {
+            "businessEffect": true
+          },
+          "status": "passed",
+          "pageErrors": []
+        },
+        {
+          "id": "account-register",
+          "operation": "account-register",
+          "kind": "positive",
+          "frozenInput": {
+            "username": "unseen-register",
+            "password": "Synthetic-123",
+            "name": "Unseen Register",
+            "email": "unseen@example.test"
+          },
+          "calls": [],
+          "network": [
+            {
+              "method": "POST",
+              "path": "/api/auth/register",
+              "body": {
+                "username": "unseen-register",
+                "password": "Synthetic-123",
+                "name": "Unseen Register",
+                "email": "unseen@example.test"
+              }
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4353/register",
+            "meta": {}
+          },
+          "before": {
+            "domain": {
+              "users": [
+                {
+                  "id": 1,
+                  "username": "unseen-admin",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Admin",
+                  "email": "admin@example.test",
+                  "token": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic",
+                  "roles": [
+                    {
+                      "id": 1,
+                      "name": "ROLE_ADMIN"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                },
+                {
+                  "id": 2,
+                  "username": "unseen-member",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Member",
+                  "email": "member@example.test",
+                  "roles": [
+                    {
+                      "id": 2,
+                      "name": "ROLE_USER"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                }
+              ],
+              "lists": [
+                {
+                  "id": 101,
+                  "name": "Unseen fixture list",
+                  "owners": [],
+                  "sharedWith": [],
+                  "artikels": [
+                    {
+                      "id": 201,
+                      "name": "Unseen milk",
+                      "anzahl": 1,
+                      "gekauft": false
+                    },
+                    {
+                      "id": 202,
+                      "name": "Unseen bread",
+                      "anzahl": 1,
+                      "gekauft": false
+                    }
+                  ]
+                }
+              ],
+              "archived": [],
+              "confirmations": []
+            },
+            "user": null
+          },
+          "businessInput": {
+            "username": "unseen-register",
+            "password": "Synthetic-123",
+            "name": "Unseen Register",
+            "email": "unseen@example.test"
+          },
+          "after": {
+            "domain": {
+              "users": [
+                {
+                  "id": 1,
+                  "username": "unseen-admin",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Admin",
+                  "email": "admin@example.test",
+                  "token": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic",
+                  "roles": [
+                    {
+                      "id": 1,
+                      "name": "ROLE_ADMIN"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                },
+                {
+                  "id": 2,
+                  "username": "unseen-member",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Member",
+                  "email": "member@example.test",
+                  "roles": [
+                    {
+                      "id": 2,
+                      "name": "ROLE_USER"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                },
+                {
+                  "username": "unseen-register",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Register",
+                  "email": "unseen@example.test",
+                  "id": 301,
+                  "roles": [
+                    {
+                      "id": 2,
+                      "name": "ROLE_USER"
+                    }
+                  ]
+                }
+              ],
+              "lists": [
+                {
+                  "id": 101,
+                  "name": "Unseen fixture list",
+                  "owners": [],
+                  "sharedWith": [],
+                  "artikels": [
+                    {
+                      "id": 201,
+                      "name": "Unseen milk",
+                      "anzahl": 1,
+                      "gekauft": false
+                    },
+                    {
+                      "id": 202,
+                      "name": "Unseen bread",
+                      "anzahl": 1,
+                      "gekauft": false
+                    }
+                  ]
+                }
+              ],
+              "archived": [],
+              "confirmations": []
+            },
+            "user": null
+          },
+          "oracle": {
+            "businessEffect": true
+          },
+          "status": "passed",
+          "pageErrors": []
+        },
+        {
+          "id": "session-logout",
+          "operation": "session-logout",
+          "kind": "positive",
+          "frozenInput": {},
+          "calls": [],
+          "network": [
+            {
+              "method": "POST",
+              "path": "/api/auth/login",
+              "body": {
+                "username": "unseen-admin",
+                "password": "Synthetic-123"
+              }
+            },
+            {
+              "method": "GET",
+              "path": "/api/einkaufszettel",
+              "body": null
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            },
+            {
+              "method": "GET",
+              "path": "/api/einkaufszettel",
+              "body": null
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4353/home",
+            "meta": {}
+          },
+          "before": {
+            "domain": {
+              "users": [
+                {
+                  "id": 1,
+                  "username": "unseen-admin",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Admin",
+                  "email": "admin@example.test",
+                  "token": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic",
+                  "roles": [
+                    {
+                      "id": 1,
+                      "name": "ROLE_ADMIN"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                },
+                {
+                  "id": 2,
+                  "username": "unseen-member",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Member",
+                  "email": "member@example.test",
+                  "roles": [
+                    {
+                      "id": 2,
+                      "name": "ROLE_USER"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                }
+              ],
+              "lists": [
+                {
+                  "id": 101,
+                  "name": "Unseen fixture list",
+                  "owners": [],
+                  "sharedWith": [],
+                  "artikels": [
+                    {
+                      "id": 201,
+                      "name": "Unseen milk",
+                      "anzahl": 1,
+                      "gekauft": false
+                    },
+                    {
+                      "id": 202,
+                      "name": "Unseen bread",
+                      "anzahl": 1,
+                      "gekauft": false
+                    }
+                  ]
+                }
+              ],
+              "archived": [],
+              "confirmations": []
+            },
+            "user": "{\"id\":1,\"username\":\"unseen-admin\",\"password\":\"Synthetic-123\",\"name\":\"Unseen Admin\",\"email\":\"admin@example.test\",\"token\":\"eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic\",\"roles\":[{\"id\":1,\"name\":\"ROLE_ADMIN\"}],\"avatar\":\"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII=\"}"
+          },
+          "businessInput": {},
+          "after": {
+            "domain": {
+              "users": [
+                {
+                  "id": 1,
+                  "username": "unseen-admin",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Admin",
+                  "email": "admin@example.test",
+                  "token": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic",
+                  "roles": [
+                    {
+                      "id": 1,
+                      "name": "ROLE_ADMIN"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                },
+                {
+                  "id": 2,
+                  "username": "unseen-member",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Member",
+                  "email": "member@example.test",
+                  "roles": [
+                    {
+                      "id": 2,
+                      "name": "ROLE_USER"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                }
+              ],
+              "lists": [
+                {
+                  "id": 101,
+                  "name": "Unseen fixture list",
+                  "owners": [],
+                  "sharedWith": [],
+                  "artikels": [
+                    {
+                      "id": 201,
+                      "name": "Unseen milk",
+                      "anzahl": 1,
+                      "gekauft": false
+                    },
+                    {
+                      "id": 202,
+                      "name": "Unseen bread",
+                      "anzahl": 1,
+                      "gekauft": false
+                    }
+                  ]
+                }
+              ],
+              "archived": [],
+              "confirmations": []
+            },
+            "user": "null"
+          },
+          "oracle": {
+            "businessEffect": true
+          },
+          "status": "passed",
+          "pageErrors": []
+        },
+        {
+          "id": "account-confirm",
+          "operation": "account-confirm",
+          "kind": "positive",
+          "frozenInput": {},
+          "routeContext": {
+            "token": "synthetic-unseen-confirm-token"
+          },
+          "calls": [],
+          "network": [],
+          "setup": {
+            "url": "about:blank",
+            "meta": {}
+          },
+          "status": "reference-failed",
+          "error": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "rendered": "",
+          "pageErrors": []
+        },
+        {
+          "id": "list-create",
+          "operation": "list-create",
+          "kind": "positive",
+          "frozenInput": {
+            "name": "Unseen shopping list",
+            "owners": [],
+            "sharedWith": []
+          },
+          "routeContext": {},
+          "calls": [],
+          "network": [
+            {
+              "method": "POST",
+              "path": "/api/auth/login",
+              "body": {
+                "username": "unseen-admin",
+                "password": "Synthetic-123"
+              }
+            },
+            {
+              "method": "GET",
+              "path": "/api/einkaufszettel",
+              "body": null
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            },
+            {
+              "method": "GET",
+              "path": "/api/einkaufszettel",
+              "body": null
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            },
+            {
+              "method": "GET",
+              "path": "/api/user/friends",
+              "body": null
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            },
+            {
+              "method": "POST",
+              "path": "/api/einkaufszettel",
+              "body": {
+                "id": -1,
+                "name": "Unseen shopping list",
+                "owners": [],
+                "sharedWith": []
+              }
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            },
+            {
+              "method": "GET",
+              "path": "/api/einkaufszettel",
+              "body": null
+            },
+            {
+              "method": "GET",
+              "path": "/api/einkaufszettel",
+              "body": null
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4353/einkaufszettel",
+            "meta": {}
+          },
+          "before": {
+            "domain": {
+              "users": [
+                {
+                  "id": 1,
+                  "username": "unseen-admin",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Admin",
+                  "email": "admin@example.test",
+                  "token": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic",
+                  "roles": [
+                    {
+                      "id": 1,
+                      "name": "ROLE_ADMIN"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                },
+                {
+                  "id": 2,
+                  "username": "unseen-member",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Member",
+                  "email": "member@example.test",
+                  "roles": [
+                    {
+                      "id": 2,
+                      "name": "ROLE_USER"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                }
+              ],
+              "lists": [
+                {
+                  "id": 101,
+                  "name": "Unseen fixture list",
+                  "owners": [],
+                  "sharedWith": [],
+                  "artikels": [
+                    {
+                      "id": 201,
+                      "name": "Unseen milk",
+                      "anzahl": 1,
+                      "gekauft": false
+                    },
+                    {
+                      "id": 202,
+                      "name": "Unseen bread",
+                      "anzahl": 1,
+                      "gekauft": false
+                    }
+                  ]
+                }
+              ],
+              "archived": [],
+              "confirmations": []
+            },
+            "user": "{\"id\":1,\"username\":\"unseen-admin\",\"password\":\"Synthetic-123\",\"name\":\"Unseen Admin\",\"email\":\"admin@example.test\",\"token\":\"eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic\",\"roles\":[{\"id\":1,\"name\":\"ROLE_ADMIN\"}],\"avatar\":\"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII=\"}"
+          },
+          "businessInput": {
+            "name": "Unseen shopping list",
+            "owners": [],
+            "sharedWith": []
+          },
+          "after": {
+            "domain": {
+              "users": [
+                {
+                  "id": 1,
+                  "username": "unseen-admin",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Admin",
+                  "email": "admin@example.test",
+                  "token": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic",
+                  "roles": [
+                    {
+                      "id": 1,
+                      "name": "ROLE_ADMIN"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                },
+                {
+                  "id": 2,
+                  "username": "unseen-member",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Member",
+                  "email": "member@example.test",
+                  "roles": [
+                    {
+                      "id": 2,
+                      "name": "ROLE_USER"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                }
+              ],
+              "lists": [
+                {
+                  "id": 101,
+                  "name": "Unseen fixture list",
+                  "owners": [],
+                  "sharedWith": [],
+                  "artikels": [
+                    {
+                      "id": 201,
+                      "name": "Unseen milk",
+                      "anzahl": 1,
+                      "gekauft": false
+                    },
+                    {
+                      "id": 202,
+                      "name": "Unseen bread",
+                      "anzahl": 1,
+                      "gekauft": false
+                    }
+                  ]
+                },
+                {
+                  "id": 301,
+                  "name": "Unseen shopping list",
+                  "owners": [],
+                  "sharedWith": [],
+                  "artikels": []
+                }
+              ],
+              "archived": [],
+              "confirmations": []
+            },
+            "user": "{\"id\":1,\"username\":\"unseen-admin\",\"password\":\"Synthetic-123\",\"name\":\"Unseen Admin\",\"email\":\"admin@example.test\",\"token\":\"eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic\",\"roles\":[{\"id\":1,\"name\":\"ROLE_ADMIN\"}],\"avatar\":\"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII=\"}"
+          },
+          "oracle": {
+            "businessEffect": true
+          },
+          "status": "passed",
+          "pageErrors": []
+        },
+        {
+          "id": "list-edit",
+          "operation": "list-edit",
+          "kind": "positive",
+          "frozenInput": {
+            "name": "Unseen shopping list",
+            "owners": [],
+            "sharedWith": []
+          },
+          "routeContext": {
+            "einkaufszettelId": 101
+          },
+          "calls": [],
+          "network": [
+            {
+              "method": "POST",
+              "path": "/api/auth/login",
+              "body": {
+                "username": "unseen-admin",
+                "password": "Synthetic-123"
+              }
+            },
+            {
+              "method": "GET",
+              "path": "/api/einkaufszettel",
+              "body": null
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            },
+            {
+              "method": "GET",
+              "path": "/api/einkaufszettel",
+              "body": null
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            },
+            {
+              "method": "GET",
+              "path": "/api/user/friends",
+              "body": null
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            },
+            {
+              "method": "PUT",
+              "path": "/api/einkaufszettel/101",
+              "body": {
+                "id": 101,
+                "name": "Unseen shopping list",
+                "owners": [],
+                "sharedWith": []
+              }
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            },
+            {
+              "method": "GET",
+              "path": "/api/einkaufszettel",
+              "body": null
+            },
+            {
+              "method": "GET",
+              "path": "/api/einkaufszettel",
+              "body": null
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4353/einkaufszettel/101",
+            "meta": {}
+          },
+          "before": {
+            "domain": {
+              "users": [
+                {
+                  "id": 1,
+                  "username": "unseen-admin",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Admin",
+                  "email": "admin@example.test",
+                  "token": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic",
+                  "roles": [
+                    {
+                      "id": 1,
+                      "name": "ROLE_ADMIN"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                },
+                {
+                  "id": 2,
+                  "username": "unseen-member",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Member",
+                  "email": "member@example.test",
+                  "roles": [
+                    {
+                      "id": 2,
+                      "name": "ROLE_USER"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                }
+              ],
+              "lists": [
+                {
+                  "id": 101,
+                  "name": "Unseen fixture list",
+                  "owners": [],
+                  "sharedWith": [],
+                  "artikels": [
+                    {
+                      "id": 201,
+                      "name": "Unseen milk",
+                      "anzahl": 1,
+                      "gekauft": false
+                    },
+                    {
+                      "id": 202,
+                      "name": "Unseen bread",
+                      "anzahl": 1,
+                      "gekauft": false
+                    }
+                  ]
+                }
+              ],
+              "archived": [],
+              "confirmations": []
+            },
+            "user": "{\"id\":1,\"username\":\"unseen-admin\",\"password\":\"Synthetic-123\",\"name\":\"Unseen Admin\",\"email\":\"admin@example.test\",\"token\":\"eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic\",\"roles\":[{\"id\":1,\"name\":\"ROLE_ADMIN\"}],\"avatar\":\"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII=\"}"
+          },
+          "businessInput": {
+            "name": "Unseen shopping list",
+            "owners": [],
+            "sharedWith": []
+          },
+          "after": {
+            "domain": {
+              "users": [
+                {
+                  "id": 1,
+                  "username": "unseen-admin",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Admin",
+                  "email": "admin@example.test",
+                  "token": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic",
+                  "roles": [
+                    {
+                      "id": 1,
+                      "name": "ROLE_ADMIN"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                },
+                {
+                  "id": 2,
+                  "username": "unseen-member",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Member",
+                  "email": "member@example.test",
+                  "roles": [
+                    {
+                      "id": 2,
+                      "name": "ROLE_USER"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                }
+              ],
+              "lists": [
+                {
+                  "id": 101,
+                  "name": "Unseen shopping list",
+                  "owners": [],
+                  "sharedWith": [],
+                  "artikels": [
+                    {
+                      "id": 201,
+                      "name": "Unseen milk",
+                      "anzahl": 1,
+                      "gekauft": false
+                    },
+                    {
+                      "id": 202,
+                      "name": "Unseen bread",
+                      "anzahl": 1,
+                      "gekauft": false
+                    }
+                  ]
+                }
+              ],
+              "archived": [],
+              "confirmations": []
+            },
+            "user": "{\"id\":1,\"username\":\"unseen-admin\",\"password\":\"Synthetic-123\",\"name\":\"Unseen Admin\",\"email\":\"admin@example.test\",\"token\":\"eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic\",\"roles\":[{\"id\":1,\"name\":\"ROLE_ADMIN\"}],\"avatar\":\"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII=\"}"
+          },
+          "oracle": {
+            "businessEffect": true
+          },
+          "status": "passed",
+          "pageErrors": []
+        },
+        {
+          "id": "list-delete",
+          "operation": "list-delete",
+          "kind": "positive",
+          "frozenInput": {},
+          "routeContext": {
+            "einkaufszettelId": 101
+          },
+          "calls": [],
+          "network": [
+            {
+              "method": "POST",
+              "path": "/api/auth/login",
+              "body": {
+                "username": "unseen-admin",
+                "password": "Synthetic-123"
+              }
+            },
+            {
+              "method": "GET",
+              "path": "/api/einkaufszettel",
+              "body": null
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            },
+            {
+              "method": "GET",
+              "path": "/api/einkaufszettel",
+              "body": null
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            },
+            {
+              "method": "GET",
+              "path": "/api/user/friends",
+              "body": null
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            },
+            {
+              "method": "DELETE",
+              "path": "/api/einkaufszettel/101",
+              "body": null
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            },
+            {
+              "method": "GET",
+              "path": "/api/einkaufszettel",
+              "body": null
+            },
+            {
+              "method": "GET",
+              "path": "/api/einkaufszettel",
+              "body": null
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4353/einkaufszettel/101",
+            "meta": {}
+          },
+          "before": {
+            "domain": {
+              "users": [
+                {
+                  "id": 1,
+                  "username": "unseen-admin",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Admin",
+                  "email": "admin@example.test",
+                  "token": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic",
+                  "roles": [
+                    {
+                      "id": 1,
+                      "name": "ROLE_ADMIN"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                },
+                {
+                  "id": 2,
+                  "username": "unseen-member",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Member",
+                  "email": "member@example.test",
+                  "roles": [
+                    {
+                      "id": 2,
+                      "name": "ROLE_USER"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                }
+              ],
+              "lists": [
+                {
+                  "id": 101,
+                  "name": "Unseen fixture list",
+                  "owners": [],
+                  "sharedWith": [],
+                  "artikels": [
+                    {
+                      "id": 201,
+                      "name": "Unseen milk",
+                      "anzahl": 1,
+                      "gekauft": false
+                    },
+                    {
+                      "id": 202,
+                      "name": "Unseen bread",
+                      "anzahl": 1,
+                      "gekauft": false
+                    }
+                  ]
+                }
+              ],
+              "archived": [],
+              "confirmations": []
+            },
+            "user": "{\"id\":1,\"username\":\"unseen-admin\",\"password\":\"Synthetic-123\",\"name\":\"Unseen Admin\",\"email\":\"admin@example.test\",\"token\":\"eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic\",\"roles\":[{\"id\":1,\"name\":\"ROLE_ADMIN\"}],\"avatar\":\"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII=\"}"
+          },
+          "businessInput": {},
+          "after": {
+            "domain": {
+              "users": [
+                {
+                  "id": 1,
+                  "username": "unseen-admin",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Admin",
+                  "email": "admin@example.test",
+                  "token": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic",
+                  "roles": [
+                    {
+                      "id": 1,
+                      "name": "ROLE_ADMIN"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                },
+                {
+                  "id": 2,
+                  "username": "unseen-member",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Member",
+                  "email": "member@example.test",
+                  "roles": [
+                    {
+                      "id": 2,
+                      "name": "ROLE_USER"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                }
+              ],
+              "lists": [],
+              "archived": [],
+              "confirmations": []
+            },
+            "user": "{\"id\":1,\"username\":\"unseen-admin\",\"password\":\"Synthetic-123\",\"name\":\"Unseen Admin\",\"email\":\"admin@example.test\",\"token\":\"eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic\",\"roles\":[{\"id\":1,\"name\":\"ROLE_ADMIN\"}],\"avatar\":\"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII=\"}"
+          },
+          "oracle": {
+            "businessEffect": true
+          },
+          "status": "passed",
+          "pageErrors": []
+        },
+        {
+          "id": "article-create",
+          "operation": "article-create",
+          "kind": "positive",
+          "frozenInput": {
+            "name": "Unseen milk",
+            "anzahl": 2
+          },
+          "routeContext": {
+            "einkaufszettelId": 101
+          },
+          "calls": [],
+          "network": [
+            {
+              "method": "POST",
+              "path": "/api/auth/login",
+              "body": {
+                "username": "unseen-admin",
+                "password": "Synthetic-123"
+              }
+            },
+            {
+              "method": "GET",
+              "path": "/api/einkaufszettel",
+              "body": null
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            },
+            {
+              "method": "POST",
+              "path": "/api/einkaufszettel/101/artikel",
+              "body": {
+                "id": -1,
+                "name": "Unseen milk",
+                "anzahl": 2,
+                "gekauft": false
+              }
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            },
+            {
+              "method": "GET",
+              "path": "/api/einkaufszettel",
+              "body": null
+            },
+            {
+              "method": "GET",
+              "path": "/api/einkaufszettel",
+              "body": null
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4353/artikel/new/101",
+            "meta": {}
+          },
+          "before": {
+            "domain": {
+              "users": [
+                {
+                  "id": 1,
+                  "username": "unseen-admin",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Admin",
+                  "email": "admin@example.test",
+                  "token": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic",
+                  "roles": [
+                    {
+                      "id": 1,
+                      "name": "ROLE_ADMIN"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                },
+                {
+                  "id": 2,
+                  "username": "unseen-member",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Member",
+                  "email": "member@example.test",
+                  "roles": [
+                    {
+                      "id": 2,
+                      "name": "ROLE_USER"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                }
+              ],
+              "lists": [
+                {
+                  "id": 101,
+                  "name": "Unseen fixture list",
+                  "owners": [],
+                  "sharedWith": [],
+                  "artikels": [
+                    {
+                      "id": 201,
+                      "name": "Unseen milk",
+                      "anzahl": 1,
+                      "gekauft": false
+                    },
+                    {
+                      "id": 202,
+                      "name": "Unseen bread",
+                      "anzahl": 1,
+                      "gekauft": false
+                    }
+                  ]
+                }
+              ],
+              "archived": [],
+              "confirmations": []
+            },
+            "user": "{\"id\":1,\"username\":\"unseen-admin\",\"password\":\"Synthetic-123\",\"name\":\"Unseen Admin\",\"email\":\"admin@example.test\",\"token\":\"eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic\",\"roles\":[{\"id\":1,\"name\":\"ROLE_ADMIN\"}],\"avatar\":\"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII=\"}"
+          },
+          "businessInput": {
+            "name": "Unseen milk",
+            "anzahl": 2
+          },
+          "after": {
+            "domain": {
+              "users": [
+                {
+                  "id": 1,
+                  "username": "unseen-admin",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Admin",
+                  "email": "admin@example.test",
+                  "token": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic",
+                  "roles": [
+                    {
+                      "id": 1,
+                      "name": "ROLE_ADMIN"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                },
+                {
+                  "id": 2,
+                  "username": "unseen-member",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Member",
+                  "email": "member@example.test",
+                  "roles": [
+                    {
+                      "id": 2,
+                      "name": "ROLE_USER"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                }
+              ],
+              "lists": [
+                {
+                  "id": 101,
+                  "name": "Unseen fixture list",
+                  "owners": [],
+                  "sharedWith": [],
+                  "artikels": [
+                    {
+                      "id": 201,
+                      "name": "Unseen milk",
+                      "anzahl": 1,
+                      "gekauft": false
+                    },
+                    {
+                      "id": 202,
+                      "name": "Unseen bread",
+                      "anzahl": 1,
+                      "gekauft": false
+                    },
+                    {
+                      "id": 301,
+                      "name": "Unseen milk",
+                      "anzahl": 2,
+                      "gekauft": false
+                    }
+                  ]
+                }
+              ],
+              "archived": [],
+              "confirmations": []
+            },
+            "user": "{\"id\":1,\"username\":\"unseen-admin\",\"password\":\"Synthetic-123\",\"name\":\"Unseen Admin\",\"email\":\"admin@example.test\",\"token\":\"eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic\",\"roles\":[{\"id\":1,\"name\":\"ROLE_ADMIN\"}],\"avatar\":\"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII=\"}"
+          },
+          "oracle": {
+            "businessEffect": true
+          },
+          "status": "passed",
+          "pageErrors": []
+        },
+        {
+          "id": "article-edit",
+          "operation": "article-edit",
+          "kind": "positive",
+          "frozenInput": {
+            "name": "Unseen milk",
+            "anzahl": 2
+          },
+          "routeContext": {
+            "einkaufszettelId": 101,
+            "artikelId": 201
+          },
+          "calls": [],
+          "network": [
+            {
+              "method": "POST",
+              "path": "/api/auth/login",
+              "body": {
+                "username": "unseen-admin",
+                "password": "Synthetic-123"
+              }
+            },
+            {
+              "method": "GET",
+              "path": "/api/einkaufszettel",
+              "body": null
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4353/artikel/101/201",
+            "meta": {}
+          },
+          "before": {
+            "domain": {
+              "users": [
+                {
+                  "id": 1,
+                  "username": "unseen-admin",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Admin",
+                  "email": "admin@example.test",
+                  "token": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic",
+                  "roles": [
+                    {
+                      "id": 1,
+                      "name": "ROLE_ADMIN"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                },
+                {
+                  "id": 2,
+                  "username": "unseen-member",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Member",
+                  "email": "member@example.test",
+                  "roles": [
+                    {
+                      "id": 2,
+                      "name": "ROLE_USER"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                }
+              ],
+              "lists": [
+                {
+                  "id": 101,
+                  "name": "Unseen fixture list",
+                  "owners": [],
+                  "sharedWith": [],
+                  "artikels": [
+                    {
+                      "id": 201,
+                      "name": "Unseen milk",
+                      "anzahl": 1,
+                      "gekauft": false
+                    },
+                    {
+                      "id": 202,
+                      "name": "Unseen bread",
+                      "anzahl": 1,
+                      "gekauft": false
+                    }
+                  ]
+                }
+              ],
+              "archived": [],
+              "confirmations": []
+            },
+            "user": "{\"id\":1,\"username\":\"unseen-admin\",\"password\":\"Synthetic-123\",\"name\":\"Unseen Admin\",\"email\":\"admin@example.test\",\"token\":\"eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic\",\"roles\":[{\"id\":1,\"name\":\"ROLE_ADMIN\"}],\"avatar\":\"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII=\"}"
+          },
+          "businessInput": {
+            "name": "Unseen milk",
+            "anzahl": 2
+          },
+          "actionError": "TimeoutError: locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('router-outlet+* form').locator('button[type=submit]')\u001b[22m\n\u001b[2m    - locator resolved to <button disabled type=\"submit\" _ngcontent-ng-c2582000366=\"\" class=\"bg-lime-400 rounded-lg px-2 py-2 text-center\"> Speichern </button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    4 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n",
+          "status": "reference-failed",
+          "error": "TimeoutError: locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('router-outlet+* form').locator('button[type=submit]')\u001b[22m\n\u001b[2m    - locator resolved to <button disabled type=\"submit\" _ngcontent-ng-c2582000366=\"\" class=\"bg-lime-400 rounded-lg px-2 py-2 text-center\"> Speichern </button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    4 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n",
+          "after": {
+            "domain": {
+              "users": [
+                {
+                  "id": 1,
+                  "username": "unseen-admin",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Admin",
+                  "email": "admin@example.test",
+                  "token": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic",
+                  "roles": [
+                    {
+                      "id": 1,
+                      "name": "ROLE_ADMIN"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                },
+                {
+                  "id": 2,
+                  "username": "unseen-member",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Member",
+                  "email": "member@example.test",
+                  "roles": [
+                    {
+                      "id": 2,
+                      "name": "ROLE_USER"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                }
+              ],
+              "lists": [
+                {
+                  "id": 101,
+                  "name": "Unseen fixture list",
+                  "owners": [],
+                  "sharedWith": [],
+                  "artikels": [
+                    {
+                      "id": 201,
+                      "name": "Unseen milk",
+                      "anzahl": 1,
+                      "gekauft": false
+                    },
+                    {
+                      "id": 202,
+                      "name": "Unseen bread",
+                      "anzahl": 1,
+                      "gekauft": false
+                    }
+                  ]
+                }
+              ],
+              "archived": [],
+              "confirmations": []
+            },
+            "user": "{\"id\":1,\"username\":\"unseen-admin\",\"password\":\"Synthetic-123\",\"name\":\"Unseen Admin\",\"email\":\"admin@example.test\",\"token\":\"eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic\",\"roles\":[{\"id\":1,\"name\":\"ROLE_ADMIN\"}],\"avatar\":\"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII=\"}"
+          },
+          "rendered": " Übersicht\n Einkaufszettel\n Archiv\n Userverwaltung\nName*\nAnzahl*\nLöschen\nSpeichern\nAlice Bedow",
+          "pageErrors": []
+        }
+      ]
+    }
+  ]
+}

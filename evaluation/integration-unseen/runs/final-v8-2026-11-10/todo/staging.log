@@ -1,0 +1,9 @@
+{
+  "workspace": "/private/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-10T11-38-12-335Z-26410/todo",
+  "project": "/private/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-10T11-38-12-335Z-26410/todo/tsconfig.app.json",
+  "angularVersion": "20.1.2",
+  "nodes": 10,
+  "diagnostics": [],
+  "manifest": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-10T11-38-12-335Z-26410/todo/angular-mcp.integration.json"
+}
+Build or serve this staged workspace with its normal Angular CLI.

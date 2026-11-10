@@ -1,0 +1,23 @@
+{
+  "node": "workspace pinned24.15.0",
+  "install": "npm ci --ignore-scripts --no-audit --no-fund",
+  "build": "ng build --configuration development",
+  "port": 4342,
+  "sourcePatches": [],
+  "fixture": "Synthetic todos created exclusively through UI; no component/service calls. Network intercepted to abort off-origin requests. No API exists in source.",
+  "fixtureTodos": [
+    {
+      "title": "Read fixture article",
+      "completed": false
+    },
+    {
+      "title": "Clean fixture inbox",
+      "completed": false
+    },
+    {
+      "title": "Reserve fixture table",
+      "completed": true
+    }
+  ],
+  "initialState": "Fresh browser context and page reload initializes empty in-memory service"
+}

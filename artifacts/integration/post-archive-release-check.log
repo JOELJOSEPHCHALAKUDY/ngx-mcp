@@ -1,0 +1,53 @@
+
+> angular-mcp-compiler@0.1.0 release:check
+> npm run check:integration-evidence -- --require-parity && npm run check:integration-holdout
+
+
+> angular-mcp-compiler@0.1.0 check:integration-evidence
+> node --import tsx evaluation/integration-unseen/check.mjs --require-parity
+
+{
+  "integrity": "passed",
+  "nativeParity": true,
+  "goldPositiveScenarios": 35,
+  "goldNegativeOrBoundaryCases": 21,
+  "nativeQuality": {
+    "positivePassed": 34,
+    "negativePassed": 19,
+    "protocolNotApplicable": 2,
+    "sourceBlocked": [
+      "shopping/profile-avatar"
+    ]
+  },
+  "mcpOnlyBoundaries": "both required in raw and UI phases",
+  "parityGaps": [],
+  "scope": "Current development evidence with fixed source-native denominator; no production or exhaustive-schema claim."
+}
+
+> angular-mcp-compiler@0.1.0 check:integration-holdout
+> node evaluation/integration-holdout/notes-manager/check.mjs
+
+{
+  "status": "passed",
+  "project": "notes-manager-holdout",
+  "compilerTreeDigest": "83d149f7c4134cc17114bbb6b7dc27209ca3847bf012c1e1c5d7b6c5f29fb8ff",
+  "frozenChecks": {
+    "passed": 9,
+    "total": 12,
+    "upstreamFailures": [
+      "edit_selected",
+      "empty_text_allowed",
+      "long_title_truncated_only"
+    ]
+  },
+  "nativeDomStorageSnapshotParity": {
+    "matched": 12,
+    "total": 12
+  },
+  "addedIntegrationFailures": [],
+  "confirmations": {
+    "count": 4,
+    "policy": "external human/UI decisions; not unattended MCP successes"
+  },
+  "evidence": "current-source replay after development exposure; preserved first pass remains an instrumentation failure"
+}

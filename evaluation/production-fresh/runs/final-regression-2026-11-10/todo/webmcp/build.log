@@ -1,0 +1,22 @@
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+❯ Building...
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+✔ Building...
+Initial chunk files   | Names         |  Raw size | Estimated transfer size
+main-ZR6WMHRR.js      | main          | 359.24 kB |                93.21 kB
+styles-ZUOPPQMU.css   | styles        | 227.08 kB |                22.77 kB
+scripts-TTWY4XDY.js   | scripts       |  80.45 kB |                21.60 kB
+polyfills-VDL7WJSM.js | polyfills     |  34.59 kB |                11.33 kB
+
+                      | Initial total | 701.35 kB |               148.92 kB
+
+Application bundle generation complete. [2.608 seconds] - 2026-11-10T16:48:42.727Z
+
+▲ [WARNING] bundle initial exceeded maximum budget. Budget 500.00 kB was not met by 201.35 kB with a total of 701.35 kB.
+
+
+Output location: /private/tmp/ngx-mcp-fresh-production-2026-11-10T16-48-15-029Z/todo/webmcp/dist/todo-app
+

@@ -1,0 +1,20 @@
+{
+  "purpose": "Reconstructed first-attempt compiler source after the run, by reversing only the reviewed callback-capacity fix; digest matches the immutable report.",
+  "compilerDigest": "8ca7c2be8f6800a3de6f445de2544c765c87edf7b90f29aeb17e263cd9de591b",
+  "files": {
+    "index.ts": "ae8ff39bc3be75c7477fdf74c31be20bf2019d86d810bc85d993f44fd6e8b561",
+    "integrate.ts": "890050c4d65f1e67f5f985718f10327fcf5b3f12d723812389d1a9e9007dd3f3",
+    "integrated-serve.ts": "f350e90b0ca0ed294ec231fb197e3ad838152dd811298d65e241271a58bc0ff8",
+    "integration-access.ts": "b586f96b1aeae045fedefecb284845292a21e924be4ab566a67f4326f46e6135",
+    "integration-catalog.ts": "8ca8ff54daf4a338076045240f3b93d946715efb93816e27fb3588160c9a7ab1",
+    "integration-compiler.ts": "0f9d3b27186de828906ab287c2e533cb44065ce6d0ea9d29dfb873c2155af593",
+    "integration-hosted.ts": "ed7cde14209b1f61e47bf7577108629d43aa2f72961a03b55205743467d5cf2b",
+    "integration-mcp.ts": "44d7e77c4c28a2c145eeb5e1842085d64d57ad5edc84af9887439fa2bf0ac4bf",
+    "integration-production.ts": "e20070b8efa35a9f3dca589bfa38acda4150d7ed7bbfa29f69379039daade9b4",
+    "integration-project.ts": "0b10ca65cfc9fea6a2c748a903f61df7059c590f90a1e3a590b0fe347326870b",
+    "integration-runtime.ts": "d7bfba8c2771293b82647fe292ded7dd32fdd51d5fe983440b875fadd47ad05d",
+    "integration-ui.ts": "2495ce547774af1e42c07f7635d863f20e9298f2462e5493409256a32cfc2aef",
+    "integration-webmcp.ts": "666537c35dc31086ada14d7f2fab2e4f6719ccd8e34f1e483139eb8e7c279607",
+    "ngx-mcp.ts": "8b3532f4b7a21767c7ed9ab974674b7836efb0c82bac664204d3ffb923f33a04"
+  }
+}

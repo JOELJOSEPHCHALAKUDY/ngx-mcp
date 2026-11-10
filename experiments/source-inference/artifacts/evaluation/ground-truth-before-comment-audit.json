@@ -1,0 +1,1821 @@
+{
+  "version": 1,
+  "createdAt": "2026-11-09T03:35:48.995861+00:00",
+  "labelMethod": "Source-reviewed by the same development agent; not an independent human-adjudicated or held-out benchmark. Labels authored from pinned app source; no compiler imports or generated output used to generate labels. Prior compiler behavior was known.",
+  "unit": "One semantic user-triggered business operation. Different route modes create/update and login/register are distinct; reusable components and duplicate template bindings are merged. All listed route variants must match; runtime coverage is operation-level and does not imply all contexts or branches passed.",
+  "scope": "Writes, explicit queries/retries/pagination, persisted drafts, auth, uploads, and user-followed signed mutation links. Navigation-only and transient presentation/form substeps excluded. Dynamic route and row identifiers are inputs to an agent-facing operation.",
+  "schemaScope": "Input properties, requiredness, types, enum, bounds and representative valid/invalid payloads; cross-field equality and async/context rules are runtime-only. Target identifiers are required for repeated/dynamic actions. Optional empty password is valid. Draft edits are partial but supplied values describe a persistable valid result. JSON schema correctness is bounded by these checks, not formal equivalence.",
+  "actions": [
+    {
+      "id": "user-crud.create",
+      "project": "user-crud",
+      "component": "AddEditComponent",
+      "handler": "onSubmit",
+      "routes": [
+        "/users/add"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/users/add-edit.component.ts",
+          "line": 29,
+          "anchor": "this.form =",
+          "sha256": "7ab16e6294776a146ea70a60cdf543096750f33ed3f669979687194e6e61c31b"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "enum": [
+              "Mr",
+              "Mrs",
+              "Miss",
+              "Ms"
+            ]
+          },
+          "firstName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "lastName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "email": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "User",
+              "Admin"
+            ]
+          },
+          "password": {
+            "type": "string",
+            "minLength": 6
+          },
+          "confirmPassword": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "title",
+          "firstName",
+          "lastName",
+          "email",
+          "role",
+          "password",
+          "confirmPassword"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "title": "Ms",
+        "firstName": "Ada",
+        "lastName": "Lovelace",
+        "email": "ada@example.test",
+        "role": "User",
+        "password": "Synthetic-123",
+        "confirmPassword": "Synthetic-123"
+      },
+      "effect": "One new record in the original fake backend, correct fields, and return to /users."
+    },
+    {
+      "id": "user-crud.update",
+      "project": "user-crud",
+      "component": "AddEditComponent",
+      "handler": "onSubmit",
+      "routes": [
+        "/users/edit/:id"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/users/add-edit.component.ts",
+          "line": 27,
+          "anchor": "this.id =",
+          "sha256": "7ab16e6294776a146ea70a60cdf543096750f33ed3f669979687194e6e61c31b"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "enum": [
+              "Mr",
+              "Mrs",
+              "Miss",
+              "Ms"
+            ]
+          },
+          "firstName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "lastName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "email": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "User",
+              "Admin"
+            ]
+          },
+          "password": {
+            "anyOf": [
+              {
+                "const": ""
+              },
+              {
+                "type": "string",
+                "minLength": 6
+              }
+            ]
+          },
+          "confirmPassword": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "firstName",
+          "lastName",
+          "email",
+          "role"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "id": "1",
+        "title": "Ms",
+        "firstName": "Ada",
+        "lastName": "Lovelace",
+        "email": "ada@example.test",
+        "role": "User"
+      },
+      "effect": "Update the selected existing user; password can be left unchanged."
+    },
+    {
+      "id": "user-crud.delete",
+      "project": "user-crud",
+      "component": "ListComponent",
+      "handler": "deleteUser",
+      "routes": [
+        "/users"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/users/list.component.ts",
+          "line": 18,
+          "anchor": "deleteUser(",
+          "sha256": "089f4f8cb79786a21ec235e5d96deea902c879d2ab764cad87ba8c8dc7706a3a"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "id": "1"
+      },
+      "effect": "Remove the selected user from storage and the list."
+    },
+    {
+      "id": "signup.login",
+      "project": "signup",
+      "component": "LoginComponent",
+      "handler": "onSubmit",
+      "routes": [
+        "/account/login"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/account/login.component.ts",
+          "line": 23,
+          "anchor": "this.form =",
+          "sha256": "9af71df7cd3163db06ddb7e0221d79c9d7246ea59e496b0bc691f08473f5880e"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
+          },
+          "password": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "email",
+          "password"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "email": "admin@example.test",
+        "password": "Synthetic-123"
+      },
+      "effect": "Authenticated navigation and a refresh token created for the verified fixture account."
+    },
+    {
+      "id": "signup.register",
+      "project": "signup",
+      "component": "RegisterComponent",
+      "handler": "onSubmit",
+      "routes": [
+        "/account/register"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/account/register.component.ts",
+          "line": 24,
+          "anchor": "this.form =",
+          "sha256": "18530fe750d267f50e6724a245db96131367431469d810d5f9f7b8c37fd2fc5a"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "enum": [
+              "Mr",
+              "Mrs",
+              "Miss",
+              "Ms"
+            ]
+          },
+          "firstName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "lastName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "email": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
+          },
+          "password": {
+            "type": "string",
+            "minLength": 6
+          },
+          "confirmPassword": {
+            "type": "string",
+            "minLength": 1
+          },
+          "acceptTerms": {
+            "const": true,
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "title",
+          "firstName",
+          "lastName",
+          "email",
+          "password",
+          "confirmPassword",
+          "acceptTerms"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "title": "Ms",
+        "firstName": "Ada",
+        "lastName": "Lovelace",
+        "email": "ada@example.test",
+        "password": "Synthetic-123",
+        "confirmPassword": "Synthetic-123",
+        "acceptTerms": true
+      },
+      "effect": "New unverified account saved; navigate to login.",
+      "runtimeOnly": [
+        "password equals confirmPassword"
+      ]
+    },
+    {
+      "id": "signup.forgot-password",
+      "project": "signup",
+      "component": "ForgotPasswordComponent",
+      "handler": "onSubmit",
+      "routes": [
+        "/account/forgot-password"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/account/forgot-password.component.ts",
+          "line": 20,
+          "anchor": "this.form =",
+          "sha256": "87e196178f9d6292b26e6589e653581469f81063c02531e273510dd3b7ce6065"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
+          }
+        },
+        "required": [
+          "email"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "email": "admin@example.test"
+      },
+      "effect": "Reset token and future expiry stored for the existing account."
+    },
+    {
+      "id": "signup.reset-password",
+      "project": "signup",
+      "component": "ResetPasswordComponent",
+      "handler": "onSubmit",
+      "routes": [
+        "/account/reset-password"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/account/reset-password.component.ts",
+          "line": 33,
+          "anchor": "this.form =",
+          "sha256": "08e94e7ec3bac3041e9ea0142560257b70b4971d7415ff438f4eb82df29ef0da"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "password": {
+            "type": "string",
+            "minLength": 6
+          },
+          "confirmPassword": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "password",
+          "confirmPassword"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "password": "Replacement-456",
+        "confirmPassword": "Replacement-456"
+      },
+      "effect": "Given a valid reset-token link, replace password, consume reset token and navigate to login.",
+      "context": {
+        "query": {
+          "token": "ground-truth-reset"
+        }
+      },
+      "runtimeOnly": [
+        "password equals confirmPassword"
+      ]
+    },
+    {
+      "id": "signup.verify-email",
+      "project": "signup",
+      "component": "VerifyEmailComponent",
+      "handler": "ngOnInit",
+      "routes": [
+        "/account/verify-email"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/account/verify-email.component.ts",
+          "line": 30,
+          "anchor": "this.accountService.verifyEmail",
+          "sha256": "293423b881a760e83844c0b340464021822ed34926699cba6a92fd691a95b149"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "token"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "token": "ground-truth-verification"
+      },
+      "effect": "Following the explicit signed verification link marks its account verified.",
+      "trigger": "signed-link"
+    },
+    {
+      "id": "signup.admin-create",
+      "project": "signup",
+      "component": "AddEditComponent",
+      "handler": "onSubmit",
+      "routes": [
+        "/admin/accounts/add"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/admin/accounts/add-edit.component.ts",
+          "line": 29,
+          "anchor": "this.form =",
+          "sha256": "c666465d4a8eb0c6a49470d1ce3df7f4ef07bcf7c871d60463b0ced09805b507"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "enum": [
+              "Mr",
+              "Mrs",
+              "Miss",
+              "Ms"
+            ]
+          },
+          "firstName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "lastName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "email": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "User",
+              "Admin"
+            ]
+          },
+          "password": {
+            "type": "string",
+            "minLength": 6
+          },
+          "confirmPassword": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "firstName",
+          "lastName",
+          "email",
+          "role",
+          "password"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "title": "Ms",
+        "firstName": "Ada",
+        "lastName": "Lovelace",
+        "email": "ada@example.test",
+        "role": "User",
+        "password": "Synthetic-123",
+        "confirmPassword": "Synthetic-123"
+      },
+      "effect": "Administrator saves the selected account and returns to the accounts list.",
+      "context": {
+        "auth": "admin"
+      },
+      "runtimeOnly": [
+        "password equals confirmPassword when changing password"
+      ]
+    },
+    {
+      "id": "signup.admin-update",
+      "project": "signup",
+      "component": "AddEditComponent",
+      "handler": "onSubmit",
+      "routes": [
+        "/admin/accounts/edit/:id"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/admin/accounts/add-edit.component.ts",
+          "line": 29,
+          "anchor": "this.form =",
+          "sha256": "c666465d4a8eb0c6a49470d1ce3df7f4ef07bcf7c871d60463b0ced09805b507"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "enum": [
+              "Mr",
+              "Mrs",
+              "Miss",
+              "Ms"
+            ]
+          },
+          "firstName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "lastName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "email": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "User",
+              "Admin"
+            ]
+          },
+          "password": {
+            "anyOf": [
+              {
+                "const": ""
+              },
+              {
+                "type": "string",
+                "minLength": 6
+              }
+            ]
+          },
+          "confirmPassword": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "firstName",
+          "lastName",
+          "email",
+          "role"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "id": "2",
+        "title": "Ms",
+        "firstName": "Ada",
+        "lastName": "Lovelace",
+        "email": "ada@example.test",
+        "role": "User"
+      },
+      "effect": "Administrator saves the selected account and returns to the accounts list.",
+      "context": {
+        "auth": "admin"
+      },
+      "runtimeOnly": [
+        "password equals confirmPassword when changing password"
+      ]
+    },
+    {
+      "id": "signup.admin-delete",
+      "project": "signup",
+      "component": "ListComponent",
+      "handler": "deleteAccount",
+      "routes": [
+        "/admin/accounts"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/admin/accounts/list.component.ts",
+          "line": 18,
+          "anchor": "deleteAccount(",
+          "sha256": "923a55d4ae91b375fedca1951bcac420b9cba759f24cd410c25dc99b1edac366"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "id": "2"
+      },
+      "effect": "Administrator removes selected account.",
+      "context": {
+        "auth": "admin"
+      }
+    },
+    {
+      "id": "signup.profile-update",
+      "project": "signup",
+      "component": "UpdateComponent",
+      "handler": "onSubmit",
+      "routes": [
+        "/profile/update"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/profile/update.component.ts",
+          "line": 26,
+          "anchor": "this.form =",
+          "sha256": "cab6e4f6cc0e8263498bb5c58b30a624689d49e0afaa5684ac5a6fd53debadd6"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "enum": [
+              "Mr",
+              "Mrs",
+              "Miss",
+              "Ms"
+            ]
+          },
+          "firstName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "lastName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "email": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
+          },
+          "password": {
+            "anyOf": [
+              {
+                "const": ""
+              },
+              {
+                "type": "string",
+                "minLength": 6
+              }
+            ]
+          },
+          "confirmPassword": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "firstName",
+          "lastName",
+          "email"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "title": "Ms",
+        "firstName": "Ada",
+        "lastName": "Lovelace",
+        "email": "ada@example.test",
+        "password": "",
+        "confirmPassword": ""
+      },
+      "effect": "Current account fields persist and profile is displayed; password may stay unchanged.",
+      "context": {
+        "auth": "admin"
+      },
+      "runtimeOnly": [
+        "password equals confirmPassword when changing password"
+      ]
+    },
+    {
+      "id": "signup.profile-delete",
+      "project": "signup",
+      "component": "UpdateComponent",
+      "handler": "onDelete",
+      "routes": [
+        "/profile/update"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/profile/update.component.ts",
+          "line": 67,
+          "anchor": "onDelete()",
+          "sha256": "cab6e4f6cc0e8263498bb5c58b30a624689d49e0afaa5684ac5a6fd53debadd6"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "effect": "After native confirmation current account is deleted and logged out.",
+      "context": {
+        "auth": "admin"
+      }
+    },
+    {
+      "id": "signup.logout",
+      "project": "signup",
+      "component": "AppComponent",
+      "handler": "logout",
+      "routes": [
+        "/"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/app.component.ts",
+          "line": 15,
+          "anchor": "logout()",
+          "sha256": "47cb73fa61ebc9d6ccfba84bc34431c1ebeff70b89ee2da29ad1eba5ec370c50"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "effect": "Shell logout revokes the refresh token and returns to login.",
+      "context": {
+        "auth": "admin"
+      }
+    },
+    {
+      "id": "forms-course.save-draft",
+      "project": "forms-course",
+      "component": "CreateCourseStep1Component",
+      "handler": "edit_form",
+      "routes": [
+        "/add-new-course"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/create-course/create-course-step-1/create-course-step-1.component.ts",
+          "line": 56,
+          "anchor": "this.form.valueChanges",
+          "sha256": "9c023f3f562b4a226a85db0a31d361b12abe95e016b2436f8c3dfa3b5b1da601"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 60
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "Beginner",
+              "Advanced"
+            ]
+          },
+          "releasedAt": {
+            "type": "string"
+          },
+          "downloadsAllowed": {
+            "type": "boolean",
+            "const": true
+          },
+          "longDescription": {
+            "type": "string",
+            "minLength": 3
+          }
+        },
+        "required": [],
+        "additionalProperties": false,
+        "minProperties": 1
+      },
+      "validInput": {
+        "title": "Ground Truth Angular Course",
+        "category": "Advanced",
+        "downloadsAllowed": true,
+        "longDescription": "Independent ground truth draft description"
+      },
+      "effect": "Valid edits persist to STEP_1 and restore after reload.",
+      "context": {
+        "partialEdit": true
+      },
+      "runtimeOnly": [
+        "course title uniqueness is asynchronous",
+        "omitted fields retain existing/default values; persistence requires resulting form validity"
+      ]
+    },
+    {
+      "id": "forms-course.upload-thumbnail",
+      "project": "forms-course",
+      "component": "FileUploadComponent",
+      "handler": "onFileSelected",
+      "routes": [
+        "/add-new-course"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/file-upload/file-upload.component.ts",
+          "line": 71,
+          "anchor": "this.http.post",
+          "sha256": "3d3a161379c25d0ef56e7909cfa126108d7d3bfd7adc445b39858e87c0163258"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "mimeType": {
+                "type": "string",
+                "minLength": 1
+              },
+              "base64": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "name",
+              "mimeType",
+              "base64"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "file"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "file": {
+          "name": "thumbnail.png",
+          "mimeType": "image/png",
+          "base64": "aW1hZ2U="
+        }
+      },
+      "effect": "Upload chosen thumbnail multipart to /api/thumbnail-upload; propagate filename into parent form."
+    },
+    {
+      "id": "forms-course.query-lessons",
+      "project": "forms-course",
+      "component": "CourseComponent",
+      "handler": "loadLessonsPage",
+      "routes": [
+        "/courses/:id"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/course/course.component.ts",
+          "line": 73,
+          "anchor": "loadLessonsPage() {",
+          "sha256": "8dd9c2c7392d1e58e7391e1a7d3cd95ff4b2ecb9fc0dedd432a5dac98e119692"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "filter": {
+            "type": "string"
+          },
+          "sort": {
+            "type": "string",
+            "enum": [
+              "asc",
+              "desc"
+            ]
+          },
+          "page": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "pageSize": {
+            "type": "integer",
+            "enum": [
+              3,
+              5,
+              10
+            ]
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "id": "1",
+        "filter": "Angular",
+        "sort": "asc",
+        "page": 1,
+        "pageSize": 3
+      },
+      "effect": "Filter, sort or paginate lessons through the same loadLessonsPage operation."
+    },
+    {
+      "id": "course-crud.create",
+      "project": "course-crud",
+      "component": "CourseForm",
+      "handler": "onSubmit",
+      "routes": [
+        "/courses/new"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/courses/containers/course-form/course-form.ts",
+          "line": 76,
+          "anchor": "protected courseForm",
+          "sha256": "d10a8eadd4874b5f72a628b735897fef82e73ee6d3a16df59058450e2bfeb618"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 150
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "Front-end",
+              "Back-end"
+            ]
+          },
+          "lessons": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "minLength": 5,
+                  "maxLength": 100
+                },
+                "youtubeUrl": {
+                  "type": "string",
+                  "minLength": 10,
+                  "maxLength": 11
+                }
+              },
+              "required": [
+                "name",
+                "youtubeUrl"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "name",
+          "category",
+          "lessons"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "name": "Ground Truth Course",
+        "category": "Front-end",
+        "lessons": [
+          {
+            "name": "Ground Truth Lesson",
+            "youtubeUrl": "abcdefghijk"
+          }
+        ]
+      },
+      "effect": "POST the exact course and lesson values, return to courses, and display saved name.",
+      "context": {
+        "preparePath": "/courses"
+      }
+    },
+    {
+      "id": "course-crud.update",
+      "project": "course-crud",
+      "component": "CourseForm",
+      "handler": "onSubmit",
+      "routes": [
+        "/courses/edit/:id"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/courses/containers/course-form/course-form.ts",
+          "line": 117,
+          "anchor": "protected onSubmit()",
+          "sha256": "d10a8eadd4874b5f72a628b735897fef82e73ee6d3a16df59058450e2bfeb618"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 150
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "Front-end",
+              "Back-end"
+            ]
+          },
+          "lessons": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "minLength": 5,
+                  "maxLength": 100
+                },
+                "youtubeUrl": {
+                  "type": "string",
+                  "minLength": 10,
+                  "maxLength": 11
+                }
+              },
+              "required": [
+                "name",
+                "youtubeUrl"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "category",
+          "lessons"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "id": "1",
+        "name": "Ground Truth Course",
+        "category": "Front-end",
+        "lessons": [
+          {
+            "name": "Ground Truth Lesson",
+            "youtubeUrl": "abcdefghijk"
+          }
+        ]
+      },
+      "effect": "PUT the selected course and lessons; list reflects changes."
+    },
+    {
+      "id": "course-crud.delete",
+      "project": "course-crud",
+      "component": "Courses",
+      "handler": "onRemove",
+      "routes": [
+        "/courses"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/courses/containers/courses/courses.ts",
+          "line": 75,
+          "anchor": "protected async onRemove",
+          "sha256": "f732af29f9e0f2f8eaffafc069b571ef82c147decf6a0ae193e12fb270cfa6bd"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "id": "1"
+      },
+      "effect": "Confirm dialog then DELETE selected course and reload resource."
+    },
+    {
+      "id": "course-crud.paginate",
+      "project": "course-crud",
+      "component": "Courses",
+      "handler": "onPageChange",
+      "routes": [
+        "/courses"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/courses/containers/courses/courses.ts",
+          "line": 54,
+          "anchor": "protected onPageChange",
+          "sha256": "f732af29f9e0f2f8eaffafc069b571ef82c147decf6a0ae193e12fb270cfa6bd"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "pageSize": {
+            "type": "integer",
+            "enum": [
+              5,
+              10,
+              15
+            ]
+          }
+        },
+        "required": [
+          "page",
+          "pageSize"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "page": 1,
+        "pageSize": 5
+      },
+      "effect": "Page controls update resource HTTP query and rendered records."
+    },
+    {
+      "id": "course-crud.retry",
+      "project": "course-crud",
+      "component": "Courses",
+      "handler": "coursesResource.reload",
+      "routes": [
+        "/courses"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/courses/containers/courses/courses.html",
+          "line": 29,
+          "anchor": "coursesResource.reload()",
+          "sha256": "88a1a162bf1dfcf4ab122cca9aa89b82cc7b076c48d024e289de3f397d0ebd16"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "effect": "Retry after a failed list request performs a fresh successful load."
+    },
+    {
+      "id": "realworld.login",
+      "project": "realworld",
+      "component": "AuthComponent",
+      "handler": "submitForm",
+      "routes": [
+        "/login"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/core/auth/auth.component.ts",
+          "line": 34,
+          "anchor": "this.authForm =",
+          "sha256": "3d187aa5c8541630a062fc9a8be55d569b073d76506ba2e732c9b5e78940dc1a"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
+          },
+          "password": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "email",
+          "password"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "email": "katherine@example.test",
+        "password": "Synthetic-123"
+      },
+      "effect": "Correct auth endpoint receives credentials, token saved and home is displayed."
+    },
+    {
+      "id": "realworld.register",
+      "project": "realworld",
+      "component": "AuthComponent",
+      "handler": "submitForm",
+      "routes": [
+        "/register"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/core/auth/auth.component.ts",
+          "line": 34,
+          "anchor": "this.authForm =",
+          "sha256": "3d187aa5c8541630a062fc9a8be55d569b073d76506ba2e732c9b5e78940dc1a"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "minLength": 1
+          },
+          "email": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
+          },
+          "password": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "username",
+          "email",
+          "password"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "email": "katherine@example.test",
+        "password": "Synthetic-123",
+        "username": "Katherine"
+      },
+      "effect": "Correct auth endpoint receives credentials, token saved and home is displayed."
+    },
+    {
+      "id": "realworld.article-create",
+      "project": "realworld",
+      "component": "EditorComponent",
+      "handler": "submitForm",
+      "routes": [
+        "/editor"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/features/article/pages/editor/editor.component.ts",
+          "line": 73,
+          "anchor": "submitForm():",
+          "sha256": "57b9990ad60ddfba0eaea9c576c1011ea1dfeac4f35dca5014757638329c4b25"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string"
+          },
+          "tagList": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "title": "Ground Truth Article",
+        "description": "Independent benchmark article",
+        "body": "Ground truth body"
+      },
+      "effect": "Publish supplied fields via POST/create or PUT/update and navigate to the saved article.",
+      "context": {
+        "auth": "user"
+      },
+      "runtimeOnly": [
+        "tag changes are form substeps; no Angular required validators for editor fields"
+      ]
+    },
+    {
+      "id": "realworld.article-update",
+      "project": "realworld",
+      "component": "EditorComponent",
+      "handler": "submitForm",
+      "routes": [
+        "/editor/:slug"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/features/article/pages/editor/editor.component.ts",
+          "line": 73,
+          "anchor": "submitForm():",
+          "sha256": "57b9990ad60ddfba0eaea9c576c1011ea1dfeac4f35dca5014757638329c4b25"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string"
+          },
+          "tagList": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "slug"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "title": "Ground Truth Article",
+        "description": "Independent benchmark article",
+        "body": "Ground truth body",
+        "slug": "ground-truth-article"
+      },
+      "effect": "Publish supplied fields via POST/create or PUT/update and navigate to the saved article.",
+      "context": {
+        "auth": "user"
+      },
+      "runtimeOnly": [
+        "tag changes are form substeps; no Angular required validators for editor fields"
+      ]
+    },
+    {
+      "id": "realworld.article-delete",
+      "project": "realworld",
+      "component": "ArticleComponent",
+      "handler": "deleteArticle",
+      "routes": [
+        "/article/:slug"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/features/article/pages/article/article.component.ts",
+          "line": 107,
+          "anchor": "deleteArticle():",
+          "sha256": "cadd19d28e8280abc862c7ae92bfc5ae1b18b4283645e16624465b6210d289dd"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "slug"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "slug": "ground-truth-article"
+      },
+      "effect": "Owner deletes selected article; navigate home.",
+      "context": {
+        "auth": "user"
+      }
+    },
+    {
+      "id": "realworld.comment-add",
+      "project": "realworld",
+      "component": "ArticleComponent",
+      "handler": "addComment",
+      "routes": [
+        "/article/:slug"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/features/article/pages/article/article.component.ts",
+          "line": 121,
+          "anchor": "addComment() {",
+          "sha256": "cadd19d28e8280abc862c7ae92bfc5ae1b18b4283645e16624465b6210d289dd"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string",
+            "minLength": 1
+          },
+          "body": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "slug",
+          "body"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "slug": "ground-truth-article",
+        "body": "Ground truth comment"
+      },
+      "effect": "POST comment and show newly returned comment, reset control.",
+      "context": {
+        "auth": "user"
+      }
+    },
+    {
+      "id": "realworld.comment-delete",
+      "project": "realworld",
+      "component": "ArticleComponent",
+      "handler": "deleteComment",
+      "routes": [
+        "/article/:slug"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/features/article/pages/article/article.component.ts",
+          "line": 144,
+          "anchor": "deleteComment(",
+          "sha256": "cadd19d28e8280abc862c7ae92bfc5ae1b18b4283645e16624465b6210d289dd"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string",
+            "minLength": 1
+          },
+          "commentId": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "slug",
+          "commentId"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "slug": "ground-truth-article",
+        "commentId": "1"
+      },
+      "effect": "Forwarded child delete event removes selected comment.",
+      "context": {
+        "auth": "user"
+      }
+    },
+    {
+      "id": "realworld.favorite",
+      "project": "realworld",
+      "component": "FavoriteButtonComponent",
+      "handler": "toggleFavorite",
+      "routes": [
+        "/",
+        "/tag/:tag",
+        "/profile/:username",
+        "/profile/:username/favorites",
+        "/article/:slug"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/features/article/components/favorite-button.component.ts",
+          "line": 50,
+          "anchor": "toggleFavorite():",
+          "sha256": "61287b0659ea244306967c4fea19ec6b3e9c630fed621620e78684459dbf22d1"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "slug"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "slug": "ground-truth-article"
+      },
+      "effect": "Toggle selected article favorite, including when multiple article cards exist.",
+      "context": {
+        "auth": "user",
+        "articleCards": 2
+      }
+    },
+    {
+      "id": "realworld.follow",
+      "project": "realworld",
+      "component": "FollowButtonComponent",
+      "handler": "toggleFollowing",
+      "routes": [
+        "/profile/:username",
+        "/article/:slug"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/features/profile/components/follow-button.component.ts",
+          "line": 52,
+          "anchor": "toggleFollowing():",
+          "sha256": "ef313ff74833a674e4674e90569ce08d23fa0fff240dabf9c648755fa50561aa"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "username"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "username": "OtherAuthor"
+      },
+      "effect": "Toggle selected profile follow state.",
+      "context": {
+        "auth": "user"
+      }
+    },
+    {
+      "id": "realworld.paginate",
+      "project": "realworld",
+      "component": "ArticleListComponent",
+      "handler": "setPageTo",
+      "routes": [
+        "/",
+        "/tag/:tag",
+        "/profile/:username",
+        "/profile/:username/favorites"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/features/article/components/article-list.component.ts",
+          "line": 103,
+          "anchor": "setPageTo(pageNumber:",
+          "sha256": "2f2a88381da6e2acae2aac9f4a930218f2962191bac20b9d01cecbcf9d157436"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "page"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "page": 2
+      },
+      "effect": "Request the selected page with limit/offset and update active page."
+    },
+    {
+      "id": "realworld.settings-update",
+      "project": "realworld",
+      "component": "SettingsComponent",
+      "handler": "submitForm",
+      "routes": [
+        "/settings"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/features/settings/settings.component.ts",
+          "line": 60,
+          "anchor": "submitForm() {",
+          "sha256": "c8a418592af719649412bb9534aeab06f5d6e0f615c57d0bc3270b351adc5891"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "image": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "bio": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "username": "Katherine",
+        "email": "katherine@example.test",
+        "bio": "Ground truth biography",
+        "image": ""
+      },
+      "effect": "PUT changed profile fields, retain password if omitted, navigate to profile.",
+      "context": {
+        "auth": "user"
+      },
+      "runtimeOnly": [
+        "handler explicitly omits empty password; password control validator does not prevent submit"
+      ]
+    },
+    {
+      "id": "realworld.logout",
+      "project": "realworld",
+      "component": "SettingsComponent",
+      "handler": "logout",
+      "routes": [
+        "/settings"
+      ],
+      "evidence": [
+        {
+          "file": "src/app/features/settings/settings.component.ts",
+          "line": 56,
+          "anchor": "logout():",
+          "sha256": "c8a418592af719649412bb9534aeab06f5d6e0f615c57d0bc3270b351adc5891"
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "effect": "Remove stored JWT and return home.",
+      "context": {
+        "auth": "user"
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "project": "all",
+      "actions": "Navigation-only router links, menu open/close, alerts and dialog dismissal",
+      "reason": "Presentation with no independent business read/write."
+    },
+    {
+      "project": "all",
+      "actions": "Initial resolver/list loads, auth refresh timers, validation checks",
+      "reason": "Automatic lifecycle reads; explicit user retry/query and signed mutation links are included."
+    },
+    {
+      "project": "forms-course",
+      "actions": "LoginComponent.login and LoginReactiveComponent.login",
+      "reason": "Console-only or empty authentication placeholders."
+    },
+    {
+      "project": "forms-course",
+      "actions": "CreateCourseComponent.submit",
+      "reason": "Only logs form steps; no create operation exists upstream."
+    },
+    {
+      "project": "forms-course",
+      "actions": "CoursesCardListComponent.editCourse / CourseDialogComponent.save",
+      "reason": "Dialog closes with draft; caller only console.logs; no persisted update."
+    },
+    {
+      "project": "forms-course",
+      "actions": "CreateCourseStep3Component.addLesson/deleteLesson, LoginReactiveComponent.reset, CVA callbacks",
+      "reason": "Transient form editing or control lifecycle, without independent persistence."
+    },
+    {
+      "project": "course-crud",
+      "actions": "CourseForm.addLesson/removeLesson/onCancel, ConfirmationDialog.onConfirm",
+      "reason": "Substeps of save/delete or navigation, not independent business operations."
+    },
+    {
+      "project": "course-crud",
+      "actions": "CourseView.display",
+      "reason": "Changes the currently displayed video; presentation-only."
+    },
+    {
+      "project": "realworld",
+      "actions": "EditorComponent.addTag/removeTag",
+      "reason": "Substeps of article publish."
+    },
+    {
+      "project": "realworld",
+      "actions": "ArticleComponent/ProfileComponent.onToggleFollowing, onToggleFavorite, ArticlePreview.toggleFavorite",
+      "reason": "Local projections of the child favorite/follow operation already counted once."
+    },
+    {
+      "project": "realworld",
+      "actions": "HomeComponent.onPageChange",
+      "reason": "URL synchronization for ArticleListComponent.setPageTo; counted as one pagination operation."
+    }
+  ],
+  "labelRevisionNotes": [
+    "Initial baseline review: email constraints use the EMAIL_REGEXP implementation shared by the installed Angular 14/15/21 frameworks, including single-label domains and plus-addresses. Source labels were finalized before this recorded baseline; earlier harness trials contained setup/timing errors and are not release measurements.",
+    "2026-11-09 correction: realworld.comment-delete commentId was labelled integer, but the upstream model declares Comment.id as string (src/app/features/article/models/comment.model.ts). The label now follows the program's own declared type; a static compiler cannot know the live API returns numbers.",
+    "2026-11-09 correction: forms-course.query-lessons pageSize was labelled integer>=1, but the template restricts the page size to [pageSizeOptions]=\"[3, 5, 10]\" exactly as course-crud.paginate is labelled; the label now follows the template."
+  ]
+}

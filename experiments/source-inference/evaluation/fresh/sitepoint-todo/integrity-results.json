@@ -1,0 +1,32 @@
+{
+  "frozenFiles": [
+    {
+      "file": "labels.json",
+      "expected": "81e76cc46da4e7f874f6e001d43bf692ee90b408a4eede1abdac70304f76d65a",
+      "observed": "81e76cc46da4e7f874f6e001d43bf692ee90b408a4eede1abdac70304f76d65a",
+      "pass": true
+    },
+    {
+      "file": "source-manifest.json",
+      "expected": "052abf5ca2ed62f08afeb47e21578cf1a7e34efe3a9e91b822780d263c88a9f5",
+      "observed": "052abf5ca2ed62f08afeb47e21578cf1a7e34efe3a9e91b822780d263c88a9f5",
+      "pass": true
+    },
+    {
+      "file": "inventory.json",
+      "expected": "00f468d99a4f5cc4171b7e7ae1316e7593b3eebd14033d4e7f587a8b4d2e782d",
+      "observed": "00f468d99a4f5cc4171b7e7ae1316e7593b3eebd14033d4e7f587a8b4d2e782d",
+      "pass": true
+    },
+    {
+      "file": "prerequisites.json",
+      "expected": "669ae4501a08579ba93d565260d15c751271bdbb30a4eeab8e891822954f6024",
+      "observed": "669ae4501a08579ba93d565260d15c751271bdbb30a4eeab8e891822954f6024",
+      "pass": true
+    }
+  ],
+  "sourceUnchanged": true,
+  "sourceDiff": "",
+  "sourceArchiveSha256": "1ac33c58887222d186dbca51bc0a28f215ef63a63da10a2ae600ebdfe0b2b4e8",
+  "manifestSha256": "1e2093ccf94bbd722b6f248eeecd822d4483f7beaf3c11eec89d2e046d920c33"
+}

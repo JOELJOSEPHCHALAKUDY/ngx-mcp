@@ -1,0 +1,20 @@
+{
+  "kind": "pre-archive-evaluator-snapshot",
+  "reason": "Preserved before extracting current integration provenance from the archived source-inference evaluator. Historical reports are unchanged.",
+  "files": {
+    "fixtures.mjs": "a1aae6c88be66e8d5c9863b5f48367391dae0fc9e13665ae1d6161380e2c74c2",
+    "cases.mjs": "bd4e615be4817518f0d3a1184bf9c157d566438915b086c23ef8d52aa2a0ace1",
+    "oracles.mjs": "77903660f1fa4839bc780bd70cc2fb530cf0ae28ac9a8d4450c7b2342d4313f1",
+    "evidence.mjs": "4e3d8e0b7adc247bb24d568253a6f76b66209467395048a94542338e9f77ad0d",
+    "shopping/avatar-reference-adjudication.json": "009f6e0d727ed17eb978d8be6241021370d586c4d7e700ef1df805231f3a9d33",
+    "run.mjs": "4ae7d426e16d8a5896551effe9186ac9e8645533ad83ab83460e646582ecb917",
+    "mcp-driver.mjs": "57e0bf836da0e58708db217aac96bdfaa477039a7fc41a02e20bcd25c0df95b4",
+    "measure.mjs": "2fee45a6986e5f31e9c16c7e41725198be1edb11ff28b70cd91e142be7b76a65",
+    "check.mjs": "c2386b8b97629563e2fcb834a8fb5bdeb00a2a03b80cea978a3f60b9ecfd9ab2",
+    "fetch.mjs": "22290bc78d25551d747416d1f0a83d8e67022a9e1d416efeb5a65919651b8e8c",
+    "serve.mjs": "10d557d10870966198fcae9126b7114b60f400628852bf44e9239d0942cd88f2",
+    "latest-measurement.json": "65b3f247c59f1e2f4b4845c7ea231d0c51f4bd67ee27f39a481904860184ebe4",
+    "shared-metrics.ts": "b21cba328c3acf17338054849f510099f9ef8ee355b14c15636f0c0f53af1674"
+  },
+  "originalSharedMetricsPath": "evaluation/metrics.ts"
+}

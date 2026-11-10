@@ -1,0 +1,472 @@
+{
+  "reportKind": "independent-native-reference",
+  "startedAt": "2026-11-10T09:41:43.667Z",
+  "mode": "reference",
+  "node": "v24.15.0",
+  "fixedBrowserTime": "2026-11-10T12:00:00Z",
+  "externalNetwork": "All origins blocked except designated local app; /api handled by deterministic in-process source-contract fixture.",
+  "sourceOverlays": [],
+  "frozenInputRewrites": [],
+  "harnessSha256": {
+    "run.mjs": "03f3b19b092af1f89e86fca242a55ad1a1c332c2b0dad3597b8218f7c5bb41d0",
+    "fixtures.mjs": "87c00cbba1d5ebacf8de809c722691ed5ead2d22f4a4726abcf95d6743b56ef2",
+    "cases.mjs": "967d7182e31da8be6f7ea8661b7ca3f6a19a8fb4a8e627ccb205081e79d12f91"
+  },
+  "projects": [
+    {
+      "id": "todo",
+      "commit": "391435fc4edf819abf4f507187fc0364ac26e00b",
+      "integrity": {
+        "frozen": true,
+        "files": 42,
+        "labelsSha256": "e934aa2c5c445ec32d635bac3bcc04e151cc3dbde2642110123e1105737667c4"
+      },
+      "cases": [
+        {
+          "id": "todo-create",
+          "operation": "todo-create",
+          "kind": "positive",
+          "frozenInput": {
+            "title": "Unseen task",
+            "description": "Independent source fixture"
+          },
+          "calls": [],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4352/",
+            "meta": {}
+          },
+          "before": null,
+          "businessInput": {
+            "title": "Unseen task",
+            "description": "Independent source fixture"
+          },
+          "after": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": false
+            }
+          ],
+          "oracle": {
+            "businessEffect": true
+          },
+          "persistedAfterReload": true,
+          "status": "passed",
+          "pageErrors": []
+        },
+        {
+          "id": "todo-complete",
+          "operation": "todo-complete",
+          "kind": "positive",
+          "frozenInput": {},
+          "targetContext": {
+            "selection": "unique visible card title Unseen task; read source Todo id from persisted UI-created record"
+          },
+          "calls": [],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4352/",
+            "meta": {
+              "todo": {
+                "id": 1,
+                "title": "Unseen task",
+                "description": "Independent source fixture",
+                "done": false
+              }
+            }
+          },
+          "before": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": false
+            }
+          ],
+          "businessInput": {},
+          "after": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": true
+            }
+          ],
+          "oracle": {
+            "businessEffect": true
+          },
+          "persistedAfterReload": true,
+          "status": "passed",
+          "pageErrors": []
+        },
+        {
+          "id": "todo-restore",
+          "operation": "todo-restore",
+          "kind": "positive",
+          "frozenInput": {},
+          "targetContext": {
+            "selection": "unique visible card title Unseen task; read source Todo id from persisted UI-created record"
+          },
+          "calls": [],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4352/",
+            "meta": {
+              "todo": {
+                "id": 1,
+                "title": "Unseen task",
+                "description": "Independent source fixture",
+                "done": false
+              }
+            }
+          },
+          "before": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": true
+            }
+          ],
+          "businessInput": {},
+          "after": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": false
+            }
+          ],
+          "oracle": {
+            "businessEffect": true
+          },
+          "persistedAfterReload": true,
+          "status": "passed",
+          "pageErrors": []
+        },
+        {
+          "id": "todo-delete-active",
+          "operation": "todo-delete-active",
+          "kind": "positive",
+          "frozenInput": {},
+          "targetContext": {
+            "selection": "unique visible card title Unseen task"
+          },
+          "calls": [],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4352/",
+            "meta": {
+              "todo": {
+                "id": 1,
+                "title": "Unseen task",
+                "description": "Independent source fixture",
+                "done": false
+              }
+            }
+          },
+          "before": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": false
+            }
+          ],
+          "businessInput": {},
+          "after": [],
+          "oracle": {
+            "businessEffect": true
+          },
+          "persistedAfterReload": true,
+          "status": "passed",
+          "pageErrors": []
+        },
+        {
+          "id": "todo-delete-completed",
+          "operation": "todo-delete-completed",
+          "kind": "positive",
+          "frozenInput": {},
+          "targetContext": {
+            "selection": "unique visible card title Unseen task"
+          },
+          "calls": [],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4352/",
+            "meta": {
+              "todo": {
+                "id": 1,
+                "title": "Unseen task",
+                "description": "Independent source fixture",
+                "done": false
+              }
+            }
+          },
+          "before": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": true
+            }
+          ],
+          "businessInput": {},
+          "after": [],
+          "oracle": {
+            "businessEffect": true
+          },
+          "persistedAfterReload": true,
+          "status": "passed",
+          "pageErrors": []
+        },
+        {
+          "id": "short-title",
+          "operation": "todo-create",
+          "kind": "negative",
+          "frozenInput": {
+            "title": "Unseen task",
+            "description": "Independent source fixture"
+          },
+          "inputPatch": {
+            "title": "ab"
+          },
+          "calls": [],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4352/",
+            "meta": {}
+          },
+          "before": null,
+          "businessInput": {
+            "title": "ab",
+            "description": "Independent source fixture"
+          },
+          "after": null,
+          "oracle": {
+            "unchanged": true
+          },
+          "status": "passed",
+          "pageErrors": []
+        },
+        {
+          "id": "short-description",
+          "operation": "todo-create",
+          "kind": "negative",
+          "frozenInput": {
+            "title": "Unseen task",
+            "description": "Independent source fixture"
+          },
+          "inputPatch": {
+            "description": "abcd"
+          },
+          "calls": [],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4352/",
+            "meta": {}
+          },
+          "before": null,
+          "businessInput": {
+            "title": "Unseen task",
+            "description": "abcd"
+          },
+          "after": null,
+          "oracle": {
+            "unchanged": true
+          },
+          "status": "passed",
+          "pageErrors": []
+        },
+        {
+          "id": "ambiguous-source-id",
+          "operation": "todo-complete",
+          "kind": "negative",
+          "frozenInput": {},
+          "inputPatch": {},
+          "targetContext": {
+            "selection": "unique visible card title Unseen task; read source Todo id from persisted UI-created record"
+          },
+          "calls": [],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4352/",
+            "meta": {
+              "todo": {
+                "id": 1,
+                "title": "Unseen task",
+                "description": "Independent source fixture",
+                "done": false
+              }
+            }
+          },
+          "before": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": false
+            },
+            {
+              "id": 2,
+              "title": "Unseen second task",
+              "description": "Second independent source fixture",
+              "done": false
+            }
+          ],
+          "status": "protocol-boundary-not-applicable",
+          "evidence": "Native UI exposes individually selectable source rows; sourceId-only ambiguity is a generated-protocol boundary tested in MCP mode.",
+          "pageErrors": []
+        }
+      ]
+    }
+  ],
+  "finishedAt": "2026-11-10T09:41:55.971Z",
+  "totals": {
+    "positive": 5,
+    "positivePassed": 5,
+    "negative": 3,
+    "negativePassed": 2,
+    "protocolBoundaryNotApplicable": 1
+  }
+}

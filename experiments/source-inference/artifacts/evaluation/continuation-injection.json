@@ -1,0 +1,695 @@
+{
+  "measuredAt": "2026-11-09T16:40:41.578Z",
+  "compilerDigest": "c4ffd71823da3dc96b7aae3adf08fb4422da752d6a89249ef41c979d227296e2",
+  "generatorDigest": "cf7bd79e0e81772e998961174d370b65737dbc1c7c2850880c929b4d973200c5",
+  "seeds": [
+    "2041"
+  ],
+  "count": 30,
+  "budget": 24,
+  "pool": 4,
+  "static": {
+    "ops": 31,
+    "found": 29,
+    "runnable": 28,
+    "strict": 13,
+    "lenient": 18,
+    "decoys": 13,
+    "decoyHits": 1,
+    "extra": 0
+  },
+  "probed": {
+    "ops": 31,
+    "found": 29,
+    "runnable": 28,
+    "strict": 14,
+    "lenient": 19,
+    "decoys": 13,
+    "decoyHits": 1,
+    "extra": 0
+  },
+  "effects": {
+    "read": 3,
+    "write": 18,
+    "none-observed": 2,
+    "ui-state": 6,
+    "opens-overlay": 2
+  },
+  "skipped": [
+    [
+      "no observable effect to use as an oracle",
+      10
+    ],
+    [
+      "baseline call failed: page.evaluate: Error: Expected one UI action; found 0",
+      2
+    ],
+    [
+      "baseline call failed: page.evaluate: Error: The application disabled submission or rejected the form values",
+      1
+    ]
+  ],
+  "staticByIdiom": [
+    [
+      "tab-group",
+      {
+        "ops": 2,
+        "found": 2,
+        "runnable": 2,
+        "strict": 2,
+        "lenient": 2
+      }
+    ],
+    [
+      "detail-route-action",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "signal-component",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 0
+      }
+    ],
+    [
+      "mat-table-row-action",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 1
+      }
+    ],
+    [
+      "login-form",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 0
+      }
+    ],
+    [
+      "select-setting",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "reactive-form",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 1
+      }
+    ],
+    [
+      "toggle-setting",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "reactive-mat-select-checkbox",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "list-row-action-ngfor",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 1
+      }
+    ],
+    [
+      "paginator",
+      {
+        "ops": 1,
+        "found": 0,
+        "runnable": 0,
+        "strict": 0,
+        "lenient": 0
+      }
+    ],
+    [
+      "child-output-parent-handler",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 0,
+        "strict": 0,
+        "lenient": 0
+      }
+    ],
+    [
+      "conditional-validator-route",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "number-stepper",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 0
+      }
+    ],
+    [
+      "radio-setting",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 0
+      }
+    ],
+    [
+      "query-param-init",
+      {
+        "ops": 1,
+        "found": 0,
+        "runnable": 0,
+        "strict": 0,
+        "lenient": 0
+      }
+    ],
+    [
+      "template-form-ngmodel",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 0
+      }
+    ],
+    [
+      "mat-sort",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 0
+      }
+    ],
+    [
+      "confirm-delete",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "shared-form-new-edit",
+      {
+        "ops": 2,
+        "found": 2,
+        "runnable": 2,
+        "strict": 0,
+        "lenient": 2
+      }
+    ],
+    [
+      "list-row-action-at-for",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "search-input",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 0
+      }
+    ],
+    [
+      "inline-rename",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 0
+      }
+    ],
+    [
+      "dialog-form",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "bulk-action",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "nested-control-flow",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "logout-button",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "button-toggle-setting",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 0
+      }
+    ],
+    [
+      "template-fields-click",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 0
+      }
+    ]
+  ],
+  "probedByIdiom": [
+    [
+      "tab-group",
+      {
+        "ops": 2,
+        "found": 2,
+        "runnable": 2,
+        "strict": 2,
+        "lenient": 2
+      }
+    ],
+    [
+      "detail-route-action",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "signal-component",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "mat-table-row-action",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 1
+      }
+    ],
+    [
+      "login-form",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 0
+      }
+    ],
+    [
+      "select-setting",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "reactive-form",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 1
+      }
+    ],
+    [
+      "toggle-setting",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "reactive-mat-select-checkbox",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "list-row-action-ngfor",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 1
+      }
+    ],
+    [
+      "paginator",
+      {
+        "ops": 1,
+        "found": 0,
+        "runnable": 0,
+        "strict": 0,
+        "lenient": 0
+      }
+    ],
+    [
+      "child-output-parent-handler",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 0,
+        "strict": 0,
+        "lenient": 0
+      }
+    ],
+    [
+      "conditional-validator-route",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "number-stepper",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 0
+      }
+    ],
+    [
+      "radio-setting",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 0
+      }
+    ],
+    [
+      "query-param-init",
+      {
+        "ops": 1,
+        "found": 0,
+        "runnable": 0,
+        "strict": 0,
+        "lenient": 0
+      }
+    ],
+    [
+      "template-form-ngmodel",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 0
+      }
+    ],
+    [
+      "mat-sort",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 0
+      }
+    ],
+    [
+      "confirm-delete",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "shared-form-new-edit",
+      {
+        "ops": 2,
+        "found": 2,
+        "runnable": 2,
+        "strict": 0,
+        "lenient": 2
+      }
+    ],
+    [
+      "list-row-action-at-for",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "search-input",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 0
+      }
+    ],
+    [
+      "inline-rename",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 0
+      }
+    ],
+    [
+      "dialog-form",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "bulk-action",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "nested-control-flow",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "logout-button",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 1,
+        "lenient": 1
+      }
+    ],
+    [
+      "button-toggle-setting",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 0
+      }
+    ],
+    [
+      "template-fields-click",
+      {
+        "ops": 1,
+        "found": 1,
+        "runnable": 1,
+        "strict": 0,
+        "lenient": 0
+      }
+    ]
+  ],
+  "staticMisses": [
+    "s2041 CONTRACT signal-component VerifiedCourseQueueComponent.addItem: actual [] vs truth [instructorName] fails valid representative input; missing required instructorName",
+    "s2041 CONTRACT login-form DailyDeviceLoginComponent.signIn: actual [userName,password] vs truth [userName,password] fails below minLength userName; above maxLength userName",
+    "s2041 MISSING paginator DailyInvoiceBrowserComponent.onPage",
+    "s2041 BLOCKED child-output-parent-handler SeasonalRecipePageComponent.handleSubmit: Forwarded event submitted needs exactly one emitting UI element (found 0)",
+    "s2041 CONTRACT number-stepper UrgentCourseCounterComponent.adjust: actual [] vs truth [delta] fails valid representative input; missing required delta",
+    "s2041 CONTRACT radio-setting GlobalShipmentOptionsComponent.selectSortOrder: actual [sortOrder] vs truth [sortOrder] fails invalid enum sortOrder",
+    "s2041 MISSING query-param-init NightCourseCallbackComponent.ngOnInit",
+    "s2041 CONTRACT template-form-ngmodel PendingRecipeIntakeComponent.addRecipe: actual [dishName,recipeCode,servings,recipeTitle] vs truth [dishName,recipeCode,servings,recipeTitle] fails below minLength dishName; above maxLength dishName",
+    "s2041 CONTRACT mat-sort DailyShipmentSortableComponent.onSortChange: actual [active,direction] vs truth [active,direction] fails enum direction=",
+    "s2041 CONTRACT search-input RegionalBookingFinderComponent.onSearch: actual [query] vs truth [query] fails below minLength query",
+    "s2041 CONTRACT inline-rename ArchiveBookingCatalogComponent.saveName: actual [id] vs truth [id,name] fails valid representative input; missing required name",
+    "s2041 CONTRACT button-toggle-setting PilotBookingSettingsComponent.selectTheme: actual [theme] vs truth [theme] fails invalid enum theme",
+    "s2041 CONTRACT template-fields-click RegionalTicketPanelComponent.saveDraft: actual [] vs truth [reporterEmail,details,reporterName,severity] fails valid representative input; plus email address reporterEmail",
+    "s2041 FALSE-POSITIVE decoy SpringRecipeManagerComponent.openDialog (only opens the dialog; persistence happens in the dialog component)"
+  ],
+  "probedMisses": [
+    "s2041 CONTRACT login-form DailyDeviceLoginComponent.signIn: actual [userName,password] vs truth [userName,password] fails above maxLength password",
+    "s2041 MISSING paginator DailyInvoiceBrowserComponent.onPage",
+    "s2041 BLOCKED child-output-parent-handler SeasonalRecipePageComponent.handleSubmit: Forwarded event submitted needs exactly one emitting UI element (found 0)",
+    "s2041 CONTRACT number-stepper UrgentCourseCounterComponent.adjust: actual [] vs truth [delta] fails valid representative input; missing required delta",
+    "s2041 CONTRACT radio-setting GlobalShipmentOptionsComponent.selectSortOrder: actual [sortOrder] vs truth [sortOrder] fails enum sortOrder=newest",
+    "s2041 MISSING query-param-init NightCourseCallbackComponent.ngOnInit",
+    "s2041 CONTRACT template-form-ngmodel PendingRecipeIntakeComponent.addRecipe: actual [dishName,recipeCode,servings,recipeTitle] vs truth [dishName,recipeCode,servings,recipeTitle] fails below minLength dishName; above maxLength dishName",
+    "s2041 CONTRACT mat-sort DailyShipmentSortableComponent.onSortChange: actual [active,direction] vs truth [active,direction] fails enum direction=",
+    "s2041 CONTRACT search-input RegionalBookingFinderComponent.onSearch: actual [query] vs truth [query] fails below minLength query",
+    "s2041 CONTRACT inline-rename ArchiveBookingCatalogComponent.saveName: actual [id] vs truth [id,name] fails valid representative input; missing required name",
+    "s2041 CONTRACT button-toggle-setting PilotBookingSettingsComponent.selectTheme: actual [theme] vs truth [theme] fails enum theme=light",
+    "s2041 CONTRACT template-fields-click RegionalTicketPanelComponent.saveDraft: actual [reporterEmail,details,reporterName,severity] vs truth [reporterEmail,details,reporterName,severity] fails malformed email reporterEmail; single-label email domain reporterEmail",
+    "s2041 FALSE-POSITIVE decoy SpringRecipeManagerComponent.openDialog (only opens the dialog; persistence happens in the dialog component)"
+  ],
+  "scope": "Seeded synthetic instances of previously developed idioms; one-way first-pass comparison of static and probed contracts, not unseen-project accuracy.",
+  "scoringVersion": 2,
+  "rescoredAt": "2026-11-09T16:50:47.955Z",
+  "evaluatorDigest": "0af885365b2559d043cef46bc8ab365eb597bc1b741369b3b02b298093888257",
+  "previousScore": {
+    "version": 1,
+    "static": {
+      "ops": 31,
+      "found": 29,
+      "runnable": 28,
+      "strict": 12,
+      "lenient": 14,
+      "decoys": 13,
+      "decoyHits": 1,
+      "extra": 0
+    },
+    "probed": {
+      "ops": 31,
+      "found": 29,
+      "runnable": 28,
+      "strict": 13,
+      "lenient": 15,
+      "decoys": 13,
+      "decoyHits": 1,
+      "extra": 0
+    }
+  },
+  "scoringCorrection": "Non-email regexes no longer receive email-only expected payloads. Constraint interactions use the authored full gold schema as the reference. Standard formats and typed numeric enum witnesses are validated. This changes scoring, not compiler behavior or runtime observations."
+}

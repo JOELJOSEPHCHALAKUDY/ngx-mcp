@@ -1,0 +1,25 @@
+{
+  "id": "todo",
+  "repository": "https://github.com/diverintech/angular-todo-list",
+  "commit": "391435fc4edf819abf4f507187fc0364ac26e00b",
+  "directory": "/tmp/integration-unseen-todo",
+  "license": "MIT",
+  "licenseFile": "LICENSE",
+  "port": 4352,
+  "tsconfig": "tsconfig.app.json",
+  "routes": "src/app/app.routes.ts#routes",
+  "angularProject": "angular-projects",
+  "entryComponent": "src/app/app.component.ts#AppComponent",
+  "routesQualification": "Empty authored route array: app root contains all UI.",
+  "angular": "^20.1.2",
+  "lockSha256": "24e36fecae81dee3a3f51a728a10758637413592335b6f9e83bf5e55cf494155",
+  "licenseSha256": "25192d3f5c6ce526fa4d56574fa163322857d7b8b7976e522c10ac9d3fb13bae",
+  "install": [
+    "npm",
+    "ci",
+    "--ignore-scripts",
+    "--no-audit",
+    "--no-fund"
+  ],
+  "sourceManifestSha256": "6d3264bff61f331399a46945818988a6fc122e2a4c737b688b0bbab1917a87ed"
+}

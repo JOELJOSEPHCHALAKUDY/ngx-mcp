@@ -1,0 +1,18 @@
+{
+  "startedAt": "2026-11-09T21:15:36.438Z",
+  "protocol": "Real SDK Client, createMcpServer, linked InMemoryTransport, tools/list and tools/call",
+  "manifestSha256": "c130551b1d1b84d16e231fec348470dbc8869bfd4549b534b2d4d383e135bdf5",
+  "baseline": [],
+  "compilerNative": [],
+  "boundaries": [],
+  "sourcePatches": [],
+  "manifestPatches": [],
+  "runtimeContextAdditions": [],
+  "finishedAt": "2026-11-09T21:15:37.731Z",
+  "totals": {
+    "frozenOperations": 7,
+    "exactBaselineEffects": 0,
+    "compilerNativeEffects": 0,
+    "boundariesPassed": 0
+  }
+}

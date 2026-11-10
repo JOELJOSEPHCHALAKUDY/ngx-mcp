@@ -1,0 +1,660 @@
+[
+ {
+  "id": "login",
+  "component": "Login",
+  "handler": "login",
+  "routes": [
+   "/auth/login"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "username": {
+     "type": "string",
+     "minLength": 1
+    },
+    "password": {
+     "type": "string",
+     "minLength": 1
+    },
+    "rememberMe": {
+     "type": "boolean"
+    }
+   },
+   "required": [
+    "username",
+    "password"
+   ]
+  },
+  "validInput": {
+   "username": "ng-matero",
+   "password": "ng-matero",
+   "rememberMe": false
+  },
+  "effect": "Authenticates via AuthService.login, stores token, navigates to /.",
+  "notes": "Form defaults prefilled to ng-matero; 422 maps remote errors onto fields."
+ },
+ {
+  "id": "logout-user-menu",
+  "component": "UserButton",
+  "handler": "logout",
+  "routes": [
+   "/"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {},
+   "required": []
+  },
+  "validInput": {},
+  "effect": "AuthService.logout then navigate to /auth/login.",
+  "notes": "Behind avatar menu in header."
+ },
+ {
+  "id": "logout-profile",
+  "component": "ProfileLayout",
+  "handler": "logout",
+  "routes": [
+   "/profile/overview",
+   "/profile/settings"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {},
+   "required": []
+  },
+  "validInput": {},
+  "effect": "AuthService.logout then navigate to /auth/login.",
+  "notes": "Link in profile sidebar list."
+ },
+ {
+  "id": "restore-defaults",
+  "component": "UserButton",
+  "handler": "restore",
+  "routes": [
+   "/"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {},
+   "required": []
+  },
+  "validInput": {},
+  "effect": "Resets persisted app settings to defaults and reloads the page.",
+  "notes": "Behind avatar menu."
+ },
+ {
+  "id": "change-language",
+  "component": "TranslateButton",
+  "handler": "changeLang",
+  "routes": [
+   "/"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "lang": {
+     "type": "string",
+     "enum": [
+      "en-US",
+      "zh-CN",
+      "zh-TW",
+      "auto"
+     ]
+    }
+   },
+   "required": [
+    "lang"
+   ]
+  },
+  "validInput": {
+   "lang": "zh-CN"
+  },
+  "effect": "Persists language setting and switches translations.",
+  "notes": "Behind translate menu in header."
+ },
+ {
+  "id": "update-appearance-settings",
+  "component": "Customizer",
+  "handler": "sendOptions",
+  "routes": [
+   "/"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "theme": {
+     "type": "string",
+     "enum": [
+      "light",
+      "dark",
+      "auto"
+     ]
+    },
+    "showHeader": {
+     "type": "boolean"
+    },
+    "headerPos": {
+     "type": "string",
+     "enum": [
+      "above",
+      "fixed",
+      "static"
+     ]
+    },
+    "showUserPanel": {
+     "type": "boolean"
+    },
+    "navPos": {
+     "type": "string",
+     "enum": [
+      "side",
+      "top"
+     ]
+    },
+    "dir": {
+     "type": "string",
+     "enum": [
+      "ltr",
+      "rtl"
+     ]
+    }
+   },
+   "required": []
+  },
+  "validInput": {
+   "theme": "dark",
+   "navPos": "side"
+  },
+  "effect": "Emits optionsChange -> AdminLayout.updateOptions; persists settings, applies direction and theme.",
+  "notes": "Reachable via floating settings FAB opening drawer; each control change triggers it. Constraints: headerPos 'above' disabled when navPos=top or header hidden; navPos 'top' disabled if headerPos=above or header hidden."
+ },
+ {
+  "id": "toggle-sidenav-collapsed",
+  "component": "AdminLayout",
+  "handler": "toggleCollapsed",
+  "routes": [
+   "/"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {},
+   "required": []
+  },
+  "validInput": {},
+  "effect": "Toggles and persists sidenavCollapsed.",
+  "notes": "Slide toggle in sidebar header (desktop)."
+ },
+ {
+  "id": "sidenav-opened-change",
+  "component": "AdminLayout",
+  "handler": "onSidenavOpenedChange",
+  "routes": [
+   "/"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "isOpened": {
+     "type": "boolean"
+    }
+   },
+   "required": [
+    "isOpened"
+   ]
+  },
+  "validInput": {
+   "isOpened": false
+  },
+  "effect": "Persists sidenavOpened setting when sidenav opens/closes.",
+  "notes": "Triggered by header menu button / sidebar close button."
+ },
+ {
+  "id": "remote-search",
+  "component": "TablesRemoteData",
+  "handler": "search",
+  "routes": [
+   "/tables/remote-data"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "q": {
+     "type": "string"
+    },
+    "sort": {
+     "type": "string",
+     "enum": [
+      "stars",
+      "forks",
+      "updated"
+     ]
+    },
+    "order": {
+     "type": "string",
+     "enum": [
+      "desc",
+      "asc"
+     ]
+    }
+   },
+   "required": []
+  },
+  "validInput": {
+   "q": "user:nzbin",
+   "sort": "stars",
+   "order": "desc"
+  },
+  "effect": "Resets to page 0 and queries GitHub repository search API.",
+  "notes": ""
+ },
+ {
+  "id": "remote-reset",
+  "component": "TablesRemoteData",
+  "handler": "reset",
+  "routes": [
+   "/tables/remote-data"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {},
+   "required": []
+  },
+  "validInput": {},
+  "effect": "Resets page and page size to defaults and re-queries GitHub API.",
+  "notes": "Does not clear q/sort/order."
+ },
+ {
+  "id": "remote-paginate",
+  "component": "TablesRemoteData",
+  "handler": "getNextPage",
+  "routes": [
+   "/tables/remote-data"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "pageIndex": {
+     "type": "integer",
+     "minimum": 0
+    },
+    "pageSize": {
+     "type": "integer",
+     "minimum": 1
+    }
+   },
+   "required": [
+    "pageIndex",
+    "pageSize"
+   ]
+  },
+  "validInput": {
+   "pageIndex": 1,
+   "pageSize": 10
+  },
+  "effect": "Changes page/page size and re-queries GitHub API.",
+  "notes": ""
+ },
+ {
+  "id": "dynamic-form-submit",
+  "component": "FormsDynamic",
+  "handler": "submit",
+  "routes": [
+   "/forms/dynamic"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "text": {
+     "type": "string",
+     "minLength": 1
+    },
+    "text2": {
+     "type": "string"
+    },
+    "email": {
+     "type": "string",
+     "minLength": 1
+    }
+   },
+   "required": [
+    "text",
+    "email"
+   ]
+  },
+  "validInput": {
+   "text": "hello",
+   "email": "email@gmail.com"
+  },
+  "effect": "If valid, shows success toast with model JSON.",
+  "notes": "No server call. text2 enabled only when text non-empty."
+ },
+ {
+  "id": "dynamic-form2-submit",
+  "component": "FormsDynamic",
+  "handler": "submit2",
+  "routes": [
+   "/forms/dynamic"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "firstName": {
+     "type": "string",
+     "minLength": 1
+    },
+    "lastName": {
+     "type": "string",
+     "minLength": 1
+    },
+    "street": {
+     "type": "string"
+    },
+    "cityId": {
+     "type": "integer",
+     "enum": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "zip": {
+     "type": "integer",
+     "minimum": 0,
+     "maximum": 99999,
+     "pattern": "\\d{5}"
+    },
+    "otherInput": {
+     "type": "string"
+    },
+    "otherToo": {
+     "type": "boolean"
+    }
+   },
+   "required": [
+    "firstName",
+    "lastName",
+    "cityId"
+   ]
+  },
+  "validInput": {
+   "firstName": "A",
+   "lastName": "B",
+   "cityId": 1,
+   "zip": 12345
+  },
+  "effect": "If valid, shows success toast with model JSON.",
+  "notes": "No server call. lastName enabled only after firstName."
+ },
+ {
+  "id": "switch-role",
+  "component": "PermissionsRoleSwitching",
+  "handler": "onPermissionChange",
+  "routes": [
+   "/permissions/role-switching"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "currentRole": {
+     "type": "string",
+     "enum": [
+      "ADMIN",
+      "MANAGER",
+      "GUEST"
+     ]
+    }
+   },
+   "required": [
+    "currentRole"
+   ]
+  },
+  "validInput": {
+   "currentRole": "MANAGER"
+  },
+  "effect": "Flushes roles/permissions and installs the selected role with its permissions.",
+  "notes": ""
+ },
+ {
+  "id": "switch-role-and-redirect",
+  "component": "PermissionsRouteGuard",
+  "handler": "onPermissionChange",
+  "routes": [
+   "/permissions/route-guard"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "currentRole": {
+     "type": "string",
+     "enum": [
+      "ADMIN",
+      "MANAGER",
+      "GUEST"
+     ]
+    }
+   },
+   "required": [
+    "currentRole"
+   ]
+  },
+  "validInput": {
+   "currentRole": "GUEST"
+  },
+  "effect": "Installs selected role/permissions then navigates to /dashboard.",
+  "notes": ""
+ },
+ {
+  "id": "add-admin-permission",
+  "component": "PermissionsTest",
+  "handler": "addPermission",
+  "routes": [
+   "/permissions/test"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {},
+   "required": []
+  },
+  "validInput": {},
+  "effect": "Adds 'admin' permission (async validator resolves after 2s).",
+  "notes": "Route itself requires ADMIN."
+ },
+ {
+  "id": "remove-admin-permission",
+  "component": "PermissionsTest",
+  "handler": "removePermission",
+  "routes": [
+   "/permissions/test"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {},
+   "required": []
+  },
+  "validInput": {},
+  "effect": "Removes 'admin' permission.",
+  "notes": ""
+ },
+ {
+  "id": "compare-permission-admin",
+  "component": "PermissionsTest",
+  "handler": "changeToAdmin",
+  "routes": [
+   "/permissions/test"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {},
+   "required": []
+  },
+  "validInput": {},
+  "effect": "Sets comparedPermission to ['admin'] (drives permission directives).",
+  "notes": ""
+ },
+ {
+  "id": "compare-permission-awesome",
+  "component": "PermissionsTest",
+  "handler": "changeToAnotherPermission",
+  "routes": [
+   "/permissions/test"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {},
+   "required": []
+  },
+  "validInput": {},
+  "effect": "Sets comparedPermission to ['awesome'].",
+  "notes": ""
+ },
+ {
+  "id": "compare-permission-guest",
+  "component": "PermissionsTest",
+  "handler": "changeToGuest",
+  "routes": [
+   "/permissions/test"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {},
+   "required": []
+  },
+  "validInput": {},
+  "effect": "Sets comparedPermission to ['guest'].",
+  "notes": ""
+ },
+ {
+  "id": "table-edit-row",
+  "component": "TablesKitchenSink",
+  "handler": "edit",
+  "routes": [
+   "/tables/kitchen-sink"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "position": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 20
+    }
+   },
+   "required": [
+    "position"
+   ]
+  },
+  "validInput": {
+   "position": 1
+  },
+  "effect": "Opens edit dialog showing the record (dialog only has Close; no save).",
+  "notes": "Row action button."
+ },
+ {
+  "id": "table-delete-row",
+  "component": "TablesKitchenSink",
+  "handler": "delete",
+  "routes": [
+   "/tables/kitchen-sink"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {
+    "position": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 20
+    }
+   },
+   "required": [
+    "position"
+   ]
+  },
+  "validInput": {
+   "position": 2
+  },
+  "effect": "After confirm popover, shows alert 'You have deleted N!' (no data removed).",
+  "notes": "Row action with confirm."
+ },
+ {
+  "id": "table-update-cell",
+  "component": "TablesKitchenSink",
+  "handler": "updateCell",
+  "routes": [
+   "/tables/kitchen-sink"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {},
+   "required": []
+  },
+  "validInput": {},
+  "effect": "Randomizes weight of every row.",
+  "notes": ""
+ },
+ {
+  "id": "table-update-list",
+  "component": "TablesKitchenSink",
+  "handler": "updateList",
+  "routes": [
+   "/tables/kitchen-sink"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {},
+   "required": []
+  },
+  "validInput": {},
+  "effect": "Reorders list moving last row first.",
+  "notes": ""
+ },
+ {
+  "id": "select-toggle-disabled",
+  "component": "FormsSelect",
+  "handler": "toggleDisabled",
+  "routes": [
+   "/forms/select"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {},
+   "required": []
+  },
+  "validInput": {},
+  "effect": "Toggles disabled flag of Saab option.",
+  "notes": ""
+ },
+ {
+  "id": "select-open-dialog",
+  "component": "FormsSelect",
+  "handler": "openDialog",
+  "routes": [
+   "/forms/select"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {},
+   "required": []
+  },
+  "validInput": {},
+  "effect": "Opens dialog containing a city select (Vilnius/Kaunas; Pavilnys disabled).",
+  "notes": "Dialog selection: ngModel selectedCity, values 1,2."
+ },
+ {
+  "id": "accept-terms",
+  "component": "SlideToggleDemo",
+  "handler": "onFormSubmit",
+  "routes": [
+   "/material/slide-toggle"
+  ],
+  "inputSchema": {
+   "type": "object",
+   "properties": {},
+   "required": []
+  },
+  "validInput": {},
+  "effect": "Shows snackbar 'Terms and condistions accepted!'.",
+  "notes": "Demo form; class name guessed, verify."
+ }
+]

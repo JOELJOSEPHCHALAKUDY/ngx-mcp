@@ -1,0 +1,23 @@
+❯ Building...
+✔ Building...
+Browser bundles     
+Initial chunk files  | Names            |  Raw size
+styles.css           | styles           | 108.41 kB | 
+main.js              | main             |  37.31 kB | 
+polyfills.js         | polyfills        |  95 bytes | 
+
+                     | Initial total    | 145.82 kB
+
+
+Server bundles      
+Initial chunk files  | Names            |  Raw size
+chunk-ZKWK36VN.mjs   | -                |  37.73 kB | 
+server.mjs           | server           |   1.48 kB | 
+main.server.mjs      | main.server      | 800 bytes | 
+polyfills.server.mjs | polyfills.server | 266 bytes | 
+
+Application bundle generation complete. [1.088 seconds]
+
+Watch mode enabled. Watching for file changes...
+NOTE: Raw file sizes do not reflect development server per-request transformations.
+  ➜  Local:   http://127.0.0.1:4452/

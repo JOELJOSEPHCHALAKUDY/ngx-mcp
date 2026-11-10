@@ -1,0 +1,74 @@
+{
+  "kind": "source-inference-archival-verification",
+  "recordedAt": "2026-11-10T12:50:48.142Z",
+  "compilerDigest": "83d149f7c4134cc17114bbb6b7dc27209ca3847bf012c1e1c5d7b6c5f29fb8ff",
+  "sourceMatches": true,
+  "originalCompilerDigest": "6405f73911b4aab10abe5b8e6e11668d764a7658d43ef1548097b8799cdab13f",
+  "preservedOriginalSourceFiles": 47,
+  "archive": "experiments/source-inference",
+  "activeBehaviorModulesUnchanged": 7,
+  "main": {
+    "cleanInstall": true,
+    "typecheck": true,
+    "integrationTests": {
+      "passed": 48,
+      "total": 48
+    },
+    "evaluatorTests": {
+      "passed": 23,
+      "total": 23
+    },
+    "extractedPackageCliApiAndCodeGeneration": true,
+    "runtimeDependencies": [
+      "@modelcontextprotocol/sdk",
+      "ajv",
+      "playwright"
+    ],
+    "legacyExperimentIncluded": false,
+    "compressedBytes": 38017
+  },
+  "archived": {
+    "independentCleanInstall": true,
+    "typecheck": true,
+    "coreTests": {
+      "passed": 132,
+      "total": 132
+    },
+    "probeTests": {
+      "passed": 24,
+      "total": 24
+    },
+    "evaluatorTests": {
+      "passed": 10,
+      "total": 10
+    },
+    "buildAndCliApiSmoke": true,
+    "publishingDisabled": true
+  },
+  "evidence": {
+    "matrix": "evaluation/integration-unseen/runs/post-archive-2026-11-10/summary.json",
+    "nativeParity": true,
+    "uiPositives": {
+      "passed": 34,
+      "total": 35
+    },
+    "boundaries": {
+      "passed": 21,
+      "total": 21
+    },
+    "rawPositives": {
+      "passed": 25,
+      "total": 35
+    },
+    "holdout": "evaluation/integration-holdout/notes-manager/mcp-post-archive.json",
+    "nativeSnapshotParity": {
+      "matched": 12,
+      "total": 12
+    },
+    "upstreamFailuresRetained": 3,
+    "releaseCheckPassed": true,
+    "cleanup": "evaluation/integration-unseen/runs/post-archive-2026-11-10/cleanup.json"
+  },
+  "historicalMeasurementsPreserved": true,
+  "published": false
+}

@@ -1,0 +1,243 @@
+{
+  "reportKind": "integration-unseen-measurement",
+  "startedAt": "2026-11-10T11:21:00.937Z",
+  "compilerDigestBefore": "2fbce447847952ce964a2d5dbb170e6ee4f8ce6020671505b7902f4b6b0873dd",
+  "evaluatorFilesBefore": {
+    "fixtures.mjs": "a1aae6c88be66e8d5c9863b5f48367391dae0fc9e13665ae1d6161380e2c74c2",
+    "cases.mjs": "bd4e615be4817518f0d3a1184bf9c157d566438915b086c23ef8d52aa2a0ace1",
+    "oracles.mjs": "77903660f1fa4839bc780bd70cc2fb530cf0ae28ac9a8d4450c7b2342d4313f1",
+    "evidence.mjs": "dfeadf2de6071a9d03551498f7f56858ba70e58ea0d36a491d547c65df525501",
+    "shopping/avatar-reference-adjudication.json": "009f6e0d727ed17eb978d8be6241021370d586c4d7e700ef1df805231f3a9d33",
+    "run.mjs": "77af692480605188be4770741644588103b0de7b6a682e0b00e8da1fe0c3ef6c",
+    "mcp-driver.mjs": "57e0bf836da0e58708db217aac96bdfaa477039a7fc41a02e20bcd25c0df95b4",
+    "measure.mjs": "b168615a16b6d675e4980071f573b72167fdf9d9e7ed64167997d7a3492ba3ce",
+    "check.mjs": "05ce5fce5e3a858e63cea28914ae14dc27f7023c2031db251f78840ad7e09b84",
+    "fetch.mjs": "22290bc78d25551d747416d1f0a83d8e67022a9e1d416efeb5a65919651b8e8c",
+    "serve.mjs": "10d557d10870966198fcae9126b7114b60f400628852bf44e9239d0942cd88f2"
+  },
+  "goldPositiveScenarios": 35,
+  "goldNegativeOrBoundaryCases": 21,
+  "projects": [
+    {
+      "id": "finance",
+      "commit": "61c1bb87567df4245f0722713edabc8177121842",
+      "originalPort": 4451,
+      "stagedPort": 4461,
+      "source": "/tmp/integration-unseen-finance",
+      "staged": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-10T11-21-00-902Z-23099/finance",
+      "compilerDigestBeforeStage": "2fbce447847952ce964a2d5dbb170e6ee4f8ce6020671505b7902f4b6b0873dd",
+      "evidence": {
+        "reference": {
+          "path": "runs/final-v7-2026-11-10/finance/reference.json",
+          "sha256": "3f71454974480db8b0487329d5ba9a9952e11dfeba4e97958833eed345f9a1b9"
+        },
+        "raw": {
+          "path": "runs/final-v7-2026-11-10/finance/raw.json",
+          "sha256": "e4615e5e5adcbdd1bb90181f3a8d24fa107b6a3e203fc691edf766866dbcc11a"
+        },
+        "ui": {
+          "path": "runs/final-v7-2026-11-10/finance/ui.json",
+          "sha256": "31bbf5559abd2870a3912c4b416058a6668aaa06934459f8a7a9a677d235bb36"
+        }
+      },
+      "compilerDigestAfterStage": "2fbce447847952ce964a2d5dbb170e6ee4f8ce6020671505b7902f4b6b0873dd",
+      "runtimeModuleSha256": "daf579a9d29076e9664889f48a50df48a64191520db0ab1bab2838fd42a6ee26",
+      "manifestSha256": "150d1dee4a7098864d079b4a76e7095e5f50ef8967bdad1ac772224a13ca7eb3",
+      "serverOwnership": {
+        "original": {
+          "pid": 23115,
+          "cwd": "/tmp/integration-unseen-finance"
+        },
+        "staged": {
+          "pid": 23118,
+          "cwd": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-10T11-21-00-902Z-23099/finance"
+        }
+      },
+      "serversStopped": true,
+      "counts": {
+        "native": {
+          "positive": 13,
+          "positivePassed": 13,
+          "negative": 10,
+          "negativePassed": 9,
+          "protocolBoundaryNotApplicable": 0
+        },
+        "raw": {
+          "positive": 13,
+          "positivePassed": 10,
+          "negative": 10,
+          "negativePassed": 4,
+          "protocolBoundaryNotApplicable": 0
+        },
+        "ui": {
+          "positive": 13,
+          "positivePassed": 13,
+          "negative": 10,
+          "negativePassed": 10,
+          "protocolBoundaryNotApplicable": 0
+        }
+      },
+      "protocolBoundaryGaps": [],
+      "nativePassing": 22,
+      "nativeBlocked": [],
+      "parityGaps": []
+    },
+    {
+      "id": "todo",
+      "commit": "391435fc4edf819abf4f507187fc0364ac26e00b",
+      "originalPort": 4452,
+      "stagedPort": 4462,
+      "source": "/tmp/integration-unseen-todo",
+      "staged": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-10T11-21-00-902Z-23099/todo",
+      "compilerDigestBeforeStage": "2fbce447847952ce964a2d5dbb170e6ee4f8ce6020671505b7902f4b6b0873dd",
+      "evidence": {
+        "reference": {
+          "path": "runs/final-v7-2026-11-10/todo/reference.json",
+          "sha256": "2a2f6a4cf20f2cd87a9ccf0fe4e373e7e04993f04be64fbde122dd133520fa81"
+        },
+        "raw": {
+          "path": "runs/final-v7-2026-11-10/todo/raw.json",
+          "sha256": "9fab5d5c36a45748ff8c3f42b06f8de00115afeb709290aef27b12d1dc32eb70"
+        },
+        "ui": {
+          "path": "runs/final-v7-2026-11-10/todo/ui.json",
+          "sha256": "b76dcede3fabf89804c79b6fd8033f262c4c72d56d1ad2c19522876b269ff77f"
+        }
+      },
+      "compilerDigestAfterStage": "2fbce447847952ce964a2d5dbb170e6ee4f8ce6020671505b7902f4b6b0873dd",
+      "runtimeModuleSha256": "daf579a9d29076e9664889f48a50df48a64191520db0ab1bab2838fd42a6ee26",
+      "manifestSha256": "993e339c6af0fc07223150d38a9c8981d44245ca2aa1e3cee8c648eb3318f04b",
+      "serverOwnership": {
+        "original": {
+          "pid": 23706,
+          "cwd": "/tmp/integration-unseen-todo"
+        },
+        "staged": {
+          "pid": 23713,
+          "cwd": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-10T11-21-00-902Z-23099/todo"
+        }
+      },
+      "serversStopped": true,
+      "counts": {
+        "native": {
+          "positive": 5,
+          "positivePassed": 5,
+          "negative": 3,
+          "negativePassed": 2,
+          "protocolBoundaryNotApplicable": 1
+        },
+        "raw": {
+          "positive": 5,
+          "positivePassed": 5,
+          "negative": 3,
+          "negativePassed": 3,
+          "protocolBoundaryNotApplicable": 0
+        },
+        "ui": {
+          "positive": 5,
+          "positivePassed": 5,
+          "negative": 3,
+          "negativePassed": 3,
+          "protocolBoundaryNotApplicable": 0
+        }
+      },
+      "protocolBoundaryGaps": [],
+      "nativePassing": 7,
+      "nativeBlocked": [],
+      "parityGaps": []
+    },
+    {
+      "id": "shopping",
+      "commit": "3464f15ad53ede4de5673415ca9de68070bf78a1",
+      "originalPort": 4453,
+      "stagedPort": 4463,
+      "source": "/tmp/integration-unseen-shopping",
+      "staged": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-10T11-21-00-902Z-23099/shopping",
+      "compilerDigestBeforeStage": "2fbce447847952ce964a2d5dbb170e6ee4f8ce6020671505b7902f4b6b0873dd",
+      "evidence": {
+        "reference": {
+          "path": "runs/final-v7-2026-11-10/shopping/reference.json",
+          "sha256": "4ba8edcf875046f2d90d25d555e8fd2759ed886f73f6359186c4a83c2c08f1f2"
+        },
+        "raw": {
+          "path": "runs/final-v7-2026-11-10/shopping/raw.json",
+          "sha256": "d97463a828414ba84d0c3763f3c467da555af9967a5e99f38bea78871a593b14"
+        },
+        "ui": {
+          "path": "runs/final-v7-2026-11-10/shopping/ui.json",
+          "sha256": "fab5e0c6ad6be02e91f86fa2c48f42a48c0ce938138d4c44e8b55bd664b1585a"
+        }
+      },
+      "compilerDigestAfterStage": "2fbce447847952ce964a2d5dbb170e6ee4f8ce6020671505b7902f4b6b0873dd",
+      "runtimeModuleSha256": "daf579a9d29076e9664889f48a50df48a64191520db0ab1bab2838fd42a6ee26",
+      "manifestSha256": "7e22ce068725a7f20b6072d4764bf0e6eafb0c11f046c07abf3be361455e497c",
+      "serverOwnership": {
+        "original": {
+          "pid": 23858,
+          "cwd": "/tmp/integration-unseen-shopping"
+        },
+        "staged": {
+          "pid": 23866,
+          "cwd": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-10T11-21-00-902Z-23099/shopping"
+        }
+      },
+      "serversStopped": true,
+      "counts": {
+        "native": {
+          "positive": 17,
+          "positivePassed": 16,
+          "negative": 8,
+          "negativePassed": 7,
+          "protocolBoundaryNotApplicable": 1
+        },
+        "raw": {
+          "positive": 17,
+          "positivePassed": 10,
+          "negative": 8,
+          "negativePassed": 5,
+          "protocolBoundaryNotApplicable": 0
+        },
+        "ui": {
+          "positive": 17,
+          "positivePassed": 16,
+          "negative": 8,
+          "negativePassed": 8,
+          "protocolBoundaryNotApplicable": 0
+        }
+      },
+      "protocolBoundaryGaps": [],
+      "nativePassing": 23,
+      "nativeBlocked": [
+        {
+          "id": "profile-avatar",
+          "status": "reference-failed",
+          "error": "AssertionError [ERR_ASSERTION]: undefined == true"
+        }
+      ],
+      "parityGaps": []
+    }
+  ],
+  "sourcePolicy": "Pinned originals unchanged; only generic staged compiler/runtime instrumentation. All action-under-test calls are actual SDK MCP with no native reference fallback.",
+  "finishedAt": "2026-11-10T11:29:21.011Z",
+  "compilerDigestAfter": "2fbce447847952ce964a2d5dbb170e6ee4f8ce6020671505b7902f4b6b0873dd",
+  "evaluatorFilesAfter": {
+    "fixtures.mjs": "a1aae6c88be66e8d5c9863b5f48367391dae0fc9e13665ae1d6161380e2c74c2",
+    "cases.mjs": "bd4e615be4817518f0d3a1184bf9c157d566438915b086c23ef8d52aa2a0ace1",
+    "oracles.mjs": "77903660f1fa4839bc780bd70cc2fb530cf0ae28ac9a8d4450c7b2342d4313f1",
+    "evidence.mjs": "dfeadf2de6071a9d03551498f7f56858ba70e58ea0d36a491d547c65df525501",
+    "shopping/avatar-reference-adjudication.json": "009f6e0d727ed17eb978d8be6241021370d586c4d7e700ef1df805231f3a9d33",
+    "run.mjs": "77af692480605188be4770741644588103b0de7b6a682e0b00e8da1fe0c3ef6c",
+    "mcp-driver.mjs": "57e0bf836da0e58708db217aac96bdfaa477039a7fc41a02e20bcd25c0df95b4",
+    "measure.mjs": "b168615a16b6d675e4980071f573b72167fdf9d9e7ed64167997d7a3492ba3ce",
+    "check.mjs": "05ce5fce5e3a858e63cea28914ae14dc27f7023c2031db251f78840ad7e09b84",
+    "fetch.mjs": "22290bc78d25551d747416d1f0a83d8e67022a9e1d416efeb5a65919651b8e8c",
+    "serve.mjs": "10d557d10870966198fcae9126b7114b60f400628852bf44e9239d0942cd88f2"
+  },
+  "compilerStable": true,
+  "evaluatorStable": true,
+  "nativeParity": true,
+  "protocolBoundariesPassed": true,
+  "usableWithinNativePassingScope": true,
+  "releaseReady": false,
+  "scope": "Integrity and declared native-reference parity only. Frozen positive denominator remains35 including source-blocked1px avatar. Raw field values and explicit UI transport mappings are separate. This is not a production or full-schema guarantee."
+}

@@ -1,0 +1,24 @@
+finance transaction-create passed 
+finance transaction-edit passed 
+finance transaction-delete passed 
+finance transaction-undo passed 
+finance category-create passed 
+finance category-edit passed 
+finance category-delete passed 
+finance budget-set passed 
+finance budget-remove passed 
+finance transactions-import passed 
+finance transactions-export passed 
+finance data-clear passed 
+finance data-restore-demo passed 
+finance blank-description passed 
+finance zero-amount passed 
+finance too-large-amount blocked-before-validation 
+finance missing-category passed 
+finance invalid-date passed 
+finance duplicate-category passed 
+finance zero-budget passed 
+finance used-category-delete passed 
+finance malformed-import passed 
+finance cancel-delete passed 
+REPORT /Users/joeljoseph/Desktop/Personal Work/ai-experiments-apps/angular-mcp-compiler/evaluation/integration-unseen/runs/final-v7-2026-11-10/finance/reference.json {"positive":13,"positivePassed":13,"negative":10,"negativePassed":9,"protocolBoundaryNotApplicable":0}

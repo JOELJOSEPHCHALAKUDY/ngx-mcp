@@ -1,0 +1,600 @@
+{
+  "formatVersion": 1,
+  "projectId": "notes-manager-holdout",
+  "repository": "https://github.com/dplocki/angular-notes-manager",
+  "commit": "f1aa7eb02e2dcee35be7684d7aebba647083fd98",
+  "frozenAt": "2026-11-10T10:00:19.567256+00:00",
+  "methodology": {
+    "sourceOnly": true,
+    "projectCompilerOrIntegrationRunBeforeFreeze": false,
+    "projectGeneratedBridgeInspectedBeforeFreeze": false,
+    "upstreamDependenciesPatched": false,
+    "note": "Other bridge projects were used for generic development; this selected project has had no integration/compiler evaluation."
+  },
+  "fixture": {
+    "localStorageKey": "notes",
+    "notes": [
+      {
+        "id": 1,
+        "text": "First fixture note"
+      },
+      {
+        "id": 2,
+        "text": "Second fixture note"
+      }
+    ],
+    "setup": "Synthetic localStorage only, before bootstrap; fresh browser per case. No accounts/API/backend exists."
+  },
+  "operations": [
+    {
+      "route": "/",
+      "validators": [],
+      "http": null,
+      "id": "read_notes",
+      "description": "Initialize list and select first stored note; create one unsaved in-memory note if storage is empty",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "ui": {
+        "type": "navigation",
+        "path": "/"
+      },
+      "expectedEffect": {
+        "seeded": "Two note rows render and first note text appears in textarea; persistent data unchanged",
+        "empty": "One blank unsaved note renders; localStorage is not populated by createNote()"
+      },
+      "source": [
+        {
+          "file": "src/app/app.component.ts",
+          "line": 26,
+          "endLine": 41,
+          "sha256": "c8d3034d22c6be9115666f2655d48385f850df1db16042f5c6efc3583f66f265"
+        },
+        {
+          "file": "src/app/services/note.service.ts",
+          "line": 18,
+          "endLine": 35,
+          "sha256": "dc01507a7eab7ff422b028629446c32a41daba08966cb463fe2dfc581c088f57"
+        },
+        {
+          "file": "src/app/services/local-storage.service.ts",
+          "line": 45,
+          "endLine": 69,
+          "sha256": "99b4be3ff6ddff27e0823331e89f68bc5d215523b5c36203271f0adffb18bb93"
+        },
+        {
+          "file": "src/app/note.ts",
+          "line": 1,
+          "endLine": 5,
+          "sha256": "ac568124ffafb742060996650e541ad0204121cacba7f4c9b070bd64dbf74b88"
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "validators": [],
+      "http": null,
+      "id": "create_note",
+      "description": "Create and select a new blank in-memory note through New",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "ui": {
+        "type": "click",
+        "selector": "app-new-button a",
+        "handler": "AppComponent.addNoteButtonClick"
+      },
+      "expectedEffect": {
+        "rowCountDelta": 1,
+        "newIdWithSeed": 3,
+        "textarea": "",
+        "isSaved": false,
+        "storage": "unchanged until a supported persistence path is invoked"
+      },
+      "source": [
+        {
+          "file": "src/app/app.component.html",
+          "line": 2,
+          "endLine": 5,
+          "sha256": "1c8d38db3679d472ca4fbdfab4c002a429dea49434b2af641e1d82dd687dc885"
+        },
+        {
+          "file": "src/app/base-button/base-button.component.ts",
+          "line": 3,
+          "endLine": 20,
+          "sha256": "f5fa6fa7356a1b6d6a1723af38e58a42bb803ab01345152c4898136074622a2a"
+        },
+        {
+          "file": "src/app/base-button/base-button.component.ts",
+          "line": 40,
+          "endLine": 51,
+          "sha256": "f5fa6fa7356a1b6d6a1723af38e58a42bb803ab01345152c4898136074622a2a"
+        },
+        {
+          "file": "src/app/app.component.ts",
+          "line": 48,
+          "endLine": 58,
+          "sha256": "c8d3034d22c6be9115666f2655d48385f850df1db16042f5c6efc3583f66f265"
+        },
+        {
+          "file": "src/app/services/note.service.ts",
+          "line": 33,
+          "endLine": 35,
+          "sha256": "dc01507a7eab7ff422b028629446c32a41daba08966cb463fe2dfc581c088f57"
+        },
+        {
+          "file": "src/app/services/id-generator.service.ts",
+          "line": 7,
+          "endLine": 16,
+          "sha256": "268b7e436488262f65a081495fec15498466c869351c1a6a809b6b24bb1dc6e5"
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "validators": [],
+      "http": null,
+      "id": "edit_note",
+      "description": "Type selected note text and emit the authored keyup to update dirty state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "noteId": {
+            "type": "number"
+          },
+          "text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "noteId",
+          "text"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "noteId": 1,
+        "text": "Revised first fixture note"
+      },
+      "ui": {
+        "type": "workflow",
+        "select": "app-note-list-item matching existing note",
+        "field": "app-note-detail textarea",
+        "events": [
+          "input",
+          "keyup"
+        ],
+        "handler": "NoteDetailComponent.onKey"
+      },
+      "expectedEffect": {
+        "textarea": "Revised first fixture note",
+        "rowTitle": "Revised first fixtur...",
+        "dirty": "selected row gains not-saved when text differs from original",
+        "storage": "unchanged until Save"
+      },
+      "source": [
+        {
+          "file": "src/app/note-detail/note-detail.component.ts",
+          "line": 5,
+          "endLine": 25,
+          "sha256": "f74acb6f5f5745bd961c76a0f9d3b5ee634174bf0959b4d3df641149936750ba"
+        },
+        {
+          "file": "src/app/change-detector.ts",
+          "line": 7,
+          "endLine": 18,
+          "sha256": "293acc84ced55d5d5f349bb810260bca21248291822aea71a43ada53e8d3fea0"
+        },
+        {
+          "file": "src/app/note-title.pipe.ts",
+          "line": 9,
+          "endLine": 22,
+          "sha256": "1b7aa65e6495bbf30bc937be4499d95c2a282dd4170396c256e331d185dee857"
+        }
+      ],
+      "validationNotes": "No required/minlength/maxlength/pattern guard. Empty strings remain valid editable values. keyup is authored behavior in addition to ngModel input binding."
+    },
+    {
+      "route": "/",
+      "validators": [],
+      "http": null,
+      "id": "select_note",
+      "description": "Select an existing row and show its text",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "noteId": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "noteId"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "noteId": 2
+      },
+      "ui": {
+        "type": "click",
+        "selector": "app-note-list-item for noteId",
+        "handler": "NoteListComponent.selectNote"
+      },
+      "expectedEffect": {
+        "textarea": "Second fixture note",
+        "selectedId": 2,
+        "storage": "unchanged"
+      },
+      "source": [
+        {
+          "file": "src/app/note-list/note-list.component.ts",
+          "line": 6,
+          "endLine": 15,
+          "sha256": "9f91e2cc47136c42e0ef8410091797db93f7281f5a7b35093e7831d9d850c955"
+        },
+        {
+          "file": "src/app/note-list/note-list.component.ts",
+          "line": 22,
+          "endLine": 30,
+          "sha256": "9f91e2cc47136c42e0ef8410091797db93f7281f5a7b35093e7831d9d850c955"
+        },
+        {
+          "file": "src/app/app.component.ts",
+          "line": 44,
+          "endLine": 46,
+          "sha256": "c8d3034d22c6be9115666f2655d48385f850df1db16042f5c6efc3583f66f265"
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "validators": [],
+      "http": null,
+      "id": "save_existing_note",
+      "description": "Save the selected existing note and mark it saved",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "noteId": {
+            "type": "number"
+          },
+          "text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "noteId",
+          "text"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "noteId": 1,
+        "text": "Saved fixture revision"
+      },
+      "ui": {
+        "type": "workflow",
+        "edit": "app-note-detail textarea input+keyup",
+        "submit": "app-save-button a",
+        "handler": "AppComponent.saveNoteButtonClick"
+      },
+      "expectedEffect": {
+        "storage": [
+          {
+            "id": 1,
+            "text": "Saved fixture revision"
+          },
+          {
+            "id": 2,
+            "text": "Second fixture note"
+          }
+        ],
+        "dirty": "selected row no longer not-saved",
+        "otherNote": "unchanged"
+      },
+      "source": [
+        {
+          "file": "src/app/app.component.ts",
+          "line": 61,
+          "endLine": 69,
+          "sha256": "c8d3034d22c6be9115666f2655d48385f850df1db16042f5c6efc3583f66f265"
+        },
+        {
+          "file": "src/app/base-button/base-button.component.ts",
+          "line": 55,
+          "endLine": 70,
+          "sha256": "f5fa6fa7356a1b6d6a1723af38e58a42bb803ab01345152c4898136074622a2a"
+        },
+        {
+          "file": "src/app/services/local-storage.service.ts",
+          "line": 25,
+          "endLine": 32,
+          "sha256": "99b4be3ff6ddff27e0823331e89f68bc5d215523b5c36203271f0adffb18bb93"
+        },
+        {
+          "file": "src/app/services/local-storage.service.ts",
+          "line": 53,
+          "endLine": 59,
+          "sha256": "99b4be3ff6ddff27e0823331e89f68bc5d215523b5c36203271f0adffb18bb93"
+        }
+      ],
+      "precondition": "noteId must already exist in storage; new-note persistence is a separately recorded upstream limitation"
+    },
+    {
+      "route": "/",
+      "validators": [],
+      "http": null,
+      "id": "delete_selected_note",
+      "description": "Delete selected note through header Delete after native confirmation",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "noteId": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "noteId"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "noteId": 1
+      },
+      "ui": {
+        "type": "workflow",
+        "select": "existing row",
+        "click": "header app-delete-button a",
+        "handler": "AppComponent.deleteNote",
+        "humanSteps": [
+          {
+            "kind": "native-confirm",
+            "response": true
+          }
+        ]
+      },
+      "expectedEffect": {
+        "storage": [
+          {
+            "id": 2,
+            "text": "Second fixture note"
+          }
+        ],
+        "remainingIds": [
+          2
+        ],
+        "textarea": "Second fixture note"
+      },
+      "source": [
+        {
+          "file": "src/app/app.component.ts",
+          "line": 72,
+          "endLine": 96,
+          "sha256": "c8d3034d22c6be9115666f2655d48385f850df1db16042f5c6efc3583f66f265"
+        },
+        {
+          "file": "src/app/app.component.html",
+          "line": 3,
+          "endLine": 5,
+          "sha256": "1c8d38db3679d472ca4fbdfab4c002a429dea49434b2af641e1d82dd687dc885"
+        },
+        {
+          "file": "src/app/services/browser-interaction.service.ts",
+          "line": 6,
+          "endLine": 9,
+          "sha256": "39ba6c7d3544cbf1d5b103e82952e4ebc3aa6e566be64f421f5335e4b0688802"
+        },
+        {
+          "file": "src/app/services/local-storage.service.ts",
+          "line": 35,
+          "endLine": 42,
+          "sha256": "99b4be3ff6ddff27e0823331e89f68bc5d215523b5c36203271f0adffb18bb93"
+        }
+      ],
+      "confirmation": "Native confirm() must be handled through its actual dialog. Human/dialog step is explicit and separate from MCP dispatch; do not call component/service methods."
+    },
+    {
+      "route": "/",
+      "validators": [],
+      "http": null,
+      "id": "delete_row_note",
+      "description": "Delete a specified row through its nested Delete after native confirmation",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "noteId": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "noteId"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "noteId": 2
+      },
+      "ui": {
+        "type": "workflow",
+        "click": "app-note-list-item for noteId app-delete-button a",
+        "handlers": [
+          "NoteListItemComponent.deleteNote",
+          "AppComponent.deleteNote"
+        ],
+        "humanSteps": [
+          {
+            "kind": "native-confirm",
+            "response": true
+          }
+        ]
+      },
+      "expectedEffect": {
+        "storage": [
+          {
+            "id": 1,
+            "text": "First fixture note"
+          }
+        ],
+        "remainingIds": [
+          1
+        ],
+        "otherNote": "unchanged"
+      },
+      "source": [
+        {
+          "file": "src/app/note-list-item/note-list-item.component.ts",
+          "line": 6,
+          "endLine": 9,
+          "sha256": "83e81f97087e5253f78772cbc38081b815f052c4a80624b54e695858703431f8"
+        },
+        {
+          "file": "src/app/note-list-item/note-list-item.component.ts",
+          "line": 22,
+          "endLine": 28,
+          "sha256": "83e81f97087e5253f78772cbc38081b815f052c4a80624b54e695858703431f8"
+        },
+        {
+          "file": "src/app/note-list/note-list.component.ts",
+          "line": 6,
+          "endLine": 15,
+          "sha256": "9f91e2cc47136c42e0ef8410091797db93f7281f5a7b35093e7831d9d850c955"
+        },
+        {
+          "file": "src/app/note-list/note-list.component.ts",
+          "line": 33,
+          "endLine": 37,
+          "sha256": "9f91e2cc47136c42e0ef8410091797db93f7281f5a7b35093e7831d9d850c955"
+        },
+        {
+          "file": "src/app/app.component.ts",
+          "line": 72,
+          "endLine": 84,
+          "sha256": "c8d3034d22c6be9115666f2655d48385f850df1db16042f5c6efc3583f66f265"
+        }
+      ],
+      "exclusions": [
+        "Do not assert selection after row-delete because native click bubbling may also select the row; persistence/removal is the operation oracle."
+      ]
+    }
+  ],
+  "positiveCases": [
+    {
+      "id": "load_seeded",
+      "operation": "read_notes",
+      "fixture": "seeded"
+    },
+    {
+      "id": "load_empty",
+      "operation": "read_notes",
+      "fixture": "empty"
+    },
+    {
+      "id": "create_blank",
+      "operation": "create_note"
+    },
+    {
+      "id": "edit_selected",
+      "operation": "edit_note"
+    },
+    {
+      "id": "select_other",
+      "operation": "select_note"
+    },
+    {
+      "id": "save_existing",
+      "operation": "save_existing_note"
+    },
+    {
+      "id": "delete_header_accept",
+      "operation": "delete_selected_note"
+    },
+    {
+      "id": "delete_row_accept",
+      "operation": "delete_row_note"
+    }
+  ],
+  "boundaryCases": [
+    {
+      "id": "delete_header_cancel",
+      "operation": "delete_selected_note",
+      "confirm": false,
+      "expected": "No note is removed and persistent data is unchanged"
+    },
+    {
+      "id": "delete_row_cancel",
+      "operation": "delete_row_note",
+      "confirm": false,
+      "expected": "No note is removed and persistent data is unchanged; row selection may still change through bubbling"
+    },
+    {
+      "id": "empty_text_allowed",
+      "operation": "edit_note",
+      "validInput": {
+        "noteId": 1,
+        "text": ""
+      },
+      "expected": "Empty textarea is accepted and marks note dirty; no invented required validation"
+    },
+    {
+      "id": "long_title_truncated_only",
+      "operation": "edit_note",
+      "validInput": {
+        "noteId": 1,
+        "text": "12345678901234567890 additional complete text"
+      },
+      "expected": "Textarea retains full value; row title shows first20codeunits plus ..."
+    }
+  ],
+  "upstreamLimitations": [
+    {
+      "id": "new_note_save_does_not_insert",
+      "source": [
+        {
+          "file": "src/app/services/local-storage.service.ts",
+          "line": 25,
+          "endLine": 32,
+          "sha256": "99b4be3ff6ddff27e0823331e89f68bc5d215523b5c36203271f0adffb18bb93"
+        },
+        {
+          "file": "src/app/app.component.ts",
+          "line": 61,
+          "endLine": 69,
+          "sha256": "c8d3034d22c6be9115666f2655d48385f850df1db16042f5c6efc3583f66f265"
+        }
+      ],
+      "explanation": "saveNote maps existing storage entries and never appends missing ids. UI nevertheless marks new note saved. Do not claim newly-created-note persistence or repair the app."
+    },
+    {
+      "id": "autosave_readme_claim",
+      "source": [
+        {
+          "file": "README.md",
+          "line": 1,
+          "endLine": 4,
+          "sha256": "3b2951eb286f352fe40b71fcf5e8350de1a6753719bf4e4b8b1aa4b665883c68"
+        },
+        {
+          "file": "src/app/note-detail/note-detail.component.ts",
+          "line": 22,
+          "endLine": 25,
+          "sha256": "f74acb6f5f5745bd961c76a0f9d3b5ee634174bf0959b4d3df641149936750ba"
+        }
+      ],
+      "explanation": "The inspected source mutates note text/dirty state on keyup; persistence occurs only in save/delete service calls. Do not invent autosave."
+    }
+  ],
+  "exclusions": [
+    "No router module/routes; root screen only",
+    "No title/body split: Note has text, id, isSaved",
+    "No schema validator forbids blank/long text",
+    "Custom buttons forward real native anchor click; do not emit Angular outputs or call services directly",
+    "Native confirmations remain actual UI steps and are separately reported",
+    "Private service/ChangeDetector methods are not independent business operations"
+  ]
+}

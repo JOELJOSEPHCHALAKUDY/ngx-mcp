@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "types": [
+      "node"
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "tests/**/*.ts",
+    "evaluation/**/*.ts",
+    "tooling/run-fresh.ts",
+    "tooling/fresh-evaluate.ts"
+  ],
+  "exclude": [
+    "fixtures",
+    "artifacts",
+    "evaluation/independent-app",
+    "evaluation/independent-app-2",
+    "evaluation/injection/host"
+  ]
+}

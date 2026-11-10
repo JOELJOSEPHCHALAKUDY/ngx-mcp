@@ -1,0 +1,25 @@
+{
+  "formatVersion": 1,
+  "measuredAt": "2026-11-09T21:22:04.836Z",
+  "node": "v24.15.0",
+  "fixtures": [
+    {
+      "id": "todomvc-angular21",
+      "repository": "https://github.com/tastejs/todomvc",
+      "commit": "ff43b02e59dfa604386bb382034b2cd07c2bcd8a",
+      "source": "test-apps/fresh-todomvc/examples/angular",
+      "verifiedFiles": 28,
+      "lockSha256": "4048fb1e9b90c71328542775c3cfdac043a75fe45f3e82de8ece87819a4963e0",
+      "installed": true,
+      "install": [
+        "ci",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "license.md",
+      "licenseQualification": "Explicit upstream root MIT license applies to the pinned repository"
+    }
+  ]
+}

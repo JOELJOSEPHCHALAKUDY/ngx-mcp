@@ -1,0 +1,30 @@
+{
+  "node": "24 (workspace-pinned node_modules/.bin/node)",
+  "upstreamAngular": "^4.0.0",
+  "upstreamCLI": "1.0.0",
+  "upstreamDependencyLock": null,
+  "lockPlan": "Generate npm package-lock with ignore-scripts and legacy-peer-deps; preserve installed lock as separate reproducibility artifact.",
+  "port": 4341,
+  "api": "http://localhost:3000/todos intercepted in browser with deterministic local in-memory fixture; no backend process or account",
+  "fixtureTodos": [
+    {
+      "id": 1,
+      "title": "Read fixture article",
+      "complete": false
+    },
+    {
+      "id": 2,
+      "title": "Clean fixture inbox",
+      "complete": false
+    },
+    {
+      "id": 3,
+      "title": "Reserve fixture table",
+      "complete": true
+    }
+  ],
+  "expectedRuntimeRisks": [
+    "Angular CLI 1.0 / webpack 2 may require Node OpenSSL legacy provider",
+    "Compiler may not support @angular/http or nested EventEmitter operation flow; results must remain unpatched"
+  ]
+}

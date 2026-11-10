@@ -1,0 +1,286 @@
+{
+  "repository": "https://github.com/sitepoint-editors/angular-todo-app",
+  "commit": "7069b9be885821f2811f0fed8581a37e3b21f6c8",
+  "files": [
+    {
+      "path": ".angular-cli.json",
+      "sha256": "b8fdc4ebb0b65fdb54d73e5107c29cd0c723b81c16d5259dc1556c99e4d54fc9",
+      "bytes": 1205
+    },
+    {
+      "path": ".editorconfig",
+      "sha256": "3970ce473928bdf945236b8aa6c7cbf6b0022f5ce379b7b0ba8e7343d8fec451",
+      "bytes": 245
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "8ebc5dec4775f9e2634d54b6f3c8f88069013b382d230ad2586f145de65407cf",
+      "bytes": 516
+    },
+    {
+      "path": "README.md",
+      "sha256": "25e0c1ee3137d4cb177848d93b9ae52d807f83c6451a9c4534d94a1cc18e0b44",
+      "bytes": 1421
+    },
+    {
+      "path": "db.json",
+      "sha256": "2de62bab4ddd2ef420f6b61d03f8e3f97a0b0af717ee2a88305075ff1eb7e543",
+      "bytes": 292
+    },
+    {
+      "path": "e2e/app.e2e-spec.ts",
+      "sha256": "e2d4241d6c7c777e6420365561c962dfb4a21249f142c1c0e86f9a03a4b91ce6",
+      "bytes": 306
+    },
+    {
+      "path": "e2e/app.po.ts",
+      "sha256": "8a99f2681c3b55becb03f15f734ce243b0a2cb2ae6e90a466387872be0c525fb",
+      "bytes": 212
+    },
+    {
+      "path": "e2e/tsconfig.e2e.json",
+      "sha256": "538a60d07a9795913a84ef4a4b50523ab0540cad3eaf27fe928d434747e1f834",
+      "bytes": 193
+    },
+    {
+      "path": "karma.conf.js",
+      "sha256": "3806cdfc0ed9da4d4c3b8e23b889b529f396b8761a3cacbd999c1def53bb5e8e",
+      "bytes": 1240
+    },
+    {
+      "path": "package.json",
+      "sha256": "04e85c79618f085b7742d675b56498a202a99c8c38a0a0538dead18a46d90296",
+      "bytes": 1340
+    },
+    {
+      "path": "protractor.conf.js",
+      "sha256": "912e2f0d37128d42d6b71fa07cd19783639511713e2f8b7fc5a45d5c60842a8a",
+      "bytes": 756
+    },
+    {
+      "path": "src/app/api-mock.service.ts",
+      "sha256": "377de6672eb39993755b0034b5eab1a6aafb8f3d1bd35be5c0762c3ad83312d2",
+      "bytes": 925
+    },
+    {
+      "path": "src/app/api.service.spec.ts",
+      "sha256": "be27cb9f514cc74758638846ab69d83e2eab09e71eae7c3733ad99c0a0f06490",
+      "bytes": 725
+    },
+    {
+      "path": "src/app/api.service.ts",
+      "sha256": "7c27d0cb4fec16a58aa4fe4bf842dd60505083a32646f36516e34715d82b0f0f",
+      "bytes": 1738
+    },
+    {
+      "path": "src/app/app.component.css",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "src/app/app.component.html",
+      "sha256": "366b64836f0e88d4e1ae3ae3a36a9feb150c0c49e309667543f0f8a939a3a388",
+      "bytes": 334
+    },
+    {
+      "path": "src/app/app.component.spec.ts",
+      "sha256": "97da222f16fcb458757ee760c81a1bf6641ba821b0e502a2b56ad1ce756810d3",
+      "bytes": 974
+    },
+    {
+      "path": "src/app/app.component.ts",
+      "sha256": "2d34a7559d6dc337a37adca0ae6a4ac4bb7d19d90df75fdfa251a9e446f1f07d",
+      "bytes": 1163
+    },
+    {
+      "path": "src/app/app.module.ts",
+      "sha256": "eaecd3a5f9e187eeb76bc5d9b0c576af6b735c6fa3612a784cddcba1ce374263",
+      "bytes": 1001
+    },
+    {
+      "path": "src/app/todo-data.service.spec.ts",
+      "sha256": "85210874dd9f23e3e20cbea482f995914168df756aa98f7684d4065888a000df",
+      "bytes": 617
+    },
+    {
+      "path": "src/app/todo-data.service.ts",
+      "sha256": "647455c1decdfdcc2f2df1a2c2f045f9d1fd169c49bd30415ee4a62f895aeadc",
+      "bytes": 993
+    },
+    {
+      "path": "src/app/todo-list-footer/todo-list-footer.component.css",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "src/app/todo-list-footer/todo-list-footer.component.html",
+      "sha256": "c6bf658c9b13936536987c6c53dda0885e56f088b5a46f95dd9d19ba21f2a530",
+      "bytes": 173
+    },
+    {
+      "path": "src/app/todo-list-footer/todo-list-footer.component.spec.ts",
+      "sha256": "67a149135c0811d7fb9f78529319ac07e4f8fe116113f9fd745708667dfb80e2",
+      "bytes": 941
+    },
+    {
+      "path": "src/app/todo-list-footer/todo-list-footer.component.ts",
+      "sha256": "54898600c24c82c71e71ca764a75f4bd3206bf2731b80cf11bd39b747e675250",
+      "bytes": 331
+    },
+    {
+      "path": "src/app/todo-list-header/todo-list-header.component.css",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "src/app/todo-list-header/todo-list-header.component.html",
+      "sha256": "3332e15df8ebbd8e1b9444e188eece53434f4473875d7353ceea174e8771aca0",
+      "bytes": 191
+    },
+    {
+      "path": "src/app/todo-list-header/todo-list-header.component.spec.ts",
+      "sha256": "ca5713403ea060ca6d31d0505b2f1ee7bd7ab5e01b26d0b04df31d43c595dbc1",
+      "bytes": 912
+    },
+    {
+      "path": "src/app/todo-list-header/todo-list-header.component.ts",
+      "sha256": "483c30b5d817ba70c54992ac3fd4245d7373b003b6a8f3b6760985af209dd016",
+      "bytes": 492
+    },
+    {
+      "path": "src/app/todo-list-item/todo-list-item.component.css",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "src/app/todo-list-item/todo-list-item.component.html",
+      "sha256": "9fc5ca41cf6836ac7e7898b84ca7ae731d846cbc13759cf8185a8c66a8b0b699",
+      "bytes": 223
+    },
+    {
+      "path": "src/app/todo-list-item/todo-list-item.component.spec.ts",
+      "sha256": "102264c4c7648a50c3adc2ba1ce1e7d24918efd4a35b3ef7fcf0535f65cb053e",
+      "bytes": 912
+    },
+    {
+      "path": "src/app/todo-list-item/todo-list-item.component.ts",
+      "sha256": "db947f8d27d2d378d0d197186b7b94c24cee7feb2e3549927430391e57e2ffe8",
+      "bytes": 612
+    },
+    {
+      "path": "src/app/todo-list/todo-list.component.css",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "src/app/todo-list/todo-list.component.html",
+      "sha256": "45876b97b017c7729e9b0aedacc40f96edac34f497bb2dc554e0f1663f8a77b9",
+      "bytes": 338
+    },
+    {
+      "path": "src/app/todo-list/todo-list.component.spec.ts",
+      "sha256": "725fefe31c87b4b54643724c4d15309ad7030d56ec97d8796180a97d20295809",
+      "bytes": 966
+    },
+    {
+      "path": "src/app/todo-list/todo-list.component.ts",
+      "sha256": "0103dba42813ee5ec34b33214e8b007898939a8c644cc69b30ad3a52661bfb45",
+      "bytes": 614
+    },
+    {
+      "path": "src/app/todo.spec.ts",
+      "sha256": "aed6a0feea94cfee8fcf8121a133000671a851f524a0f3dde5789db616df9d86",
+      "bytes": 368
+    },
+    {
+      "path": "src/app/todo.ts",
+      "sha256": "be550bfa9ae24c827942cf0310329cc1bc625989442cafc0ecbe89a26d30187b",
+      "bytes": 145
+    },
+    {
+      "path": "src/assets/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "src/assets/css/global.css",
+      "sha256": "58791d6ab0bbc06720e57defab7f02667ca6912514778b597fab243e97ed05fc",
+      "bytes": 59
+    },
+    {
+      "path": "src/assets/css/todomvc-app.css",
+      "sha256": "7fa76976419adf48e92d049ffc179fe1fafab56e00e787e23d44ffdd7f4f5f74",
+      "bytes": 6332
+    },
+    {
+      "path": "src/assets/css/todomvc-common.css",
+      "sha256": "5c67ddc771b558bc07b58695c9c4b7f663d2ba813edb4810341799c47ba0822d",
+      "bytes": 1818
+    },
+    {
+      "path": "src/environments/environment.prod.ts",
+      "sha256": "c31618690a8344f1594dfdc22d366aea4f0bcca5cea166ae69ee36f7ac464e2b",
+      "bytes": 86
+    },
+    {
+      "path": "src/environments/environment.ts",
+      "sha256": "5942037c80c6213437c118261c5506cc0e273fa4877f78b52d9764fd66a897ed",
+      "bytes": 422
+    },
+    {
+      "path": "src/favicon.ico",
+      "sha256": "b9ccbb7100e13ae95ac18a3a9ed00857f321b63b498f1fb7abab506fc1c40e99",
+      "bytes": 5430
+    },
+    {
+      "path": "src/index.html",
+      "sha256": "80527bf44e42948178383a61990af358103eb0a73240c97bc24ab724585cde0f",
+      "bytes": 294
+    },
+    {
+      "path": "src/main.ts",
+      "sha256": "be52ab7065e7aececeeaef6a75ce489fb54626265377229afd1ed5e3057a76ca",
+      "bytes": 336
+    },
+    {
+      "path": "src/polyfills.ts",
+      "sha256": "9567e56413c45b530315e2d3d43a9b10927f658abbfac252dfa0fd1da0971a71",
+      "bytes": 2429
+    },
+    {
+      "path": "src/styles.css",
+      "sha256": "c7295b915b6a250b910d30ff3b9d1991b6f43c9474d3afafc6cba59eee44383e",
+      "bytes": 80
+    },
+    {
+      "path": "src/test.ts",
+      "sha256": "14fad867d6553fd5e59f4f39fb1b8007df1a5f2e63830f47edba0f0383470f95",
+      "bytes": 1081
+    },
+    {
+      "path": "src/tsconfig.app.json",
+      "sha256": "9d4ada642d0a9d211c1a5719dde7d7a418dd1c8ecdf5b6b55b115895c612b332",
+      "bytes": 209
+    },
+    {
+      "path": "src/tsconfig.spec.json",
+      "sha256": "b67631c1501781fcff0d447d4632d77940dbe6f5d90e1c0882d1930965372565",
+      "bytes": 302
+    },
+    {
+      "path": "src/typings.d.ts",
+      "sha256": "500f1012c6d4e5a70d590055fd9b74599f4e4b246b09db80d2fe8a8a5556d3c4",
+      "bytes": 104
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "2b43d8033405c241b9d2c61fb0763b0a39646df70851fa5b5f6b7ec45ee15f1f",
+      "bytes": 385
+    },
+    {
+      "path": "tslint.json",
+      "sha256": "8306943bcf6ae912f52505ec5b09f65d1c3a6c6a3272443a6986ceabd77d8afc",
+      "bytes": 2710
+    }
+  ]
+}

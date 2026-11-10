@@ -1,0 +1,80 @@
+{
+  "workspace": "/private/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-10T11-38-12-335Z-26410/finance",
+  "project": "/private/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-10T11-38-12-335Z-26410/finance/tsconfig.app.json",
+  "angularVersion": "20.3.18",
+  "nodes": 65,
+  "diagnostics": [
+    {
+      "category": "warning",
+      "code": "directive-output-dispatch",
+      "message": "change is a resolved directive output, not a native DOM event; runtime support must be explicit",
+      "file": "src/app/features/transactions/components/transaction-filters/transaction-filters.component.html",
+      "line": 16
+    },
+    {
+      "category": "warning",
+      "code": "directive-output-dispatch",
+      "message": "valueChange is a resolved directive output, not a native DOM event; runtime support must be explicit",
+      "file": "src/app/features/transactions/components/transaction-filters/transaction-filters.component.html",
+      "line": 34
+    },
+    {
+      "category": "warning",
+      "code": "directive-output-dispatch",
+      "message": "change is a resolved directive output, not a native DOM event; runtime support must be explicit",
+      "file": "src/app/features/transactions/components/transaction-filters/transaction-filters.component.html",
+      "line": 47
+    },
+    {
+      "category": "warning",
+      "code": "directive-output-dispatch",
+      "message": "matSortChange is a resolved directive output, not a native DOM event; runtime support must be explicit",
+      "file": "src/app/features/transactions/components/transactions-table/transactions-table.component.html",
+      "line": 2
+    },
+    {
+      "category": "warning",
+      "code": "directive-output-dispatch",
+      "message": "sortChange is a resolved directive output, not a native DOM event; runtime support must be explicit",
+      "file": "src/app/features/transactions/pages/transactions-page/transactions-page.component.html",
+      "line": 42
+    },
+    {
+      "category": "warning",
+      "code": "directive-output-dispatch",
+      "message": "edit is a resolved directive output, not a native DOM event; runtime support must be explicit",
+      "file": "src/app/features/transactions/pages/transactions-page/transactions-page.component.html",
+      "line": 42
+    },
+    {
+      "category": "warning",
+      "code": "directive-output-dispatch",
+      "message": "remove is a resolved directive output, not a native DOM event; runtime support must be explicit",
+      "file": "src/app/features/transactions/pages/transactions-page/transactions-page.component.html",
+      "line": 42
+    },
+    {
+      "category": "warning",
+      "code": "directive-output-dispatch",
+      "message": "page is a resolved directive output, not a native DOM event; runtime support must be explicit",
+      "file": "src/app/features/transactions/pages/transactions-page/transactions-page.component.html",
+      "line": 51
+    },
+    {
+      "category": "warning",
+      "code": "directive-output-dispatch",
+      "message": "edit is a resolved directive output, not a native DOM event; runtime support must be explicit",
+      "file": "src/app/features/budgets/pages/budgets-page/budgets-page.component.html",
+      "line": 30
+    },
+    {
+      "category": "warning",
+      "code": "directive-output-dispatch",
+      "message": "change is a resolved directive output, not a native DOM event; runtime support must be explicit",
+      "file": "src/app/features/settings/pages/settings-page/settings-page.component.html",
+      "line": 18
+    }
+  ],
+  "manifest": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-10T11-38-12-335Z-26410/finance/angular-mcp.integration.json"
+}
+Build or serve this staged workspace with its normal Angular CLI.

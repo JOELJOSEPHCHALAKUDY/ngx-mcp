@@ -1,0 +1,22 @@
+{
+  "id": "profile-avatar-32px",
+  "scope": "Supplemental post-failure nonfrozen fixture; excluded from all original35 frozen scenario counts",
+  "sourceOperation": "profile-avatar",
+  "recordedAt": "2026-11-10T10:09:54.763218+00:00",
+  "validInput": {
+    "file": {
+      "name": "unseen-32.png",
+      "mimeType": "image/png",
+      "base64": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAL0lEQVR4nO3OIQEAAAgDMDKRibC0ghg3E/Ornr2kEhAQEBAQEBAQEBAQEBAQSAceMUp0iEC7gHQAAAAASUVORK5CYII="
+    }
+  },
+  "fixture": {
+    "dimensions": [
+      32,
+      32
+    ],
+    "sha256": "e9bc8894951971f2c38b8a679336f7156822f1c250dbfaf84a0ddebbcadc3723",
+    "generation": "Deterministic opaque RGBA32x32 syntheticPNG via standard zlib/PNG chunks"
+  },
+  "oracle": "Original cropUI emits nonempty JPEGdataURL to /profil for current synthetic user; unchanged neighbor profile; frozen1x1case remainsblocked independently."
+}

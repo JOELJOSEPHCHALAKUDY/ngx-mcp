@@ -1,0 +1,22 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "rootDir": "src",
+    "outDir": "dist/types"
+  },
+  "include": [
+    "src/index.ts",
+    "src/integrate.ts",
+    "src/integrated-serve.ts"
+  ],
+  "exclude": [
+    "tests",
+    "experiments",
+    "samples",
+    "test-apps",
+    "artifacts"
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "buildId": "32cbbe30f6c3431e6c1f40b738436190306208ce32b286c1cc501b46724d90ec",
+  "policy": {
+    "version": 1,
+    "allowedOrigins": [
+      "http://127.0.0.1:54091"
+    ],
+    "rules": [
+      {
+        "sourceId": "ngmcp_01b0feb00a028d83a9b16c4b",
+        "label": "button — src/app/item-view/item-view.html:27",
+        "operations": [
+          "describe",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_0c84be173e5cfd9170c71833",
+        "label": "button Close — src/app/add-todo/add-todo.html:22",
+        "operations": [
+          "describe",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_392d7e2ad18f98bba9ef45b8",
+        "label": "button — src/app/add-todo/add-todo.html:67",
+        "operations": [
+          "describe",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_92680881d84f6a8d363cef47",
+        "label": "input todoTitle — src/app/add-todo/add-todo.html:33",
+        "operations": [
+          "describe",
+          "fill",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_93357b46db881052581f8f67",
+        "label": "form — src/app/add-todo/add-todo.html:30",
+        "operations": [
+          "describe",
+          "submit"
+        ],
+        "writeFields": [
+          "ngmcp_92680881d84f6a8d363cef47",
+          "ngmcp_ebb9802f6a4ab21ccea83fad",
+          "ngmcp_f5f8bb842172a53a71a0fa8c"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_b4b620faece66dccf72551c2",
+        "label": "input — src/app/item-view/item-view.html:4",
+        "operations": [
+          "describe",
+          "fill",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_b8ed434fb4e46c35b630495c",
+        "label": "button — src/app/add-todo/add-todo.html:2",
+        "operations": [
+          "describe",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_e18dd3072f5ee23e7118ebc1",
+        "label": "button — src/app/add-todo/add-todo.html:70",
+        "operations": [
+          "describe",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_ebb9802f6a4ab21ccea83fad",
+        "label": "textarea todoDescription — src/app/add-todo/add-todo.html:45",
+        "operations": [
+          "describe",
+          "fill",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_f5f8bb842172a53a71a0fa8c",
+        "label": "input todoCompleted — src/app/add-todo/add-todo.html:55",
+        "operations": [
+          "describe",
+          "fill",
+          "activate"
+        ]
+      }
+    ],
+    "sessionMaxAgeMs": 3600000,
+    "approvalMaxAgeMs": 60000,
+    "maxAuditRecords": 100000
+  }
+}

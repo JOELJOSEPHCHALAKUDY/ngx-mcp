@@ -1,0 +1,803 @@
+{
+  "formatVersion": 1,
+  "scope": "All domain-data mutations and CSV export reachable from normal ready-state finance UI. Semantic operations13; positive scenarios13. Dialog open/close are setup, not independent business effects.",
+  "operations": [
+    {
+      "id": "transaction-create",
+      "component": "TransactionFormDialogComponent",
+      "handler": "submit",
+      "routes": [
+        "/transacoes"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "expense",
+              "income"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80,
+            "pattern": "\\S"
+          },
+          "amount": {
+            "type": "number",
+            "minimum": 0.01,
+            "maximum": 10000000
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "categoryId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "notes": {
+            "type": "string",
+            "maxLength": 280
+          }
+        },
+        "required": [
+          "type",
+          "description",
+          "amount",
+          "date",
+          "categoryId"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "type": "expense",
+        "description": "Unseen groceries",
+        "amount": 25.5,
+        "date": "2026-11-15",
+        "categoryId": "cat-food",
+        "notes": "Frozen independent fixture"
+      },
+      "effect": "Append exactly one transaction with generated id, amountCents2550, ISO date, trimmed description/notes and matching category; persist through finance-tracker:data and survive reload.",
+      "evidence": [
+        {
+          "file": "src/app/features/transactions/components/transaction-form-dialog/transaction-form-dialog.component.ts",
+          "line": 122,
+          "sha256": "3a13d91a02734b0cc70d5952b7f804f5a2275d0589ef380671136a99ddb6ec8b",
+          "excerpt": "protected submit(): void {"
+        },
+        {
+          "file": "src/app/features/transactions/data-access/transaction-dialog.service.ts",
+          "line": 21,
+          "sha256": "de8b1a09a195fc7db31656a9205e37eb5cb7c88dc129cf5dc94142b748fafe6c",
+          "excerpt": "async create(type?: TransactionType): Promise<void> {"
+        },
+        {
+          "file": "src/app/core/state/finance.store.ts",
+          "line": 112,
+          "sha256": "b41c727dcc703ed3e951946d77954766c5015747f88d6ceee372a487b14382fd",
+          "excerpt": "addTransaction(draft: TransactionDraft): Transaction {"
+        }
+      ],
+      "entry": "TransactionDialogService.create",
+      "precondition": "Open source create dialog",
+      "targetContext": null,
+      "representations": {
+        "date": "JSON ISO calendar date; source form model is Date via its localized DateAdapter",
+        "amount": "reais numeric amount; CurrencyInput CVA displays localized digits, domain stores rounded cents"
+      }
+    },
+    {
+      "id": "transaction-edit",
+      "component": "TransactionFormDialogComponent",
+      "handler": "submit",
+      "routes": [
+        "/transacoes"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "expense",
+              "income"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80,
+            "pattern": "\\S"
+          },
+          "amount": {
+            "type": "number",
+            "minimum": 0.01,
+            "maximum": 10000000
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "categoryId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "notes": {
+            "type": "string",
+            "maxLength": 280
+          }
+        },
+        "required": [
+          "type",
+          "description",
+          "amount",
+          "date",
+          "categoryId"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "type": "expense",
+        "description": "Unseen groceries",
+        "amount": 25.5,
+        "date": "2026-11-15",
+        "categoryId": "cat-food",
+        "notes": "Frozen independent fixture"
+      },
+      "effect": "Update the independently selected existing transaction identity only; preserve id/createdAt and every other transaction; persist and survive reload.",
+      "evidence": [
+        {
+          "file": "src/app/features/transactions/components/transaction-form-dialog/transaction-form-dialog.component.ts",
+          "line": 122,
+          "sha256": "3a13d91a02734b0cc70d5952b7f804f5a2275d0589ef380671136a99ddb6ec8b",
+          "excerpt": "protected submit(): void {"
+        },
+        {
+          "file": "src/app/features/transactions/data-access/transaction-dialog.service.ts",
+          "line": 33,
+          "sha256": "de8b1a09a195fc7db31656a9205e37eb5cb7c88dc129cf5dc94142b748fafe6c",
+          "excerpt": "async edit(transaction: Transaction): Promise<void> {"
+        },
+        {
+          "file": "src/app/core/state/finance.store.ts",
+          "line": 122,
+          "sha256": "b41c727dcc703ed3e951946d77954766c5015747f88d6ceee372a487b14382fd",
+          "excerpt": "updateTransaction(id: string, draft: TransactionDraft): void {"
+        }
+      ],
+      "entry": "TransactionDialogService.edit",
+      "precondition": "Create one fixture transaction through normal UI; choose its authored table row and open Edit.",
+      "targetContext": {
+        "description": "Unseen seed transaction",
+        "selection": "unique visible row title; identity read independently from persisted state"
+      },
+      "representations": {
+        "date": "JSON ISO calendar date; source form model is Date via its localized DateAdapter",
+        "amount": "reais numeric amount; CurrencyInput CVA displays localized digits, domain stores rounded cents"
+      }
+    },
+    {
+      "id": "transaction-delete",
+      "component": "TransactionDialogService",
+      "handler": "remove",
+      "routes": [
+        "/transacoes"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "effect": "After confirming source dialog, remove selected transaction id and persist; all other transactions unchanged.",
+      "evidence": [
+        {
+          "file": "src/app/features/transactions/data-access/transaction-dialog.service.ts",
+          "line": 41,
+          "sha256": "de8b1a09a195fc7db31656a9205e37eb5cb7c88dc129cf5dc94142b748fafe6c",
+          "excerpt": "async remove(transaction: Transaction): Promise<void> {"
+        },
+        {
+          "file": "src/app/core/state/finance.store.ts",
+          "line": 130,
+          "sha256": "b41c727dcc703ed3e951946d77954766c5015747f88d6ceee372a487b14382fd",
+          "excerpt": "removeTransaction(id: string): void {"
+        }
+      ],
+      "precondition": "Create fixture through normal UI; unique visible row opens Delete; source confirmation requires explicit synthetic fixture review.",
+      "confirmation": true
+    },
+    {
+      "id": "transaction-undo",
+      "component": "TransactionDialogService",
+      "handler": "remove:undo",
+      "routes": [
+        "/transacoes"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "effect": "Activate original snackbar Undo after a source UI deletion; exact removed transaction restored once and persisted.",
+      "evidence": [
+        {
+          "file": "src/app/features/transactions/data-access/transaction-dialog.service.ts",
+          "line": 53,
+          "sha256": "de8b1a09a195fc7db31656a9205e37eb5cb7c88dc129cf5dc94142b748fafe6c",
+          "excerpt": "const undo = await this.notifications.withAction('transactions.toast.deleted', 'common.undo');"
+        },
+        {
+          "file": "src/app/core/state/finance.store.ts",
+          "line": 137,
+          "sha256": "b41c727dcc703ed3e951946d77954766c5015747f88d6ceee372a487b14382fd",
+          "excerpt": "restoreTransaction(transaction: Transaction): void {"
+        }
+      ],
+      "precondition": "Delete fixture transaction through original UI; original Undo action remains visible."
+    },
+    {
+      "id": "category-create",
+      "component": "CategoryFormDialogComponent",
+      "handler": "submit",
+      "routes": [
+        "/categorias"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 30
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "expense",
+              "income"
+            ]
+          },
+          "color": {
+            "type": "string",
+            "pattern": "^#[0-9a-fA-F]{6}$"
+          },
+          "icon": {
+            "type": "string",
+            "enum": [
+              "payments",
+              "work",
+              "trending_up",
+              "savings",
+              "card_giftcard",
+              "home",
+              "restaurant",
+              "shopping_cart",
+              "directions_car",
+              "directions_bus",
+              "local_gas_station",
+              "favorite",
+              "medication",
+              "fitness_center",
+              "sports_esports",
+              "movie",
+              "flight",
+              "school",
+              "menu_book",
+              "subscriptions",
+              "wifi",
+              "bolt",
+              "water_drop",
+              "shopping_bag",
+              "checkroom",
+              "pets",
+              "child_care",
+              "receipt_long",
+              "account_balance",
+              "more_horiz"
+            ]
+          }
+        },
+        "required": [
+          "name",
+          "type",
+          "color",
+          "icon"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "name": "Unseen category",
+        "type": "expense",
+        "color": "#6d5bd0",
+        "icon": "shopping_cart"
+      },
+      "effect": "Create/update only the selected category; persist trimmed name, exact type/color/icon; update preserves id; survive reload.",
+      "evidence": [
+        {
+          "file": "src/app/features/categories/components/category-form-dialog/category-form-dialog.component.ts",
+          "line": 105,
+          "sha256": "b50e32001503b9106252eb9d06da600469a8fd33f0a07189f4642d9413edf81d",
+          "excerpt": "protected submit(): void {"
+        },
+        {
+          "file": "src/app/features/categories/pages/categories-page/categories-page.component.ts",
+          "line": 78,
+          "sha256": "bf65cd04ccf1f6a9c991411f1bd3dac76f475a4634e65fe94d9cc1c41ad2d011",
+          "excerpt": "protected async create(type: TransactionType): Promise<void> {"
+        }
+      ],
+      "entry": "CategoriesPageComponent.create",
+      "precondition": "For edit create unique fixture category via UI; unused category so type is unlocked.",
+      "businessRules": [
+        "Normalized name must be unique within type; editing excludes own id.",
+        "When usage>0 type control is disabled."
+      ]
+    },
+    {
+      "id": "category-edit",
+      "component": "CategoryFormDialogComponent",
+      "handler": "submit",
+      "routes": [
+        "/categorias"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 30
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "expense",
+              "income"
+            ]
+          },
+          "color": {
+            "type": "string",
+            "pattern": "^#[0-9a-fA-F]{6}$"
+          },
+          "icon": {
+            "type": "string",
+            "enum": [
+              "payments",
+              "work",
+              "trending_up",
+              "savings",
+              "card_giftcard",
+              "home",
+              "restaurant",
+              "shopping_cart",
+              "directions_car",
+              "directions_bus",
+              "local_gas_station",
+              "favorite",
+              "medication",
+              "fitness_center",
+              "sports_esports",
+              "movie",
+              "flight",
+              "school",
+              "menu_book",
+              "subscriptions",
+              "wifi",
+              "bolt",
+              "water_drop",
+              "shopping_bag",
+              "checkroom",
+              "pets",
+              "child_care",
+              "receipt_long",
+              "account_balance",
+              "more_horiz"
+            ]
+          }
+        },
+        "required": [
+          "name",
+          "type",
+          "color",
+          "icon"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "name": "Unseen category",
+        "type": "expense",
+        "color": "#6d5bd0",
+        "icon": "shopping_cart"
+      },
+      "effect": "Create/update only the selected category; persist trimmed name, exact type/color/icon; update preserves id; survive reload.",
+      "evidence": [
+        {
+          "file": "src/app/features/categories/components/category-form-dialog/category-form-dialog.component.ts",
+          "line": 105,
+          "sha256": "b50e32001503b9106252eb9d06da600469a8fd33f0a07189f4642d9413edf81d",
+          "excerpt": "protected submit(): void {"
+        },
+        {
+          "file": "src/app/features/categories/pages/categories-page/categories-page.component.ts",
+          "line": 86,
+          "sha256": "bf65cd04ccf1f6a9c991411f1bd3dac76f475a4634e65fe94d9cc1c41ad2d011",
+          "excerpt": "protected async edit(category: Category): Promise<void> {"
+        }
+      ],
+      "entry": "CategoriesPageComponent.edit",
+      "precondition": "For edit create unique fixture category via UI; unused category so type is unlocked.",
+      "businessRules": [
+        "Normalized name must be unique within type; editing excludes own id.",
+        "When usage>0 type control is disabled."
+      ]
+    },
+    {
+      "id": "category-delete",
+      "component": "CategoriesPageComponent",
+      "handler": "remove",
+      "routes": [
+        "/categorias"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "effect": "After source confirmation remove unused selected category and its budget; preserve unrelated records; persist and reload.",
+      "evidence": [
+        {
+          "file": "src/app/features/categories/pages/categories-page/categories-page.component.ts",
+          "line": 95,
+          "sha256": "bf65cd04ccf1f6a9c991411f1bd3dac76f475a4634e65fe94d9cc1c41ad2d011",
+          "excerpt": "protected async remove(category: Category): Promise<void> {"
+        },
+        {
+          "file": "src/app/core/state/finance.store.ts",
+          "line": 179,
+          "sha256": "b41c727dcc703ed3e951946d77954766c5015747f88d6ceee372a487b14382fd",
+          "excerpt": "removeCategory(id: string): void {"
+        }
+      ],
+      "precondition": "Create unique unused category and its budget via source UI.",
+      "confirmation": true
+    },
+    {
+      "id": "budget-set",
+      "component": "BudgetDialogComponent",
+      "handler": "submit",
+      "routes": [
+        "/orcamentos"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "number",
+            "minimum": 0.01
+          }
+        },
+        "required": [
+          "limit"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "limit": 125.5
+      },
+      "effect": "Set/replace only selected expense-category budget limitCents12550; persist and reload.",
+      "evidence": [
+        {
+          "file": "src/app/features/budgets/components/budget-dialog/budget-dialog.component.ts",
+          "line": 115,
+          "sha256": "e24d53afcb8a1e74a81cec4805c0dd2b0e94bfcf33efe4f852e31d4b8cd5a3c2",
+          "excerpt": "protected submit(): void {"
+        },
+        {
+          "file": "src/app/core/state/finance.store.ts",
+          "line": 193,
+          "sha256": "b41c727dcc703ed3e951946d77954766c5015747f88d6ceee372a487b14382fd",
+          "excerpt": "setBudget(categoryId: string, limitCents: number): void {"
+        }
+      ],
+      "precondition": "Choose visible category cat-food; source editBudget opens its dialog.",
+      "representations": {
+        "limit": "numeric reais via CurrencyInput CVA; domain integer cents"
+      }
+    },
+    {
+      "id": "budget-remove",
+      "component": "BudgetDialogComponent",
+      "handler": "removeBudget",
+      "routes": [
+        "/orcamentos"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "effect": "Original Remove budget closes dialog with limitCents0; parent removes selected category budget; persists and reloads.",
+      "evidence": [
+        {
+          "file": "src/app/features/budgets/components/budget-dialog/budget-dialog.component.ts",
+          "line": 123,
+          "sha256": "e24d53afcb8a1e74a81cec4805c0dd2b0e94bfcf33efe4f852e31d4b8cd5a3c2",
+          "excerpt": "protected removeBudget(): void {"
+        },
+        {
+          "file": "src/app/core/state/finance.store.ts",
+          "line": 193,
+          "sha256": "b41c727dcc703ed3e951946d77954766c5015747f88d6ceee372a487b14382fd",
+          "excerpt": "setBudget(categoryId: string, limitCents: number): void {"
+        }
+      ],
+      "precondition": "Set cat-food budget through original UI then reopen its dialog."
+    },
+    {
+      "id": "transactions-import",
+      "component": "SettingsPageComponent",
+      "handler": "importCsv",
+      "routes": [
+        "/configuracoes"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "mimeType": {
+                "type": "string"
+              },
+              "text": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "mimeType",
+              "text"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "file"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "file": {
+          "name": "unseen-finance.csv",
+          "mimeType": "text/csv",
+          "text": "data;descricao;valor;tipo;categoria;observacoes\n2026-11-15;Unseen CSV expense;12,34;despesa;Unseen imported category;frozen fixture\n"
+        }
+      },
+      "effect": "Original file input imports exactly one transaction amountCents1234 and creates missing expense category; existing data retained; summary counts match; persisted reload.",
+      "evidence": [
+        {
+          "file": "src/app/features/settings/pages/settings-page/settings-page.component.ts",
+          "line": 101,
+          "sha256": "4a14a63d0219e4e31fda5bc6e43f5aab8b7396ff507c0807dbe60dfb92b00a06",
+          "excerpt": "protected async importCsv(input: HTMLInputElement): Promise<void> {"
+        },
+        {
+          "file": "src/app/features/settings/data-access/transactions-csv.ts",
+          "line": 10,
+          "sha256": "d0162f9ed328eb48ff76030986a93725670a689c949a2d9e44ea8ddac1727651",
+          "excerpt": "export const CSV_HEADERS = ["
+        },
+        {
+          "file": "src/app/core/state/finance.store.ts",
+          "line": 145,
+          "sha256": "b41c727dcc703ed3e951946d77954766c5015747f88d6ceee372a487b14382fd",
+          "excerpt": "importTransactions("
+        }
+      ],
+      "inputTransport": "File fixture through native file chooser; JSON describes its bytes, not an application method call."
+    },
+    {
+      "id": "transactions-export",
+      "component": "SettingsPageComponent",
+      "handler": "exportCsv",
+      "routes": [
+        "/configuracoes"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "effect": "Original export downloads CSV with header and independently seeded transaction values; no finance state changes.",
+      "evidence": [
+        {
+          "file": "src/app/features/settings/pages/settings-page/settings-page.component.ts",
+          "line": 88,
+          "sha256": "4a14a63d0219e4e31fda5bc6e43f5aab8b7396ff507c0807dbe60dfb92b00a06",
+          "excerpt": "protected exportCsv(): void {"
+        },
+        {
+          "file": "src/app/features/settings/data-access/transactions-csv.ts",
+          "line": 10,
+          "sha256": "d0162f9ed328eb48ff76030986a93725670a689c949a2d9e44ea8ddac1727651",
+          "excerpt": "export const CSV_HEADERS = ["
+        }
+      ],
+      "precondition": "At least one UI-created transaction; read download bytes as business oracle."
+    },
+    {
+      "id": "data-clear",
+      "component": "SettingsPageComponent",
+      "handler": "clearData",
+      "routes": [
+        "/configuracoes"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "effect": "After source confirmation replace domain data with no transactions/budgets and default categories; persists reload.",
+      "evidence": [
+        {
+          "file": "src/app/features/settings/pages/settings-page/settings-page.component.ts",
+          "line": 143,
+          "sha256": "4a14a63d0219e4e31fda5bc6e43f5aab8b7396ff507c0807dbe60dfb92b00a06",
+          "excerpt": "protected async clearData(): Promise<void> {"
+        },
+        {
+          "file": "src/app/core/state/finance.store.ts",
+          "line": 101,
+          "sha256": "b41c727dcc703ed3e951946d77954766c5015747f88d6ceee372a487b14382fd",
+          "excerpt": "clearAll(): void {"
+        }
+      ],
+      "confirmation": true
+    },
+    {
+      "id": "data-restore-demo",
+      "component": "SettingsPageComponent",
+      "handler": "restoreDemo",
+      "routes": [
+        "/configuracoes"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "effect": "After source confirmation replace existing fixture data with generated demo transactions/default categories/budgets; counts positive and fixture record absent; persists reload.",
+      "evidence": [
+        {
+          "file": "src/app/features/settings/pages/settings-page/settings-page.component.ts",
+          "line": 157,
+          "sha256": "4a14a63d0219e4e31fda5bc6e43f5aab8b7396ff507c0807dbe60dfb92b00a06",
+          "excerpt": "protected async restoreDemo(): Promise<void> {"
+        },
+        {
+          "file": "src/app/core/state/finance.store.ts",
+          "line": 106,
+          "sha256": "b41c727dcc703ed3e951946d77954766c5015747f88d6ceee372a487b14382fd",
+          "excerpt": "restoreDemo(): void {"
+        }
+      ],
+      "confirmation": true
+    }
+  ],
+  "negativeCases": [
+    {
+      "id": "blank-description",
+      "operation": "transaction-create",
+      "inputPatch": {
+        "description": "   "
+      },
+      "expected": "refused-without-domain-effect",
+      "oracle": "Dialog/form remains invalid, transaction count and persisted snapshot unchanged; no source parent addTransaction effect."
+    },
+    {
+      "id": "zero-amount",
+      "operation": "transaction-create",
+      "inputPatch": {
+        "amount": 0
+      },
+      "expected": "refused-without-domain-effect",
+      "oracle": "Dialog/form remains invalid, transaction count and persisted snapshot unchanged; no source parent addTransaction effect."
+    },
+    {
+      "id": "too-large-amount",
+      "operation": "transaction-create",
+      "inputPatch": {
+        "amount": 10000000.01
+      },
+      "expected": "refused-without-domain-effect",
+      "oracle": "Dialog/form remains invalid, transaction count and persisted snapshot unchanged; no source parent addTransaction effect."
+    },
+    {
+      "id": "missing-category",
+      "operation": "transaction-create",
+      "inputPatch": {
+        "categoryId": ""
+      },
+      "expected": "refused-without-domain-effect",
+      "oracle": "Dialog/form remains invalid, transaction count and persisted snapshot unchanged; no source parent addTransaction effect."
+    },
+    {
+      "id": "invalid-date",
+      "operation": "transaction-create",
+      "inputPatch": {
+        "date": "not-a-date"
+      },
+      "expected": "refused-without-domain-effect",
+      "oracle": "Dialog/form remains invalid, transaction count and persisted snapshot unchanged; no source parent addTransaction effect."
+    },
+    {
+      "id": "duplicate-category",
+      "operation": "category-create",
+      "inputPatch": {
+        "name": "Unseen existing",
+        "type": "expense"
+      },
+      "expected": "refused-without-domain-effect",
+      "oracle": "Create same normalized category name/type by original UI; duplicateName group error and no additional category.",
+      "precondition": "Create Unseen existing expense category via original UI."
+    },
+    {
+      "id": "zero-budget",
+      "operation": "budget-set",
+      "inputPatch": {
+        "limit": 0
+      },
+      "expected": "refused-without-domain-effect",
+      "oracle": "Original form rejects min0.01; existing budget unchanged."
+    },
+    {
+      "id": "used-category-delete",
+      "operation": "category-delete",
+      "inputPatch": {},
+      "expected": "refused-without-domain-effect",
+      "oracle": "Category referenced by transaction remains; original notification reports in-use refusal.",
+      "precondition": "Create source UI transaction assigned cat-food; attempt delete cat-food."
+    },
+    {
+      "id": "malformed-import",
+      "operation": "transactions-import",
+      "inputPatch": {
+        "file": {
+          "name": "bad.csv",
+          "mimeType": "text/csv",
+          "text": "wrong;headers\n1;2\n"
+        }
+      },
+      "expected": "refused-without-domain-effect",
+      "oracle": "No finance records imported; error alert rendered."
+    },
+    {
+      "id": "cancel-delete",
+      "operation": "transaction-delete",
+      "inputPatch": {},
+      "expected": "refused-without-domain-effect",
+      "oracle": "Cancel source confirmation; selected transaction and full stored data unchanged.",
+      "decision": "reject"
+    }
+  ]
+}

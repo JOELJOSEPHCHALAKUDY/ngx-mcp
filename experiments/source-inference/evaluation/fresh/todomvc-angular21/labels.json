@@ -1,0 +1,597 @@
+{
+  "schemaVersion": 1,
+  "projectId": "todomvc-angular21",
+  "repository": "https://github.com/tastejs/todomvc",
+  "commit": "ff43b02e59dfa604386bb382034b2cd07c2bcd8a",
+  "subdirectory": "examples/angular",
+  "frozenAt": "2026-11-09T20:58:09.603066+00:00",
+  "methodology": {
+    "sourceAuthored": true,
+    "compilerOutputForThisProjectReadBeforeFreeze": false,
+    "compilerSourceRevisitedAfterProjectSelectionBeforeFreeze": false,
+    "priorCompilerExposure": "Author integrated the separate legacy Angular4 runtime before selecting this modern project; no source/output from this project was compiled or inspected before freeze."
+  },
+  "operationPolicy": "Every distinct user-reachable business effect; three filters are variants of one read operation, Enter/blur are variants of one edit operation. Reveal/cancel/focus workflow state are excluded as standalone business operations, but edit boundaries are tested.",
+  "operations": [
+    {
+      "id": "filter_todos",
+      "description": "Read all, active or completed todo rows using the real hash router",
+      "route": "/#/all",
+      "kind": "read",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "filter": {
+            "type": "string",
+            "enum": [
+              "all",
+              "active",
+              "completed"
+            ]
+          }
+        },
+        "required": [
+          "filter"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "filter": "active"
+      },
+      "trigger": {
+        "type": "routerLink",
+        "selectors": {
+          "all": ".filters a[href=\"#/\"]",
+          "active": ".filters a[href=\"#/active\"]",
+          "completed": ".filters a[href=\"#/completed\"]"
+        }
+      },
+      "effect": {
+        "observable": [
+          "All shows every todo; Active only completed=false; Completed only completed=true",
+          "Selected filter class changes",
+          "Filtering preserves underlying data and active count"
+        ]
+      },
+      "source": [
+        {
+          "file": "src/app/app.routes.ts",
+          "lines": [
+            4,
+            9
+          ],
+          "sha256": "6bd0785fbb84660d7aeb4e5a1dcb7cd3203c57f7ac07a28beb6f361bf0be3926"
+        },
+        {
+          "file": "src/app/app.config.ts",
+          "lines": [
+            6,
+            10
+          ],
+          "sha256": "491877388539ae9c557ebe103fa1f6635ea45d9ff591ea131cb50339f12b34a4"
+        },
+        {
+          "file": "src/app/footer/footer.component.html",
+          "lines": [
+            6,
+            16
+          ],
+          "sha256": "21e2b2dbd3cbbc9e0bdc81c3e91d0faf6b4fb270a839ffc2afe9bde687613874"
+        },
+        {
+          "file": "src/app/todo-list/todo-list.component.ts",
+          "lines": [
+            16,
+            19
+          ],
+          "sha256": "7aff333ee921aa1a90a5a870a8b3cf5f472ac1548b4b7ee199909e2e3f400d4a"
+        },
+        {
+          "file": "src/app/todos.service.ts",
+          "lines": [
+            39,
+            48
+          ],
+          "sha256": "e0d975f7148b642bdb7f788ac2e2e22c1edf53ab10d5ac73127a7abf5eeb686e"
+        }
+      ],
+      "routeVariants": [
+        "/#/all",
+        "/#/active",
+        "/#/completed"
+      ],
+      "initialReadIncluded": true,
+      "validation": [
+        "filter is one of three source-authored routes"
+      ],
+      "preconditions": [
+        "Three synthetic todos seeded through UI; last is completed"
+      ]
+    },
+    {
+      "id": "add_todo",
+      "description": "Trim a nonblank title and append a new incomplete todo",
+      "route": "/#/all",
+      "kind": "create",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "pattern": "\\S"
+          }
+        },
+        "required": [
+          "title"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "title": "  Frozen holdout task  "
+      },
+      "trigger": {
+        "type": "keyup.enter",
+        "selector": "input.new-todo",
+        "handler": "HeaderComponent.addTodo"
+      },
+      "effect": {
+        "state": {
+          "append": {
+            "title": "Frozen holdout task",
+            "completed": false
+          }
+        },
+        "observable": [
+          "A new row is appended",
+          "Header clears after success",
+          "Active count increments"
+        ]
+      },
+      "source": [
+        {
+          "file": "src/app/header/header.component.html",
+          "lines": [
+            3,
+            7
+          ],
+          "sha256": "e8ac14c4db4e580af5de734a526e850a7faf71311a145f2f94193a87c9e72743"
+        },
+        {
+          "file": "src/app/header/header.component.ts",
+          "lines": [
+            14,
+            22
+          ],
+          "sha256": "3ab2cd5459464871966307e4afdd9205f86570034ded01adedce8d4339c209e6"
+        },
+        {
+          "file": "src/app/todos.service.ts",
+          "lines": [
+            12,
+            18
+          ],
+          "sha256": "e0d975f7148b642bdb7f788ac2e2e22c1edf53ab10d5ac73127a7abf5eeb686e"
+        }
+      ],
+      "validation": [
+        "title.trim().length must be greater than zero; blank/whitespace is no-op",
+        "Leading/trailing whitespace is removed before storage"
+      ],
+      "required": [
+        "title"
+      ]
+    },
+    {
+      "id": "toggle_todo",
+      "description": "Reverse completed state of an existing selected todo",
+      "route": "/#/all",
+      "kind": "update",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "todo": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "completed": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "title",
+              "completed"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "todo"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "todo": {
+          "title": "Read fixture article",
+          "completed": false
+        }
+      },
+      "trigger": {
+        "type": "change",
+        "selector": "app-todo-item input.toggle",
+        "handler": "TodoItemComponent.toggleTodo"
+      },
+      "effect": {
+        "state": {
+          "title": "Read fixture article",
+          "completed": true
+        },
+        "observable": [
+          "Selected checkbox and completed CSS class update",
+          "Active count decrements",
+          "Repeating reverses state"
+        ]
+      },
+      "source": [
+        {
+          "file": "src/app/todo-item/todo-item.component.html",
+          "lines": [
+            1,
+            5
+          ],
+          "sha256": "3d54173f430f8e2772bc99ba9fad6c8e8886ae8832c7d1d2b10270135ef8672e"
+        },
+        {
+          "file": "src/app/todo-item/todo-item.component.ts",
+          "lines": [
+            12,
+            26
+          ],
+          "sha256": "4abfe32ecc2277eaf9c9e5472bd62a8bc1c258e08eb3ffd4c22ad327b61c847f"
+        }
+      ],
+      "validation": [],
+      "required": [
+        "todo"
+      ],
+      "selection": "@Input todo is selected by its existing row; there are no ids in the source model",
+      "transport": "No HTTP; in-memory direct model mutation"
+    },
+    {
+      "id": "delete_todo",
+      "description": "Remove an existing selected todo through its row destroy control",
+      "route": "/#/all",
+      "kind": "delete",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "todo": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "completed": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "title",
+              "completed"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "todo"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "todo": {
+          "title": "Clean fixture inbox",
+          "completed": false
+        }
+      },
+      "trigger": {
+        "type": "click",
+        "selector": "app-todo-item button.destroy",
+        "handler": "TodoItemComponent.removeTodo -> TodoListComponent.removeTodo"
+      },
+      "effect": {
+        "observable": [
+          "Only selected row is removed",
+          "Active count decrements for active removal",
+          "No confirmation dialog exists"
+        ]
+      },
+      "source": [
+        {
+          "file": "src/app/todo-item/todo-item.component.html",
+          "lines": [
+            5,
+            5
+          ],
+          "sha256": "3d54173f430f8e2772bc99ba9fad6c8e8886ae8832c7d1d2b10270135ef8672e"
+        },
+        {
+          "file": "src/app/todo-item/todo-item.component.ts",
+          "lines": [
+            29,
+            31
+          ],
+          "sha256": "4abfe32ecc2277eaf9c9e5472bd62a8bc1c258e08eb3ffd4c22ad327b61c847f"
+        },
+        {
+          "file": "src/app/todo-list/todo-list.component.html",
+          "lines": [
+            6,
+            9
+          ],
+          "sha256": "a7bc2a72746abb190f025bbb7e441efa76e982c88ce53a82e1a96f2ea62bdc01"
+        },
+        {
+          "file": "src/app/todo-list/todo-list.component.ts",
+          "lines": [
+            25,
+            27
+          ],
+          "sha256": "7aff333ee921aa1a90a5a870a8b3cf5f472ac1548b4b7ee199909e2e3f400d4a"
+        },
+        {
+          "file": "src/app/todos.service.ts",
+          "lines": [
+            20,
+            23
+          ],
+          "sha256": "e0d975f7148b642bdb7f788ac2e2e22c1edf53ab10d5ac73127a7abf5eeb686e"
+        }
+      ],
+      "validation": [],
+      "required": [
+        "todo"
+      ],
+      "preconditions": [
+        "Selected row hovered to expose destroy control"
+      ],
+      "selection": "Existing todo object identity; model has no ids"
+    },
+    {
+      "id": "toggle_all",
+      "description": "Set completion state on every todo, including rows hidden by the active filter",
+      "route": "/#/all",
+      "kind": "update",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "completed": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "completed"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "completed": true
+      },
+      "trigger": {
+        "type": "change",
+        "selector": "input.toggle-all",
+        "handler": "TodoListComponent.toggleAll"
+      },
+      "effect": {
+        "observable": [
+          "All todo objects receive completed=true for validInput",
+          "All checkboxes become checked on All filter",
+          "Active count becomes zero",
+          "Repeating with false marks all active"
+        ]
+      },
+      "source": [
+        {
+          "file": "src/app/todo-list/todo-list.component.html",
+          "lines": [
+            1,
+            4
+          ],
+          "sha256": "a7bc2a72746abb190f025bbb7e441efa76e982c88ce53a82e1a96f2ea62bdc01"
+        },
+        {
+          "file": "src/app/todo-list/todo-list.component.ts",
+          "lines": [
+            29,
+            32
+          ],
+          "sha256": "7aff333ee921aa1a90a5a870a8b3cf5f472ac1548b4b7ee199909e2e3f400d4a"
+        },
+        {
+          "file": "src/app/todos.service.ts",
+          "lines": [
+            29,
+            37
+          ],
+          "sha256": "e0d975f7148b642bdb7f788ac2e2e22c1edf53ab10d5ac73127a7abf5eeb686e"
+        }
+      ],
+      "validation": [],
+      "required": [
+        "completed"
+      ],
+      "inputNotes": "UI input.checked is mapped to completed; Event object is transport mechanism, not user payload"
+    },
+    {
+      "id": "edit_todo",
+      "description": "Double-click a row label, edit title, then commit by Enter or blur",
+      "route": "/#/all",
+      "kind": "update",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "todo": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "completed": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "title",
+              "completed"
+            ],
+            "additionalProperties": false
+          },
+          "title": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "todo",
+          "title"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "todo": {
+          "title": "Read fixture article",
+          "completed": false
+        },
+        "title": "  Revised fixture article  "
+      },
+      "trigger": {
+        "type": "workflow",
+        "reveal": {
+          "event": "dblclick",
+          "selector": "app-todo-item label"
+        },
+        "field": "input.edit",
+        "commitEvents": [
+          "keyup.enter",
+          "blur"
+        ],
+        "handler": "TodoItemComponent.commitEdit"
+      },
+      "effect": {
+        "observable": [
+          "Nonblank title is trimmed and replaces selected todo title",
+          "Completed state is preserved",
+          "Editing UI closes",
+          "Blank/whitespace edit removes selected todo"
+        ]
+      },
+      "source": [
+        {
+          "file": "src/app/todo-item/todo-item.component.html",
+          "lines": [
+            1,
+            16
+          ],
+          "sha256": "3d54173f430f8e2772bc99ba9fad6c8e8886ae8832c7d1d2b10270135ef8672e"
+        },
+        {
+          "file": "src/app/todo-item/todo-item.component.ts",
+          "lines": [
+            33,
+            64
+          ],
+          "sha256": "4abfe32ecc2277eaf9c9e5472bd62a8bc1c258e08eb3ffd4c22ad327b61c847f"
+        }
+      ],
+      "validation": [
+        "Commit is a no-op outside editing state",
+        "title.trim() empty triggers remove rather than rejection"
+      ],
+      "required": [
+        "todo",
+        "title"
+      ],
+      "boundaries": [
+        "Escape cancels, restores source title and closes edit without business mutation",
+        "Empty commit removes item",
+        "Blur and Enter are equivalent commits"
+      ]
+    },
+    {
+      "id": "clear_completed",
+      "description": "Remove every completed todo while retaining active todos",
+      "route": "/#/all",
+      "kind": "delete",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "trigger": {
+        "type": "click",
+        "selector": "button.clear-completed",
+        "handler": "FooterComponent.clearCompleted"
+      },
+      "effect": {
+        "observable": [
+          "All completed rows disappear",
+          "Active rows and active count are preserved",
+          "Clear completed button hides if none remain"
+        ]
+      },
+      "source": [
+        {
+          "file": "src/app/footer/footer.component.html",
+          "lines": [
+            17,
+            19
+          ],
+          "sha256": "21e2b2dbd3cbbc9e0bdc81c3e91d0faf6b4fb270a839ffc2afe9bde687613874"
+        },
+        {
+          "file": "src/app/footer/footer.component.ts",
+          "lines": [
+            32,
+            34
+          ],
+          "sha256": "633657167b889bd3fee8d689d81fe59fcbb38c8c54cb5f99f103c1161f8d0810"
+        },
+        {
+          "file": "src/app/todos.service.ts",
+          "lines": [
+            25,
+            27
+          ],
+          "sha256": "e0d975f7148b642bdb7f788ac2e2e22c1edf53ab10d5ac73127a7abf5eeb686e"
+        }
+      ],
+      "validation": [],
+      "required": [],
+      "preconditions": [
+        "At least one completed todo exists; otherwise button is hidden"
+      ]
+    }
+  ],
+  "globalExclusions": [
+    "No backend, authentication, HTTP API or persistent localStorage exists",
+    "No todo id in model; selection is existing Todo object context",
+    "startEdit, handleFocus, cancelEdit are edit workflow transitions, not separate persisted business effects",
+    "Generated upstream dist is not used for labels or runtime; fresh development build will be used",
+    "No API service methods are invented beyond source UI"
+  ],
+  "fixtureTodos": [
+    {
+      "title": "Read fixture article",
+      "completed": false
+    },
+    {
+      "title": "Clean fixture inbox",
+      "completed": false
+    },
+    {
+      "title": "Reserve fixture table",
+      "completed": true
+    }
+  ]
+}

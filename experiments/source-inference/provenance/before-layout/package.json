@@ -1,0 +1,80 @@
+{
+  "name": "angular-mcp-compiler",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Experimental Angular capability analysis and workflow-preserving MCP tools",
+  "engines": {
+    "node": "^22.22.3 || ^24.15.0 || >=26.0.0"
+  },
+  "scripts": {
+    "experiment": "tsx src/experiment.ts",
+    "analyze": "tsx src/cli.ts",
+    "check": "tsc --noEmit",
+    "test": "tsx --test tests/compiler.test.ts tests/probe-learning.test.ts tests/schema-inference.test.ts tests/factory-injection.test.ts tests/handler-constraints.test.ts tests/handler-sources.test.ts tests/inline-submit.test.ts tests/host-context.test.ts tests/template-callbacks.test.ts tests/event-workflows.test.ts tests/wrapped-controls.test.ts tests/scalar-model-workflow.test.ts tests/source-proof-safety.test.ts tests/nonform-field-safety.test.ts tests/runtime-commit-safety.test.ts tests/target-input-proof.test.ts",
+    "test:e2e": "tsx --test tests/browser.test.ts tests/counter.test.ts tests/cdk-drag.test.ts tests/discovery-runtime.test.ts tests/dialog-adapters.test.ts tests/shop-counter.test.ts tests/projected-target.test.ts",
+    "demo": "tsx src/demo.ts",
+    "mcp": "tsx src/serve.ts",
+    "verify": "npm run check && npm test && npm run test:probe && npm run test:integration && npm run test:integration-eval && npm run experiment && npm run test:e2e && npm run pack:check && node tooling/validate-corpus.mjs",
+    "build": "node tooling/build.mjs",
+    "samples:fetch": "node tooling/fetch-samples.mjs",
+    "samples:setup": "node tooling/fetch-samples.mjs --install",
+    "samples:fresh": "node tooling/fetch-fresh.mjs",
+    "pack:check": "npm run build && node tooling/check-package.mjs",
+    "benchmark": "tsx evaluation/run.ts",
+    "benchmark:fresh": "tsx tooling/run-fresh.ts",
+    "test:eval": "tsx --test evaluation/metrics.test.ts",
+    "release:check": "tsx evaluation/release-check.ts && tsx evaluation/fresh-release-check.ts",
+    "prepublishOnly": "npm run verify && npm run test:eval && npm run benchmark && npm run benchmark:fresh && npm run release:check && npm run check:integration-evidence -- --require-parity && npm run check:integration-holdout",
+    "test:probe": "tsx --test tests/probe.test.ts tests/probe-remediation.test.ts tests/live-forms.test.ts tests/live-session.test.ts tests/state-chain.test.ts",
+    "integrate": "tsx src/integrate.ts",
+    "mcp:integrated": "tsx src/integrated-serve.ts",
+    "test:integration": "tsx --test tests/integration-compiler.test.ts tests/integration-runtime.test.ts tests/integration-ui.test.ts tests/integration-mcp.test.ts tests/integration-project.test.ts tests/integration-strict.test.ts tests/integration.test.ts",
+    "benchmark:integration": "node --import tsx evaluation/integration-unseen/measure.mjs",
+    "check:integration-evidence": "node --import tsx evaluation/integration-unseen/check.mjs",
+    "check:integration-holdout": "node evaluation/integration-holdout/notes-manager/check.mjs",
+    "test:integration-eval": "node --test tests/integration-evaluator.test.mjs evaluation/integration-unseen/oracles.test.mjs"
+  },
+  "dependencies": {
+    "@angular/compiler": "22.2.5",
+    "@angular/core": "22.2.5",
+    "@angular/router": "22.2.5",
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "ajv": "8.20.0",
+    "esbuild": "0.28.1",
+    "playwright": "1.58.2",
+    "rxjs": "7.8.2",
+    "typescript": "6.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.0",
+    "ajv-formats": "3.0.1",
+    "node": "24.15.0",
+    "tsx": "4.23.15"
+  },
+  "license": "MIT",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "RELEASING.md"
+  ],
+  "bin": {
+    "angular-mcp-compiler": "dist/cli.js",
+    "angular-mcp-browser": "dist/serve.js",
+    "angular-mcp-certify": "dist/certify.js",
+    "angular-mcp-integrate": "dist/integrate.js",
+    "angular-mcp-integrated-browser": "dist/integrated-serve.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./browser": {
+      "types": "./dist/types/browser-runtime.d.ts",
+      "import": "./dist/browser-runtime.js"
+    }
+  }
+}

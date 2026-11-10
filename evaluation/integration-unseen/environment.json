@@ -1,0 +1,26 @@
+{
+  "recordedAt": "2026-11-10T09:57:35.647757+00:00",
+  "node": "24.15.0",
+  "install": "npm ci --ignore-scripts --no-audit --no-fund (actual lock unchanged)",
+  "projects": {
+    "finance": {
+      "@angular/core": "20.3.18",
+      "@angular/compiler-cli": "20.3.18",
+      "@angular/cli": "20.3.22",
+      "typescript": "5.9.3"
+    },
+    "todo": {
+      "@angular/core": "20.1.2",
+      "@angular/compiler-cli": "20.1.2",
+      "@angular/cli": "20.1.1",
+      "typescript": "5.8.3"
+    },
+    "shopping": {
+      "@angular/core": "16.1.7",
+      "@angular/compiler-cli": "16.1.7",
+      "@angular/cli": "16.1.6",
+      "typescript": "5.1.6"
+    }
+  },
+  "correction": "Initial staging-first-pass.json mistakenly described shopping Angular16.2.12; exact installed version is16.1.7 shown here and by successful compiler staging output."
+}

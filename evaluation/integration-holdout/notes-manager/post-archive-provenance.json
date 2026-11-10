@@ -1,0 +1,28 @@
+{
+  "formatVersion": 1,
+  "kind": "post-archive-current-source-provenance",
+  "compilerTreeDigest": "83d149f7c4134cc17114bbb6b7dc27209ca3847bf012c1e1c5d7b6c5f29fb8ff",
+  "sourceFiles": {
+    "src/index.ts": "605d5bd7f46f9b4d3f1c013234eaadf43858cfad75994fc9309cc91704d122b3",
+    "src/integrate.ts": "fc23529a7df185117bf042f4100b5bbab95bafed487b53dc08af963821945eb1",
+    "src/integrated-serve.ts": "3cc6969ab11c57b712998ad8776e6149d976903c8d450b03b17eff87e2cdddd4",
+    "src/integration-compiler.ts": "7288b62612a66f721f3d95353a0b86ad1990516f44d9de610aa537fb52505ffa",
+    "src/integration-mcp.ts": "7dd202cdf6df224258c48113b18431c1f6e7f996ac364ebf6af7cd9a629b782b",
+    "src/integration-project.ts": "6fe3a7d4207c8920ea48d1ff2a7ecc28fd29d0ec6567f14153cbd85756cb1d70",
+    "src/integration-runtime.ts": "3d31ba5b0f0bfe4668bf111d5fdcac992b316ce38a2ea5693369ab998f26e9ac",
+    "src/integration-ui.ts": "2495ce547774af1e42c07f7635d863f20e9298f2462e5493409256a32cfc2aef"
+  },
+  "exactNativeSnapshotParity": 12,
+  "total": 12,
+  "frozenChecksPassed": 9,
+  "additionalIntegrationFailures": [],
+  "evaluatorFiles": {
+    "fixture.mjs": "45195f6ae3f5385122bb615db547003427b8fdd82cc599d2657b6433dec32349",
+    "reference.mjs": "68fcf3ecf0265b5fd53a44ac3ef026b0e867608eb5a009c708d7e49973e86f79",
+    "mcp-runtime.mts": "9239501195b48c59a7e202598b68e09d235f16de6cfb174cd4138c987cfecd53",
+    "mcp-runtime.first-pass.mts": "d5227c20fcfbf849d389dbf8d5416bc6fd8751e30c7815a66648d84c89d356a6",
+    "mcp-runtime.second-pass.mts": "9b246cf440c372ae894d536a3e94a2145275090e8868f61ca772189b1f35bd40",
+    "mcp-runtime.pre-archive.mts": "725d53ef845bca79a54e7b96644d3b9ecc124d0d47b42eb703a2287fd5219ab7"
+  },
+  "reason": "Fresh replay after archiving the source-inference prototype. Historical report digests and frozen app inputs remain unchanged."
+}

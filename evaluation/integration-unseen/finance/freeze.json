@@ -1,0 +1,10 @@
+{
+  "frozenAt": "2026-11-10T09:32:33.729159+00:00",
+  "compilerOutputObserved": false,
+  "files": {
+    "labels.json": "157c3c0fd43a87e8aeddf0f232eed7ffcd32bb6c4eb78e6a24b5390bcb8256fd",
+    "inventory.json": "8d72930f3fd4534df90c1df12c8764832095dbae9176731c6a1e689f8e7c5953",
+    "project.json": "36826a391e21cc470782de17120e95ced006709daaaafe909f8622e4e23f3f11",
+    "source-manifest.json": "726a55d7254d3fb87b6292c85c7831e5e5e8cbcd20fa886c7f41724d79fb9a5b"
+  }
+}

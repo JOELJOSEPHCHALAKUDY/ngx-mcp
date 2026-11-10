@@ -1,0 +1,187 @@
+{
+  "reportKind": "preserved-first-pass-adjudication",
+  "frozenLabelsChanged": false,
+  "historicalReportsRewritten": false,
+  "findings": [
+    {
+      "id": "positive-payload-oracle-completeness",
+      "examples": [
+        "transaction-edit omitted type/date/categoryId/notes comparisons",
+        "admin-user-save omitted name comparison",
+        "list create/edit omitted owners/sharedWith comparisons",
+        "registration omitted password/name comparisons"
+      ],
+      "disposition": "Historical businessEffect=true is not a complete payload assertion. New oracles.mjs validates all frozen fields and unchanged neighbors; final measurement must rerun references and MCP."
+    },
+    {
+      "id": "negative-transport-vs-validator",
+      "disposition": "Some early attempts treated unchanged state plus an existing invalid control as negative success after a transport failure. Preserve these reports; final run requires intended invalid-field/action evidence and rejects unknown transport errors."
+    },
+    {
+      "id": "source-native-avatar-blocker",
+      "disposition": "Pinned one-pixel input fails original source Cropper before profile mutation; remains in 35-case denominator. See shopping/avatar-reference-adjudication.json."
+    }
+  ],
+  "historicalFiles": [
+    {
+      "file": "finance/integration-first-pass.json",
+      "sha256": "860d59de77a333cc3b619cb0d5949a29c9e9a6d10a1ad0bd29c8f62bf3f06182",
+      "use": "Historical attempt only; not final full-payload/validator parity evidence."
+    },
+    {
+      "file": "finance/v5-widget-category.json",
+      "sha256": "329c20d777c5760391bd3ba9a8a458045fb38a12c2af453a3954d39d4d68ef21",
+      "use": "Historical attempt only; not final full-payload/validator parity evidence."
+    },
+    {
+      "file": "finance/integration-core-ui-string.json",
+      "sha256": "ddc720dbe168c944299c5d10df21cf792efa7e594009d3a0d3d519bc3ec1cf63",
+      "use": "Historical attempt only; not final full-payload/validator parity evidence."
+    },
+    {
+      "file": "finance/reference-attempt3.json",
+      "sha256": "0daf748c91d8e912dfcbabf9e946ed7368baa66b6f521de296dabf21b2d482c4",
+      "use": "Historical attempt only; not final full-payload/validator parity evidence."
+    },
+    {
+      "file": "finance/integration-core-raw.json",
+      "sha256": "85d765091d82ee09e52170539a6afc24f71afc241cd5dc456f925a17e7832608",
+      "use": "Historical attempt only; not final full-payload/validator parity evidence."
+    },
+    {
+      "file": "finance/reference-attempt2.json",
+      "sha256": "968a5c7f29badaf39eb274cdca98d93c31c97d76273dd37db9d12c1457cbfb62",
+      "use": "Historical attempt only; not final full-payload/validator parity evidence."
+    },
+    {
+      "file": "finance/v5-widget-transaction.json",
+      "sha256": "c2a003be9148bf27e37e817f3b00dcf16fff46045b07dfdcad85aca212ca9407",
+      "use": "Historical attempt only; not final full-payload/validator parity evidence."
+    },
+    {
+      "file": "finance/integration-core-ui-string-budget.json",
+      "sha256": "4628c05537d04281c4724b585b50cc0160cdcdb6135c9a24925797527f19461a",
+      "use": "Historical attempt only; not final full-payload/validator parity evidence."
+    },
+    {
+      "file": "finance/reference-first-pass.json",
+      "sha256": "2912c1442df3d06b1e367e4351e7c3aa2740617505833d1f49fe2dc7988cbaea",
+      "use": "Historical attempt only; not final full-payload/validator parity evidence."
+    },
+    {
+      "file": "finance/reference-final.json",
+      "sha256": "a17338ad40d2859275e2689512463d4835aa5ba5538ca7aa12129e2f0a7e75f7",
+      "use": "Historical attempt only; not final full-payload/validator parity evidence."
+    },
+    {
+      "file": "finance/integration-core-raw-audited.json",
+      "sha256": "72453c5bff2e0e405994bbc1fbee5f448685382dace35c27a89bf838e9a04575",
+      "use": "Historical attempt only; not final full-payload/validator parity evidence."
+    },
+    {
+      "file": "todo/integration-first-runtime.json",
+      "sha256": "e8702dad5afff4bcc8cfae075fc8af4818e0a936f4c39d84dcae7f3b8ab77f01",
+      "use": "Historical attempt only; not final full-payload/validator parity evidence."
+    },
+    {
+      "file": "todo/integration-core-raw.json",
+      "sha256": "b8287b909319e107e528eee0b176b2d5c0c4bdfcb75bb9d943c0dd27aa3b0fa7",
+      "use": "Historical attempt only; not final full-payload/validator parity evidence."
+    },
+    {
+      "file": "todo/reference-first-pass.json",
+      "sha256": "9fcc9d22cf64b570049ed68dbc78802ee2479a28b78e3747af9c7d0357b5c594",
+      "use": "Historical attempt only; not final full-payload/validator parity evidence."
+    },
+    {
+      "file": "todo/reference-final.json",
+      "sha256": "f4be264de81dfa4cf4b9e326230e99aa6e8e75f6427d7f8dff55c5b045068fc1",
+      "use": "Historical attempt only; not final full-payload/validator parity evidence."
+    },
+    {
+      "file": "shopping/integration-core-ui-string.json",
+      "sha256": "a5e056b24632766fead356ea32cb5aa5e3ef01f9508e4f40f0ee6c8bc4982a3a",
+      "use": "Historical attempt only; not final full-payload/validator parity evidence."
+    },
+    {
+      "file": "shopping/reference-attempt3.json",
+      "sha256": "b129590ffad03dc5726a40629bc9ebe5f67caae2ae12878df867e5f65f5967b6",
+      "use": "Historical attempt only; not final full-payload/validator parity evidence."
+    },
+    {
+      "file": "shopping/integration-first-runtime.json",
+      "sha256": "5896996a4049df3e2d96aff38a5c615a3beb7d27af30f9b42e9d05c4c0f61edb",
+      "use": "Historical attempt only; not final full-payload/validator parity evidence."
+    },
+    {
+      "file": "shopping/integration-core-raw.json",
+      "sha256": "913999fccf1318743319daa12faecde980ee3c45c726873b1dc1fab4341f4afa",
+      "use": "Historical attempt only; not final full-payload/validator parity evidence."
+    },
+    {
+      "file": "shopping/reference-attempt2.json",
+      "sha256": "db1e7ce2f6ca1095e28bda3adb0732027d43c5e11e9655b87c61679995a6d8f1",
+      "use": "Historical attempt only; not final full-payload/validator parity evidence."
+    },
+    {
+      "file": "shopping/reference-first-pass.json",
+      "sha256": "eb0f3ee45362336aa0e8ca850ef1e84e42c85dfd46682ded414207c7f6b9c813",
+      "use": "Historical attempt only; not final full-payload/validator parity evidence."
+    },
+    {
+      "file": "shopping/reference-final.json",
+      "sha256": "7f3827e2b536ff9a6c888fec6e5394b83d0d6c9b056abfb25f80e1a4b5811d59",
+      "use": "Historical attempt only; not final full-payload/validator parity evidence."
+    },
+    {
+      "file": "shopping/v5-widget-list.json",
+      "sha256": "4b02433f69c27573f102a50ec534214a46af6ebfad52ef5902b1d22bc2a98a3c",
+      "use": "Historical attempt only; not final full-payload/validator parity evidence."
+    }
+  ],
+  "integrationFollowupHistory": [
+    {
+      "file": "history/finance-final-transaction-sdk.json",
+      "sha256": "f8de041aea8be131849f82f094a2dd14263dc4d22cf67af92b740bccb731f2a0"
+    },
+    {
+      "file": "history/finance-final-transaction-sdk-2.json",
+      "sha256": "287290bbef6cde5369e9ea0b216f71505720039f0f8f578e27e4c070ec405761"
+    },
+    {
+      "file": "history/finance-final-transaction-sdk-3.json",
+      "sha256": "f8cb4962fe6000b14cf79a382980a17ab437da988de8416c017297f52e4d0c37"
+    },
+    {
+      "file": "history/unseen-native-strict-oracles.json",
+      "sha256": "68bf3f776bd0229e377f2d6e01ada667e812e5fe9380570becc92d8c73e396b4"
+    },
+    {
+      "file": "history/shopping-final-list-create-sdk.json",
+      "sha256": "ea003afd74346c930fd8c45d66e25c9854041ea14b8e04b6ad21ee32b1485771"
+    },
+    {
+      "file": "history/shopping-final-admin-user-save-sdk.json",
+      "sha256": "539178e709f483963adb331f9d2fc314f0ed25e62b160c50aedce75395058790"
+    },
+    {
+      "file": "history/shopping-final-all-sdk-ui.json",
+      "sha256": "b51b0e20316680d680318803be18bdee8bcf7e5e22c5746dd20203ef656d9eaa"
+    },
+    {
+      "file": "history/shopping-final-article-buy-sdk-keyboard.json",
+      "sha256": "7de946925f9c98c352a9a2c21f74e9fd80728442b50f6bb7034f3bb183ba7dc3"
+    },
+    {
+      "file": "history/shopping-final-chooser-smoke.json",
+      "sha256": "4cb900b5c7bba3eb66e0a986ded1a1048c0a556ee8d33aae3037b859da7fc3cb"
+    },
+    {
+      "file": "history/shopping-listbox-mcp-keyboard-smoke.json",
+      "sha256": "bc0aa9bb144b66896cfd95584d563259be4d7aa3b07b22591344ab7d347db74b"
+    }
+  ],
+  "interruptedAttempt": "runs/final-v6-2026-11-10/summary.json",
+  "settledNativeSamplingAttempt": "runs/final-v7-2026-11-10/summary.json",
+  "digestScopeNote": "v7 used inherited treeDigest with absolute input path (2fbce447\u2026). Canonical treeDigest(src) over the same source bytes is6405f739\u2026. Final replay uses the canonical relative source scope."
+}

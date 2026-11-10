@@ -1,0 +1,13 @@
+finance transaction-create passed 
+finance transaction-edit passed 
+finance transaction-delete passed 
+finance transaction-undo integration-failed Error: page.waitForTimeout: Target page, context or browser has been closed
+REPORT /Users/joeljoseph/Desktop/Personal Work/ai-experiments-apps/angular-mcp-compiler/evaluation/integration-unseen/runs/final-v6-2026-11-10/finance/ui.json {"positive":5,"positivePassed":3,"negative":0,"negativePassed":0,"protocolBoundaryNotApplicable":0}
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+browser.newContext: Target page, context or browser has been closed
+    at async <anonymous> (/Users/joeljoseph/Desktop/Personal Work/ai-experiments-apps/angular-mcp-compiler/evaluation/integration-unseen/run.mjs:27:18)
+
+Node.js v24.15.0

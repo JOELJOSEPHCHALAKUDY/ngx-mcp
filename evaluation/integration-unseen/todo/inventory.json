@@ -1,0 +1,26 @@
+{
+  "included": [
+    "todo-create",
+    "todo-complete",
+    "todo-restore",
+    "todo-delete-active",
+    "todo-delete-completed"
+  ],
+  "semanticOperations": 3,
+  "excluded": [
+    {
+      "kind": "transient UI",
+      "items": [
+        "add dialog open/close",
+        "In Progress/Completed tabs"
+      ]
+    },
+    {
+      "kind": "not implemented",
+      "items": [
+        "edit todo"
+      ],
+      "reason": "README claim has no corresponding source UI handler in pinned revision. No fabricated operation."
+    }
+  ]
+}

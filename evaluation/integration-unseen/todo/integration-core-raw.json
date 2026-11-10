@@ -1,0 +1,3121 @@
+{
+  "reportKind": "first-pass-integration-mcp",
+  "startedAt": "2026-11-10T10:02:39.295Z",
+  "mode": "mcp",
+  "transport": "raw-frozen",
+  "node": "v24.15.0",
+  "fixedBrowserTime": "2026-11-10T12:00:00Z",
+  "externalNetwork": "All origins blocked except designated local app; /api handled by deterministic in-process source-contract fixture.",
+  "sourceOverlays": [],
+  "frozenInputRewrites": [],
+  "harnessSha256": {
+    "run.mjs": "d473732e3d587892fd43e3ba50fd83daae71afe148e947605a6445ec9d4db3be",
+    "fixtures.mjs": "7b72ec43cbce41869828da3ec2501c4deb336530ff234f3404a7b61638e04a45",
+    "cases.mjs": "78b6a5da456cc6cf3b93e9f1594f8f955972b7db06c3f24596750ab744f89870"
+  },
+  "projects": [
+    {
+      "id": "todo",
+      "commit": "391435fc4edf819abf4f507187fc0364ac26e00b",
+      "stage": {
+        "directory": "/tmp/integration-unseen-todo-integrated-v3",
+        "manifestSha256": "e760875da0cd406af27a553697b8c0f683d5e084e8c91f9a6d4b697c77ce14df",
+        "runtimeModule": "/private/tmp/integration-unseen-todo-integrated-v3/src/angular-mcp.generated.ts",
+        "runtimeSha256": "626fc7af49e3acef28888562ceefc4d24151b5768d6cc6003ed9d33b707e383e"
+      },
+      "integrity": {
+        "frozen": true,
+        "files": 42,
+        "labelsSha256": "e934aa2c5c445ec32d635bac3bcc04e151cc3dbde2642110123e1105737667c4"
+      },
+      "cases": [
+        {
+          "id": "todo-create",
+          "operation": "todo-create",
+          "kind": "positive",
+          "frozenInput": {
+            "title": "Unseen task",
+            "description": "Independent source fixture"
+          },
+          "calls": [
+            {
+              "name": "angular_list_nodes",
+              "args": {},
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "[{\"sourceId\":\"ngmcp_40d8cde29c7264fb5635ebcb\",\"instanceId\":\"ngmcp_40d8cde29c7264fb5635ebcb@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:1\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Add new task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}}]"
+                  }
+                ],
+                "structuredContent": {
+                  "nodes": [
+                    {
+                      "sourceId": "ngmcp_40d8cde29c7264fb5635ebcb",
+                      "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:1",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Add new task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_activate",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:1"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"status\":\"ui-dispatched\",\"operation\":\"activate\",\"target\":{\"sourceId\":\"ngmcp_40d8cde29c7264fb5635ebcb\",\"instanceId\":\"ngmcp_40d8cde29c7264fb5635ebcb@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:1\"},\"changed\":[],\"values\":[],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"url\":\"http://127.0.0.1:4372/\",\"businessStatus\":\"unknown\"}"
+                  }
+                ],
+                "structuredContent": {
+                  "status": "ui-dispatched",
+                  "operation": "activate",
+                  "target": {
+                    "sourceId": "ngmcp_40d8cde29c7264fb5635ebcb",
+                    "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:1"
+                  },
+                  "changed": [],
+                  "values": [],
+                  "validation": {
+                    "status": "unknown",
+                    "fields": [],
+                    "groups": []
+                  },
+                  "url": "http://127.0.0.1:4372/",
+                  "businessStatus": "unknown"
+                }
+              }
+            },
+            {
+              "name": "tools/list",
+              "result": {
+                "tools": [
+                  {
+                    "name": "angular_list_nodes",
+                    "description": "List live Angular nodes registered by the application build. Read exact instance IDs, current form fields, options, schemas and validation before acting.",
+                    "inputSchema": {
+                      "type": "object",
+                      "properties": {},
+                      "additionalProperties": false
+                    },
+                    "annotations": {
+                      "readOnlyHint": true
+                    }
+                  },
+                  {
+                    "name": "angular_describe_node",
+                    "description": "Read a live registered Angular node. A source ID shared by repeated instances requires an exact instance ID.",
+                    "inputSchema": {
+                      "type": "object",
+                      "properties": {
+                        "target": {
+                          "type": "object",
+                          "properties": {
+                            "sourceId": {
+                              "type": "string"
+                            },
+                            "instanceId": {
+                              "type": "string"
+                            }
+                          },
+                          "anyOf": [
+                            {
+                              "required": [
+                                "sourceId"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "instanceId"
+                              ]
+                            }
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "required": [
+                        "target"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "annotations": {
+                      "readOnlyHint": true
+                    }
+                  },
+                  {
+                    "name": "angular_fill",
+                    "description": "Fill an exact live control using its original DOM interaction path. Angular owns validation. This may trigger application input/change effects.",
+                    "inputSchema": {
+                      "type": "object",
+                      "properties": {
+                        "target": {
+                          "type": "object",
+                          "properties": {
+                            "sourceId": {
+                              "type": "string"
+                            },
+                            "instanceId": {
+                              "type": "string"
+                            }
+                          },
+                          "anyOf": [
+                            {
+                              "required": [
+                                "sourceId"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "instanceId"
+                              ]
+                            }
+                          ],
+                          "additionalProperties": false
+                        },
+                        "value": {},
+                        "mode": {
+                          "type": "string",
+                          "enum": [
+                            "paste",
+                            "input"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "target",
+                        "value"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "annotations": {
+                      "readOnlyHint": false
+                    }
+                  },
+                  {
+                    "name": "angular_activate",
+                    "description": "Activate an exact live action through its original UI event. Dispatch does not establish business success.",
+                    "inputSchema": {
+                      "type": "object",
+                      "properties": {
+                        "target": {
+                          "type": "object",
+                          "properties": {
+                            "sourceId": {
+                              "type": "string"
+                            },
+                            "instanceId": {
+                              "type": "string"
+                            }
+                          },
+                          "anyOf": [
+                            {
+                              "required": [
+                                "sourceId"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "instanceId"
+                              ]
+                            }
+                          ],
+                          "additionalProperties": false
+                        },
+                        "event": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "target"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "annotations": {
+                      "readOnlyHint": false,
+                      "destructiveHint": true
+                    }
+                  },
+                  {
+                    "name": "angular_submit",
+                    "description": "Fill exact registered controls and submit their live form through the original Angular submission path. Return validation and dispatch evidence; business outcome remains unknown.",
+                    "inputSchema": {
+                      "type": "object",
+                      "properties": {
+                        "target": {
+                          "type": "object",
+                          "properties": {
+                            "sourceId": {
+                              "type": "string"
+                            },
+                            "instanceId": {
+                              "type": "string"
+                            }
+                          },
+                          "anyOf": [
+                            {
+                              "required": [
+                                "sourceId"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "instanceId"
+                              ]
+                            }
+                          ],
+                          "additionalProperties": false
+                        },
+                        "values": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "target": {
+                                "type": "object",
+                                "properties": {
+                                  "sourceId": {
+                                    "type": "string"
+                                  },
+                                  "instanceId": {
+                                    "type": "string"
+                                  }
+                                },
+                                "anyOf": [
+                                  {
+                                    "required": [
+                                      "sourceId"
+                                    ]
+                                  },
+                                  {
+                                    "required": [
+                                      "instanceId"
+                                    ]
+                                  }
+                                ],
+                                "additionalProperties": false
+                              },
+                              "value": {},
+                              "mode": {
+                                "type": "string",
+                                "enum": [
+                                  "paste",
+                                  "input"
+                                ]
+                              }
+                            },
+                            "required": [
+                              "target",
+                              "value"
+                            ],
+                            "additionalProperties": false
+                          }
+                        },
+                        "submitter": {
+                          "type": "object",
+                          "properties": {
+                            "sourceId": {
+                              "type": "string"
+                            },
+                            "instanceId": {
+                              "type": "string"
+                            }
+                          },
+                          "anyOf": [
+                            {
+                              "required": [
+                                "sourceId"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "instanceId"
+                              ]
+                            }
+                          ],
+                          "additionalProperties": false
+                        },
+                        "timeoutMs": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 30000
+                        }
+                      },
+                      "required": [
+                        "target"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "annotations": {
+                      "readOnlyHint": false,
+                      "destructiveHint": true
+                    }
+                  },
+                  {
+                    "name": "angular_navigate",
+                    "description": "Open a path on the same application origin. This changes page state and rebuilds the live node registry.",
+                    "inputSchema": {
+                      "type": "object",
+                      "properties": {
+                        "path": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "path"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "annotations": {
+                      "readOnlyHint": false
+                    }
+                  },
+                  {
+                    "name": "angular_form_c03a0f31e510a65d",
+                    "title": "Add TaskTitleDescription Add Cancel",
+                    "description": "Submit this exact live Angular form through its original UI. Omitted fields retain current values. Angular evaluates dynamic and cross-field validation at runtime. Business success requires observing the app outcome.",
+                    "inputSchema": {
+                      "type": "object",
+                      "properties": {
+                        "title": {
+                          "type": "string",
+                          "title": "Title"
+                        },
+                        "description": {
+                          "type": "string",
+                          "title": "Description"
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "annotations": {
+                      "readOnlyHint": false,
+                      "destructiveHint": true
+                    },
+                    "_meta": {
+                      "angularMcpTarget": {
+                        "sourceId": "ngmcp_341ed2406654782eb89c556f",
+                        "instanceId": "ngmcp_341ed2406654782eb89c556f@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:2"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "angular_describe_node",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_9607436ceb44f02be38e98f5@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:3"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"sourceId\":\"ngmcp_9607436ceb44f02be38e98f5\",\"instanceId\":\"ngmcp_9607436ceb44f02be38e98f5@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:3\",\"kind\":\"control\",\"tagName\":\"input\",\"events\":[],\"label\":\"Title\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"fill\"],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_9607436ceb44f02be38e98f5\",\"instanceId\":\"ngmcp_9607436ceb44f02be38e98f5@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:3\",\"path\":[\"title\"],\"status\":\"INVALID\",\"updateOn\":\"change\",\"errors\":[{\"code\":\"required\"}],\"nativeErrors\":[\"valueMissing\"]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"schema\":{\"type\":\"string\"},\"value\":\"\",\"path\":[\"title\"],\"transport\":\"native-ui\",\"customAccessor\":false,\"fillModes\":[\"paste\",\"input\"]}"
+                  }
+                ],
+                "structuredContent": {
+                  "sourceId": "ngmcp_9607436ceb44f02be38e98f5",
+                  "instanceId": "ngmcp_9607436ceb44f02be38e98f5@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:3",
+                  "kind": "control",
+                  "tagName": "input",
+                  "events": [],
+                  "label": "Title",
+                  "visible": true,
+                  "disabled": false,
+                  "readonly": false,
+                  "operations": [
+                    "fill"
+                  ],
+                  "validation": {
+                    "status": "invalid",
+                    "fields": [
+                      {
+                        "sourceId": "ngmcp_9607436ceb44f02be38e98f5",
+                        "instanceId": "ngmcp_9607436ceb44f02be38e98f5@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:3",
+                        "path": [
+                          "title"
+                        ],
+                        "status": "INVALID",
+                        "updateOn": "change",
+                        "errors": [
+                          {
+                            "code": "required"
+                          }
+                        ],
+                        "nativeErrors": [
+                          "valueMissing"
+                        ]
+                      }
+                    ],
+                    "groups": [
+                      {
+                        "path": [],
+                        "status": "INVALID",
+                        "errors": []
+                      }
+                    ]
+                  },
+                  "schema": {
+                    "type": "string"
+                  },
+                  "value": "",
+                  "path": [
+                    "title"
+                  ],
+                  "transport": "native-ui",
+                  "customAccessor": false,
+                  "fillModes": [
+                    "paste",
+                    "input"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_describe_node",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_0ab78608f4d0958404270cba@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:4"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"sourceId\":\"ngmcp_0ab78608f4d0958404270cba\",\"instanceId\":\"ngmcp_0ab78608f4d0958404270cba@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:4\",\"kind\":\"control\",\"tagName\":\"textarea\",\"events\":[],\"label\":\"Description\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"fill\"],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_0ab78608f4d0958404270cba\",\"instanceId\":\"ngmcp_0ab78608f4d0958404270cba@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:4\",\"path\":[\"description\"],\"status\":\"INVALID\",\"updateOn\":\"change\",\"errors\":[{\"code\":\"required\"}],\"nativeErrors\":[\"valueMissing\"]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"schema\":{\"type\":\"string\"},\"value\":\"\",\"path\":[\"description\"],\"transport\":\"native-ui\",\"customAccessor\":false,\"fillModes\":[\"paste\",\"input\"]}"
+                  }
+                ],
+                "structuredContent": {
+                  "sourceId": "ngmcp_0ab78608f4d0958404270cba",
+                  "instanceId": "ngmcp_0ab78608f4d0958404270cba@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:4",
+                  "kind": "control",
+                  "tagName": "textarea",
+                  "events": [],
+                  "label": "Description",
+                  "visible": true,
+                  "disabled": false,
+                  "readonly": false,
+                  "operations": [
+                    "fill"
+                  ],
+                  "validation": {
+                    "status": "invalid",
+                    "fields": [
+                      {
+                        "sourceId": "ngmcp_0ab78608f4d0958404270cba",
+                        "instanceId": "ngmcp_0ab78608f4d0958404270cba@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:4",
+                        "path": [
+                          "description"
+                        ],
+                        "status": "INVALID",
+                        "updateOn": "change",
+                        "errors": [
+                          {
+                            "code": "required"
+                          }
+                        ],
+                        "nativeErrors": [
+                          "valueMissing"
+                        ]
+                      }
+                    ],
+                    "groups": [
+                      {
+                        "path": [],
+                        "status": "INVALID",
+                        "errors": []
+                      }
+                    ]
+                  },
+                  "schema": {
+                    "type": "string"
+                  },
+                  "value": "",
+                  "path": [
+                    "description"
+                  ],
+                  "transport": "native-ui",
+                  "customAccessor": false,
+                  "fillModes": [
+                    "paste",
+                    "input"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_form_c03a0f31e510a65d",
+              "args": {
+                "title": "Unseen task",
+                "description": "Independent source fixture"
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"status\":\"ui-dispatched\",\"operation\":\"submit\",\"target\":{\"sourceId\":\"ngmcp_341ed2406654782eb89c556f\",\"instanceId\":\"ngmcp_341ed2406654782eb89c556f@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:2\"},\"changed\":[\"ngmcp_9607436ceb44f02be38e98f5@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:3\",\"ngmcp_0ab78608f4d0958404270cba@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:4\"],\"values\":[{\"sourceId\":\"ngmcp_9607436ceb44f02be38e98f5\",\"instanceId\":\"ngmcp_9607436ceb44f02be38e98f5@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:3\",\"value\":\"Unseen task\"},{\"sourceId\":\"ngmcp_0ab78608f4d0958404270cba\",\"instanceId\":\"ngmcp_0ab78608f4d0958404270cba@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:4\",\"value\":\"Independent source fixture\"}],\"validation\":{\"status\":\"valid\",\"fields\":[{\"sourceId\":\"ngmcp_9607436ceb44f02be38e98f5\",\"instanceId\":\"ngmcp_9607436ceb44f02be38e98f5@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:3\",\"path\":[\"title\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]},{\"sourceId\":\"ngmcp_0ab78608f4d0958404270cba\",\"instanceId\":\"ngmcp_0ab78608f4d0958404270cba@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:4\",\"path\":[\"description\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[{\"path\":[],\"status\":\"VALID\",\"errors\":[]}]},\"url\":\"http://127.0.0.1:4372/\",\"businessStatus\":\"unknown\"}"
+                  }
+                ],
+                "structuredContent": {
+                  "status": "ui-dispatched",
+                  "operation": "submit",
+                  "target": {
+                    "sourceId": "ngmcp_341ed2406654782eb89c556f",
+                    "instanceId": "ngmcp_341ed2406654782eb89c556f@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:2"
+                  },
+                  "changed": [
+                    "ngmcp_9607436ceb44f02be38e98f5@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:3",
+                    "ngmcp_0ab78608f4d0958404270cba@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:4"
+                  ],
+                  "values": [
+                    {
+                      "sourceId": "ngmcp_9607436ceb44f02be38e98f5",
+                      "instanceId": "ngmcp_9607436ceb44f02be38e98f5@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:3",
+                      "value": "Unseen task"
+                    },
+                    {
+                      "sourceId": "ngmcp_0ab78608f4d0958404270cba",
+                      "instanceId": "ngmcp_0ab78608f4d0958404270cba@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:4",
+                      "value": "Independent source fixture"
+                    }
+                  ],
+                  "validation": {
+                    "status": "valid",
+                    "fields": [
+                      {
+                        "sourceId": "ngmcp_9607436ceb44f02be38e98f5",
+                        "instanceId": "ngmcp_9607436ceb44f02be38e98f5@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:3",
+                        "path": [
+                          "title"
+                        ],
+                        "status": "VALID",
+                        "updateOn": "change",
+                        "errors": []
+                      },
+                      {
+                        "sourceId": "ngmcp_0ab78608f4d0958404270cba",
+                        "instanceId": "ngmcp_0ab78608f4d0958404270cba@1pe0mr2-8zbi9j-w1ij8x-v2ir3v:4",
+                        "path": [
+                          "description"
+                        ],
+                        "status": "VALID",
+                        "updateOn": "change",
+                        "errors": []
+                      }
+                    ],
+                    "groups": [
+                      {
+                        "path": [],
+                        "status": "VALID",
+                        "errors": []
+                      }
+                    ]
+                  },
+                  "url": "http://127.0.0.1:4372/",
+                  "businessStatus": "unknown"
+                }
+              }
+            }
+          ],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4372/",
+            "meta": {}
+          },
+          "before": null,
+          "businessInput": {
+            "title": "Unseen task",
+            "description": "Independent source fixture"
+          },
+          "after": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": false
+            }
+          ],
+          "oracle": {
+            "businessEffect": true
+          },
+          "persistedAfterReload": true,
+          "status": "passed",
+          "pageErrors": [],
+          "consoleErrors": [
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        },
+        {
+          "id": "todo-complete",
+          "operation": "todo-complete",
+          "kind": "positive",
+          "frozenInput": {},
+          "targetContext": {
+            "selection": "unique visible card title Unseen task; read source Todo id from persisted UI-created record"
+          },
+          "calls": [
+            {
+              "name": "angular_list_nodes",
+              "args": {},
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "[{\"sourceId\":\"ngmcp_40d8cde29c7264fb5635ebcb\",\"instanceId\":\"ngmcp_40d8cde29c7264fb5635ebcb@habowr-1ste20h-i2l3uh-hdpatx:1\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Add new task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_3f574704c520c7798bc3efed\",\"instanceId\":\"ngmcp_3f574704c520c7798bc3efed@habowr-1ste20h-i2l3uh-hdpatx:7\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Complete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_c96203c38a8ee0740167488d\",\"instanceId\":\"ngmcp_c96203c38a8ee0740167488d@habowr-1ste20h-i2l3uh-hdpatx:8\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Delete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}}]"
+                  }
+                ],
+                "structuredContent": {
+                  "nodes": [
+                    {
+                      "sourceId": "ngmcp_40d8cde29c7264fb5635ebcb",
+                      "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@habowr-1ste20h-i2l3uh-hdpatx:1",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Add new task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_3f574704c520c7798bc3efed",
+                      "instanceId": "ngmcp_3f574704c520c7798bc3efed@habowr-1ste20h-i2l3uh-hdpatx:7",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Complete Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_c96203c38a8ee0740167488d",
+                      "instanceId": "ngmcp_c96203c38a8ee0740167488d@habowr-1ste20h-i2l3uh-hdpatx:8",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Delete Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_activate",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_3f574704c520c7798bc3efed@habowr-1ste20h-i2l3uh-hdpatx:7"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"status\":\"ui-dispatched\",\"operation\":\"activate\",\"target\":{\"sourceId\":\"ngmcp_3f574704c520c7798bc3efed\",\"instanceId\":\"ngmcp_3f574704c520c7798bc3efed@habowr-1ste20h-i2l3uh-hdpatx:7\"},\"changed\":[],\"values\":[],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"url\":\"http://127.0.0.1:4372/\",\"businessStatus\":\"unknown\"}"
+                  }
+                ],
+                "structuredContent": {
+                  "status": "ui-dispatched",
+                  "operation": "activate",
+                  "target": {
+                    "sourceId": "ngmcp_3f574704c520c7798bc3efed",
+                    "instanceId": "ngmcp_3f574704c520c7798bc3efed@habowr-1ste20h-i2l3uh-hdpatx:7"
+                  },
+                  "changed": [],
+                  "values": [],
+                  "validation": {
+                    "status": "unknown",
+                    "fields": [],
+                    "groups": []
+                  },
+                  "url": "http://127.0.0.1:4372/",
+                  "businessStatus": "unknown"
+                }
+              }
+            }
+          ],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4372/",
+            "meta": {
+              "todo": {
+                "id": 1,
+                "title": "Unseen task",
+                "description": "Independent source fixture",
+                "done": false
+              }
+            }
+          },
+          "before": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": false
+            }
+          ],
+          "businessInput": {},
+          "after": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": true
+            }
+          ],
+          "oracle": {
+            "businessEffect": true
+          },
+          "persistedAfterReload": true,
+          "status": "passed",
+          "pageErrors": [],
+          "consoleErrors": [
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        },
+        {
+          "id": "todo-restore",
+          "operation": "todo-restore",
+          "kind": "positive",
+          "frozenInput": {},
+          "targetContext": {
+            "selection": "unique visible card title Unseen task; read source Todo id from persisted UI-created record"
+          },
+          "calls": [
+            {
+              "name": "angular_list_nodes",
+              "args": {},
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "[{\"sourceId\":\"ngmcp_40d8cde29c7264fb5635ebcb\",\"instanceId\":\"ngmcp_40d8cde29c7264fb5635ebcb@v8938x-1vczf2-bdmtn-6prn8o:1\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Add new task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_0bb7269bada85778da1eaad1\",\"instanceId\":\"ngmcp_0bb7269bada85778da1eaad1@v8938x-1vczf2-bdmtn-6prn8o:9\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Restore Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_e6f6d0eaf4624331cb22bd15\",\"instanceId\":\"ngmcp_e6f6d0eaf4624331cb22bd15@v8938x-1vczf2-bdmtn-6prn8o:10\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Delete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}}]"
+                  }
+                ],
+                "structuredContent": {
+                  "nodes": [
+                    {
+                      "sourceId": "ngmcp_40d8cde29c7264fb5635ebcb",
+                      "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@v8938x-1vczf2-bdmtn-6prn8o:1",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Add new task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_0bb7269bada85778da1eaad1",
+                      "instanceId": "ngmcp_0bb7269bada85778da1eaad1@v8938x-1vczf2-bdmtn-6prn8o:9",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Restore Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_e6f6d0eaf4624331cb22bd15",
+                      "instanceId": "ngmcp_e6f6d0eaf4624331cb22bd15@v8938x-1vczf2-bdmtn-6prn8o:10",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Delete Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_activate",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_0bb7269bada85778da1eaad1@v8938x-1vczf2-bdmtn-6prn8o:9"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"status\":\"ui-dispatched\",\"operation\":\"activate\",\"target\":{\"sourceId\":\"ngmcp_0bb7269bada85778da1eaad1\",\"instanceId\":\"ngmcp_0bb7269bada85778da1eaad1@v8938x-1vczf2-bdmtn-6prn8o:9\"},\"changed\":[],\"values\":[],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"url\":\"http://127.0.0.1:4372/\",\"businessStatus\":\"unknown\"}"
+                  }
+                ],
+                "structuredContent": {
+                  "status": "ui-dispatched",
+                  "operation": "activate",
+                  "target": {
+                    "sourceId": "ngmcp_0bb7269bada85778da1eaad1",
+                    "instanceId": "ngmcp_0bb7269bada85778da1eaad1@v8938x-1vczf2-bdmtn-6prn8o:9"
+                  },
+                  "changed": [],
+                  "values": [],
+                  "validation": {
+                    "status": "unknown",
+                    "fields": [],
+                    "groups": []
+                  },
+                  "url": "http://127.0.0.1:4372/",
+                  "businessStatus": "unknown"
+                }
+              }
+            }
+          ],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4372/",
+            "meta": {
+              "todo": {
+                "id": 1,
+                "title": "Unseen task",
+                "description": "Independent source fixture",
+                "done": false
+              }
+            }
+          },
+          "before": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": true
+            }
+          ],
+          "businessInput": {},
+          "after": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": false
+            }
+          ],
+          "oracle": {
+            "businessEffect": true
+          },
+          "persistedAfterReload": true,
+          "status": "passed",
+          "pageErrors": [],
+          "consoleErrors": [
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        },
+        {
+          "id": "todo-delete-active",
+          "operation": "todo-delete-active",
+          "kind": "positive",
+          "frozenInput": {},
+          "targetContext": {
+            "selection": "unique visible card title Unseen task"
+          },
+          "calls": [
+            {
+              "name": "angular_list_nodes",
+              "args": {},
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "[{\"sourceId\":\"ngmcp_40d8cde29c7264fb5635ebcb\",\"instanceId\":\"ngmcp_40d8cde29c7264fb5635ebcb@112lb1z-1912zze-12lh6k0-fiay9s:1\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Add new task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_3f574704c520c7798bc3efed\",\"instanceId\":\"ngmcp_3f574704c520c7798bc3efed@112lb1z-1912zze-12lh6k0-fiay9s:7\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Complete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_c96203c38a8ee0740167488d\",\"instanceId\":\"ngmcp_c96203c38a8ee0740167488d@112lb1z-1912zze-12lh6k0-fiay9s:8\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Delete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}}]"
+                  }
+                ],
+                "structuredContent": {
+                  "nodes": [
+                    {
+                      "sourceId": "ngmcp_40d8cde29c7264fb5635ebcb",
+                      "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@112lb1z-1912zze-12lh6k0-fiay9s:1",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Add new task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_3f574704c520c7798bc3efed",
+                      "instanceId": "ngmcp_3f574704c520c7798bc3efed@112lb1z-1912zze-12lh6k0-fiay9s:7",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Complete Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_c96203c38a8ee0740167488d",
+                      "instanceId": "ngmcp_c96203c38a8ee0740167488d@112lb1z-1912zze-12lh6k0-fiay9s:8",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Delete Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_activate",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_c96203c38a8ee0740167488d@112lb1z-1912zze-12lh6k0-fiay9s:8"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"status\":\"ui-dispatched\",\"operation\":\"activate\",\"target\":{\"sourceId\":\"ngmcp_c96203c38a8ee0740167488d\",\"instanceId\":\"ngmcp_c96203c38a8ee0740167488d@112lb1z-1912zze-12lh6k0-fiay9s:8\"},\"changed\":[],\"values\":[],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"url\":\"http://127.0.0.1:4372/\",\"businessStatus\":\"unknown\"}"
+                  }
+                ],
+                "structuredContent": {
+                  "status": "ui-dispatched",
+                  "operation": "activate",
+                  "target": {
+                    "sourceId": "ngmcp_c96203c38a8ee0740167488d",
+                    "instanceId": "ngmcp_c96203c38a8ee0740167488d@112lb1z-1912zze-12lh6k0-fiay9s:8"
+                  },
+                  "changed": [],
+                  "values": [],
+                  "validation": {
+                    "status": "unknown",
+                    "fields": [],
+                    "groups": []
+                  },
+                  "url": "http://127.0.0.1:4372/",
+                  "businessStatus": "unknown"
+                }
+              }
+            }
+          ],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4372/",
+            "meta": {
+              "todo": {
+                "id": 1,
+                "title": "Unseen task",
+                "description": "Independent source fixture",
+                "done": false
+              }
+            }
+          },
+          "before": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": false
+            }
+          ],
+          "businessInput": {},
+          "after": [],
+          "oracle": {
+            "businessEffect": true
+          },
+          "persistedAfterReload": true,
+          "status": "passed",
+          "pageErrors": [],
+          "consoleErrors": [
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        },
+        {
+          "id": "todo-delete-completed",
+          "operation": "todo-delete-completed",
+          "kind": "positive",
+          "frozenInput": {},
+          "targetContext": {
+            "selection": "unique visible card title Unseen task"
+          },
+          "calls": [
+            {
+              "name": "angular_list_nodes",
+              "args": {},
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "[{\"sourceId\":\"ngmcp_40d8cde29c7264fb5635ebcb\",\"instanceId\":\"ngmcp_40d8cde29c7264fb5635ebcb@17wgfyb-19pcu48-1c42ygy-1d0qm7w:1\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Add new task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_0bb7269bada85778da1eaad1\",\"instanceId\":\"ngmcp_0bb7269bada85778da1eaad1@17wgfyb-19pcu48-1c42ygy-1d0qm7w:9\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Restore Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_e6f6d0eaf4624331cb22bd15\",\"instanceId\":\"ngmcp_e6f6d0eaf4624331cb22bd15@17wgfyb-19pcu48-1c42ygy-1d0qm7w:10\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Delete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}}]"
+                  }
+                ],
+                "structuredContent": {
+                  "nodes": [
+                    {
+                      "sourceId": "ngmcp_40d8cde29c7264fb5635ebcb",
+                      "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@17wgfyb-19pcu48-1c42ygy-1d0qm7w:1",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Add new task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_0bb7269bada85778da1eaad1",
+                      "instanceId": "ngmcp_0bb7269bada85778da1eaad1@17wgfyb-19pcu48-1c42ygy-1d0qm7w:9",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Restore Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_e6f6d0eaf4624331cb22bd15",
+                      "instanceId": "ngmcp_e6f6d0eaf4624331cb22bd15@17wgfyb-19pcu48-1c42ygy-1d0qm7w:10",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Delete Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_activate",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_e6f6d0eaf4624331cb22bd15@17wgfyb-19pcu48-1c42ygy-1d0qm7w:10"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"status\":\"ui-dispatched\",\"operation\":\"activate\",\"target\":{\"sourceId\":\"ngmcp_e6f6d0eaf4624331cb22bd15\",\"instanceId\":\"ngmcp_e6f6d0eaf4624331cb22bd15@17wgfyb-19pcu48-1c42ygy-1d0qm7w:10\"},\"changed\":[],\"values\":[],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"url\":\"http://127.0.0.1:4372/\",\"businessStatus\":\"unknown\"}"
+                  }
+                ],
+                "structuredContent": {
+                  "status": "ui-dispatched",
+                  "operation": "activate",
+                  "target": {
+                    "sourceId": "ngmcp_e6f6d0eaf4624331cb22bd15",
+                    "instanceId": "ngmcp_e6f6d0eaf4624331cb22bd15@17wgfyb-19pcu48-1c42ygy-1d0qm7w:10"
+                  },
+                  "changed": [],
+                  "values": [],
+                  "validation": {
+                    "status": "unknown",
+                    "fields": [],
+                    "groups": []
+                  },
+                  "url": "http://127.0.0.1:4372/",
+                  "businessStatus": "unknown"
+                }
+              }
+            }
+          ],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4372/",
+            "meta": {
+              "todo": {
+                "id": 1,
+                "title": "Unseen task",
+                "description": "Independent source fixture",
+                "done": false
+              }
+            }
+          },
+          "before": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": true
+            }
+          ],
+          "businessInput": {},
+          "after": [],
+          "oracle": {
+            "businessEffect": true
+          },
+          "persistedAfterReload": true,
+          "status": "passed",
+          "pageErrors": [],
+          "consoleErrors": [
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        },
+        {
+          "id": "short-title",
+          "operation": "todo-create",
+          "kind": "negative",
+          "frozenInput": {
+            "title": "Unseen task",
+            "description": "Independent source fixture"
+          },
+          "inputPatch": {
+            "title": "ab"
+          },
+          "calls": [
+            {
+              "name": "angular_list_nodes",
+              "args": {},
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "[{\"sourceId\":\"ngmcp_40d8cde29c7264fb5635ebcb\",\"instanceId\":\"ngmcp_40d8cde29c7264fb5635ebcb@cq23ik-159ju8a-1amjzxx-b1b2sg:1\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Add new task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}}]"
+                  }
+                ],
+                "structuredContent": {
+                  "nodes": [
+                    {
+                      "sourceId": "ngmcp_40d8cde29c7264fb5635ebcb",
+                      "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@cq23ik-159ju8a-1amjzxx-b1b2sg:1",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Add new task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_activate",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@cq23ik-159ju8a-1amjzxx-b1b2sg:1"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"status\":\"ui-dispatched\",\"operation\":\"activate\",\"target\":{\"sourceId\":\"ngmcp_40d8cde29c7264fb5635ebcb\",\"instanceId\":\"ngmcp_40d8cde29c7264fb5635ebcb@cq23ik-159ju8a-1amjzxx-b1b2sg:1\"},\"changed\":[],\"values\":[],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"url\":\"http://127.0.0.1:4372/\",\"businessStatus\":\"unknown\"}"
+                  }
+                ],
+                "structuredContent": {
+                  "status": "ui-dispatched",
+                  "operation": "activate",
+                  "target": {
+                    "sourceId": "ngmcp_40d8cde29c7264fb5635ebcb",
+                    "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@cq23ik-159ju8a-1amjzxx-b1b2sg:1"
+                  },
+                  "changed": [],
+                  "values": [],
+                  "validation": {
+                    "status": "unknown",
+                    "fields": [],
+                    "groups": []
+                  },
+                  "url": "http://127.0.0.1:4372/",
+                  "businessStatus": "unknown"
+                }
+              }
+            },
+            {
+              "name": "tools/list",
+              "result": {
+                "tools": [
+                  {
+                    "name": "angular_list_nodes",
+                    "description": "List live Angular nodes registered by the application build. Read exact instance IDs, current form fields, options, schemas and validation before acting.",
+                    "inputSchema": {
+                      "type": "object",
+                      "properties": {},
+                      "additionalProperties": false
+                    },
+                    "annotations": {
+                      "readOnlyHint": true
+                    }
+                  },
+                  {
+                    "name": "angular_describe_node",
+                    "description": "Read a live registered Angular node. A source ID shared by repeated instances requires an exact instance ID.",
+                    "inputSchema": {
+                      "type": "object",
+                      "properties": {
+                        "target": {
+                          "type": "object",
+                          "properties": {
+                            "sourceId": {
+                              "type": "string"
+                            },
+                            "instanceId": {
+                              "type": "string"
+                            }
+                          },
+                          "anyOf": [
+                            {
+                              "required": [
+                                "sourceId"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "instanceId"
+                              ]
+                            }
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "required": [
+                        "target"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "annotations": {
+                      "readOnlyHint": true
+                    }
+                  },
+                  {
+                    "name": "angular_fill",
+                    "description": "Fill an exact live control using its original DOM interaction path. Angular owns validation. This may trigger application input/change effects.",
+                    "inputSchema": {
+                      "type": "object",
+                      "properties": {
+                        "target": {
+                          "type": "object",
+                          "properties": {
+                            "sourceId": {
+                              "type": "string"
+                            },
+                            "instanceId": {
+                              "type": "string"
+                            }
+                          },
+                          "anyOf": [
+                            {
+                              "required": [
+                                "sourceId"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "instanceId"
+                              ]
+                            }
+                          ],
+                          "additionalProperties": false
+                        },
+                        "value": {},
+                        "mode": {
+                          "type": "string",
+                          "enum": [
+                            "paste",
+                            "input"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "target",
+                        "value"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "annotations": {
+                      "readOnlyHint": false
+                    }
+                  },
+                  {
+                    "name": "angular_activate",
+                    "description": "Activate an exact live action through its original UI event. Dispatch does not establish business success.",
+                    "inputSchema": {
+                      "type": "object",
+                      "properties": {
+                        "target": {
+                          "type": "object",
+                          "properties": {
+                            "sourceId": {
+                              "type": "string"
+                            },
+                            "instanceId": {
+                              "type": "string"
+                            }
+                          },
+                          "anyOf": [
+                            {
+                              "required": [
+                                "sourceId"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "instanceId"
+                              ]
+                            }
+                          ],
+                          "additionalProperties": false
+                        },
+                        "event": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "target"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "annotations": {
+                      "readOnlyHint": false,
+                      "destructiveHint": true
+                    }
+                  },
+                  {
+                    "name": "angular_submit",
+                    "description": "Fill exact registered controls and submit their live form through the original Angular submission path. Return validation and dispatch evidence; business outcome remains unknown.",
+                    "inputSchema": {
+                      "type": "object",
+                      "properties": {
+                        "target": {
+                          "type": "object",
+                          "properties": {
+                            "sourceId": {
+                              "type": "string"
+                            },
+                            "instanceId": {
+                              "type": "string"
+                            }
+                          },
+                          "anyOf": [
+                            {
+                              "required": [
+                                "sourceId"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "instanceId"
+                              ]
+                            }
+                          ],
+                          "additionalProperties": false
+                        },
+                        "values": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "target": {
+                                "type": "object",
+                                "properties": {
+                                  "sourceId": {
+                                    "type": "string"
+                                  },
+                                  "instanceId": {
+                                    "type": "string"
+                                  }
+                                },
+                                "anyOf": [
+                                  {
+                                    "required": [
+                                      "sourceId"
+                                    ]
+                                  },
+                                  {
+                                    "required": [
+                                      "instanceId"
+                                    ]
+                                  }
+                                ],
+                                "additionalProperties": false
+                              },
+                              "value": {},
+                              "mode": {
+                                "type": "string",
+                                "enum": [
+                                  "paste",
+                                  "input"
+                                ]
+                              }
+                            },
+                            "required": [
+                              "target",
+                              "value"
+                            ],
+                            "additionalProperties": false
+                          }
+                        },
+                        "submitter": {
+                          "type": "object",
+                          "properties": {
+                            "sourceId": {
+                              "type": "string"
+                            },
+                            "instanceId": {
+                              "type": "string"
+                            }
+                          },
+                          "anyOf": [
+                            {
+                              "required": [
+                                "sourceId"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "instanceId"
+                              ]
+                            }
+                          ],
+                          "additionalProperties": false
+                        },
+                        "timeoutMs": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 30000
+                        }
+                      },
+                      "required": [
+                        "target"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "annotations": {
+                      "readOnlyHint": false,
+                      "destructiveHint": true
+                    }
+                  },
+                  {
+                    "name": "angular_navigate",
+                    "description": "Open a path on the same application origin. This changes page state and rebuilds the live node registry.",
+                    "inputSchema": {
+                      "type": "object",
+                      "properties": {
+                        "path": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "path"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "annotations": {
+                      "readOnlyHint": false
+                    }
+                  },
+                  {
+                    "name": "angular_form_b9c0f9553b32ade7",
+                    "title": "Add TaskTitleDescription Add Cancel",
+                    "description": "Submit this exact live Angular form through its original UI. Omitted fields retain current values. Angular evaluates dynamic and cross-field validation at runtime. Business success requires observing the app outcome.",
+                    "inputSchema": {
+                      "type": "object",
+                      "properties": {
+                        "title": {
+                          "type": "string",
+                          "title": "Title"
+                        },
+                        "description": {
+                          "type": "string",
+                          "title": "Description"
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "annotations": {
+                      "readOnlyHint": false,
+                      "destructiveHint": true
+                    },
+                    "_meta": {
+                      "angularMcpTarget": {
+                        "sourceId": "ngmcp_341ed2406654782eb89c556f",
+                        "instanceId": "ngmcp_341ed2406654782eb89c556f@cq23ik-159ju8a-1amjzxx-b1b2sg:2"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "angular_describe_node",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_9607436ceb44f02be38e98f5@cq23ik-159ju8a-1amjzxx-b1b2sg:3"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"sourceId\":\"ngmcp_9607436ceb44f02be38e98f5\",\"instanceId\":\"ngmcp_9607436ceb44f02be38e98f5@cq23ik-159ju8a-1amjzxx-b1b2sg:3\",\"kind\":\"control\",\"tagName\":\"input\",\"events\":[],\"label\":\"Title\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"fill\"],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_9607436ceb44f02be38e98f5\",\"instanceId\":\"ngmcp_9607436ceb44f02be38e98f5@cq23ik-159ju8a-1amjzxx-b1b2sg:3\",\"path\":[\"title\"],\"status\":\"INVALID\",\"updateOn\":\"change\",\"errors\":[{\"code\":\"required\"}],\"nativeErrors\":[\"valueMissing\"]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"schema\":{\"type\":\"string\"},\"value\":\"\",\"path\":[\"title\"],\"transport\":\"native-ui\",\"customAccessor\":false,\"fillModes\":[\"paste\",\"input\"]}"
+                  }
+                ],
+                "structuredContent": {
+                  "sourceId": "ngmcp_9607436ceb44f02be38e98f5",
+                  "instanceId": "ngmcp_9607436ceb44f02be38e98f5@cq23ik-159ju8a-1amjzxx-b1b2sg:3",
+                  "kind": "control",
+                  "tagName": "input",
+                  "events": [],
+                  "label": "Title",
+                  "visible": true,
+                  "disabled": false,
+                  "readonly": false,
+                  "operations": [
+                    "fill"
+                  ],
+                  "validation": {
+                    "status": "invalid",
+                    "fields": [
+                      {
+                        "sourceId": "ngmcp_9607436ceb44f02be38e98f5",
+                        "instanceId": "ngmcp_9607436ceb44f02be38e98f5@cq23ik-159ju8a-1amjzxx-b1b2sg:3",
+                        "path": [
+                          "title"
+                        ],
+                        "status": "INVALID",
+                        "updateOn": "change",
+                        "errors": [
+                          {
+                            "code": "required"
+                          }
+                        ],
+                        "nativeErrors": [
+                          "valueMissing"
+                        ]
+                      }
+                    ],
+                    "groups": [
+                      {
+                        "path": [],
+                        "status": "INVALID",
+                        "errors": []
+                      }
+                    ]
+                  },
+                  "schema": {
+                    "type": "string"
+                  },
+                  "value": "",
+                  "path": [
+                    "title"
+                  ],
+                  "transport": "native-ui",
+                  "customAccessor": false,
+                  "fillModes": [
+                    "paste",
+                    "input"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_describe_node",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_0ab78608f4d0958404270cba@cq23ik-159ju8a-1amjzxx-b1b2sg:4"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"sourceId\":\"ngmcp_0ab78608f4d0958404270cba\",\"instanceId\":\"ngmcp_0ab78608f4d0958404270cba@cq23ik-159ju8a-1amjzxx-b1b2sg:4\",\"kind\":\"control\",\"tagName\":\"textarea\",\"events\":[],\"label\":\"Description\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"fill\"],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_0ab78608f4d0958404270cba\",\"instanceId\":\"ngmcp_0ab78608f4d0958404270cba@cq23ik-159ju8a-1amjzxx-b1b2sg:4\",\"path\":[\"description\"],\"status\":\"INVALID\",\"updateOn\":\"change\",\"errors\":[{\"code\":\"required\"}],\"nativeErrors\":[\"valueMissing\"]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"schema\":{\"type\":\"string\"},\"value\":\"\",\"path\":[\"description\"],\"transport\":\"native-ui\",\"customAccessor\":false,\"fillModes\":[\"paste\",\"input\"]}"
+                  }
+                ],
+                "structuredContent": {
+                  "sourceId": "ngmcp_0ab78608f4d0958404270cba",
+                  "instanceId": "ngmcp_0ab78608f4d0958404270cba@cq23ik-159ju8a-1amjzxx-b1b2sg:4",
+                  "kind": "control",
+                  "tagName": "textarea",
+                  "events": [],
+                  "label": "Description",
+                  "visible": true,
+                  "disabled": false,
+                  "readonly": false,
+                  "operations": [
+                    "fill"
+                  ],
+                  "validation": {
+                    "status": "invalid",
+                    "fields": [
+                      {
+                        "sourceId": "ngmcp_0ab78608f4d0958404270cba",
+                        "instanceId": "ngmcp_0ab78608f4d0958404270cba@cq23ik-159ju8a-1amjzxx-b1b2sg:4",
+                        "path": [
+                          "description"
+                        ],
+                        "status": "INVALID",
+                        "updateOn": "change",
+                        "errors": [
+                          {
+                            "code": "required"
+                          }
+                        ],
+                        "nativeErrors": [
+                          "valueMissing"
+                        ]
+                      }
+                    ],
+                    "groups": [
+                      {
+                        "path": [],
+                        "status": "INVALID",
+                        "errors": []
+                      }
+                    ]
+                  },
+                  "schema": {
+                    "type": "string"
+                  },
+                  "value": "",
+                  "path": [
+                    "description"
+                  ],
+                  "transport": "native-ui",
+                  "customAccessor": false,
+                  "fillModes": [
+                    "paste",
+                    "input"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_form_b9c0f9553b32ade7",
+              "args": {
+                "title": "ab",
+                "description": "Independent source fixture"
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"status\":\"ui-dispatched\",\"operation\":\"submit\",\"target\":{\"sourceId\":\"ngmcp_341ed2406654782eb89c556f\",\"instanceId\":\"ngmcp_341ed2406654782eb89c556f@cq23ik-159ju8a-1amjzxx-b1b2sg:2\"},\"changed\":[\"ngmcp_9607436ceb44f02be38e98f5@cq23ik-159ju8a-1amjzxx-b1b2sg:3\",\"ngmcp_0ab78608f4d0958404270cba@cq23ik-159ju8a-1amjzxx-b1b2sg:4\"],\"values\":[{\"sourceId\":\"ngmcp_9607436ceb44f02be38e98f5\",\"instanceId\":\"ngmcp_9607436ceb44f02be38e98f5@cq23ik-159ju8a-1amjzxx-b1b2sg:3\",\"value\":\"ab\"},{\"sourceId\":\"ngmcp_0ab78608f4d0958404270cba\",\"instanceId\":\"ngmcp_0ab78608f4d0958404270cba@cq23ik-159ju8a-1amjzxx-b1b2sg:4\",\"value\":\"Independent source fixture\"}],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_9607436ceb44f02be38e98f5\",\"instanceId\":\"ngmcp_9607436ceb44f02be38e98f5@cq23ik-159ju8a-1amjzxx-b1b2sg:3\",\"path\":[\"title\"],\"status\":\"INVALID\",\"updateOn\":\"change\",\"errors\":[{\"code\":\"minlength\",\"details\":{\"requiredLength\":3}}]},{\"sourceId\":\"ngmcp_0ab78608f4d0958404270cba\",\"instanceId\":\"ngmcp_0ab78608f4d0958404270cba@cq23ik-159ju8a-1amjzxx-b1b2sg:4\",\"path\":[\"description\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"url\":\"http://127.0.0.1:4372/\",\"businessStatus\":\"unknown\"}"
+                  }
+                ],
+                "structuredContent": {
+                  "status": "ui-dispatched",
+                  "operation": "submit",
+                  "target": {
+                    "sourceId": "ngmcp_341ed2406654782eb89c556f",
+                    "instanceId": "ngmcp_341ed2406654782eb89c556f@cq23ik-159ju8a-1amjzxx-b1b2sg:2"
+                  },
+                  "changed": [
+                    "ngmcp_9607436ceb44f02be38e98f5@cq23ik-159ju8a-1amjzxx-b1b2sg:3",
+                    "ngmcp_0ab78608f4d0958404270cba@cq23ik-159ju8a-1amjzxx-b1b2sg:4"
+                  ],
+                  "values": [
+                    {
+                      "sourceId": "ngmcp_9607436ceb44f02be38e98f5",
+                      "instanceId": "ngmcp_9607436ceb44f02be38e98f5@cq23ik-159ju8a-1amjzxx-b1b2sg:3",
+                      "value": "ab"
+                    },
+                    {
+                      "sourceId": "ngmcp_0ab78608f4d0958404270cba",
+                      "instanceId": "ngmcp_0ab78608f4d0958404270cba@cq23ik-159ju8a-1amjzxx-b1b2sg:4",
+                      "value": "Independent source fixture"
+                    }
+                  ],
+                  "validation": {
+                    "status": "invalid",
+                    "fields": [
+                      {
+                        "sourceId": "ngmcp_9607436ceb44f02be38e98f5",
+                        "instanceId": "ngmcp_9607436ceb44f02be38e98f5@cq23ik-159ju8a-1amjzxx-b1b2sg:3",
+                        "path": [
+                          "title"
+                        ],
+                        "status": "INVALID",
+                        "updateOn": "change",
+                        "errors": [
+                          {
+                            "code": "minlength",
+                            "details": {
+                              "requiredLength": 3
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "sourceId": "ngmcp_0ab78608f4d0958404270cba",
+                        "instanceId": "ngmcp_0ab78608f4d0958404270cba@cq23ik-159ju8a-1amjzxx-b1b2sg:4",
+                        "path": [
+                          "description"
+                        ],
+                        "status": "VALID",
+                        "updateOn": "change",
+                        "errors": []
+                      }
+                    ],
+                    "groups": [
+                      {
+                        "path": [],
+                        "status": "INVALID",
+                        "errors": []
+                      }
+                    ]
+                  },
+                  "url": "http://127.0.0.1:4372/",
+                  "businessStatus": "unknown"
+                }
+              }
+            }
+          ],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4372/",
+            "meta": {}
+          },
+          "before": null,
+          "businessInput": {
+            "title": "ab",
+            "description": "Independent source fixture"
+          },
+          "after": null,
+          "oracle": {
+            "unchanged": true
+          },
+          "negativeExercised": true,
+          "status": "passed",
+          "pageErrors": [],
+          "consoleErrors": [
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        },
+        {
+          "id": "short-description",
+          "operation": "todo-create",
+          "kind": "negative",
+          "frozenInput": {
+            "title": "Unseen task",
+            "description": "Independent source fixture"
+          },
+          "inputPatch": {
+            "description": "abcd"
+          },
+          "calls": [
+            {
+              "name": "angular_list_nodes",
+              "args": {},
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "[{\"sourceId\":\"ngmcp_40d8cde29c7264fb5635ebcb\",\"instanceId\":\"ngmcp_40d8cde29c7264fb5635ebcb@wkahqu-1qucgap-1jhiqxf-1vk6r52:1\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Add new task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}}]"
+                  }
+                ],
+                "structuredContent": {
+                  "nodes": [
+                    {
+                      "sourceId": "ngmcp_40d8cde29c7264fb5635ebcb",
+                      "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@wkahqu-1qucgap-1jhiqxf-1vk6r52:1",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Add new task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_activate",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@wkahqu-1qucgap-1jhiqxf-1vk6r52:1"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"status\":\"ui-dispatched\",\"operation\":\"activate\",\"target\":{\"sourceId\":\"ngmcp_40d8cde29c7264fb5635ebcb\",\"instanceId\":\"ngmcp_40d8cde29c7264fb5635ebcb@wkahqu-1qucgap-1jhiqxf-1vk6r52:1\"},\"changed\":[],\"values\":[],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"url\":\"http://127.0.0.1:4372/\",\"businessStatus\":\"unknown\"}"
+                  }
+                ],
+                "structuredContent": {
+                  "status": "ui-dispatched",
+                  "operation": "activate",
+                  "target": {
+                    "sourceId": "ngmcp_40d8cde29c7264fb5635ebcb",
+                    "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@wkahqu-1qucgap-1jhiqxf-1vk6r52:1"
+                  },
+                  "changed": [],
+                  "values": [],
+                  "validation": {
+                    "status": "unknown",
+                    "fields": [],
+                    "groups": []
+                  },
+                  "url": "http://127.0.0.1:4372/",
+                  "businessStatus": "unknown"
+                }
+              }
+            },
+            {
+              "name": "tools/list",
+              "result": {
+                "tools": [
+                  {
+                    "name": "angular_list_nodes",
+                    "description": "List live Angular nodes registered by the application build. Read exact instance IDs, current form fields, options, schemas and validation before acting.",
+                    "inputSchema": {
+                      "type": "object",
+                      "properties": {},
+                      "additionalProperties": false
+                    },
+                    "annotations": {
+                      "readOnlyHint": true
+                    }
+                  },
+                  {
+                    "name": "angular_describe_node",
+                    "description": "Read a live registered Angular node. A source ID shared by repeated instances requires an exact instance ID.",
+                    "inputSchema": {
+                      "type": "object",
+                      "properties": {
+                        "target": {
+                          "type": "object",
+                          "properties": {
+                            "sourceId": {
+                              "type": "string"
+                            },
+                            "instanceId": {
+                              "type": "string"
+                            }
+                          },
+                          "anyOf": [
+                            {
+                              "required": [
+                                "sourceId"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "instanceId"
+                              ]
+                            }
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "required": [
+                        "target"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "annotations": {
+                      "readOnlyHint": true
+                    }
+                  },
+                  {
+                    "name": "angular_fill",
+                    "description": "Fill an exact live control using its original DOM interaction path. Angular owns validation. This may trigger application input/change effects.",
+                    "inputSchema": {
+                      "type": "object",
+                      "properties": {
+                        "target": {
+                          "type": "object",
+                          "properties": {
+                            "sourceId": {
+                              "type": "string"
+                            },
+                            "instanceId": {
+                              "type": "string"
+                            }
+                          },
+                          "anyOf": [
+                            {
+                              "required": [
+                                "sourceId"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "instanceId"
+                              ]
+                            }
+                          ],
+                          "additionalProperties": false
+                        },
+                        "value": {},
+                        "mode": {
+                          "type": "string",
+                          "enum": [
+                            "paste",
+                            "input"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "target",
+                        "value"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "annotations": {
+                      "readOnlyHint": false
+                    }
+                  },
+                  {
+                    "name": "angular_activate",
+                    "description": "Activate an exact live action through its original UI event. Dispatch does not establish business success.",
+                    "inputSchema": {
+                      "type": "object",
+                      "properties": {
+                        "target": {
+                          "type": "object",
+                          "properties": {
+                            "sourceId": {
+                              "type": "string"
+                            },
+                            "instanceId": {
+                              "type": "string"
+                            }
+                          },
+                          "anyOf": [
+                            {
+                              "required": [
+                                "sourceId"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "instanceId"
+                              ]
+                            }
+                          ],
+                          "additionalProperties": false
+                        },
+                        "event": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "target"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "annotations": {
+                      "readOnlyHint": false,
+                      "destructiveHint": true
+                    }
+                  },
+                  {
+                    "name": "angular_submit",
+                    "description": "Fill exact registered controls and submit their live form through the original Angular submission path. Return validation and dispatch evidence; business outcome remains unknown.",
+                    "inputSchema": {
+                      "type": "object",
+                      "properties": {
+                        "target": {
+                          "type": "object",
+                          "properties": {
+                            "sourceId": {
+                              "type": "string"
+                            },
+                            "instanceId": {
+                              "type": "string"
+                            }
+                          },
+                          "anyOf": [
+                            {
+                              "required": [
+                                "sourceId"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "instanceId"
+                              ]
+                            }
+                          ],
+                          "additionalProperties": false
+                        },
+                        "values": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "target": {
+                                "type": "object",
+                                "properties": {
+                                  "sourceId": {
+                                    "type": "string"
+                                  },
+                                  "instanceId": {
+                                    "type": "string"
+                                  }
+                                },
+                                "anyOf": [
+                                  {
+                                    "required": [
+                                      "sourceId"
+                                    ]
+                                  },
+                                  {
+                                    "required": [
+                                      "instanceId"
+                                    ]
+                                  }
+                                ],
+                                "additionalProperties": false
+                              },
+                              "value": {},
+                              "mode": {
+                                "type": "string",
+                                "enum": [
+                                  "paste",
+                                  "input"
+                                ]
+                              }
+                            },
+                            "required": [
+                              "target",
+                              "value"
+                            ],
+                            "additionalProperties": false
+                          }
+                        },
+                        "submitter": {
+                          "type": "object",
+                          "properties": {
+                            "sourceId": {
+                              "type": "string"
+                            },
+                            "instanceId": {
+                              "type": "string"
+                            }
+                          },
+                          "anyOf": [
+                            {
+                              "required": [
+                                "sourceId"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "instanceId"
+                              ]
+                            }
+                          ],
+                          "additionalProperties": false
+                        },
+                        "timeoutMs": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 30000
+                        }
+                      },
+                      "required": [
+                        "target"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "annotations": {
+                      "readOnlyHint": false,
+                      "destructiveHint": true
+                    }
+                  },
+                  {
+                    "name": "angular_navigate",
+                    "description": "Open a path on the same application origin. This changes page state and rebuilds the live node registry.",
+                    "inputSchema": {
+                      "type": "object",
+                      "properties": {
+                        "path": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "path"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "annotations": {
+                      "readOnlyHint": false
+                    }
+                  },
+                  {
+                    "name": "angular_form_f0ff5d0005fd8802",
+                    "title": "Add TaskTitleDescription Add Cancel",
+                    "description": "Submit this exact live Angular form through its original UI. Omitted fields retain current values. Angular evaluates dynamic and cross-field validation at runtime. Business success requires observing the app outcome.",
+                    "inputSchema": {
+                      "type": "object",
+                      "properties": {
+                        "title": {
+                          "type": "string",
+                          "title": "Title"
+                        },
+                        "description": {
+                          "type": "string",
+                          "title": "Description"
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "annotations": {
+                      "readOnlyHint": false,
+                      "destructiveHint": true
+                    },
+                    "_meta": {
+                      "angularMcpTarget": {
+                        "sourceId": "ngmcp_341ed2406654782eb89c556f",
+                        "instanceId": "ngmcp_341ed2406654782eb89c556f@wkahqu-1qucgap-1jhiqxf-1vk6r52:2"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "angular_describe_node",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_9607436ceb44f02be38e98f5@wkahqu-1qucgap-1jhiqxf-1vk6r52:3"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"sourceId\":\"ngmcp_9607436ceb44f02be38e98f5\",\"instanceId\":\"ngmcp_9607436ceb44f02be38e98f5@wkahqu-1qucgap-1jhiqxf-1vk6r52:3\",\"kind\":\"control\",\"tagName\":\"input\",\"events\":[],\"label\":\"Title\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"fill\"],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_9607436ceb44f02be38e98f5\",\"instanceId\":\"ngmcp_9607436ceb44f02be38e98f5@wkahqu-1qucgap-1jhiqxf-1vk6r52:3\",\"path\":[\"title\"],\"status\":\"INVALID\",\"updateOn\":\"change\",\"errors\":[{\"code\":\"required\"}],\"nativeErrors\":[\"valueMissing\"]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"schema\":{\"type\":\"string\"},\"value\":\"\",\"path\":[\"title\"],\"transport\":\"native-ui\",\"customAccessor\":false,\"fillModes\":[\"paste\",\"input\"]}"
+                  }
+                ],
+                "structuredContent": {
+                  "sourceId": "ngmcp_9607436ceb44f02be38e98f5",
+                  "instanceId": "ngmcp_9607436ceb44f02be38e98f5@wkahqu-1qucgap-1jhiqxf-1vk6r52:3",
+                  "kind": "control",
+                  "tagName": "input",
+                  "events": [],
+                  "label": "Title",
+                  "visible": true,
+                  "disabled": false,
+                  "readonly": false,
+                  "operations": [
+                    "fill"
+                  ],
+                  "validation": {
+                    "status": "invalid",
+                    "fields": [
+                      {
+                        "sourceId": "ngmcp_9607436ceb44f02be38e98f5",
+                        "instanceId": "ngmcp_9607436ceb44f02be38e98f5@wkahqu-1qucgap-1jhiqxf-1vk6r52:3",
+                        "path": [
+                          "title"
+                        ],
+                        "status": "INVALID",
+                        "updateOn": "change",
+                        "errors": [
+                          {
+                            "code": "required"
+                          }
+                        ],
+                        "nativeErrors": [
+                          "valueMissing"
+                        ]
+                      }
+                    ],
+                    "groups": [
+                      {
+                        "path": [],
+                        "status": "INVALID",
+                        "errors": []
+                      }
+                    ]
+                  },
+                  "schema": {
+                    "type": "string"
+                  },
+                  "value": "",
+                  "path": [
+                    "title"
+                  ],
+                  "transport": "native-ui",
+                  "customAccessor": false,
+                  "fillModes": [
+                    "paste",
+                    "input"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_describe_node",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_0ab78608f4d0958404270cba@wkahqu-1qucgap-1jhiqxf-1vk6r52:4"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"sourceId\":\"ngmcp_0ab78608f4d0958404270cba\",\"instanceId\":\"ngmcp_0ab78608f4d0958404270cba@wkahqu-1qucgap-1jhiqxf-1vk6r52:4\",\"kind\":\"control\",\"tagName\":\"textarea\",\"events\":[],\"label\":\"Description\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"fill\"],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_0ab78608f4d0958404270cba\",\"instanceId\":\"ngmcp_0ab78608f4d0958404270cba@wkahqu-1qucgap-1jhiqxf-1vk6r52:4\",\"path\":[\"description\"],\"status\":\"INVALID\",\"updateOn\":\"change\",\"errors\":[{\"code\":\"required\"}],\"nativeErrors\":[\"valueMissing\"]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"schema\":{\"type\":\"string\"},\"value\":\"\",\"path\":[\"description\"],\"transport\":\"native-ui\",\"customAccessor\":false,\"fillModes\":[\"paste\",\"input\"]}"
+                  }
+                ],
+                "structuredContent": {
+                  "sourceId": "ngmcp_0ab78608f4d0958404270cba",
+                  "instanceId": "ngmcp_0ab78608f4d0958404270cba@wkahqu-1qucgap-1jhiqxf-1vk6r52:4",
+                  "kind": "control",
+                  "tagName": "textarea",
+                  "events": [],
+                  "label": "Description",
+                  "visible": true,
+                  "disabled": false,
+                  "readonly": false,
+                  "operations": [
+                    "fill"
+                  ],
+                  "validation": {
+                    "status": "invalid",
+                    "fields": [
+                      {
+                        "sourceId": "ngmcp_0ab78608f4d0958404270cba",
+                        "instanceId": "ngmcp_0ab78608f4d0958404270cba@wkahqu-1qucgap-1jhiqxf-1vk6r52:4",
+                        "path": [
+                          "description"
+                        ],
+                        "status": "INVALID",
+                        "updateOn": "change",
+                        "errors": [
+                          {
+                            "code": "required"
+                          }
+                        ],
+                        "nativeErrors": [
+                          "valueMissing"
+                        ]
+                      }
+                    ],
+                    "groups": [
+                      {
+                        "path": [],
+                        "status": "INVALID",
+                        "errors": []
+                      }
+                    ]
+                  },
+                  "schema": {
+                    "type": "string"
+                  },
+                  "value": "",
+                  "path": [
+                    "description"
+                  ],
+                  "transport": "native-ui",
+                  "customAccessor": false,
+                  "fillModes": [
+                    "paste",
+                    "input"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_form_f0ff5d0005fd8802",
+              "args": {
+                "title": "Unseen task",
+                "description": "abcd"
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"status\":\"ui-dispatched\",\"operation\":\"submit\",\"target\":{\"sourceId\":\"ngmcp_341ed2406654782eb89c556f\",\"instanceId\":\"ngmcp_341ed2406654782eb89c556f@wkahqu-1qucgap-1jhiqxf-1vk6r52:2\"},\"changed\":[\"ngmcp_9607436ceb44f02be38e98f5@wkahqu-1qucgap-1jhiqxf-1vk6r52:3\",\"ngmcp_0ab78608f4d0958404270cba@wkahqu-1qucgap-1jhiqxf-1vk6r52:4\"],\"values\":[{\"sourceId\":\"ngmcp_9607436ceb44f02be38e98f5\",\"instanceId\":\"ngmcp_9607436ceb44f02be38e98f5@wkahqu-1qucgap-1jhiqxf-1vk6r52:3\",\"value\":\"Unseen task\"},{\"sourceId\":\"ngmcp_0ab78608f4d0958404270cba\",\"instanceId\":\"ngmcp_0ab78608f4d0958404270cba@wkahqu-1qucgap-1jhiqxf-1vk6r52:4\",\"value\":\"abcd\"}],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_9607436ceb44f02be38e98f5\",\"instanceId\":\"ngmcp_9607436ceb44f02be38e98f5@wkahqu-1qucgap-1jhiqxf-1vk6r52:3\",\"path\":[\"title\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]},{\"sourceId\":\"ngmcp_0ab78608f4d0958404270cba\",\"instanceId\":\"ngmcp_0ab78608f4d0958404270cba@wkahqu-1qucgap-1jhiqxf-1vk6r52:4\",\"path\":[\"description\"],\"status\":\"INVALID\",\"updateOn\":\"change\",\"errors\":[{\"code\":\"minlength\",\"details\":{\"requiredLength\":5}}]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"url\":\"http://127.0.0.1:4372/\",\"businessStatus\":\"unknown\"}"
+                  }
+                ],
+                "structuredContent": {
+                  "status": "ui-dispatched",
+                  "operation": "submit",
+                  "target": {
+                    "sourceId": "ngmcp_341ed2406654782eb89c556f",
+                    "instanceId": "ngmcp_341ed2406654782eb89c556f@wkahqu-1qucgap-1jhiqxf-1vk6r52:2"
+                  },
+                  "changed": [
+                    "ngmcp_9607436ceb44f02be38e98f5@wkahqu-1qucgap-1jhiqxf-1vk6r52:3",
+                    "ngmcp_0ab78608f4d0958404270cba@wkahqu-1qucgap-1jhiqxf-1vk6r52:4"
+                  ],
+                  "values": [
+                    {
+                      "sourceId": "ngmcp_9607436ceb44f02be38e98f5",
+                      "instanceId": "ngmcp_9607436ceb44f02be38e98f5@wkahqu-1qucgap-1jhiqxf-1vk6r52:3",
+                      "value": "Unseen task"
+                    },
+                    {
+                      "sourceId": "ngmcp_0ab78608f4d0958404270cba",
+                      "instanceId": "ngmcp_0ab78608f4d0958404270cba@wkahqu-1qucgap-1jhiqxf-1vk6r52:4",
+                      "value": "abcd"
+                    }
+                  ],
+                  "validation": {
+                    "status": "invalid",
+                    "fields": [
+                      {
+                        "sourceId": "ngmcp_9607436ceb44f02be38e98f5",
+                        "instanceId": "ngmcp_9607436ceb44f02be38e98f5@wkahqu-1qucgap-1jhiqxf-1vk6r52:3",
+                        "path": [
+                          "title"
+                        ],
+                        "status": "VALID",
+                        "updateOn": "change",
+                        "errors": []
+                      },
+                      {
+                        "sourceId": "ngmcp_0ab78608f4d0958404270cba",
+                        "instanceId": "ngmcp_0ab78608f4d0958404270cba@wkahqu-1qucgap-1jhiqxf-1vk6r52:4",
+                        "path": [
+                          "description"
+                        ],
+                        "status": "INVALID",
+                        "updateOn": "change",
+                        "errors": [
+                          {
+                            "code": "minlength",
+                            "details": {
+                              "requiredLength": 5
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "groups": [
+                      {
+                        "path": [],
+                        "status": "INVALID",
+                        "errors": []
+                      }
+                    ]
+                  },
+                  "url": "http://127.0.0.1:4372/",
+                  "businessStatus": "unknown"
+                }
+              }
+            }
+          ],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4372/",
+            "meta": {}
+          },
+          "before": null,
+          "businessInput": {
+            "title": "Unseen task",
+            "description": "abcd"
+          },
+          "after": null,
+          "oracle": {
+            "unchanged": true
+          },
+          "negativeExercised": true,
+          "status": "passed",
+          "pageErrors": [],
+          "consoleErrors": [
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        },
+        {
+          "id": "ambiguous-source-id",
+          "operation": "todo-complete",
+          "kind": "negative",
+          "frozenInput": {},
+          "inputPatch": {},
+          "targetContext": {
+            "selection": "unique visible card title Unseen task; read source Todo id from persisted UI-created record"
+          },
+          "calls": [
+            {
+              "name": "angular_list_nodes",
+              "args": {},
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "[{\"sourceId\":\"ngmcp_40d8cde29c7264fb5635ebcb\",\"instanceId\":\"ngmcp_40d8cde29c7264fb5635ebcb@t186py-1sdsyn7-srzoxo-11nqfs5:1\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Add new task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_3f574704c520c7798bc3efed\",\"instanceId\":\"ngmcp_3f574704c520c7798bc3efed@t186py-1sdsyn7-srzoxo-11nqfs5:7\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Complete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_c96203c38a8ee0740167488d\",\"instanceId\":\"ngmcp_c96203c38a8ee0740167488d@t186py-1sdsyn7-srzoxo-11nqfs5:8\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Delete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_3f574704c520c7798bc3efed\",\"instanceId\":\"ngmcp_3f574704c520c7798bc3efed@t186py-1sdsyn7-srzoxo-11nqfs5:14\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Complete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_c96203c38a8ee0740167488d\",\"instanceId\":\"ngmcp_c96203c38a8ee0740167488d@t186py-1sdsyn7-srzoxo-11nqfs5:15\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Delete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}}]"
+                  }
+                ],
+                "structuredContent": {
+                  "nodes": [
+                    {
+                      "sourceId": "ngmcp_40d8cde29c7264fb5635ebcb",
+                      "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@t186py-1sdsyn7-srzoxo-11nqfs5:1",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Add new task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_3f574704c520c7798bc3efed",
+                      "instanceId": "ngmcp_3f574704c520c7798bc3efed@t186py-1sdsyn7-srzoxo-11nqfs5:7",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Complete Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_c96203c38a8ee0740167488d",
+                      "instanceId": "ngmcp_c96203c38a8ee0740167488d@t186py-1sdsyn7-srzoxo-11nqfs5:8",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Delete Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_3f574704c520c7798bc3efed",
+                      "instanceId": "ngmcp_3f574704c520c7798bc3efed@t186py-1sdsyn7-srzoxo-11nqfs5:14",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Complete Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_c96203c38a8ee0740167488d",
+                      "instanceId": "ngmcp_c96203c38a8ee0740167488d@t186py-1sdsyn7-srzoxo-11nqfs5:15",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Delete Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_describe_node",
+              "args": {
+                "target": {
+                  "instanceId": "ngmcp_3f574704c520c7798bc3efed@t186py-1sdsyn7-srzoxo-11nqfs5:7"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"sourceId\":\"ngmcp_3f574704c520c7798bc3efed\",\"instanceId\":\"ngmcp_3f574704c520c7798bc3efed@t186py-1sdsyn7-srzoxo-11nqfs5:7\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Complete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}}"
+                  }
+                ],
+                "structuredContent": {
+                  "sourceId": "ngmcp_3f574704c520c7798bc3efed",
+                  "instanceId": "ngmcp_3f574704c520c7798bc3efed@t186py-1sdsyn7-srzoxo-11nqfs5:7",
+                  "kind": "action",
+                  "tagName": "button",
+                  "events": [
+                    "click"
+                  ],
+                  "label": "Complete Task",
+                  "visible": true,
+                  "disabled": false,
+                  "readonly": false,
+                  "operations": [
+                    "activate"
+                  ],
+                  "validation": {
+                    "status": "unknown",
+                    "fields": [],
+                    "groups": []
+                  }
+                }
+              }
+            },
+            {
+              "name": "angular_list_nodes",
+              "args": {},
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "[{\"sourceId\":\"ngmcp_40d8cde29c7264fb5635ebcb\",\"instanceId\":\"ngmcp_40d8cde29c7264fb5635ebcb@t186py-1sdsyn7-srzoxo-11nqfs5:1\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Add new task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_3f574704c520c7798bc3efed\",\"instanceId\":\"ngmcp_3f574704c520c7798bc3efed@t186py-1sdsyn7-srzoxo-11nqfs5:7\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Complete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_c96203c38a8ee0740167488d\",\"instanceId\":\"ngmcp_c96203c38a8ee0740167488d@t186py-1sdsyn7-srzoxo-11nqfs5:8\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Delete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_3f574704c520c7798bc3efed\",\"instanceId\":\"ngmcp_3f574704c520c7798bc3efed@t186py-1sdsyn7-srzoxo-11nqfs5:14\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Complete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}},{\"sourceId\":\"ngmcp_c96203c38a8ee0740167488d\",\"instanceId\":\"ngmcp_c96203c38a8ee0740167488d@t186py-1sdsyn7-srzoxo-11nqfs5:15\",\"kind\":\"action\",\"tagName\":\"button\",\"events\":[\"click\"],\"label\":\"Delete Task\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]}}]"
+                  }
+                ],
+                "structuredContent": {
+                  "nodes": [
+                    {
+                      "sourceId": "ngmcp_40d8cde29c7264fb5635ebcb",
+                      "instanceId": "ngmcp_40d8cde29c7264fb5635ebcb@t186py-1sdsyn7-srzoxo-11nqfs5:1",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Add new task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_3f574704c520c7798bc3efed",
+                      "instanceId": "ngmcp_3f574704c520c7798bc3efed@t186py-1sdsyn7-srzoxo-11nqfs5:7",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Complete Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_c96203c38a8ee0740167488d",
+                      "instanceId": "ngmcp_c96203c38a8ee0740167488d@t186py-1sdsyn7-srzoxo-11nqfs5:8",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Delete Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_3f574704c520c7798bc3efed",
+                      "instanceId": "ngmcp_3f574704c520c7798bc3efed@t186py-1sdsyn7-srzoxo-11nqfs5:14",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Complete Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    },
+                    {
+                      "sourceId": "ngmcp_c96203c38a8ee0740167488d",
+                      "instanceId": "ngmcp_c96203c38a8ee0740167488d@t186py-1sdsyn7-srzoxo-11nqfs5:15",
+                      "kind": "action",
+                      "tagName": "button",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "Delete Task",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_activate",
+              "args": {
+                "target": {
+                  "sourceId": "ngmcp_3f574704c520c7798bc3efed"
+                }
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "page.evaluate: Error: Source target is missing or repeated; use an exact current instanceId\n    at Object.resolve (http://127.0.0.1:4372/main.js:98:15)\n    at Object.<anonymous> (http://127.0.0.1:4372/main.js:568:26)\n    at Generator.next (<anonymous>)\n    at http://127.0.0.1:4372/main.js:41:61\n    at new ZoneAwarePromise (http://127.0.0.1:4372/@fs/private/tmp/integration-unseen-todo-integrated-v3/.angular/cache/20.1.1/angular-projects/vite/deps/zone__js.js?v=7fbcbcd7:2164:23)\n    at __async (http://127.0.0.1:4372/main.js:25:10)\n    at Object.execute (http://127.0.0.1:4372/main.js:563:14)\n    at eval (eval at evaluate (:290:30), <anonymous>:1:298)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+                  }
+                ],
+                "isError": true
+              }
+            }
+          ],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4372/",
+            "meta": {
+              "todo": {
+                "id": 1,
+                "title": "Unseen task",
+                "description": "Independent source fixture",
+                "done": false
+              }
+            }
+          },
+          "before": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": false
+            },
+            {
+              "id": 2,
+              "title": "Unseen second task",
+              "description": "Second independent source fixture",
+              "done": false
+            }
+          ],
+          "businessInput": {},
+          "actionError": "Error: page.evaluate: Error: Source target is missing or repeated; use an exact current instanceId\n    at Object.resolve (http://127.0.0.1:4372/main.js:98:15)\n    at Object.<anonymous> (http://127.0.0.1:4372/main.js:568:26)\n    at Generator.next (<anonymous>)\n    at http://127.0.0.1:4372/main.js:41:61\n    at new ZoneAwarePromise (http://127.0.0.1:4372/@fs/private/tmp/integration-unseen-todo-integrated-v3/.angular/cache/20.1.1/angular-projects/vite/deps/zone__js.js?v=7fbcbcd7:2164:23)\n    at __async (http://127.0.0.1:4372/main.js:25:10)\n    at Object.execute (http://127.0.0.1:4372/main.js:563:14)\n    at eval (eval at evaluate (:290:30), <anonymous>:1:298)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "after": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": false
+            },
+            {
+              "id": 2,
+              "title": "Unseen second task",
+              "description": "Second independent source fixture",
+              "done": false
+            }
+          ],
+          "refusalReason": "page.evaluate: Error: Source target is missing or repeated; use an exact current instanceId\n    at Object.resolve (http://127.0.0.1:4372/main.js:98:15)\n    at Object.<anonymous> (http://127.0.0.1:4372/main.js:568:26)\n    at Generator.next (<anonymous>)\n    at http://127.0.0.1:4372/main.js:41:61\n    at new ZoneAwarePromise (http://127.0.0.1:4372/@fs/private/tmp/integration-unseen-todo-integrated-v3/.angular/cache/20.1.1/angular-projects/vite/deps/zone__js.js?v=7fbcbcd7:2164:23)\n    at __async (http://127.0.0.1:4372/main.js:25:10)\n    at Object.execute (http://127.0.0.1:4372/main.js:563:14)\n    at eval (eval at evaluate (:290:30), <anonymous>:1:298)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "oracle": {
+            "protocolBoundary": true
+          },
+          "negativeExercised": true,
+          "status": "passed",
+          "pageErrors": [],
+          "consoleErrors": [
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED",
+            "Error: Source target is missing or repeated; use an exact current instanceId\n    at Object.resolve (http://127.0.0.1:4372/main.js:98:15)\n    at Object.<anonymous> (http://127.0.0.1:4372/main.js:568:26)\n    at Generator.next (<anonymous>)\n    at http://127.0.0.1:4372/main.js:41:61\n    at new ZoneAwarePromise (http://127.0.0.1:4372/@fs/private/tmp/integration-unseen-todo-integrated-v3/.angular/cache/20.1.1/angular-projects/vite/deps/zone__js.js?v=7fbcbcd7:2164:23)\n    at __async (http://127.0.0.1:4372/main.js:25:10)\n    at Object.execute (http://127.0.0.1:4372/main.js:563:14)\n    at eval (eval at evaluate (:290:30), <anonymous>:1:298)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+          ]
+        }
+      ]
+    }
+  ],
+  "compilerDigestBefore": "58c004545a7a7cb102637694850d623fe63ecb981339cb35ae5f6ec273bb326c",
+  "appSpecificSourcePatches": [],
+  "instrumentation": "Separate generic compiler-instrumented app staged copy; original source manifest is checked unchanged.",
+  "finishedAt": "2026-11-10T10:02:52.143Z",
+  "compilerDigestAfter": "58c004545a7a7cb102637694850d623fe63ecb981339cb35ae5f6ec273bb326c",
+  "compilerStable": true,
+  "totals": {
+    "positive": 5,
+    "positivePassed": 5,
+    "negative": 3,
+    "negativePassed": 3,
+    "protocolBoundaryNotApplicable": 0
+  }
+}

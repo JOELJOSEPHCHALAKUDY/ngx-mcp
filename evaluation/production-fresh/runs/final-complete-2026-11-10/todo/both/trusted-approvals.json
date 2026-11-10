@@ -1,0 +1,242 @@
+[
+  {
+    "sessionId": "765b4b24400f01e32c01917fc2df5ed9",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_b8ed434fb4e46c35b630495c",
+    "operation": "activate",
+    "requestHash": "5c407e172a1d5fe0e6bbfde232e2f619050912e06b42db82b025eda5debb4c14",
+    "approved": true
+  },
+  {
+    "sessionId": "765b4b24400f01e32c01917fc2df5ed9",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_92680881d84f6a8d363cef47",
+    "operation": "fill",
+    "requestHash": "674ac5e52f8866143c7e41b94a8c3c02d0cf717df32dfd578ef95438594976fe",
+    "approved": true
+  },
+  {
+    "sessionId": "765b4b24400f01e32c01917fc2df5ed9",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_ebb9802f6a4ab21ccea83fad",
+    "operation": "fill",
+    "requestHash": "67e40917f824e6c53a2249f5a3c790bbda680e100099925f5d0c4d5b7e0b45c0",
+    "approved": true
+  },
+  {
+    "sessionId": "765b4b24400f01e32c01917fc2df5ed9",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_f5f8bb842172a53a71a0fa8c",
+    "operation": "fill",
+    "requestHash": "8e0705ffb81cef8dee14742612a331e3f228910f639b83bb5adc885e6d7823a0",
+    "approved": true
+  },
+  {
+    "sessionId": "765b4b24400f01e32c01917fc2df5ed9",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_e18dd3072f5ee23e7118ebc1",
+    "operation": "activate",
+    "requestHash": "32b8f647651ba189cbe9268fb0906d9baaab3db00c93b118c28f69d820a348c8",
+    "approved": true
+  },
+  {
+    "sessionId": "d4d4ec8463d28327e8f35b3e5330ac01",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_b4b620faece66dccf72551c2",
+    "operation": "activate",
+    "requestHash": "c32c0a39656a543c39891ae9fa988eee045daf86916c219663b6fe3bcf9bca13",
+    "approved": true
+  },
+  {
+    "sessionId": "7b85d10ae82e774c5d3d1529db3f9cd8",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_01b0feb00a028d83a9b16c4b",
+    "operation": "activate",
+    "requestHash": "416d6f95c816ba2a955923b48e21de8ec231752bb00a2b93b89e5bb6a14b9dec",
+    "approved": true
+  },
+  {
+    "sessionId": "55063d49ff70e26520ba2210a2d3123b",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_b8ed434fb4e46c35b630495c",
+    "operation": "activate",
+    "requestHash": "cf52ee0c823d1b368f83e5b2f35f572820b15d8cedbf70a8adc5d8cab105bc76",
+    "approved": true
+  },
+  {
+    "sessionId": "55063d49ff70e26520ba2210a2d3123b",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_92680881d84f6a8d363cef47",
+    "operation": "fill",
+    "requestHash": "494319fd0bb9d760a9e1adf7af757900fc222c6277fb9ee548947a1234f4f8c4",
+    "approved": true
+  },
+  {
+    "sessionId": "55063d49ff70e26520ba2210a2d3123b",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_ebb9802f6a4ab21ccea83fad",
+    "operation": "fill",
+    "requestHash": "7633f5ca27d1a57434458a1badc030b4fe7f568ebf9ee498ba2e303af20dab10",
+    "approved": true
+  },
+  {
+    "sessionId": "55063d49ff70e26520ba2210a2d3123b",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_f5f8bb842172a53a71a0fa8c",
+    "operation": "fill",
+    "requestHash": "b8e31e3d3b69ec76e1081f49b668133d4d2ca48f65a7def9a49dbfd5406df27c",
+    "approved": true
+  },
+  {
+    "sessionId": "55063d49ff70e26520ba2210a2d3123b",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_e18dd3072f5ee23e7118ebc1",
+    "operation": "activate",
+    "requestHash": "de395c5f21983b72d6e4abacaf378abc636ede6b5d382d0aa37b8815ad68f0bd",
+    "approved": true
+  },
+  {
+    "sessionId": "7ed09f422b2eb4c4c15c57eff300c856",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_92680881d84f6a8d363cef47",
+    "operation": "fill",
+    "requestHash": "5965f35211a7dcb3f484688424d42c7157391f42d57869280b8a0c9b148934cf",
+    "approved": true
+  },
+  {
+    "sessionId": "4caa4b0961637cf894666e1767a68323",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_92680881d84f6a8d363cef47",
+    "operation": "fill",
+    "requestHash": "a19119e1b27175118041c641ef5b4b53efd532d264bdebff271620460614e088",
+    "approved": false
+  },
+  {
+    "sessionId": "7ddec24757562f54e04ceb2b2de41765",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_92680881d84f6a8d363cef47",
+    "operation": "fill",
+    "requestHash": "5e4fd9f0f2cd30be568e1cae2e39c24b665059e47ae161840c441d5bc04d02b4",
+    "approved": true
+  },
+  {
+    "sessionId": "7875aec31d4d01e21e8377b0ffbc18ae",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_b8ed434fb4e46c35b630495c",
+    "operation": "activate",
+    "requestHash": "ea7f647d4b28bbf9b9b96b718173cad3e872383e58efde29f23c28ceadbf5029",
+    "approved": true
+  },
+  {
+    "sessionId": "7875aec31d4d01e21e8377b0ffbc18ae",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_92680881d84f6a8d363cef47",
+    "operation": "fill",
+    "requestHash": "5248f63773269dba32a9beba8d31037ccba6788e40ca72da09653bbab5eee952",
+    "approved": true
+  },
+  {
+    "sessionId": "7875aec31d4d01e21e8377b0ffbc18ae",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_ebb9802f6a4ab21ccea83fad",
+    "operation": "fill",
+    "requestHash": "e58a1d66061a135a0a91dea53ec67ff26d80554631ad90f1bec5d8d89d206dd1",
+    "approved": true
+  },
+  {
+    "sessionId": "7875aec31d4d01e21e8377b0ffbc18ae",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_f5f8bb842172a53a71a0fa8c",
+    "operation": "fill",
+    "requestHash": "dd945d960ee85efb53958347de2ed84a9bc072f04c204f2afb7a9f72e4409ddd",
+    "approved": true
+  },
+  {
+    "sessionId": "7875aec31d4d01e21e8377b0ffbc18ae",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_e18dd3072f5ee23e7118ebc1",
+    "operation": "activate",
+    "requestHash": "9df65af45931689232184a5ee382d97656a457e9014173f1c1b964ae5f4706dc",
+    "approved": true
+  },
+  {
+    "sessionId": "cd8c638fb368ed469ea5cdc527f18c6e",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_b4b620faece66dccf72551c2",
+    "operation": "activate",
+    "requestHash": "35f9a3e31c3c073eb42ccf959c7be070f38e7140e4fbfc0b98240390186ed9bb",
+    "approved": true
+  },
+  {
+    "sessionId": "67902ef2102cca863eca1f404200cda9",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_01b0feb00a028d83a9b16c4b",
+    "operation": "activate",
+    "requestHash": "806d928b186629600a9848393668e012662013a5ad7fbd52d9cf09fd1b241742",
+    "approved": true
+  },
+  {
+    "sessionId": "0c224c3a4f65b9be9785cebb5e74ebb1",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_b8ed434fb4e46c35b630495c",
+    "operation": "activate",
+    "requestHash": "6588651d57d4267951176fe08acc47ab36dff045f1b89689ec3c9f5af5738e28",
+    "approved": true
+  },
+  {
+    "sessionId": "0c224c3a4f65b9be9785cebb5e74ebb1",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_92680881d84f6a8d363cef47",
+    "operation": "fill",
+    "requestHash": "0705f7b4d706f9a05437f8581b8bb92a161d33b0ff2d1378edff10a37152355a",
+    "approved": true
+  },
+  {
+    "sessionId": "0c224c3a4f65b9be9785cebb5e74ebb1",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_ebb9802f6a4ab21ccea83fad",
+    "operation": "fill",
+    "requestHash": "439d4de836a5beaa535151120c2f7a6dc9e781026117c2d6ce11477fd6c50405",
+    "approved": true
+  },
+  {
+    "sessionId": "0c224c3a4f65b9be9785cebb5e74ebb1",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_f5f8bb842172a53a71a0fa8c",
+    "operation": "fill",
+    "requestHash": "97fa753a376402ca48429dd3bfe50cf546170ae287678b5dd6865892f08c2c1c",
+    "approved": true
+  },
+  {
+    "sessionId": "0c224c3a4f65b9be9785cebb5e74ebb1",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_e18dd3072f5ee23e7118ebc1",
+    "operation": "activate",
+    "requestHash": "d64bb9d9998aca507de1f5c3affd310b65126fcfe18a2459ade61d768986db1b",
+    "approved": true
+  },
+  {
+    "sessionId": "5cb0040f04910a4c4dfed2869e61fb81",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_92680881d84f6a8d363cef47",
+    "operation": "fill",
+    "requestHash": "86322abc1cb66ddfb0f6a9dbbd93bd652cd4c0fae1897f78672163f81ac0b952",
+    "approved": true
+  },
+  {
+    "sessionId": "2323be7f4c152edef5351792b3101581",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_92680881d84f6a8d363cef47",
+    "operation": "fill",
+    "requestHash": "949cc1e7fa4370aefa35b414e94dc72d32e028bc8e0ad36ac47f2b86a0f611ce",
+    "approved": false
+  },
+  {
+    "sessionId": "89920f3486642b58db554d85ffd7003d",
+    "subject": "synthetic-owner-a",
+    "sourceId": "ngmcp_92680881d84f6a8d363cef47",
+    "operation": "fill",
+    "requestHash": "4452e4456ce9b25643ebd5c38bba18d4f1d3396166312db95f73e513e20f7dd0",
+    "approved": true
+  }
+]

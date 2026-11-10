@@ -1,0 +1,5237 @@
+{
+  "formatVersion": 1,
+  "compilerVersion": "0.1.0",
+  "sourceDigest": "16dd367cafa13beb840df54ee5bcfa3ccf55af7d91a255e2a1d754f2f017ea0c",
+  "routes": [
+    {
+      "path": "/",
+      "component": "HomeComponent",
+      "guards": []
+    },
+    {
+      "path": "/article/:slug",
+      "component": "ArticleComponent",
+      "guards": []
+    },
+    {
+      "path": "/editor",
+      "component": "EditorComponent",
+      "guards": [
+        "requireAuth"
+      ]
+    },
+    {
+      "path": "/editor/:slug",
+      "component": "EditorComponent",
+      "guards": [
+        "requireAuth"
+      ]
+    },
+    {
+      "path": "/login",
+      "component": "AuthComponent",
+      "guards": [
+        "() => inject(UserService).isAuthenticated.pipe(map(isAuth => !isAuth))"
+      ]
+    },
+    {
+      "path": "/profile/:username",
+      "component": "ProfileComponent",
+      "guards": []
+    },
+    {
+      "path": "/profile/:username",
+      "component": "ProfileArticlesComponent",
+      "guards": []
+    },
+    {
+      "path": "/profile/:username/favorites",
+      "component": "ProfileFavoritesComponent",
+      "guards": []
+    },
+    {
+      "path": "/register",
+      "component": "AuthComponent",
+      "guards": [
+        "() => inject(UserService).isAuthenticated.pipe(map(isAuth => !isAuth))"
+      ]
+    },
+    {
+      "path": "/settings",
+      "component": "SettingsComponent",
+      "guards": [
+        "requireAuth"
+      ]
+    },
+    {
+      "path": "/tag/:tag",
+      "component": "HomeComponent",
+      "guards": []
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "/#ArticleListComponent.setPageTo:app-article-list button.page-link",
+      "fingerprint": "d9a260720a39c816a0f91bf0478dea869af57eaf8e4ce041e798d7ea52fea164",
+      "route": "/",
+      "target": {
+        "param": "page",
+        "source": "context",
+        "path": [],
+        "integer": true,
+        "minimum": 1
+      },
+      "component": "ArticleListComponent",
+      "componentSelector": "app-article-list",
+      "action": {
+        "owner": "app-article-list",
+        "kind": "button",
+        "selector": "app-article-list button.page-link",
+        "label": "setPageTo",
+        "event": "click",
+        "expression": "setPageTo(pageNumber)",
+        "source": {
+          "file": "src/app/features/article/components/article-list.component.ts",
+          "line": 47
+        }
+      },
+      "fields": [],
+      "handler": "setPageTo",
+      "callPath": [
+        "ArticleListComponent.setPageTo",
+        "ArticleListComponent.runQuery",
+        "ArticlesService.query"
+      ],
+      "bindings": [
+        {
+          "token": "ArticlesService",
+          "service": "ArticlesService",
+          "method": "query",
+          "source": {
+            "file": "src/app/features/article/services/articles.service.ts",
+            "line": 12
+          },
+          "arguments": [
+            "this.query"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "config": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "filters": {
+                    "type": "object",
+                    "properties": {
+                      "tag": {
+                        "type": "string"
+                      },
+                      "author": {
+                        "type": "string"
+                      },
+                      "favorited": {
+                        "type": "string"
+                      },
+                      "limit": {
+                        "type": "number"
+                      },
+                      "offset": {
+                        "type": "number"
+                      }
+                    },
+                    "required": [],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "type",
+                  "filters"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "config"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "articles": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "slug": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "body": {
+                      "type": "string"
+                    },
+                    "tagList": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "createdAt": {
+                      "type": "string"
+                    },
+                    "updatedAt": {
+                      "type": "string"
+                    },
+                    "favorited": {
+                      "type": "boolean"
+                    },
+                    "favoritesCount": {
+                      "type": "number"
+                    },
+                    "author": {
+                      "type": "object",
+                      "properties": {
+                        "username": {
+                          "type": "string"
+                        },
+                        "bio": {
+                          "anyOf": [
+                            {
+                              "type": "null"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "image": {
+                          "anyOf": [
+                            {
+                              "type": "null"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "following": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "username",
+                        "bio",
+                        "image",
+                        "following"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "slug",
+                    "title",
+                    "description",
+                    "body",
+                    "tagList",
+                    "createdAt",
+                    "updatedAt",
+                    "favorited",
+                    "favoritesCount",
+                    "author"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "articlesCount": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "articles",
+              "articlesCount"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "page"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/#FavoriteButtonComponent.toggleFavorite:app-favorite-button button.btn.btn-sm",
+      "fingerprint": "7c37a018fd080cad03c72ce33cd35b5147dfb3572c59edbbf5e76486e0d829f6",
+      "route": "/",
+      "target": {
+        "param": "slug",
+        "source": "component",
+        "path": [
+          "article",
+          "slug"
+        ]
+      },
+      "component": "FavoriteButtonComponent",
+      "componentSelector": "app-favorite-button",
+      "action": {
+        "owner": "app-favorite-button",
+        "kind": "button",
+        "selector": "app-favorite-button button.btn.btn-sm",
+        "label": "toggleFavorite",
+        "event": "click",
+        "expression": "toggleFavorite()",
+        "source": {
+          "file": "src/app/features/article/components/favorite-button.component.ts",
+          "line": 29
+        }
+      },
+      "fields": [],
+      "handler": "toggleFavorite",
+      "callPath": [
+        "FavoriteButtonComponent.toggleFavorite",
+        "ArticlesService.favorite",
+        "FavoriteButtonComponent.toggleFavorite",
+        "ArticlesService.unfavorite"
+      ],
+      "bindings": [
+        {
+          "token": "ArticlesService",
+          "service": "ArticlesService",
+          "method": "favorite",
+          "source": {
+            "file": "src/app/features/article/services/articles.service.ts",
+            "line": 47
+          },
+          "arguments": [
+            "this.article.slug"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "slug": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "slug"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "slug": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "body": {
+                "type": "string"
+              },
+              "tagList": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "createdAt": {
+                "type": "string"
+              },
+              "updatedAt": {
+                "type": "string"
+              },
+              "favorited": {
+                "type": "boolean"
+              },
+              "favoritesCount": {
+                "type": "number"
+              },
+              "author": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string"
+                  },
+                  "bio": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "image": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "following": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "username",
+                  "bio",
+                  "image",
+                  "following"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "slug",
+              "title",
+              "description",
+              "body",
+              "tagList",
+              "createdAt",
+              "updatedAt",
+              "favorited",
+              "favoritesCount",
+              "author"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        },
+        {
+          "token": "ArticlesService",
+          "service": "ArticlesService",
+          "method": "unfavorite",
+          "source": {
+            "file": "src/app/features/article/services/articles.service.ts",
+            "line": 51
+          },
+          "arguments": [
+            "this.article.slug"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "slug": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "slug"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          }
+        },
+        "required": [
+          "slug"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/#FooterComponent.navigate:app-layout-footer a[routerlink]",
+      "fingerprint": "b5da3866377cf82f3ca91ef60b28f0e5a9c9c912b06f4ac3db0e52abc53736a4",
+      "route": "/",
+      "component": "FooterComponent",
+      "componentSelector": "app-layout-footer",
+      "action": {
+        "owner": "app-layout-footer",
+        "kind": "workflow",
+        "selector": "app-layout-footer",
+        "label": "Navigate through authored links",
+        "event": "click",
+        "expression": "routerLink",
+        "source": {
+          "file": "src/app/core/layout/footer.component.html",
+          "line": 3
+        }
+      },
+      "drive": {
+        "buttons": {
+          "param": "route",
+          "choices": [
+            {
+              "value": "/",
+              "selector": "app-layout-footer a.logo-font"
+            }
+          ]
+        }
+      },
+      "fields": [],
+      "handler": "navigate",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "route": {
+            "type": "string",
+            "enum": [
+              "/"
+            ]
+          }
+        },
+        "required": [
+          "route"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate",
+      "global": true
+    },
+    {
+      "id": "/#HomeComponent.navigate:app-home-page a[routerlink]",
+      "fingerprint": "f42c401c05235f90985dde3ae799656fb6ddc1a3cad882e91801c2eb8e61f93f",
+      "route": "/",
+      "component": "HomeComponent",
+      "componentSelector": "app-home-page",
+      "action": {
+        "owner": "app-home-page",
+        "kind": "workflow",
+        "selector": "app-home-page",
+        "label": "Navigate through authored links",
+        "event": "click",
+        "expression": "routerLink",
+        "source": {
+          "file": "src/app/features/article/pages/home/home.component.html",
+          "line": 35
+        }
+      },
+      "drive": {
+        "buttons": {
+          "param": "route",
+          "choices": [
+            {
+              "value": "/",
+              "selector": "app-home-page a.nav-link",
+              "matchText": "Global Feed"
+            }
+          ]
+        }
+      },
+      "fields": [],
+      "handler": "navigate",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "route": {
+            "type": "string",
+            "enum": [
+              "/"
+            ]
+          }
+        },
+        "required": [
+          "route"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/article/:slug#ArticleComponent.addComment:app-article-page form.card.comment-form",
+      "fingerprint": "fdc1c090b0874eca5a45ffec0d635ec0e8a0b08b364d6d0110d8fb8b75d26fa9",
+      "route": "/article/:slug",
+      "routeParams": [
+        "slug"
+      ],
+      "component": "ArticleComponent",
+      "componentSelector": "app-article-page",
+      "action": {
+        "owner": "app-article-page",
+        "kind": "form",
+        "selector": "app-article-page form.card.comment-form",
+        "submitSelector": "button.btn.btn-sm.btn-primary",
+        "label": "Post Comment",
+        "event": "ngSubmit",
+        "expression": "addComment()",
+        "source": {
+          "file": "src/app/features/article/pages/article/article.component.html",
+          "line": 95
+        }
+      },
+      "fields": [
+        {
+          "name": "body",
+          "selector": "textarea.form-control",
+          "element": "textarea",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "handler": "addComment",
+      "callPath": [
+        "ArticleComponent.addComment",
+        "CommentsService.add"
+      ],
+      "bindings": [
+        {
+          "paramKeys": {
+            "payload": "body"
+          },
+          "token": "CommentsService",
+          "service": "CommentsService",
+          "method": "add",
+          "source": {
+            "file": "src/app/features/article/services/comments.service.ts",
+            "line": 15
+          },
+          "arguments": [
+            "article.slug",
+            "this.commentControl.value"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "slug": {
+                "type": "string"
+              },
+              "payload": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "slug",
+              "payload"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "body": {
+                "type": "string"
+              },
+              "createdAt": {
+                "type": "string"
+              },
+              "author": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string"
+                  },
+                  "bio": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "image": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "following": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "username",
+                  "bio",
+                  "image",
+                  "following"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "id",
+              "body",
+              "createdAt",
+              "author"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          },
+          "body": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "slug",
+          "body"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/article/:slug#ArticleComponent.deleteArticle:app-article-page button.btn.btn-sm.btn-outline-danger",
+      "fingerprint": "630bb9af49d75792d37200cb2b57f08450cddd96e8d662396f2151b9e7c779f7",
+      "route": "/article/:slug",
+      "routeParams": [
+        "slug"
+      ],
+      "component": "ArticleComponent",
+      "componentSelector": "app-article-page",
+      "action": {
+        "owner": "app-article-page",
+        "matchText": "Delete Article",
+        "allowDuplicates": true,
+        "kind": "button",
+        "selector": "app-article-page button.btn.btn-sm.btn-outline-danger",
+        "label": "Delete Article",
+        "event": "click",
+        "expression": "deleteArticle()",
+        "source": {
+          "file": "src/app/features/article/pages/article/article.component.html",
+          "line": 26
+        }
+      },
+      "fields": [],
+      "handler": "deleteArticle",
+      "callPath": [
+        "ArticleComponent.deleteArticle",
+        "ArticlesService.delete"
+      ],
+      "bindings": [
+        {
+          "token": "ArticlesService",
+          "service": "ArticlesService",
+          "method": "delete",
+          "source": {
+            "file": "src/app/features/article/services/articles.service.ts",
+            "line": 31
+          },
+          "arguments": [
+            "article.slug"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "slug": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "slug"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          }
+        },
+        "required": [
+          "slug"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/article/:slug#ArticleComponent.deleteComment:app-article-page app-article-comment i.ion-trash-a",
+      "fingerprint": "870c1fb7d4dfe018f5f80e82c741e6bbb87abacf97307f022518c6d899040372",
+      "route": "/article/:slug",
+      "routeParams": [
+        "slug"
+      ],
+      "target": {
+        "param": "commentId",
+        "source": "context",
+        "path": [
+          "id"
+        ]
+      },
+      "component": "ArticleComponent",
+      "componentSelector": "app-article-page",
+      "action": {
+        "owner": "app-article-comment",
+        "kind": "button",
+        "selector": "app-article-page app-article-comment i.ion-trash-a",
+        "label": "deleteComment",
+        "event": "delete",
+        "expression": "deleteComment(comment)",
+        "source": {
+          "file": "src/app/features/article/pages/article/article.component.html",
+          "line": 121
+        }
+      },
+      "fields": [],
+      "handler": "deleteComment",
+      "callPath": [
+        "ArticleComponent.deleteComment",
+        "CommentsService.delete"
+      ],
+      "bindings": [
+        {
+          "token": "CommentsService",
+          "service": "CommentsService",
+          "method": "delete",
+          "source": {
+            "file": "src/app/features/article/services/comments.service.ts",
+            "line": 23
+          },
+          "arguments": [
+            "comment.id",
+            "article.slug"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "commentId": {
+                "type": "string"
+              },
+              "slug": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "commentId",
+              "slug"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          },
+          "commentId": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          }
+        },
+        "required": [
+          "slug",
+          "commentId"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/article/:slug#FavoriteButtonComponent.toggleFavorite:app-favorite-button button.btn.btn-sm",
+      "fingerprint": "999fd58cc4ea5c44dd2c337fa541d5e9e6efd786169b4d3b63523f87f67c7cdd",
+      "route": "/article/:slug",
+      "routeParams": [
+        "slug"
+      ],
+      "target": {
+        "param": "slug",
+        "source": "component",
+        "path": [
+          "article",
+          "slug"
+        ]
+      },
+      "component": "FavoriteButtonComponent",
+      "componentSelector": "app-favorite-button",
+      "action": {
+        "owner": "app-favorite-button",
+        "kind": "button",
+        "selector": "app-favorite-button button.btn.btn-sm",
+        "label": "toggleFavorite",
+        "event": "click",
+        "expression": "toggleFavorite()",
+        "source": {
+          "file": "src/app/features/article/components/favorite-button.component.ts",
+          "line": 29
+        }
+      },
+      "fields": [],
+      "handler": "toggleFavorite",
+      "callPath": [
+        "FavoriteButtonComponent.toggleFavorite",
+        "ArticlesService.favorite",
+        "FavoriteButtonComponent.toggleFavorite",
+        "ArticlesService.unfavorite"
+      ],
+      "bindings": [
+        {
+          "token": "ArticlesService",
+          "service": "ArticlesService",
+          "method": "favorite",
+          "source": {
+            "file": "src/app/features/article/services/articles.service.ts",
+            "line": 47
+          },
+          "arguments": [
+            "this.article.slug"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "slug": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "slug"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "slug": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "body": {
+                "type": "string"
+              },
+              "tagList": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "createdAt": {
+                "type": "string"
+              },
+              "updatedAt": {
+                "type": "string"
+              },
+              "favorited": {
+                "type": "boolean"
+              },
+              "favoritesCount": {
+                "type": "number"
+              },
+              "author": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string"
+                  },
+                  "bio": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "image": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "following": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "username",
+                  "bio",
+                  "image",
+                  "following"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "slug",
+              "title",
+              "description",
+              "body",
+              "tagList",
+              "createdAt",
+              "updatedAt",
+              "favorited",
+              "favoritesCount",
+              "author"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        },
+        {
+          "token": "ArticlesService",
+          "service": "ArticlesService",
+          "method": "unfavorite",
+          "source": {
+            "file": "src/app/features/article/services/articles.service.ts",
+            "line": 51
+          },
+          "arguments": [
+            "this.article.slug"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "slug": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "slug"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          }
+        },
+        "required": [
+          "slug"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/article/:slug#FollowButtonComponent.toggleFollowing:app-follow-button button.btn.btn-sm.action-btn",
+      "fingerprint": "c93297a379681bc1d1c3693854c0a9c2aeb5570c86cfec53425ba3060e0983b0",
+      "route": "/article/:slug",
+      "routeParams": [
+        "slug"
+      ],
+      "target": {
+        "param": "username",
+        "source": "component",
+        "path": [
+          "profile",
+          "username"
+        ]
+      },
+      "component": "FollowButtonComponent",
+      "componentSelector": "app-follow-button",
+      "action": {
+        "owner": "app-follow-button",
+        "kind": "button",
+        "selector": "app-follow-button button.btn.btn-sm.action-btn",
+        "label": "&nbsp;",
+        "event": "click",
+        "expression": "toggleFollowing()",
+        "source": {
+          "file": "src/app/features/profile/components/follow-button.component.ts",
+          "line": 30
+        }
+      },
+      "fields": [],
+      "handler": "toggleFollowing",
+      "callPath": [
+        "FollowButtonComponent.toggleFollowing",
+        "ProfileService.follow",
+        "FollowButtonComponent.toggleFollowing",
+        "ProfileService.unfollow"
+      ],
+      "bindings": [
+        {
+          "token": "ProfileService",
+          "service": "ProfileService",
+          "method": "follow",
+          "source": {
+            "file": "src/app/features/profile/services/profile.service.ts",
+            "line": 25
+          },
+          "arguments": [
+            "this.profile.username"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "username": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "username"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "username": {
+                "type": "string"
+              },
+              "bio": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "image": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "following": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "username",
+              "bio",
+              "image",
+              "following"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        },
+        {
+          "token": "ProfileService",
+          "service": "ProfileService",
+          "method": "unfollow",
+          "source": {
+            "file": "src/app/features/profile/services/profile.service.ts",
+            "line": 31
+          },
+          "arguments": [
+            "this.profile.username"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "username": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "username"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "username": {
+                "type": "string"
+              },
+              "bio": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "image": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "following": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "username",
+              "bio",
+              "image",
+              "following"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          },
+          "username": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          }
+        },
+        "required": [
+          "slug",
+          "username"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/editor/:slug#EditorComponent.removeTag:app-editor-page i.ion-close-round",
+      "fingerprint": "909704ecc96f2d95e7fb8885b41b94b33226f85478c6f5d983efda73664de8af",
+      "route": "/editor/:slug",
+      "routeParams": [
+        "slug"
+      ],
+      "target": {
+        "param": "tag",
+        "source": "context",
+        "path": []
+      },
+      "component": "EditorComponent",
+      "componentSelector": "app-editor-page",
+      "action": {
+        "owner": "app-editor-page",
+        "kind": "button",
+        "selector": "app-editor-page i.ion-close-round",
+        "label": "removeTag",
+        "event": "click",
+        "expression": "removeTag(tag)",
+        "source": {
+          "file": "src/app/features/article/pages/editor/editor.component.html",
+          "line": 51
+        }
+      },
+      "fields": [],
+      "handler": "removeTag",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          },
+          "tag": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          }
+        },
+        "required": [
+          "slug",
+          "tag"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [
+        "requireAuth"
+      ],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/editor/:slug#EditorComponent.submitForm:app-editor-page button.btn.btn-lg.pull-xs-right.btn-primary",
+      "fingerprint": "bf49356800ef2a20a13f3bd7ae102c863d5d64077955a05617d943d8a768cd91",
+      "route": "/editor/:slug",
+      "routeParams": [
+        "slug"
+      ],
+      "component": "EditorComponent",
+      "componentSelector": "app-editor-page",
+      "action": {
+        "owner": "app-editor-page",
+        "kind": "form",
+        "selector": "app-editor-page form",
+        "label": "Publish Article",
+        "event": "click",
+        "expression": "submitForm()",
+        "source": {
+          "file": "src/app/features/article/pages/editor/editor.component.html",
+          "line": 58
+        }
+      },
+      "fields": [
+        {
+          "name": "title",
+          "selector": "input[formcontrolname=\"title\"]",
+          "element": "input",
+          "type": "text",
+          "required": false,
+          "supported": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "description",
+          "selector": "input[formcontrolname=\"description\"]",
+          "element": "input",
+          "type": "text",
+          "required": false,
+          "supported": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "body",
+          "selector": "textarea[formcontrolname=\"body\"]",
+          "element": "textarea",
+          "type": "text",
+          "required": false,
+          "supported": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "plan": {
+        "mode": "submit",
+        "root": "app-editor-page",
+        "submit": {
+          "selector": "button.btn.btn-lg.pull-xs-right.btn-primary"
+        },
+        "repeats": [],
+        "lists": [
+          {
+            "name": "tagList",
+            "input": {
+              "selector": "input.form-control"
+            },
+            "commit": "enter",
+            "minLength": 1,
+            "unique": true
+          }
+        ]
+      },
+      "handler": "submitForm",
+      "callPath": [
+        "EditorComponent.submitForm",
+        "ArticlesService.update",
+        "EditorComponent.submitForm",
+        "ArticlesService.create"
+      ],
+      "bindings": [
+        {
+          "paramKeys": {
+            "article": "article"
+          },
+          "token": "ArticlesService",
+          "service": "ArticlesService",
+          "method": "update",
+          "source": {
+            "file": "src/app/features/article/services/articles.service.ts",
+            "line": 39
+          },
+          "arguments": [
+            "{ ...articleData, slug }"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "article": {
+                "type": "object",
+                "properties": {
+                  "slug": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "body": {
+                    "type": "string"
+                  },
+                  "tagList": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "createdAt": {
+                    "type": "string"
+                  },
+                  "updatedAt": {
+                    "type": "string"
+                  },
+                  "favorited": {
+                    "type": "boolean"
+                  },
+                  "favoritesCount": {
+                    "type": "number"
+                  },
+                  "author": {
+                    "type": "object",
+                    "properties": {
+                      "username": {
+                        "type": "string"
+                      },
+                      "bio": {
+                        "anyOf": [
+                          {
+                            "type": "null"
+                          },
+                          {
+                            "type": "string"
+                          }
+                        ]
+                      },
+                      "image": {
+                        "anyOf": [
+                          {
+                            "type": "null"
+                          },
+                          {
+                            "type": "string"
+                          }
+                        ]
+                      },
+                      "following": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "username",
+                      "bio",
+                      "image",
+                      "following"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "article"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "slug": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "body": {
+                "type": "string"
+              },
+              "tagList": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "createdAt": {
+                "type": "string"
+              },
+              "updatedAt": {
+                "type": "string"
+              },
+              "favorited": {
+                "type": "boolean"
+              },
+              "favoritesCount": {
+                "type": "number"
+              },
+              "author": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string"
+                  },
+                  "bio": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "image": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "following": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "username",
+                  "bio",
+                  "image",
+                  "following"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "slug",
+              "title",
+              "description",
+              "body",
+              "tagList",
+              "createdAt",
+              "updatedAt",
+              "favorited",
+              "favoritesCount",
+              "author"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        },
+        {
+          "paramKeys": {
+            "article": "article"
+          },
+          "token": "ArticlesService",
+          "service": "ArticlesService",
+          "method": "create",
+          "source": {
+            "file": "src/app/features/article/services/articles.service.ts",
+            "line": 35
+          },
+          "arguments": [
+            "articleData"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "article": {
+                "type": "object",
+                "properties": {
+                  "slug": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "body": {
+                    "type": "string"
+                  },
+                  "tagList": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "createdAt": {
+                    "type": "string"
+                  },
+                  "updatedAt": {
+                    "type": "string"
+                  },
+                  "favorited": {
+                    "type": "boolean"
+                  },
+                  "favoritesCount": {
+                    "type": "number"
+                  },
+                  "author": {
+                    "type": "object",
+                    "properties": {
+                      "username": {
+                        "type": "string"
+                      },
+                      "bio": {
+                        "anyOf": [
+                          {
+                            "type": "null"
+                          },
+                          {
+                            "type": "string"
+                          }
+                        ]
+                      },
+                      "image": {
+                        "anyOf": [
+                          {
+                            "type": "null"
+                          },
+                          {
+                            "type": "string"
+                          }
+                        ]
+                      },
+                      "following": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "username",
+                      "bio",
+                      "image",
+                      "following"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "article"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "slug": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "body": {
+                "type": "string"
+              },
+              "tagList": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "createdAt": {
+                "type": "string"
+              },
+              "updatedAt": {
+                "type": "string"
+              },
+              "favorited": {
+                "type": "boolean"
+              },
+              "favoritesCount": {
+                "type": "number"
+              },
+              "author": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string"
+                  },
+                  "bio": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "image": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "following": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "username",
+                  "bio",
+                  "image",
+                  "following"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "slug",
+              "title",
+              "description",
+              "body",
+              "tagList",
+              "createdAt",
+              "updatedAt",
+              "favorited",
+              "favoritesCount",
+              "author"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "slug"
+        ],
+        "properties": {
+          "slug": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string"
+          },
+          "tagList": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          }
+        }
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [
+        "requireAuth"
+      ],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/editor#EditorComponent.removeTag:app-editor-page i.ion-close-round",
+      "fingerprint": "2729b6863199191934795e0b7faaab3df1ec658ee62b877e36207664d1ef9e2a",
+      "route": "/editor",
+      "target": {
+        "param": "tag",
+        "source": "context",
+        "path": []
+      },
+      "component": "EditorComponent",
+      "componentSelector": "app-editor-page",
+      "action": {
+        "owner": "app-editor-page",
+        "kind": "button",
+        "selector": "app-editor-page i.ion-close-round",
+        "label": "removeTag",
+        "event": "click",
+        "expression": "removeTag(tag)",
+        "source": {
+          "file": "src/app/features/article/pages/editor/editor.component.html",
+          "line": 51
+        }
+      },
+      "fields": [],
+      "handler": "removeTag",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "tag": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          }
+        },
+        "required": [
+          "tag"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [
+        "requireAuth"
+      ],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/editor#EditorComponent.submitForm:app-editor-page button.btn.btn-lg.pull-xs-right.btn-primary",
+      "fingerprint": "0d0f95c4913f5df42b7c1db644104e3bc74d67f036e2b8defffe07db02fb3ea3",
+      "route": "/editor",
+      "component": "EditorComponent",
+      "componentSelector": "app-editor-page",
+      "action": {
+        "owner": "app-editor-page",
+        "kind": "form",
+        "selector": "app-editor-page form",
+        "label": "Publish Article",
+        "event": "click",
+        "expression": "submitForm()",
+        "source": {
+          "file": "src/app/features/article/pages/editor/editor.component.html",
+          "line": 58
+        }
+      },
+      "fields": [
+        {
+          "name": "title",
+          "selector": "input[formcontrolname=\"title\"]",
+          "element": "input",
+          "type": "text",
+          "required": false,
+          "supported": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "description",
+          "selector": "input[formcontrolname=\"description\"]",
+          "element": "input",
+          "type": "text",
+          "required": false,
+          "supported": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "body",
+          "selector": "textarea[formcontrolname=\"body\"]",
+          "element": "textarea",
+          "type": "text",
+          "required": false,
+          "supported": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "plan": {
+        "mode": "submit",
+        "root": "app-editor-page",
+        "submit": {
+          "selector": "button.btn.btn-lg.pull-xs-right.btn-primary"
+        },
+        "repeats": [],
+        "lists": [
+          {
+            "name": "tagList",
+            "input": {
+              "selector": "input.form-control"
+            },
+            "commit": "enter",
+            "minLength": 1,
+            "unique": true
+          }
+        ]
+      },
+      "handler": "submitForm",
+      "callPath": [
+        "EditorComponent.submitForm",
+        "ArticlesService.update",
+        "EditorComponent.submitForm",
+        "ArticlesService.create"
+      ],
+      "bindings": [
+        {
+          "paramKeys": {
+            "article": "article"
+          },
+          "token": "ArticlesService",
+          "service": "ArticlesService",
+          "method": "update",
+          "source": {
+            "file": "src/app/features/article/services/articles.service.ts",
+            "line": 39
+          },
+          "arguments": [
+            "{ ...articleData, slug }"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "article": {
+                "type": "object",
+                "properties": {
+                  "slug": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "body": {
+                    "type": "string"
+                  },
+                  "tagList": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "createdAt": {
+                    "type": "string"
+                  },
+                  "updatedAt": {
+                    "type": "string"
+                  },
+                  "favorited": {
+                    "type": "boolean"
+                  },
+                  "favoritesCount": {
+                    "type": "number"
+                  },
+                  "author": {
+                    "type": "object",
+                    "properties": {
+                      "username": {
+                        "type": "string"
+                      },
+                      "bio": {
+                        "anyOf": [
+                          {
+                            "type": "null"
+                          },
+                          {
+                            "type": "string"
+                          }
+                        ]
+                      },
+                      "image": {
+                        "anyOf": [
+                          {
+                            "type": "null"
+                          },
+                          {
+                            "type": "string"
+                          }
+                        ]
+                      },
+                      "following": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "username",
+                      "bio",
+                      "image",
+                      "following"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "article"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "slug": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "body": {
+                "type": "string"
+              },
+              "tagList": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "createdAt": {
+                "type": "string"
+              },
+              "updatedAt": {
+                "type": "string"
+              },
+              "favorited": {
+                "type": "boolean"
+              },
+              "favoritesCount": {
+                "type": "number"
+              },
+              "author": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string"
+                  },
+                  "bio": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "image": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "following": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "username",
+                  "bio",
+                  "image",
+                  "following"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "slug",
+              "title",
+              "description",
+              "body",
+              "tagList",
+              "createdAt",
+              "updatedAt",
+              "favorited",
+              "favoritesCount",
+              "author"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        },
+        {
+          "paramKeys": {
+            "article": "article"
+          },
+          "token": "ArticlesService",
+          "service": "ArticlesService",
+          "method": "create",
+          "source": {
+            "file": "src/app/features/article/services/articles.service.ts",
+            "line": 35
+          },
+          "arguments": [
+            "articleData"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "article": {
+                "type": "object",
+                "properties": {
+                  "slug": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "body": {
+                    "type": "string"
+                  },
+                  "tagList": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "createdAt": {
+                    "type": "string"
+                  },
+                  "updatedAt": {
+                    "type": "string"
+                  },
+                  "favorited": {
+                    "type": "boolean"
+                  },
+                  "favoritesCount": {
+                    "type": "number"
+                  },
+                  "author": {
+                    "type": "object",
+                    "properties": {
+                      "username": {
+                        "type": "string"
+                      },
+                      "bio": {
+                        "anyOf": [
+                          {
+                            "type": "null"
+                          },
+                          {
+                            "type": "string"
+                          }
+                        ]
+                      },
+                      "image": {
+                        "anyOf": [
+                          {
+                            "type": "null"
+                          },
+                          {
+                            "type": "string"
+                          }
+                        ]
+                      },
+                      "following": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "username",
+                      "bio",
+                      "image",
+                      "following"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "article"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "slug": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "body": {
+                "type": "string"
+              },
+              "tagList": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "createdAt": {
+                "type": "string"
+              },
+              "updatedAt": {
+                "type": "string"
+              },
+              "favorited": {
+                "type": "boolean"
+              },
+              "favoritesCount": {
+                "type": "number"
+              },
+              "author": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string"
+                  },
+                  "bio": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "image": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "following": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "username",
+                  "bio",
+                  "image",
+                  "following"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "slug",
+              "title",
+              "description",
+              "body",
+              "tagList",
+              "createdAt",
+              "updatedAt",
+              "favorited",
+              "favoritesCount",
+              "author"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string"
+          },
+          "tagList": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          }
+        }
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [
+        "requireAuth"
+      ],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/login#AuthComponent.submitForm:app-auth-page form",
+      "fingerprint": "cd775d90ce2127413756283f9cf7ff4e357bcf4607e128f7b8c22ef94ce59fcd",
+      "route": "/login",
+      "component": "AuthComponent",
+      "componentSelector": "app-auth-page",
+      "action": {
+        "owner": "app-auth-page",
+        "kind": "form",
+        "selector": "app-auth-page form",
+        "submitSelector": "button.btn.btn-lg.btn-primary.pull-xs-right",
+        "label": "submitForm",
+        "event": "ngSubmit",
+        "expression": "submitForm()",
+        "source": {
+          "file": "src/app/core/auth/auth.component.html",
+          "line": 16
+        }
+      },
+      "fields": [
+        {
+          "name": "email",
+          "selector": "input[formcontrolname=\"email\"]",
+          "element": "input",
+          "type": "email",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+            "minLength": 1
+          }
+        },
+        {
+          "name": "password",
+          "selector": "input[formcontrolname=\"password\"]",
+          "element": "input",
+          "type": "password",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "writeOnly": true,
+            "minLength": 1
+          }
+        }
+      ],
+      "handler": "submitForm",
+      "callPath": [
+        "AuthComponent.submitForm",
+        "UserService.login",
+        "AuthComponent.submitForm",
+        "UserService.register"
+      ],
+      "bindings": [
+        {
+          "paramKeys": {
+            "credentials": "user"
+          },
+          "token": "UserService",
+          "service": "UserService",
+          "method": "login",
+          "source": {
+            "file": "src/app/core/auth/services/user.service.ts",
+            "line": 74
+          },
+          "arguments": [
+            "this.authForm.value as { email: string; password: string }"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "credentials": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "email",
+                  "password"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "credentials"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "user": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "token": {
+                    "type": "string"
+                  },
+                  "username": {
+                    "type": "string"
+                  },
+                  "bio": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "image": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "email",
+                  "token",
+                  "username",
+                  "bio",
+                  "image"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "user"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        },
+        {
+          "paramKeys": {
+            "credentials": "user"
+          },
+          "token": "UserService",
+          "service": "UserService",
+          "method": "register",
+          "source": {
+            "file": "src/app/core/auth/services/user.service.ts",
+            "line": 80
+          },
+          "arguments": [
+            "this.authForm.value as {\n              email: string;\n              password: string;\n              username: string;\n            }"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "credentials": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "username",
+                  "email",
+                  "password"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "credentials"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "user": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "token": {
+                    "type": "string"
+                  },
+                  "username": {
+                    "type": "string"
+                  },
+                  "bio": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "image": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "email",
+                  "token",
+                  "username",
+                  "bio",
+                  "image"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "user"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+            "minLength": 1
+          },
+          "password": {
+            "type": "string",
+            "writeOnly": true,
+            "minLength": 1
+          }
+        },
+        "required": [
+          "email",
+          "password"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [
+        "() => inject(UserService).isAuthenticated.pipe(map(isAuth => !isAuth))"
+      ],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/profile/:username/favorites#ArticleListComponent.setPageTo:app-article-list button.page-link",
+      "fingerprint": "50d9989a13d25a7bea59543e95796f50fd83baa7980eefe2407a0d3316c61dd0",
+      "route": "/profile/:username/favorites",
+      "routeParams": [
+        "username"
+      ],
+      "target": {
+        "param": "page",
+        "source": "context",
+        "path": [],
+        "integer": true,
+        "minimum": 1
+      },
+      "component": "ArticleListComponent",
+      "componentSelector": "app-article-list",
+      "action": {
+        "owner": "app-article-list",
+        "kind": "button",
+        "selector": "app-article-list button.page-link",
+        "label": "setPageTo",
+        "event": "click",
+        "expression": "setPageTo(pageNumber)",
+        "source": {
+          "file": "src/app/features/article/components/article-list.component.ts",
+          "line": 47
+        }
+      },
+      "fields": [],
+      "handler": "setPageTo",
+      "callPath": [
+        "ArticleListComponent.setPageTo",
+        "ArticleListComponent.runQuery",
+        "ArticlesService.query"
+      ],
+      "bindings": [
+        {
+          "token": "ArticlesService",
+          "service": "ArticlesService",
+          "method": "query",
+          "source": {
+            "file": "src/app/features/article/services/articles.service.ts",
+            "line": 12
+          },
+          "arguments": [
+            "this.query"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "config": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "filters": {
+                    "type": "object",
+                    "properties": {
+                      "tag": {
+                        "type": "string"
+                      },
+                      "author": {
+                        "type": "string"
+                      },
+                      "favorited": {
+                        "type": "string"
+                      },
+                      "limit": {
+                        "type": "number"
+                      },
+                      "offset": {
+                        "type": "number"
+                      }
+                    },
+                    "required": [],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "type",
+                  "filters"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "config"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "articles": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "slug": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "body": {
+                      "type": "string"
+                    },
+                    "tagList": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "createdAt": {
+                      "type": "string"
+                    },
+                    "updatedAt": {
+                      "type": "string"
+                    },
+                    "favorited": {
+                      "type": "boolean"
+                    },
+                    "favoritesCount": {
+                      "type": "number"
+                    },
+                    "author": {
+                      "type": "object",
+                      "properties": {
+                        "username": {
+                          "type": "string"
+                        },
+                        "bio": {
+                          "anyOf": [
+                            {
+                              "type": "null"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "image": {
+                          "anyOf": [
+                            {
+                              "type": "null"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "following": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "username",
+                        "bio",
+                        "image",
+                        "following"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "slug",
+                    "title",
+                    "description",
+                    "body",
+                    "tagList",
+                    "createdAt",
+                    "updatedAt",
+                    "favorited",
+                    "favoritesCount",
+                    "author"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "articlesCount": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "articles",
+              "articlesCount"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          },
+          "page": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "username",
+          "page"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/profile/:username/favorites#FavoriteButtonComponent.toggleFavorite:app-favorite-button button.btn.btn-sm",
+      "fingerprint": "e5e841d0b880c9c7a4310f16757705b04f81b18e72c6fa57a79ebcc226712b90",
+      "route": "/profile/:username/favorites",
+      "routeParams": [
+        "username"
+      ],
+      "target": {
+        "param": "slug",
+        "source": "component",
+        "path": [
+          "article",
+          "slug"
+        ]
+      },
+      "component": "FavoriteButtonComponent",
+      "componentSelector": "app-favorite-button",
+      "action": {
+        "owner": "app-favorite-button",
+        "kind": "button",
+        "selector": "app-favorite-button button.btn.btn-sm",
+        "label": "toggleFavorite",
+        "event": "click",
+        "expression": "toggleFavorite()",
+        "source": {
+          "file": "src/app/features/article/components/favorite-button.component.ts",
+          "line": 29
+        }
+      },
+      "fields": [],
+      "handler": "toggleFavorite",
+      "callPath": [
+        "FavoriteButtonComponent.toggleFavorite",
+        "ArticlesService.favorite",
+        "FavoriteButtonComponent.toggleFavorite",
+        "ArticlesService.unfavorite"
+      ],
+      "bindings": [
+        {
+          "token": "ArticlesService",
+          "service": "ArticlesService",
+          "method": "favorite",
+          "source": {
+            "file": "src/app/features/article/services/articles.service.ts",
+            "line": 47
+          },
+          "arguments": [
+            "this.article.slug"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "slug": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "slug"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "slug": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "body": {
+                "type": "string"
+              },
+              "tagList": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "createdAt": {
+                "type": "string"
+              },
+              "updatedAt": {
+                "type": "string"
+              },
+              "favorited": {
+                "type": "boolean"
+              },
+              "favoritesCount": {
+                "type": "number"
+              },
+              "author": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string"
+                  },
+                  "bio": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "image": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "following": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "username",
+                  "bio",
+                  "image",
+                  "following"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "slug",
+              "title",
+              "description",
+              "body",
+              "tagList",
+              "createdAt",
+              "updatedAt",
+              "favorited",
+              "favoritesCount",
+              "author"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        },
+        {
+          "token": "ArticlesService",
+          "service": "ArticlesService",
+          "method": "unfavorite",
+          "source": {
+            "file": "src/app/features/article/services/articles.service.ts",
+            "line": 51
+          },
+          "arguments": [
+            "this.article.slug"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "slug": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "slug"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          },
+          "slug": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          }
+        },
+        "required": [
+          "username",
+          "slug"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/profile/:username#ArticleListComponent.setPageTo:app-article-list button.page-link",
+      "fingerprint": "6f334984d8d3c3db924d134af64f07f037735b85729e189b2979fa9030f9397e",
+      "route": "/profile/:username",
+      "routeParams": [
+        "username"
+      ],
+      "target": {
+        "param": "page",
+        "source": "context",
+        "path": [],
+        "integer": true,
+        "minimum": 1
+      },
+      "component": "ArticleListComponent",
+      "componentSelector": "app-article-list",
+      "action": {
+        "owner": "app-article-list",
+        "kind": "button",
+        "selector": "app-article-list button.page-link",
+        "label": "setPageTo",
+        "event": "click",
+        "expression": "setPageTo(pageNumber)",
+        "source": {
+          "file": "src/app/features/article/components/article-list.component.ts",
+          "line": 47
+        }
+      },
+      "fields": [],
+      "handler": "setPageTo",
+      "callPath": [
+        "ArticleListComponent.setPageTo",
+        "ArticleListComponent.runQuery",
+        "ArticlesService.query"
+      ],
+      "bindings": [
+        {
+          "token": "ArticlesService",
+          "service": "ArticlesService",
+          "method": "query",
+          "source": {
+            "file": "src/app/features/article/services/articles.service.ts",
+            "line": 12
+          },
+          "arguments": [
+            "this.query"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "config": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "filters": {
+                    "type": "object",
+                    "properties": {
+                      "tag": {
+                        "type": "string"
+                      },
+                      "author": {
+                        "type": "string"
+                      },
+                      "favorited": {
+                        "type": "string"
+                      },
+                      "limit": {
+                        "type": "number"
+                      },
+                      "offset": {
+                        "type": "number"
+                      }
+                    },
+                    "required": [],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "type",
+                  "filters"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "config"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "articles": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "slug": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "body": {
+                      "type": "string"
+                    },
+                    "tagList": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "createdAt": {
+                      "type": "string"
+                    },
+                    "updatedAt": {
+                      "type": "string"
+                    },
+                    "favorited": {
+                      "type": "boolean"
+                    },
+                    "favoritesCount": {
+                      "type": "number"
+                    },
+                    "author": {
+                      "type": "object",
+                      "properties": {
+                        "username": {
+                          "type": "string"
+                        },
+                        "bio": {
+                          "anyOf": [
+                            {
+                              "type": "null"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "image": {
+                          "anyOf": [
+                            {
+                              "type": "null"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "following": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "username",
+                        "bio",
+                        "image",
+                        "following"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "slug",
+                    "title",
+                    "description",
+                    "body",
+                    "tagList",
+                    "createdAt",
+                    "updatedAt",
+                    "favorited",
+                    "favoritesCount",
+                    "author"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "articlesCount": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "articles",
+              "articlesCount"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          },
+          "page": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "username",
+          "page"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate",
+      "allowedRoutes": [
+        "/profile/:username/favorites"
+      ]
+    },
+    {
+      "id": "/profile/:username#FavoriteButtonComponent.toggleFavorite:app-favorite-button button.btn.btn-sm",
+      "fingerprint": "c031e6f46fc75b8dc11f6c35b444f0f3e607ea65aec551115c35f398ef278b13",
+      "route": "/profile/:username",
+      "routeParams": [
+        "username"
+      ],
+      "target": {
+        "param": "slug",
+        "source": "component",
+        "path": [
+          "article",
+          "slug"
+        ]
+      },
+      "component": "FavoriteButtonComponent",
+      "componentSelector": "app-favorite-button",
+      "action": {
+        "owner": "app-favorite-button",
+        "kind": "button",
+        "selector": "app-favorite-button button.btn.btn-sm",
+        "label": "toggleFavorite",
+        "event": "click",
+        "expression": "toggleFavorite()",
+        "source": {
+          "file": "src/app/features/article/components/favorite-button.component.ts",
+          "line": 29
+        }
+      },
+      "fields": [],
+      "handler": "toggleFavorite",
+      "callPath": [
+        "FavoriteButtonComponent.toggleFavorite",
+        "ArticlesService.favorite",
+        "FavoriteButtonComponent.toggleFavorite",
+        "ArticlesService.unfavorite"
+      ],
+      "bindings": [
+        {
+          "token": "ArticlesService",
+          "service": "ArticlesService",
+          "method": "favorite",
+          "source": {
+            "file": "src/app/features/article/services/articles.service.ts",
+            "line": 47
+          },
+          "arguments": [
+            "this.article.slug"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "slug": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "slug"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "slug": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "body": {
+                "type": "string"
+              },
+              "tagList": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "createdAt": {
+                "type": "string"
+              },
+              "updatedAt": {
+                "type": "string"
+              },
+              "favorited": {
+                "type": "boolean"
+              },
+              "favoritesCount": {
+                "type": "number"
+              },
+              "author": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string"
+                  },
+                  "bio": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "image": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "following": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "username",
+                  "bio",
+                  "image",
+                  "following"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "slug",
+              "title",
+              "description",
+              "body",
+              "tagList",
+              "createdAt",
+              "updatedAt",
+              "favorited",
+              "favoritesCount",
+              "author"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        },
+        {
+          "token": "ArticlesService",
+          "service": "ArticlesService",
+          "method": "unfavorite",
+          "source": {
+            "file": "src/app/features/article/services/articles.service.ts",
+            "line": 51
+          },
+          "arguments": [
+            "this.article.slug"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "slug": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "slug"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          },
+          "slug": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          }
+        },
+        "required": [
+          "username",
+          "slug"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate",
+      "allowedRoutes": [
+        "/profile/:username/favorites"
+      ]
+    },
+    {
+      "id": "/profile/:username#FollowButtonComponent.toggleFollowing:app-follow-button button.btn.btn-sm.action-btn",
+      "fingerprint": "c6ff3cd7ebebda0ecc07c6b9b2500d4fbc57087f159b8691fea6d8e53789c2e4",
+      "route": "/profile/:username",
+      "routeParams": [
+        "username"
+      ],
+      "target": {
+        "param": "username",
+        "source": "component",
+        "path": [
+          "profile",
+          "username"
+        ]
+      },
+      "component": "FollowButtonComponent",
+      "componentSelector": "app-follow-button",
+      "action": {
+        "owner": "app-follow-button",
+        "kind": "button",
+        "selector": "app-follow-button button.btn.btn-sm.action-btn",
+        "label": "&nbsp;",
+        "event": "click",
+        "expression": "toggleFollowing()",
+        "source": {
+          "file": "src/app/features/profile/components/follow-button.component.ts",
+          "line": 30
+        }
+      },
+      "fields": [],
+      "handler": "toggleFollowing",
+      "callPath": [
+        "FollowButtonComponent.toggleFollowing",
+        "ProfileService.follow",
+        "FollowButtonComponent.toggleFollowing",
+        "ProfileService.unfollow"
+      ],
+      "bindings": [
+        {
+          "token": "ProfileService",
+          "service": "ProfileService",
+          "method": "follow",
+          "source": {
+            "file": "src/app/features/profile/services/profile.service.ts",
+            "line": 25
+          },
+          "arguments": [
+            "this.profile.username"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "username": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "username"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "username": {
+                "type": "string"
+              },
+              "bio": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "image": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "following": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "username",
+              "bio",
+              "image",
+              "following"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        },
+        {
+          "token": "ProfileService",
+          "service": "ProfileService",
+          "method": "unfollow",
+          "source": {
+            "file": "src/app/features/profile/services/profile.service.ts",
+            "line": 31
+          },
+          "arguments": [
+            "this.profile.username"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "username": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "username"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "username": {
+                "type": "string"
+              },
+              "bio": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "image": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "following": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "username",
+              "bio",
+              "image",
+              "following"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          }
+        },
+        "required": [
+          "username"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate",
+      "allowedRoutes": [
+        "/profile/:username/favorites"
+      ]
+    },
+    {
+      "id": "/register#AuthComponent.submitForm:app-auth-page form",
+      "fingerprint": "5bd581f5dcf5542a6aa3ec76b2012a98ffaf1667fca7a8fd51a13e18d823be4f",
+      "route": "/register",
+      "component": "AuthComponent",
+      "componentSelector": "app-auth-page",
+      "action": {
+        "owner": "app-auth-page",
+        "kind": "form",
+        "selector": "app-auth-page form",
+        "submitSelector": "button.btn.btn-lg.btn-primary.pull-xs-right",
+        "label": "submitForm",
+        "event": "ngSubmit",
+        "expression": "submitForm()",
+        "source": {
+          "file": "src/app/core/auth/auth.component.html",
+          "line": 16
+        }
+      },
+      "fields": [
+        {
+          "name": "username",
+          "selector": "input[formcontrolname=\"username\"]",
+          "element": "input",
+          "type": "text",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        {
+          "name": "email",
+          "selector": "input[formcontrolname=\"email\"]",
+          "element": "input",
+          "type": "email",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+            "minLength": 1
+          }
+        },
+        {
+          "name": "password",
+          "selector": "input[formcontrolname=\"password\"]",
+          "element": "input",
+          "type": "password",
+          "required": true,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "writeOnly": true,
+            "minLength": 1
+          }
+        }
+      ],
+      "handler": "submitForm",
+      "callPath": [
+        "AuthComponent.submitForm",
+        "UserService.login",
+        "AuthComponent.submitForm",
+        "UserService.register"
+      ],
+      "bindings": [
+        {
+          "paramKeys": {
+            "credentials": "user"
+          },
+          "token": "UserService",
+          "service": "UserService",
+          "method": "login",
+          "source": {
+            "file": "src/app/core/auth/services/user.service.ts",
+            "line": 74
+          },
+          "arguments": [
+            "this.authForm.value as { email: string; password: string }"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "credentials": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "email",
+                  "password"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "credentials"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "user": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "token": {
+                    "type": "string"
+                  },
+                  "username": {
+                    "type": "string"
+                  },
+                  "bio": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "image": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "email",
+                  "token",
+                  "username",
+                  "bio",
+                  "image"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "user"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        },
+        {
+          "paramKeys": {
+            "credentials": "user"
+          },
+          "token": "UserService",
+          "service": "UserService",
+          "method": "register",
+          "source": {
+            "file": "src/app/core/auth/services/user.service.ts",
+            "line": 80
+          },
+          "arguments": [
+            "this.authForm.value as {\n              email: string;\n              password: string;\n              username: string;\n            }"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "credentials": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "username",
+                  "email",
+                  "password"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "credentials"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "user": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "token": {
+                    "type": "string"
+                  },
+                  "username": {
+                    "type": "string"
+                  },
+                  "bio": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "image": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "email",
+                  "token",
+                  "username",
+                  "bio",
+                  "image"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "user"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "minLength": 1
+          },
+          "email": {
+            "type": "string",
+            "pattern": "^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+            "minLength": 1
+          },
+          "password": {
+            "type": "string",
+            "writeOnly": true,
+            "minLength": 1
+          }
+        },
+        "required": [
+          "username",
+          "email",
+          "password"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [
+        "() => inject(UserService).isAuthenticated.pipe(map(isAuth => !isAuth))"
+      ],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/settings#SettingsComponent.logout:app-settings-page button.btn.btn-outline-danger",
+      "fingerprint": "b272926ddfe454037a91f0bca58d722e5b8193d461acc53ce357f546f976426a",
+      "route": "/settings",
+      "component": "SettingsComponent",
+      "componentSelector": "app-settings-page",
+      "action": {
+        "owner": "app-settings-page",
+        "matchText": "Or click here to logout.",
+        "kind": "button",
+        "selector": "app-settings-page button.btn.btn-outline-danger",
+        "label": "Or click here to logout.",
+        "event": "click",
+        "expression": "logout()",
+        "source": {
+          "file": "src/app/features/settings/settings.component.html",
+          "line": 69
+        }
+      },
+      "fields": [],
+      "handler": "logout",
+      "callPath": [
+        "SettingsComponent.logout",
+        "UserService.logout"
+      ],
+      "bindings": [
+        {
+          "token": "UserService",
+          "service": "UserService",
+          "method": "logout",
+          "source": {
+            "file": "src/app/core/auth/services/user.service.ts",
+            "line": 84
+          },
+          "arguments": [],
+          "inputSchema": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [
+        "requireAuth"
+      ],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/settings#SettingsComponent.submitForm:app-settings-page form",
+      "fingerprint": "2f41aed88d270c7f2fd654e0dc1008acf44aa242b4e0239c603b722b2f1f1168",
+      "route": "/settings",
+      "component": "SettingsComponent",
+      "componentSelector": "app-settings-page",
+      "action": {
+        "owner": "app-settings-page",
+        "kind": "form",
+        "selector": "app-settings-page form",
+        "submitSelector": "button.btn.btn-lg.btn-primary.pull-xs-right",
+        "label": "Update Settings",
+        "event": "ngSubmit",
+        "expression": "submitForm()",
+        "source": {
+          "file": "src/app/features/settings/settings.component.html",
+          "line": 9
+        }
+      },
+      "fields": [
+        {
+          "name": "image",
+          "selector": "input[formcontrolname=\"image\"]",
+          "element": "input",
+          "type": "text",
+          "required": false,
+          "supported": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "username",
+          "selector": "input[formcontrolname=\"username\"]",
+          "element": "input",
+          "type": "text",
+          "required": false,
+          "supported": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "bio",
+          "selector": "textarea[formcontrolname=\"bio\"]",
+          "element": "textarea",
+          "type": "text",
+          "required": false,
+          "supported": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "email",
+          "selector": "input[formcontrolname=\"email\"]",
+          "element": "input",
+          "type": "email",
+          "required": false,
+          "supported": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "password",
+          "selector": "input[formcontrolname=\"password\"]",
+          "element": "input",
+          "type": "password",
+          "required": false,
+          "supported": true,
+          "schema": {
+            "type": "string",
+            "writeOnly": true
+          }
+        }
+      ],
+      "handler": "submitForm",
+      "callPath": [
+        "SettingsComponent.submitForm",
+        "UserService.update"
+      ],
+      "bindings": [
+        {
+          "paramKeys": {
+            "user": "user"
+          },
+          "token": "UserService",
+          "service": "UserService",
+          "method": "update",
+          "source": {
+            "file": "src/app/core/auth/services/user.service.ts",
+            "line": 158
+          },
+          "arguments": [
+            "payload"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "user": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "token": {
+                    "type": "string"
+                  },
+                  "username": {
+                    "type": "string"
+                  },
+                  "bio": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "image": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "user"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "user": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "token": {
+                    "type": "string"
+                  },
+                  "username": {
+                    "type": "string"
+                  },
+                  "bio": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "image": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "email",
+                  "token",
+                  "username",
+                  "bio",
+                  "image"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "user"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "image": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "bio": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string",
+            "writeOnly": true
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [
+        "requireAuth"
+      ],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/tag/:tag#ArticleListComponent.setPageTo:app-article-list button.page-link",
+      "fingerprint": "6ed5ee53f8fe373e05d39c8bf1a989d0488cf0bbf7c8fe1741e220daa98e8bd3",
+      "route": "/tag/:tag",
+      "routeParams": [
+        "tag"
+      ],
+      "target": {
+        "param": "page",
+        "source": "context",
+        "path": [],
+        "integer": true,
+        "minimum": 1
+      },
+      "component": "ArticleListComponent",
+      "componentSelector": "app-article-list",
+      "action": {
+        "owner": "app-article-list",
+        "kind": "button",
+        "selector": "app-article-list button.page-link",
+        "label": "setPageTo",
+        "event": "click",
+        "expression": "setPageTo(pageNumber)",
+        "source": {
+          "file": "src/app/features/article/components/article-list.component.ts",
+          "line": 47
+        }
+      },
+      "fields": [],
+      "handler": "setPageTo",
+      "callPath": [
+        "ArticleListComponent.setPageTo",
+        "ArticleListComponent.runQuery",
+        "ArticlesService.query"
+      ],
+      "bindings": [
+        {
+          "token": "ArticlesService",
+          "service": "ArticlesService",
+          "method": "query",
+          "source": {
+            "file": "src/app/features/article/services/articles.service.ts",
+            "line": 12
+          },
+          "arguments": [
+            "this.query"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "config": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "filters": {
+                    "type": "object",
+                    "properties": {
+                      "tag": {
+                        "type": "string"
+                      },
+                      "author": {
+                        "type": "string"
+                      },
+                      "favorited": {
+                        "type": "string"
+                      },
+                      "limit": {
+                        "type": "number"
+                      },
+                      "offset": {
+                        "type": "number"
+                      }
+                    },
+                    "required": [],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "type",
+                  "filters"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "config"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "articles": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "slug": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "body": {
+                      "type": "string"
+                    },
+                    "tagList": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "createdAt": {
+                      "type": "string"
+                    },
+                    "updatedAt": {
+                      "type": "string"
+                    },
+                    "favorited": {
+                      "type": "boolean"
+                    },
+                    "favoritesCount": {
+                      "type": "number"
+                    },
+                    "author": {
+                      "type": "object",
+                      "properties": {
+                        "username": {
+                          "type": "string"
+                        },
+                        "bio": {
+                          "anyOf": [
+                            {
+                              "type": "null"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "image": {
+                          "anyOf": [
+                            {
+                              "type": "null"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "following": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "username",
+                        "bio",
+                        "image",
+                        "following"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "slug",
+                    "title",
+                    "description",
+                    "body",
+                    "tagList",
+                    "createdAt",
+                    "updatedAt",
+                    "favorited",
+                    "favoritesCount",
+                    "author"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "articlesCount": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "articles",
+              "articlesCount"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "tag": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          },
+          "page": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "tag",
+          "page"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/tag/:tag#FavoriteButtonComponent.toggleFavorite:app-favorite-button button.btn.btn-sm",
+      "fingerprint": "9976baa5ccf1541cf1d216bae58692203191c706b7883ceb8d5d813a7b78986e",
+      "route": "/tag/:tag",
+      "routeParams": [
+        "tag"
+      ],
+      "target": {
+        "param": "slug",
+        "source": "component",
+        "path": [
+          "article",
+          "slug"
+        ]
+      },
+      "component": "FavoriteButtonComponent",
+      "componentSelector": "app-favorite-button",
+      "action": {
+        "owner": "app-favorite-button",
+        "kind": "button",
+        "selector": "app-favorite-button button.btn.btn-sm",
+        "label": "toggleFavorite",
+        "event": "click",
+        "expression": "toggleFavorite()",
+        "source": {
+          "file": "src/app/features/article/components/favorite-button.component.ts",
+          "line": 29
+        }
+      },
+      "fields": [],
+      "handler": "toggleFavorite",
+      "callPath": [
+        "FavoriteButtonComponent.toggleFavorite",
+        "ArticlesService.favorite",
+        "FavoriteButtonComponent.toggleFavorite",
+        "ArticlesService.unfavorite"
+      ],
+      "bindings": [
+        {
+          "token": "ArticlesService",
+          "service": "ArticlesService",
+          "method": "favorite",
+          "source": {
+            "file": "src/app/features/article/services/articles.service.ts",
+            "line": 47
+          },
+          "arguments": [
+            "this.article.slug"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "slug": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "slug"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "slug": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "body": {
+                "type": "string"
+              },
+              "tagList": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "createdAt": {
+                "type": "string"
+              },
+              "updatedAt": {
+                "type": "string"
+              },
+              "favorited": {
+                "type": "boolean"
+              },
+              "favoritesCount": {
+                "type": "number"
+              },
+              "author": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string"
+                  },
+                  "bio": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "image": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "following": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "username",
+                  "bio",
+                  "image",
+                  "following"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "slug",
+              "title",
+              "description",
+              "body",
+              "tagList",
+              "createdAt",
+              "updatedAt",
+              "favorited",
+              "favoritesCount",
+              "author"
+            ],
+            "additionalProperties": false
+          },
+          "schemaIssues": []
+        },
+        {
+          "token": "ArticlesService",
+          "service": "ArticlesService",
+          "method": "unfavorite",
+          "source": {
+            "file": "src/app/features/article/services/articles.service.ts",
+            "line": 51
+          },
+          "arguments": [
+            "this.article.slug"
+          ],
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "slug": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "slug"
+            ],
+            "additionalProperties": false
+          },
+          "outputSchema": {
+            "type": "null"
+          },
+          "schemaIssues": []
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "tag": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          },
+          "slug": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          }
+        },
+        "required": [
+          "tag",
+          "slug"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    },
+    {
+      "id": "/tag/:tag#HomeComponent.navigate:app-home-page a[routerlink]",
+      "fingerprint": "4ec73a648d6ee5cfa59818f1049fba58d0d86925e4b91cf99aeee7fe120d9c04",
+      "route": "/tag/:tag",
+      "routeParams": [
+        "tag"
+      ],
+      "component": "HomeComponent",
+      "componentSelector": "app-home-page",
+      "action": {
+        "owner": "app-home-page",
+        "kind": "workflow",
+        "selector": "app-home-page",
+        "label": "Navigate through authored links",
+        "event": "click",
+        "expression": "routerLink",
+        "source": {
+          "file": "src/app/features/article/pages/home/home.component.html",
+          "line": 35
+        }
+      },
+      "drive": {
+        "buttons": {
+          "param": "route",
+          "choices": [
+            {
+              "value": "/",
+              "selector": "app-home-page a.nav-link",
+              "matchText": "Global Feed"
+            }
+          ]
+        }
+      },
+      "fields": [],
+      "handler": "navigate",
+      "callPath": [],
+      "bindings": [],
+      "effectKind": "ui-state",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "tag": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!\\.\\.?$)[^/?#]+$"
+          },
+          "route": {
+            "type": "string",
+            "enum": [
+              "/"
+            ]
+          }
+        },
+        "required": [
+          "tag",
+          "route"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "ui-dispatched"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "guards": [],
+      "workflow": {
+        "confirmation": "not-observed",
+        "evidence": []
+      },
+      "issues": [],
+      "status": "candidate"
+    }
+  ],
+  "diagnostics": []
+}

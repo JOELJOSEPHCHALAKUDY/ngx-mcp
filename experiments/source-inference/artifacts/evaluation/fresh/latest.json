@@ -1,0 +1,743 @@
+{
+  "formatVersion": 1,
+  "measuredAt": "2026-11-10T11:41:19.520Z",
+  "sourceSnapshot": {
+    "fixtures": "37c23c20b7c7e1e2d183b62190b3ce650b7dcfc8eff1b16ea223f638884f2acf",
+    "tooling": "0ff06fcc2a567f359205531058fc4320dc6ef0ba2ba695b441ef552b14516f24",
+    "dependencyFiles": {
+      "package.json": "cdc53252083dabef2fbfc411abcbd896716b204143e1b811a6785f958839bd67",
+      "package-lock.json": "045f2965fa36714084c778f8f741c7f51fd1041264534e493f0f72eea8c874ec",
+      "samples/toolchains/course-crud/package-lock.json": "a58d6a6b0cc46666feeb23ab78e88c0eeb06d65fef4181fc59e05bbf3827f3e7",
+      "samples/locks/realworld-package-lock.json": "28f26a3b5fb7ee81f5188df63edafbb4592839adf5867813a355be05b05ede3b",
+      "test-apps/user-crud/package-lock.json": "b951a08f864b7060053cc1c55da3f5dc0248d3c730c3c9ed50ce0e4f54c55c60",
+      "test-apps/signup/package-lock.json": "fde7ab7faccbbc90654c13a8b9156ad184a0eac5035487ef5bdaadfb6e2673cd",
+      "test-apps/forms-course/package-lock.json": "310d1c560197142a2b01e5e4e87bf020258eccfaa7ff601353f5bbe71ff48990",
+      "test-apps/course-crud/crud-angular/package-lock.json": "9e0b901727652e22ceb60742748e7a0d5e9a6c2c3f276c93f89e6244b9cce59a"
+    },
+    "compiler": "6405f73911b4aab10abe5b8e6e11668d764a7658d43ef1548097b8799cdab13f",
+    "evaluator": "1968ac9cf57f0028abf1b7e66b18e9332ac3fd198a78416a329b44abc271b01f",
+    "catalog": "c3582a0e08959fcd9c49202c646c29c2fd09dedaa8ce1a9c12e046dbb99c26ce"
+  },
+  "scope": "Reviewed local development-build workflows on three source-frozen public modern projects; after remediation these are development samples. This is not a new held-out accuracy estimate or production/backend guarantee.",
+  "usableWithinTestedScope": true,
+  "projects": [
+    {
+      "id": "modern-store",
+      "gold": 13,
+      "discovery": {
+        "truePositives": 13,
+        "falseNegatives": 0,
+        "rawFalsePositives": 3,
+        "rawPrecision": 0.8125,
+        "precisionUnits": "Semantic gold operations vs unique component.handler unknown operations; UI state operations retained before explicit scope adjudication",
+        "rawEmissionCounts": {
+          "runnable": 20,
+          "matched": 17,
+          "unmatched": 3,
+          "precision": 0.85
+        },
+        "backendOnlyUnknownOperations": 1,
+        "scopedFalsePositives": 0,
+        "scopedPrecision": 1,
+        "recall": 1,
+        "explicitScopeExclusions": [
+          {
+            "key": "HeaderActions.openSignInDialog",
+            "component": "HeaderActions",
+            "handler": "openSignInDialog",
+            "routes": [
+              "/"
+            ],
+            "emissionIds": [
+              "/#HeaderActions.openSignInDialog:app-header-actions button"
+            ],
+            "effectKinds": [
+              "ui-state"
+            ],
+            "frozenExclusionId": "presentation-and-dialog-controls",
+            "reason": "Only MatDialog.open(SignInDialog); source domain mutation occurs at separate SignInDialog.signIn.",
+            "evidence": [
+              {
+                "file": "src/app/layout/header-actions/header-actions.ts",
+                "startLine": 73,
+                "endLine": 77,
+                "sha256": "81e5bcf0abb461b4a46e375dac1c133ebb2b999828f1ef63ec43e3d9d2a75542"
+              }
+            ]
+          },
+          {
+            "key": "HeaderActions.openSignUpDialog",
+            "component": "HeaderActions",
+            "handler": "openSignUpDialog",
+            "routes": [
+              "/"
+            ],
+            "emissionIds": [
+              "/#HeaderActions.openSignUpDialog:app-header-actions button[matbutton=\"filled\"]"
+            ],
+            "effectKinds": [
+              "ui-state"
+            ],
+            "frozenExclusionId": "presentation-and-dialog-controls",
+            "reason": "Only MatDialog.open(SignUpDialog); source domain mutation occurs at separate SignUpDialog.signUp.",
+            "evidence": [
+              {
+                "file": "src/app/layout/header-actions/header-actions.ts",
+                "startLine": 79,
+                "endLine": 83,
+                "sha256": "81e5bcf0abb461b4a46e375dac1c133ebb2b999828f1ef63ec43e3d9d2a75542"
+              }
+            ]
+          },
+          {
+            "key": "ViewCart.store.proceedToCheckout",
+            "component": "ViewCart",
+            "handler": "store.proceedToCheckout",
+            "routes": [
+              "/cart"
+            ],
+            "emissionIds": [
+              "/cart#ViewCart.store.proceedToCheckout:app-view-cart button.w-full.mt-6.py-3"
+            ],
+            "effectKinds": [
+              "backend"
+            ],
+            "frozenExclusionId": "proceed-to-checkout",
+            "reason": "Original method only opens the sign-in dialog or navigates to checkout. Cart/wishlist/user/order state are not changed by this step. Actual sign-in and placeOrder are separate included actions.",
+            "evidence": [
+              {
+                "file": "src/app/ecommerce-store.ts",
+                "startLine": 498,
+                "endLine": 509,
+                "sha256": "c8e353de1eaaec1098b5f7f47784059ef8a94139e9ca69212b7b0e96d32ce645"
+              },
+              {
+                "file": "src/app/pages/view-cart/view-cart.ts",
+                "startLine": 24,
+                "endLine": 27,
+                "sha256": "e6bf5dae59d35003d748835265b420f58a31409323b5d5ac6b62ca70d13a467f"
+              }
+            ]
+          }
+        ],
+        "unresolved": []
+      },
+      "schema": {
+        "raw": 9,
+        "businessWithoutRouteContext": 11,
+        "total": 13,
+        "auditedLabelApproximations": [
+          "session-sign-in",
+          "session-sign-up"
+        ],
+        "sourceCompatibleFiniteChecks": 13
+      },
+      "execution": {
+        "success": 13,
+        "missing": 0,
+        "blocked": 0,
+        "schema-rejected": 0,
+        "failed": 0
+      },
+      "evidence": {
+        "static": "artifacts/evaluation/fresh/modern-store-static.json",
+        "runtime": "artifacts/evaluation/fresh/modern-store-runtime.json",
+        "staticSha256": "00f75d72bdf7f863ff9890b81c9b21ed8f25ada29b7fd7ffa8b8cd88dee51b47",
+        "runtimeSha256": "cee0e5ba224b09d13cd743705fc1df7ffa262cb1826a2c80e13acf7e12d621ed",
+        "frozenLabelsSha256": "aecacb8704ca8a0dc3a85f3d184e8eb63ea452d08b816638e41eadb2f4bb5de9",
+        "sourceCommit": "5bface390202c117a30bb7de06839735d3b9f013",
+        "adjudications": "evaluation/fresh/modern-store/adjudications.json",
+        "adjudicationsSha256": "6cf5f82d6707c413f337860802b2547d350c84f64d876ada2cc404c868c16a9a"
+      }
+    },
+    {
+      "id": "jira-clone",
+      "gold": 14,
+      "discovery": {
+        "truePositives": 14,
+        "falseNegatives": 0,
+        "rawFalsePositives": 13,
+        "rawPrecision": 0.5185185185185185,
+        "precisionUnits": "Semantic gold operations vs unique component.handler unknown operations; UI state operations retained before explicit scope adjudication",
+        "rawEmissionCounts": {
+          "runnable": 37,
+          "matched": 24,
+          "unmatched": 13,
+          "precision": 0.6486486486486487
+        },
+        "backendOnlyUnknownOperations": 4,
+        "scopedFalsePositives": 0,
+        "scopedPrecision": 1,
+        "recall": 1,
+        "explicitScopeExclusions": [
+          {
+            "key": "BoardFilterComponent.ignoreResolvedChanged",
+            "component": "BoardFilterComponent",
+            "handler": "ignoreResolvedChanged",
+            "routes": [
+              "/project/board"
+            ],
+            "emissionIds": [
+              "/project/board#BoardFilterComponent.ignoreResolvedChanged:board-filter j-button.ml-3"
+            ],
+            "effectKinds": [
+              "backend"
+            ],
+            "frozenExclusionId": "board-search-and-filters",
+            "reason": "Updates only ephemeral FilterStore search/user/visibility criteria. The source filterIssues function uses those criteria to choose displayed issues without changing ProjectStore issue records or assignments.",
+            "evidence": [
+              {
+                "file": "src/app/project/components/board/board-filter/board-filter.component.ts",
+                "startLine": 50,
+                "endLine": 52,
+                "sha256": "8439c205b58a33e84ea59352b03385eeb1c1ab66cbb3d74750dd3248eb63b977"
+              },
+              {
+                "file": "src/app/project/state/filter/filter.service.ts",
+                "startLine": 39,
+                "endLine": 46,
+                "sha256": "eae93fd70ad17c70b30e6cbc2ba279a1267291bb2eb87ad403cec241734ee742"
+              },
+              {
+                "file": "src/app/project/state/filter/filter.store.ts",
+                "startLine": 4,
+                "endLine": 17,
+                "sha256": "c4c7e598c7971728aca936d403aba5e0803c738ef6a86b3a269d128a4b06e3c4"
+              },
+              {
+                "file": "src/app/project/components/board/board-dnd-list/board-dnd-list.component.ts",
+                "startLine": 65,
+                "endLine": 80,
+                "sha256": "4e7186e6cbf5aab101275bbff5a949db98583e73db89f109e58a2789d7c8adac"
+              }
+            ]
+          },
+          {
+            "key": "BoardFilterComponent.onlyMyIssueChanged",
+            "component": "BoardFilterComponent",
+            "handler": "onlyMyIssueChanged",
+            "routes": [
+              "/project/board"
+            ],
+            "emissionIds": [
+              "/project/board#BoardFilterComponent.onlyMyIssueChanged:board-filter j-button.ml-3"
+            ],
+            "effectKinds": [
+              "backend"
+            ],
+            "frozenExclusionId": "board-search-and-filters",
+            "reason": "Updates only ephemeral FilterStore search/user/visibility criteria. The source filterIssues function uses those criteria to choose displayed issues without changing ProjectStore issue records or assignments.",
+            "evidence": [
+              {
+                "file": "src/app/project/components/board/board-filter/board-filter.component.ts",
+                "startLine": 54,
+                "endLine": 56,
+                "sha256": "8439c205b58a33e84ea59352b03385eeb1c1ab66cbb3d74750dd3248eb63b977"
+              },
+              {
+                "file": "src/app/project/state/filter/filter.service.ts",
+                "startLine": 29,
+                "endLine": 36,
+                "sha256": "eae93fd70ad17c70b30e6cbc2ba279a1267291bb2eb87ad403cec241734ee742"
+              },
+              {
+                "file": "src/app/project/state/filter/filter.store.ts",
+                "startLine": 4,
+                "endLine": 17,
+                "sha256": "c4c7e598c7971728aca936d403aba5e0803c738ef6a86b3a269d128a4b06e3c4"
+              },
+              {
+                "file": "src/app/project/components/board/board-dnd-list/board-dnd-list.component.ts",
+                "startLine": 65,
+                "endLine": 80,
+                "sha256": "4e7186e6cbf5aab101275bbff5a949db98583e73db89f109e58a2789d7c8adac"
+              }
+            ]
+          },
+          {
+            "key": "BoardFilterComponent.resetAll",
+            "component": "BoardFilterComponent",
+            "handler": "resetAll",
+            "routes": [
+              "/project/board"
+            ],
+            "emissionIds": [
+              "/project/board#BoardFilterComponent.resetAll:board-filter j-button"
+            ],
+            "effectKinds": [
+              "backend"
+            ],
+            "frozenExclusionId": "board-search-and-filters",
+            "reason": "Updates only ephemeral FilterStore search/user/visibility criteria. The source filterIssues function uses those criteria to choose displayed issues without changing ProjectStore issue records or assignments.",
+            "evidence": [
+              {
+                "file": "src/app/project/components/board/board-filter/board-filter.component.ts",
+                "startLine": 62,
+                "endLine": 65,
+                "sha256": "8439c205b58a33e84ea59352b03385eeb1c1ab66cbb3d74750dd3248eb63b977"
+              },
+              {
+                "file": "src/app/project/state/filter/filter.service.ts",
+                "startLine": 49,
+                "endLine": 53,
+                "sha256": "eae93fd70ad17c70b30e6cbc2ba279a1267291bb2eb87ad403cec241734ee742"
+              },
+              {
+                "file": "src/app/project/state/filter/filter.store.ts",
+                "startLine": 4,
+                "endLine": 17,
+                "sha256": "c4c7e598c7971728aca936d403aba5e0803c738ef6a86b3a269d128a4b06e3c4"
+              },
+              {
+                "file": "src/app/project/components/board/board-dnd-list/board-dnd-list.component.ts",
+                "startLine": 65,
+                "endLine": 80,
+                "sha256": "4e7186e6cbf5aab101275bbff5a949db98583e73db89f109e58a2789d7c8adac"
+              }
+            ]
+          },
+          {
+            "key": "BoardFilterComponent.userChanged",
+            "component": "BoardFilterComponent",
+            "handler": "userChanged",
+            "routes": [
+              "/project/board"
+            ],
+            "emissionIds": [
+              "/project/board#BoardFilterComponent.userChanged:board-filter j-avatar.flex"
+            ],
+            "effectKinds": [
+              "backend"
+            ],
+            "frozenExclusionId": "board-search-and-filters",
+            "reason": "Updates only ephemeral FilterStore search/user/visibility criteria. The source filterIssues function uses those criteria to choose displayed issues without changing ProjectStore issue records or assignments.",
+            "evidence": [
+              {
+                "file": "src/app/project/components/board/board-filter/board-filter.component.ts",
+                "startLine": 58,
+                "endLine": 60,
+                "sha256": "8439c205b58a33e84ea59352b03385eeb1c1ab66cbb3d74750dd3248eb63b977"
+              },
+              {
+                "file": "src/app/project/state/filter/filter.service.ts",
+                "startLine": 16,
+                "endLine": 26,
+                "sha256": "eae93fd70ad17c70b30e6cbc2ba279a1267291bb2eb87ad403cec241734ee742"
+              },
+              {
+                "file": "src/app/project/state/filter/filter.store.ts",
+                "startLine": 4,
+                "endLine": 17,
+                "sha256": "c4c7e598c7971728aca936d403aba5e0803c738ef6a86b3a269d128a4b06e3c4"
+              },
+              {
+                "file": "src/app/project/components/board/board-dnd-list/board-dnd-list.component.ts",
+                "startLine": 65,
+                "endLine": 80,
+                "sha256": "4e7186e6cbf5aab101275bbff5a949db98583e73db89f109e58a2789d7c8adac"
+              }
+            ]
+          },
+          {
+            "key": "InputComponent.clear",
+            "component": "InputComponent",
+            "handler": "clear",
+            "routes": [
+              "/project/board"
+            ],
+            "emissionIds": [
+              "/project/board#InputComponent.clear:j-input i[nztype=\"close\"][nztheme=\"outline\"]"
+            ],
+            "effectKinds": [
+              "ui-state"
+            ],
+            "frozenExclusionId": "board-search-and-filters",
+            "reason": "Clears a draft FormControl. All shipped j-input hosts bind source searchControl in BoardFilter or SearchDrawer; it does not edit an issue/project record. This adjudication is limited to these actual source usages, not every hypothetical use of the reusable component.",
+            "evidence": [
+              {
+                "file": "src/app/jira-control/input/input.component.ts",
+                "startLine": 30,
+                "endLine": 35,
+                "sha256": "1e6a0ea46b5107fc096128dc15e103b9f88ac8c62129d908af4f893286b818b8"
+              },
+              {
+                "file": "src/app/project/components/board/board-filter/board-filter.component.html",
+                "startLine": 1,
+                "endLine": 8,
+                "sha256": "69e21d961d2f4f682c180613ec98501be2ed3e2b70bc5fcaa4f846ff9badd015"
+              },
+              {
+                "file": "src/app/project/components/search/search-drawer/search-drawer.component.html",
+                "startLine": 1,
+                "endLine": 7,
+                "sha256": "f55a294a585ba826c40ae6d8d72249d9ee4c3b2cbcd3efada5786a80511c4ef0"
+              }
+            ]
+          },
+          {
+            "key": "IssueDetailComponent.closeModal",
+            "component": "IssueDetailComponent",
+            "handler": "closeModal",
+            "routes": [
+              "/project/board"
+            ],
+            "emissionIds": [
+              "/project/board#IssueDetailComponent.closeModal:issue-detail j-button[icon=\"times\"]@issue-card div.issue"
+            ],
+            "effectKinds": [
+              "ui-state"
+            ],
+            "frozenExclusionId": "dialogs-navigation-layout",
+            "reason": "Emits onClosed; source parent only closes its NzModalRef. It does not invoke delete or update any issue.",
+            "evidence": [
+              {
+                "file": "src/app/project/components/issues/issue-detail/issue-detail.component.ts",
+                "startLine": 50,
+                "endLine": 52,
+                "sha256": "c4ed3b8a35a866d7751a73e2a7bac27debb96395afb98ae526973158cc951089"
+              },
+              {
+                "file": "src/app/project/components/issues/issue-modal/issue-modal.component.ts",
+                "startLine": 29,
+                "endLine": 31,
+                "sha256": "e351261ad0c757acf9ac348826a5464f3a9aa10d95191149eefaa13f3551e2bf"
+              }
+            ]
+          },
+          {
+            "key": "IssueDetailComponent.openIssuePage",
+            "component": "IssueDetailComponent",
+            "handler": "openIssuePage",
+            "routes": [
+              "/project/board"
+            ],
+            "emissionIds": [
+              "/project/board#IssueDetailComponent.openIssuePage:issue-detail j-button[icon=\"expand\"]@issue-card div.issue"
+            ],
+            "effectKinds": [
+              "ui-state"
+            ],
+            "frozenExclusionId": "dialogs-navigation-layout",
+            "reason": "Emits issue id for expansion; source parent closes modal and navigates to the existing issue route. Issue records are unchanged.",
+            "evidence": [
+              {
+                "file": "src/app/project/components/issues/issue-detail/issue-detail.component.ts",
+                "startLine": 54,
+                "endLine": 55,
+                "sha256": "c4ed3b8a35a866d7751a73e2a7bac27debb96395afb98ae526973158cc951089"
+              },
+              {
+                "file": "src/app/project/components/issues/issue-modal/issue-modal.component.ts",
+                "startLine": 33,
+                "endLine": 35,
+                "sha256": "e351261ad0c757acf9ac348826a5464f3a9aa10d95191149eefaa13f3551e2bf"
+              }
+            ]
+          },
+          {
+            "key": "IssueCommentComponent.cancelAddComment",
+            "component": "IssueCommentComponent",
+            "handler": "cancelAddComment",
+            "routes": [
+              "/project/issue/:issueId"
+            ],
+            "emissionIds": [
+              "/project/issue/:issueId#IssueCommentComponent.cancelAddComment:issue-comment j-button"
+            ],
+            "effectKinds": [
+              "ui-state"
+            ],
+            "frozenExclusionId": "comment-edit-and-shortcut",
+            "reason": "Clears comment draft and hides editor without calling ProjectService.updateIssueComment.",
+            "evidence": [
+              {
+                "file": "src/app/project/components/issues/issue-comment/issue-comment.component.ts",
+                "startLine": 71,
+                "endLine": 74,
+                "sha256": "2ad46617db703f7cc419d6615c516a0cca2f8485ef24d88bfd1ecbe4c01d81d3"
+              }
+            ]
+          },
+          {
+            "key": "IssueCommentComponent.setCommentEdit",
+            "component": "IssueCommentComponent",
+            "handler": "setCommentEdit",
+            "routes": [
+              "/project/issue/:issueId"
+            ],
+            "emissionIds": [
+              "/project/issue/:issueId#IssueCommentComponent.setCommentEdit:issue-comment textarea.textarea-inline-control.textarea-border"
+            ],
+            "effectKinds": [
+              "ui-state"
+            ],
+            "frozenExclusionId": "comment-edit-and-shortcut",
+            "reason": "Sets only isEditing; addComment remains the included domain operation.",
+            "evidence": [
+              {
+                "file": "src/app/project/components/issues/issue-comment/issue-comment.component.ts",
+                "startLine": 55,
+                "endLine": 57,
+                "sha256": "2ad46617db703f7cc419d6615c516a0cca2f8485ef24d88bfd1ecbe4c01d81d3"
+              }
+            ]
+          },
+          {
+            "key": "IssueDescriptionComponent.cancel",
+            "component": "IssueDescriptionComponent",
+            "handler": "cancel",
+            "routes": [
+              "/project/issue/:issueId"
+            ],
+            "emissionIds": [
+              "/project/issue/:issueId#IssueDescriptionComponent.cancel:issue-description j-button"
+            ],
+            "effectKinds": [
+              "ui-state"
+            ],
+            "frozenExclusionId": "issue-description-edit-cancel",
+            "reason": "Restores description draft from existing issue and hides editor. No ProjectService update.",
+            "evidence": [
+              {
+                "file": "src/app/project/components/issues/issue-description/issue-description.component.ts",
+                "startLine": 52,
+                "endLine": 55,
+                "sha256": "51b63de7bdc72191b30b60677e1e668eb6160dce79c3dcfc8b42522a70f1b1f4"
+              }
+            ]
+          },
+          {
+            "key": "IssueDescriptionComponent.setEditMode",
+            "component": "IssueDescriptionComponent",
+            "handler": "setEditMode",
+            "routes": [
+              "/project/issue/:issueId"
+            ],
+            "emissionIds": [
+              "/project/issue/:issueId#IssueDescriptionComponent.setEditMode:issue-description div.ql-snow.content-readonly"
+            ],
+            "effectKinds": [
+              "ui-state"
+            ],
+            "frozenExclusionId": "issue-description-edit-cancel",
+            "reason": "Sets only editor visibility; separate save operation mutates project issue.",
+            "evidence": [
+              {
+                "file": "src/app/project/components/issues/issue-description/issue-description.component.ts",
+                "startLine": 34,
+                "endLine": 36,
+                "sha256": "51b63de7bdc72191b30b60677e1e668eb6160dce79c3dcfc8b42522a70f1b1f4"
+              }
+            ]
+          },
+          {
+            "key": "IssueDetailComponent.openDeleteIssueModal",
+            "component": "IssueDetailComponent",
+            "handler": "openDeleteIssueModal",
+            "routes": [
+              "/project/issue/:issueId"
+            ],
+            "emissionIds": [
+              "/project/issue/:issueId#IssueDetailComponent.openDeleteIssueModal:issue-detail j-button[icon=\"trash\"]"
+            ],
+            "effectKinds": [
+              "ui-state"
+            ],
+            "frozenExclusionId": "dialogs-navigation-layout",
+            "reason": "Opens the delete confirmation overlay only. Final confirmation deletion is separately included and must remain in the business-operation denominator. This excludes no delete operation.",
+            "evidence": [
+              {
+                "file": "src/app/project/components/issues/issue-detail/issue-detail.component.ts",
+                "startLine": 35,
+                "endLine": 47,
+                "sha256": "c4ed3b8a35a866d7751a73e2a7bac27debb96395afb98ae526973158cc951089"
+              }
+            ]
+          },
+          {
+            "key": "NavigationComponent.toggle",
+            "component": "NavigationComponent",
+            "handler": "toggle",
+            "routes": [
+              "/project"
+            ],
+            "emissionIds": [
+              "/project#NavigationComponent.toggle:app-navigation app-resizer"
+            ],
+            "effectKinds": [
+              "ui-state"
+            ],
+            "frozenExclusionId": "dialogs-navigation-layout",
+            "reason": "Emits manualToggle; its only source parent flips expanded layout state, not project or issue data.",
+            "evidence": [
+              {
+                "file": "src/app/project/components/navigation/navigation/navigation.component.ts",
+                "startLine": 12,
+                "endLine": 19,
+                "sha256": "bb8f351ecdcf3fb91dacb5c0375a15a63a8640ba5cc8eff053351a2061f8250a"
+              },
+              {
+                "file": "src/app/project/project.component.html",
+                "startLine": 1,
+                "endLine": 5,
+                "sha256": "820b68dce9bd55836b528860e1a028b7b4deb06d591813fc55f804b29ea407e1"
+              },
+              {
+                "file": "src/app/project/project.component.ts",
+                "startLine": 35,
+                "endLine": 37,
+                "sha256": "79e88a6464b4f78c6ca50256eb4a7475d4f808eef818297258e1b12dc6dd1e4e"
+              }
+            ]
+          }
+        ],
+        "unresolved": []
+      },
+      "schema": {
+        "raw": 14,
+        "businessWithoutRouteContext": 14,
+        "total": 14,
+        "auditedLabelApproximations": [],
+        "sourceCompatibleFiniteChecks": 14
+      },
+      "execution": {
+        "success": 14,
+        "missing": 0,
+        "blocked": 0,
+        "schema-rejected": 0,
+        "failed": 0
+      },
+      "evidence": {
+        "static": "artifacts/evaluation/fresh/jira-clone-static.json",
+        "runtime": "artifacts/evaluation/fresh/jira-clone-runtime.json",
+        "staticSha256": "56ea0f1f49d7cc4a509eeeb8169ce12acf47d9d2ff7027d590d4d28548a40e69",
+        "runtimeSha256": "fca19b21fbb49ba4b6f92ef10b821593d72a5996fb3b77a6956f5384b65ce696",
+        "frozenLabelsSha256": "76957f1008d7681bc47533be701b5eab32e1ce13d1876b6af0580c210adf4a40",
+        "sourceCommit": "20b50e9a1a4d9205af4641b66f544b81cd46873e",
+        "adjudications": "evaluation/fresh/jira-clone/adjudications.json",
+        "adjudicationsSha256": "653914f175dfa130d943fbfa639ad097308b7a7db685ab82e8b52447b9e87ed2"
+      }
+    },
+    {
+      "id": "todomvc-angular21",
+      "gold": 7,
+      "execution": {
+        "exactFrozen": 4,
+        "compilerNative": 7,
+        "boundaries": 4
+      },
+      "schema": {
+        "exactRepresentativeInputs": 4,
+        "total": 7,
+        "scope": "Representative acceptance only; source-name/semantic mappings remain separate. No full equivalence claim."
+      },
+      "outputConformance": [
+        {
+          "id": "filter_todos",
+          "passed": true
+        },
+        {
+          "id": "add_todo",
+          "passed": true
+        },
+        {
+          "id": "toggle_todo",
+          "passed": true
+        },
+        {
+          "id": "delete_todo",
+          "passed": true
+        },
+        {
+          "id": "toggle_all",
+          "passed": true
+        },
+        {
+          "id": "edit_todo",
+          "passed": true
+        },
+        {
+          "id": "clear_completed",
+          "passed": true
+        }
+      ],
+      "evidence": {
+        "runtime": "evaluation/fresh/todomvc-angular21/replay-runtime-results.json",
+        "provenance": "evaluation/fresh/todomvc-angular21/replay-provenance.json",
+        "runtimeSha256": "1600e86b97fd7ef7c4cb8f443f315e9d76789eb4c38e7886fc3ed4da3ad6dbb9",
+        "provenanceSha256": "0e525fba5e5e68983bbc2815d0f283a35800a901e31a35152b6e1713cae7024a",
+        "frozenLabelsSha256": "1cb5f42e42051d3600a2a5c509e2a04f3102a11862c089a593ad349b56a31795",
+        "evaluatorFiles": [
+          {
+            "path": "mcp-runtime.mts",
+            "sha256": "af5863b398604ec66af9908d6c1bc002fc82155edfd05c7a4760fd9071bdcd6d"
+          },
+          {
+            "path": "reference.mjs",
+            "sha256": "c4ef7508f4c509f0f5c7a6d2e49ecb58c35177f3c02a4df4d6e1eaca293c08f8"
+          },
+          {
+            "path": "fixture.mjs",
+            "sha256": "094047b6a5b74de6b3ed156ceecd1c9d3faec905a5aa9ef9284c36a4e6ac1e76"
+          }
+        ],
+        "mappings": "evaluation/fresh/todomvc-angular21/replay-input-mappings.json",
+        "mappingsSha256": "0afbbe1de387f1ecdfd555840461c60377f3d47f06a4d463446ffabab95eb15e"
+      },
+      "argumentMappings": {
+        "toggle_all": {
+          "source": {
+            "completed": true
+          },
+          "compilerNative": {
+            "checked": true
+          },
+          "kind": "source control-name rename only"
+        },
+        "toggle_todo": {
+          "source": {
+            "todo": {
+              "title": "Read fixture article",
+              "completed": false
+            }
+          },
+          "compilerNative": {
+            "todo": {
+              "title": "Read fixture article",
+              "completed": false
+            },
+            "value": true
+          },
+          "kind": "explicit desired checkbox value, derived as !source.todo.completed"
+        },
+        "filter_todos": {
+          "source": {
+            "filter": "active"
+          },
+          "compilerNative": {
+            "route": "/active"
+          },
+          "kind": "semantic filter selection mapped to authored RouterLink path"
+        }
+      },
+      "sourcePreconditions": {
+        "delete_todo": "Hover selected row as already frozen in labels; runtime tool still performs real destroy click"
+      }
+    }
+  ],
+  "unsupportedLegacy": {
+    "project": "sitepoint-todo",
+    "gold": 4,
+    "referenceEffects": 4,
+    "firstPassCompilerEffects": 0,
+    "evidence": "evaluation/fresh/sitepoint-todo/UNSUPPORTED-SCOPE.md"
+  },
+  "limits": [
+    "Original first-pass failures and frozen labels remain unchanged.",
+    "Runtime context is declared separately and fixture setup uses original UI.",
+    "Raw precision retains unlabelled transient UI predictions; scoped precision cites frozen inventory exclusions.",
+    "The two audited email mismatches remain failures in raw schema scores.",
+    "TodoMVC requires three documented mappings to use the generated tool schemas.",
+    "HTTP-free/local fixture effects do not establish production API correctness."
+  ]
+}

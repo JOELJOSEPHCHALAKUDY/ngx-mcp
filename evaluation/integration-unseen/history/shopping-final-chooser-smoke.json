@@ -1,0 +1,1184 @@
+{
+  "reportKind": "first-pass-integration-mcp",
+  "startedAt": "2026-11-10T10:47:29.275Z",
+  "mode": "mcp",
+  "transport": "native-ui",
+  "node": "v24.15.0",
+  "fixedBrowserTime": "2026-11-10T12:00:00Z",
+  "externalNetwork": "All origins blocked except designated local app; /api handled by deterministic in-process source-contract fixture.",
+  "sourceOverlays": [],
+  "frozenInputRewrites": [],
+  "harnessSha256": {
+    "run.mjs": "1cac97809285601ca362537aad595677a9a9049990315a44d0c2247e3868638b",
+    "fixtures.mjs": "0fbfa39c1afdd66c9fc93755d633ae7e7fc1aebc634c343840cf7e1f60466d2b",
+    "cases.mjs": "f43142008917379a5e7004f7b8b34c987cadcdcd5ec4742400de9e3b845f0037",
+    "mcp-driver.mjs": "1c837081187f63c9e0a7d02b0546f83fb7602ef5d72f66b1600be473a9ad9f3e"
+  },
+  "projects": [
+    {
+      "id": "shopping",
+      "commit": "3464f15ad53ede4de5673415ca9de68070bf78a1",
+      "stage": {
+        "directory": "/tmp/integration-unseen-shopping-probe-final",
+        "manifestSha256": "3929bc0bc04cbeb852d68eeceaaab99c6594df33044585ad53be4dd9354c6ccb",
+        "runtimeModule": "/private/tmp/integration-unseen-shopping-probe-final/src/angular-mcp.generated.ts",
+        "runtimeSha256": "a918e8f0cb7c838d37ffe9d4358b9d1764ca35e73b2bfc9769fc386fcfa5eabc"
+      },
+      "integrity": {
+        "frozen": true,
+        "files": 106,
+        "labelsSha256": "42566e776738d25d6bee64a734111f325177d35d6da7b6f7196a1c6e9c329410"
+      },
+      "cases": [
+        {
+          "id": "list-create",
+          "operation": "list-create",
+          "kind": "positive",
+          "frozenInput": {
+            "name": "Unseen shopping list",
+            "owners": [],
+            "sharedWith": []
+          },
+          "routeContext": {},
+          "calls": [
+            {
+              "name": "angular_list_nodes",
+              "args": {},
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "[{\"sourceId\":\"ngmcp_861cbea91b681d3df8eaf989\",\"instanceId\":\"ngmcp_861cbea91b681d3df8eaf989@ckq567-1qcslqr-m963es-1qx057i:1\",\"kind\":\"action\",\"tagName\":\"button\",\"aria\":{\"expanded\":\"false\",\"controls\":\"mobile-menu\"},\"clickOrigin\":\"authored\",\"events\":[\"click\"],\"label\":\"\",\"visible\":false,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_2cbbded16163ad27e80e7c43\",\"instanceId\":\"ngmcp_2cbbded16163ad27e80e7c43@ckq567-1qcslqr-m963es-1qx057i:2\",\"kind\":\"action\",\"tagName\":\"a\",\"clickOrigin\":\"native-ui\",\"events\":[],\"label\":\"\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_ceaad68d23638db8ed82634c\",\"instanceId\":\"ngmcp_ceaad68d23638db8ed82634c@ckq567-1qcslqr-m963es-1qx057i:3\",\"kind\":\"action\",\"tagName\":\"a\",\"clickOrigin\":\"native-ui\",\"events\":[],\"label\":\"\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_79b836a9a64d072408340eb1\",\"instanceId\":\"ngmcp_79b836a9a64d072408340eb1@ckq567-1qcslqr-m963es-1qx057i:4\",\"kind\":\"action\",\"tagName\":\"a\",\"clickOrigin\":\"native-ui\",\"events\":[],\"label\":\"Übersicht\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_2d2a422f366fbcdfa3b24070\",\"instanceId\":\"ngmcp_2d2a422f366fbcdfa3b24070@ckq567-1qcslqr-m963es-1qx057i:5\",\"kind\":\"action\",\"tagName\":\"a\",\"clickOrigin\":\"native-ui\",\"events\":[],\"label\":\"Einkaufszettel\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_561fe1046ba561cdb6cb0821\",\"instanceId\":\"ngmcp_561fe1046ba561cdb6cb0821@ckq567-1qcslqr-m963es-1qx057i:6\",\"kind\":\"action\",\"tagName\":\"a\",\"clickOrigin\":\"native-ui\",\"events\":[],\"label\":\"Archiv\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_f24e26dc8bd9f1e926be7820\",\"instanceId\":\"ngmcp_f24e26dc8bd9f1e926be7820@ckq567-1qcslqr-m963es-1qx057i:8\",\"kind\":\"form\",\"tagName\":\"form\",\"events\":[\"ngSubmit\"],\"label\":\"Name*BesitzerWähle Benutzer die Besitzer sein sollenPersonen mit ZugriffWähle Benutzer die auch Zugriff haben sollen Speichern\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"submit\"],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_10eb234d97e140501ec2f1c8\",\"instanceId\":\"ngmcp_10eb234d97e140501ec2f1c8@ckq567-1qcslqr-m963es-1qx057i:9\",\"path\":[\"name\"],\"status\":\"INVALID\",\"updateOn\":\"change\",\"errors\":[{\"code\":\"required\"}]},{\"sourceId\":\"ngmcp_372610e0a4185f7b18f8607e\",\"instanceId\":\"ngmcp_372610e0a4185f7b18f8607e@ckq567-1qcslqr-m963es-1qx057i:13\",\"path\":[\"owners\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]},{\"sourceId\":\"ngmcp_9eef01814d23d8c8f30b6329\",\"instanceId\":\"ngmcp_9eef01814d23d8c8f30b6329@ckq567-1qcslqr-m963es-1qx057i:14\",\"path\":[\"sharedWith\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"fields\":[{\"sourceId\":\"ngmcp_10eb234d97e140501ec2f1c8\",\"instanceId\":\"ngmcp_10eb234d97e140501ec2f1c8@ckq567-1qcslqr-m963es-1qx057i:9\",\"kind\":\"control\",\"tagName\":\"input\",\"events\":[],\"label\":\"Name* Besitzer Personen mit Zugriff\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"fill\"],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_10eb234d97e140501ec2f1c8\",\"instanceId\":\"ngmcp_10eb234d97e140501ec2f1c8@ckq567-1qcslqr-m963es-1qx057i:9\",\"path\":[\"name\"],\"status\":\"INVALID\",\"updateOn\":\"change\",\"errors\":[{\"code\":\"required\"}]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"schema\":{\"type\":\"string\"},\"value\":\"\",\"path\":[\"name\"],\"transport\":\"native-ui\",\"customAccessor\":false,\"fillModes\":[\"paste\",\"input\"],\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_372610e0a4185f7b18f8607e\",\"instanceId\":\"ngmcp_372610e0a4185f7b18f8607e@ckq567-1qcslqr-m963es-1qx057i:13\",\"kind\":\"control\",\"tagName\":\"p-multiselect\",\"events\":[],\"label\":\"Wähle Benutzer die Besitzer sein sollen\",\"visible\":true,\"disabled\":false,\"readonly\":true,\"operations\":[],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_372610e0a4185f7b18f8607e\",\"instanceId\":\"ngmcp_372610e0a4185f7b18f8607e@ckq567-1qcslqr-m963es-1qx057i:13\",\"path\":[\"owners\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"schema\":false,\"value\":\"\",\"path\":[\"owners\"],\"unsupportedReason\":\"Custom value accessor needs a UI adapter; no model setter is used\",\"transport\":\"native-ui\",\"customAccessor\":true,\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_9eef01814d23d8c8f30b6329\",\"instanceId\":\"ngmcp_9eef01814d23d8c8f30b6329@ckq567-1qcslqr-m963es-1qx057i:14\",\"kind\":\"control\",\"tagName\":\"p-multiselect\",\"events\":[],\"label\":\"Wähle Benutzer die auch Zugriff haben sollen\",\"visible\":true,\"disabled\":false,\"readonly\":true,\"operations\":[],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_9eef01814d23d8c8f30b6329\",\"instanceId\":\"ngmcp_9eef01814d23d8c8f30b6329@ckq567-1qcslqr-m963es-1qx057i:14\",\"path\":[\"sharedWith\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"schema\":false,\"value\":\"\",\"path\":[\"sharedWith\"],\"unsupportedReason\":\"Custom value accessor needs a UI adapter; no model setter is used\",\"transport\":\"native-ui\",\"customAccessor\":true,\"provenance\":\"compiler\"}],\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_10eb234d97e140501ec2f1c8\",\"instanceId\":\"ngmcp_10eb234d97e140501ec2f1c8@ckq567-1qcslqr-m963es-1qx057i:9\",\"kind\":\"control\",\"tagName\":\"input\",\"events\":[],\"label\":\"Name* Besitzer Personen mit Zugriff\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"fill\"],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_10eb234d97e140501ec2f1c8\",\"instanceId\":\"ngmcp_10eb234d97e140501ec2f1c8@ckq567-1qcslqr-m963es-1qx057i:9\",\"path\":[\"name\"],\"status\":\"INVALID\",\"updateOn\":\"change\",\"errors\":[{\"code\":\"required\"}]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"schema\":{\"type\":\"string\"},\"value\":\"\",\"path\":[\"name\"],\"transport\":\"native-ui\",\"customAccessor\":false,\"fillModes\":[\"paste\",\"input\"],\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_d7a533760ab2a67b614c71a0\",\"instanceId\":\"ngmcp_d7a533760ab2a67b614c71a0@ckq567-1qcslqr-m963es-1qx057i:10\",\"kind\":\"action\",\"tagName\":\"button\",\"clickOrigin\":\"native-ui\",\"events\":[],\"label\":\"Speichern\",\"visible\":true,\"disabled\":true,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_3d0e2acd99da754ab03a92ff\",\"instanceId\":\"ngmcp_3d0e2acd99da754ab03a92ff@ckq567-1qcslqr-m963es-1qx057i:11\",\"kind\":\"action\",\"tagName\":\"div\",\"clickOrigin\":\"authored\",\"events\":[\"click\"],\"label\":\"\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_495baed709b68555855a42c2\",\"instanceId\":\"ngmcp_495baed709b68555855a42c2@ckq567-1qcslqr-m963es-1qx057i:12\",\"kind\":\"action\",\"tagName\":\"a\",\"clickOrigin\":\"native-ui\",\"events\":[],\"label\":\"Userverwaltung\",\"visible\":true,\"disabled\":false,\"readonly\":false,\"operations\":[\"activate\"],\"validation\":{\"status\":\"unknown\",\"fields\":[],\"groups\":[]},\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_372610e0a4185f7b18f8607e\",\"instanceId\":\"ngmcp_372610e0a4185f7b18f8607e@ckq567-1qcslqr-m963es-1qx057i:13\",\"kind\":\"control\",\"tagName\":\"p-multiselect\",\"events\":[],\"label\":\"Wähle Benutzer die Besitzer sein sollen\",\"visible\":true,\"disabled\":false,\"readonly\":true,\"operations\":[],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_372610e0a4185f7b18f8607e\",\"instanceId\":\"ngmcp_372610e0a4185f7b18f8607e@ckq567-1qcslqr-m963es-1qx057i:13\",\"path\":[\"owners\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"schema\":false,\"value\":\"\",\"path\":[\"owners\"],\"unsupportedReason\":\"Custom value accessor needs a UI adapter; no model setter is used\",\"transport\":\"native-ui\",\"customAccessor\":true,\"provenance\":\"compiler\"},{\"sourceId\":\"ngmcp_9eef01814d23d8c8f30b6329\",\"instanceId\":\"ngmcp_9eef01814d23d8c8f30b6329@ckq567-1qcslqr-m963es-1qx057i:14\",\"kind\":\"control\",\"tagName\":\"p-multiselect\",\"events\":[],\"label\":\"Wähle Benutzer die auch Zugriff haben sollen\",\"visible\":true,\"disabled\":false,\"readonly\":true,\"operations\":[],\"validation\":{\"status\":\"invalid\",\"fields\":[{\"sourceId\":\"ngmcp_9eef01814d23d8c8f30b6329\",\"instanceId\":\"ngmcp_9eef01814d23d8c8f30b6329@ckq567-1qcslqr-m963es-1qx057i:14\",\"path\":[\"sharedWith\"],\"status\":\"VALID\",\"updateOn\":\"change\",\"errors\":[]}],\"groups\":[{\"path\":[],\"status\":\"INVALID\",\"errors\":[]}]},\"schema\":false,\"value\":\"\",\"path\":[\"sharedWith\"],\"unsupportedReason\":\"Custom value accessor needs a UI adapter; no model setter is used\",\"transport\":\"native-ui\",\"customAccessor\":true,\"provenance\":\"compiler\"}]"
+                  }
+                ],
+                "structuredContent": {
+                  "nodes": [
+                    {
+                      "sourceId": "ngmcp_861cbea91b681d3df8eaf989",
+                      "instanceId": "ngmcp_861cbea91b681d3df8eaf989@ckq567-1qcslqr-m963es-1qx057i:1",
+                      "kind": "action",
+                      "tagName": "button",
+                      "aria": {
+                        "expanded": "false",
+                        "controls": "mobile-menu"
+                      },
+                      "clickOrigin": "authored",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "",
+                      "visible": false,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_2cbbded16163ad27e80e7c43",
+                      "instanceId": "ngmcp_2cbbded16163ad27e80e7c43@ckq567-1qcslqr-m963es-1qx057i:2",
+                      "kind": "action",
+                      "tagName": "a",
+                      "clickOrigin": "native-ui",
+                      "events": [],
+                      "label": "",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_ceaad68d23638db8ed82634c",
+                      "instanceId": "ngmcp_ceaad68d23638db8ed82634c@ckq567-1qcslqr-m963es-1qx057i:3",
+                      "kind": "action",
+                      "tagName": "a",
+                      "clickOrigin": "native-ui",
+                      "events": [],
+                      "label": "",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_79b836a9a64d072408340eb1",
+                      "instanceId": "ngmcp_79b836a9a64d072408340eb1@ckq567-1qcslqr-m963es-1qx057i:4",
+                      "kind": "action",
+                      "tagName": "a",
+                      "clickOrigin": "native-ui",
+                      "events": [],
+                      "label": "Übersicht",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_2d2a422f366fbcdfa3b24070",
+                      "instanceId": "ngmcp_2d2a422f366fbcdfa3b24070@ckq567-1qcslqr-m963es-1qx057i:5",
+                      "kind": "action",
+                      "tagName": "a",
+                      "clickOrigin": "native-ui",
+                      "events": [],
+                      "label": "Einkaufszettel",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_561fe1046ba561cdb6cb0821",
+                      "instanceId": "ngmcp_561fe1046ba561cdb6cb0821@ckq567-1qcslqr-m963es-1qx057i:6",
+                      "kind": "action",
+                      "tagName": "a",
+                      "clickOrigin": "native-ui",
+                      "events": [],
+                      "label": "Archiv",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_f24e26dc8bd9f1e926be7820",
+                      "instanceId": "ngmcp_f24e26dc8bd9f1e926be7820@ckq567-1qcslqr-m963es-1qx057i:8",
+                      "kind": "form",
+                      "tagName": "form",
+                      "events": [
+                        "ngSubmit"
+                      ],
+                      "label": "Name*BesitzerWähle Benutzer die Besitzer sein sollenPersonen mit ZugriffWähle Benutzer die auch Zugriff haben sollen Speichern",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "submit"
+                      ],
+                      "validation": {
+                        "status": "invalid",
+                        "fields": [
+                          {
+                            "sourceId": "ngmcp_10eb234d97e140501ec2f1c8",
+                            "instanceId": "ngmcp_10eb234d97e140501ec2f1c8@ckq567-1qcslqr-m963es-1qx057i:9",
+                            "path": [
+                              "name"
+                            ],
+                            "status": "INVALID",
+                            "updateOn": "change",
+                            "errors": [
+                              {
+                                "code": "required"
+                              }
+                            ]
+                          },
+                          {
+                            "sourceId": "ngmcp_372610e0a4185f7b18f8607e",
+                            "instanceId": "ngmcp_372610e0a4185f7b18f8607e@ckq567-1qcslqr-m963es-1qx057i:13",
+                            "path": [
+                              "owners"
+                            ],
+                            "status": "VALID",
+                            "updateOn": "change",
+                            "errors": []
+                          },
+                          {
+                            "sourceId": "ngmcp_9eef01814d23d8c8f30b6329",
+                            "instanceId": "ngmcp_9eef01814d23d8c8f30b6329@ckq567-1qcslqr-m963es-1qx057i:14",
+                            "path": [
+                              "sharedWith"
+                            ],
+                            "status": "VALID",
+                            "updateOn": "change",
+                            "errors": []
+                          }
+                        ],
+                        "groups": [
+                          {
+                            "path": [],
+                            "status": "INVALID",
+                            "errors": []
+                          }
+                        ]
+                      },
+                      "fields": [
+                        {
+                          "sourceId": "ngmcp_10eb234d97e140501ec2f1c8",
+                          "instanceId": "ngmcp_10eb234d97e140501ec2f1c8@ckq567-1qcslqr-m963es-1qx057i:9",
+                          "kind": "control",
+                          "tagName": "input",
+                          "events": [],
+                          "label": "Name* Besitzer Personen mit Zugriff",
+                          "visible": true,
+                          "disabled": false,
+                          "readonly": false,
+                          "operations": [
+                            "fill"
+                          ],
+                          "validation": {
+                            "status": "invalid",
+                            "fields": [
+                              {
+                                "sourceId": "ngmcp_10eb234d97e140501ec2f1c8",
+                                "instanceId": "ngmcp_10eb234d97e140501ec2f1c8@ckq567-1qcslqr-m963es-1qx057i:9",
+                                "path": [
+                                  "name"
+                                ],
+                                "status": "INVALID",
+                                "updateOn": "change",
+                                "errors": [
+                                  {
+                                    "code": "required"
+                                  }
+                                ]
+                              }
+                            ],
+                            "groups": [
+                              {
+                                "path": [],
+                                "status": "INVALID",
+                                "errors": []
+                              }
+                            ]
+                          },
+                          "schema": {
+                            "type": "string"
+                          },
+                          "value": "",
+                          "path": [
+                            "name"
+                          ],
+                          "transport": "native-ui",
+                          "customAccessor": false,
+                          "fillModes": [
+                            "paste",
+                            "input"
+                          ],
+                          "provenance": "compiler"
+                        },
+                        {
+                          "sourceId": "ngmcp_372610e0a4185f7b18f8607e",
+                          "instanceId": "ngmcp_372610e0a4185f7b18f8607e@ckq567-1qcslqr-m963es-1qx057i:13",
+                          "kind": "control",
+                          "tagName": "p-multiselect",
+                          "events": [],
+                          "label": "Wähle Benutzer die Besitzer sein sollen",
+                          "visible": true,
+                          "disabled": false,
+                          "readonly": true,
+                          "operations": [],
+                          "validation": {
+                            "status": "invalid",
+                            "fields": [
+                              {
+                                "sourceId": "ngmcp_372610e0a4185f7b18f8607e",
+                                "instanceId": "ngmcp_372610e0a4185f7b18f8607e@ckq567-1qcslqr-m963es-1qx057i:13",
+                                "path": [
+                                  "owners"
+                                ],
+                                "status": "VALID",
+                                "updateOn": "change",
+                                "errors": []
+                              }
+                            ],
+                            "groups": [
+                              {
+                                "path": [],
+                                "status": "INVALID",
+                                "errors": []
+                              }
+                            ]
+                          },
+                          "schema": false,
+                          "value": "",
+                          "path": [
+                            "owners"
+                          ],
+                          "unsupportedReason": "Custom value accessor needs a UI adapter; no model setter is used",
+                          "transport": "native-ui",
+                          "customAccessor": true,
+                          "provenance": "compiler"
+                        },
+                        {
+                          "sourceId": "ngmcp_9eef01814d23d8c8f30b6329",
+                          "instanceId": "ngmcp_9eef01814d23d8c8f30b6329@ckq567-1qcslqr-m963es-1qx057i:14",
+                          "kind": "control",
+                          "tagName": "p-multiselect",
+                          "events": [],
+                          "label": "Wähle Benutzer die auch Zugriff haben sollen",
+                          "visible": true,
+                          "disabled": false,
+                          "readonly": true,
+                          "operations": [],
+                          "validation": {
+                            "status": "invalid",
+                            "fields": [
+                              {
+                                "sourceId": "ngmcp_9eef01814d23d8c8f30b6329",
+                                "instanceId": "ngmcp_9eef01814d23d8c8f30b6329@ckq567-1qcslqr-m963es-1qx057i:14",
+                                "path": [
+                                  "sharedWith"
+                                ],
+                                "status": "VALID",
+                                "updateOn": "change",
+                                "errors": []
+                              }
+                            ],
+                            "groups": [
+                              {
+                                "path": [],
+                                "status": "INVALID",
+                                "errors": []
+                              }
+                            ]
+                          },
+                          "schema": false,
+                          "value": "",
+                          "path": [
+                            "sharedWith"
+                          ],
+                          "unsupportedReason": "Custom value accessor needs a UI adapter; no model setter is used",
+                          "transport": "native-ui",
+                          "customAccessor": true,
+                          "provenance": "compiler"
+                        }
+                      ],
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_10eb234d97e140501ec2f1c8",
+                      "instanceId": "ngmcp_10eb234d97e140501ec2f1c8@ckq567-1qcslqr-m963es-1qx057i:9",
+                      "kind": "control",
+                      "tagName": "input",
+                      "events": [],
+                      "label": "Name* Besitzer Personen mit Zugriff",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "fill"
+                      ],
+                      "validation": {
+                        "status": "invalid",
+                        "fields": [
+                          {
+                            "sourceId": "ngmcp_10eb234d97e140501ec2f1c8",
+                            "instanceId": "ngmcp_10eb234d97e140501ec2f1c8@ckq567-1qcslqr-m963es-1qx057i:9",
+                            "path": [
+                              "name"
+                            ],
+                            "status": "INVALID",
+                            "updateOn": "change",
+                            "errors": [
+                              {
+                                "code": "required"
+                              }
+                            ]
+                          }
+                        ],
+                        "groups": [
+                          {
+                            "path": [],
+                            "status": "INVALID",
+                            "errors": []
+                          }
+                        ]
+                      },
+                      "schema": {
+                        "type": "string"
+                      },
+                      "value": "",
+                      "path": [
+                        "name"
+                      ],
+                      "transport": "native-ui",
+                      "customAccessor": false,
+                      "fillModes": [
+                        "paste",
+                        "input"
+                      ],
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_d7a533760ab2a67b614c71a0",
+                      "instanceId": "ngmcp_d7a533760ab2a67b614c71a0@ckq567-1qcslqr-m963es-1qx057i:10",
+                      "kind": "action",
+                      "tagName": "button",
+                      "clickOrigin": "native-ui",
+                      "events": [],
+                      "label": "Speichern",
+                      "visible": true,
+                      "disabled": true,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_3d0e2acd99da754ab03a92ff",
+                      "instanceId": "ngmcp_3d0e2acd99da754ab03a92ff@ckq567-1qcslqr-m963es-1qx057i:11",
+                      "kind": "action",
+                      "tagName": "div",
+                      "clickOrigin": "authored",
+                      "events": [
+                        "click"
+                      ],
+                      "label": "",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_495baed709b68555855a42c2",
+                      "instanceId": "ngmcp_495baed709b68555855a42c2@ckq567-1qcslqr-m963es-1qx057i:12",
+                      "kind": "action",
+                      "tagName": "a",
+                      "clickOrigin": "native-ui",
+                      "events": [],
+                      "label": "Userverwaltung",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": false,
+                      "operations": [
+                        "activate"
+                      ],
+                      "validation": {
+                        "status": "unknown",
+                        "fields": [],
+                        "groups": []
+                      },
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_372610e0a4185f7b18f8607e",
+                      "instanceId": "ngmcp_372610e0a4185f7b18f8607e@ckq567-1qcslqr-m963es-1qx057i:13",
+                      "kind": "control",
+                      "tagName": "p-multiselect",
+                      "events": [],
+                      "label": "Wähle Benutzer die Besitzer sein sollen",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": true,
+                      "operations": [],
+                      "validation": {
+                        "status": "invalid",
+                        "fields": [
+                          {
+                            "sourceId": "ngmcp_372610e0a4185f7b18f8607e",
+                            "instanceId": "ngmcp_372610e0a4185f7b18f8607e@ckq567-1qcslqr-m963es-1qx057i:13",
+                            "path": [
+                              "owners"
+                            ],
+                            "status": "VALID",
+                            "updateOn": "change",
+                            "errors": []
+                          }
+                        ],
+                        "groups": [
+                          {
+                            "path": [],
+                            "status": "INVALID",
+                            "errors": []
+                          }
+                        ]
+                      },
+                      "schema": false,
+                      "value": "",
+                      "path": [
+                        "owners"
+                      ],
+                      "unsupportedReason": "Custom value accessor needs a UI adapter; no model setter is used",
+                      "transport": "native-ui",
+                      "customAccessor": true,
+                      "provenance": "compiler"
+                    },
+                    {
+                      "sourceId": "ngmcp_9eef01814d23d8c8f30b6329",
+                      "instanceId": "ngmcp_9eef01814d23d8c8f30b6329@ckq567-1qcslqr-m963es-1qx057i:14",
+                      "kind": "control",
+                      "tagName": "p-multiselect",
+                      "events": [],
+                      "label": "Wähle Benutzer die auch Zugriff haben sollen",
+                      "visible": true,
+                      "disabled": false,
+                      "readonly": true,
+                      "operations": [],
+                      "validation": {
+                        "status": "invalid",
+                        "fields": [
+                          {
+                            "sourceId": "ngmcp_9eef01814d23d8c8f30b6329",
+                            "instanceId": "ngmcp_9eef01814d23d8c8f30b6329@ckq567-1qcslqr-m963es-1qx057i:14",
+                            "path": [
+                              "sharedWith"
+                            ],
+                            "status": "VALID",
+                            "updateOn": "change",
+                            "errors": []
+                          }
+                        ],
+                        "groups": [
+                          {
+                            "path": [],
+                            "status": "INVALID",
+                            "errors": []
+                          }
+                        ]
+                      },
+                      "schema": false,
+                      "value": "",
+                      "path": [
+                        "sharedWith"
+                      ],
+                      "unsupportedReason": "Custom value accessor needs a UI adapter; no model setter is used",
+                      "transport": "native-ui",
+                      "customAccessor": true,
+                      "provenance": "compiler"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "angular_read_view",
+              "args": {
+                "maxNodes": 5000
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"url\":\"http://127.0.0.1:4383/einkaufszettel\",\"title\":\"Einkaufszettel\",\"view\":{\"tag\":\"body\",\"children\":[{\"tag\":\"app-root\",\"children\":[{\"tag\":\"div\",\"children\":[{\"tag\":\"nav\",\"children\":[{\"tag\":\"div\",\"children\":[{\"tag\":\"div\",\"children\":[{\"tag\":\"div\",\"children\":[{\"tag\":\"app-navigation-links\",\"children\":[{\"tag\":\"div\",\"children\":[{\"tag\":\"a\",\"text\":\"Übersicht\",\"target\":{\"sourceId\":\"ngmcp_79b836a9a64d072408340eb1\",\"instanceId\":\"ngmcp_79b836a9a64d072408340eb1@ckq567-1qcslqr-m963es-1qx057i:4\"},\"provenance\":\"compiler\",\"label\":\"Übersicht\",\"disabled\":false,\"children\":[{\"tag\":\"span\"}]},{\"tag\":\"a\",\"text\":\"Einkaufszettel\",\"target\":{\"sourceId\":\"ngmcp_2d2a422f366fbcdfa3b24070\",\"instanceId\":\"ngmcp_2d2a422f366fbcdfa3b24070@ckq567-1qcslqr-m963es-1qx057i:5\"},\"provenance\":\"compiler\",\"label\":\"Einkaufszettel\",\"disabled\":false,\"children\":[{\"tag\":\"span\"}]},{\"tag\":\"a\",\"text\":\"Archiv\",\"target\":{\"sourceId\":\"ngmcp_561fe1046ba561cdb6cb0821\",\"instanceId\":\"ngmcp_561fe1046ba561cdb6cb0821@ckq567-1qcslqr-m963es-1qx057i:6\"},\"provenance\":\"compiler\",\"label\":\"Archiv\",\"disabled\":false,\"children\":[{\"tag\":\"span\"}]},{\"tag\":\"a\",\"text\":\"Userverwaltung\",\"target\":{\"sourceId\":\"ngmcp_495baed709b68555855a42c2\",\"instanceId\":\"ngmcp_495baed709b68555855a42c2@ckq567-1qcslqr-m963es-1qx057i:12\"},\"provenance\":\"compiler\",\"label\":\"Userverwaltung\",\"disabled\":false,\"children\":[{\"tag\":\"span\"}]}]}]}]},{\"tag\":\"div\"},{\"tag\":\"div\",\"children\":[{\"tag\":\"div\",\"target\":{\"sourceId\":\"ngmcp_3d0e2acd99da754ab03a92ff\",\"instanceId\":\"ngmcp_3d0e2acd99da754ab03a92ff@ckq567-1qcslqr-m963es-1qx057i:11\"},\"provenance\":\"compiler\",\"label\":\"\",\"disabled\":false}]}]}]}]},{\"tag\":\"div\",\"children\":[{\"tag\":\"router-outlet\"},{\"tag\":\"app-einkaufszettel\",\"children\":[{\"tag\":\"form\",\"target\":{\"sourceId\":\"ngmcp_f24e26dc8bd9f1e926be7820\",\"instanceId\":\"ngmcp_f24e26dc8bd9f1e926be7820@ckq567-1qcslqr-m963es-1qx057i:8\"},\"provenance\":\"compiler\",\"label\":\"Name*BesitzerWähle Benutzer die Besitzer sein sollenPersonen mit ZugriffWähle Benutzer die auch Zugriff haben sollen Speichern\",\"disabled\":false,\"children\":[{\"tag\":\"div\",\"children\":[{\"tag\":\"label\",\"text\":\"Name*\"},{\"tag\":\"input\",\"target\":{\"sourceId\":\"ngmcp_10eb234d97e140501ec2f1c8\",\"instanceId\":\"ngmcp_10eb234d97e140501ec2f1c8@ckq567-1qcslqr-m963es-1qx057i:9\"},\"provenance\":\"compiler\",\"label\":\"Name* Besitzer Personen mit Zugriff\",\"disabled\":false,\"value\":\"\"}]},{\"tag\":\"div\",\"children\":[{\"tag\":\"label\",\"text\":\"Besitzer\"},{\"tag\":\"p-multiselect\",\"target\":{\"sourceId\":\"ngmcp_372610e0a4185f7b18f8607e\",\"instanceId\":\"ngmcp_372610e0a4185f7b18f8607e@ckq567-1qcslqr-m963es-1qx057i:13\"},\"provenance\":\"compiler\",\"label\":\"Wähle Benutzer die Besitzer sein sollen\",\"disabled\":false,\"value\":\"\",\"children\":[{\"tag\":\"div\",\"children\":[{\"tag\":\"div\",\"children\":[{\"tag\":\"input\",\"role\":\"listbox\"}]},{\"tag\":\"div\",\"children\":[{\"tag\":\"div\",\"text\":\"Wähle Benutzer die Besitzer sein sollen\"}]},{\"tag\":\"div\",\"children\":[{\"tag\":\"chevrondownicon\"}]},{\"tag\":\"p-overlay\"}]}]}]},{\"tag\":\"div\",\"children\":[{\"tag\":\"label\",\"text\":\"Personen mit Zugriff\"},{\"tag\":\"p-multiselect\",\"target\":{\"sourceId\":\"ngmcp_9eef01814d23d8c8f30b6329\",\"instanceId\":\"ngmcp_9eef01814d23d8c8f30b6329@ckq567-1qcslqr-m963es-1qx057i:14\"},\"provenance\":\"compiler\",\"label\":\"Wähle Benutzer die auch Zugriff haben sollen\",\"disabled\":false,\"value\":\"\",\"children\":[{\"tag\":\"div\",\"children\":[{\"tag\":\"div\",\"children\":[{\"tag\":\"input\",\"role\":\"listbox\"}]},{\"tag\":\"div\",\"children\":[{\"tag\":\"div\",\"text\":\"Wähle Benutzer die auch Zugriff haben sollen\"}]},{\"tag\":\"div\",\"children\":[{\"tag\":\"chevrondownicon\"}]},{\"tag\":\"p-overlay\"}]}]}]},{\"tag\":\"div\",\"children\":[{\"tag\":\"button\",\"text\":\"Speichern\",\"target\":{\"sourceId\":\"ngmcp_d7a533760ab2a67b614c71a0\",\"instanceId\":\"ngmcp_d7a533760ab2a67b614c71a0@ckq567-1qcslqr-m963es-1qx057i:10\"},\"provenance\":\"compiler\",\"label\":\"Speichern\",\"disabled\":true}]}]}]}]},{\"tag\":\"div\",\"children\":[{\"tag\":\"div\"},{\"tag\":\"div\",\"children\":[{\"tag\":\"span\"},{\"tag\":\"span\",\"text\":\"Alice Bedow\"}]},{\"tag\":\"a\",\"target\":{\"sourceId\":\"ngmcp_2cbbded16163ad27e80e7c43\",\"instanceId\":\"ngmcp_2cbbded16163ad27e80e7c43@ckq567-1qcslqr-m963es-1qx057i:2\"},\"provenance\":\"compiler\",\"label\":\"\",\"disabled\":false,\"children\":[{\"tag\":\"span\"}]},{\"tag\":\"a\",\"target\":{\"sourceId\":\"ngmcp_ceaad68d23638db8ed82634c\",\"instanceId\":\"ngmcp_ceaad68d23638db8ed82634c@ckq567-1qcslqr-m963es-1qx057i:3\"},\"provenance\":\"compiler\",\"label\":\"\",\"disabled\":false,\"children\":[{\"tag\":\"span\"}]}]},{\"tag\":\"p-toast\",\"children\":[{\"tag\":\"div\"}]},{\"tag\":\"p-confirmdialog\"}]}]}]},\"visited\":63,\"truncated\":false}"
+                  }
+                ],
+                "structuredContent": {
+                  "url": "http://127.0.0.1:4383/einkaufszettel",
+                  "title": "Einkaufszettel",
+                  "view": {
+                    "tag": "body",
+                    "children": [
+                      {
+                        "tag": "app-root",
+                        "children": [
+                          {
+                            "tag": "div",
+                            "children": [
+                              {
+                                "tag": "nav",
+                                "children": [
+                                  {
+                                    "tag": "div",
+                                    "children": [
+                                      {
+                                        "tag": "div",
+                                        "children": [
+                                          {
+                                            "tag": "div",
+                                            "children": [
+                                              {
+                                                "tag": "app-navigation-links",
+                                                "children": [
+                                                  {
+                                                    "tag": "div",
+                                                    "children": [
+                                                      {
+                                                        "tag": "a",
+                                                        "text": "Übersicht",
+                                                        "target": {
+                                                          "sourceId": "ngmcp_79b836a9a64d072408340eb1",
+                                                          "instanceId": "ngmcp_79b836a9a64d072408340eb1@ckq567-1qcslqr-m963es-1qx057i:4"
+                                                        },
+                                                        "provenance": "compiler",
+                                                        "label": "Übersicht",
+                                                        "disabled": false,
+                                                        "children": [
+                                                          {
+                                                            "tag": "span"
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "tag": "a",
+                                                        "text": "Einkaufszettel",
+                                                        "target": {
+                                                          "sourceId": "ngmcp_2d2a422f366fbcdfa3b24070",
+                                                          "instanceId": "ngmcp_2d2a422f366fbcdfa3b24070@ckq567-1qcslqr-m963es-1qx057i:5"
+                                                        },
+                                                        "provenance": "compiler",
+                                                        "label": "Einkaufszettel",
+                                                        "disabled": false,
+                                                        "children": [
+                                                          {
+                                                            "tag": "span"
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "tag": "a",
+                                                        "text": "Archiv",
+                                                        "target": {
+                                                          "sourceId": "ngmcp_561fe1046ba561cdb6cb0821",
+                                                          "instanceId": "ngmcp_561fe1046ba561cdb6cb0821@ckq567-1qcslqr-m963es-1qx057i:6"
+                                                        },
+                                                        "provenance": "compiler",
+                                                        "label": "Archiv",
+                                                        "disabled": false,
+                                                        "children": [
+                                                          {
+                                                            "tag": "span"
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "tag": "a",
+                                                        "text": "Userverwaltung",
+                                                        "target": {
+                                                          "sourceId": "ngmcp_495baed709b68555855a42c2",
+                                                          "instanceId": "ngmcp_495baed709b68555855a42c2@ckq567-1qcslqr-m963es-1qx057i:12"
+                                                        },
+                                                        "provenance": "compiler",
+                                                        "label": "Userverwaltung",
+                                                        "disabled": false,
+                                                        "children": [
+                                                          {
+                                                            "tag": "span"
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "tag": "div"
+                                          },
+                                          {
+                                            "tag": "div",
+                                            "children": [
+                                              {
+                                                "tag": "div",
+                                                "target": {
+                                                  "sourceId": "ngmcp_3d0e2acd99da754ab03a92ff",
+                                                  "instanceId": "ngmcp_3d0e2acd99da754ab03a92ff@ckq567-1qcslqr-m963es-1qx057i:11"
+                                                },
+                                                "provenance": "compiler",
+                                                "label": "",
+                                                "disabled": false
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "tag": "div",
+                                "children": [
+                                  {
+                                    "tag": "router-outlet"
+                                  },
+                                  {
+                                    "tag": "app-einkaufszettel",
+                                    "children": [
+                                      {
+                                        "tag": "form",
+                                        "target": {
+                                          "sourceId": "ngmcp_f24e26dc8bd9f1e926be7820",
+                                          "instanceId": "ngmcp_f24e26dc8bd9f1e926be7820@ckq567-1qcslqr-m963es-1qx057i:8"
+                                        },
+                                        "provenance": "compiler",
+                                        "label": "Name*BesitzerWähle Benutzer die Besitzer sein sollenPersonen mit ZugriffWähle Benutzer die auch Zugriff haben sollen Speichern",
+                                        "disabled": false,
+                                        "children": [
+                                          {
+                                            "tag": "div",
+                                            "children": [
+                                              {
+                                                "tag": "label",
+                                                "text": "Name*"
+                                              },
+                                              {
+                                                "tag": "input",
+                                                "target": {
+                                                  "sourceId": "ngmcp_10eb234d97e140501ec2f1c8",
+                                                  "instanceId": "ngmcp_10eb234d97e140501ec2f1c8@ckq567-1qcslqr-m963es-1qx057i:9"
+                                                },
+                                                "provenance": "compiler",
+                                                "label": "Name* Besitzer Personen mit Zugriff",
+                                                "disabled": false,
+                                                "value": ""
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "tag": "div",
+                                            "children": [
+                                              {
+                                                "tag": "label",
+                                                "text": "Besitzer"
+                                              },
+                                              {
+                                                "tag": "p-multiselect",
+                                                "target": {
+                                                  "sourceId": "ngmcp_372610e0a4185f7b18f8607e",
+                                                  "instanceId": "ngmcp_372610e0a4185f7b18f8607e@ckq567-1qcslqr-m963es-1qx057i:13"
+                                                },
+                                                "provenance": "compiler",
+                                                "label": "Wähle Benutzer die Besitzer sein sollen",
+                                                "disabled": false,
+                                                "value": "",
+                                                "children": [
+                                                  {
+                                                    "tag": "div",
+                                                    "children": [
+                                                      {
+                                                        "tag": "div",
+                                                        "children": [
+                                                          {
+                                                            "tag": "input",
+                                                            "role": "listbox"
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "tag": "div",
+                                                        "children": [
+                                                          {
+                                                            "tag": "div",
+                                                            "text": "Wähle Benutzer die Besitzer sein sollen"
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "tag": "div",
+                                                        "children": [
+                                                          {
+                                                            "tag": "chevrondownicon"
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "tag": "p-overlay"
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "tag": "div",
+                                            "children": [
+                                              {
+                                                "tag": "label",
+                                                "text": "Personen mit Zugriff"
+                                              },
+                                              {
+                                                "tag": "p-multiselect",
+                                                "target": {
+                                                  "sourceId": "ngmcp_9eef01814d23d8c8f30b6329",
+                                                  "instanceId": "ngmcp_9eef01814d23d8c8f30b6329@ckq567-1qcslqr-m963es-1qx057i:14"
+                                                },
+                                                "provenance": "compiler",
+                                                "label": "Wähle Benutzer die auch Zugriff haben sollen",
+                                                "disabled": false,
+                                                "value": "",
+                                                "children": [
+                                                  {
+                                                    "tag": "div",
+                                                    "children": [
+                                                      {
+                                                        "tag": "div",
+                                                        "children": [
+                                                          {
+                                                            "tag": "input",
+                                                            "role": "listbox"
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "tag": "div",
+                                                        "children": [
+                                                          {
+                                                            "tag": "div",
+                                                            "text": "Wähle Benutzer die auch Zugriff haben sollen"
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "tag": "div",
+                                                        "children": [
+                                                          {
+                                                            "tag": "chevrondownicon"
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "tag": "p-overlay"
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "tag": "div",
+                                            "children": [
+                                              {
+                                                "tag": "button",
+                                                "text": "Speichern",
+                                                "target": {
+                                                  "sourceId": "ngmcp_d7a533760ab2a67b614c71a0",
+                                                  "instanceId": "ngmcp_d7a533760ab2a67b614c71a0@ckq567-1qcslqr-m963es-1qx057i:10"
+                                                },
+                                                "provenance": "compiler",
+                                                "label": "Speichern",
+                                                "disabled": true
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "tag": "div",
+                                "children": [
+                                  {
+                                    "tag": "div"
+                                  },
+                                  {
+                                    "tag": "div",
+                                    "children": [
+                                      {
+                                        "tag": "span"
+                                      },
+                                      {
+                                        "tag": "span",
+                                        "text": "Alice Bedow"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "tag": "a",
+                                    "target": {
+                                      "sourceId": "ngmcp_2cbbded16163ad27e80e7c43",
+                                      "instanceId": "ngmcp_2cbbded16163ad27e80e7c43@ckq567-1qcslqr-m963es-1qx057i:2"
+                                    },
+                                    "provenance": "compiler",
+                                    "label": "",
+                                    "disabled": false,
+                                    "children": [
+                                      {
+                                        "tag": "span"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "tag": "a",
+                                    "target": {
+                                      "sourceId": "ngmcp_ceaad68d23638db8ed82634c",
+                                      "instanceId": "ngmcp_ceaad68d23638db8ed82634c@ckq567-1qcslqr-m963es-1qx057i:3"
+                                    },
+                                    "provenance": "compiler",
+                                    "label": "",
+                                    "disabled": false,
+                                    "children": [
+                                      {
+                                        "tag": "span"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "tag": "p-toast",
+                                "children": [
+                                  {
+                                    "tag": "div"
+                                  }
+                                ]
+                              },
+                              {
+                                "tag": "p-confirmdialog"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "visited": 63,
+                  "truncated": false
+                }
+              }
+            }
+          ],
+          "network": [
+            {
+              "method": "POST",
+              "path": "/api/auth/login",
+              "body": {
+                "username": "unseen-admin",
+                "password": "Synthetic-123"
+              }
+            },
+            {
+              "method": "GET",
+              "path": "/api/einkaufszettel",
+              "body": null
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            },
+            {
+              "method": "GET",
+              "path": "/api/einkaufszettel",
+              "body": null
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            },
+            {
+              "method": "GET",
+              "path": "/api/user/friends",
+              "body": null
+            },
+            {
+              "method": "POST",
+              "path": "/api/auth/refresh-token",
+              "body": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic"
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4383/einkaufszettel",
+            "meta": {}
+          },
+          "before": {
+            "domain": {
+              "users": [
+                {
+                  "id": 1,
+                  "username": "unseen-admin",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Admin",
+                  "email": "admin@example.test",
+                  "token": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic",
+                  "roles": [
+                    {
+                      "id": 1,
+                      "name": "ROLE_ADMIN"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                },
+                {
+                  "id": 2,
+                  "username": "unseen-member",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Member",
+                  "email": "member@example.test",
+                  "roles": [
+                    {
+                      "id": 2,
+                      "name": "ROLE_USER"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                }
+              ],
+              "lists": [
+                {
+                  "id": 101,
+                  "name": "Unseen fixture list",
+                  "owners": [],
+                  "sharedWith": [],
+                  "artikels": [
+                    {
+                      "id": 201,
+                      "name": "Unseen milk",
+                      "anzahl": 1,
+                      "gekauft": false
+                    },
+                    {
+                      "id": 202,
+                      "name": "Unseen bread",
+                      "anzahl": 1,
+                      "gekauft": false
+                    }
+                  ]
+                }
+              ],
+              "archived": [],
+              "confirmations": []
+            },
+            "user": "{\"id\":1,\"username\":\"unseen-admin\",\"password\":\"Synthetic-123\",\"name\":\"Unseen Admin\",\"email\":\"admin@example.test\",\"token\":\"eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic\",\"roles\":[{\"id\":1,\"name\":\"ROLE_ADMIN\"}],\"avatar\":\"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII=\"}"
+          },
+          "businessInput": {
+            "name": "Unseen shopping list",
+            "owners": [],
+            "sharedWith": []
+          },
+          "actionError": "Error: Opaque chooser needs one visible registered ARIA combobox; found 0",
+          "status": "integration-failed",
+          "error": "Error: Opaque chooser needs one visible registered ARIA combobox; found 0",
+          "after": {
+            "domain": {
+              "users": [
+                {
+                  "id": 1,
+                  "username": "unseen-admin",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Admin",
+                  "email": "admin@example.test",
+                  "token": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic",
+                  "roles": [
+                    {
+                      "id": 1,
+                      "name": "ROLE_ADMIN"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                },
+                {
+                  "id": 2,
+                  "username": "unseen-member",
+                  "password": "Synthetic-123",
+                  "name": "Unseen Member",
+                  "email": "member@example.test",
+                  "roles": [
+                    {
+                      "id": 2,
+                      "name": "ROLE_USER"
+                    }
+                  ],
+                  "avatar": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII="
+                }
+              ],
+              "lists": [
+                {
+                  "id": 101,
+                  "name": "Unseen fixture list",
+                  "owners": [],
+                  "sharedWith": [],
+                  "artikels": [
+                    {
+                      "id": 201,
+                      "name": "Unseen milk",
+                      "anzahl": 1,
+                      "gekauft": false
+                    },
+                    {
+                      "id": 202,
+                      "name": "Unseen bread",
+                      "anzahl": 1,
+                      "gekauft": false
+                    }
+                  ]
+                }
+              ],
+              "archived": [],
+              "confirmations": []
+            },
+            "user": "{\"id\":1,\"username\":\"unseen-admin\",\"password\":\"Synthetic-123\",\"name\":\"Unseen Admin\",\"email\":\"admin@example.test\",\"token\":\"eyJhbGciOiJub25lIn0.eyJzdWIiOiJ1bnNlZW4tYWRtaW4iLCJleHAiOjQxMDI0NDQ4MDB9.synthetic\",\"roles\":[{\"id\":1,\"name\":\"ROLE_ADMIN\"}],\"avatar\":\"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl9sAAAAASUVORK5CYII=\"}"
+          },
+          "rendered": " Übersicht\n Einkaufszettel\n Archiv\n Userverwaltung\nName*\nBesitzer\nWähle Benutzer die Besitzer sein sollen\nPersonen mit Zugriff\nWähle Benutzer die auch Zugriff haben sollen\nSpeichern\nAlice Bedow",
+          "pageErrors": [],
+          "consoleErrors": []
+        }
+      ]
+    }
+  ],
+  "compilerDigestBefore": "691783a8035a3218572134bec6732191b7ea17e48b40ab9050e637923b98ec2e",
+  "appSpecificSourcePatches": [],
+  "instrumentation": "Separate generic compiler-instrumented app staged copy; original source manifest is checked unchanged.",
+  "browser": "145.0.7632.6",
+  "finishedAt": "2026-11-10T10:47:31.111Z",
+  "harnessSha256After": {
+    "run.mjs": "1cac97809285601ca362537aad595677a9a9049990315a44d0c2247e3868638b",
+    "fixtures.mjs": "0fbfa39c1afdd66c9fc93755d633ae7e7fc1aebc634c343840cf7e1f60466d2b",
+    "cases.mjs": "f43142008917379a5e7004f7b8b34c987cadcdcd5ec4742400de9e3b845f0037",
+    "mcp-driver.mjs": "1c837081187f63c9e0a7d02b0546f83fb7602ef5d72f66b1600be473a9ad9f3e"
+  },
+  "harnessStable": true,
+  "compilerDigestAfter": "691783a8035a3218572134bec6732191b7ea17e48b40ab9050e637923b98ec2e",
+  "compilerStable": true,
+  "totals": {
+    "positive": 1,
+    "positivePassed": 0,
+    "negative": 0,
+    "negativePassed": 0,
+    "protocolBoundaryNotApplicable": 0
+  }
+}

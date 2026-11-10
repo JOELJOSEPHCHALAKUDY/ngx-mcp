@@ -1,0 +1,22 @@
+{
+  "formatVersion": 1,
+  "kind": "untouched-integration-holdout-first-pass",
+  "startedAt": "2026-11-10T10:13:14.458Z",
+  "labelFreeze": "23cd7896c6ff015f4f080c1e9d82c3a026e79bf78f3407a1e3336c3b936005d7",
+  "compilerTreeDigestBefore": "ceb02609455a86759824c5308d4a82f1c00286656589bd2170a2a069d9bd5316",
+  "sourceUnchangedBefore": true,
+  "confirmationPolicy": "Native confirm decisions are independent external UI/human steps, recorded per case; they are not MCP automation successes.",
+  "schemaMapping": "Frozen business operations map to generic node actions by source-authored DOM selector and exact current registry instanceId. Text workflows call fill then the authored keyup action. No component, service, Angular debug API or model mutation is used.",
+  "cases": [],
+  "failureStage": "instrumentation-or-build",
+  "error": "Error: Angular integration analysis failed:\nsrc/app/base-button/base-button.component.ts: Angular source span does not end in a literal opening tag\nsrc/app/base-button/base-button.component.ts: Angular source span does not end in a literal opening tag\nsrc/app/base-button/base-button.component.ts: Angular source span does not end in a literal opening tag\n    at prepareIntegration (/Users/joeljoseph/Desktop/Personal Work/ai-experiments-apps/angular-mcp-compiler/src/integration-project.ts:52:24)\n    at async <anonymous> (/Users/joeljoseph/Desktop/Personal Work/ai-experiments-apps/angular-mcp-compiler/evaluation/integration-holdout/notes-manager/mcp-runtime.mts:20:17)",
+  "finishedAt": "2026-11-10T10:13:15.523Z",
+  "compilerTreeDigestAfter": "ceb02609455a86759824c5308d4a82f1c00286656589bd2170a2a069d9bd5316",
+  "compilerSourceUnchanged": true,
+  "sourceUnchangedAfter": true,
+  "passed": 0,
+  "total": 12,
+  "executed": 0,
+  "validForFinalGate": true,
+  "evaluatorSha256": "d5227c20fcfbf849d389dbf8d5416bc6fd8751e30c7815a66648d84c89d356a6"
+}

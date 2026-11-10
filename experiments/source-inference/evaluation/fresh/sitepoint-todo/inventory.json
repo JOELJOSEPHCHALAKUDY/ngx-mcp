@@ -1,0 +1,50 @@
+{
+  "projectId": "sitepoint-todo",
+  "repository": "https://github.com/sitepoint-editors/angular-todo-app",
+  "commit": "7069b9be885821f2811f0fed8581a37e3b21f6c8",
+  "license": {
+    "spdx": "MIT",
+    "evidence": {
+      "file": "package.json",
+      "lines": [
+        1,
+        5
+      ],
+      "sha256": "04e85c79618f085b7742d675b56498a202a99c8c38a0a0538dead18a46d90296"
+    },
+    "note": "Upstream declares MIT in package.json; no separate license text file."
+  },
+  "routes": [
+    {
+      "path": "/",
+      "component": "AppComponent",
+      "evidence": {
+        "file": "src/app/app.module.ts",
+        "lines": [
+          14,
+          29
+        ],
+        "sha256": "eaecd3a5f9e187eeb76bc5d9b0c576af6b735c6fa3612a784cddcba1ce374263"
+      }
+    }
+  ],
+  "sourceDirectory": "/private/tmp/fresh-sitepoint-todo",
+  "operationCount": 4,
+  "candidateRejections": [
+    {
+      "repo": "bezkoder/angular-16-crud",
+      "reason": "Inaccessible repository URL"
+    },
+    {
+      "repo": "bezkoder/angular-16-crud-example",
+      "commit": "e760ebb02fd950b478b0fa863e767b672929b10d",
+      "reason": "No LICENSE file or package license declaration"
+    }
+  ],
+  "holdoutIntegrity": {
+    "priorProject": false,
+    "compilerSourceRead": false,
+    "generatedManifestRead": false,
+    "sourcePatches": []
+  }
+}

@@ -1,0 +1,288 @@
+{
+  "totals": {
+    "frozenOperations": 7,
+    "exactBaselineEffects": 4,
+    "compilerNativeEffects": 7,
+    "boundariesPassed": 4
+  },
+  "baseline": [
+    {
+      "id": "filter_todos",
+      "status": "tool-error",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "data must have required property 'route', data must NOT have additional properties"
+          }
+        ],
+        "isError": true
+      }
+    },
+    {
+      "id": "add_todo",
+      "status": "effect-verified",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:4342/#/all\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:4342/#/all"
+        }
+      }
+    },
+    {
+      "id": "toggle_todo",
+      "status": "tool-error",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "data must have required property 'value'"
+          }
+        ],
+        "isError": true
+      }
+    },
+    {
+      "id": "delete_todo",
+      "status": "effect-verified",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:4342/#/all\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:4342/#/all"
+        }
+      }
+    },
+    {
+      "id": "toggle_all",
+      "status": "tool-error",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "data must have required property 'checked', data must NOT have additional properties"
+          }
+        ],
+        "isError": true
+      }
+    },
+    {
+      "id": "edit_todo",
+      "status": "effect-verified",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:4342/#/all\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:4342/#/all"
+        }
+      }
+    },
+    {
+      "id": "clear_completed",
+      "status": "effect-verified",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:4342/#/all\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:4342/#/all"
+        }
+      }
+    }
+  ],
+  "compilerNative": [
+    {
+      "id": "filter_todos",
+      "status": "effect-verified",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:4342/#/active\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:4342/#/active"
+        }
+      }
+    },
+    {
+      "id": "add_todo",
+      "status": "effect-verified",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:4342/#/all\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:4342/#/all"
+        }
+      }
+    },
+    {
+      "id": "toggle_todo",
+      "status": "effect-verified",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:4342/#/all\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:4342/#/all"
+        }
+      }
+    },
+    {
+      "id": "delete_todo",
+      "status": "effect-verified",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:4342/#/all\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:4342/#/all"
+        }
+      }
+    },
+    {
+      "id": "toggle_all",
+      "status": "effect-verified",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:4342/#/all\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:4342/#/all"
+        }
+      }
+    },
+    {
+      "id": "edit_todo",
+      "status": "effect-verified",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:4342/#/all\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:4342/#/all"
+        }
+      }
+    },
+    {
+      "id": "clear_completed",
+      "status": "effect-verified",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:4342/#/all\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:4342/#/all"
+        }
+      }
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "edit_todo",
+      "phase": "duplicate-titles-refused",
+      "status": "refused-without-mutation",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "page.evaluate: Error: Projected item identity is missing or ambiguous in the source collection\n    at Object.select (eval at evaluate (:290:30), <anonymous>:1:4700)\n    at executeDom (eval at evaluate (:290:30), <anonymous>:1:6925)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+          }
+        ],
+        "isError": true
+      }
+    },
+    {
+      "id": "edit_todo",
+      "phase": "other-row-editor-refused",
+      "status": "refused-without-mutation",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "page.evaluate: Error: Another inline editor is active; the requested row is not open\n    at executeDom (eval at evaluate (:290:30), <anonymous>:1:6170)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+          }
+        ],
+        "isError": true
+      }
+    },
+    {
+      "id": "edit_todo",
+      "phase": "blank-edit-source-delete",
+      "status": "effect-verified",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"status\":\"ui-dispatched\",\"url\":\"http://127.0.0.1:4342/#/all\"}"
+          }
+        ],
+        "structuredContent": {
+          "status": "ui-dispatched",
+          "url": "http://127.0.0.1:4342/#/all"
+        }
+      }
+    },
+    {
+      "id": "add_todo",
+      "phase": "blank-add-contract-refused",
+      "status": "refused-without-mutation",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "data/title must match pattern \"\\S\""
+          }
+        ],
+        "isError": true
+      }
+    }
+  ]
+}

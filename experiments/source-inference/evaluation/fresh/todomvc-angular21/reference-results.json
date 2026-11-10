@@ -1,0 +1,224 @@
+{
+  "phase": "Independent source-only DOM reference, modern project compiler output not yet read",
+  "startedAt": "2026-11-09T20:59:48.228Z",
+  "operations": [
+    {
+      "id": "filter_todos",
+      "pass": true,
+      "observed": {
+        "url": "http://127.0.0.1:4342/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      },
+      "variants": [
+        "all",
+        "active",
+        "completed"
+      ]
+    },
+    {
+      "id": "add_todo",
+      "pass": true,
+      "observed": {
+        "url": "http://127.0.0.1:4342/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          },
+          {
+            "title": "Frozen holdout task",
+            "completed": false,
+            "editing": false
+          }
+        ],
+        "activeCount": "3",
+        "input": ""
+      }
+    },
+    {
+      "id": "toggle_todo",
+      "pass": true,
+      "observed": {
+        "url": "http://127.0.0.1:4342/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": true,
+            "editing": false
+          },
+          {
+            "title": "Clean fixture inbox",
+            "completed": false,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          },
+          {
+            "title": "Frozen holdout task",
+            "completed": false,
+            "editing": false
+          }
+        ],
+        "activeCount": "2",
+        "input": ""
+      }
+    },
+    {
+      "id": "delete_todo",
+      "pass": true,
+      "observed": {
+        "url": "http://127.0.0.1:4342/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": true,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          },
+          {
+            "title": "Frozen holdout task",
+            "completed": false,
+            "editing": false
+          }
+        ],
+        "activeCount": "1",
+        "input": ""
+      }
+    },
+    {
+      "id": "toggle_all",
+      "pass": true,
+      "observed": {
+        "url": "http://127.0.0.1:4342/#/all",
+        "rows": [
+          {
+            "title": "Read fixture article",
+            "completed": true,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          },
+          {
+            "title": "Frozen holdout task",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "0",
+        "input": ""
+      }
+    },
+    {
+      "id": "edit_todo",
+      "pass": true,
+      "observed": {
+        "url": "http://127.0.0.1:4342/#/all",
+        "rows": [
+          {
+            "title": "Revised fixture article",
+            "completed": true,
+            "editing": false
+          },
+          {
+            "title": "Reserve fixture table",
+            "completed": true,
+            "editing": false
+          },
+          {
+            "title": "Frozen holdout task",
+            "completed": true,
+            "editing": false
+          }
+        ],
+        "activeCount": "0",
+        "input": ""
+      }
+    },
+    {
+      "id": "clear_completed",
+      "pass": true,
+      "observed": {
+        "url": "http://127.0.0.1:4342/#/all",
+        "rows": [
+          {
+            "title": "Revised fixture article",
+            "completed": false,
+            "editing": false
+          }
+        ],
+        "activeCount": "1",
+        "input": ""
+      }
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "blank_add_noop",
+      "pass": true
+    },
+    {
+      "id": "escape_cancels_edit",
+      "pass": true
+    },
+    {
+      "id": "blur_commits_edit",
+      "pass": true
+    },
+    {
+      "id": "blank_edit_deletes",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "network": {
+    "blocked": [],
+    "apiRequests": []
+  },
+  "final": {
+    "url": "http://127.0.0.1:4342/#/all",
+    "rows": [],
+    "activeCount": "0",
+    "input": "   "
+  },
+  "pass": true,
+  "finishedAt": "2026-11-09T20:59:50.057Z"
+}

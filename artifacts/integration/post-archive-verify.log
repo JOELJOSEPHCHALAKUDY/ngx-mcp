@@ -1,0 +1,156 @@
+
+> angular-mcp-compiler@0.1.0 verify
+> npm run check && npm test && npm run pack:check
+
+
+> angular-mcp-compiler@0.1.0 check
+> tsc --noEmit
+
+
+> angular-mcp-compiler@0.1.0 test
+> npm run test:integration && npm run test:integration-eval
+
+
+> angular-mcp-compiler@0.1.0 test:integration
+> tsx --test tests/integration-compiler.test.ts tests/integration-runtime.test.ts tests/integration-ui.test.ts tests/integration-mcp.test.ts tests/integration-project.test.ts tests/integration-strict.test.ts tests/integration.test.ts
+
+✔ the real project compiler resolves aliases, NgModel and output consumers, with stable source IDs (2429.8895ms)
+✔ shared resources have one edit and explicit per-component scopes, and form/view associations are preserved (0.208917ms)
+✔ only actual Angular standalone/component module scopes change; source originals remain untouched (0.400958ms)
+✔ constant and imported templates use explicit evaluated mappings and preserve shared declarations (438.421875ms)
+✔ escaped inline templates and shared-template instrumentation compile through the real AOT compiler (693.757291ms)
+✔ a standard input submitter does not suppress the generated native form tool (1230.342708ms)
+✔ file upload uses the exact live element atomically and refuses copied stale handles (327.5735ms)
+✔ native keyboard MCP dispatch opens an exact focusable zero-size readonly ARIA listbox (314.104625ms)
+✔ declared focusable option rows receive passive exact identities and original keyboard events without an invented click action (292.349208ms)
+✔ native keyboard dispatch through an exact CVA host uses only its unique original native delegate (310.286209ms)
+✔ staging dereferences editable source symlinks and leaves original targets unchanged (2077.030875ms)
+✔ a destination through a symlink into the source workspace is rejected before staging writes (2.241083ms)
+✔ registry uses exact directive instances without debug APIs; repeated controls need instance IDs (1373.1975ms)
+✔ form fill preserves checkbox clicks and conditional validation then submits exactly once (379.088542ms)
+✔ group and nested validation errors are reported by the real model and disabled submission is respected (358.773209ms)
+✔ async validators settle before activation and pending timeouts are explicit (508.145167ms)
+✔ updateOn submit is committed by the original Angular submit lifecycle (341.421792ms)
+✔ custom CVAs remain explicit unsupported fields; readonly and cross-form edits refuse (270.673625ms)
+✔ template driven forms use their actual NgForm controls and native submit (296.047584ms)
+✔ removed repeated view handles become stale instead of selecting another row (322.654209ms)
+✔ the original submit button click handler runs once before the normal form submit (283.032583ms)
+✔ native number and multiple-select transports remain structural and validate current options (309.156667ms)
+✔ a pending async validator returns an explicit partial result without submitting (284.997917ms)
+✔ the generated bridge module works in an actual NgModule-bootstrapped application (239.408042ms)
+✔ optional public signal-forms registration reports field and root validation without changing rules (297.663167ms)
+✔ runtime instance IDs cannot be reused after a document reload (381.813916ms)
+✔ transparent CVAs delegate only through their unique native UI and hidden checkbox label (277.716917ms)
+✔ full text fill preserves a canceled original paste handler and reports normalized UI text (265.050875ms)
+✔ an unqualified authored keyup receives the supplied native key and preserves dirty-state handlers (332.691459ms)
+✔ native input command buttons are actions, not data fields, and their original submit works (301.313958ms)
+✔ element returns the actual registered node and refuses a replacement clone despite copied instance attributes (248.929166ms)
+✔ source-identified ARIA controls expose native affordances and live state without inventing authored events (269.12425ms)
+✔ hidden native radios activate through their one visible label and disabled radios retain guards (288.713334ms)
+✔ readonly native comboboxes retain original clicks while refusing value edits (262.461333ms)
+✔ public control model observations expose only primitives and primitive arrays while withholding sensitive delegates and objects (252.341958ms)
+✔ explicit model snapshots read plain object arrays without getters or sensitive data and report incomplete budgets honestly (246.228791ms)
+✔ an exact CVA may use its one visible ARIA checkbox for its unique hidden native delegate while preserving guards and ambiguity refusal (283.091042ms)
+✔ generated runtime compiles with all strict application flags (signals=false) (1485.995833ms)
+✔ generated runtime compiles with all strict application flags (signals=true) (967.775083ms)
+✔ real Material snackbar Undo is a distinct runtime-DOM action and invokes its original callback (1590.259958ms)
+✔ library-owned confirmation buttons retain disabled guards and stale overlay identities are removed (346.522708ms)
+✔ public ARIA affordances and native anchors activate exact original DOM listeners (417.759458ms)
+✔ compiler registrations win and transparent source CVAs have no duplicate runtime-DOM control (301.068125ms)
+✔ runtime-DOM instances downgrade to passive focus targets when a role is removed and disappear when semantics are removed (451.437875ms)
+✔ library-owned native file inputs receive passive exact identities without advertising JSON fill or click (282.195875ms)
+✔ a readonly focus delegate is not advertised as fillable and does not hide the public picker affordance (285.428666ms)
+✔ readonly native ARIA listboxes retain exact runtime identities and original clicks (273.7505ms)
+❯ Building...
+✔ Building...
+Initial chunk files | Names         |  Raw size | Estimated transfer size
+main.js             | main          | 259.04 kB |                68.73 kB
+
+                    | Initial total | 259.04 kB |                68.73 kB
+
+Application bundle generation complete. [1.837 seconds] - 2026-11-10T12:39:03.401Z
+
+Output location: /private/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-mcp-conformance-ZOm97J/instrumented/build
+
+✔ AOT production runtime: exact controls, dynamic validation, submit timing, async rules and repeated instances over MCP (6421.083583ms)
+ℹ tests 48
+ℹ suites 0
+ℹ pass 48
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9515.525625
+
+> angular-mcp-compiler@0.1.0 test:integration-eval
+> node --test tests/integration-evaluator.test.mjs evaluation/integration-unseen/oracles.test.mjs
+
+✔ transaction edit verifies every frozen payload field and identity (2.580042ms)
+✔ admin row save verifies every frozen field and preserves neighbor (0.847042ms)
+✔ list create compares empty owners/sharedWith instead of ignoring arrays (0.533333ms)
+✔ registration checks password and display name as well as identity (0.377917ms)
+✔ list deletion refuses loss of an unrelated list (0.145417ms)
+✔ unknown chooser error cannot become a validator pass from unchanged data and preexisting invalid UI (1.091458ms)
+✔ a patched-invalid control still cannot hide a failure before actual submit (0.127167ms)
+✔ actual requested field and exact disabled-submit refusal establish validation coverage (0.085542ms)
+✔ an unrelated invalid field or wrong requested value cannot establish coverage (0.075958ms)
+✔ unknown transport failures cannot reuse stale app rejection feedback (0.077666ms)
+✔ actual group-validator errors cover reached fields whose own controls remain valid (0.08825ms)
+✔ todo MCP-only boundary must pass in both raw and UI matrices (1.651167ms)
+✔ shopping MCP-only boundary must pass in both raw and UI matrices (0.357125ms)
+✔ strict native quality cannot become vacuous after source reference failures (0.976625ms)
+✔ effective business input is checked alongside frozenInput (0.389125ms)
+✔ valid repeated-source refusal and native quality pass strict validation (0.137167ms)
+✔ native tracing includes nested real driver calls and remains JSON serializable (0.394ms)
+✔ gate recomputes exact business payload instead of trusting passed/payloadVerified booleans (0.35825ms)
+✔ a mid-fill unsupported mapper error cannot masquerade as disabled-submit validation (0.080542ms)
+✔ disabled readiness while filling a different field cannot masquerade as submit readiness (0.062417ms)
+✔ native invalid state is refreshed after action on the exact successfully filled owner (0.30925ms)
+✔ an unrelated invalid form never substitutes for a still-valid patched owner (0.167375ms)
+✔ a replaced patched field cannot borrow a new invalid element from its locator (0.103291ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 62.666209
+
+> angular-mcp-compiler@0.1.0 pack:check
+> npm run build && node tooling/check-package.mjs
+
+
+> angular-mcp-compiler@0.1.0 build
+> node tooling/build.mjs
+
+{
+  "name": "angular-mcp-compiler",
+  "version": "0.1.0",
+  "compressedBytes": 38017,
+  "unpackedBytes": 138591,
+  "files": [
+    "LICENSE",
+    "README.md",
+    "RELEASING.md",
+    "THIRD_PARTY_NOTICES.md",
+    "dist/chunk-JLYOR7Y3.js",
+    "dist/chunk-P3UPBEXG.js",
+    "dist/index.js",
+    "dist/integrate.js",
+    "dist/integrated-serve.js",
+    "dist/types/index.d.ts",
+    "dist/types/integrate.d.ts",
+    "dist/types/integrated-serve.d.ts",
+    "dist/types/integration-compiler.d.ts",
+    "dist/types/integration-mcp.d.ts",
+    "dist/types/integration-project.d.ts",
+    "dist/types/integration-runtime.d.ts",
+    "dist/types/integration-ui.d.ts",
+    "package.json"
+  ],
+  "sampleApplicationsIncluded": false,
+  "legacyExperimentIncluded": false,
+  "published": false
+}
+Extracted current-integration CLI, API, and code generation passed.

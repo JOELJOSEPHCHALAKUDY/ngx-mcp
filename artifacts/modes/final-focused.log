@@ -1,0 +1,23 @@
+✔ staging dereferences editable source symlinks and leaves original targets unchanged (1064.519625ms)
+✔ a destination through a symlink into the source workspace is rejected before staging writes (2.342417ms)
+✔ generation selects mcp and preserves the source (268.5655ms)
+✔ generation selects webmcp and preserves the source (266.728416ms)
+✔ generation selects both and preserves the source (243.549333ms)
+✔ unknown transport mode is rejected before staging writes (1.413875ms)
+✔ generated runtime compiles with all strict application flags (signals=false) (775.345292ms)
+✔ generated runtime compiles with all strict application flags (signals=true) (372.67025ms)
+✔ publisher is opt-in and prefers the document WebMCP API over legacy navigator (92.485292ms)
+✔ browser calls validate arguments and every submitted field before any mutation (19.239542ms)
+✔ cancellation during catalog refresh prevents a mutation from starting (16.057209ms)
+✔ catalog schema changes replace registrations and retained callbacks cannot execute (11.426416ms)
+✔ persisted page restoration republishes tools once without reviving explicit disposal (10.415625ms)
+✔ registration collisions leave an existing foreign tool intact (14.480458ms)
+✔ generated publisher compiles under strict application flags without Node or external runtime dependencies (250.822708ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1938.944333

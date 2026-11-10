@@ -1,0 +1,1344 @@
+{
+  "schemaVersion": "fresh-source-labels-v1",
+  "project": {
+    "repository": "https://github.com/trungk18/jira-clone-angular",
+    "commit": "20b50e9a1a4d9205af4641b66f544b81cd46873e",
+    "license": {
+      "spdx": "MIT",
+      "copyright": "2020 Trung Vo",
+      "evidence": [
+        {
+          "file": "LICENSE",
+          "startLine": 1,
+          "endLine": 21,
+          "sha256": "c45956b16a34a9e0c74a93163f497174e373623333e47ce3251b4d0107120b09",
+          "reason": ""
+        }
+      ]
+    },
+    "localSource": "test-apps/fresh-jira-clone",
+    "angularProject": "frontend",
+    "port": 4312,
+    "entryRoute": "/project/board",
+    "routeEvidence": [
+      {
+        "file": "src/app/app.routes.ts",
+        "startLine": 3,
+        "endLine": 16,
+        "sha256": "619cc8bec425411ab162a0dfb13b2e8bcddfb85bc4ba4ac9f8cf442844024c98",
+        "reason": ""
+      },
+      {
+        "file": "src/app/project/project.routes.ts",
+        "startLine": 13,
+        "endLine": 42,
+        "sha256": "228fec7abbd436dc09d4c859fcfc9ce99e2a87455ec0ebcbfda9d753360f6731",
+        "reason": ""
+      }
+    ],
+    "toolchain": {
+      "node": "22.21.1 isolated /tmp; root Node24 also available",
+      "npm": "10.5.0",
+      "angularCoreLock": "20.3.18",
+      "angularCliLock": "20.3.21",
+      "typescriptLock": "5.8.3",
+      "dependencies": {
+        "name": "jira-clone-angular-frontend",
+        "version": "1.0.0",
+        "scripts": {
+          "ng": "ng",
+          "start": "ng serve",
+          "build": "ng build",
+          "test": "vitest run",
+          "test:watch": "vitest",
+          "test-cover": "vitest run --coverage",
+          "lint": "ng lint",
+          "lint:fix": "ng lint --fix=true",
+          "e2e": "ng e2e"
+        },
+        "private": true,
+        "dependencies": {
+          "@angular/animations": "^20.3.18",
+          "@angular/cdk": "^20.2.14",
+          "@angular/common": "^20.3.18",
+          "@angular/compiler": "^20.3.18",
+          "@angular/core": "^20.3.18",
+          "@angular/forms": "^20.3.18",
+          "@angular/platform-browser": "^20.3.18",
+          "@angular/platform-browser-dynamic": "^20.3.18",
+          "@angular/router": "^20.3.18",
+          "@ant-design/icons-angular": "^20.0.0",
+          "@ctrl/tinycolor": "^4.2.0",
+          "@datorama/akita": "^7.1.1",
+          "@datorama/akita-ng-entity-service": "^7.0.0",
+          "@ngneat/content-loader": "^7.0.0",
+          "@ngneat/until-destroy": "^8.0.3",
+          "@sentry/angular": "^9.30.0",
+          "@sentry/tracing": "^6.18.1",
+          "date-fns": "^2.14.0",
+          "ng-zorro-antd": "^20.4.4",
+          "ngx-quill": "^28.0.2",
+          "quill": "^2.0.3",
+          "rxjs": "^7.8.1",
+          "tslib": "^2.0.0",
+          "zone.js": "~0.15.1"
+        },
+        "devDependencies": {
+          "@analogjs/vite-plugin-angular": "^2.3.1",
+          "@analogjs/vitest-angular": "^2.3.1",
+          "@angular-eslint/builder": "20.7.0",
+          "@angular-eslint/eslint-plugin": "20.7.0",
+          "@angular-eslint/eslint-plugin-template": "20.7.0",
+          "@angular-eslint/schematics": "20.7.0",
+          "@angular-eslint/template-parser": "20.7.0",
+          "@angular/build": "^20.3.21",
+          "@angular/cli": "^20.3.21",
+          "@angular/compiler-cli": "^20.3.18",
+          "@datorama/akita-ng-router-store": "^7.0.0",
+          "@datorama/akita-ngdevtools": "^7.0.0",
+          "@types/node": "^14.14.14",
+          "@typescript-eslint/eslint-plugin": "^8.33.1",
+          "@typescript-eslint/parser": "^8.33.1",
+          "angular-eslint": "^21.3.1",
+          "eslint": "^9.28.0",
+          "husky": "^5.0.9",
+          "jsdom": "^29.0.1",
+          "lint-staged": "^10.5.4",
+          "tailwindcss": "^3.4.17",
+          "ts-node": "~9.1.1",
+          "typescript": "~5.8.3",
+          "typescript-eslint": "^8.57.1",
+          "vitest": "^4.1.0"
+        },
+        "husky": {
+          "hooks": {
+            "pre-commit": "lint-staged"
+          }
+        },
+        "lint-staged": {
+          "*.js": "npm run lint:fix"
+        }
+      },
+      "npmrc": "legacy-peer-deps=true",
+      "nvmrc": "20 (current minimum 20.19+ needed by Angular20)",
+      "lockfileSha256": "18ad9622c9b38921e8c2d3042f9177e1157afdc0940b30f3b1c677009f42f336"
+    },
+    "complexity": "Richer project tracking app; lazy route tree, 30+ components, Akita store, typed issue fields, rich text, comments, modal outputs, CDK drag/drop and custom controls.",
+    "runtime": {
+      "backend": "none; static /assets/data/project.json and /assets/data/auth.json",
+      "serve": "node node_modules/@angular/cli/bin/ng.js serve frontend --host 127.0.0.1 --port 4312",
+      "build": "node node_modules/@angular/cli/bin/ng.js build frontend --configuration development",
+      "persistence": "All project edits are in-memory Akita changes only. No backend writes or browser storage persistence in source. Reload restores bundled static data."
+    }
+  },
+  "scope": {
+    "included": "All user-invokable operations that change application domain state within the complete shipped app. Repeated entry points have distinct labels when handler argument contracts differ; common effects use aliases. Domain state includes in-memory app state; backend/persistence claims are separately stated.",
+    "excluded": "Presentation, draft-only edits, route navigation, search/filter state, infrastructure lifecycle and automatic data loading.",
+    "labelingMethod": "Independent read of only the pinned public app source, models, templates, routes and local fixtures. No compiler source, generated capabilities, current benchmark labels or compiler outputs were read. Schemas describe the user or explicit handler input; implicit component/route dependencies are context, and UI-only limits are marked separately."
+  },
+  "actions": [
+    {
+      "id": "issue-create",
+      "component": "AddIssueModalComponent",
+      "handler": "submitForm",
+      "routes": [
+        "/project/* (global create modal)"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "Story",
+              "Task",
+              "Bug"
+            ]
+          },
+          "priority": {
+            "type": "string",
+            "enum": [
+              "Lowest",
+              "Low",
+              "Medium",
+              "High",
+              "Highest"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "description": {
+            "type": "string"
+          },
+          "reporterId": {
+            "type": "string"
+          },
+          "userIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "title"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "type": "Task",
+        "priority": "Medium",
+        "title": "Benchmark stock reconciliation",
+        "description": "<p>Reconcile test inventory</p>",
+        "reporterId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+        "userIds": []
+      },
+      "effect": "Upsert a newly identified issue into project issues; set status Backlog and timestamps, then close create modal.",
+      "evidence": [
+        {
+          "file": "src/app/project/components/add-issue-modal/add-issue-modal.component.ts",
+          "startLine": 62,
+          "endLine": 87,
+          "sha256": "56441ca57b8ca16a2f696df4c237e1d0a9aa1e9ad8cb4868bcce1189962725c9",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/components/add-issue-modal/add-issue-modal.component.html",
+          "startLine": 63,
+          "endLine": 69,
+          "sha256": "9c3d3dc0d407b0acb2f3af04331c7e0efd2e0a5dda2c4ac649d520f0e5795892",
+          "reason": ""
+        },
+        {
+          "file": "src/app/core/validators/no-whitespace.validator.ts",
+          "startLine": 4,
+          "endLine": 12,
+          "sha256": "4efddfc07407f9eac7be1f15502d841506b2139b57e6d8e23dc1da38da0574f1",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/state/project/project.service.ts",
+          "startLine": 53,
+          "endLine": 62,
+          "sha256": "bbe16353ccbed48144f49cc682b9301d57a0bec88c1a8ceff74257ee7a811ebe",
+          "reason": ""
+        }
+      ],
+      "bindings": {
+        "type": "issueForm.type",
+        "priority": "issueForm.priority",
+        "title": "issueForm.title",
+        "description": "issueForm.description",
+        "reporterId": "issueForm.reporterId",
+        "userIds": "issueForm.userIds"
+      },
+      "defaults": {
+        "type": "Task",
+        "priority": "Medium",
+        "description": "",
+        "reporterId": "first loaded user.id",
+        "userIds": []
+      },
+      "oracle": {
+        "setup": "Load seed project, open Create Issue.",
+        "assertions": [
+          "issues count increases by one, new issue title matches; id generated; status=Backlog.",
+          "Type/priority/reporter/assignees match submitted values.",
+          "Whitespace-only title prevents submission.",
+          "Reload removes new issue and restores source fixture."
+        ]
+      },
+      "limitations": [
+        "Created JIssue omits several interface-required properties (listPosition, estimate, projectId, comments). Oracle follows source rather than inventing defaults."
+      ]
+    },
+    {
+      "id": "issue-title-update",
+      "component": "IssueTitleComponent",
+      "handler": "onBlur",
+      "routes": [
+        "/project/board (issue modal)",
+        "/project/issue/:issueId"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "titleControl": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "titleControl"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "titleControl": "Benchmark renamed task"
+      },
+      "effect": "Replace current issue title on blur and update updatedAt.",
+      "evidence": [
+        {
+          "file": "src/app/project/components/issues/issue-title/issue-title.component.ts",
+          "startLine": 19,
+          "endLine": 30,
+          "sha256": "b596d9efa2947794f43cf7ca76509e9dc523886125c0395a81f92e6974f4e758",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/components/issues/issue-title/issue-title.component.html",
+          "startLine": 1,
+          "endLine": 6,
+          "sha256": "f71e5e5ee201caf1a85f1ff78b68bb9491b2de8192d4a2964dfa71550c0ebc6a",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/state/project/project.service.ts",
+          "startLine": 53,
+          "endLine": 62,
+          "sha256": "bbe16353ccbed48144f49cc682b9301d57a0bec88c1a8ceff74257ee7a811ebe",
+          "reason": ""
+        }
+      ],
+      "context": {
+        "issue": "Current JIssue from component @Input, found by route/modal issueId",
+        "fixtureIssueId": "2021"
+      },
+      "bindings": {
+        "titleControl": "titleControl FormControl"
+      },
+      "oracle": {
+        "assertions": [
+          "Current issue id unchanged, title matches supplied value; other fields preserved.",
+          "Empty title is accepted here; no validators on edit control."
+        ]
+      }
+    },
+    {
+      "id": "issue-description-update",
+      "component": "IssueDescriptionComponent",
+      "handler": "save",
+      "routes": [
+        "/project/board (issue modal)",
+        "/project/issue/:issueId"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "descriptionControl": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "descriptionControl"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "descriptionControl": "<p>Benchmark description</p>"
+      },
+      "effect": "Replace issue rich-text description and leave edit mode.",
+      "evidence": [
+        {
+          "file": "src/app/project/components/issues/issue-description/issue-description.component.ts",
+          "startLine": 27,
+          "endLine": 30,
+          "sha256": "51b63de7bdc72191b30b60677e1e668eb6160dce79c3dcfc8b42522a70f1b1f4",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/components/issues/issue-description/issue-description.component.ts",
+          "startLine": 44,
+          "endLine": 50,
+          "sha256": "51b63de7bdc72191b30b60677e1e668eb6160dce79c3dcfc8b42522a70f1b1f4",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/state/project/project.service.ts",
+          "startLine": 53,
+          "endLine": 62,
+          "sha256": "bbe16353ccbed48144f49cc682b9301d57a0bec88c1a8ceff74257ee7a811ebe",
+          "reason": ""
+        }
+      ],
+      "context": {
+        "issue": "Current JIssue from component @Input, found by route/modal issueId",
+        "fixtureIssueId": "2021"
+      },
+      "bindings": {
+        "descriptionControl": "descriptionControl FormControl via Quill editor"
+      },
+      "oracle": {
+        "assertions": [
+          "Current issue description contains submitted HTML.",
+          "Title, assignees, status unchanged.",
+          "Cancel draft edit restores original description without a store update."
+        ]
+      }
+    },
+    {
+      "id": "issue-priority-update",
+      "component": "IssuePriorityComponent",
+      "handler": "updateIssue",
+      "routes": [
+        "/project/board (issue modal)",
+        "/project/issue/:issueId"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "priority": {
+            "type": "string",
+            "enum": [
+              "Lowest",
+              "Low",
+              "Medium",
+              "High",
+              "Highest"
+            ]
+          }
+        },
+        "required": [
+          "priority"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "priority": "High"
+      },
+      "effect": "Replace current issue priority and update updatedAt.",
+      "evidence": [
+        {
+          "file": "src/app/project/components/issues/issue-priority/issue-priority.component.ts",
+          "startLine": 43,
+          "endLine": 48,
+          "sha256": "f89b3b7cc4744f2eaed2aa1ff9f9f9a9bed5fa10e3ca2ebca94f4ac5a340ed27",
+          "reason": ""
+        },
+        {
+          "file": "src/app/interface/issue.ts",
+          "startLine": 4,
+          "endLine": 30,
+          "sha256": "2b319a57957fa523c806305e73baded037ced9cb14f7f5086dfec207ca23e240",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/state/project/project.service.ts",
+          "startLine": 53,
+          "endLine": 62,
+          "sha256": "bbe16353ccbed48144f49cc682b9301d57a0bec88c1a8ceff74257ee7a811ebe",
+          "reason": ""
+        }
+      ],
+      "context": {
+        "issue": "Current JIssue from component @Input, found by route/modal issueId",
+        "fixtureIssueId": "2021"
+      },
+      "oracle": {
+        "assertions": [
+          "Current issue priority equals High.",
+          "Other domain fields unchanged; timestamp updated."
+        ]
+      }
+    },
+    {
+      "id": "issue-type-update",
+      "component": "IssueTypeComponent",
+      "handler": "updateIssue",
+      "routes": [
+        "/project/board (issue modal)",
+        "/project/issue/:issueId"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "issueType": {
+            "type": "string",
+            "enum": [
+              "Story",
+              "Task",
+              "Bug"
+            ]
+          }
+        },
+        "required": [
+          "issueType"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "issueType": "Bug"
+      },
+      "effect": "Replace current issue type and update updatedAt.",
+      "evidence": [
+        {
+          "file": "src/app/project/components/issues/issue-type/issue-type.component.ts",
+          "startLine": 36,
+          "endLine": 40,
+          "sha256": "c77ca49de4c07a69710ee04d61dde0ec2039b78216ca1f10b96ce31e64c6256a",
+          "reason": ""
+        },
+        {
+          "file": "src/app/interface/issue.ts",
+          "startLine": 4,
+          "endLine": 30,
+          "sha256": "2b319a57957fa523c806305e73baded037ced9cb14f7f5086dfec207ca23e240",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/state/project/project.service.ts",
+          "startLine": 53,
+          "endLine": 62,
+          "sha256": "bbe16353ccbed48144f49cc682b9301d57a0bec88c1a8ceff74257ee7a811ebe",
+          "reason": ""
+        }
+      ],
+      "context": {
+        "issue": "Current JIssue from component @Input, found by route/modal issueId",
+        "fixtureIssueId": "2021"
+      },
+      "oracle": {
+        "assertions": [
+          "Current issue type equals Bug.",
+          "Other domain fields unchanged; timestamp updated."
+        ]
+      }
+    },
+    {
+      "id": "issue-status-update",
+      "component": "IssueStatusComponent",
+      "handler": "updateIssue",
+      "routes": [
+        "/project/board (issue modal)",
+        "/project/issue/:issueId"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "Backlog",
+              "Selected",
+              "InProgress",
+              "Done"
+            ]
+          }
+        },
+        "required": [
+          "status"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "status": "Selected"
+      },
+      "effect": "Move current issue to selected status and set listPosition to last destination position plus one.",
+      "evidence": [
+        {
+          "file": "src/app/project/components/issues/issue-status/issue-status.component.ts",
+          "startLine": 32,
+          "endLine": 47,
+          "sha256": "6e3e0174f73b3db523609cd38092c22fe33620e899582dd24d8e54d9645f1043",
+          "reason": ""
+        },
+        {
+          "file": "src/app/interface/issue.ts",
+          "startLine": 10,
+          "endLine": 22,
+          "sha256": "2b319a57957fa523c806305e73baded037ced9cb14f7f5086dfec207ca23e240",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/state/project/project.service.ts",
+          "startLine": 53,
+          "endLine": 62,
+          "sha256": "bbe16353ccbed48144f49cc682b9301d57a0bec88c1a8ceff74257ee7a811ebe",
+          "reason": ""
+        }
+      ],
+      "context": {
+        "issue": "Current JIssue from component @Input, found by route/modal issueId",
+        "fixtureIssueId": "2021"
+      },
+      "oracle": {
+        "setup": "Record lastIssuePosition(Selected) before invocation.",
+        "assertions": [
+          "Current issue status=Selected.",
+          "listPosition equals recorded destination maximum plus 1.",
+          "Other issue count and content unchanged."
+        ]
+      }
+    },
+    {
+      "id": "issue-assignee-add",
+      "component": "IssueAssigneesComponent",
+      "handler": "addUserToIssue",
+      "routes": [
+        "/project/board (issue modal)",
+        "/project/issue/:issueId"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "user": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "avatarUrl": {
+                "type": "string"
+              },
+              "createdAt": {
+                "type": "string"
+              },
+              "updatedAt": {
+                "type": "string"
+              },
+              "issueIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "email",
+              "avatarUrl",
+              "createdAt",
+              "updatedAt",
+              "issueIds"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "user"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "user": {
+          "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "name": "Benchmark Reporter",
+          "email": "benchmark@example.test",
+          "avatarUrl": "/assets/test-avatar.png",
+          "createdAt": "2026-01-01T00:00:00Z",
+          "updatedAt": "2026-01-01T00:00:00Z",
+          "issueIds": []
+        }
+      },
+      "effect": "Append selected user.id to current issue.userIds.",
+      "evidence": [
+        {
+          "file": "src/app/project/components/issues/issue-assignees/issue-assignees.component.ts",
+          "startLine": 47,
+          "endLine": 55,
+          "sha256": "5b661826f379544e1879cfa6ab5d89f0b9b48cd4a89484f661d711fa03d81f85",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/components/issues/issue-assignees/issue-assignees.component.html",
+          "startLine": 1,
+          "endLine": 44,
+          "sha256": "5b78952944607d27fc085292a98af3f0420450e4be0db020acd9537bf8e79e32",
+          "reason": ""
+        },
+        {
+          "file": "src/app/interface/user.ts",
+          "startLine": 1,
+          "endLine": 9,
+          "sha256": "445fb3530c044c282323440763444dc7071660bb7f305241be49fbece4cd4875",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/state/project/project.service.ts",
+          "startLine": 53,
+          "endLine": 62,
+          "sha256": "bbe16353ccbed48144f49cc682b9301d57a0bec88c1a8ceff74257ee7a811ebe",
+          "reason": ""
+        }
+      ],
+      "context": {
+        "issue": "Current JIssue from component @Input, found by route/modal issueId",
+        "fixtureIssueId": "2021"
+      },
+      "oracle": {
+        "setup": "Choose loaded user not already assigned.",
+        "assertions": [
+          "User id appended once to current issue.userIds.",
+          "Other assignments preserved."
+        ]
+      },
+      "schemaQualification": "Declared JUser interface requires full fields; implementation consumes only id, and bundled fixture user objects omit email/timestamps/issueIds. A minimal {id} adapter is behaviorally sufficient but is not the declared type."
+    },
+    {
+      "id": "issue-assignee-remove",
+      "component": "IssueAssigneesComponent",
+      "handler": "removeUser",
+      "routes": [
+        "/project/board (issue modal)",
+        "/project/issue/:issueId"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "userId"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "userId": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1"
+      },
+      "effect": "Filter selected userId out of current issue.userIds.",
+      "evidence": [
+        {
+          "file": "src/app/project/components/issues/issue-assignees/issue-assignees.component.ts",
+          "startLine": 39,
+          "endLine": 44,
+          "sha256": "5b661826f379544e1879cfa6ab5d89f0b9b48cd4a89484f661d711fa03d81f85",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/state/project/project.service.ts",
+          "startLine": 53,
+          "endLine": 62,
+          "sha256": "bbe16353ccbed48144f49cc682b9301d57a0bec88c1a8ceff74257ee7a811ebe",
+          "reason": ""
+        }
+      ],
+      "context": {
+        "issue": "Current JIssue from component @Input, found by route/modal issueId",
+        "fixtureIssueId": "2021"
+      },
+      "oracle": {
+        "setup": "Current issue assigned to user id and another user.",
+        "assertions": [
+          "Selected id absent; remaining assignment preserved."
+        ]
+      }
+    },
+    {
+      "id": "issue-reporter-update",
+      "component": "IssueReporterComponent",
+      "handler": "updateIssue",
+      "routes": [
+        "/project/board (issue modal)",
+        "/project/issue/:issueId"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "user": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "avatarUrl": {
+                "type": "string"
+              },
+              "createdAt": {
+                "type": "string"
+              },
+              "updatedAt": {
+                "type": "string"
+              },
+              "issueIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "email",
+              "avatarUrl",
+              "createdAt",
+              "updatedAt",
+              "issueIds"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "user"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "user": {
+          "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "name": "Benchmark Reporter",
+          "email": "benchmark@example.test",
+          "avatarUrl": "/assets/test-avatar.png",
+          "createdAt": "2026-01-01T00:00:00Z",
+          "updatedAt": "2026-01-01T00:00:00Z",
+          "issueIds": []
+        }
+      },
+      "effect": "Replace current issue reporterId with selected user.id.",
+      "evidence": [
+        {
+          "file": "src/app/project/components/issues/issue-reporter/issue-reporter.component.ts",
+          "startLine": 37,
+          "endLine": 41,
+          "sha256": "f8d24cadbf8fe81af686022d3722334c5985f93f4e538feb84844c4013e1edec",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/state/project/project.service.ts",
+          "startLine": 53,
+          "endLine": 62,
+          "sha256": "bbe16353ccbed48144f49cc682b9301d57a0bec88c1a8ceff74257ee7a811ebe",
+          "reason": ""
+        }
+      ],
+      "context": {
+        "issue": "Current JIssue from component @Input, found by route/modal issueId",
+        "fixtureIssueId": "2021"
+      },
+      "oracle": {
+        "assertions": [
+          "Current issue reporterId equals selected user.id.",
+          "Assignees unchanged."
+        ]
+      },
+      "schemaQualification": "Uses selected JUser object but consumes only its id; full declared JUser shape recorded as above."
+    },
+    {
+      "id": "issue-comment-add",
+      "component": "IssueCommentComponent",
+      "handler": "addComment",
+      "routes": [
+        "/project/board (issue modal)",
+        "/project/issue/:issueId"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "commentControl": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "commentControl"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "commentControl": "Benchmark reconciliation complete"
+      },
+      "effect": "Append a timestamp-identified comment to current issue and reset draft editor.",
+      "evidence": [
+        {
+          "file": "src/app/project/components/issues/issue-comment/issue-comment.component.ts",
+          "startLine": 45,
+          "endLine": 68,
+          "sha256": "2ad46617db703f7cc419d6615c516a0cca2f8485ef24d88bfd1ecbe4c01d81d3",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/components/issues/issue-comment/issue-comment.component.html",
+          "startLine": 18,
+          "endLine": 43,
+          "sha256": "850adabb5360b7f602bff4937789b0d67fdcd6b4e9079c73f414623eb9e9d3b5",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/state/project/project.service.ts",
+          "startLine": 74,
+          "endLine": 85,
+          "sha256": "bbe16353ccbed48144f49cc682b9301d57a0bec88c1a8ceff74257ee7a811ebe",
+          "reason": ""
+        }
+      ],
+      "context": {
+        "issueId": "IssueCommentComponent @Input issueId",
+        "user": "Loaded AuthQuery.user; comment constructor uses current mocked user"
+      },
+      "oracle": {
+        "assertions": [
+          "Current issue.comments length increases by one; body matches input.",
+          "New comment has generated id and createdAt/updatedAt; issueId and current user are retained.",
+          "commentControl reset to empty, editor hidden.",
+          "No user-facing edit or delete comment operation exists."
+        ]
+      },
+      "limitations": [
+        "No required/minLength validator; empty comment body is accepted.",
+        "Timestamp-based id may upsert instead of append if two comments are added in same millisecond."
+      ]
+    },
+    {
+      "id": "issue-delete",
+      "component": "IssueDeleteModalComponent",
+      "handler": "deleteIssue",
+      "routes": [
+        "/project/board (issue modal)",
+        "/project/issue/:issueId"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "validInput": {},
+      "effect": "Emit DeleteIssueModel; modal or full-page parent deletes issue from store and closes dialogs/navigates.",
+      "evidence": [
+        {
+          "file": "src/app/project/components/issues/issue-delete-modal/issue-delete-modal.component.ts",
+          "startLine": 17,
+          "endLine": 26,
+          "sha256": "8a2d591dadff06ae01f7141e1018f7f4cc0f7b4ca147f794fce3734a257a5db3",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/components/issues/issue-modal/issue-modal.component.ts",
+          "startLine": 38,
+          "endLine": 43,
+          "sha256": "e351261ad0c757acf9ac348826a5464f3a9aa10d95191149eefaa13f3551e2bf",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/pages/full-issue-detail/full-issue-detail.component.ts",
+          "startLine": 44,
+          "endLine": 48,
+          "sha256": "b96ce6fd0373c81c139b7e6d47681912c10c7e92ad0492a88910b802ee5cd038",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/state/project/project.service.ts",
+          "startLine": 64,
+          "endLine": 71,
+          "sha256": "bbe16353ccbed48144f49cc682b9301d57a0bec88c1a8ceff74257ee7a811ebe",
+          "reason": ""
+        }
+      ],
+      "context": {
+        "issueId": "NZ_MODAL_DATA.issueId; user selects the issue by route/modal",
+        "onDelete": "EventEmitter delivered by parent"
+      },
+      "entrypoints": [
+        {
+          "component": "IssueModalComponent",
+          "handler": "deleteIssue"
+        },
+        {
+          "component": "FullIssueDetailComponent",
+          "handler": "deleteIssue"
+        }
+      ],
+      "oracle": {
+        "setup": "Open Delete Issue confirmation for fixture issue2021.",
+        "assertions": [
+          "On confirm, issue2021 absent from project.issues and count drops one.",
+          "Unrelated issues retained.",
+          "Cancel confirmation does not remove issue.",
+          "Full page deletion returns to board; refresh restores fixture issue."
+        ]
+      }
+    },
+    {
+      "id": "board-issue-reorder",
+      "component": "BoardDndListComponent",
+      "handler": "drop",
+      "routes": [
+        "/project/board"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "previousIndex": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "currentIndex": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "previousIndex",
+          "currentIndex"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "previousIndex": 0,
+        "currentIndex": 1
+      },
+      "effect": "Within one status column, reorder rows and write one-based listPosition values to all destination rows.",
+      "evidence": [
+        {
+          "file": "src/app/project/components/board/board-dnd-list/board-dnd-list.component.ts",
+          "startLine": 46,
+          "endLine": 51,
+          "sha256": "4e7186e6cbf5aab101275bbff5a949db98583e73db89f109e58a2789d7c8adac",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/components/board/board-dnd-list/board-dnd-list.component.ts",
+          "startLine": 90,
+          "endLine": 94,
+          "sha256": "4e7186e6cbf5aab101275bbff5a949db98583e73db89f109e58a2789d7c8adac",
+          "reason": ""
+        }
+      ],
+      "context": {
+        "event": "CDK CdkDragDrop<JIssue[]> contains item.data issue, container arrays and same-container identity; cannot be faithfully represented as generic JSON without a drag/drop adapter.",
+        "columnStatus": "Current BoardDndListComponent.status"
+      },
+      "schemaQualification": "Normalized user-level drag indices; actual callback requires non-JSON CDK event. Bounds are runtime column-length-dependent; both indices must be < visible issues length.",
+      "oracle": {
+        "setup": "Unfiltered column with at least two issues, record ids.",
+        "assertions": [
+          "Issue order swaps indices0 and1.",
+          "Every row in column listPosition equals visual index+1.",
+          "Statuses and issue count unchanged."
+        ]
+      }
+    },
+    {
+      "id": "board-issue-move",
+      "component": "BoardDndListComponent",
+      "handler": "drop",
+      "routes": [
+        "/project/board"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "targetStatus": {
+            "type": "string",
+            "enum": [
+              "Backlog",
+              "Selected",
+              "InProgress",
+              "Done"
+            ]
+          },
+          "previousIndex": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "currentIndex": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "targetStatus",
+          "previousIndex",
+          "currentIndex"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "targetStatus": "Selected",
+        "previousIndex": 0,
+        "currentIndex": 0
+      },
+      "effect": "Transfer dragged issue to another column and update status; destination list positions written before final original-issue upsert.",
+      "evidence": [
+        {
+          "file": "src/app/project/components/board/board-dnd-list/board-dnd-list.component.ts",
+          "startLine": 46,
+          "endLine": 62,
+          "sha256": "4e7186e6cbf5aab101275bbff5a949db98583e73db89f109e58a2789d7c8adac",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/components/board/board-dnd-list/board-dnd-list.component.ts",
+          "startLine": 90,
+          "endLine": 94,
+          "sha256": "4e7186e6cbf5aab101275bbff5a949db98583e73db89f109e58a2789d7c8adac",
+          "reason": ""
+        }
+      ],
+      "context": {
+        "event": "Actual CDK event with distinct previous/container identities and arrays. Dragged issue resolved from item.data, not from JSON target alone."
+      },
+      "schemaQualification": "Normalized drag request requires browser action/adapter. previousIndex < source length, currentIndex <= destination length, and targetStatus differs from source.",
+      "oracle": {
+        "setup": "Unfiltered source Backlog with issue2021; destination Selected. Record original dragged listPosition.",
+        "assertions": [
+          "Dragged issue status becomes Selected and total issue count is unchanged.",
+          "Destination other rows receive index+1 positions.",
+          "Source column positions are not renumbered.",
+          "Source defect: final updateIssue(newIssue) uses the pre-reorder clone and restores dragged issue original listPosition; do not assert the desired destination ordinal."
+        ]
+      }
+    },
+    {
+      "id": "project-settings-update",
+      "component": "SettingsComponent",
+      "handler": "submitForm",
+      "routes": [
+        "/project/settings"
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "url": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "Business",
+              "Marketing",
+              "Software"
+            ]
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "additionalProperties": false
+      },
+      "validInput": {
+        "name": "Benchmark Operations",
+        "url": "https://example.test/project",
+        "description": "Synthetic benchmark project",
+        "category": "Business"
+      },
+      "effect": "Merge edited project metadata into Akita project state and show success notification.",
+      "evidence": [
+        {
+          "file": "src/app/project/pages/settings/settings.component.ts",
+          "startLine": 37,
+          "endLine": 40,
+          "sha256": "32409eaf93086743f0fa4647b17b413ec639a9317626f7acac44c73616a9ab78",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/pages/settings/settings.component.ts",
+          "startLine": 52,
+          "endLine": 77,
+          "sha256": "32409eaf93086743f0fa4647b17b413ec639a9317626f7acac44c73616a9ab78",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/pages/settings/settings.component.html",
+          "startLine": 46,
+          "endLine": 50,
+          "sha256": "fadd239b20268ed09862dfdb401104ffa50833e6b4d3bc5bab18ce28527a96b4",
+          "reason": ""
+        },
+        {
+          "file": "src/app/core/validators/no-whitespace.validator.ts",
+          "startLine": 4,
+          "endLine": 12,
+          "sha256": "4efddfc07407f9eac7be1f15502d841506b2139b57e6d8e23dc1da38da0574f1",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/state/project/project.service.ts",
+          "startLine": 46,
+          "endLine": 50,
+          "sha256": "bbe16353ccbed48144f49cc682b9301d57a0bec88c1a8ceff74257ee7a811ebe",
+          "reason": ""
+        }
+      ],
+      "defaults": {
+        "url": "existing project.url",
+        "description": "existing project.description",
+        "category": "existing project.category"
+      },
+      "bindings": {
+        "name": "projectForm.name",
+        "url": "projectForm.url",
+        "description": "projectForm.description",
+        "category": "projectForm.category"
+      },
+      "oracle": {
+        "assertions": [
+          "Project name/url/description/category match values.",
+          "Project issues/users unchanged.",
+          "Blank or whitespace name disables Save; handler itself does not check invalid.",
+          "Reload restores original static project."
+        ]
+      },
+      "limitations": [
+        "URL has no URL validator; do not invent format:uri requirement."
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "board-search-and-filters",
+      "reason": "searchControl valueChanges, userChanged, ignoreResolvedChanged, onlyMyIssueChanged and resetAll update ephemeral FilterStore rather than issues/project business data. They remain useful runtime setup but are excluded uniformly from business-action denominator.",
+      "evidence": [
+        {
+          "file": "src/app/project/components/board/board-filter/board-filter.component.ts",
+          "startLine": 34,
+          "endLine": 65,
+          "sha256": "8439c205b58a33e84ea59352b03385eeb1c1ab66cbb3d74750dd3248eb63b977",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/components/board/board-dnd-list/board-dnd-list.component.ts",
+          "startLine": 65,
+          "endLine": 80,
+          "sha256": "4e7186e6cbf5aab101275bbff5a949db98583e73db89f109e58a2789d7c8adac",
+          "reason": ""
+        }
+      ]
+    },
+    {
+      "id": "create-modal-select-drafts",
+      "reason": "Issue type, priority, reporter and assignee select child callbacks update only issueForm controls; domain mutation occurs once at AddIssueModalComponent.submitForm.",
+      "evidence": [
+        {
+          "file": "src/app/project/components/add-issue-modal/add-issue-modal.component.html",
+          "startLine": 13,
+          "endLine": 60,
+          "sha256": "9c3d3dc0d407b0acb2f3af04331c7e0efd2e0a5dda2c4ac649d520f0e5795892",
+          "reason": ""
+        }
+      ]
+    },
+    {
+      "id": "issue-description-edit-cancel",
+      "reason": "setEditMode, editorCreated and cancel control draft editing/focus, without store mutation.",
+      "evidence": [
+        {
+          "file": "src/app/project/components/issues/issue-description/issue-description.component.ts",
+          "startLine": 34,
+          "endLine": 54,
+          "sha256": "51b63de7bdc72191b30b60677e1e668eb6160dce79c3dcfc8b42522a70f1b1f4",
+          "reason": ""
+        }
+      ]
+    },
+    {
+      "id": "comment-edit-and-shortcut",
+      "reason": "setCommentEdit, keyEvent and cancelAddComment change draft/focus; no edit-existing-comment or delete-comment control is implemented.",
+      "evidence": [
+        {
+          "file": "src/app/project/components/issues/issue-comment/issue-comment.component.ts",
+          "startLine": 34,
+          "endLine": 42,
+          "sha256": "2ad46617db703f7cc419d6615c516a0cca2f8485ef24d88bfd1ecbe4c01d81d3",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/components/issues/issue-comment/issue-comment.component.ts",
+          "startLine": 55,
+          "endLine": 74,
+          "sha256": "2ad46617db703f7cc419d6615c516a0cca2f8485ef24d88bfd1ecbe4c01d81d3",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/components/issues/issue-comment/issue-comment.component.html",
+          "startLine": 49,
+          "endLine": 52,
+          "sha256": "850adabb5360b7f602bff4937789b0d67fdcd6b4e9079c73f414623eb9e9d3b5",
+          "reason": ""
+        }
+      ]
+    },
+    {
+      "id": "dialogs-navigation-layout",
+      "reason": "Open/close create/delete/detail/search dialogs, issue page expansion, navbar/sidebar resize, manualToggle, snow and external feedback links are presentation/navigation only. Final confirmation deletion is included.",
+      "evidence": [
+        {
+          "file": "src/app/project/components/issues/issue-detail/issue-detail.component.ts",
+          "startLine": 35,
+          "endLine": 55,
+          "sha256": "c4ed3b8a35a866d7751a73e2a7bac27debb96395afb98ae526973158cc951089",
+          "reason": ""
+        }
+      ]
+    },
+    {
+      "id": "automatic-login-and-project-fetch",
+      "reason": "ProjectComponent.ngOnInit calls mock auth login and static getProject; automatic fixture loading is infrastructure rather than user-invoked business operation.",
+      "evidence": [
+        {
+          "file": "src/app/project/project.component.ts",
+          "startLine": 21,
+          "endLine": 24,
+          "sha256": "79e88a6464b4f78c6ca50256eb4a7475d4f808eef818297258e1b12dc6dd1e4e",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/auth/auth.service.ts",
+          "startLine": 17,
+          "endLine": 35,
+          "sha256": "37c5c832d2159c08b8c53daed2938e7b17f431bf0b8b407ed0470a344e7f1f4a",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/state/project/project.service.ts",
+          "startLine": 27,
+          "endLine": 43,
+          "sha256": "bbe16353ccbed48144f49cc682b9301d57a0bec88c1a8ceff74257ee7a811ebe",
+          "reason": ""
+        }
+      ]
+    },
+    {
+      "id": "unimplemented-time-tracking",
+      "reason": "JIssue interface declares estimate/timeSpent/timeRemaining but issue detail has no editor or user callback for them. These are not silently omitted reachable operations.",
+      "evidence": [
+        {
+          "file": "src/app/interface/issue.ts",
+          "startLine": 40,
+          "endLine": 56,
+          "sha256": "2b319a57957fa523c806305e73baded037ced9cb14f7f5086dfec207ca23e240",
+          "reason": ""
+        },
+        {
+          "file": "src/app/project/components/issues/issue-detail/issue-detail.component.html",
+          "startLine": 35,
+          "endLine": 59,
+          "sha256": "160759c6f92d77a62e396ee02e755d055aa1a718bbe3999664b653a410036a04",
+          "reason": ""
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "All 14 domain-operation variants in the shipped app are included. Issue comments support add/read only, not edit/delete. Fields present solely in models are not presumed user actions.",
+    "All edits are in-memory; refresh loss is expected. Domain operation classification does not imply persistence. No real login/account/backend is involved.",
+    "Drag/drop callback contracts are CDK objects with reference identities. Normalized JSON payloads are explicitly adapter-level, not falsely claimed raw handler arguments.",
+    "Create and settings forms have defaults. Only title/name need supplied non-whitespace values for a fresh form; semantic enum options remain constrained by visible controls.",
+    "Source bug discovered independently: cross-column drop can restore moved issue old listPosition after reordering. Labels preserve actual behavior."
+  ],
+  "sourceManifest": "source-manifest.sha256.json"
+}

@@ -1,0 +1,13 @@
+❯ Building...
+✔ Building...
+Initial chunk files   | Names         |  Raw size | Estimated transfer size
+main-L6R64AMU.js      | main          | 914.00 kB |               192.69 kB
+polyfills-SCHOHYNV.js | polyfills     |  34.52 kB |                11.29 kB
+styles-4FNAKTVY.css   | styles        |   7.61 kB |                 1.36 kB
+
+                      | Initial total | 956.13 kB |               205.34 kB
+
+Application bundle generation complete. [5.939 seconds]
+
+Output location: /private/tmp/ngx-mcp-fresh-access-sprint/dist/demo
+

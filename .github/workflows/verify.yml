@@ -1,0 +1,51 @@
+name: Verify compiler-to-runtime integration
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24.15.0'
+          cache: npm
+      - run: npm ci
+      - run: npm run test:setup
+      - run: npm exec playwright install --with-deps chromium
+      - run: npm run verify
+      - run: npm run benchmark:integration -- --install
+      - run: npm run check:integration-evidence -- --require-parity
+      - name: Record current integration measurement
+        run: cat evaluation/integration-unseen/latest-measurement.json >> "$GITHUB_STEP_SUMMARY"
+
+  production-modes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24.15.0'
+          cache: npm
+      - run: npm ci
+      - run: npm run test:setup
+      - run: npm exec playwright install --with-deps chromium
+      - run: npm exec playwright install chrome
+      - run: node evaluation/production-fresh/fetch.mjs --install
+      - name: Exercise all production modes on pinned public Angular apps
+        run: npm run benchmark:production -- --out /tmp/ngx-mcp-production-ci
+      - run: npm run check:production-evidence -- --report /tmp/ngx-mcp-production-ci/report.json
+      - run: npm run test:production-evidence -- --report /tmp/ngx-mcp-production-ci/report.json
+      - name: Require actual browser WebMCP conformance
+        run: WEBMCP_REQUIRE_NATIVE=1 WEBMCP_NATIVE_REPORT=artifacts/webmcp/native-conformance.json npm run test:webmcp
+      - run: npm run check:webmcp-evidence
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: production-mode-evidence
+          path: |
+            /tmp/ngx-mcp-production-ci
+            artifacts/webmcp

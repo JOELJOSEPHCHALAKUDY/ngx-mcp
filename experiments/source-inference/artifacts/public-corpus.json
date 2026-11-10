@@ -1,0 +1,145 @@
+{
+  "projects": [
+    {
+      "id": "user-crud",
+      "repository": "https://github.com/cornflourblue/angular-14-crud-example",
+      "revision": "4abfcfdd1ac9e44260f4d9407713142257bc7e65",
+      "license": "MIT",
+      "complexity": "1 — Small CRUD",
+      "features": [
+        "NgModules",
+        "lazy routes",
+        "reactive form",
+        "local fake backend"
+      ],
+      "typescriptFiles": 26,
+      "routes": 5,
+      "candidates": 8,
+      "blocked": 0,
+      "reviewedTools": 1,
+      "scenarioDiscovery": "candidate",
+      "limitation": null,
+      "upstreamLimitation": null,
+      "selectedWorkflow": {
+        "component": "AddEditComponent",
+        "handler": "onSubmit",
+        "kind": "form"
+      }
+    },
+    {
+      "id": "signup",
+      "repository": "https://github.com/cornflourblue/angular-15-signup-verification-boilerplate",
+      "revision": "0ba71391309cfad3940167842f3ca351bfd5b2fd",
+      "license": "MIT",
+      "complexity": "2 — Authentication and accounts",
+      "features": [
+        "registration",
+        "cross-field validation",
+        "terms checkbox",
+        "guarded profile/admin routes"
+      ],
+      "typescriptFiles": 46,
+      "routes": 16,
+      "candidates": 15,
+      "blocked": 0,
+      "reviewedTools": 1,
+      "scenarioDiscovery": "candidate",
+      "limitation": null,
+      "upstreamLimitation": null,
+      "selectedWorkflow": {
+        "component": "RegisterComponent",
+        "handler": "onSubmit",
+        "kind": "form"
+      }
+    },
+    {
+      "id": "forms-course",
+      "repository": "https://github.com/angular-university/angular-forms-course",
+      "revision": "ed20366d7be3ffffd852f28536e3ed58e86fb46d",
+      "license": "MIT",
+      "complexity": "3 — Composite forms",
+      "features": [
+        "Material stepper",
+        "custom value accessors",
+        "async validators",
+        "dynamic lessons",
+        "some deliberately empty exercise handlers"
+      ],
+      "typescriptFiles": 29,
+      "routes": 5,
+      "candidates": 6,
+      "blocked": 0,
+      "reviewedTools": 1,
+      "scenarioDiscovery": "candidate",
+      "limitation": null,
+      "upstreamLimitation": "The final Create Course exercise only logs values; this scenario verifies the implemented draft-saving workflow.",
+      "selectedWorkflow": {
+        "component": "CreateCourseStep1Component",
+        "handler": "edit_form",
+        "kind": "workflow"
+      }
+    },
+    {
+      "id": "course-crud",
+      "repository": "https://github.com/loiane/crud-angular-spring",
+      "revision": "e2b9c5a08a57f149689c8ef79b0b7935287e8fbf",
+      "license": "MIT",
+      "complexity": "4 — Signal Forms and nested state",
+      "features": [
+        "Angular Signal Forms",
+        "@Service",
+        "protected template handlers",
+        "Material select",
+        "repeated lesson rows",
+        "resolver input"
+      ],
+      "typescriptFiles": 17,
+      "routes": 4,
+      "candidates": 16,
+      "blocked": 6,
+      "reviewedTools": 1,
+      "scenarioDiscovery": "candidate",
+      "limitation": null,
+      "upstreamLimitation": null,
+      "selectedWorkflow": {
+        "component": "CourseForm",
+        "handler": "onSubmit",
+        "kind": "form"
+      }
+    },
+    {
+      "id": "realworld",
+      "repository": "https://github.com/realworld-apps/angular-realworld-example-app",
+      "revision": "d426ec804f7d035c374aa4a1b48ecdb05a03eb02",
+      "license": "MIT",
+      "complexity": "5 — Multi-feature application",
+      "features": [
+        "standalone lazy default exports",
+        "authentication",
+        "articles",
+        "profiles",
+        "comments",
+        "external REST API"
+      ],
+      "typescriptFiles": 41,
+      "routes": 11,
+      "candidates": 25,
+      "blocked": 0,
+      "reviewedTools": 1,
+      "scenarioDiscovery": "candidate",
+      "limitation": null,
+      "upstreamLimitation": null,
+      "selectedWorkflow": {
+        "component": "AuthComponent",
+        "handler": "submitForm",
+        "kind": "form"
+      }
+    }
+  ],
+  "limitations": [
+    "Five selected scenario outcomes do not measure whole-application precision or recall.",
+    "Runtime execution results are in each sample runtime.json; discovery alone is not execution.",
+    "No upstream business source is modified.",
+    "Native browser-agent WebMCP integration is not established by adapter-contract tests."
+  ]
+}

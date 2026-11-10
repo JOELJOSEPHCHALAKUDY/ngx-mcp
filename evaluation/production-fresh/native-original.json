@@ -1,0 +1,932 @@
+{
+  "kind": "production-fresh-native-reference",
+  "startedAt": "2026-11-10T16:12:59.786Z",
+  "clock": "2026-11-10T12:00:00.000Z",
+  "projects": [
+    {
+      "id": "todo",
+      "integrityBefore": {
+        "source": "/tmp/ngx-mcp-fresh-access-todo",
+        "commit": "dc0a75b46d4940ebfe96a6b306423857c38e98fd",
+        "sourceFiles": 37,
+        "labelsSha256": "d92ffa41317f918d3bc3c807783ac70bb73e04cda987ee93e2c9dd6ae3abac72",
+        "lockSha256": "72325b80213184a325a19c74d0e421a1e3064a6b086d84454c6e5a093ee23f6a"
+      },
+      "cases": [
+        {
+          "id": "create_task",
+          "kind": "positive",
+          "passed": true,
+          "productionRuntime": {
+            "bridge": "undefined",
+            "instrumented": 0,
+            "debug": "undefined"
+          },
+          "before": {
+            "todo-items": []
+          },
+          "after": {
+            "todo-items": [
+              {
+                "title": "Fresh access task",
+                "description": "Synthetic task body",
+                "completed": false,
+                "id": 1
+              }
+            ]
+          },
+          "url": "/",
+          "blockedExternalRequests": []
+        },
+        {
+          "id": "toggle_second_task",
+          "kind": "positive",
+          "passed": true,
+          "productionRuntime": {
+            "bridge": "undefined",
+            "instrumented": 0,
+            "debug": "undefined"
+          },
+          "before": {
+            "todo-items": [
+              {
+                "id": 1,
+                "title": "First fixture task",
+                "description": "First body",
+                "completed": false
+              },
+              {
+                "id": 2,
+                "title": "Second fixture task",
+                "description": "Second body",
+                "completed": false
+              }
+            ]
+          },
+          "after": {
+            "todo-items": [
+              {
+                "id": 1,
+                "title": "First fixture task",
+                "description": "First body",
+                "completed": false
+              },
+              {
+                "id": 2,
+                "title": "Second fixture task",
+                "description": "Second body",
+                "completed": true
+              }
+            ]
+          },
+          "url": "/",
+          "blockedExternalRequests": []
+        },
+        {
+          "id": "delete_second_task",
+          "kind": "positive",
+          "passed": true,
+          "productionRuntime": {
+            "bridge": "undefined",
+            "instrumented": 0,
+            "debug": "undefined"
+          },
+          "before": {
+            "todo-items": [
+              {
+                "id": 1,
+                "title": "First fixture task",
+                "description": "First body",
+                "completed": false
+              },
+              {
+                "id": 2,
+                "title": "Second fixture task",
+                "description": "Second body",
+                "completed": false
+              }
+            ]
+          },
+          "after": {
+            "todo-items": [
+              {
+                "id": 1,
+                "title": "First fixture task",
+                "description": "First body",
+                "completed": false
+              }
+            ]
+          },
+          "url": "/",
+          "blockedExternalRequests": []
+        },
+        {
+          "id": "empty_title_native_quirk",
+          "kind": "positive-upstream-quirk",
+          "passed": true,
+          "productionRuntime": {
+            "bridge": "undefined",
+            "instrumented": 0,
+            "debug": "undefined"
+          },
+          "before": {
+            "todo-items": []
+          },
+          "after": {
+            "todo-items": [
+              {
+                "title": "",
+                "description": "Empty title native contract",
+                "completed": false,
+                "id": 1
+              }
+            ]
+          },
+          "url": "/",
+          "blockedExternalRequests": []
+        }
+      ],
+      "originalProductionBuild": true,
+      "integrityAfter": {
+        "source": "/tmp/ngx-mcp-fresh-access-todo",
+        "commit": "dc0a75b46d4940ebfe96a6b306423857c38e98fd",
+        "sourceFiles": 37,
+        "labelsSha256": "d92ffa41317f918d3bc3c807783ac70bb73e04cda987ee93e2c9dd6ae3abac72",
+        "lockSha256": "72325b80213184a325a19c74d0e421a1e3064a6b086d84454c6e5a093ee23f6a"
+      },
+      "sourcePreserved": true
+    },
+    {
+      "id": "sprint",
+      "integrityBefore": {
+        "source": "/tmp/ngx-mcp-fresh-access-sprint",
+        "commit": "22f4ce92e1ae18f885e5153c945255443419d656",
+        "sourceFiles": 27,
+        "labelsSha256": "b71cc36370902ddfe9d3ed3374fbb613dce7a8423dc0a10c2f35b7587be49c95",
+        "lockSha256": "fa8bc8dc42dc87c9be90bf917c00e398b0372ed9dfde44c449ffd41144d9845c"
+      },
+      "cases": [
+        {
+          "id": "register_user",
+          "kind": "positive",
+          "passed": true,
+          "productionRuntime": {
+            "bridge": "undefined",
+            "instrumented": 0,
+            "debug": "undefined"
+          },
+          "before": {
+            "users": [],
+            "currentUser": null,
+            "projects": [],
+            "tasks": []
+          },
+          "after": {
+            "users": [
+              {
+                "id": "mwan1c001imt4d4c9ik",
+                "username": "fresh-user",
+                "email": "fresh-user@example.test",
+                "password": "Synthetic-Pass-481",
+                "createdAt": "2026-11-10T12:00:00.000Z"
+              }
+            ],
+            "currentUser": null,
+            "projects": [],
+            "tasks": []
+          },
+          "url": "/login",
+          "blockedExternalRequests": [
+            "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+            "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2"
+          ]
+        },
+        {
+          "id": "login_user",
+          "kind": "positive",
+          "passed": true,
+          "productionRuntime": {
+            "bridge": "undefined",
+            "instrumented": 0,
+            "debug": "undefined"
+          },
+          "before": {
+            "users": [
+              {
+                "id": "fixture-user-a",
+                "username": "fixture-user",
+                "email": "fixture-user@example.test",
+                "password": "Synthetic-Pass-481",
+                "createdAt": "2026-11-01T12:00:00.000Z"
+              },
+              {
+                "id": "fixture-user-b",
+                "username": "other-user",
+                "email": "other-user@example.test",
+                "password": "Synthetic-Other-482",
+                "createdAt": "2026-11-01T12:00:00.000Z"
+              }
+            ],
+            "currentUser": null,
+            "projects": [],
+            "tasks": []
+          },
+          "after": {
+            "users": [
+              {
+                "id": "fixture-user-a",
+                "username": "fixture-user",
+                "email": "fixture-user@example.test",
+                "password": "Synthetic-Pass-481",
+                "createdAt": "2026-11-01T12:00:00.000Z"
+              },
+              {
+                "id": "fixture-user-b",
+                "username": "other-user",
+                "email": "other-user@example.test",
+                "password": "Synthetic-Other-482",
+                "createdAt": "2026-11-01T12:00:00.000Z"
+              }
+            ],
+            "currentUser": {
+              "id": "fixture-user-a",
+              "username": "fixture-user",
+              "email": "fixture-user@example.test"
+            },
+            "projects": [],
+            "tasks": []
+          },
+          "url": "/dashboard",
+          "blockedExternalRequests": [
+            "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+            "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+            "https://fonts.gstatic.com/s/materialicons/v145/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2"
+          ]
+        },
+        {
+          "id": "create_project",
+          "kind": "positive",
+          "passed": true,
+          "productionRuntime": {
+            "bridge": "undefined",
+            "instrumented": 0,
+            "debug": "undefined"
+          },
+          "before": {
+            "users": [
+              {
+                "id": "fixture-user-a",
+                "username": "fixture-user",
+                "email": "fixture-user@example.test",
+                "password": "Synthetic-Pass-481",
+                "createdAt": "2026-11-01T12:00:00.000Z"
+              },
+              {
+                "id": "fixture-user-b",
+                "username": "other-user",
+                "email": "other-user@example.test",
+                "password": "Synthetic-Other-482",
+                "createdAt": "2026-11-01T12:00:00.000Z"
+              }
+            ],
+            "currentUser": {
+              "id": "fixture-user-a",
+              "username": "fixture-user",
+              "email": "fixture-user@example.test"
+            },
+            "projects": [],
+            "tasks": []
+          },
+          "after": {
+            "users": [
+              {
+                "id": "fixture-user-a",
+                "username": "fixture-user",
+                "email": "fixture-user@example.test",
+                "password": "Synthetic-Pass-481",
+                "createdAt": "2026-11-01T12:00:00.000Z"
+              },
+              {
+                "id": "fixture-user-b",
+                "username": "other-user",
+                "email": "other-user@example.test",
+                "password": "Synthetic-Other-482",
+                "createdAt": "2026-11-01T12:00:00.000Z"
+              }
+            ],
+            "currentUser": {
+              "id": "fixture-user-a",
+              "username": "fixture-user",
+              "email": "fixture-user@example.test"
+            },
+            "projects": [
+              {
+                "id": "mwan1c0004cqdna3eeo7",
+                "name": "Fresh project",
+                "description": "Synthetic project body",
+                "ownerId": "fixture-user-a",
+                "createdAt": "2026-11-10T12:00:00.000Z",
+                "updatedAt": "2026-11-10T12:00:00.000Z"
+              }
+            ],
+            "tasks": []
+          },
+          "url": "/dashboard",
+          "blockedExternalRequests": [
+            "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+            "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+            "https://fonts.gstatic.com/s/materialicons/v145/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2",
+            "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+            "https://fonts.gstatic.com/s/materialicons/v145/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2"
+          ]
+        },
+        {
+          "id": "create_task",
+          "kind": "positive",
+          "passed": true,
+          "productionRuntime": {
+            "bridge": "undefined",
+            "instrumented": 0,
+            "debug": "undefined"
+          },
+          "before": {
+            "users": [
+              {
+                "id": "fixture-user-a",
+                "username": "fixture-user",
+                "email": "fixture-user@example.test",
+                "password": "Synthetic-Pass-481",
+                "createdAt": "2026-11-01T12:00:00.000Z"
+              },
+              {
+                "id": "fixture-user-b",
+                "username": "other-user",
+                "email": "other-user@example.test",
+                "password": "Synthetic-Other-482",
+                "createdAt": "2026-11-01T12:00:00.000Z"
+              }
+            ],
+            "currentUser": {
+              "id": "fixture-user-a",
+              "username": "fixture-user",
+              "email": "fixture-user@example.test"
+            },
+            "projects": [
+              {
+                "id": "fixture-project",
+                "name": "Fixture project",
+                "description": "Existing project",
+                "ownerId": "fixture-user-a",
+                "createdAt": "2026-11-01T12:00:00.000Z",
+                "updatedAt": "2026-11-01T12:00:00.000Z"
+              }
+            ],
+            "tasks": []
+          },
+          "after": {
+            "users": [
+              {
+                "id": "fixture-user-a",
+                "username": "fixture-user",
+                "email": "fixture-user@example.test",
+                "password": "Synthetic-Pass-481",
+                "createdAt": "2026-11-01T12:00:00.000Z"
+              },
+              {
+                "id": "fixture-user-b",
+                "username": "other-user",
+                "email": "other-user@example.test",
+                "password": "Synthetic-Other-482",
+                "createdAt": "2026-11-01T12:00:00.000Z"
+              }
+            ],
+            "currentUser": {
+              "id": "fixture-user-a",
+              "username": "fixture-user",
+              "email": "fixture-user@example.test"
+            },
+            "projects": [
+              {
+                "id": "fixture-project",
+                "name": "Fixture project",
+                "description": "Existing project",
+                "ownerId": "fixture-user-a",
+                "createdAt": "2026-11-01T12:00:00.000Z",
+                "updatedAt": "2026-11-01T12:00:00.000Z"
+              }
+            ],
+            "tasks": [
+              {
+                "title": "Fresh task",
+                "description": "Synthetic task body",
+                "status": "inprogress",
+                "projectId": "fixture-project",
+                "dueDate": null,
+                "id": "mwan1c00r4t54ajndia",
+                "createdAt": "2026-11-10T12:00:00.000Z",
+                "updatedAt": "2026-11-10T12:00:00.000Z"
+              }
+            ]
+          },
+          "url": "/projects/fixture-project",
+          "blockedExternalRequests": [
+            "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+            "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+            "https://fonts.gstatic.com/s/materialicons/v145/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2",
+            "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+            "https://fonts.gstatic.com/s/materialicons/v145/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2"
+          ]
+        },
+        {
+          "id": "empty_project_blocked",
+          "kind": "negative-native",
+          "passed": true,
+          "productionRuntime": {
+            "bridge": "undefined",
+            "instrumented": 0,
+            "debug": "undefined"
+          },
+          "before": {
+            "users": [
+              {
+                "id": "fixture-user-a",
+                "username": "fixture-user",
+                "email": "fixture-user@example.test",
+                "password": "Synthetic-Pass-481",
+                "createdAt": "2026-11-01T12:00:00.000Z"
+              },
+              {
+                "id": "fixture-user-b",
+                "username": "other-user",
+                "email": "other-user@example.test",
+                "password": "Synthetic-Other-482",
+                "createdAt": "2026-11-01T12:00:00.000Z"
+              }
+            ],
+            "currentUser": {
+              "id": "fixture-user-a",
+              "username": "fixture-user",
+              "email": "fixture-user@example.test"
+            },
+            "projects": [],
+            "tasks": []
+          },
+          "after": {
+            "users": [
+              {
+                "id": "fixture-user-a",
+                "username": "fixture-user",
+                "email": "fixture-user@example.test",
+                "password": "Synthetic-Pass-481",
+                "createdAt": "2026-11-01T12:00:00.000Z"
+              },
+              {
+                "id": "fixture-user-b",
+                "username": "other-user",
+                "email": "other-user@example.test",
+                "password": "Synthetic-Other-482",
+                "createdAt": "2026-11-01T12:00:00.000Z"
+              }
+            ],
+            "currentUser": {
+              "id": "fixture-user-a",
+              "username": "fixture-user",
+              "email": "fixture-user@example.test"
+            },
+            "projects": [],
+            "tasks": []
+          },
+          "url": "/dashboard",
+          "blockedExternalRequests": [
+            "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+            "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+            "https://fonts.gstatic.com/s/materialicons/v145/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2",
+            "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+            "https://fonts.gstatic.com/s/materialicons/v145/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2"
+          ]
+        },
+        {
+          "id": "cancel_project",
+          "kind": "negative-native",
+          "passed": true,
+          "productionRuntime": {
+            "bridge": "undefined",
+            "instrumented": 0,
+            "debug": "undefined"
+          },
+          "before": {
+            "users": [
+              {
+                "id": "fixture-user-a",
+                "username": "fixture-user",
+                "email": "fixture-user@example.test",
+                "password": "Synthetic-Pass-481",
+                "createdAt": "2026-11-01T12:00:00.000Z"
+              },
+              {
+                "id": "fixture-user-b",
+                "username": "other-user",
+                "email": "other-user@example.test",
+                "password": "Synthetic-Other-482",
+                "createdAt": "2026-11-01T12:00:00.000Z"
+              }
+            ],
+            "currentUser": {
+              "id": "fixture-user-a",
+              "username": "fixture-user",
+              "email": "fixture-user@example.test"
+            },
+            "projects": [],
+            "tasks": []
+          },
+          "after": {
+            "users": [
+              {
+                "id": "fixture-user-a",
+                "username": "fixture-user",
+                "email": "fixture-user@example.test",
+                "password": "Synthetic-Pass-481",
+                "createdAt": "2026-11-01T12:00:00.000Z"
+              },
+              {
+                "id": "fixture-user-b",
+                "username": "other-user",
+                "email": "other-user@example.test",
+                "password": "Synthetic-Other-482",
+                "createdAt": "2026-11-01T12:00:00.000Z"
+              }
+            ],
+            "currentUser": {
+              "id": "fixture-user-a",
+              "username": "fixture-user",
+              "email": "fixture-user@example.test"
+            },
+            "projects": [],
+            "tasks": []
+          },
+          "url": "/dashboard",
+          "blockedExternalRequests": [
+            "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+            "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+            "https://fonts.gstatic.com/s/materialicons/v145/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2",
+            "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+            "https://fonts.gstatic.com/s/materialicons/v145/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2"
+          ]
+        }
+      ],
+      "originalProductionBuild": true,
+      "integrityAfter": {
+        "source": "/tmp/ngx-mcp-fresh-access-sprint",
+        "commit": "22f4ce92e1ae18f885e5153c945255443419d656",
+        "sourceFiles": 27,
+        "labelsSha256": "b71cc36370902ddfe9d3ed3374fbb613dce7a8423dc0a10c2f35b7587be49c95",
+        "lockSha256": "fa8bc8dc42dc87c9be90bf917c00e398b0372ed9dfde44c449ffd41144d9845c"
+      },
+      "sourcePreserved": true
+    },
+    {
+      "id": "expense",
+      "integrityBefore": {
+        "source": "/tmp/ngx-mcp-fresh-access-expense",
+        "commit": "fe326e1bc56fdea3262801d7379a5906f724b319",
+        "sourceFiles": 157,
+        "labelsSha256": "245f1839a69cca8feb8520c65c7591f1f0ab61a8c1fad0331c04acef0a1632a2",
+        "lockSha256": "16d725dbc8ca0181a6b9f5859802d6abeea70dddb672f296c97b23d5e9ab9e90"
+      },
+      "cases": [
+        {
+          "id": "create_category",
+          "kind": "positive",
+          "passed": true,
+          "productionRuntime": {
+            "bridge": "undefined",
+            "instrumented": 0,
+            "debug": "undefined"
+          },
+          "before": {
+            "expense-tracker.v1": {
+              "categories": [],
+              "expenses": []
+            }
+          },
+          "after": {
+            "expense-tracker.v1": {
+              "categories": [
+                {
+                  "id": "cat-0001",
+                  "name": "Fresh access category",
+                  "color": "#0072B2",
+                  "monthlyBudgetOre": null,
+                  "archived": false
+                }
+              ],
+              "expenses": []
+            }
+          },
+          "url": "/categories",
+          "blockedExternalRequests": []
+        },
+        {
+          "id": "create_expense",
+          "kind": "positive",
+          "passed": true,
+          "productionRuntime": {
+            "bridge": "undefined",
+            "instrumented": 0,
+            "debug": "undefined"
+          },
+          "before": {
+            "expense-tracker.v1": {
+              "categories": [
+                {
+                  "id": "cat-groceries",
+                  "name": "Groceries",
+                  "color": "#0072B2",
+                  "monthlyBudgetOre": 10000,
+                  "archived": false
+                },
+                {
+                  "id": "cat-transport",
+                  "name": "Transport",
+                  "color": "#7C3AED",
+                  "monthlyBudgetOre": 20000,
+                  "archived": false
+                }
+              ],
+              "expenses": []
+            }
+          },
+          "after": {
+            "expense-tracker.v1": {
+              "categories": [
+                {
+                  "id": "cat-groceries",
+                  "name": "Groceries",
+                  "color": "#0072B2",
+                  "monthlyBudgetOre": 10000,
+                  "archived": false
+                },
+                {
+                  "id": "cat-transport",
+                  "name": "Transport",
+                  "color": "#7C3AED",
+                  "monthlyBudgetOre": 20000,
+                  "archived": false
+                }
+              ],
+              "expenses": [
+                {
+                  "id": "exp-0001",
+                  "date": "2026-11-09",
+                  "amountOre": 12345,
+                  "categoryId": "cat-groceries",
+                  "description": "Fresh access lunch",
+                  "createdAt": "2026-11-10T12:00:00.000Z"
+                }
+              ]
+            }
+          },
+          "url": "/expenses",
+          "blockedExternalRequests": []
+        },
+        {
+          "id": "change_one_budget",
+          "kind": "positive",
+          "passed": true,
+          "productionRuntime": {
+            "bridge": "undefined",
+            "instrumented": 0,
+            "debug": "undefined"
+          },
+          "before": {
+            "expense-tracker.v1": {
+              "categories": [
+                {
+                  "id": "cat-groceries",
+                  "name": "Groceries",
+                  "color": "#0072B2",
+                  "monthlyBudgetOre": 10000,
+                  "archived": false
+                },
+                {
+                  "id": "cat-transport",
+                  "name": "Transport",
+                  "color": "#7C3AED",
+                  "monthlyBudgetOre": 20000,
+                  "archived": false
+                }
+              ],
+              "expenses": []
+            }
+          },
+          "after": {
+            "expense-tracker.v1": {
+              "categories": [
+                {
+                  "id": "cat-groceries",
+                  "name": "Groceries",
+                  "color": "#0072B2",
+                  "monthlyBudgetOre": 45678,
+                  "archived": false
+                },
+                {
+                  "id": "cat-transport",
+                  "name": "Transport",
+                  "color": "#7C3AED",
+                  "monthlyBudgetOre": 20000,
+                  "archived": false
+                }
+              ],
+              "expenses": []
+            }
+          },
+          "url": "/categories",
+          "blockedExternalRequests": []
+        },
+        {
+          "id": "required_description",
+          "kind": "negative-native",
+          "passed": true,
+          "productionRuntime": {
+            "bridge": "undefined",
+            "instrumented": 0,
+            "debug": "undefined"
+          },
+          "before": {
+            "expense-tracker.v1": {
+              "categories": [
+                {
+                  "id": "cat-groceries",
+                  "name": "Groceries",
+                  "color": "#0072B2",
+                  "monthlyBudgetOre": 10000,
+                  "archived": false
+                },
+                {
+                  "id": "cat-transport",
+                  "name": "Transport",
+                  "color": "#7C3AED",
+                  "monthlyBudgetOre": 20000,
+                  "archived": false
+                }
+              ],
+              "expenses": []
+            }
+          },
+          "after": {
+            "expense-tracker.v1": {
+              "categories": [
+                {
+                  "id": "cat-groceries",
+                  "name": "Groceries",
+                  "color": "#0072B2",
+                  "monthlyBudgetOre": 10000,
+                  "archived": false
+                },
+                {
+                  "id": "cat-transport",
+                  "name": "Transport",
+                  "color": "#7C3AED",
+                  "monthlyBudgetOre": 20000,
+                  "archived": false
+                }
+              ],
+              "expenses": []
+            }
+          },
+          "url": "/expenses/new",
+          "blockedExternalRequests": []
+        },
+        {
+          "id": "zero_amount",
+          "kind": "negative-native",
+          "passed": true,
+          "productionRuntime": {
+            "bridge": "undefined",
+            "instrumented": 0,
+            "debug": "undefined"
+          },
+          "before": {
+            "expense-tracker.v1": {
+              "categories": [
+                {
+                  "id": "cat-groceries",
+                  "name": "Groceries",
+                  "color": "#0072B2",
+                  "monthlyBudgetOre": 10000,
+                  "archived": false
+                },
+                {
+                  "id": "cat-transport",
+                  "name": "Transport",
+                  "color": "#7C3AED",
+                  "monthlyBudgetOre": 20000,
+                  "archived": false
+                }
+              ],
+              "expenses": []
+            }
+          },
+          "after": {
+            "expense-tracker.v1": {
+              "categories": [
+                {
+                  "id": "cat-groceries",
+                  "name": "Groceries",
+                  "color": "#0072B2",
+                  "monthlyBudgetOre": 10000,
+                  "archived": false
+                },
+                {
+                  "id": "cat-transport",
+                  "name": "Transport",
+                  "color": "#7C3AED",
+                  "monthlyBudgetOre": 20000,
+                  "archived": false
+                }
+              ],
+              "expenses": []
+            }
+          },
+          "url": "/expenses/new",
+          "blockedExternalRequests": []
+        },
+        {
+          "id": "future_date",
+          "kind": "negative-native",
+          "passed": true,
+          "productionRuntime": {
+            "bridge": "undefined",
+            "instrumented": 0,
+            "debug": "undefined"
+          },
+          "before": {
+            "expense-tracker.v1": {
+              "categories": [
+                {
+                  "id": "cat-groceries",
+                  "name": "Groceries",
+                  "color": "#0072B2",
+                  "monthlyBudgetOre": 10000,
+                  "archived": false
+                },
+                {
+                  "id": "cat-transport",
+                  "name": "Transport",
+                  "color": "#7C3AED",
+                  "monthlyBudgetOre": 20000,
+                  "archived": false
+                }
+              ],
+              "expenses": []
+            }
+          },
+          "after": {
+            "expense-tracker.v1": {
+              "categories": [
+                {
+                  "id": "cat-groceries",
+                  "name": "Groceries",
+                  "color": "#0072B2",
+                  "monthlyBudgetOre": 10000,
+                  "archived": false
+                },
+                {
+                  "id": "cat-transport",
+                  "name": "Transport",
+                  "color": "#7C3AED",
+                  "monthlyBudgetOre": 20000,
+                  "archived": false
+                }
+              ],
+              "expenses": []
+            }
+          },
+          "url": "/expenses/new",
+          "blockedExternalRequests": []
+        }
+      ],
+      "originalProductionBuild": true,
+      "integrityAfter": {
+        "source": "/tmp/ngx-mcp-fresh-access-expense",
+        "commit": "fe326e1bc56fdea3262801d7379a5906f724b319",
+        "sourceFiles": 157,
+        "labelsSha256": "245f1839a69cca8feb8520c65c7591f1f0ab61a8c1fad0331c04acef0a1632a2",
+        "lockSha256": "16d725dbc8ca0181a6b9f5859802d6abeea70dddb672f296c97b23d5e9ab9e90"
+      },
+      "sourcePreserved": true
+    }
+  ],
+  "scope": "Source-first selected workflows in unchanged public Angular production builds; synthetic browser data, no compiler metadata or integration runtime. No upstream account-security certification.",
+  "browserVersion": "157.0.8103.39",
+  "finishedAt": "2026-11-10T16:13:46.850Z",
+  "resourcesClosed": true,
+  "totals": {
+    "passed": 16,
+    "total": 16
+  },
+  "harnessSha256": {
+    "reference.mjs": "57f3783ab988a848a8fcd4d4990ee25dad4122bc7142f255832c542625ce674a",
+    "fixtures.mjs": "233990ee9d54e613a1842ea729a9e809993c7f50022019f1a2d11508c780ef37"
+  }
+}
