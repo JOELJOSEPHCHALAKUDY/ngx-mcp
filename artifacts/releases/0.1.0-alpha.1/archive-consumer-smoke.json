@@ -1,0 +1,10 @@
+{
+  "name": "ngx-mcp",
+  "version": "0.1.0-alpha.1",
+  "source": "exact checked tarball",
+  "freshRuntimeDependencies": true,
+  "cliCommands": 4,
+  "publicApi": true,
+  "targetAngularGeneration": true,
+  "originalSourcePreserved": true
+}
