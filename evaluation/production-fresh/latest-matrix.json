@@ -1,6 +1,6 @@
 {
   "formatVersion": 1,
-  "sha256": "d3d92fb0759ef85939f2767c535a0c4c85f1ce4fd892ea630e0f5823fdcd9927",
+  "sha256": "055d843087455b8efb6a7eea59e5125c632b8d783d53af9bf02664267c4f63c7",
   "evidenceFiles": {
     "todo/freeze.json": "e4fa9167b8a5c157ffe538ce11457420c5c6649a6cb9b332057736963450957b",
     "todo/source-manifest.json": "02c64ca4c0427e6adbdd8d9fd50ab019bc341b6db949c20fbf0d1d638769ba3e",
@@ -22,11 +22,11 @@
   },
   "completion": {
     "file": "run-completion.json",
-    "sha256": "5059e19347c9b7885ca6de1aca28449d37b5940964a54041ae3c6b5615b72da1"
+    "sha256": "989a82ebd5c21e4b7a8712a3a1a0dc824b90ed67160b8f87e423a8746fca7926"
   },
   "artifactManifest": {
     "file": "evidence-manifest.json",
-    "sha256": "720aa863ccec17a454f60400ee81e5e3bbe2a51aa9eb8d38768f4faf3670492d"
+    "sha256": "d17260cafec72db5f1ebf0ee7821f00e27ecf1e2a8099437f8a8d9323b1c4a3c"
   },
-  "report": "runs/final-verified-2026-11-10/report.json"
+  "report": "runs/release-alpha-0.1.0-alpha.1/report.json"
 }

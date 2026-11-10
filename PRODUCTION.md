@@ -2,7 +2,7 @@
 
 Production mode controls which automation tools can access an app. Your existing backend still decides which account may read or change each business resource. The package supplies neither an identity provider nor your application's authorization/approval service.
 
-This is a private alpha. Complete the app-specific setup and deployment checks below before granting access. Finite test results describe the tested workflows, not arbitrary Angular compatibility or a security certification.
+This guide targets the experimental `0.1.0-alpha.1` release. Install it in your Angular app with `npm install -D ngx-mcp@alpha` (or pin `ngx-mcp@0.1.0-alpha.1`). Complete the app-specific setup and deployment checks below before granting access. Finite test results describe the tested workflows, not arbitrary Angular compatibility or a security certification.
 
 ## Choose a connection
 
@@ -100,10 +100,10 @@ Invalid, expired or revoked sessions, and audit failures, lock automation in the
 
 ## 2. Generate a review copy and review exact source IDs
 
-Use the final bootstrap when creating the review manifest, even though this first copy uses the development profile:
+Run the generator from your Angular app folder, where ngx-mcp is installed. Use the final bootstrap when creating the review manifest, even though this first copy uses the development profile:
 
 ```sh
-node /path/to/ngx-mcp/dist/ngx-mcp.js generate \
+npx ngx-mcp generate \
   --project /path/to/my-app/tsconfig.app.json \
   --out /path/to/my-app-review \
   --mode both \
@@ -150,7 +150,7 @@ The build ID binds source inputs, compiler/runtime implementation and bootstrap 
 ## 3. Generate, build and deploy the production copy
 
 ```sh
-node /path/to/ngx-mcp/dist/ngx-mcp.js generate \
+npx ngx-mcp generate \
   --project /path/to/my-app/tsconfig.app.json \
   --out /path/to/my-app-production \
   --mode both \
@@ -166,8 +166,10 @@ There is no replacement Angular compiler to ship. For native WebMCP, the generat
 
 ## 4. Connect a local MCP client to the deployed app
 
+On the adapter machine, install its browser once with `npx playwright install chromium` from the folder where ngx-mcp is installed. Then run:
+
 ```sh
-node /path/to/ngx-mcp/dist/ngx-mcp.js serve \
+npx ngx-mcp serve \
   --base-url https://app.example.com/customers \
   --allow-origin https://app.example.com \
   --allow-network-origin https://api.example.com \
@@ -222,10 +224,10 @@ export default async function () {
 ```
 
 ```sh
-ngx-mcp host --config /absolute/path/server-config.mjs --port 3000
+npx ngx-mcp host --config /absolute/path/server-config.mjs --port 3000
 ```
 
-Install the private package archive and its Playwright browser on this server first. Until publication, run the checkout's `node /path/to/ngx-mcp/dist/ngx-mcp.js host ...` and import its built `dist/index.js` instead of the package name.
+Install the package and its browser in a dedicated server project first: `npm install ngx-mcp@alpha`, then `npx playwright install chromium`. Keep it as a server runtime dependency. The Node service is deployed separately from your Angular `dist`; its owner-auth module and server credentials stay on the server.
 
 The server listens on loopback by default. Route `/mcp` and `/.well-known/oauth-protected-resource/mcp` through your HTTPS reverse proxy. External/container binding requires both `allowExternalBind: true` in configuration and an explicit `--host`; the operator owns TLS termination, firewalling and process isolation. Configure exact `allowedOrigins`/`allowedHosts` only when additional hosts or browser clients are needed. Forwarded headers are not authentication.
 
@@ -241,4 +243,4 @@ An allowed `describe` operation intentionally exposes structural input schema, v
 
 The page and its JavaScript remain one trust domain. XSS, a malicious extension or an operator with unrestricted browser debugging can manipulate the DOM directly. Global registry helpers are not a backend authorization boundary. Do not treat these controls as protection against privileged code already executing in the app. Keep backend authorization on every sensitive endpoint, and keep real approval decisions outside the agent's ordinary tool reach.
 
-Before rollout, test your identity provider and TLS/proxy deployment, actual account/tenant isolation, logout/revocation, sensitive data rules, denied/replayed/timed-out approvals, audit outages and real backend postconditions. The fresh public-project matrix uses synthetic data and a local trusted fixture; its scope and unresolved deployment work are documented in [evaluation/production-fresh](evaluation/production-fresh/README.md). Follow [RELEASING.md](RELEASING.md) for package gates.
+Before rollout, test your identity provider and TLS/proxy deployment, actual account/tenant isolation, logout/revocation, sensitive data rules, denied/replayed/timed-out approvals, audit outages and real backend postconditions. The fresh public-project matrix uses synthetic data and a local trusted fixture; its scope and unresolved deployment work are documented in [evaluation/production-fresh](https://github.com/JOELJOSEPHCHALAKUDY/ngx-mcp/blob/main/evaluation/production-fresh/README.md). Follow [RELEASING.md](https://github.com/JOELJOSEPHCHALAKUDY/ngx-mcp/blob/main/RELEASING.md) for package gates.

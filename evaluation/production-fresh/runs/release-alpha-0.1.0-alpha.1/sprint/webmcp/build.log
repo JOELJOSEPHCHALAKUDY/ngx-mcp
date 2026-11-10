@@ -1,0 +1,13 @@
+❯ Building...
+✔ Building...
+Initial chunk files   | Names         | Raw size | Estimated transfer size
+main-G55ZYG4J.js      | main          |  1.01 MB |               215.60 kB
+polyfills-JXOSM7H6.js | polyfills     | 34.52 kB |                11.29 kB
+styles-4FNAKTVY.css   | styles        |  7.61 kB |                 1.36 kB
+
+                      | Initial total |  1.05 MB |               228.25 kB
+
+Application bundle generation complete. [4.349 seconds]
+
+Output location: /private/tmp/ngx-mcp-fresh-production-2026-11-10T17-43-03-501Z/sprint/webmcp/dist/demo
+

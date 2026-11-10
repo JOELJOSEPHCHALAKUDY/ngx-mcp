@@ -1,0 +1,19 @@
+❯ Building...
+✔ Building...
+Initial chunk files | Names             |  Raw size | Estimated transfer size
+chunk-C1-Ya286.js   | -                 | 312.37 kB |                83.16 kB
+main-FKCRF7DO.js    | main              | 144.66 kB |                36.56 kB
+styles-D6PCTKWV.css | styles            |   3.01 kB |                 1.02 kB
+
+                    | Initial total     | 460.04 kB |               120.74 kB
+
+Lazy chunk files    | Names             |  Raw size | Estimated transfer size
+chunk-bd2CSOZv.js   | summary-page      |  18.59 kB |                 5.42 kB
+chunk-4ieT-g5m.js   | categories-page   |  17.53 kB |                 4.65 kB
+chunk-bOaYV0nc.js   | expense-form-page |  14.04 kB |                 4.09 kB
+chunk-BucnIptK.js   | -                 |   2.37 kB |                 1.05 kB
+
+Application bundle generation complete. [2.651 seconds] - 2026-11-10T17:46:56.511Z
+
+Output location: /private/tmp/ngx-mcp-fresh-production-2026-11-10T17-43-03-501Z/expense/webmcp/dist/expense-tracker
+

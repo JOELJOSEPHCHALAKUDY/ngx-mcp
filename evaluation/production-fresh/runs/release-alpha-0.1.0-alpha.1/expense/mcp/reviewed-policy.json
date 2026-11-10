@@ -1,0 +1,165 @@
+{
+  "buildId": "807628e474b7bab2ea9463e704001b3c653dc44b416969f7d3119b210c1f87fd",
+  "policy": {
+    "version": 1,
+    "allowedOrigins": [
+      "http://127.0.0.1:58693"
+    ],
+    "rules": [
+      {
+        "sourceId": "ngmcp_05178a535e685dcdce380b8c",
+        "label": "button — src/app/features/expenses/pages/expense-form-page/expense-form-page.html:120",
+        "operations": [
+          "describe",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_33e6b7582d7a4a497f9921f0",
+        "label": "app-money-input — src/app/features/categories/components/budget-form/budget-form.html:11",
+        "operations": [
+          "describe",
+          "fill",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_46f5b3f54bfb6e7b686425fb",
+        "label": "select expense-category — src/app/features/expenses/pages/expense-form-page/expense-form-page.html:78",
+        "operations": [
+          "describe",
+          "fill",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_656d6542ef14897270b58505",
+        "label": "button — src/app/features/categories/components/budget-form/budget-form.html:22",
+        "operations": [
+          "describe",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_74cc7cd5aacd3a0659c87737",
+        "label": "button — src/app/features/categories/components/budget-form/budget-form.html:26",
+        "operations": [
+          "describe",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_926af485fab3ebd0d05ef91e",
+        "label": "input category-name — src/app/features/categories/components/category-form/category-form.html:5",
+        "operations": [
+          "describe",
+          "fill",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_97c77102d551f2c7752a9ce2",
+        "label": "input — src/app/features/expenses/pages/expense-form-page/expense-form-page.html:109",
+        "operations": [
+          "describe",
+          "fill",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_a628f32c82d1d3939992d9e1",
+        "label": "input expense-date — src/app/features/expenses/pages/expense-form-page/expense-form-page.html:57",
+        "operations": [
+          "describe",
+          "fill",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_c27b3cf32e4bb955552a26f8",
+        "label": "form — src/app/features/expenses/pages/expense-form-page/expense-form-page.html:7",
+        "operations": [
+          "describe",
+          "submit"
+        ],
+        "writeFields": [
+          "ngmcp_46f5b3f54bfb6e7b686425fb",
+          "ngmcp_97c77102d551f2c7752a9ce2",
+          "ngmcp_a628f32c82d1d3939992d9e1",
+          "ngmcp_cd3966e71ada4f97c2d1673e",
+          "ngmcp_f9a39ae4bd909d054249423f"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_c55ef9b8a9efa350be4c7f6e",
+        "label": "form — src/app/features/categories/components/category-form/category-form.html:1",
+        "operations": [
+          "describe",
+          "submit"
+        ],
+        "writeFields": [
+          "ngmcp_926af485fab3ebd0d05ef91e",
+          "ngmcp_df0526add5c993c563aca672"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_c5c112e02dc5b18fd3f0ec56",
+        "label": "form — src/app/features/categories/components/budget-form/budget-form.html:1",
+        "operations": [
+          "describe",
+          "submit"
+        ],
+        "writeFields": [
+          "ngmcp_33e6b7582d7a4a497f9921f0"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_cd3966e71ada4f97c2d1673e",
+        "label": "input expense-description — src/app/features/expenses/pages/expense-form-page/expense-form-page.html:10",
+        "operations": [
+          "describe",
+          "fill",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_cd80570e38622283abcaf060",
+        "label": "input — src/app/shared/money-input/money-input.html:2",
+        "operations": [
+          "describe",
+          "fill",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_dc0d8e9fafc2b27b703732d6",
+        "label": "button — src/app/features/categories/components/category-form/category-form.html:16",
+        "operations": [
+          "describe",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_df0526add5c993c563aca672",
+        "label": "input color — src/app/features/categories/components/category-form/category-form.html:28",
+        "operations": [
+          "describe",
+          "fill",
+          "activate"
+        ]
+      },
+      {
+        "sourceId": "ngmcp_f9a39ae4bd909d054249423f",
+        "label": "app-money-input — src/app/features/expenses/pages/expense-form-page/expense-form-page.html:38",
+        "operations": [
+          "describe",
+          "fill",
+          "activate"
+        ]
+      }
+    ],
+    "sessionMaxAgeMs": 3600000,
+    "approvalMaxAgeMs": 60000,
+    "maxAuditRecords": 100000
+  }
+}

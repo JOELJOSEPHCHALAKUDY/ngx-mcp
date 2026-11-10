@@ -1,0 +1,10 @@
+npm notice run ngx-mcp@0.1.0-alpha.1 test:setup
+npm notice run npm --prefix samples/toolchains/course-crud ci
+npm WARN deprecated @angular/animations@22.2.4: @angular/animations is deprecated. Use `animate.enter` and `animate.leave` instead. For more information see: https://v22.angular.dev/guide/animations.
+
+added 250 packages, and audited 251 packages in 4s
+
+76 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities

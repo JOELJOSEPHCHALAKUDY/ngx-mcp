@@ -7,7 +7,7 @@
     "tooling/check-webmcp-evidence.mjs": "2944d388c8132bdae96ef08ba88a135e306edc554cf838f4e4d6bcae39ed1446"
   },
   "kind": "native-webmcp-conformance",
-  "startedAt": "2026-11-10T16:54:41.747Z",
+  "startedAt": "2026-11-10T17:57:27.466Z",
   "nativeVerified": true,
   "browserChannel": "chrome",
   "browserFlags": [
@@ -57,7 +57,7 @@
     "nativeMethods": true,
     "legacy": false
   },
-  "finishedAt": "2026-11-10T16:54:54.217Z",
+  "finishedAt": "2026-11-10T17:57:39.065Z",
   "resourcesClosed": true,
   "compilerDigestAfter": "681b7df0277c15aa1086e8951f1339755f13d02e9025786ddc119f3816776d8e",
   "compilerStable": true,

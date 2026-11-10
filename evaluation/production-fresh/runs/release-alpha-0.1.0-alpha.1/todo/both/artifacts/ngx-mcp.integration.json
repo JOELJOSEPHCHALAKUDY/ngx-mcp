@@ -1,0 +1,3998 @@
+{
+  "formatVersion": 1,
+  "mode": "both",
+  "profile": "production",
+  "buildId": "1f7d87c20fcce4581caca14ce7cd7cfa80a3859b89d8ef3642b66ce6f8c5ea3d",
+  "workspace": "/private/tmp/ngx-mcp-fresh-production-2026-11-10T17-43-03-501Z/todo/both",
+  "project": "/private/tmp/ngx-mcp-fresh-production-2026-11-10T17-43-03-501Z/todo/both/tsconfig.app.json",
+  "runtimeModule": "/private/tmp/ngx-mcp-fresh-production-2026-11-10T17-43-03-501Z/todo/both/src/ngx-mcp.generated.ts",
+  "buildTarget": "todo-app",
+  "angularVersion": "20.3.12",
+  "typescriptVersion": "5.9.3",
+  "nodes": [
+    {
+      "id": "ngmcp_0148dd478c44a14ecc041591",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/item-view/item-view.html",
+        "start": 773,
+        "end": 800,
+        "line": 25,
+        "column": 9
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemView",
+            "file": "src/app/item-view/item-view.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_01b0feb00a028d83a9b16c4b",
+      "tag": "button",
+      "native": true,
+      "events": [
+        "click"
+      ],
+      "source": {
+        "file": "src/app/item-view/item-view.html",
+        "start": 896,
+        "end": 1068,
+        "line": 27,
+        "column": 13
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemView",
+            "file": "src/app/item-view/item-view.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "click",
+              "expression": "deleteItem()",
+              "resolved": true,
+              "consumers": [
+                {
+                  "kind": "native",
+                  "name": "button",
+                  "member": "addEventListener",
+                  "type": "{ <K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLButtonElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions | undefined): void; (type: string, listener: EventListenerOrEventListenerObject, options?: boolean | ... 1 more ... | undefined): void; }"
+                }
+              ],
+              "expressionType": "void",
+              "target": null,
+              "phase": null,
+              "twoWay": false
+            }
+          ],
+          "elementType": "HTMLButtonElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "click",
+          "expression": "deleteItem()",
+          "resolved": true,
+          "consumers": [
+            {
+              "kind": "native",
+              "name": "button",
+              "member": "addEventListener",
+              "type": "{ <K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLButtonElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions | undefined): void; (type: string, listener: EventListenerOrEventListenerObject, options?: boolean | ... 1 more ... | undefined): void; }"
+            }
+          ],
+          "expressionType": "void",
+          "target": null,
+          "phase": null,
+          "twoWay": false
+        }
+      ],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_03fc49a74932d5006b6fad38",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/add-todo/add-todo.html",
+        "start": 1886,
+        "end": 1915,
+        "line": 54,
+        "column": 21
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "AddTodo",
+            "file": "src/app/add-todo/add-todo.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "formId": "ngmcp_93357b46db881052581f8f67",
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_06545c8ac328b20726369ca4",
+      "tag": "a",
+      "native": true,
+      "events": [],
+      "source": {
+        "file": "src/app/item-detail/item-detail.html",
+        "start": 1291,
+        "end": 1330,
+        "line": 28,
+        "column": 17
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemDetail",
+            "file": "src/app/item-detail/item-detail.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [
+            {
+              "name": "RouterLink",
+              "file": "node_modules/@angular/router/router_module.d.d.ts",
+              "selector": "[routerLink]",
+              "isComponent": false,
+              "inputs": [
+                {
+                  "classPropertyName": "target",
+                  "publicName": "target"
+                },
+                {
+                  "classPropertyName": "queryParams",
+                  "publicName": "queryParams"
+                },
+                {
+                  "classPropertyName": "fragment",
+                  "publicName": "fragment"
+                },
+                {
+                  "classPropertyName": "queryParamsHandling",
+                  "publicName": "queryParamsHandling"
+                },
+                {
+                  "classPropertyName": "state",
+                  "publicName": "state"
+                },
+                {
+                  "classPropertyName": "info",
+                  "publicName": "info"
+                },
+                {
+                  "classPropertyName": "relativeTo",
+                  "publicName": "relativeTo"
+                },
+                {
+                  "classPropertyName": "preserveFragment",
+                  "publicName": "preserveFragment"
+                },
+                {
+                  "classPropertyName": "skipLocationChange",
+                  "publicName": "skipLocationChange"
+                },
+                {
+                  "classPropertyName": "replaceUrl",
+                  "publicName": "replaceUrl"
+                },
+                {
+                  "classPropertyName": "routerLink",
+                  "publicName": "routerLink"
+                }
+              ],
+              "outputs": []
+            }
+          ],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLAnchorElement"
+        }
+      ],
+      "resolvedDirectives": [
+        {
+          "name": "RouterLink",
+          "file": "node_modules/@angular/router/router_module.d.d.ts",
+          "selector": "[routerLink]",
+          "isComponent": false,
+          "inputs": [
+            {
+              "classPropertyName": "target",
+              "publicName": "target"
+            },
+            {
+              "classPropertyName": "queryParams",
+              "publicName": "queryParams"
+            },
+            {
+              "classPropertyName": "fragment",
+              "publicName": "fragment"
+            },
+            {
+              "classPropertyName": "queryParamsHandling",
+              "publicName": "queryParamsHandling"
+            },
+            {
+              "classPropertyName": "state",
+              "publicName": "state"
+            },
+            {
+              "classPropertyName": "info",
+              "publicName": "info"
+            },
+            {
+              "classPropertyName": "relativeTo",
+              "publicName": "relativeTo"
+            },
+            {
+              "classPropertyName": "preserveFragment",
+              "publicName": "preserveFragment"
+            },
+            {
+              "classPropertyName": "skipLocationChange",
+              "publicName": "skipLocationChange"
+            },
+            {
+              "classPropertyName": "replaceUrl",
+              "publicName": "replaceUrl"
+            },
+            {
+              "classPropertyName": "routerLink",
+              "publicName": "routerLink"
+            }
+          ],
+          "outputs": []
+        }
+      ],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_0c07684518f616f17729f00d",
+      "tag": "app-status-badge",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/item-detail/item-detail.html",
+        "start": 738,
+        "end": 789,
+        "line": 15,
+        "column": 21
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemDetail",
+            "file": "src/app/item-detail/item-detail.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [
+            {
+              "name": "StatusBadge",
+              "file": "src/app/status-badge/status-badge.ts",
+              "selector": "app-status-badge",
+              "isComponent": true,
+              "inputs": [
+                {
+                  "classPropertyName": "isCompleted",
+                  "publicName": "isCompleted"
+                }
+              ],
+              "outputs": []
+            }
+          ],
+          "inputs": [
+            {
+              "name": "isCompleted",
+              "expression": "item().completed",
+              "resolved": true,
+              "consumers": [
+                {
+                  "kind": "directive",
+                  "name": "StatusBadge",
+                  "file": "src/app/status-badge/status-badge.ts",
+                  "member": "isCompleted",
+                  "type": "boolean"
+                }
+              ],
+              "expressionType": "boolean"
+            }
+          ],
+          "outputs": [],
+          "elementType": "HTMLElement"
+        }
+      ],
+      "resolvedDirectives": [
+        {
+          "name": "StatusBadge",
+          "file": "src/app/status-badge/status-badge.ts",
+          "selector": "app-status-badge",
+          "isComponent": true,
+          "inputs": [
+            {
+              "classPropertyName": "isCompleted",
+              "publicName": "isCompleted"
+            }
+          ],
+          "outputs": []
+        }
+      ],
+      "inputs": [
+        {
+          "name": "isCompleted",
+          "expression": "item().completed",
+          "resolved": true,
+          "consumers": [
+            {
+              "kind": "directive",
+              "name": "StatusBadge",
+              "file": "src/app/status-badge/status-badge.ts",
+              "member": "isCompleted",
+              "type": "boolean"
+            }
+          ],
+          "expressionType": "boolean"
+        }
+      ],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_0c84be173e5cfd9170c71833",
+      "tag": "button",
+      "native": true,
+      "events": [],
+      "source": {
+        "file": "src/app/add-todo/add-todo.html",
+        "start": 546,
+        "end": 726,
+        "line": 22,
+        "column": 17
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "AddTodo",
+            "file": "src/app/add-todo/add-todo.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLButtonElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_1104618ce852c73e4e76a467",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/summary-card/summary-card.html",
+        "start": 0,
+        "end": 18,
+        "line": 1,
+        "column": 1
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "SummaryCard",
+            "file": "src/app/summary-card/summary-card.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_168919ef70aa1033ea0119be",
+      "tag": "button",
+      "native": true,
+      "events": [
+        "click"
+      ],
+      "source": {
+        "file": "src/app/item-detail/item-detail.html",
+        "start": 1330,
+        "end": 1384,
+        "line": 29,
+        "column": 22
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemDetail",
+            "file": "src/app/item-detail/item-detail.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "click",
+              "expression": "deleteItem()",
+              "resolved": true,
+              "consumers": [
+                {
+                  "kind": "native",
+                  "name": "button",
+                  "member": "addEventListener",
+                  "type": "{ <K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLButtonElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions | undefined): void; (type: string, listener: EventListenerOrEventListenerObject, options?: boolean | ... 1 more ... | undefined): void; }"
+                }
+              ],
+              "expressionType": "void",
+              "target": null,
+              "phase": null,
+              "twoWay": false
+            }
+          ],
+          "elementType": "HTMLButtonElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "click",
+          "expression": "deleteItem()",
+          "resolved": true,
+          "consumers": [
+            {
+              "kind": "native",
+              "name": "button",
+              "member": "addEventListener",
+              "type": "{ <K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLButtonElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions | undefined): void; (type: string, listener: EventListenerOrEventListenerObject, options?: boolean | ... 1 more ... | undefined): void; }"
+            }
+          ],
+          "expressionType": "void",
+          "target": null,
+          "phase": null,
+          "twoWay": false
+        }
+      ],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_1a50fd6ccea5b01420b6541a",
+      "tag": "p",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/summary-card/summary-card.html",
+        "start": 364,
+        "end": 385,
+        "line": 12,
+        "column": 9
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "SummaryCard",
+            "file": "src/app/summary-card/summary-card.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLParagraphElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_1ab2cbf5a579a5b0eaec3671",
+      "tag": "strong",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/summary-card/summary-card.html",
+        "start": 303,
+        "end": 311,
+        "line": 10,
+        "column": 24
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "SummaryCard",
+            "file": "src/app/summary-card/summary-card.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_1b7665558e60e1f60a9bbdbf",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/add-todo/add-todo.html",
+        "start": 835,
+        "end": 853,
+        "line": 31,
+        "column": 21
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "AddTodo",
+            "file": "src/app/add-todo/add-todo.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "formId": "ngmcp_93357b46db881052581f8f67",
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_1eb2f41a2e2303e6de59701d",
+      "tag": "label",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/add-todo/add-todo.html",
+        "start": 1399,
+        "end": 1447,
+        "line": 44,
+        "column": 25
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "AddTodo",
+            "file": "src/app/add-todo/add-todo.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLLabelElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "formId": "ngmcp_93357b46db881052581f8f67",
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_1f76312e5230fe22c6e607a9",
+      "tag": "button",
+      "native": true,
+      "events": [],
+      "source": {
+        "file": "src/app/item-detail/item-detail.html",
+        "start": 1593,
+        "end": 1625,
+        "line": 37,
+        "column": 9
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemDetail",
+            "file": "src/app/item-detail/item-detail.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLButtonElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_260c614369f953ebe8b72b70",
+      "tag": "h5",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/item-detail/item-detail.html",
+        "start": 117,
+        "end": 164,
+        "line": 4,
+        "column": 13
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemDetail",
+            "file": "src/app/item-detail/item-detail.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLHeadingElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_271353ae269e14f1fda332c7",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/item-detail/item-detail.html",
+        "start": 863,
+        "end": 888,
+        "line": 18,
+        "column": 13
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemDetail",
+            "file": "src/app/item-detail/item-detail.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_2e380ff11a2dea4f1684d3e8",
+      "tag": "app-add-todo",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/home/home.html",
+        "start": 351,
+        "end": 365,
+        "line": 11,
+        "column": 13
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "Home",
+            "file": "src/app/home/home.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [
+            {
+              "name": "AddTodo",
+              "file": "src/app/add-todo/add-todo.ts",
+              "selector": "app-add-todo",
+              "isComponent": true,
+              "inputs": [],
+              "outputs": []
+            }
+          ],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLElement"
+        }
+      ],
+      "resolvedDirectives": [
+        {
+          "name": "AddTodo",
+          "file": "src/app/add-todo/add-todo.ts",
+          "selector": "app-add-todo",
+          "isComponent": true,
+          "inputs": [],
+          "outputs": []
+        }
+      ],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_31da19c5b3ea39bc13abdbc5",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/add-todo/add-todo.html",
+        "start": 1356,
+        "end": 1374,
+        "line": 43,
+        "column": 21
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "AddTodo",
+            "file": "src/app/add-todo/add-todo.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "formId": "ngmcp_93357b46db881052581f8f67",
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_3319b63ff105f25d8ddfaf6d",
+      "tag": "p",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/item-view/item-view.html",
+        "start": 664,
+        "end": 691,
+        "line": 21,
+        "column": 13
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemView",
+            "file": "src/app/item-view/item-view.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLParagraphElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_33fe02768e4521866fb388ea",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/item-detail/item-detail.html",
+        "start": 1477,
+        "end": 1534,
+        "line": 34,
+        "column": 9
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemDetail",
+            "file": "src/app/item-detail/item-detail.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_365d45e537340d689a7fe4b5",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/item-view/item-view.html",
+        "start": 55,
+        "end": 79,
+        "line": 3,
+        "column": 9
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemView",
+            "file": "src/app/item-view/item-view.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_36ef4fe52034e5cab6bb9ce1",
+      "tag": "strong",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/summary-card/summary-card.html",
+        "start": 199,
+        "end": 207,
+        "line": 7,
+        "column": 26
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "SummaryCard",
+            "file": "src/app/summary-card/summary-card.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_392d7e2ad18f98bba9ef45b8",
+      "tag": "button",
+      "native": true,
+      "events": [],
+      "source": {
+        "file": "src/app/add-todo/add-todo.html",
+        "start": 2434,
+        "end": 2506,
+        "line": 67,
+        "column": 17
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "AddTodo",
+            "file": "src/app/add-todo/add-todo.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLButtonElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_404a902c551f92adea4e6451",
+      "tag": "a",
+      "native": true,
+      "events": [],
+      "source": {
+        "file": "src/app/item-detail/item-detail.html",
+        "start": 1566,
+        "end": 1584,
+        "line": 36,
+        "column": 5
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemDetail",
+            "file": "src/app/item-detail/item-detail.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [
+            {
+              "name": "RouterLink",
+              "file": "node_modules/@angular/router/router_module.d.d.ts",
+              "selector": "[routerLink]",
+              "isComponent": false,
+              "inputs": [
+                {
+                  "classPropertyName": "target",
+                  "publicName": "target"
+                },
+                {
+                  "classPropertyName": "queryParams",
+                  "publicName": "queryParams"
+                },
+                {
+                  "classPropertyName": "fragment",
+                  "publicName": "fragment"
+                },
+                {
+                  "classPropertyName": "queryParamsHandling",
+                  "publicName": "queryParamsHandling"
+                },
+                {
+                  "classPropertyName": "state",
+                  "publicName": "state"
+                },
+                {
+                  "classPropertyName": "info",
+                  "publicName": "info"
+                },
+                {
+                  "classPropertyName": "relativeTo",
+                  "publicName": "relativeTo"
+                },
+                {
+                  "classPropertyName": "preserveFragment",
+                  "publicName": "preserveFragment"
+                },
+                {
+                  "classPropertyName": "skipLocationChange",
+                  "publicName": "skipLocationChange"
+                },
+                {
+                  "classPropertyName": "replaceUrl",
+                  "publicName": "replaceUrl"
+                },
+                {
+                  "classPropertyName": "routerLink",
+                  "publicName": "routerLink"
+                }
+              ],
+              "outputs": []
+            }
+          ],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLAnchorElement"
+        }
+      ],
+      "resolvedDirectives": [
+        {
+          "name": "RouterLink",
+          "file": "node_modules/@angular/router/router_module.d.d.ts",
+          "selector": "[routerLink]",
+          "isComponent": false,
+          "inputs": [
+            {
+              "classPropertyName": "target",
+              "publicName": "target"
+            },
+            {
+              "classPropertyName": "queryParams",
+              "publicName": "queryParams"
+            },
+            {
+              "classPropertyName": "fragment",
+              "publicName": "fragment"
+            },
+            {
+              "classPropertyName": "queryParamsHandling",
+              "publicName": "queryParamsHandling"
+            },
+            {
+              "classPropertyName": "state",
+              "publicName": "state"
+            },
+            {
+              "classPropertyName": "info",
+              "publicName": "info"
+            },
+            {
+              "classPropertyName": "relativeTo",
+              "publicName": "relativeTo"
+            },
+            {
+              "classPropertyName": "preserveFragment",
+              "publicName": "preserveFragment"
+            },
+            {
+              "classPropertyName": "skipLocationChange",
+              "publicName": "skipLocationChange"
+            },
+            {
+              "classPropertyName": "replaceUrl",
+              "publicName": "replaceUrl"
+            },
+            {
+              "classPropertyName": "routerLink",
+              "publicName": "routerLink"
+            }
+          ],
+          "outputs": []
+        }
+      ],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_460b7fcbc0c475d7f783a6e1",
+      "tag": "p",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/summary-card/summary-card.html",
+        "start": 258,
+        "end": 279,
+        "line": 9,
+        "column": 9
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "SummaryCard",
+            "file": "src/app/summary-card/summary-card.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLParagraphElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_4dbb2984a2d8505533d08395",
+      "tag": "p",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/summary-card/summary-card.html",
+        "start": 152,
+        "end": 173,
+        "line": 6,
+        "column": 9
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "SummaryCard",
+            "file": "src/app/summary-card/summary-card.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLParagraphElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_5091074396436becc148ae4e",
+      "tag": "b",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/item-detail/item-detail.html",
+        "start": 529,
+        "end": 551,
+        "line": 11,
+        "column": 21
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemDetail",
+            "file": "src/app/item-detail/item-detail.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_52644392b4c51c9c000e0a85",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/home/home.html",
+        "start": 283,
+        "end": 288,
+        "line": 9,
+        "column": 9
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "Home",
+            "file": "src/app/home/home.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_5c52031c7ece7acec4bb4104",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/home/home.html",
+        "start": 109,
+        "end": 131,
+        "line": 4,
+        "column": 9
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "Home",
+            "file": "src/app/home/home.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_5ca0b6d3537efe9ab611b348",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/item-detail/item-detail.html",
+        "start": 86,
+        "end": 104,
+        "line": 3,
+        "column": 9
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemDetail",
+            "file": "src/app/item-detail/item-detail.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_61463b5f62ba8c08a18cb217",
+      "tag": "span",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/status-badge/status-badge.html",
+        "start": 0,
+        "end": 93,
+        "line": 1,
+        "column": 1
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "StatusBadge",
+            "file": "src/app/status-badge/status-badge.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [
+            {
+              "name": "bg-success",
+              "expression": "isCompleted()",
+              "resolved": true,
+              "consumers": [
+                {
+                  "kind": "native",
+                  "name": "span"
+                }
+              ],
+              "expressionType": "boolean"
+            },
+            {
+              "name": "bg-secondary",
+              "expression": "!isCompleted()",
+              "resolved": true,
+              "consumers": [
+                {
+                  "kind": "native",
+                  "name": "span"
+                }
+              ],
+              "expressionType": "boolean"
+            }
+          ],
+          "outputs": [],
+          "elementType": "HTMLSpanElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [
+        {
+          "name": "bg-success",
+          "expression": "isCompleted()",
+          "resolved": true,
+          "consumers": [
+            {
+              "kind": "native",
+              "name": "span"
+            }
+          ],
+          "expressionType": "boolean"
+        },
+        {
+          "name": "bg-secondary",
+          "expression": "!isCompleted()",
+          "resolved": true,
+          "consumers": [
+            {
+              "kind": "native",
+              "name": "span"
+            }
+          ],
+          "expressionType": "boolean"
+        }
+      ],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_63b535ef5e9d87e9f6e58ebc",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/summary-card/summary-card.html",
+        "start": 23,
+        "end": 48,
+        "line": 2,
+        "column": 5
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "SummaryCard",
+            "file": "src/app/summary-card/summary-card.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_68bbd21405d31eba3e5030e9",
+      "tag": "h5",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/add-todo/add-todo.html",
+        "start": 460,
+        "end": 507,
+        "line": 21,
+        "column": 17
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "AddTodo",
+            "file": "src/app/add-todo/add-todo.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLHeadingElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_69c9a5962440aefd61f19db7",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/item-detail/item-detail.html",
+        "start": 479,
+        "end": 508,
+        "line": 10,
+        "column": 17
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemDetail",
+            "file": "src/app/item-detail/item-detail.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_6fa673d8074991befff0005e",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/add-todo/add-todo.html",
+        "start": 342,
+        "end": 368,
+        "line": 18,
+        "column": 5
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "AddTodo",
+            "file": "src/app/add-todo/add-todo.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_738f0997216400d488e0f5df",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/item-detail/item-detail.html",
+        "start": 239,
+        "end": 268,
+        "line": 6,
+        "column": 17
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemDetail",
+            "file": "src/app/item-detail/item-detail.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_738fea604e379c0b2450ad07",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/add-todo/add-todo.html",
+        "start": 377,
+        "end": 404,
+        "line": 19,
+        "column": 9
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "AddTodo",
+            "file": "src/app/add-todo/add-todo.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_7dad837592d07225a9025032",
+      "tag": "strong",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/summary-card/summary-card.html",
+        "start": 407,
+        "end": 415,
+        "line": 13,
+        "column": 22
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "SummaryCard",
+            "file": "src/app/summary-card/summary-card.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_7dd571b4a3177c3acdc5d849",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/item-detail/item-detail.html",
+        "start": 0,
+        "end": 46,
+        "line": 1,
+        "column": 1
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemDetail",
+            "file": "src/app/item-detail/item-detail.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_7edc42a8b41986da8505de8d",
+      "tag": "button",
+      "native": true,
+      "events": [
+        "click"
+      ],
+      "source": {
+        "file": "src/app/item-detail/item-detail.html",
+        "start": 951,
+        "end": 1009,
+        "line": 20,
+        "column": 21
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemDetail",
+            "file": "src/app/item-detail/item-detail.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "click",
+              "expression": "markCompleted()",
+              "resolved": true,
+              "consumers": [
+                {
+                  "kind": "native",
+                  "name": "button",
+                  "member": "addEventListener",
+                  "type": "{ <K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLButtonElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions | undefined): void; (type: string, listener: EventListenerOrEventListenerObject, options?: boolean | ... 1 more ... | undefined): void; }"
+                }
+              ],
+              "expressionType": "void",
+              "target": null,
+              "phase": null,
+              "twoWay": false
+            }
+          ],
+          "elementType": "HTMLButtonElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "click",
+          "expression": "markCompleted()",
+          "resolved": true,
+          "consumers": [
+            {
+              "kind": "native",
+              "name": "button",
+              "member": "addEventListener",
+              "type": "{ <K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLButtonElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions | undefined): void; (type: string, listener: EventListenerOrEventListenerObject, options?: boolean | ... 1 more ... | undefined): void; }"
+            }
+          ],
+          "expressionType": "void",
+          "target": null,
+          "phase": null,
+          "twoWay": false
+        }
+      ],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_838094cd34a4005857a6ddb3",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/item-detail/item-detail.html",
+        "start": 633,
+        "end": 662,
+        "line": 13,
+        "column": 17
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemDetail",
+            "file": "src/app/item-detail/item-detail.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_876e4970b81280403ad46e95",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/summary-card/summary-card.html",
+        "start": 120,
+        "end": 143,
+        "line": 5,
+        "column": 5
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "SummaryCard",
+            "file": "src/app/summary-card/summary-card.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_8ccbc4f06dddb3b3c223d02a",
+      "tag": "h2",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/home/home.html",
+        "start": 28,
+        "end": 56,
+        "line": 2,
+        "column": 5
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "Home",
+            "file": "src/app/home/home.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLHeadingElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_8f0d63c9cf0db30e53dcbbec",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/add-todo/add-todo.html",
+        "start": 417,
+        "end": 443,
+        "line": 20,
+        "column": 13
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "AddTodo",
+            "file": "src/app/add-todo/add-todo.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_8f65ed07197b1571bbd97c82",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/home/home.html",
+        "start": 75,
+        "end": 100,
+        "line": 3,
+        "column": 5
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "Home",
+            "file": "src/app/home/home.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_902501f3b4e9c4cc25d5aac8",
+      "tag": "b",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/item-detail/item-detail.html",
+        "start": 268,
+        "end": 290,
+        "line": 6,
+        "column": 46
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemDetail",
+            "file": "src/app/item-detail/item-detail.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_92680881d84f6a8d363cef47",
+      "tag": "input",
+      "native": true,
+      "events": [],
+      "source": {
+        "file": "src/app/add-todo/add-todo.html",
+        "start": 958,
+        "end": 1308,
+        "line": 33,
+        "column": 25
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "AddTodo",
+            "file": "src/app/add-todo/add-todo.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [
+            {
+              "name": "DefaultValueAccessor",
+              "file": "node_modules/@angular/forms/index.d.ts",
+              "selector": "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]",
+              "isComponent": false,
+              "inputs": [],
+              "outputs": []
+            },
+            {
+              "name": "RequiredValidator",
+              "file": "node_modules/@angular/forms/index.d.ts",
+              "selector": ":not([type=checkbox])[required][formControlName],:not([type=checkbox])[required][formControl],:not([type=checkbox])[required][ngModel]",
+              "isComponent": false,
+              "inputs": [
+                {
+                  "classPropertyName": "required",
+                  "publicName": "required"
+                }
+              ],
+              "outputs": []
+            },
+            {
+              "name": "NgControlStatus",
+              "file": "node_modules/@angular/forms/index.d.ts",
+              "selector": "[formControlName],[ngModel],[formControl]",
+              "isComponent": false,
+              "inputs": [],
+              "outputs": []
+            },
+            {
+              "name": "NgModel",
+              "file": "node_modules/@angular/forms/index.d.ts",
+              "selector": "[ngModel]:not([formControlName]):not([formControl])",
+              "isComponent": false,
+              "inputs": [
+                {
+                  "classPropertyName": "name",
+                  "publicName": "name"
+                },
+                {
+                  "classPropertyName": "isDisabled",
+                  "publicName": "disabled"
+                },
+                {
+                  "classPropertyName": "model",
+                  "publicName": "ngModel"
+                },
+                {
+                  "classPropertyName": "options",
+                  "publicName": "ngModelOptions"
+                }
+              ],
+              "outputs": [
+                {
+                  "classPropertyName": "update",
+                  "publicName": "ngModelChange"
+                }
+              ]
+            }
+          ],
+          "inputs": [
+            {
+              "name": "ngModel",
+              "expression": "title",
+              "resolved": true,
+              "consumers": [
+                {
+                  "kind": "directive",
+                  "name": "NgModel",
+                  "file": "node_modules/@angular/forms/index.d.ts",
+                  "member": "model",
+                  "type": "any"
+                }
+              ],
+              "expressionType": "WritableSignal<string>"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "ngModelChange",
+              "expression": "title",
+              "resolved": true,
+              "consumers": [
+                {
+                  "kind": "directive",
+                  "name": "NgModel",
+                  "file": "node_modules/@angular/forms/index.d.ts",
+                  "member": "update",
+                  "type": "EventEmitter<any>"
+                }
+              ],
+              "expressionType": "WritableSignal<string>",
+              "target": null,
+              "phase": null,
+              "twoWay": true
+            }
+          ],
+          "elementType": "HTMLInputElement"
+        }
+      ],
+      "resolvedDirectives": [
+        {
+          "name": "DefaultValueAccessor",
+          "file": "node_modules/@angular/forms/index.d.ts",
+          "selector": "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]",
+          "isComponent": false,
+          "inputs": [],
+          "outputs": []
+        },
+        {
+          "name": "RequiredValidator",
+          "file": "node_modules/@angular/forms/index.d.ts",
+          "selector": ":not([type=checkbox])[required][formControlName],:not([type=checkbox])[required][formControl],:not([type=checkbox])[required][ngModel]",
+          "isComponent": false,
+          "inputs": [
+            {
+              "classPropertyName": "required",
+              "publicName": "required"
+            }
+          ],
+          "outputs": []
+        },
+        {
+          "name": "NgControlStatus",
+          "file": "node_modules/@angular/forms/index.d.ts",
+          "selector": "[formControlName],[ngModel],[formControl]",
+          "isComponent": false,
+          "inputs": [],
+          "outputs": []
+        },
+        {
+          "name": "NgModel",
+          "file": "node_modules/@angular/forms/index.d.ts",
+          "selector": "[ngModel]:not([formControlName]):not([formControl])",
+          "isComponent": false,
+          "inputs": [
+            {
+              "classPropertyName": "name",
+              "publicName": "name"
+            },
+            {
+              "classPropertyName": "isDisabled",
+              "publicName": "disabled"
+            },
+            {
+              "classPropertyName": "model",
+              "publicName": "ngModel"
+            },
+            {
+              "classPropertyName": "options",
+              "publicName": "ngModelOptions"
+            }
+          ],
+          "outputs": [
+            {
+              "classPropertyName": "update",
+              "publicName": "ngModelChange"
+            }
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "name": "ngModel",
+          "expression": "title",
+          "resolved": true,
+          "consumers": [
+            {
+              "kind": "directive",
+              "name": "NgModel",
+              "file": "node_modules/@angular/forms/index.d.ts",
+              "member": "model",
+              "type": "any"
+            }
+          ],
+          "expressionType": "WritableSignal<string>"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ngModelChange",
+          "expression": "title",
+          "resolved": true,
+          "consumers": [
+            {
+              "kind": "directive",
+              "name": "NgModel",
+              "file": "node_modules/@angular/forms/index.d.ts",
+              "member": "update",
+              "type": "EventEmitter<any>"
+            }
+          ],
+          "expressionType": "WritableSignal<string>",
+          "target": null,
+          "phase": null,
+          "twoWay": true
+        }
+      ],
+      "formId": "ngmcp_93357b46db881052581f8f67",
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_93357b46db881052581f8f67",
+      "tag": "form",
+      "native": true,
+      "events": [],
+      "source": {
+        "file": "src/app/add-todo/add-todo.html",
+        "start": 808,
+        "end": 814,
+        "line": 30,
+        "column": 17
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "AddTodo",
+            "file": "src/app/add-todo/add-todo.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [
+            {
+              "name": "ɵNgNoValidate",
+              "file": "node_modules/@angular/forms/index.d.ts",
+              "selector": "form:not([ngNoForm]):not([ngNativeValidate])",
+              "isComponent": false,
+              "inputs": [],
+              "outputs": []
+            },
+            {
+              "name": "NgControlStatusGroup",
+              "file": "node_modules/@angular/forms/index.d.ts",
+              "selector": "[formGroupName],[formArrayName],[ngModelGroup],[formGroup],form:not([ngNoForm]),[ngForm]",
+              "isComponent": false,
+              "inputs": [],
+              "outputs": []
+            },
+            {
+              "name": "NgForm",
+              "file": "node_modules/@angular/forms/index.d.ts",
+              "selector": "form:not([ngNoForm]):not([formGroup]),ng-form,[ngForm]",
+              "isComponent": false,
+              "inputs": [
+                {
+                  "classPropertyName": "options",
+                  "publicName": "ngFormOptions"
+                }
+              ],
+              "outputs": [
+                {
+                  "classPropertyName": "ngSubmit",
+                  "publicName": "ngSubmit"
+                }
+              ]
+            }
+          ],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLFormElement"
+        }
+      ],
+      "resolvedDirectives": [
+        {
+          "name": "ɵNgNoValidate",
+          "file": "node_modules/@angular/forms/index.d.ts",
+          "selector": "form:not([ngNoForm]):not([ngNativeValidate])",
+          "isComponent": false,
+          "inputs": [],
+          "outputs": []
+        },
+        {
+          "name": "NgControlStatusGroup",
+          "file": "node_modules/@angular/forms/index.d.ts",
+          "selector": "[formGroupName],[formArrayName],[ngModelGroup],[formGroup],form:not([ngNoForm]),[ngForm]",
+          "isComponent": false,
+          "inputs": [],
+          "outputs": []
+        },
+        {
+          "name": "NgForm",
+          "file": "node_modules/@angular/forms/index.d.ts",
+          "selector": "form:not([ngNoForm]):not([formGroup]),ng-form,[ngForm]",
+          "isComponent": false,
+          "inputs": [
+            {
+              "classPropertyName": "options",
+              "publicName": "ngFormOptions"
+            }
+          ],
+          "outputs": [
+            {
+              "classPropertyName": "ngSubmit",
+              "publicName": "ngSubmit"
+            }
+          ]
+        }
+      ],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_94267e364a1ca837ba6436c5",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/item-view/item-view.html",
+        "start": 301,
+        "end": 327,
+        "line": 11,
+        "column": 9
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemView",
+            "file": "src/app/item-view/item-view.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_94aa3d0b81138478340cd39d",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/item-detail/item-detail.html",
+        "start": 199,
+        "end": 222,
+        "line": 5,
+        "column": 13
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemDetail",
+            "file": "src/app/item-detail/item-detail.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_97a2031908188a5f51b6e0dd",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/add-todo/add-todo.html",
+        "start": 205,
+        "end": 337,
+        "line": 11,
+        "column": 1
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "AddTodo",
+            "file": "src/app/add-todo/add-todo.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_98c24c7f4ee98e4b454dfc52",
+      "tag": "label",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/add-todo/add-todo.html",
+        "start": 878,
+        "end": 920,
+        "line": 32,
+        "column": 25
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "AddTodo",
+            "file": "src/app/add-todo/add-todo.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLLabelElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "formId": "ngmcp_93357b46db881052581f8f67",
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_9b4af5559eb02f5e1add98da",
+      "tag": "b",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/item-detail/item-detail.html",
+        "start": 683,
+        "end": 705,
+        "line": 14,
+        "column": 21
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemDetail",
+            "file": "src/app/item-detail/item-detail.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_9b5859b9a541eaefd8f24147",
+      "tag": "h5",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/item-view/item-view.html",
+        "start": 340,
+        "end": 344,
+        "line": 12,
+        "column": 13
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemView",
+            "file": "src/app/item-view/item-view.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLHeadingElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_aa0913fb25bb81ea3a64f43f",
+      "tag": "app-summary-card",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/home/home.html",
+        "start": 301,
+        "end": 319,
+        "line": 10,
+        "column": 13
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "Home",
+            "file": "src/app/home/home.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [
+            {
+              "name": "SummaryCard",
+              "file": "src/app/summary-card/summary-card.ts",
+              "selector": "app-summary-card",
+              "isComponent": true,
+              "inputs": [],
+              "outputs": []
+            }
+          ],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLElement"
+        }
+      ],
+      "resolvedDirectives": [
+        {
+          "name": "SummaryCard",
+          "file": "src/app/summary-card/summary-card.ts",
+          "selector": "app-summary-card",
+          "isComponent": true,
+          "inputs": [],
+          "outputs": []
+        }
+      ],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_aa4202a0544929c56c68ab8d",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/summary-card/summary-card.html",
+        "start": 520,
+        "end": 594,
+        "line": 16,
+        "column": 13
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "SummaryCard",
+            "file": "src/app/summary-card/summary-card.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [
+            {
+              "name": "width",
+              "expression": "progressPercentage()",
+              "resolved": true,
+              "consumers": [
+                {
+                  "kind": "native",
+                  "name": "div"
+                }
+              ],
+              "expressionType": "string"
+            }
+          ],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [
+        {
+          "name": "width",
+          "expression": "progressPercentage()",
+          "resolved": true,
+          "consumers": [
+            {
+              "kind": "native",
+              "name": "div"
+            }
+          ],
+          "expressionType": "string"
+        }
+      ],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_aefd7d9ac55de7d9523bb073",
+      "tag": "app-status-badge",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/item-view/item-view.html",
+        "start": 813,
+        "end": 864,
+        "line": 26,
+        "column": 13
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemView",
+            "file": "src/app/item-view/item-view.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [
+            {
+              "name": "StatusBadge",
+              "file": "src/app/status-badge/status-badge.ts",
+              "selector": "app-status-badge",
+              "isComponent": true,
+              "inputs": [
+                {
+                  "classPropertyName": "isCompleted",
+                  "publicName": "isCompleted"
+                }
+              ],
+              "outputs": []
+            }
+          ],
+          "inputs": [
+            {
+              "name": "isCompleted",
+              "expression": "item().completed",
+              "resolved": true,
+              "consumers": [
+                {
+                  "kind": "directive",
+                  "name": "StatusBadge",
+                  "file": "src/app/status-badge/status-badge.ts",
+                  "member": "isCompleted",
+                  "type": "boolean"
+                }
+              ],
+              "expressionType": "boolean"
+            }
+          ],
+          "outputs": [],
+          "elementType": "HTMLElement"
+        }
+      ],
+      "resolvedDirectives": [
+        {
+          "name": "StatusBadge",
+          "file": "src/app/status-badge/status-badge.ts",
+          "selector": "app-status-badge",
+          "isComponent": true,
+          "inputs": [
+            {
+              "classPropertyName": "isCompleted",
+              "publicName": "isCompleted"
+            }
+          ],
+          "outputs": []
+        }
+      ],
+      "inputs": [
+        {
+          "name": "isCompleted",
+          "expression": "item().completed",
+          "resolved": true,
+          "consumers": [
+            {
+              "kind": "directive",
+              "name": "StatusBadge",
+              "file": "src/app/status-badge/status-badge.ts",
+              "member": "isCompleted",
+              "type": "boolean"
+            }
+          ],
+          "expressionType": "boolean"
+        }
+      ],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_b4b620faece66dccf72551c2",
+      "tag": "input",
+      "native": true,
+      "events": [
+        "change"
+      ],
+      "source": {
+        "file": "src/app/item-view/item-view.html",
+        "start": 92,
+        "end": 277,
+        "line": 4,
+        "column": 13
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemView",
+            "file": "src/app/item-view/item-view.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [
+            {
+              "name": "checked",
+              "expression": "item().completed",
+              "resolved": true,
+              "consumers": [
+                {
+                  "kind": "native",
+                  "name": "input"
+                }
+              ],
+              "expressionType": "boolean"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "change",
+              "expression": "toggleCompletion()",
+              "resolved": true,
+              "consumers": [
+                {
+                  "kind": "native",
+                  "name": "input",
+                  "member": "addEventListener",
+                  "type": "{ <K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLInputElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions | undefined): void; (type: string, listener: EventListenerOrEventListenerObject, options?: boolean | ... 1 more ... | undefined): void; }"
+                }
+              ],
+              "expressionType": "void",
+              "target": null,
+              "phase": null,
+              "twoWay": false
+            }
+          ],
+          "elementType": "HTMLInputElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [
+        {
+          "name": "checked",
+          "expression": "item().completed",
+          "resolved": true,
+          "consumers": [
+            {
+              "kind": "native",
+              "name": "input"
+            }
+          ],
+          "expressionType": "boolean"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "change",
+          "expression": "toggleCompletion()",
+          "resolved": true,
+          "consumers": [
+            {
+              "kind": "native",
+              "name": "input",
+              "member": "addEventListener",
+              "type": "{ <K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLInputElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions | undefined): void; (type: string, listener: EventListenerOrEventListenerObject, options?: boolean | ... 1 more ... | undefined): void; }"
+            }
+          ],
+          "expressionType": "void",
+          "target": null,
+          "phase": null,
+          "twoWay": false
+        }
+      ],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_b6c1114ee41ff57a692bbcb8",
+      "tag": "label",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/add-todo/add-todo.html",
+        "start": 2239,
+        "end": 2291,
+        "line": 62,
+        "column": 25
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "AddTodo",
+            "file": "src/app/add-todo/add-todo.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLLabelElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "formId": "ngmcp_93357b46db881052581f8f67",
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_b8ed434fb4e46c35b630495c",
+      "tag": "button",
+      "native": true,
+      "events": [],
+      "source": {
+        "file": "src/app/add-todo/add-todo.html",
+        "start": 35,
+        "end": 172,
+        "line": 2,
+        "column": 5
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "AddTodo",
+            "file": "src/app/add-todo/add-todo.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLButtonElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_bcf7dd741dc7bd0af911f532",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/item-view/item-view.html",
+        "start": 0,
+        "end": 18,
+        "line": 1,
+        "column": 1
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemView",
+            "file": "src/app/item-view/item-view.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_c1f5fcf4dc48c428d2876998",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/summary-card/summary-card.html",
+        "start": 466,
+        "end": 507,
+        "line": 15,
+        "column": 9
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "SummaryCard",
+            "file": "src/app/summary-card/summary-card.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_c5cdcf603e075da16f259b9a",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/add-todo/add-todo.html",
+        "start": 0,
+        "end": 30,
+        "line": 1,
+        "column": 1
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "AddTodo",
+            "file": "src/app/add-todo/add-todo.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_cc63946d007eae2a36b256f9",
+      "tag": "h5",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/summary-card/summary-card.html",
+        "start": 57,
+        "end": 92,
+        "line": 3,
+        "column": 9
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "SummaryCard",
+            "file": "src/app/summary-card/summary-card.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLHeadingElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_d273ffdc18d9576f899c7f8f",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/add-todo/add-todo.html",
+        "start": 767,
+        "end": 791,
+        "line": 29,
+        "column": 13
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "AddTodo",
+            "file": "src/app/add-todo/add-todo.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_d4f4da7926fcbf7ba822ccd0",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/home/home.html",
+        "start": 0,
+        "end": 23,
+        "line": 1,
+        "column": 1
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "Home",
+            "file": "src/app/home/home.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_d97b3fe99efc1614f9c23028",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/item-view/item-view.html",
+        "start": 23,
+        "end": 46,
+        "line": 2,
+        "column": 5
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemView",
+            "file": "src/app/item-view/item-view.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_db782db09cceb61f8daed41d",
+      "tag": "router-outlet",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/app.html",
+        "start": 0,
+        "end": 15,
+        "line": 1,
+        "column": 1
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "App",
+            "file": "src/app/app.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [
+            {
+              "name": "RouterOutlet",
+              "file": "node_modules/@angular/router/router_module.d.d.ts",
+              "selector": "router-outlet",
+              "isComponent": false,
+              "inputs": [
+                {
+                  "classPropertyName": "name",
+                  "publicName": "name"
+                },
+                {
+                  "classPropertyName": "routerOutletData",
+                  "publicName": "routerOutletData"
+                }
+              ],
+              "outputs": [
+                {
+                  "classPropertyName": "activateEvents",
+                  "publicName": "activate"
+                },
+                {
+                  "classPropertyName": "deactivateEvents",
+                  "publicName": "deactivate"
+                },
+                {
+                  "classPropertyName": "attachEvents",
+                  "publicName": "attach"
+                },
+                {
+                  "classPropertyName": "detachEvents",
+                  "publicName": "detach"
+                }
+              ]
+            }
+          ],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLElement"
+        }
+      ],
+      "resolvedDirectives": [
+        {
+          "name": "RouterOutlet",
+          "file": "node_modules/@angular/router/router_module.d.d.ts",
+          "selector": "router-outlet",
+          "isComponent": false,
+          "inputs": [
+            {
+              "classPropertyName": "name",
+              "publicName": "name"
+            },
+            {
+              "classPropertyName": "routerOutletData",
+              "publicName": "routerOutletData"
+            }
+          ],
+          "outputs": [
+            {
+              "classPropertyName": "activateEvents",
+              "publicName": "activate"
+            },
+            {
+              "classPropertyName": "deactivateEvents",
+              "publicName": "deactivate"
+            },
+            {
+              "classPropertyName": "attachEvents",
+              "publicName": "attach"
+            },
+            {
+              "classPropertyName": "detachEvents",
+              "publicName": "detach"
+            }
+          ]
+        }
+      ],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_e18dd3072f5ee23e7118ebc1",
+      "tag": "button",
+      "native": true,
+      "events": [
+        "click"
+      ],
+      "source": {
+        "file": "src/app/add-todo/add-todo.html",
+        "start": 2576,
+        "end": 2764,
+        "line": 70,
+        "column": 17
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "AddTodo",
+            "file": "src/app/add-todo/add-todo.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "click",
+              "expression": "saveTodo()",
+              "resolved": true,
+              "consumers": [
+                {
+                  "kind": "native",
+                  "name": "button",
+                  "member": "addEventListener",
+                  "type": "{ <K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLButtonElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions | undefined): void; (type: string, listener: EventListenerOrEventListenerObject, options?: boolean | ... 1 more ... | undefined): void; }"
+                }
+              ],
+              "expressionType": "void",
+              "target": null,
+              "phase": null,
+              "twoWay": false
+            }
+          ],
+          "elementType": "HTMLButtonElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "click",
+          "expression": "saveTodo()",
+          "resolved": true,
+          "consumers": [
+            {
+              "kind": "native",
+              "name": "button",
+              "member": "addEventListener",
+              "type": "{ <K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLButtonElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions | undefined): void; (type: string, listener: EventListenerOrEventListenerObject, options?: boolean | ... 1 more ... | undefined): void; }"
+            }
+          ],
+          "expressionType": "void",
+          "target": null,
+          "phase": null,
+          "twoWay": false
+        }
+      ],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_e8363389c34280c1c2295f1b",
+      "tag": "button",
+      "native": true,
+      "events": [
+        "click"
+      ],
+      "source": {
+        "file": "src/app/item-detail/item-detail.html",
+        "start": 1125,
+        "end": 1185,
+        "line": 24,
+        "column": 21
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemDetail",
+            "file": "src/app/item-detail/item-detail.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "click",
+              "expression": "markUncompleted()",
+              "resolved": true,
+              "consumers": [
+                {
+                  "kind": "native",
+                  "name": "button",
+                  "member": "addEventListener",
+                  "type": "{ <K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLButtonElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions | undefined): void; (type: string, listener: EventListenerOrEventListenerObject, options?: boolean | ... 1 more ... | undefined): void; }"
+                }
+              ],
+              "expressionType": "void",
+              "target": null,
+              "phase": null,
+              "twoWay": false
+            }
+          ],
+          "elementType": "HTMLButtonElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "click",
+          "expression": "markUncompleted()",
+          "resolved": true,
+          "consumers": [
+            {
+              "kind": "native",
+              "name": "button",
+              "member": "addEventListener",
+              "type": "{ <K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLButtonElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions | undefined): void; (type: string, listener: EventListenerOrEventListenerObject, options?: boolean | ... 1 more ... | undefined): void; }"
+            }
+          ],
+          "expressionType": "void",
+          "target": null,
+          "phase": null,
+          "twoWay": false
+        }
+      ],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_ebb9802f6a4ab21ccea83fad",
+      "tag": "textarea",
+      "native": true,
+      "events": [],
+      "source": {
+        "file": "src/app/add-todo/add-todo.html",
+        "start": 1491,
+        "end": 1827,
+        "line": 45,
+        "column": 25
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "AddTodo",
+            "file": "src/app/add-todo/add-todo.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [
+            {
+              "name": "DefaultValueAccessor",
+              "file": "node_modules/@angular/forms/index.d.ts",
+              "selector": "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]",
+              "isComponent": false,
+              "inputs": [],
+              "outputs": []
+            },
+            {
+              "name": "NgControlStatus",
+              "file": "node_modules/@angular/forms/index.d.ts",
+              "selector": "[formControlName],[ngModel],[formControl]",
+              "isComponent": false,
+              "inputs": [],
+              "outputs": []
+            },
+            {
+              "name": "NgModel",
+              "file": "node_modules/@angular/forms/index.d.ts",
+              "selector": "[ngModel]:not([formControlName]):not([formControl])",
+              "isComponent": false,
+              "inputs": [
+                {
+                  "classPropertyName": "name",
+                  "publicName": "name"
+                },
+                {
+                  "classPropertyName": "isDisabled",
+                  "publicName": "disabled"
+                },
+                {
+                  "classPropertyName": "model",
+                  "publicName": "ngModel"
+                },
+                {
+                  "classPropertyName": "options",
+                  "publicName": "ngModelOptions"
+                }
+              ],
+              "outputs": [
+                {
+                  "classPropertyName": "update",
+                  "publicName": "ngModelChange"
+                }
+              ]
+            }
+          ],
+          "inputs": [
+            {
+              "name": "ngModel",
+              "expression": "description",
+              "resolved": true,
+              "consumers": [
+                {
+                  "kind": "directive",
+                  "name": "NgModel",
+                  "file": "node_modules/@angular/forms/index.d.ts",
+                  "member": "model",
+                  "type": "any"
+                }
+              ],
+              "expressionType": "WritableSignal<string>"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "ngModelChange",
+              "expression": "description",
+              "resolved": true,
+              "consumers": [
+                {
+                  "kind": "directive",
+                  "name": "NgModel",
+                  "file": "node_modules/@angular/forms/index.d.ts",
+                  "member": "update",
+                  "type": "EventEmitter<any>"
+                }
+              ],
+              "expressionType": "WritableSignal<string>",
+              "target": null,
+              "phase": null,
+              "twoWay": true
+            }
+          ],
+          "elementType": "HTMLTextAreaElement"
+        }
+      ],
+      "resolvedDirectives": [
+        {
+          "name": "DefaultValueAccessor",
+          "file": "node_modules/@angular/forms/index.d.ts",
+          "selector": "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]",
+          "isComponent": false,
+          "inputs": [],
+          "outputs": []
+        },
+        {
+          "name": "NgControlStatus",
+          "file": "node_modules/@angular/forms/index.d.ts",
+          "selector": "[formControlName],[ngModel],[formControl]",
+          "isComponent": false,
+          "inputs": [],
+          "outputs": []
+        },
+        {
+          "name": "NgModel",
+          "file": "node_modules/@angular/forms/index.d.ts",
+          "selector": "[ngModel]:not([formControlName]):not([formControl])",
+          "isComponent": false,
+          "inputs": [
+            {
+              "classPropertyName": "name",
+              "publicName": "name"
+            },
+            {
+              "classPropertyName": "isDisabled",
+              "publicName": "disabled"
+            },
+            {
+              "classPropertyName": "model",
+              "publicName": "ngModel"
+            },
+            {
+              "classPropertyName": "options",
+              "publicName": "ngModelOptions"
+            }
+          ],
+          "outputs": [
+            {
+              "classPropertyName": "update",
+              "publicName": "ngModelChange"
+            }
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "name": "ngModel",
+          "expression": "description",
+          "resolved": true,
+          "consumers": [
+            {
+              "kind": "directive",
+              "name": "NgModel",
+              "file": "node_modules/@angular/forms/index.d.ts",
+              "member": "model",
+              "type": "any"
+            }
+          ],
+          "expressionType": "WritableSignal<string>"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ngModelChange",
+          "expression": "description",
+          "resolved": true,
+          "consumers": [
+            {
+              "kind": "directive",
+              "name": "NgModel",
+              "file": "node_modules/@angular/forms/index.d.ts",
+              "member": "update",
+              "type": "EventEmitter<any>"
+            }
+          ],
+          "expressionType": "WritableSignal<string>",
+          "target": null,
+          "phase": null,
+          "twoWay": true
+        }
+      ],
+      "formId": "ngmcp_93357b46db881052581f8f67",
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_f5f8bb842172a53a71a0fa8c",
+      "tag": "input",
+      "native": true,
+      "events": [],
+      "source": {
+        "file": "src/app/add-todo/add-todo.html",
+        "start": 1940,
+        "end": 2214,
+        "line": 55,
+        "column": 25
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "AddTodo",
+            "file": "src/app/add-todo/add-todo.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [
+            {
+              "name": "CheckboxControlValueAccessor",
+              "file": "node_modules/@angular/forms/index.d.ts",
+              "selector": "input[type=checkbox][formControlName],input[type=checkbox][formControl],input[type=checkbox][ngModel]",
+              "isComponent": false,
+              "inputs": [],
+              "outputs": []
+            },
+            {
+              "name": "NgControlStatus",
+              "file": "node_modules/@angular/forms/index.d.ts",
+              "selector": "[formControlName],[ngModel],[formControl]",
+              "isComponent": false,
+              "inputs": [],
+              "outputs": []
+            },
+            {
+              "name": "NgModel",
+              "file": "node_modules/@angular/forms/index.d.ts",
+              "selector": "[ngModel]:not([formControlName]):not([formControl])",
+              "isComponent": false,
+              "inputs": [
+                {
+                  "classPropertyName": "name",
+                  "publicName": "name"
+                },
+                {
+                  "classPropertyName": "isDisabled",
+                  "publicName": "disabled"
+                },
+                {
+                  "classPropertyName": "model",
+                  "publicName": "ngModel"
+                },
+                {
+                  "classPropertyName": "options",
+                  "publicName": "ngModelOptions"
+                }
+              ],
+              "outputs": [
+                {
+                  "classPropertyName": "update",
+                  "publicName": "ngModelChange"
+                }
+              ]
+            }
+          ],
+          "inputs": [
+            {
+              "name": "ngModel",
+              "expression": "completed",
+              "resolved": true,
+              "consumers": [
+                {
+                  "kind": "directive",
+                  "name": "NgModel",
+                  "file": "node_modules/@angular/forms/index.d.ts",
+                  "member": "model",
+                  "type": "any"
+                }
+              ],
+              "expressionType": "WritableSignal<boolean>"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "ngModelChange",
+              "expression": "completed",
+              "resolved": true,
+              "consumers": [
+                {
+                  "kind": "directive",
+                  "name": "NgModel",
+                  "file": "node_modules/@angular/forms/index.d.ts",
+                  "member": "update",
+                  "type": "EventEmitter<any>"
+                }
+              ],
+              "expressionType": "WritableSignal<boolean>",
+              "target": null,
+              "phase": null,
+              "twoWay": true
+            }
+          ],
+          "elementType": "HTMLInputElement"
+        }
+      ],
+      "resolvedDirectives": [
+        {
+          "name": "CheckboxControlValueAccessor",
+          "file": "node_modules/@angular/forms/index.d.ts",
+          "selector": "input[type=checkbox][formControlName],input[type=checkbox][formControl],input[type=checkbox][ngModel]",
+          "isComponent": false,
+          "inputs": [],
+          "outputs": []
+        },
+        {
+          "name": "NgControlStatus",
+          "file": "node_modules/@angular/forms/index.d.ts",
+          "selector": "[formControlName],[ngModel],[formControl]",
+          "isComponent": false,
+          "inputs": [],
+          "outputs": []
+        },
+        {
+          "name": "NgModel",
+          "file": "node_modules/@angular/forms/index.d.ts",
+          "selector": "[ngModel]:not([formControlName]):not([formControl])",
+          "isComponent": false,
+          "inputs": [
+            {
+              "classPropertyName": "name",
+              "publicName": "name"
+            },
+            {
+              "classPropertyName": "isDisabled",
+              "publicName": "disabled"
+            },
+            {
+              "classPropertyName": "model",
+              "publicName": "ngModel"
+            },
+            {
+              "classPropertyName": "options",
+              "publicName": "ngModelOptions"
+            }
+          ],
+          "outputs": [
+            {
+              "classPropertyName": "update",
+              "publicName": "ngModelChange"
+            }
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "name": "ngModel",
+          "expression": "completed",
+          "resolved": true,
+          "consumers": [
+            {
+              "kind": "directive",
+              "name": "NgModel",
+              "file": "node_modules/@angular/forms/index.d.ts",
+              "member": "model",
+              "type": "any"
+            }
+          ],
+          "expressionType": "WritableSignal<boolean>"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ngModelChange",
+          "expression": "completed",
+          "resolved": true,
+          "consumers": [
+            {
+              "kind": "directive",
+              "name": "NgModel",
+              "file": "node_modules/@angular/forms/index.d.ts",
+              "member": "update",
+              "type": "EventEmitter<any>"
+            }
+          ],
+          "expressionType": "WritableSignal<boolean>",
+          "target": null,
+          "phase": null,
+          "twoWay": true
+        }
+      ],
+      "formId": "ngmcp_93357b46db881052581f8f67",
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_f636242a74c555ca9e99fcdb",
+      "tag": "app-item-view",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/home/home.html",
+        "start": 200,
+        "end": 229,
+        "line": 6,
+        "column": 17
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "Home",
+            "file": "src/app/home/home.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [
+            {
+              "name": "ItemView",
+              "file": "src/app/item-view/item-view.ts",
+              "selector": "app-item-view",
+              "isComponent": true,
+              "inputs": [
+                {
+                  "classPropertyName": "item",
+                  "publicName": "item"
+                }
+              ],
+              "outputs": []
+            }
+          ],
+          "inputs": [
+            {
+              "name": "item",
+              "expression": "item",
+              "resolved": true,
+              "consumers": [
+                {
+                  "kind": "directive",
+                  "name": "ItemView",
+                  "file": "src/app/item-view/item-view.ts",
+                  "member": "item",
+                  "type": "TodoItem"
+                }
+              ],
+              "expressionType": "TodoItem"
+            }
+          ],
+          "outputs": [],
+          "elementType": "HTMLElement"
+        }
+      ],
+      "resolvedDirectives": [
+        {
+          "name": "ItemView",
+          "file": "src/app/item-view/item-view.ts",
+          "selector": "app-item-view",
+          "isComponent": true,
+          "inputs": [
+            {
+              "classPropertyName": "item",
+              "publicName": "item"
+            }
+          ],
+          "outputs": []
+        }
+      ],
+      "inputs": [
+        {
+          "name": "item",
+          "expression": "item",
+          "resolved": true,
+          "consumers": [
+            {
+              "kind": "directive",
+              "name": "ItemView",
+              "file": "src/app/item-view/item-view.ts",
+              "member": "item",
+              "type": "TodoItem"
+            }
+          ],
+          "expressionType": "TodoItem"
+        }
+      ],
+      "outputs": [],
+      "repeated": true,
+      "viewPath": [
+        {
+          "kind": "for",
+          "file": "src/app/home/home.html",
+          "start": 144
+        }
+      ]
+    },
+    {
+      "id": "ngmcp_f6403e09fd3f4f27b539ee79",
+      "tag": "a",
+      "native": true,
+      "events": [],
+      "source": {
+        "file": "src/app/item-view/item-view.html",
+        "start": 361,
+        "end": 573,
+        "line": 13,
+        "column": 17
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemView",
+            "file": "src/app/item-view/item-view.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [
+            {
+              "name": "RouterLink",
+              "file": "node_modules/@angular/router/router_module.d.d.ts",
+              "selector": "[routerLink]",
+              "isComponent": false,
+              "inputs": [
+                {
+                  "classPropertyName": "target",
+                  "publicName": "target"
+                },
+                {
+                  "classPropertyName": "queryParams",
+                  "publicName": "queryParams"
+                },
+                {
+                  "classPropertyName": "fragment",
+                  "publicName": "fragment"
+                },
+                {
+                  "classPropertyName": "queryParamsHandling",
+                  "publicName": "queryParamsHandling"
+                },
+                {
+                  "classPropertyName": "state",
+                  "publicName": "state"
+                },
+                {
+                  "classPropertyName": "info",
+                  "publicName": "info"
+                },
+                {
+                  "classPropertyName": "relativeTo",
+                  "publicName": "relativeTo"
+                },
+                {
+                  "classPropertyName": "preserveFragment",
+                  "publicName": "preserveFragment"
+                },
+                {
+                  "classPropertyName": "skipLocationChange",
+                  "publicName": "skipLocationChange"
+                },
+                {
+                  "classPropertyName": "replaceUrl",
+                  "publicName": "replaceUrl"
+                },
+                {
+                  "classPropertyName": "routerLink",
+                  "publicName": "routerLink"
+                }
+              ],
+              "outputs": []
+            }
+          ],
+          "inputs": [
+            {
+              "name": "routerLink",
+              "expression": "['/item', item().id]",
+              "resolved": true,
+              "consumers": [
+                {
+                  "kind": "directive",
+                  "name": "RouterLink",
+                  "file": "node_modules/@angular/router/router_module.d.d.ts",
+                  "member": "routerLink",
+                  "type": "string | readonly any[] | UrlTree | null | undefined"
+                }
+              ],
+              "expressionType": "(string | number)[]"
+            },
+            {
+              "name": "text-decoration-line-through",
+              "expression": "item().completed",
+              "resolved": true,
+              "consumers": [
+                {
+                  "kind": "native",
+                  "name": "a"
+                }
+              ],
+              "expressionType": "boolean"
+            }
+          ],
+          "outputs": [],
+          "elementType": "HTMLAnchorElement"
+        }
+      ],
+      "resolvedDirectives": [
+        {
+          "name": "RouterLink",
+          "file": "node_modules/@angular/router/router_module.d.d.ts",
+          "selector": "[routerLink]",
+          "isComponent": false,
+          "inputs": [
+            {
+              "classPropertyName": "target",
+              "publicName": "target"
+            },
+            {
+              "classPropertyName": "queryParams",
+              "publicName": "queryParams"
+            },
+            {
+              "classPropertyName": "fragment",
+              "publicName": "fragment"
+            },
+            {
+              "classPropertyName": "queryParamsHandling",
+              "publicName": "queryParamsHandling"
+            },
+            {
+              "classPropertyName": "state",
+              "publicName": "state"
+            },
+            {
+              "classPropertyName": "info",
+              "publicName": "info"
+            },
+            {
+              "classPropertyName": "relativeTo",
+              "publicName": "relativeTo"
+            },
+            {
+              "classPropertyName": "preserveFragment",
+              "publicName": "preserveFragment"
+            },
+            {
+              "classPropertyName": "skipLocationChange",
+              "publicName": "skipLocationChange"
+            },
+            {
+              "classPropertyName": "replaceUrl",
+              "publicName": "replaceUrl"
+            },
+            {
+              "classPropertyName": "routerLink",
+              "publicName": "routerLink"
+            }
+          ],
+          "outputs": []
+        }
+      ],
+      "inputs": [
+        {
+          "name": "routerLink",
+          "expression": "['/item', item().id]",
+          "resolved": true,
+          "consumers": [
+            {
+              "kind": "directive",
+              "name": "RouterLink",
+              "file": "node_modules/@angular/router/router_module.d.d.ts",
+              "member": "routerLink",
+              "type": "string | readonly any[] | UrlTree | null | undefined"
+            }
+          ],
+          "expressionType": "(string | number)[]"
+        },
+        {
+          "name": "text-decoration-line-through",
+          "expression": "item().completed",
+          "resolved": true,
+          "consumers": [
+            {
+              "kind": "native",
+              "name": "a"
+            }
+          ],
+          "expressionType": "boolean"
+        }
+      ],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_f706889688dd084dd49423c5",
+      "tag": "b",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/item-detail/item-detail.html",
+        "start": 387,
+        "end": 409,
+        "line": 8,
+        "column": 21
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemDetail",
+            "file": "src/app/item-detail/item-detail.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_f9189b4967be46f4924f4fd5",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/add-todo/add-todo.html",
+        "start": 2391,
+        "end": 2417,
+        "line": 66,
+        "column": 13
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "AddTodo",
+            "file": "src/app/add-todo/add-todo.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    },
+    {
+      "id": "ngmcp_fbeca752b879436c82f50428",
+      "tag": "div",
+      "native": false,
+      "events": [],
+      "source": {
+        "file": "src/app/item-detail/item-detail.html",
+        "start": 337,
+        "end": 366,
+        "line": 7,
+        "column": 17
+      },
+      "contexts": [
+        {
+          "component": {
+            "name": "ItemDetail",
+            "file": "src/app/item-detail/item-detail.ts",
+            "standalone": true
+          },
+          "resolvedDirectives": [],
+          "inputs": [],
+          "outputs": [],
+          "elementType": "HTMLDivElement"
+        }
+      ],
+      "resolvedDirectives": [],
+      "inputs": [],
+      "outputs": [],
+      "repeated": false,
+      "viewPath": []
+    }
+  ],
+  "diagnostics": [],
+  "features": {
+    "signalForms": false,
+    "runtimeDom": true,
+    "webmcp": true,
+    "mcp": true,
+    "entry": "src/main.ts"
+  },
+  "sourceHashes": {
+    "src/app/add-todo/add-todo.html": "99fda3c94df3492ca7a978ee2947c73cb85d5838af31b53090e8fbddc1b29c3a",
+    "src/app/add-todo/add-todo.ts": "bfa09639cdfea887ef898e5748d7815309ee5fda4c6cf121822c75422262ab08",
+    "src/app/app.html": "4faaedd0fde080d5d3a1bcc475d80ca04d59c9724e9f642273a57576b45ad65c",
+    "src/app/app.ts": "7bcc6cb188b30db971e6ff5c706c2fc3f9354839ad5322f3eb0dd2e1117cc446",
+    "src/app/home/home.html": "f03dcbda7a451c6912c518aab71857cd2598a0e6388df606292a1bcc4627ef0d",
+    "src/app/home/home.ts": "12674f25b2e384fc6038cf3059c66cf8d8f315944b92a11c4125cfea7943b81e",
+    "src/app/item-detail/item-detail.html": "dce329326f0306cfef565702a28b655f5b2f1d0b3ce6e80b115be624a52197cc",
+    "src/app/item-detail/item-detail.ts": "b5e87dada6ffe89c82a15d7bcc5a0e707687c8abe65998b3f59b81a86b1ef443",
+    "src/app/item-view/item-view.html": "5731cd6882f91febbedb3390547f6b16efaf46289992f63a7d61cf29880af14c",
+    "src/app/item-view/item-view.ts": "b441e92f93c00ac67151416cf029df4769d27cddfccecd2cd6da3317253c6bc0",
+    "src/app/status-badge/status-badge.html": "97ffe7b0cca459ce5d2d495c1e4ad8be8b0fcc126eabaff05c0406e9c6e85090",
+    "src/app/status-badge/status-badge.ts": "6bb78c4c5aca53b02df91662d00fa9034b08673afc695fb2d79ebc476465c04a",
+    "src/app/summary-card/summary-card.html": "b14ff6d7fe92156fe9d533b3b7b1f4ed83dbb27eb4c27fe41dbd723d1b105761",
+    "src/app/summary-card/summary-card.ts": "9ccfe0da8ca512653510708bec045acd9b6718b2032ea9704993a5792777b8f4",
+    "src/main.ts": "ecc610fb7d56c95a01a8aa6c274a63210d45b2944dd6b9a88b2c8f70b6351037"
+  },
+  "access": {
+    "policySha256": "2d1e18384bc9ecaba2ebcad9ed9503e44cdd1741095dc8636c23f06f7cca54f2",
+    "bootstrapSha256": "bdf28ed8864a446c6eaed0c2bea751d302f27546996477c6912cad5a557194c1"
+  }
+}

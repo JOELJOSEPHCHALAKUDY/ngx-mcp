@@ -121,7 +121,7 @@ test('mutation approval is bound to immutable canonical arguments and one-use se
  await assert.rejects(access.consume(otherTarget,{...input,instanceId:'field@nonce:2'}),/request-changed/);
 });
 
-test('permissions and expiry are rechecked after approval; cross-session, revoked and stale permits fail',async()=>{
+test('permissions and expiry are rechecked after approval; cross-session, revoked and stale permits fail',{timeout:10000},async()=>{
  const {access,state}=setup();
  const permit=await access.authorize(request());state.session={...state.session,id:'session-B',subject:'bob'};
  await assert.rejects(access.consume(permit,request()),/session-invalid/);
@@ -129,11 +129,13 @@ test('permissions and expiry are rechecked after approval; cross-session, revoke
  await assert.rejects(expired.access.run(request(),()=>true),/session-expired/);
  const delayed=setup({approve:async()=>{delayed.state.now+=60001;return true;}});
  await assert.rejects(delayed.access.run(request(),()=>true),/approval-expired/);
- let release:(value:boolean)=>void=()=>{};
- const waiting=setup({approve:()=>new Promise<boolean>(resolve=>{release=resolve;})});
+ let release:(value:boolean)=>void=()=>{},approveStarted:()=>void=()=>{};
+ const started=new Promise<void>(resolve=>{approveStarted=resolve;});
+ const waiting=setup({approve:()=>new Promise<boolean>(resolve=>{release=resolve;approveStarted();})});
  const running=waiting.access.run(request(),()=>assert.fail('Revoked approval must not execute'));
- await new Promise(resolve=>setTimeout(resolve,0));await waiting.access.revoke();release(true);
- await assert.rejects(running,/approval-stale|access-revoked/);
+ const rejected=assert.rejects(running,/approval-stale|access-revoked/);
+ await started;await waiting.access.revoke();release(true);
+ await rejected;
  const before=setup(),live=await before.access.authorize(request());await before.access.revoke();
  await assert.rejects(before.access.consume(live,request()),/permit-invalid/);
 });

@@ -8,7 +8,7 @@ These three MIT public apps were selected and source-labelled before installing 
 | rajdhokai/EasySprint | Material dialogs/selects, guarded demo login, projects/tasks | Angular 20.0.0 |
 | julianNordin/expense-tracker-angular | Reactive lazy forms, money CVA, nested budgets, async validation, HTTP-like local backend | Angular 22.1 |
 
-The current verified packet is [final-verified-2026-11-10/report.json](runs/final-verified-2026-11-10/report.json), indexed by [latest-matrix.json](latest-matrix.json). All **nine optimized production builds**, **64/64 business/native-boundary checks**, and **132/132 framework checks** passed. The final process exited zero. Engine, harness, root lockfiles, installed runtime metadata, and all original source/label checks stayed stable; owned browser/server cleanup completed.
+The current verified packet is [release-alpha-0.1.0-alpha.1/report.json](runs/release-alpha-0.1.0-alpha.1/report.json), indexed by [latest-matrix.json](latest-matrix.json). All **nine optimized production builds**, **64/64 business/native-boundary checks**, and **132/132 framework checks** passed. The final process exited zero. Engine, harness, root lockfiles, installed runtime metadata, and all original source/label checks stayed stable; owned browser/server cleanup completed.
 
 | Project | Business/native cases across four paths | Framework boundaries |
 | --- | ---: | ---: |
@@ -83,3 +83,6 @@ The intermediate `final-regression-2026-11-10` was invalidated during security r
 
 
 The independent release check passed after the final replay: native conformance, all 9/64/132 matrix assertions, portable packet relocation, and **13 rejected tamper variants**. The gate accepts recorded matching warnings and rejects error diagnostics, stale inputs, changed payloads and missing evidence. No application or evaluator source changed after the passing replay.
+
+
+The public-alpha metadata was subsequently frozen as `ngx-mcp@0.1.0-alpha.1` and the complete unchanged-engine matrix was replayed in `runs/release-alpha-0.1.0-alpha.1/`: **9/9 production builds, 64/64 business/native cases and 132/132 framework checks passed**, process exit zero. All source, harness, installed-runtime and root package/lock snapshots remained stable, and cleanup completed. `latest-matrix.json` now indexes that release-bound packet. The earlier `final-verified-2026-11-10` packet remains preserved; its package-metadata binding is historical. This experiment does not perform the npm publication itself.

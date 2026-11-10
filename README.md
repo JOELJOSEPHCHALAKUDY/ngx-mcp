@@ -6,7 +6,7 @@ ngx-mcp uses your app's installed Angular compiler to connect tools to live cont
 
 The generator writes a separate copy. Your original app stays unchanged.
 
-> **Private alpha; not published on npm.** Start with synthetic data on a local or staging app. Production access controls require your application's backend integration; see [Production setup](PRODUCTION.md). Passing the test suite does not establish arbitrary-app compatibility or certify a deployment's security.
+> **Experimental alpha — `0.1.0-alpha.1`.** Start with synthetic data on a local or staging app. Production access controls require your application's backend integration; see [Production setup](https://github.com/JOELJOSEPHCHALAKUDY/ngx-mcp/blob/main/PRODUCTION.md). Passing the test suite does not establish arbitrary-app compatibility or certify a deployment's security.
 
 ## Pick how agents connect
 
@@ -20,27 +20,30 @@ WebMCP is experimental. Publishing a website does not automatically let ChatGPT 
 
 ## Try it locally
 
-You need a supported Node version from [package.json](package.json), an Angular CLI app that already builds, and that app's dependencies installed. The generator uses the app's own Angular/TypeScript versions. Compatibility depends on the app and controls; the [evaluation guides](evaluation/production-fresh/README.md) record the measured scope.
+You need Node.js 22 (22.22.3+), 24 (24.15.0+), or 26+, and an Angular CLI app that already builds with its dependencies installed. See [package.json](https://github.com/JOELJOSEPHCHALAKUDY/ngx-mcp/blob/main/package.json) for exact Node ranges. The generator uses the app's own Angular/TypeScript versions. Compatibility depends on the app and controls; the [evaluation guides](https://github.com/JOELJOSEPHCHALAKUDY/ngx-mcp/blob/main/evaluation/production-fresh/README.md) record the measured scope.
 
-### 1. Build this private preview
+### 1. Install in your Angular app
 
 ```sh
-git clone https://github.com/JOELJOSEPHCHALAKUDY/ngx-mcp.git
-cd ngx-mcp
-npm ci
-npx playwright install chromium
-npm run build
+cd my-app
+npm install -D ngx-mcp@alpha
 ```
 
-This installs the source preview. The package has not been published on npm.
+The `alpha` channel targets experimental releases. To pin this release exactly, use `ngx-mcp@0.1.0-alpha.1` instead.
+
+For the Node MCP adapter (`mcp` or `both`), also install its browser:
+
+```sh
+npx playwright install chromium
+```
 
 ### 2. Generate a copy
 
-From the `ngx-mcp` folder:
+From your Angular app's folder:
 
 ```sh
-node dist/ngx-mcp.js generate \
-  --project ../my-app/tsconfig.app.json \
+npx ngx-mcp generate \
+  --project tsconfig.app.json \
   --out ../my-app-mcp \
   --mode mcp
 ```
@@ -64,7 +67,7 @@ For `mcp` or `both`, add this to your client's MCP configuration:
     "my-angular-app": {
       "command": "node",
       "args": [
-        "/full/path/to/ngx-mcp/dist/ngx-mcp.js",
+        "/full/path/to/my-app/node_modules/ngx-mcp/dist/ngx-mcp.js",
         "serve",
         "--base-url", "http://localhost:4200",
         "--headed"
@@ -74,7 +77,7 @@ For `mcp` or `both`, add this to your client's MCP configuration:
 }
 ```
 
-Restart the client. A Chromium window opens; log into the app there if necessary. Ask the agent to list the available forms, then try a workflow using synthetic data. For `webmcp`, use a browser agent that supports the native API instead of this Node configuration.
+Use the absolute path to the package installed in your original app. Restart the client. A Chromium window opens; log into the app there if necessary. Ask the agent to list the available forms, then try a workflow using synthetic data. For `webmcp`, use a browser agent that supports the native API instead of this Node configuration.
 
 The default `development` profile allows local experimentation without production approval controls. Its actions use the logged-in app session and can change real data. Choose the production profile before offering agent access to other people.
 
@@ -100,7 +103,7 @@ The generated runtime becomes part of the app's normal browser bundle. The Node 
 
 The production profile requires a reviewed, exact-build policy and an owner-written `connectNgxMcpAccess()` module. It defaults to denying tool/data access, revalidates the app session, scopes reads and writes, requires trusted approval for mutations, and sends redacted events to your audit sink. The backend must implement session validation, permission checks, approval and audit storage.
 
-Follow [PRODUCTION.md](PRODUCTION.md) for the review/generate/deploy workflow, a browser bootstrap contract, remote `serve` configuration and authenticated HTTP hosting. Existing apps deploy a new generated build through their normal pipeline. They do not replace Angular's compiler or expose the old production build retroactively.
+Follow [PRODUCTION.md](https://github.com/JOELJOSEPHCHALAKUDY/ngx-mcp/blob/main/PRODUCTION.md) for the review/generate/deploy workflow, a browser bootstrap contract, remote `serve` configuration and authenticated HTTP hosting. Existing apps deploy a new generated build through their normal pipeline. They do not replace Angular's compiler or expose the old production build retroactively.
 
 ## Tools
 
@@ -119,7 +122,11 @@ Only allowed tools/nodes are exposed in production. A successful UI dispatch is 
 
 ## Commands
 
-Run `node dist/ngx-mcp.js <command> --help` from this checkout. An installed package provides the shorter `ngx-mcp` command.
+Run `npx ngx-mcp <command> --help` from the app or server folder where you installed the package. For example:
+
+```sh
+npx ngx-mcp serve --base-url http://localhost:4200 --headed
+```
 
 | Command/option | Meaning |
 | --- | --- |
@@ -151,13 +158,20 @@ Run `node dist/ngx-mcp.js <command> --help` from this checkout. An installed pac
 
 Custom widgets and app-specific business semantics can need explicit integration. Generated form schemas describe observable UI input, not every backend rule. Browser tool controls supplement existing backend authorization and do not isolate an app from malicious scripts already running in its page.
 
-## Development and release evidence
+## Contributing and release evidence
+
+To work on ngx-mcp itself, use the source checkout:
 
 ```sh
+git clone https://github.com/JOELJOSEPHCHALAKUDY/ngx-mcp.git
+cd ngx-mcp
+npm ci
+npx playwright install chromium
+npm run build
 npm run test:setup
 npm run verify
 ```
 
-See [RELEASING.md](RELEASING.md) for native-browser and fresh-project release gates. [Production evaluation](evaluation/production-fresh/README.md) records pinned public projects and reproducible checks. Earlier reports remain historical evidence for their recorded source snapshots. The older prototype lives under [experiments/source-inference](experiments/source-inference/README.md) and is excluded from the package.
+See [RELEASING.md](https://github.com/JOELJOSEPHCHALAKUDY/ngx-mcp/blob/main/RELEASING.md) for native-browser and fresh-project release gates. [Production evaluation](https://github.com/JOELJOSEPHCHALAKUDY/ngx-mcp/blob/main/evaluation/production-fresh/README.md) records pinned public projects and reproducible checks. Earlier reports remain historical evidence for their recorded source snapshots. The older prototype lives under [experiments/source-inference](https://github.com/JOELJOSEPHCHALAKUDY/ngx-mcp/blob/main/experiments/source-inference/README.md) and is excluded from the package.
 
-MIT. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for public sample attribution.
+MIT. See [THIRD_PARTY_NOTICES.md](https://github.com/JOELJOSEPHCHALAKUDY/ngx-mcp/blob/main/THIRD_PARTY_NOTICES.md) for public sample attribution.

@@ -1,7 +1,6 @@
 {
   "name": "ngx-mcp",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.0-alpha.1",
   "type": "module",
   "description": "Use an Angular application's compiler and live controls to expose UI workflows over MCP",
   "engines": {
@@ -59,5 +58,29 @@
       "types": "./dist/types/index.d.ts",
       "import": "./dist/index.js"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JOELJOSEPHCHALAKUDY/ngx-mcp.git"
+  },
+  "homepage": "https://github.com/JOELJOSEPHCHALAKUDY/ngx-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/JOELJOSEPHCHALAKUDY/ngx-mcp/issues"
+  },
+  "author": {
+    "name": "JOELJOSEPHCHALAKUDY",
+    "url": "https://github.com/JOELJOSEPHCHALAKUDY"
+  },
+  "keywords": [
+    "angular",
+    "mcp",
+    "webmcp",
+    "automation",
+    "ai"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public",
+    "tag": "alpha"
   }
 }
