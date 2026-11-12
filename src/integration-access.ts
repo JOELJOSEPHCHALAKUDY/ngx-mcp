@@ -1,6 +1,6 @@
 import {integrationValidateInput} from './integration-catalog.js';
 
-export type IntegrationAccessOperation = 'describe' | 'read-value' | 'read-model' | 'fill' | 'activate' | 'submit' | 'press-key' | 'upload-file' | 'read-view' | 'navigate';
+export type IntegrationAccessOperation = 'describe' | 'read-value' | 'read-model' | 'fill' | 'activate' | 'submit' | 'drag' | 'press-key' | 'upload-file' | 'read-view' | 'navigate';
 export interface IntegrationAccessRule {
   sourceId: string;
   /** Reviewed static metadata label; dynamic UI text is a data read. */
@@ -61,7 +61,7 @@ export interface IntegrationAccessEnvironment {
 /** Reject unknown/private configuration before it can be serialized into a browser bundle. */
 export function validateIntegrationAccessPolicy(policy:unknown):asserts policy is IntegrationAccessPolicy {
   const stringList={type:'array',items:{type:'string',minLength:1,maxLength:1024}};
-  integrationValidateInput({type:'object',properties:{version:{const:1},allowedOrigins:{...stringList,minItems:1},routePrefixes:stringList,rules:{type:'array',items:{type:'object',properties:{sourceId:{type:'string',minLength:1,maxLength:1024},label:{type:'string',minLength:1,maxLength:240},operations:{type:'array',items:{enum:['describe','read-value','read-model','fill','activate','submit','press-key','upload-file','read-view','navigate']}},readFields:stringList,writeFields:stringList,modelPaths:{type:'array',items:{type:'string',maxLength:1024}}},required:['sourceId','operations'],additionalProperties:false}},sessionMaxAgeMs:{type:'integer',minimum:1,maximum:86400000},approvalMaxAgeMs:{type:'integer',minimum:1,maximum:300000},maxInputBytes:{type:'integer',minimum:1,maximum:16777216},maxAuditRecords:{type:'integer',minimum:1,maximum:100000}},required:['version','allowedOrigins','rules'],additionalProperties:false},policy);
+  integrationValidateInput({type:'object',properties:{version:{const:1},allowedOrigins:{...stringList,minItems:1},routePrefixes:stringList,rules:{type:'array',items:{type:'object',properties:{sourceId:{type:'string',minLength:1,maxLength:1024},label:{type:'string',minLength:1,maxLength:240},operations:{type:'array',items:{enum:['describe','read-value','read-model','fill','activate','submit','drag','press-key','upload-file','read-view','navigate']}},readFields:stringList,writeFields:stringList,modelPaths:{type:'array',items:{type:'string',maxLength:1024}}},required:['sourceId','operations'],additionalProperties:false}},sessionMaxAgeMs:{type:'integer',minimum:1,maximum:86400000},approvalMaxAgeMs:{type:'integer',minimum:1,maximum:300000},maxInputBytes:{type:'integer',minimum:1,maximum:16777216},maxAuditRecords:{type:'integer',minimum:1,maximum:100000}},required:['version','allowedOrigins','rules'],additionalProperties:false},policy);
   const config=policy as IntegrationAccessPolicy;
   if(new Set(config.allowedOrigins).size!==config.allowedOrigins.length)throw new Error('Duplicate access policy origins');
   for(const origin of config.allowedOrigins){const url=new URL(origin);if(origin.includes('*')||url.origin!==origin||url.username||url.password||!['https:','http:'].includes(url.protocol)||url.protocol==='http:'&&!['localhost','127.0.0.1','[::1]'].includes(url.hostname))throw new Error('Access policy origins must be exact HTTPS origins or local HTTP origins');}
@@ -79,8 +79,8 @@ function createIntegrationAccess(inputPolicy:any,environment:any):any{
  const cryptoApi:Crypto=environment&&environment.crypto||globalThis.crypto;
  if(!cryptoApi||typeof cryptoApi.getRandomValues!=='function'||!cryptoApi.subtle)throw new Error('Access controls require secure browser cryptography');
  const now=()=>environment&&typeof environment.now==='function'?environment.now():Date.now();
- const mutating=new Set(['fill','activate','submit','press-key','upload-file','navigate']);
- const operations=new Set(['describe','read-value','read-model','fill','activate','submit','press-key','upload-file','read-view','navigate']);
+ const mutating=new Set(['fill','activate','submit','drag','press-key','upload-file','navigate']);
+ const operations=new Set(['describe','read-value','read-model','fill','activate','submit','drag','press-key','upload-file','read-view','navigate']);
  const records:any[]=[],permits=new Map<object,any>();let sequence=0,revoked=false,auditBroken=false,epoch=0,authorizations=0;
  const controllers=new Set<AbortController>();
  const salt=Array.from(cryptoApi.getRandomValues(new Uint32Array(8)),value=>value.toString(16).padStart(8,'0')).join('');

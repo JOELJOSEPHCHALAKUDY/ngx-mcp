@@ -1,3 +1,4 @@
+import {listCatalog} from '../evaluation/integration-unseen/catalog.mjs';
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {assessNegative,traceNativeDriver,validateProjectReports} from '../evaluation/integration-unseen/evidence.mjs';
@@ -57,3 +58,6 @@ test('a replaced patched field cannot borrow a new invalid element from its loca
  const original={connected:true,tag:'input',type:'text',key:'name',value:'',invalid:false},replacement={...original,invalid:true},handle={evaluate:async()=>structuredClone(original),dispose:async()=>{}},locator={evaluate:async()=>structuredClone(replacement),evaluateHandle:async()=>handle},calls=[];
  const driver=traceNativeDriver({async fill(){}},calls);await driver.fill(locator,'');original.connected=false;const evidence=await driver.inspectValidation({name:''});assert.equal(evidence[0].reached,false);assert.equal(evidence[0].invalid,false);await driver.close();
 });
+
+test('catalog reader retains filters and follows pages beyond the first hundred nodes',async()=>{const seen=[];const result=await listCatalog(async(name,args)=>{seen.push({name,args});return args.offset===0?{nodes:Array.from({length:500},(_,i)=>({instanceId:'field-'+i})),total:501,offset:0,nextOffset:500}:{nodes:[{instanceId:'validation-field'}],total:501,offset:500,nextOffset:null};},{kind:'control',visible:true});assert.equal(result.nodes.length,501);assert.equal(result.nodes[500].instanceId,'validation-field');assert.equal(seen.length,2);assert(seen.every(item=>item.name==='angular_list_nodes'&&item.args.kind==='control'&&item.args.visible===true));});
+test('catalog reader refuses nonadvancing, duplicate and changing snapshots',async()=>{await assert.rejects(listCatalog(async()=>({nodes:[],total:1,offset:0,nextOffset:0})),/advance/);await assert.rejects(listCatalog(async(_name,args)=>({nodes:[{instanceId:'duplicate'}],total:2,offset:args.offset,nextOffset:args.offset===0?1:null})),/Duplicate/);await assert.rejects(listCatalog(async(_name,args)=>({nodes:[{instanceId:String(args.offset)}],total:args.offset===0?2:3,offset:args.offset,nextOffset:1})),/changed/);});

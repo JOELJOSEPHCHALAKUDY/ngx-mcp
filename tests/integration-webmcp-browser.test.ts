@@ -13,8 +13,10 @@ import {InMemoryTransport} from '@modelcontextprotocol/sdk/inMemory.js';
 const source=String.raw`
 import {Component,enableProdMode,provideZonelessChangeDetection,signal} from '@angular/core';
 import {bootstrapApplication} from '@angular/platform-browser';
-import {FormControl,FormGroup,ReactiveFormsModule,Validators} from '@angular/forms';
-@Component({selector:'native-webmcp-app',standalone:true,imports:[ReactiveFormsModule],template:__T__
+import {FormControl,FormGroup,ReactiveFormsModule,Validators} from '@angular/forms';import {CdkDrag,CdkDragHandle,CdkDropList,moveItemInArray} from '@angular/cdk/drag-drop';
+@Component({selector:'native-webmcp-app',standalone:true,imports:[ReactiveFormsModule,CdkDrag,CdkDragHandle,CdkDropList],template:__T__
+ <div cdkDropList (cdkDropListDropped)="reorder($event)" style="width:250px">@for(item of order();track item){<div cdkDrag [id]="'drag-'+item" style="height:45px;border:1px solid"><button cdkDragHandle [id]="'drag-handle-'+item">Move {{item}}</button></div>}</div><output id="drag-order">{{order().join(',')}}</output>
+ <iframe id="native-frame" src="/frame.html"></iframe>
  <form id="task-form" [formGroup]="task" (ngSubmit)="save()">
   <label>Task title<input formControlName="title"></label><button type="submit">Add task</button>
  </form>
@@ -28,6 +30,7 @@ import {FormControl,FormGroup,ReactiveFormsModule,Validators} from '@angular/for
  <output id="saved-count">{{saved().length}}</output>
 __T__})
 class NativeWebMcpApp{
+ order=signal(['Alpha','Beta','Gamma']);reorder(event:any){this.order.update(value=>{const next=value.slice();moveItemInArray(next,event.previousIndex,event.currentIndex);return next;});}
  task=new FormGroup({title:new FormControl('',{nonNullable:true,validators:[Validators.required,Validators.minLength(3)],updateOn:'submit'})});
  extra=new FormGroup({extraTitle:new FormControl('',{nonNullable:true,validators:[Validators.required]})});
  showExtra=signal(true);saved=signal<{title:string}[]>([]);rows=signal([{id:1,title:'First'},{id:2,title:'Second'}]);
@@ -87,6 +90,7 @@ test('native browser WebMCP: production AOT, explicit modes, original effects an
  const evidence:any={formatVersion:1,compilerDigestBefore,harnessSha256Before,kind:'native-webmcp-conformance',startedAt:new Date().toISOString(),nativeVerified:false,browserChannel:process.env['WEBMCP_BROWSER_EXECUTABLE']?'custom executable':'chrome',browserFlags:['--enable-features=WebMCP','--enable-blink-features=WebMCP'],modes:[],scope:'Native browser API and production Angular fixtures; no claim of ChatGPT or Claude product interoperability. Publisher lifecycle uses persisted page events, not actual BFCache navigation.'};
  let browser:Browser|undefined,browserDirectory:string|undefined;
  const server=createServer((request,response)=>{
+  if(request.url==='/frame.html'){response.writeHead(200,{'content-type':'text/html'});response.end('<!doctype html><label>Frame task<input id="frame-task"></label><button onclick="document.querySelector(\'#frame-result\').textContent=document.querySelector(\'#frame-task\').value">Save frame task</button><output id="frame-result"></output>');return;}
   if(!browserDirectory){response.writeHead(200,{'content-type':'text/html'});response.end('<!doctype html><title>Native WebMCP capability probe</title>');return;}
   const requested=join(browserDirectory,new URL(request.url??'/','http://local').pathname);
   const path=existsSync(requested)&&!request.url?.endsWith('/')?requested:join(browserDirectory,'index.html');
@@ -133,10 +137,13 @@ test('native browser WebMCP: production AOT, explicit modes, original effects an
      assert.equal(await page.evaluate(()=>!!(globalThis as any).__angularMcpBridge.__angularMcpWebMcp),false);
     }else{
      await page.waitForFunction(()=>(globalThis as any).__angularMcpBridge.__angularMcpWebMcp?.status==='active');await refresh(page);
+     await page.frameLocator('#native-frame').getByRole('textbox',{name:'Frame task'}).waitFor();const frameFields=body(await nativeCall(page,'angular_list_nodes',{kind:'control',visible:true})).nodes,frameField=frameFields.find((node:any)=>node.label==='Frame task');assert(frameField);assert(!((await nativeCall(page,'angular_fill',{target:{instanceId:frameField.instanceId},value:'Native frame edit'})) as any).isError);await page.locator('#native-frame').evaluate(node=>(node as HTMLElement).style.pointerEvents='none');const frameAction=body(await nativeCall(page,'angular_list_nodes',{kind:'action',visible:true})).nodes.find((node:any)=>node.label==='Save frame task');assert(frameAction);assert(!(await nativeCall(page,'angular_activate',{target:{instanceId:frameAction.instanceId},event:'keyboard',key:'Enter'})).isError);assert.equal(await page.frameLocator('#native-frame').locator('#frame-result').textContent(),'Native frame edit');
+     const pageOfControls=body(await nativeCall(page,'angular_list_nodes',{kind:'control',visible:true,limit:1,includeFields:false}));assert.equal(pageOfControls.nodes.length,1);assert(pageOfControls.total>=2);assert.equal(pageOfControls.nextOffset,1);
      const tools=await nativeTools(page),form=tools.find(tool=>tool.name.startsWith('angular_form_')&&tool.inputSchema.properties.title);
      assert(form,'An actual native browser tool describes the exact Angular form.');
      assert.equal(form.inputSchema.properties.title.type,'string');
      assert(!tools.some(tool=>['angular_press_key','angular_upload_file','angular_navigate'].includes(tool.name)),'Native publication does not pretend to supply browser-privileged Node operations.');
+     const dragged=await nativeCall(page,'angular_drag',{target:await target(page,'#drag-handle-Alpha'),destination:await target(page,'#drag-Gamma'),position:'after'});assert(!dragged.isError,JSON.stringify(dragged));assert.equal(await page.locator('#drag-order').textContent(),'Beta,Gamma,Alpha');
      const before=await page.locator('#task-form input').inputValue();
      const invalid=await nativeCall(page,form.name,{title:42});assert(invalid.isError,JSON.stringify(invalid));
      assert.equal(await page.locator('#task-form input').inputValue(),before,'Malformed tool input cannot partially change the live form.');

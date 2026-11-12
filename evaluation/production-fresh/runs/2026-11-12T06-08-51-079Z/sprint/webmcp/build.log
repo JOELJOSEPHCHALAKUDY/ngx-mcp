@@ -1,0 +1,13 @@
+❯ Building...
+✔ Building...
+Initial chunk files   | Names         | Raw size | Estimated transfer size
+main-OMOQSFS3.js      | main          |  1.03 MB |               220.09 kB
+polyfills-JXOSM7H6.js | polyfills     | 34.52 kB |                11.29 kB
+styles-4FNAKTVY.css   | styles        |  7.61 kB |                 1.36 kB
+
+                      | Initial total |  1.07 MB |               232.74 kB
+
+Application bundle generation complete. [5.945 seconds]
+
+Output location: /private/tmp/ngx-mcp-fresh-production-2026-11-12T06-08-51-079Z/sprint/webmcp/dist/demo
+

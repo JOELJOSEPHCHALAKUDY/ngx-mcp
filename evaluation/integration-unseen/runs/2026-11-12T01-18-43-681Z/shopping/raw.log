@@ -1,0 +1,26 @@
+shopping session-login passed 
+shopping account-register passed 
+shopping session-logout passed 
+shopping account-confirm passed 
+shopping list-create integration-failed Error: {"status":"not-dispatched","operation":"fill","target":{"sourceId":"ngmcp_372610e0a4185f7b18f8607e","instanceId":"ngmcp_372610e0a4185f7b18f8607e@6otj6u-1otsa6o-q2av75-fsbp0w:43"},"changed":[],"values":[],"validation":{"status":"invalid","fields":[{"sourceId":"ngmcp_372610e0a4185f7b18f8607e","instanceId":"ngmcp_372610e0a4185f7b18f8607e@6otj6u-1otsa6o-q2av75-fsbp0w:43","path":["owners"],"status":"VALID","updateOn":"change","errors":[]}],"groups":[{"path":[],"status":"INVALID","errors":[]}]},"url":"http://127.0.0.1:4463/einkaufszettel","businessStatus":"unknown","reason":"Unsupported native control or custom value accessor; a UI adapter is required"}
+shopping list-edit integration-failed Error: {"status":"not-dispatched","operation":"fill","target":{"sourceId":"ngmcp_372610e0a4185f7b18f8607e","instanceId":"ngmcp_372610e0a4185f7b18f8607e@vi8waz-wegsbc-mzy3nf-1s8gp4p:44"},"changed":[],"values":[],"validation":{"status":"valid","fields":[{"sourceId":"ngmcp_372610e0a4185f7b18f8607e","instanceId":"ngmcp_372610e0a4185f7b18f8607e@vi8waz-wegsbc-mzy3nf-1s8gp4p:44","path":["owners"],"status":"VALID","updateOn":"change","errors":[]}],"groups":[{"path":[],"status":"VALID","errors":[]}]},"url":"http://127.0.0.1:4463/einkaufszettel/101","businessStatus":"unknown","reason":"Unsupported native control or custom value accessor; a UI adapter is required"}
+shopping list-delete passed 
+shopping article-create integration-failed Error: data/anzahl must be string
+shopping article-edit integration-failed Error: data/anzahl must be string
+shopping article-delete passed 
+shopping article-buy integration-failed Error: {"status":"not-dispatched","operation":"activate","target":{"sourceId":"ngmcp_b3e6766e27fbb681f7194255","instanceId":"ngmcp_b3e6766e27fbb681f7194255@1xqsalf-pslfhy-hbfv6r-sq43rr:57"},"changed":[],"values":[],"validation":{"status":"valid","fields":[{"sourceId":"ngmcp_b3e6766e27fbb681f7194255","instanceId":"ngmcp_b3e6766e27fbb681f7194255@1xqsalf-pslfhy-hbfv6r-sq43rr:57","path":[""],"status":"VALID","updateOn":"change","errors":[]}],"groups":[]},"url":"http://127.0.0.1:4463/home","businessStatus":"unknown","reason":"The source does not expose a click action on this target"}
+shopping article-unbuy passed 
+shopping articles-archive passed 
+shopping profile-save passed 
+shopping profile-avatar integration-failed AssertionError [ERR_ASSERTION]: undefined == true
+shopping admin-user-save integration-failed Error: {"status":"not-dispatched","operation":"fill","target":{"sourceId":"ngmcp_329ca9e5dd64048715a9e04b","instanceId":"ngmcp_329ca9e5dd64048715a9e04b@1umg4tt-bioc6p-1lf85nx-1c7tt64:107"},"changed":[],"values":[],"validation":{"status":"valid","fields":[{"sourceId":"ngmcp_329ca9e5dd64048715a9e04b","instanceId":"ngmcp_329ca9e5dd64048715a9e04b@1umg4tt-bioc6p-1lf85nx-1c7tt64:107","path":[""],"status":"VALID","updateOn":"change","errors":[]}],"groups":[]},"url":"http://127.0.0.1:4463/user","businessStatus":"unknown","reason":"Unsupported native control or custom value accessor; a UI adapter is required"}
+shopping admin-user-delete passed 
+shopping login-empty-username passed 
+shopping register-invalid-email passed 
+shopping empty-list-name blocked-before-validation 
+shopping article-quantity-zero blocked-before-validation 
+shopping article-quantity-over100 blocked-before-validation 
+shopping profile-invalid-email passed 
+shopping delete-cancel passed 
+shopping repeated-row-ambiguous passed 
+REPORT /Users/joeljoseph/Desktop/Personal Work/ai-experiments-apps/ngx-mcp/evaluation/integration-unseen/runs/2026-11-12T01-18-43-681Z/shopping/raw.json {"positive":17,"positivePassed":10,"negative":8,"negativePassed":5,"protocolBoundaryNotApplicable":0}

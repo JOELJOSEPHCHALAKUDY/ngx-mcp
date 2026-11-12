@@ -1,0 +1,1140 @@
+{
+  "reportKind": "independent-native-reference",
+  "startedAt": "2026-11-12T01:24:06.120Z",
+  "mode": "reference",
+  "transport": "raw-frozen",
+  "node": "v24.15.0",
+  "fixedBrowserTime": "2026-11-10T12:00:00Z",
+  "externalNetwork": "All origins blocked except designated local app; /api handled by deterministic in-process source-contract fixture.",
+  "sourceOverlays": [],
+  "frozenInputRewrites": [],
+  "harnessSha256": {
+    "../digest.mjs": "144d34b528858cda3c9f22b1011282cc3085a70b46082a1f71b838f6aebd3fa1",
+    "run.mjs": "737dc99dd347d1eeff36ffc90aaed8fb5de3ccb2a6bf252ccdff7b985a795117",
+    "fixtures.mjs": "a1aae6c88be66e8d5c9863b5f48367391dae0fc9e13665ae1d6161380e2c74c2",
+    "cases.mjs": "bd4e615be4817518f0d3a1184bf9c157d566438915b086c23ef8d52aa2a0ace1",
+    "oracles.mjs": "77903660f1fa4839bc780bd70cc2fb530cf0ae28ac9a8d4450c7b2342d4313f1",
+    "mcp-driver.mjs": "b517f83f54411087cc6fd88b38810ed4d18496f734a1a6789a810e561a1099c8",
+    "catalog.mjs": "261fff30cd2c665905a2a86d0e3be8ba532cf432349f7785518b80f571349cff",
+    "evidence.mjs": "4e3d8e0b7adc247bb24d568253a6f76b66209467395048a94542338e9f77ad0d"
+  },
+  "projects": [
+    {
+      "id": "todo",
+      "commit": "391435fc4edf819abf4f507187fc0364ac26e00b",
+      "integrity": {
+        "frozen": true,
+        "files": 42,
+        "labelsSha256": "e934aa2c5c445ec32d635bac3bcc04e151cc3dbde2642110123e1105737667c4"
+      },
+      "cases": [
+        {
+          "id": "todo-create",
+          "operation": "todo-create",
+          "kind": "positive",
+          "frozenInput": {
+            "title": "Unseen task",
+            "description": "Independent source fixture"
+          },
+          "calls": [
+            {
+              "name": "native_activate",
+              "before": {
+                "connected": true,
+                "tag": "button",
+                "type": null,
+                "key": null,
+                "invalid": false,
+                "disabled": false,
+                "text": "add"
+              },
+              "ok": true
+            },
+            {
+              "name": "native_submit",
+              "requested": [
+                {
+                  "value": "Unseen task"
+                },
+                {
+                  "value": "Independent source fixture"
+                }
+              ],
+              "before": {
+                "connected": true,
+                "tag": "form",
+                "type": null,
+                "key": null,
+                "value": "",
+                "invalid": true,
+                "disabled": false,
+                "text": "Add TaskTitleDescription Add Cancel"
+              },
+              "ok": true
+            },
+            {
+              "name": "native_fill",
+              "requested": "Unseen task",
+              "before": {
+                "connected": true,
+                "tag": "input",
+                "type": null,
+                "key": "title",
+                "value": "",
+                "invalid": true,
+                "disabled": false,
+                "text": ""
+              },
+              "ok": true,
+              "after": {
+                "connected": true,
+                "tag": "input",
+                "type": null,
+                "key": "title",
+                "value": "Unseen task",
+                "invalid": false,
+                "disabled": false,
+                "text": ""
+              }
+            },
+            {
+              "name": "native_fill",
+              "requested": "Independent source fixture",
+              "before": {
+                "connected": true,
+                "tag": "textarea",
+                "type": null,
+                "key": "description",
+                "value": "",
+                "invalid": true,
+                "disabled": false,
+                "text": ""
+              },
+              "ok": true,
+              "after": {
+                "connected": true,
+                "tag": "textarea",
+                "type": null,
+                "key": "description",
+                "value": "Independent source fixture",
+                "invalid": false,
+                "disabled": false,
+                "text": ""
+              }
+            },
+            {
+              "name": "native_activate",
+              "before": {
+                "connected": true,
+                "tag": "button",
+                "type": "submit",
+                "key": null,
+                "invalid": false,
+                "disabled": false,
+                "text": "Add"
+              },
+              "ok": true
+            }
+          ],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4452/",
+            "meta": {}
+          },
+          "before": [
+            {
+              "id": 1,
+              "title": "Unseen neighbor task",
+              "description": "Independent untouched neighbor",
+              "done": false
+            }
+          ],
+          "businessInput": {
+            "title": "Unseen task",
+            "description": "Independent source fixture"
+          },
+          "after": [
+            {
+              "id": 1,
+              "title": "Unseen neighbor task",
+              "description": "Independent untouched neighbor",
+              "done": false
+            },
+            {
+              "id": 2,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": false
+            }
+          ],
+          "oracle": {
+            "businessEffect": true,
+            "payloadVerified": true
+          },
+          "persistedAfterReload": true,
+          "status": "passed",
+          "pageErrors": [],
+          "consoleErrors": [
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        },
+        {
+          "id": "todo-complete",
+          "operation": "todo-complete",
+          "kind": "positive",
+          "frozenInput": {},
+          "targetContext": {
+            "selection": "unique visible card title Unseen task; read source Todo id from persisted UI-created record"
+          },
+          "calls": [
+            {
+              "name": "native_activate",
+              "before": {
+                "connected": true,
+                "tag": "button",
+                "type": null,
+                "key": null,
+                "invalid": false,
+                "disabled": false,
+                "text": "done_all"
+              },
+              "ok": true
+            }
+          ],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4452/",
+            "meta": {
+              "todo": {
+                "id": 1,
+                "title": "Unseen task",
+                "description": "Independent source fixture",
+                "done": false
+              }
+            }
+          },
+          "before": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": false
+            },
+            {
+              "id": 2,
+              "title": "Unseen neighbor task",
+              "description": "Independent untouched neighbor",
+              "done": false
+            }
+          ],
+          "businessInput": {},
+          "after": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": true
+            },
+            {
+              "id": 2,
+              "title": "Unseen neighbor task",
+              "description": "Independent untouched neighbor",
+              "done": false
+            }
+          ],
+          "oracle": {
+            "businessEffect": true,
+            "payloadVerified": true
+          },
+          "persistedAfterReload": true,
+          "status": "passed",
+          "pageErrors": [],
+          "consoleErrors": [
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        },
+        {
+          "id": "todo-restore",
+          "operation": "todo-restore",
+          "kind": "positive",
+          "frozenInput": {},
+          "targetContext": {
+            "selection": "unique visible card title Unseen task; read source Todo id from persisted UI-created record"
+          },
+          "calls": [
+            {
+              "name": "native_activate",
+              "before": {
+                "connected": true,
+                "tag": "button",
+                "type": null,
+                "key": null,
+                "invalid": false,
+                "disabled": false,
+                "text": "restore"
+              },
+              "ok": true
+            }
+          ],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4452/",
+            "meta": {
+              "todo": {
+                "id": 1,
+                "title": "Unseen task",
+                "description": "Independent source fixture",
+                "done": false
+              }
+            }
+          },
+          "before": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": true
+            },
+            {
+              "id": 2,
+              "title": "Unseen neighbor task",
+              "description": "Independent untouched neighbor",
+              "done": false
+            }
+          ],
+          "businessInput": {},
+          "after": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": false
+            },
+            {
+              "id": 2,
+              "title": "Unseen neighbor task",
+              "description": "Independent untouched neighbor",
+              "done": false
+            }
+          ],
+          "oracle": {
+            "businessEffect": true,
+            "payloadVerified": true
+          },
+          "persistedAfterReload": true,
+          "status": "passed",
+          "pageErrors": [],
+          "consoleErrors": [
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        },
+        {
+          "id": "todo-delete-active",
+          "operation": "todo-delete-active",
+          "kind": "positive",
+          "frozenInput": {},
+          "targetContext": {
+            "selection": "unique visible card title Unseen task"
+          },
+          "calls": [
+            {
+              "name": "native_activate",
+              "before": {
+                "connected": true,
+                "tag": "button",
+                "type": null,
+                "key": null,
+                "invalid": false,
+                "disabled": false,
+                "text": "delete_forever"
+              },
+              "ok": true
+            }
+          ],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4452/",
+            "meta": {
+              "todo": {
+                "id": 1,
+                "title": "Unseen task",
+                "description": "Independent source fixture",
+                "done": false
+              }
+            }
+          },
+          "before": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": false
+            },
+            {
+              "id": 2,
+              "title": "Unseen neighbor task",
+              "description": "Independent untouched neighbor",
+              "done": false
+            }
+          ],
+          "businessInput": {},
+          "after": [
+            {
+              "id": 2,
+              "title": "Unseen neighbor task",
+              "description": "Independent untouched neighbor",
+              "done": false
+            }
+          ],
+          "oracle": {
+            "businessEffect": true,
+            "payloadVerified": true
+          },
+          "persistedAfterReload": true,
+          "status": "passed",
+          "pageErrors": [],
+          "consoleErrors": [
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        },
+        {
+          "id": "todo-delete-completed",
+          "operation": "todo-delete-completed",
+          "kind": "positive",
+          "frozenInput": {},
+          "targetContext": {
+            "selection": "unique visible card title Unseen task"
+          },
+          "calls": [
+            {
+              "name": "native_activate",
+              "before": {
+                "connected": true,
+                "tag": "button",
+                "type": null,
+                "key": null,
+                "invalid": false,
+                "disabled": false,
+                "text": "delete_forever"
+              },
+              "ok": true
+            }
+          ],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4452/",
+            "meta": {
+              "todo": {
+                "id": 1,
+                "title": "Unseen task",
+                "description": "Independent source fixture",
+                "done": false
+              }
+            }
+          },
+          "before": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": true
+            },
+            {
+              "id": 2,
+              "title": "Unseen neighbor task",
+              "description": "Independent untouched neighbor",
+              "done": false
+            }
+          ],
+          "businessInput": {},
+          "after": [
+            {
+              "id": 2,
+              "title": "Unseen neighbor task",
+              "description": "Independent untouched neighbor",
+              "done": false
+            }
+          ],
+          "oracle": {
+            "businessEffect": true,
+            "payloadVerified": true
+          },
+          "persistedAfterReload": true,
+          "status": "passed",
+          "pageErrors": [],
+          "consoleErrors": [
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        },
+        {
+          "id": "short-title",
+          "operation": "todo-create",
+          "kind": "negative",
+          "frozenInput": {
+            "title": "Unseen task",
+            "description": "Independent source fixture"
+          },
+          "inputPatch": {
+            "title": "ab"
+          },
+          "calls": [
+            {
+              "name": "native_activate",
+              "before": {
+                "connected": true,
+                "tag": "button",
+                "type": null,
+                "key": null,
+                "invalid": false,
+                "disabled": false,
+                "text": "add"
+              },
+              "ok": true
+            },
+            {
+              "name": "native_submit",
+              "requested": [
+                {
+                  "value": "ab"
+                },
+                {
+                  "value": "Independent source fixture"
+                }
+              ],
+              "before": {
+                "connected": true,
+                "tag": "form",
+                "type": null,
+                "key": null,
+                "value": "",
+                "invalid": true,
+                "disabled": false,
+                "text": "Add TaskTitleDescription Add Cancel"
+              },
+              "ok": true,
+              "after": {
+                "connected": true,
+                "tag": "form",
+                "type": null,
+                "key": null,
+                "value": "ab",
+                "invalid": true,
+                "disabled": false,
+                "text": "Add TaskTitleDescription Add Cancel"
+              }
+            },
+            {
+              "name": "native_fill",
+              "requested": "ab",
+              "before": {
+                "connected": true,
+                "tag": "input",
+                "type": null,
+                "key": "title",
+                "value": "",
+                "invalid": true,
+                "disabled": false,
+                "text": ""
+              },
+              "ok": true,
+              "after": {
+                "connected": true,
+                "tag": "input",
+                "type": null,
+                "key": "title",
+                "value": "ab",
+                "invalid": true,
+                "disabled": false,
+                "text": ""
+              }
+            },
+            {
+              "name": "native_fill",
+              "requested": "Independent source fixture",
+              "before": {
+                "connected": true,
+                "tag": "textarea",
+                "type": null,
+                "key": "description",
+                "value": "",
+                "invalid": true,
+                "disabled": false,
+                "text": ""
+              },
+              "ok": true,
+              "after": {
+                "connected": true,
+                "tag": "textarea",
+                "type": null,
+                "key": "description",
+                "value": "Independent source fixture",
+                "invalid": false,
+                "disabled": false,
+                "text": ""
+              }
+            },
+            {
+              "name": "native_activate",
+              "before": {
+                "connected": true,
+                "tag": "button",
+                "type": "submit",
+                "key": null,
+                "invalid": false,
+                "disabled": false,
+                "text": "Add"
+              },
+              "ok": true,
+              "after": {
+                "connected": true,
+                "tag": "button",
+                "type": "submit",
+                "key": null,
+                "invalid": false,
+                "disabled": false,
+                "text": "Add"
+              }
+            }
+          ],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4452/",
+            "meta": {}
+          },
+          "before": [
+            {
+              "id": 1,
+              "title": "Unseen neighbor task",
+              "description": "Independent untouched neighbor",
+              "done": false
+            }
+          ],
+          "businessInput": {
+            "title": "ab",
+            "description": "Independent source fixture"
+          },
+          "after": [
+            {
+              "id": 1,
+              "title": "Unseen neighbor task",
+              "description": "Independent untouched neighbor",
+              "done": false
+            }
+          ],
+          "inputEvidence": [
+            {
+              "key": "title",
+              "expected": "ab",
+              "reached": true,
+              "invalid": true,
+              "settled": {
+                "key": "title",
+                "requested": "ab",
+                "connected": true,
+                "tag": "input",
+                "type": null,
+                "value": "ab",
+                "invalid": true,
+                "disabled": false,
+                "text": ""
+              },
+              "attempts": [
+                {
+                  "name": "native_fill",
+                  "requested": "ab",
+                  "before": {
+                    "connected": true,
+                    "tag": "input",
+                    "type": null,
+                    "key": "title",
+                    "value": "",
+                    "invalid": true,
+                    "disabled": false,
+                    "text": ""
+                  },
+                  "after": {
+                    "connected": true,
+                    "tag": "input",
+                    "type": null,
+                    "key": "title",
+                    "value": "ab",
+                    "invalid": true,
+                    "disabled": false,
+                    "text": ""
+                  },
+                  "ok": true
+                }
+              ]
+            }
+          ],
+          "oracle": {
+            "unchanged": true
+          },
+          "negativeEvidence": {
+            "covered": true,
+            "kind": "patched-field-validator",
+            "fields": [
+              {
+                "key": "title",
+                "reached": true,
+                "invalid": true
+              }
+            ]
+          },
+          "negativeCoverage": "patched-field-validator",
+          "negativeExercised": true,
+          "status": "passed",
+          "pageErrors": [],
+          "consoleErrors": [
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        },
+        {
+          "id": "short-description",
+          "operation": "todo-create",
+          "kind": "negative",
+          "frozenInput": {
+            "title": "Unseen task",
+            "description": "Independent source fixture"
+          },
+          "inputPatch": {
+            "description": "abcd"
+          },
+          "calls": [
+            {
+              "name": "native_activate",
+              "before": {
+                "connected": true,
+                "tag": "button",
+                "type": null,
+                "key": null,
+                "invalid": false,
+                "disabled": false,
+                "text": "add"
+              },
+              "ok": true
+            },
+            {
+              "name": "native_submit",
+              "requested": [
+                {
+                  "value": "Unseen task"
+                },
+                {
+                  "value": "abcd"
+                }
+              ],
+              "before": {
+                "connected": true,
+                "tag": "form",
+                "type": null,
+                "key": null,
+                "value": "",
+                "invalid": true,
+                "disabled": false,
+                "text": "Add TaskTitleDescription Add Cancel"
+              },
+              "ok": true,
+              "after": {
+                "connected": true,
+                "tag": "form",
+                "type": null,
+                "key": null,
+                "value": "Unseen task",
+                "invalid": true,
+                "disabled": false,
+                "text": "Add TaskTitleDescription Add Cancel"
+              }
+            },
+            {
+              "name": "native_fill",
+              "requested": "Unseen task",
+              "before": {
+                "connected": true,
+                "tag": "input",
+                "type": null,
+                "key": "title",
+                "value": "",
+                "invalid": true,
+                "disabled": false,
+                "text": ""
+              },
+              "ok": true,
+              "after": {
+                "connected": true,
+                "tag": "input",
+                "type": null,
+                "key": "title",
+                "value": "Unseen task",
+                "invalid": false,
+                "disabled": false,
+                "text": ""
+              }
+            },
+            {
+              "name": "native_fill",
+              "requested": "abcd",
+              "before": {
+                "connected": true,
+                "tag": "textarea",
+                "type": null,
+                "key": "description",
+                "value": "",
+                "invalid": true,
+                "disabled": false,
+                "text": ""
+              },
+              "ok": true,
+              "after": {
+                "connected": true,
+                "tag": "textarea",
+                "type": null,
+                "key": "description",
+                "value": "abcd",
+                "invalid": true,
+                "disabled": false,
+                "text": ""
+              }
+            },
+            {
+              "name": "native_activate",
+              "before": {
+                "connected": true,
+                "tag": "button",
+                "type": "submit",
+                "key": null,
+                "invalid": false,
+                "disabled": false,
+                "text": "Add"
+              },
+              "ok": true,
+              "after": {
+                "connected": true,
+                "tag": "button",
+                "type": "submit",
+                "key": null,
+                "invalid": false,
+                "disabled": false,
+                "text": "Add"
+              }
+            }
+          ],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4452/",
+            "meta": {}
+          },
+          "before": [
+            {
+              "id": 1,
+              "title": "Unseen neighbor task",
+              "description": "Independent untouched neighbor",
+              "done": false
+            }
+          ],
+          "businessInput": {
+            "title": "Unseen task",
+            "description": "abcd"
+          },
+          "after": [
+            {
+              "id": 1,
+              "title": "Unseen neighbor task",
+              "description": "Independent untouched neighbor",
+              "done": false
+            }
+          ],
+          "inputEvidence": [
+            {
+              "key": "description",
+              "expected": "abcd",
+              "reached": true,
+              "invalid": true,
+              "settled": {
+                "key": "description",
+                "requested": "abcd",
+                "connected": true,
+                "tag": "textarea",
+                "type": null,
+                "value": "abcd",
+                "invalid": true,
+                "disabled": false,
+                "text": ""
+              },
+              "attempts": [
+                {
+                  "name": "native_fill",
+                  "requested": "abcd",
+                  "before": {
+                    "connected": true,
+                    "tag": "textarea",
+                    "type": null,
+                    "key": "description",
+                    "value": "",
+                    "invalid": true,
+                    "disabled": false,
+                    "text": ""
+                  },
+                  "after": {
+                    "connected": true,
+                    "tag": "textarea",
+                    "type": null,
+                    "key": "description",
+                    "value": "abcd",
+                    "invalid": true,
+                    "disabled": false,
+                    "text": ""
+                  },
+                  "ok": true
+                }
+              ]
+            }
+          ],
+          "oracle": {
+            "unchanged": true
+          },
+          "negativeEvidence": {
+            "covered": true,
+            "kind": "patched-field-validator",
+            "fields": [
+              {
+                "key": "description",
+                "reached": true,
+                "invalid": true
+              }
+            ]
+          },
+          "negativeCoverage": "patched-field-validator",
+          "negativeExercised": true,
+          "status": "passed",
+          "pageErrors": [],
+          "consoleErrors": [
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        },
+        {
+          "id": "ambiguous-source-id",
+          "operation": "todo-complete",
+          "kind": "negative",
+          "frozenInput": {},
+          "inputPatch": {},
+          "targetContext": {
+            "selection": "unique visible card title Unseen task; read source Todo id from persisted UI-created record"
+          },
+          "calls": [],
+          "network": [
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap",
+              "blocked": true
+            },
+            {
+              "method": "GET",
+              "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+              "blocked": true
+            }
+          ],
+          "setup": {
+            "url": "http://127.0.0.1:4452/",
+            "meta": {
+              "todo": {
+                "id": 1,
+                "title": "Unseen task",
+                "description": "Independent source fixture",
+                "done": false
+              }
+            }
+          },
+          "before": [
+            {
+              "id": 1,
+              "title": "Unseen task",
+              "description": "Independent source fixture",
+              "done": false
+            },
+            {
+              "id": 2,
+              "title": "Unseen neighbor task",
+              "description": "Independent untouched neighbor",
+              "done": false
+            }
+          ],
+          "businessInput": {},
+          "status": "protocol-boundary-not-applicable",
+          "evidence": "Native UI exposes individually selectable source rows; sourceId-only ambiguity is a generated-protocol boundary tested in MCP mode.",
+          "pageErrors": [],
+          "consoleErrors": [
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        }
+      ]
+    }
+  ],
+  "appSpecificSourcePatches": [],
+  "instrumentation": "Untouched original app CLI",
+  "browser": "145.0.7632.6",
+  "finishedAt": "2026-11-12T01:24:43.776Z",
+  "harnessSha256After": {
+    "../digest.mjs": "144d34b528858cda3c9f22b1011282cc3085a70b46082a1f71b838f6aebd3fa1",
+    "run.mjs": "737dc99dd347d1eeff36ffc90aaed8fb5de3ccb2a6bf252ccdff7b985a795117",
+    "fixtures.mjs": "a1aae6c88be66e8d5c9863b5f48367391dae0fc9e13665ae1d6161380e2c74c2",
+    "cases.mjs": "bd4e615be4817518f0d3a1184bf9c157d566438915b086c23ef8d52aa2a0ace1",
+    "oracles.mjs": "77903660f1fa4839bc780bd70cc2fb530cf0ae28ac9a8d4450c7b2342d4313f1",
+    "mcp-driver.mjs": "b517f83f54411087cc6fd88b38810ed4d18496f734a1a6789a810e561a1099c8",
+    "catalog.mjs": "261fff30cd2c665905a2a86d0e3be8ba532cf432349f7785518b80f571349cff",
+    "evidence.mjs": "4e3d8e0b7adc247bb24d568253a6f76b66209467395048a94542338e9f77ad0d"
+  },
+  "harnessStable": true,
+  "totals": {
+    "positive": 5,
+    "positivePassed": 5,
+    "negative": 3,
+    "negativePassed": 2,
+    "protocolBoundaryNotApplicable": 1
+  }
+}

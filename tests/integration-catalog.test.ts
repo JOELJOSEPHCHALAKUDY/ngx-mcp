@@ -6,7 +6,7 @@ import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {createRequire} from 'node:module';
 import type {IntegrationDescriptor} from '../src/integration-runtime.js';
-import {integrationFormTools,integrationToolCatalogSource,integrationValidateInput} from '../src/integration-catalog.js';
+import {integrationListNodes,integrationFormTools,integrationToolCatalogSource,integrationValidateInput} from '../src/integration-catalog.js';
 
 const name=(id:string)=>'angular_form_'+createHash('sha256').update(id).digest('hex').slice(0,16);
 function node(overrides:Partial<IntegrationDescriptor>={}):IntegrationDescriptor {
@@ -70,7 +70,7 @@ test('browser validation fails closed on unknown rules, getters, non-JSON object
 test('the exact emitted catalog compiles with strict application flags and executes without Node closures',async()=>{
  const directory=mkdtempSync(join(tmpdir(),'integration-shared-catalog-'));
  try{
-  const source=integrationToolCatalogSource()+'\nexport {integrationFormTools,integrationValidateInput};';
+  const source=integrationToolCatalogSource()+'\nexport {integrationListNodes,integrationFormTools,integrationValidateInput};';
   const file=join(directory,'catalog.ts');writeFileSync(file,source);
   const ts:any=createRequire(import.meta.url)('typescript');
   const options={target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.ES2022,moduleResolution:ts.ModuleResolutionKind.Bundler,skipLibCheck:true,noEmit:true,types:[],strict:true,noPropertyAccessFromIndexSignature:true,noUncheckedIndexedAccess:true,exactOptionalPropertyTypes:true,noUnusedLocals:true,noUnusedParameters:true,noImplicitReturns:true};
@@ -79,7 +79,11 @@ test('the exact emitted catalog compiles with strict application flags and execu
   const javascript=ts.transpileModule(source,{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.ES2022}}).outputText;
   const emitted=await import('data:text/javascript;base64,'+Buffer.from(javascript).toString('base64'));
   const original=integrationFormTools([form([node()])],name),actual=emitted.integrationFormTools([form([node()])],name);
-  assert.deepEqual(actual,original);emitted.integrationValidateInput(actual[0].inputSchema,{title:'Browser code'});
+  assert.deepEqual(emitted.integrationListNodes([node()],{limit:1}),integrationListNodes([node()],{limit:1}));assert.deepEqual(actual,original);emitted.integrationValidateInput(actual[0].inputSchema,{title:'Browser code'});
   assert.throws(()=>emitted.integrationValidateInput(actual[0].inputSchema,{title:false}),/invalid type/);
  }finally{rmSync(directory,{recursive:true,force:true});}
 });
+
+test('discovery pages are bounded and filtered without truncating the internal form catalog',()=>{const nodes=Array.from({length:240},(_,index)=>node({instanceId:'item-'+index,kind:index%2?'action':'control',visible:index%3!==0,operations:['fill']}));const first=integrationListNodes(nodes);assert.equal(first.nodes.length,100);assert.equal(first.total,240);assert.equal(first.nextOffset,100);const last=integrationListNodes(nodes,{offset:200});assert.equal(last.nodes.length,40);assert.equal(last.nextOffset,null);const selected=integrationListNodes(nodes,{kind:'control',visible:true,operation:'fill',limit:5,includeFields:false});assert.equal(selected.nodes.length,5);assert(selected.nodes.every(node=>node.kind==='control'&&node.visible));assert.throws(()=>integrationListNodes(nodes,{limit:501}));assert.throws(()=>integrationListNodes(nodes,{offset:-1}));assert.equal(nodes.length,240);});
+
+test('typed form tools require an unambiguous visible submit path when the runtime reports it',()=>{for(const submitterCount of [0,2,3])assert.deepEqual(integrationFormTools([{...form([node()]),submitterCount}],name),[]);assert.equal(integrationFormTools([{...form([node()]),submitterCount:1}],name).length,1);});

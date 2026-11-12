@@ -6,7 +6,7 @@ ngx-mcp uses your app's installed Angular compiler to connect tools to live cont
 
 The generator writes a separate copy. Your original app stays unchanged.
 
-> **Experimental alpha — `0.1.0-alpha.1`.** Start with synthetic data on a local or staging app. Production access controls require your application's backend integration; see [Production setup](https://github.com/JOELJOSEPHCHALAKUDY/ngx-mcp/blob/main/PRODUCTION.md). Passing the test suite does not establish arbitrary-app compatibility or certify a deployment's security.
+> **Experimental alpha — `0.1.0-alpha.2`.** Start with synthetic data on a local or staging app. Production access controls require your application's backend integration; see [Production setup](https://github.com/JOELJOSEPHCHALAKUDY/ngx-mcp/blob/main/PRODUCTION.md). Passing the test suite does not establish arbitrary-app compatibility or certify a deployment's security.
 
 ## Pick how agents connect
 
@@ -29,7 +29,7 @@ cd my-app
 npm install -D ngx-mcp@alpha
 ```
 
-The `alpha` channel targets experimental releases. To pin this release exactly, use `ngx-mcp@0.1.0-alpha.1` instead.
+The `alpha` channel targets experimental releases. To pin this release exactly, use `ngx-mcp@0.1.0-alpha.2` instead.
 
 For the Node MCP adapter (`mcp` or `both`), also install its browser:
 
@@ -113,12 +113,22 @@ Follow [PRODUCTION.md](https://github.com/JOELJOSEPHCHALAKUDY/ngx-mcp/blob/main/
 | `angular_describe_node` | Describe a selected node; production values need separate read permission |
 | `angular_read_model` | Read the permitted Angular model projection |
 | `angular_fill`, `angular_submit`, `angular_activate` | Fill fields, submit forms and activate controls |
+| `angular_drag` | Drag exact live pointer handles to an exact destination; production requires permission for both endpoints |
 | `angular_form_*` | A typed tool for each available form |
 | `angular_read_view` | Node adapter page view; production returns permitted metadata only |
 | `angular_press_key`, `angular_upload_file` | Node adapter keyboard and upload operations |
 | `angular_navigate` | Node adapter navigation in development; disabled in production |
 
-Only allowed tools/nodes are exposed in production. A successful UI dispatch is not proof that a backend transaction completed; inspect the app's actual result. Browser-native publication currently covers the shared form/control tools, not all Node adapter conveniences.
+For a large page, start discovery with `{kind: "form", visible: true, includeFields: false}` and describe the selected form to read its fields. Typed form tools are published only when their fields and one visible submit path are supported; use exact generic controls for multi-button forms. Discovery returns at most 100 nodes by default; follow `nextOffset` for more, and restart after a UI change. Descriptors identify the source of each label in `labelSource`; `single-control-context` marks nearby text from an unambiguous field container, rather than an explicit HTML label association.
+
+Only allowed tools and nodes are exposed in production. A successful UI dispatch does not prove that a backend transaction completed; inspect the app's actual result. Browser-native publication covers the shared form and control tools.
+
+- **Editing:** `angular_fill` accepts plain text for `contenteditable`. Use `angular_activate` with `event: "select-all"` on an editor before applying one of its original formatting commands. Runtime discovery observes Angular's public event registrations, so library controls without button roles can advertise their registered events, such as `mousedown`. Choose an event from the descriptor; no component method is called directly.
+- **Uploads:** pass `{files: [{name, mimeType, base64}]}` to `angular_fill`. The limit is 512 KiB of decoded data, with up to 16 files when the input allows multiple files. File contents are excluded from discovery and model reads. A hidden input needs a visible associated label or an exact file-picker request observed during an activated UI action; that offer lasts 30 seconds and is consumed on upload.
+- **Keyboard:** `angular_activate` with `event: "keyboard", key: "Enter"` dispatches key handlers and native Enter/Space activation on exact focusable controls. It does not provide browser shortcuts, text typing or Tab traversal. Inputs and editors also accept `event: "keydown", key: "Escape"` for dialog dismissal.
+- **Navigation and frames:** full page navigation can interrupt an in-page tool response. Observe the destination and rediscover tools there. Same-origin iframe controls use their own documents; cross-origin frames stay outside the registry. Production permissions for a frame host do not grant access to its child controls.
+
+The adapter stabilizes the app's injected Angular zone, then dispatches UI events outside it so original listeners retain their normal change detection and browser default-action timing. Browser restrictions, delegated nonsemantic controls, and custom widgets can still require an adapter.
 
 ## Commands
 

@@ -141,7 +141,7 @@ export function createHostedMcpServer(options:HostedMcpOptions){
   const scopesForTool=(name:string):string[]|undefined=>{
     if(Object.hasOwn(toolScopes,name))return toolScopes[name];
     if(['angular_list_nodes','angular_describe_node','angular_read_model','angular_read_view'].includes(name))return ['ngx-mcp:read'];
-    if(['angular_fill','angular_activate','angular_submit','angular_press_key','angular_upload_file','angular_navigate'].includes(name)||/^angular_form_[a-f0-9]{16}$/.test(name))return ['ngx-mcp:write'];
+    if(['angular_fill','angular_activate','angular_submit','angular_drag','angular_press_key','angular_upload_file','angular_navigate'].includes(name)||/^angular_form_[a-f0-9]{16}$/.test(name))return ['ngx-mcp:write'];
     return undefined;
   };
   const toolAllowed=(name:string,principal:HostedPrincipal)=>{const needed=scopesForTool(name);return !!needed&&needed.every(scope=>principal.scopes.includes(scope));};

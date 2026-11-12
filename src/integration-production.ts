@@ -43,6 +43,7 @@ function installIntegrationProduction(policy:any,buildId:string,bootstrap:()=>Pr
  function metadata(value:any):any{
   if(!value)return value;const result=copy(value);
   for(const key of ['value','modelValue','modelSize','options'])delete result[key];
+  for(const key of ['formTarget','contextTarget','frameTarget'])if(result[key]&&!access?.allows('describe',result[key].sourceId))delete result[key];
   if(Array.isArray(result.fields))result.fields=result.fields.map((field:any)=>metadata(field));
   if(result.validation&&Array.isArray(result.validation.fields))result.validation.fields=result.validation.fields.filter((field:any)=>access&&access.allows('describe',field.sourceId)&&(result.kind!=='form'||access.allowsField(result.sourceId,field.sourceId,'describe')));
   return result;
@@ -99,8 +100,9 @@ function installIntegrationProduction(policy:any,buildId:string,bootstrap:()=>Pr
   if(!input.target)return;
   const node=original.element(input.target) as any;
   const nativeSubmit=node instanceof HTMLButtonElement&&node.type==='submit'||node instanceof HTMLInputElement&&['submit','image'].includes(node.type),key=typeof input.key==='string'?input.key.split('+').at(-1):'';
-  const submits=operation==='activate'&&nativeSubmit||operation==='press-key'&&(['Enter','NumpadEnter'].includes(key||'')||nativeSubmit&&['Space','Spacebar',' '].includes(key||''));
+  const submits=operation==='activate'&&(nativeSubmit||input.event==='keyboard'&&['Enter','NumpadEnter'].includes(key||''))||operation==='press-key'&&(['Enter','NumpadEnter'].includes(key||'')||nativeSubmit&&['Space','Spacebar',' '].includes(key||''));
   if(submits){const form=formFor(node);if(form&&(!access.allows('submit',form.sourceId)||!access.allows('describe',form.sourceId)))throw new Error('Production policy does not allow this form submission');}
+  if(operation==='drag'){const drop=descriptor(input.destination);if(!access.allows('describe',drop.sourceId)||!access.allows('drag',drop.sourceId))throw new Error('Production policy does not allow this drop destination');}
   if(selected&&selected.kind==='form'&&operation==='submit')submitFields(input,selected);
  }
  function redactResult(result:any):any{
@@ -119,18 +121,18 @@ function installIntegrationProduction(policy:any,buildId:string,bootstrap:()=>Pr
  api.readModel=async(target:any)=>{const node=descriptor(target);return guarded({operation:'read-model',sourceId:node.sourceId,instanceId:node.instanceId,args:{target:copy(target)}},()=>access.projectModel(node.sourceId,original.readModel(target)));};
  api.element=(target:any)=>{api.inspect(target);return original.element(target);};
  api.execute=async(input:any)=>{
-  ready();const request=copy(input);if(!['fill','activate','submit'].includes(request.operation))throw new Error('Unsupported production UI operation');
+  ready();const request=copy(input);if(!['fill','activate','submit','drag'].includes(request.operation))throw new Error('Unsupported production UI operation');
   const node=descriptor(request.target);
-  const stateHash=await fingerprint(request.target);
+  const stateHash=await fingerprint(request.target)+(request.operation==='drag'?'|'+await fingerprint(request.destination):'');
   return guarded({operation:request.operation,sourceId:node.sourceId,instanceId:node.instanceId,args:{input:request,stateHash}},async(approved:any)=>{
-   if(await fingerprint(approved.input.target)!==approved.stateHash)throw new Error('Production UI state changed after approval');
+   if(await fingerprint(approved.input.target)+(approved.input.operation==='drag'?'|'+await fingerprint(approved.input.destination):'')!==approved.stateHash)throw new Error('Production UI state changed after approval');
    const current=descriptor(approved.input.target);aliasCheck(approved.input.operation,approved.input,current);
    return redactResult(await original.execute(approved.input));
   });
  };
  api.toolAllowed=(name:string)=>{
   if(locked||!access||!access.state().live)return false;
-  const operation=({angular_list_nodes:'catalog',angular_describe_node:'describe',angular_read_model:'read-model',angular_fill:'fill',angular_activate:'activate',angular_submit:'submit',angular_press_key:'press-key',angular_upload_file:'upload-file',angular_read_view:'read-view'} as any)[name];
+  const operation=({angular_list_nodes:'catalog',angular_describe_node:'describe',angular_read_model:'read-model',angular_fill:'fill',angular_activate:'activate',angular_submit:'submit',angular_drag:'drag',angular_press_key:'press-key',angular_upload_file:'upload-file',angular_read_view:'read-view'} as any)[name];
   if(/^angular_form_[a-f0-9]{16}$/.test(name))return original.list().some((node:any)=>node.kind==='form'&&access.allows('describe',node.sourceId)&&access.allows('submit',node.sourceId));
   if(!operation)return false;if(operation==='catalog')return true;if(operation==='read-view')return access.allows(operation,'@page');
   return original.list().some((node:any)=>access.allows('describe',node.sourceId)&&access.allows(operation,node.sourceId));
@@ -142,7 +144,7 @@ function installIntegrationProduction(policy:any,buildId:string,bootstrap:()=>Pr
   let resolveReady:(value:any)=>void=()=>{},rejectReady:(error:any)=>void=()=>{};
   const started=new Promise<any>((resolve,reject)=>{resolveReady=resolve;rejectReady=reject;});
   const execution=guarded({operation,sourceId:selected?selected.sourceId:'@page',...selected?{instanceId:selected.instanceId}:{},args:{input:request,stateHash}},async(approved:any)=>{
-   if(await fingerprint(approved.input.target)!==approved.stateHash)throw new Error('Production UI state changed after approval');
+   if(await fingerprint(approved.input.target)+(approved.input.operation==='drag'?'|'+await fingerprint(approved.input.destination):'')!==approved.stateHash)throw new Error('Production UI state changed after approval');
    aliasCheck(operation,approved.input,selected);
    const id=Array.from(crypto.getRandomValues(new Uint32Array(4)),value=>value.toString(16).padStart(8,'0')).join('');
    return new Promise<any>((resolve,reject)=>{
@@ -167,7 +169,7 @@ function installIntegrationProduction(policy:any,buildId:string,bootstrap:()=>Pr
  Promise.resolve().then(()=>bootstrap()).then(async(environment:any)=>{
   const ownerAuthorize=typeof environment.authorize==='function'?environment.authorize.bind(environment):undefined;
   const secured={...environment,authorize:async(request:any,session:any,options:any)=>{
-   if(request.args&&request.args.input&&['fill','activate','submit','press-key','upload-file'].includes(request.operation)){
+   if(request.args&&request.args.input&&['fill','activate','submit','drag','press-key','upload-file'].includes(request.operation)){
     const input=request.args.input,selected=input.target&&descriptor(input.target);aliasCheck(request.operation,input,selected);
    }
    return ownerAuthorize?await ownerAuthorize(request,session,options)===true:true;

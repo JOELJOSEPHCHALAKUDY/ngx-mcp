@@ -2,7 +2,7 @@
 
 Production mode controls which automation tools can access an app. Your existing backend still decides which account may read or change each business resource. The package supplies neither an identity provider nor your application's authorization/approval service.
 
-This guide targets the experimental `0.1.0-alpha.1` release. Install it in your Angular app with `npm install -D ngx-mcp@alpha` (or pin `ngx-mcp@0.1.0-alpha.1`). Complete the app-specific setup and deployment checks below before granting access. Finite test results describe the tested workflows, not arbitrary Angular compatibility or a security certification.
+This guide targets the experimental `0.1.0-alpha.2` release. Install it in your Angular app with `npm install -D ngx-mcp@alpha` (or pin `ngx-mcp@0.1.0-alpha.2`). Complete the app-specific setup and deployment checks below before granting access. Finite test results describe the tested workflows, not arbitrary Angular compatibility or a security certification.
 
 ## Choose a connection
 

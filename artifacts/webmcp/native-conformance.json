@@ -1,13 +1,13 @@
 {
   "formatVersion": 1,
-  "compilerDigestBefore": "681b7df0277c15aa1086e8951f1339755f13d02e9025786ddc119f3816776d8e",
+  "compilerDigestBefore": "1d288221f841dba9378acb1e29c0cd87df700e9368a328979f209e5bcba792c4",
   "harnessSha256Before": {
-    "tests/integration-webmcp-browser.test.ts": "16c4c8263ff28ee61169674423af7330671ac25be77e93b8daf6d5f55cd9b518",
+    "tests/integration-webmcp-browser.test.ts": "f8f38a70a35441de1c31de29885c386963c3d387c8f25e596bde0da5fd7bee61",
     "evaluation/digest.mjs": "144d34b528858cda3c9f22b1011282cc3085a70b46082a1f71b838f6aebd3fa1",
     "tooling/check-webmcp-evidence.mjs": "2944d388c8132bdae96ef08ba88a135e306edc554cf838f4e4d6bcae39ed1446"
   },
   "kind": "native-webmcp-conformance",
-  "startedAt": "2026-11-10T17:57:27.466Z",
+  "startedAt": "2026-11-12T06:08:57.174Z",
   "nativeVerified": true,
   "browserChannel": "chrome",
   "browserFlags": [
@@ -47,7 +47,7 @@
     }
   ],
   "scope": "Native browser API and production Angular fixtures; no claim of ChatGPT or Claude product interoperability. Publisher lifecycle uses persisted page events, not actual BFCache navigation.",
-  "browserVersion": "157.0.8103.39",
+  "browserVersion": "157.0.8103.51",
   "capability": {
     "secure": true,
     "current": true,
@@ -57,12 +57,12 @@
     "nativeMethods": true,
     "legacy": false
   },
-  "finishedAt": "2026-11-10T17:57:39.065Z",
+  "finishedAt": "2026-11-12T06:09:18.637Z",
   "resourcesClosed": true,
-  "compilerDigestAfter": "681b7df0277c15aa1086e8951f1339755f13d02e9025786ddc119f3816776d8e",
+  "compilerDigestAfter": "1d288221f841dba9378acb1e29c0cd87df700e9368a328979f209e5bcba792c4",
   "compilerStable": true,
   "harnessSha256After": {
-    "tests/integration-webmcp-browser.test.ts": "16c4c8263ff28ee61169674423af7330671ac25be77e93b8daf6d5f55cd9b518",
+    "tests/integration-webmcp-browser.test.ts": "f8f38a70a35441de1c31de29885c386963c3d387c8f25e596bde0da5fd7bee61",
     "evaluation/digest.mjs": "144d34b528858cda3c9f22b1011282cc3085a70b46082a1f71b838f6aebd3fa1",
     "tooling/check-webmcp-evidence.mjs": "2944d388c8132bdae96ef08ba88a135e306edc554cf838f4e4d6bcae39ed1446"
   },

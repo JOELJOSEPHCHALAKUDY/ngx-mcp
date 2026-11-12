@@ -111,3 +111,5 @@ test('production generation rejects private policy fields and compiles with stri
   assert.equal(diagnostics.length,0,ts.formatDiagnosticsWithColorAndContext(diagnostics,{getCurrentDirectory:()=>directory,getCanonicalFileName:(file:string)=>file,getNewLine:()=> '\n'}));
  }finally{rmSync(directory,{recursive:true,force:true});}
 });
+
+test('keyboard activation Enter cannot bypass the form submit permission',async()=>{await session(async page=>{await assert.rejects(page.evaluate(()=>(window as any).__angularMcpBridge.execute({operation:'activate',target:{sourceId:'field'},event:'keyboard',key:'Enter'})),/denied|authoriz/);assert.equal(await page.evaluate(()=>(window as any).testState.effects),0);},{policy:policy({rules:[{sourceId:'field',operations:['describe','activate']} ]})});});

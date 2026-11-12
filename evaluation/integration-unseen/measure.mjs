@@ -9,7 +9,7 @@ const root=resolve(process.env.ANGULAR_MCP_ROOT??process.cwd()),args=process.arg
 process.chdir(root);
 const stamp=new Date().toISOString().replace(/[:.]/g,'-'),out=resolve(opt('out',resolve(directory,'runs',stamp))),basePort=Number(opt('base-port','4451'));
 if(existsSync(out))throw new Error('Measurement output already exists; choose a new --out directory');mkdirSync(out,{recursive:true});
-const digests=await import(pathToFileURL(resolve(root,'evaluation/digest.mjs')).href),files=['../digest.mjs','fixtures.mjs','cases.mjs','oracles.mjs','evidence.mjs','shopping/avatar-reference-adjudication.json','run.mjs','mcp-driver.mjs','measure.mjs','check.mjs','fetch.mjs','serve.mjs'];
+const digests=await import(pathToFileURL(resolve(root,'evaluation/digest.mjs')).href),files=['../digest.mjs','fixtures.mjs','cases.mjs','oracles.mjs','evidence.mjs','shopping/avatar-reference-adjudication.json','run.mjs','mcp-driver.mjs','catalog.mjs','measure.mjs','check.mjs','fetch.mjs','serve.mjs'];
 const codeHashes=()=>Object.fromEntries(files.map(name=>[name,hash(readFileSync(resolve(directory,name)))]));
 const summary={reportKind:'integration-unseen-measurement',startedAt:new Date().toISOString(),compilerDigestBefore:digests.treeDigest('src'),evaluatorFilesBefore:codeHashes(),goldPositiveScenarios:35,goldNegativeOrBoundaryCases:21,projects:[],sourcePolicy:'Pinned originals unchanged; only generic staged compiler/runtime instrumentation. All action-under-test calls are actual SDK MCP with no native reference fallback.'};
 const live=new Set();const pause=ms=>new Promise(done=>setTimeout(done,ms));

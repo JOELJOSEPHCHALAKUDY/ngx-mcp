@@ -43,7 +43,7 @@ function session(setup=''){
 test('publisher is opt-in and prefers the document WebMCP API over legacy navigator',async()=>{
  const disabled=session("__angularMcpBridge.mode='mcp';");await disabled.refresh();assert.equal(disabled.evaluate('__angularMcpBridge.__angularMcpWebMcp.status'),'unavailable');assert.equal(disabled.evaluate('documentTools.size'),0);assert.equal(disabled.evaluate('legacyTools.size'),0);
  const unavailable=session('document.modelContext=undefined;navigator.modelContext=undefined;');await unavailable.refresh();assert.equal(unavailable.evaluate('__angularMcpBridge.__angularMcpWebMcp.status'),'unavailable');
- const current=session("Object.defineProperty(navigator,'modelContext',{get(){throw new Error('Legacy API blocked');}});");try{await current.refresh();assert.equal(current.evaluate('__angularMcpBridge.__angularMcpWebMcp.api'),'document.modelContext');assert.equal(current.evaluate('documentTools.size'),7);assert.equal(current.evaluate('legacyTools.size'),0);}finally{current.dispose();}
+ const current=session("Object.defineProperty(navigator,'modelContext',{get(){throw new Error('Legacy API blocked');}});");try{await current.refresh();assert.equal(current.evaluate('__angularMcpBridge.__angularMcpWebMcp.api'),'document.modelContext');assert.equal(current.evaluate('documentTools.size'),8);assert.equal(current.evaluate('legacyTools.size'),0);}finally{current.dispose();}
 });
 
 test('deployed development builds do not publish native tools',async()=>{
@@ -53,11 +53,11 @@ test('deployed development builds do not publish native tools',async()=>{
 
 test('production catalog denial withdraws registrations and retained callbacks fail closed',async()=>{
  const s=session("__angularMcpBridge.profile='production';__angularMcpBridge.catalog=async()=>__angularMcpBridge.nodes;");try{
-  await s.refresh();assert.equal(s.evaluate('documentTools.size'),7);
+  await s.refresh();assert.equal(s.evaluate('documentTools.size'),8);
   s.evaluate("const retainedTool=documentTools.get('angular_fill');__angularMcpBridge.catalog=async()=>{throw new Error('access-revoked');};");
   await s.refresh();assert.equal(s.evaluate('documentTools.size'),0);assert.equal(s.evaluate('__angularMcpBridge.__angularMcpWebMcp.registered.length'),0);
   const denied=await s.evaluate("retainedTool.execute({target:{sourceId:'first'},value:'Denied'})");assert.equal(denied.isError,true);assert.equal(s.evaluate('__angularMcpBridge.executions.length'),0);
-  s.evaluate('__angularMcpBridge.catalog=async()=>__angularMcpBridge.nodes;');await s.refresh();assert.equal(s.evaluate('documentTools.size'),7);
+  s.evaluate('__angularMcpBridge.catalog=async()=>__angularMcpBridge.nodes;');await s.refresh();assert.equal(s.evaluate('documentTools.size'),8);
  }finally{s.dispose();}
 });
 
@@ -97,10 +97,10 @@ test('persisted page restoration republishes tools once without reviving explici
   s.evaluate("dispatchLifecycle('pagehide',true);");assert.equal(s.evaluate('documentTools.size'),0);assert.equal(s.evaluate('originalHandle.status'),'disposed');
   s.evaluate("dispatchLifecycle('pageshow',false);");await s.refresh();assert.equal(s.evaluate('documentTools.size'),0);
   s.evaluate("dispatchLifecycle('pageshow',true);");await s.refresh();
-  assert.equal(s.evaluate('__angularMcpBridge.__angularMcpWebMcp===originalHandle'),false);assert.equal(s.evaluate('documentTools.size'),7);assert.equal(s.evaluate("windowListeners.get('pageshow').size"),1);
+  assert.equal(s.evaluate('__angularMcpBridge.__angularMcpWebMcp===originalHandle'),false);assert.equal(s.evaluate('documentTools.size'),8);assert.equal(s.evaluate("windowListeners.get('pageshow').size"),1);
   const result=await s.evaluate("documentTools.get('angular_fill').execute({target:{sourceId:'first'},value:'Restored'})");assert.equal(result.structuredContent.status,'ui-dispatched');
   s.evaluate("dispatchLifecycle('pagehide',true);");s.dispose();s.evaluate("dispatchLifecycle('pageshow',true);");await s.refresh();assert.equal(s.evaluate('documentTools.size'),0);assert.equal(s.evaluate('__angularMcpBridge.__angularMcpWebMcp.status'),'disposed');
-  s.evaluate('installAngularMcpWebMcp();');await s.refresh();assert.equal(s.evaluate('documentTools.size'),7);assert.equal(s.evaluate("windowListeners.get('pageshow').size"),1);
+  s.evaluate('installAngularMcpWebMcp();');await s.refresh();assert.equal(s.evaluate('documentTools.size'),8);assert.equal(s.evaluate("windowListeners.get('pageshow').size"),1);
   s.dispose();s.evaluate("dispatchLifecycle('pagehide',true);dispatchLifecycle('pageshow',true);");await s.refresh();assert.equal(s.evaluate('documentTools.size'),0);
  }finally{s.dispose();}
 });

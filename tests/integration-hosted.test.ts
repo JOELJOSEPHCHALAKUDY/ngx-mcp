@@ -118,7 +118,7 @@ test('per-request app authorization failure closes the session before a tool can
 });
 
 test('expired sessions and failed audit sinks fail closed without mutations',async()=>{
- const f=await startGateway({idleTimeoutMs:40});try{const id=await f.init('alice');await new Promise(done=>setTimeout(done,65));assert.equal((await f.call('alice',{jsonrpc:'2.0',id:2,method:'tools/list'},id)).status,404);}finally{await f.gateway.close();}
+ const f=await startGateway({idleTimeoutMs:2000});try{const id=await f.init('alice');await new Promise(done=>setTimeout(done,2100));assert.equal((await f.call('alice',{jsonrpc:'2.0',id:2,method:'tools/list'},id)).status,404);}finally{await f.gateway.close();}
  let opened=0;
  const broken=await startGateway({audit:()=>{throw new Error('unavailable');},createSession:async()=>{opened++;throw new Error('must not open');}});try{assert.equal((await broken.call('alice')).status,503);assert.equal(opened,0);}finally{await broken.gateway.close();}
 });
@@ -225,3 +225,5 @@ test('failed cleanup does not advertise success or free capacity for leaked reso
   assert(!f.audit.some(event=>event.event==='session-closed'));assert(f.audit.some(event=>event.reason==='session_cleanup_failed'));
  }finally{await f.gateway.close();}
 });
+
+test('hosted drag tools require write scope by default',async()=>{let effects=0;const f=await startGateway({toolScopes:undefined,createSession:async()=>{const server=new Server({name:'pointer-scope-test',version:'1'},{capabilities:{tools:{}}});server.setRequestHandler(ListToolsRequestSchema,async()=>({tools:[{name:'angular_drag',description:'Move an exact UI handle',inputSchema:{type:'object',properties:{},additionalProperties:false}}]}));server.setRequestHandler(CallToolRequestSchema,async()=>{effects++;return{content:[{type:'text',text:'dispatched'}]};});return{server,authorize:async()=>{},close:()=>server.close()};}});try{const read=await f.init('alice-read'),write=await f.init('alice');const listed=await(await f.call('alice-read',{jsonrpc:'2.0',id:2,method:'tools/list'},read)).json();assert.deepEqual(listed.result.tools,[]);const input={jsonrpc:'2.0',id:3,method:'tools/call',params:{name:'angular_drag',arguments:{}}};assert.equal((await f.call('alice-read',input,read)).status,403);assert.equal(effects,0);assert.equal((await f.call('alice',input,write)).status,200);assert.equal(effects,1);}finally{await f.gateway.close();}});

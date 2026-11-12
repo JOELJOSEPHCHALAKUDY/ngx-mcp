@@ -1,0 +1,247 @@
+{
+  "reportKind": "integration-unseen-measurement",
+  "startedAt": "2026-11-12T01:18:43.683Z",
+  "compilerDigestBefore": "1d288221f841dba9378acb1e29c0cd87df700e9368a328979f209e5bcba792c4",
+  "evaluatorFilesBefore": {
+    "../digest.mjs": "144d34b528858cda3c9f22b1011282cc3085a70b46082a1f71b838f6aebd3fa1",
+    "fixtures.mjs": "a1aae6c88be66e8d5c9863b5f48367391dae0fc9e13665ae1d6161380e2c74c2",
+    "cases.mjs": "bd4e615be4817518f0d3a1184bf9c157d566438915b086c23ef8d52aa2a0ace1",
+    "oracles.mjs": "77903660f1fa4839bc780bd70cc2fb530cf0ae28ac9a8d4450c7b2342d4313f1",
+    "evidence.mjs": "4e3d8e0b7adc247bb24d568253a6f76b66209467395048a94542338e9f77ad0d",
+    "shopping/avatar-reference-adjudication.json": "009f6e0d727ed17eb978d8be6241021370d586c4d7e700ef1df805231f3a9d33",
+    "run.mjs": "737dc99dd347d1eeff36ffc90aaed8fb5de3ccb2a6bf252ccdff7b985a795117",
+    "mcp-driver.mjs": "b517f83f54411087cc6fd88b38810ed4d18496f734a1a6789a810e561a1099c8",
+    "catalog.mjs": "261fff30cd2c665905a2a86d0e3be8ba532cf432349f7785518b80f571349cff",
+    "measure.mjs": "fdf48a57aeb71c6a53b04008f40298bb4e81f09f518321e7ade61c9b280195b7",
+    "check.mjs": "69882248375bc7444cf945e78a23ddabfe4b49265548d9d38440f7acac8d0ea0",
+    "fetch.mjs": "22290bc78d25551d747416d1f0a83d8e67022a9e1d416efeb5a65919651b8e8c",
+    "serve.mjs": "10d557d10870966198fcae9126b7114b60f400628852bf44e9239d0942cd88f2"
+  },
+  "goldPositiveScenarios": 35,
+  "goldNegativeOrBoundaryCases": 21,
+  "projects": [
+    {
+      "id": "finance",
+      "commit": "61c1bb87567df4245f0722713edabc8177121842",
+      "originalPort": 4451,
+      "stagedPort": 4461,
+      "source": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/integration-unseen-finance",
+      "staged": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-12T01-18-43-681Z-85836/finance",
+      "compilerDigestBeforeStage": "1d288221f841dba9378acb1e29c0cd87df700e9368a328979f209e5bcba792c4",
+      "evidence": {
+        "reference": {
+          "path": "runs/2026-11-12T01-18-43-681Z/finance/reference.json",
+          "sha256": "d5088dd700b7eccd57d80920764d32d6f2b510da0ef28f41b092043a76df4906"
+        },
+        "raw": {
+          "path": "runs/2026-11-12T01-18-43-681Z/finance/raw.json",
+          "sha256": "5417c07906a522e7eaa9af8427f429bd2390e3f9897663f3c040b6d9c6f438d2"
+        },
+        "ui": {
+          "path": "runs/2026-11-12T01-18-43-681Z/finance/ui.json",
+          "sha256": "9b3f50e2a448f5d3bf1809efdd872f617f2a7cfee40e2d11feda04f261f20b7d"
+        }
+      },
+      "compilerDigestAfterStage": "1d288221f841dba9378acb1e29c0cd87df700e9368a328979f209e5bcba792c4",
+      "runtimeModuleSha256": "fd2bc25afa814454c082dd02d419e7ecb8fe033f0d7e693d9cce5245de481465",
+      "manifestSha256": "3c2a0aacdb1b6b85276b8be8333cbf613bf32320eb2a4d90777bc9ed8ab65b56",
+      "serverOwnership": {
+        "original": {
+          "pid": 85849,
+          "cwd": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/integration-unseen-finance"
+        },
+        "staged": {
+          "pid": 85925,
+          "cwd": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-12T01-18-43-681Z-85836/finance"
+        }
+      },
+      "serversStopped": true,
+      "counts": {
+        "native": {
+          "positive": 13,
+          "positivePassed": 13,
+          "negative": 10,
+          "negativePassed": 10,
+          "protocolBoundaryNotApplicable": 0
+        },
+        "raw": {
+          "positive": 13,
+          "positivePassed": 10,
+          "negative": 10,
+          "negativePassed": 4,
+          "protocolBoundaryNotApplicable": 0
+        },
+        "ui": {
+          "positive": 13,
+          "positivePassed": 13,
+          "negative": 10,
+          "negativePassed": 10,
+          "protocolBoundaryNotApplicable": 0
+        }
+      },
+      "protocolBoundaryGaps": [],
+      "nativePassing": 23,
+      "nativeBlocked": [],
+      "parityGaps": []
+    },
+    {
+      "id": "todo",
+      "commit": "391435fc4edf819abf4f507187fc0364ac26e00b",
+      "originalPort": 4452,
+      "stagedPort": 4462,
+      "source": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/integration-unseen-todo",
+      "staged": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-12T01-18-43-681Z-85836/todo",
+      "compilerDigestBeforeStage": "1d288221f841dba9378acb1e29c0cd87df700e9368a328979f209e5bcba792c4",
+      "evidence": {
+        "reference": {
+          "path": "runs/2026-11-12T01-18-43-681Z/todo/reference.json",
+          "sha256": "2cd828f8255657e37c961be8625cde4a8771efbe0bcb8d9b5f8ae478cdd1db5f"
+        },
+        "raw": {
+          "path": "runs/2026-11-12T01-18-43-681Z/todo/raw.json",
+          "sha256": "5018adee4d3733595fe75de71d049d2f4f663394da757c3591ae42a4c258c177"
+        },
+        "ui": {
+          "path": "runs/2026-11-12T01-18-43-681Z/todo/ui.json",
+          "sha256": "eb60871d76fe7fa388521efd79bfada9cf7534c8d49fdb182715a38ae10affe4"
+        }
+      },
+      "compilerDigestAfterStage": "1d288221f841dba9378acb1e29c0cd87df700e9368a328979f209e5bcba792c4",
+      "runtimeModuleSha256": "fd2bc25afa814454c082dd02d419e7ecb8fe033f0d7e693d9cce5245de481465",
+      "manifestSha256": "76b74fe599a46770c08142b5d29e4d685e3ff4f982d835b338fafd04a10b252f",
+      "serverOwnership": {
+        "original": {
+          "pid": 87668,
+          "cwd": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/integration-unseen-todo"
+        },
+        "staged": {
+          "pid": 87694,
+          "cwd": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-12T01-18-43-681Z-85836/todo"
+        }
+      },
+      "serversStopped": true,
+      "counts": {
+        "native": {
+          "positive": 5,
+          "positivePassed": 5,
+          "negative": 3,
+          "negativePassed": 2,
+          "protocolBoundaryNotApplicable": 1
+        },
+        "raw": {
+          "positive": 5,
+          "positivePassed": 5,
+          "negative": 3,
+          "negativePassed": 3,
+          "protocolBoundaryNotApplicable": 0
+        },
+        "ui": {
+          "positive": 5,
+          "positivePassed": 5,
+          "negative": 3,
+          "negativePassed": 3,
+          "protocolBoundaryNotApplicable": 0
+        }
+      },
+      "protocolBoundaryGaps": [],
+      "nativePassing": 7,
+      "nativeBlocked": [],
+      "parityGaps": []
+    },
+    {
+      "id": "shopping",
+      "commit": "3464f15ad53ede4de5673415ca9de68070bf78a1",
+      "originalPort": 4453,
+      "stagedPort": 4463,
+      "source": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/integration-unseen-shopping",
+      "staged": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-12T01-18-43-681Z-85836/shopping",
+      "compilerDigestBeforeStage": "1d288221f841dba9378acb1e29c0cd87df700e9368a328979f209e5bcba792c4",
+      "evidence": {
+        "reference": {
+          "path": "runs/2026-11-12T01-18-43-681Z/shopping/reference.json",
+          "sha256": "14c3a37b997410060aa66da4bb298d510753d7d6752abfc9726de98941265b19"
+        },
+        "raw": {
+          "path": "runs/2026-11-12T01-18-43-681Z/shopping/raw.json",
+          "sha256": "f5c9fd2f44163ff5ec5ea7883ee5b2f01e1b5d122f4f6a87443cb03e1b550c81"
+        },
+        "ui": {
+          "path": "runs/2026-11-12T01-18-43-681Z/shopping/ui.json",
+          "sha256": "12171e29856b75fd96f0c21b0c00da8034b5342de20f66badf0e8313cb15dbe7"
+        }
+      },
+      "compilerDigestAfterStage": "1d288221f841dba9378acb1e29c0cd87df700e9368a328979f209e5bcba792c4",
+      "runtimeModuleSha256": "fd2bc25afa814454c082dd02d419e7ecb8fe033f0d7e693d9cce5245de481465",
+      "manifestSha256": "f4ff2e74150ccca9cd20ecd7eb5205c8704a7c594f89053fc14bf3245ac0c56c",
+      "serverOwnership": {
+        "original": {
+          "pid": 88159,
+          "cwd": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/integration-unseen-shopping"
+        },
+        "staged": {
+          "pid": 88166,
+          "cwd": "/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-12T01-18-43-681Z-85836/shopping"
+        }
+      },
+      "serversStopped": true,
+      "counts": {
+        "native": {
+          "positive": 17,
+          "positivePassed": 16,
+          "negative": 8,
+          "negativePassed": 7,
+          "protocolBoundaryNotApplicable": 1
+        },
+        "raw": {
+          "positive": 17,
+          "positivePassed": 10,
+          "negative": 8,
+          "negativePassed": 5,
+          "protocolBoundaryNotApplicable": 0
+        },
+        "ui": {
+          "positive": 17,
+          "positivePassed": 16,
+          "negative": 8,
+          "negativePassed": 8,
+          "protocolBoundaryNotApplicable": 0
+        }
+      },
+      "protocolBoundaryGaps": [],
+      "nativePassing": 23,
+      "nativeBlocked": [
+        {
+          "id": "profile-avatar",
+          "status": "reference-failed",
+          "error": "AssertionError [ERR_ASSERTION]: undefined == true"
+        }
+      ],
+      "parityGaps": []
+    }
+  ],
+  "sourcePolicy": "Pinned originals unchanged; only generic staged compiler/runtime instrumentation. All action-under-test calls are actual SDK MCP with no native reference fallback.",
+  "finishedAt": "2026-11-12T01:28:01.028Z",
+  "compilerDigestAfter": "1d288221f841dba9378acb1e29c0cd87df700e9368a328979f209e5bcba792c4",
+  "evaluatorFilesAfter": {
+    "../digest.mjs": "144d34b528858cda3c9f22b1011282cc3085a70b46082a1f71b838f6aebd3fa1",
+    "fixtures.mjs": "a1aae6c88be66e8d5c9863b5f48367391dae0fc9e13665ae1d6161380e2c74c2",
+    "cases.mjs": "bd4e615be4817518f0d3a1184bf9c157d566438915b086c23ef8d52aa2a0ace1",
+    "oracles.mjs": "77903660f1fa4839bc780bd70cc2fb530cf0ae28ac9a8d4450c7b2342d4313f1",
+    "evidence.mjs": "4e3d8e0b7adc247bb24d568253a6f76b66209467395048a94542338e9f77ad0d",
+    "shopping/avatar-reference-adjudication.json": "009f6e0d727ed17eb978d8be6241021370d586c4d7e700ef1df805231f3a9d33",
+    "run.mjs": "737dc99dd347d1eeff36ffc90aaed8fb5de3ccb2a6bf252ccdff7b985a795117",
+    "mcp-driver.mjs": "b517f83f54411087cc6fd88b38810ed4d18496f734a1a6789a810e561a1099c8",
+    "catalog.mjs": "261fff30cd2c665905a2a86d0e3be8ba532cf432349f7785518b80f571349cff",
+    "measure.mjs": "fdf48a57aeb71c6a53b04008f40298bb4e81f09f518321e7ade61c9b280195b7",
+    "check.mjs": "69882248375bc7444cf945e78a23ddabfe4b49265548d9d38440f7acac8d0ea0",
+    "fetch.mjs": "22290bc78d25551d747416d1f0a83d8e67022a9e1d416efeb5a65919651b8e8c",
+    "serve.mjs": "10d557d10870966198fcae9126b7114b60f400628852bf44e9239d0942cd88f2"
+  },
+  "compilerStable": true,
+  "evaluatorStable": true,
+  "nativeParity": true,
+  "protocolBoundariesPassed": true,
+  "usableWithinNativePassingScope": true,
+  "releaseReady": false,
+  "scope": "Integrity and declared native-reference parity only. Frozen positive denominator remains35 including source-blocked1px avatar. Raw field values and explicit UI transport mappings are separate. This is not a production or full-schema guarantee."
+}

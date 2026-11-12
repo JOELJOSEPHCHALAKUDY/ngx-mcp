@@ -31,13 +31,14 @@ export function installAngularMcpWebMcp():any{
  const target={type:'object',properties:{sourceId:{type:'string'},instanceId:{type:'string'}},anyOf:[{required:['sourceId']},{required:['instanceId']}],additionalProperties:false};
  const mode={type:'string',enum:['paste','input']};
  const fieldValue={type:'object',properties:{target,value:{},mode},required:['target','value'],additionalProperties:false};
- const emptyInput={type:'object',properties:{},additionalProperties:false};
+ const emptyInput={type:'object',properties:{kind:{type:'string',enum:['form','control','action','element']},visible:{type:'boolean'},operation:{type:'string',enum:['fill','activate','submit','drag']},limit:{type:'integer',minimum:1,maximum:500},offset:{type:'integer',minimum:0,maximum:100000},includeFields:{type:'boolean'}},additionalProperties:false};
  const definitions:any[]=[
-  {name:'angular_list_nodes',description:'List current Angular controls, forms, and actions with exact instance IDs and explicit compiler or runtime-DOM provenance.',inputSchema:emptyInput,annotations:{readOnlyHint:true}},
+  {name:'angular_list_nodes',description:'Discover exact current nodes with optional kind, operation and visibility filters. Pages default to 100 nodes; follow nextOffset. Set includeFields=false for compact summaries, and restart pagination after UI changes.',inputSchema:emptyInput,annotations:{readOnlyHint:true}},
   {name:'angular_describe_node',description:'Describe an exact currently registered Angular node, its input shape and runtime validation.',inputSchema:{type:'object',properties:{target},required:['target'],additionalProperties:false},annotations:{readOnlyHint:true}},
   {name:'angular_read_model',description:'Explicitly read a bounded JSON model snapshot from a registered Angular control. Sensitive native controls and getters are excluded; other business data can still be sensitive.',inputSchema:{type:'object',properties:{target},required:['target'],additionalProperties:false},annotations:{readOnlyHint:true}},
   {name:'angular_fill',description:'Fill an exact live registered control through its original UI. This can trigger application input and change handlers.',inputSchema:{type:'object',properties:{target,value:{},mode},required:['target','value'],additionalProperties:false},annotations:{readOnlyHint:false,destructiveHint:true}},
-  {name:'angular_activate',description:'Activate an exact live registered control using a supported authored UI event. UI dispatch does not establish business success.',inputSchema:{type:'object',properties:{target,event:{type:'string'},key:{type:'string'}},required:['target'],additionalProperties:false},annotations:{readOnlyHint:false,destructiveHint:true}},
+  {name:'angular_activate',description:'Activate an exact live registered control using a supported UI event. Native inputs and editing surfaces also support event="keydown", key="Escape" to dismiss their dialog. Use event="keyboard" with a key on exact focusable controls to dispatch key handlers and native Enter/Space activation. This does not provide browser shortcuts, text typing or Tab traversal. Use event="select-all" on exact text inputs or editing surfaces before applying an original formatting command. UI dispatch does not establish business success.',inputSchema:{type:'object',properties:{target,event:{type:'string'},key:{type:'string'}},required:['target'],additionalProperties:false},annotations:{readOnlyHint:false,destructiveHint:true}},
+  {name:'angular_drag',description:'Drag an exact registered pointer action before or after an exact visible destination using original mouse interactions. Only UI dispatch is reported; inspect the resulting app order.',inputSchema:{type:'object',properties:{target,destination:target,position:{type:'string',enum:['before','after']}},required:['target','destination'],additionalProperties:false},annotations:{readOnlyHint:false,destructiveHint:true}},
   {name:'angular_submit',description:'Fill exact form fields and submit through the original Angular form. Angular owns business validation; omitted values remain unchanged.',inputSchema:{type:'object',properties:{target,values:{type:'array',maxItems:1000,items:fieldValue},submitter:target,timeoutMs:{type:'integer',minimum:0,maximum:30000}},required:['target'],additionalProperties:false},annotations:{readOnlyHint:false,destructiveHint:true}},
  ];
  function current(){if(!active||document!==ownerDocument||location.origin!==origin||(window as any).__angularMcpBridge!==api)throw new Error('This WebMCP registration is disposed or belongs to another document');}
@@ -46,7 +47,8 @@ export function installAngularMcpWebMcp():any{
  function failure(error:any){return {isError:true,content:[{type:'text',text:errorMessage(error)}]};}
  function available(node:any,operation:string){if(!node||!node.visible||node.disabled||operation==='fill'&&node.readonly||!Array.isArray(node.operations)||node.operations.indexOf(operation)<0)throw new Error('The exact current target does not support this available UI operation');}
  function preflight(request:any){
-  const selected=(api.inspect??api.describe).call(api,request.target);available(selected,request.operation);
+  const selected=(api.inspect??api.describe).call(api,request.target);if(request.operation==='activate'&&request.event==='keyboard'){if(!selected?.visible||selected.disabled||!selected.keyboardFocusable)throw new Error('The exact keyboard target is unavailable');}else available(selected,request.operation);
+  if(request.operation==='drag'){const drop=(api.inspect??api.describe).call(api,request.destination);if(!drop||!drop.visible||drop.disabled)throw new Error('The drop destination is unavailable');}
   if(request.operation==='fill'){
    if(!selected.schema)throw new Error('This control has no supported browser input schema');
    integrationValidateInput(selected.schema,request.value);
@@ -100,11 +102,11 @@ export function installAngularMcpWebMcp():any{
       if(definition.node){
        const request={operation:'submit',target:{instanceId:definition.node.instanceId},values:Object.entries(args).map(([key,value])=>({target:{instanceId:definition.bindings[key].instanceId},value}))};
        preflight(request);result=await api.execute(request);
-      }else if(name==='angular_list_nodes')result=await(typeof api.catalog==='function'?api.catalog():api.list());
+      }else if(name==='angular_list_nodes')result=integrationListNodes(await(typeof api.catalog==='function'?api.catalog():api.list()),args);
       else if(name==='angular_describe_node')result=await api.describe(args.target);
       else if(name==='angular_read_model')result=await api.readModel(args.target);
       else{
-       const operation=({angular_fill:'fill',angular_activate:'activate',angular_submit:'submit'} as any)[name];
+       const operation=({angular_fill:'fill',angular_activate:'activate',angular_submit:'submit',angular_drag:'drag'} as any)[name];
        if(!operation)throw new Error('Unsupported browser WebMCP operation');
        const request={...args,operation};preflight(request);result=await api.execute(request);
       }

@@ -15,7 +15,7 @@ export interface IntegrationFormTool {
 export function integrationFormTools(nodes: IntegrationDescriptor[], nameForInstance: (instanceId: string) => string): IntegrationFormTool[] {
   const result: IntegrationFormTool[] = [];
   for (const node of nodes) {
-    if (!node.visible || node.disabled || node.kind !== 'form') continue;
+    if (!node.visible || node.disabled || node.kind !== 'form' || node.submitterCount !== undefined && node.submitterCount !== 1) continue;
     const keys = new Set<string>(), bindings = Object.create(null), properties = Object.fromEntries([]);
     let supported = true;
     for (const field of node.fields ?? []) {
@@ -30,6 +30,16 @@ export function integrationFormTools(nodes: IntegrationDescriptor[], nameForInst
     result.push({name: nameForInstance(node.instanceId), title: node.label.slice(0, 80) || 'Submit live Angular form', description: 'Submit this exact live Angular form through its original UI. Omitted fields retain current values. Angular evaluates dynamic and cross-field validation at runtime. Business success requires observing the app outcome.', inputSchema: {type: 'object', properties, additionalProperties: false}, annotations: {readOnlyHint: false, destructiveHint: true}, _meta: {angularMcpTarget: {sourceId: node.sourceId, instanceId: node.instanceId}}, node, bindings});
   }
   return result;
+}
+
+export interface IntegrationNodeQuery {kind?: IntegrationDescriptor['kind'];visible?:boolean;operation?:IntegrationDescriptor['operations'][number];limit?:number;offset?:number;includeFields?:boolean}
+/** Bound discovery responses independently from the full internal form catalog. Restart pagination after a UI mutation. */
+export function integrationListNodes(nodes: IntegrationDescriptor[], query: IntegrationNodeQuery = {}) {
+  const limit=query.limit??100,offset=query.offset??0;
+  if(!Number.isInteger(limit)||limit<1||limit>500||!Number.isInteger(offset)||offset<0||offset>100000)throw new Error('Invalid node discovery page bounds');
+  const matches=nodes.filter(node=>(query.kind===undefined||node.kind===query.kind)&&(query.visible===undefined||node.visible===query.visible)&&(query.operation===undefined||node.operations.includes(query.operation)));
+  const selected=matches.slice(offset,offset+limit).map(node=>{if(query.includeFields!==false)return node;const compact={...node};delete compact.fields;compact.validation={status:node.validation.status,fields:[],groups:[]};return compact;});
+  return {nodes:selected,total:matches.length,offset,nextOffset:offset+selected.length<matches.length?offset+selected.length:null};
 }
 
 /** Validate the JSON Schema subset emitted by our browser tools; unsupported rules fail closed. */
@@ -115,6 +125,7 @@ export function integrationValidateInput(schema: any, value: any): void {
 
 /** Embed the exact shared implementation; contextual argument types keep generated TS strict-safe. */
 export function integrationToolCatalogSource(): string {
-  return 'const integrationFormTools: (nodes: any[], nameForInstance: (instanceId: string) => string) => any[] = ' + integrationFormTools.toString() + ';\n' +
+  return 'const integrationListNodes: (nodes: any[], query?: any) => any = ' + integrationListNodes.toString() + ';\n' +
+    'const integrationFormTools: (nodes: any[], nameForInstance: (instanceId: string) => string) => any[] = ' + integrationFormTools.toString() + ';\n' +
     'const integrationValidateInput: (schema: any, value: any) => void = ' + integrationValidateInput.toString() + ';\n';
 }

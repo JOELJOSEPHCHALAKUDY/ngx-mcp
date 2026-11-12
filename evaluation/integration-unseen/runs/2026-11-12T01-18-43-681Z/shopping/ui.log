@@ -1,0 +1,26 @@
+shopping session-login passed 
+shopping account-register passed 
+shopping session-logout passed 
+shopping account-confirm passed 
+shopping list-create passed 
+shopping list-edit passed 
+shopping list-delete passed 
+shopping article-create passed 
+shopping article-edit passed 
+shopping article-delete passed 
+shopping article-buy passed 
+shopping article-unbuy passed 
+shopping articles-archive passed 
+shopping profile-save passed 
+shopping profile-avatar integration-failed AssertionError [ERR_ASSERTION]: undefined == true
+shopping admin-user-save passed 
+shopping admin-user-delete passed 
+shopping login-empty-username passed 
+shopping register-invalid-email passed 
+shopping empty-list-name passed 
+shopping article-quantity-zero passed 
+shopping article-quantity-over100 passed 
+shopping profile-invalid-email passed 
+shopping delete-cancel passed 
+shopping repeated-row-ambiguous passed 
+REPORT /Users/joeljoseph/Desktop/Personal Work/ai-experiments-apps/ngx-mcp/evaluation/integration-unseen/runs/2026-11-12T01-18-43-681Z/shopping/ui.json {"positive":17,"positivePassed":16,"negative":8,"negativePassed":8,"protocolBoundaryNotApplicable":0}

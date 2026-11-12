@@ -1,6 +1,6 @@
 # Releasing ngx-mcp
 
-The release candidate is `ngx-mcp@0.1.0-alpha.1`. Public prereleases use the npm **`alpha`** dist-tag; keep `publishConfig.tag` set to `alpha` and publish with `--tag alpha`. Publish only after the final candidate passes current verification and evidence gates. A prepared archive or successful local check does not mean npm publication has completed.
+The release candidate is `ngx-mcp@0.1.0-alpha.2`. Public prereleases use the npm **`alpha`** dist-tag; keep `publishConfig.tag` set to `alpha` and publish with `--tag alpha`. Publish only after the final candidate passes current verification and evidence gates. A prepared archive or successful local check does not mean npm publication has completed.
 
 ## Package boundary
 
@@ -57,7 +57,7 @@ Earlier Node-only three-project and fourth-project reports remain historical rec
 
 1. Use the [ngx-mcp repository](https://github.com/JOELJOSEPHCHALAKUDY/ngx-mcp) alone. Keep the surrounding experiments workspace private. Review tracked files; exclude credentials, session state, dependency directories, fetched apps, generated output, caches and release archives.
 2. Review the mode/default-profile explanation and the complete [production deployment contract](https://github.com/JOELJOSEPHCHALAKUDY/ngx-mcp/blob/main/PRODUCTION.md). Demonstrate owner-backed session validation, permission checks, trusted approval, durable audit, HTTPS/proxy configuration and account/tenant isolation for the deployment you intend to offer. Public demo-app tests do not verify a real identity-provider rollout.
-3. Confirm the package name is `ngx-mcp`, the version is the intended unused prerelease (currently `0.1.0-alpha.1`), and repository/homepage/issue URLs identify this project. The package must be publishable (`private` absent or `false`), with `publishConfig` selecting the public npm registry, public access and the `alpha` tag. Update the lock when metadata changes. Review licenses/attribution and rerun current checks against the final metadata.
+3. Confirm the package name is `ngx-mcp`, the version is the intended unused prerelease (currently `0.1.0-alpha.2`), and repository/homepage/issue URLs identify this project. The package must be publishable (`private` absent or `false`), with `publishConfig` selecting the public npm registry, public access and the `alpha` tag. Update the lock when metadata changes. Review licenses/attribution and rerun current checks against the final metadata.
 4. Inspect `artifacts/package-report.json` and the exact archive in `release/`. Confirm the production guide ships and archived experiments, apps, test data and secrets do not. Dependencies and browser downloads are installed separately from the archive.
 5. Only after every required check passes, the package owner authenticates with the intended npm account, checks `npm whoami` and publishes with `npm publish --access public --tag alpha`. Never use the default `latest` tag for this alpha. Verify the registry version, dist-tag and archive integrity after publication; then smoke-test a clean installation with `npm install -D ngx-mcp@alpha` and `npx ngx-mcp --help`.
 

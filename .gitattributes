@@ -1,0 +1,4 @@
+# Recorded evidence is hashed; retain its original bytes on every platform.
+evaluation/**/runs/** -text
+# Console transcripts are verbatim generated data.
+evaluation/**/runs/**/*.log -diff

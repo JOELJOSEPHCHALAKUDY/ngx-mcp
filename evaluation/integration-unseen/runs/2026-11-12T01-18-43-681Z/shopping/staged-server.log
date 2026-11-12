@@ -1,0 +1,24 @@
+- Generating browser application bundles (phase: setup)...
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files   | Names         |  Raw Size
+vendor.js             | vendor        |   5.54 MB |
+styles.css, styles.js | styles        | 608.18 kB |
+main.js               | main          | 356.63 kB |
+polyfills.js          | polyfills     | 335.53 kB |
+scripts.js            | scripts       | 111.27 kB |
+runtime.js            | runtime       |   6.52 kB |
+
+| Initial Total |   6.93 MB
+
+Build at: 2026-11-12T01:25:33.402Z - Hash: e103f7e2901e1470 - Time: 6968ms
+
+Warning: /private/var/folders/_2/7bcnvvys7tq9psg_brl8mvgc0000gn/T/angular-integration-unseen-2026-11-12T01-18-43-681Z-85836/shopping/src/app/components/common/image-cropper/image-cropper.component.ts depends on 'cropperjs'. CommonJS or AMD dependencies can cause optimization bailouts.
+For more info see: https://angular.io/guide/build#configuring-commonjs-dependencies
+
+
+
+** Angular Live Development Server is listening on 127.0.0.1:4463, open your browser on http://127.0.0.1:4463/ **
+
+
+✔ Compiled successfully.

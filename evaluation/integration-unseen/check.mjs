@@ -15,7 +15,7 @@ assert(!summary.infrastructureError,summary.infrastructureError);
 assert.equal(summary.compilerStable,true);assert.equal(summary.compilerDigestBefore,summary.compilerDigestAfter,'Compiler changed during measurement');
 assert.equal(summary.compilerDigestAfter,digests.treeDigest('src'),'Integration measurement is stale');
 assert.equal(summary.evaluatorStable,true);assert.deepEqual(summary.evaluatorFilesBefore,summary.evaluatorFilesAfter,'Evaluator changed during measurement');
-const requiredEvaluators=['../digest.mjs','fixtures.mjs','cases.mjs','oracles.mjs','run.mjs','mcp-driver.mjs','evidence.mjs','measure.mjs','check.mjs','fetch.mjs','serve.mjs'];
+const requiredEvaluators=['../digest.mjs','fixtures.mjs','cases.mjs','oracles.mjs','run.mjs','mcp-driver.mjs','catalog.mjs','evidence.mjs','measure.mjs','check.mjs','fetch.mjs','serve.mjs'];
 for(const name of requiredEvaluators)assert.equal(summary.evaluatorFilesAfter[name],hash(readFileSync(resolve(directory,name))),'Missing or changed evaluator: '+name);
 assert.equal(summary.projects.length,3);assert.equal(summary.goldPositiveScenarios,35);assert.equal(summary.goldNegativeOrBoundaryCases,21);
 let positive=0,negative=0,notApplicable=0;const allGaps=[];
@@ -25,7 +25,7 @@ for(const project of catalog.projects){
  for(const phase of ['reference','raw','ui']){
   const evidence=entry.evidence[phase],path=resolve(directory,evidence.path);assert.equal(hash(readFileSync(path)),evidence.sha256,'Changed report '+path);
   const report=reports[phase]=readJson(path);assert.equal(report.harnessStable,true);assert.deepEqual(report.harnessSha256,report.harnessSha256After,'Report evaluator changed mid-run');
-  for(const name of ['../digest.mjs','run.mjs','fixtures.mjs','cases.mjs','oracles.mjs','mcp-driver.mjs','evidence.mjs'])assert.equal(report.harnessSha256After[name],summary.evaluatorFilesAfter[name],'Report used a different evaluator: '+name);
+  for(const name of ['../digest.mjs','run.mjs','fixtures.mjs','cases.mjs','oracles.mjs','mcp-driver.mjs','catalog.mjs','evidence.mjs'])assert.equal(report.harnessSha256After[name],summary.evaluatorFilesAfter[name],'Report used a different evaluator: '+name);
   if(phase!=='reference'){assert.equal(report.compilerStable,true);assert.equal(report.compilerDigestBefore,report.compilerDigestAfter);assert.equal(report.compilerDigestAfter,summary.compilerDigestAfter);assert.equal(report.projects[0].stage.runtimeSha256,entry.runtimeModuleSha256);}
  }
  const quality=validateProjectReports(project,gold,reports,{requireParity:args.includes('--require-parity')});allGaps.push(...quality.gaps);positive+=quality.nativePositivePassed;negative+=quality.nativeNegativePassed;notApplicable+=quality.nativeProtocolNotApplicable;
