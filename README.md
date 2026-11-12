@@ -6,7 +6,7 @@ ngx-mcp uses your app's installed Angular compiler to connect tools to live cont
 
 The generator writes a separate copy. Your original app stays unchanged.
 
-> **Experimental alpha — `0.1.0-alpha.2`.** Start with synthetic data on a local or staging app. Production access controls require your application's backend integration; see [Production setup](https://github.com/JOELJOSEPHCHALAKUDY/ngx-mcp/blob/main/PRODUCTION.md). Passing the test suite does not establish arbitrary-app compatibility or certify a deployment's security.
+> **Experimental alpha — `0.1.0-alpha.3`.** Start with synthetic data on a local or staging app. Production access controls require your application's backend integration; see [Production setup](https://github.com/JOELJOSEPHCHALAKUDY/ngx-mcp/blob/main/PRODUCTION.md). Passing the test suite does not establish arbitrary-app compatibility or certify a deployment's security.
 
 ## Pick how agents connect
 
@@ -29,7 +29,7 @@ cd my-app
 npm install -D ngx-mcp@alpha
 ```
 
-The `alpha` channel targets experimental releases. To pin this release exactly, use `ngx-mcp@0.1.0-alpha.2` instead.
+The `alpha` channel targets experimental releases. To pin this release exactly, use `ngx-mcp@0.1.0-alpha.3` instead.
 
 For the Node MCP adapter (`mcp` or `both`), also install its browser:
 
