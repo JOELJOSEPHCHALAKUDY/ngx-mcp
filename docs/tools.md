@@ -64,4 +64,3 @@ npx ngx-mcp serve --base-url http://localhost:4200 --headed
 | A workflow dispatches but does not complete | Check native validation and the backend's result; tool acknowledgement alone is insufficient. |
 
 Custom widgets and app-specific business semantics can need explicit integration. Generated form schemas describe observable UI input, not every backend rule. Browser tool controls supplement existing backend authorization and do not isolate an app from malicious scripts already running in its page.
-
