@@ -49,7 +49,13 @@ Restart the client. A browser opens; sign in to your local app if needed. Ask th
 
 The client gets discovery, editing, submission, click, and drag tools, plus typed tools for supported forms. See the [tool reference](https://github.com/JOELJOSEPHCHALAKUDY/ngx-mcp/blob/main/docs/tools.md).
 
-## WebMCP
+## Connection modes
+
+| Mode | How the agent connects | What you run |
+| --- | --- | --- |
+| `mcp` (default) | MCP client → Node adapter → browser | Generated app + `ngx-mcp serve` |
+| `webmcp` | Browser agent → WebMCP tools in the page | Generated app in a WebMCP-capable browser |
+| `both` | Either connection | Generated app + Node adapter when using MCP |
 
 For a browser agent that supports WebMCP, generate with `--mode webmcp`:
 
@@ -59,7 +65,7 @@ npx ngx-mcp generate --project tsconfig.app.json --out ../my-app-webmcp --mode w
 
 Serve the generated app as above. Its tools register inside the page; the agent calls them through the browser. This mode requires WebMCP support in both the browser and agent.
 
-Use `--mode both` to enable WebMCP and the Node adapter. The default `--mode mcp` uses the Node adapter shown in the quickstart.
+Use `--mode both` to enable both connections.
 
 ## How it works
 
