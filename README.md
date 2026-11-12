@@ -83,13 +83,49 @@ flowchart TD
 
 The browser runtime ships in your app's `dist/` build. The Node adapter runs as a separate process. Deploy the generated app through your usual hosting pipeline.
 
-## Production
+## Production setup
 
-Use the `production` profile before offering agent access to other users. It requires a reviewed access policy and a backend module for session validation, permissions, approvals, and audit storage. Your backend continues to authorize API requests.
+The production profile requires a reviewed, exact-build policy and an owner-written `connectNgxMcpAccess()` module. It defaults to denying tool/data access, revalidates the app session, scopes reads and writes, requires trusted approval for mutations, and sends redacted events to your audit sink. The backend must implement session validation, permission checks, approval and audit storage.
 
-Follow the [production guide](https://github.com/JOELJOSEPHCHALAKUDY/ngx-mcp/blob/main/PRODUCTION.md) for the policy, bootstrap module, and deployment commands.
+Follow [PRODUCTION.md](https://github.com/JOELJOSEPHCHALAKUDY/ngx-mcp/blob/main/PRODUCTION.md) for the review/generate/deploy workflow, a browser bootstrap contract, remote `serve` configuration and authenticated HTTP hosting. Existing apps deploy a new generated build through their normal pipeline. They do not replace Angular's compiler or expose the old production build retroactively.
 
 Custom widgets may need adapters. Generated schemas describe UI input; the app and backend still validate business rules. Supported scenarios and known limits are recorded in the [public-project evaluations](https://github.com/JOELJOSEPHCHALAKUDY/ngx-mcp/blob/main/evaluation/production-fresh/README.md).
+
+## Tools
+
+| Tool | Purpose |
+| --- | --- |
+| `angular_list_nodes` | List available forms, fields and actions |
+| `angular_describe_node` | Describe a selected node; production values need separate read permission |
+| `angular_read_model` | Read the permitted Angular model projection |
+| `angular_fill`, `angular_submit`, `angular_activate` | Fill fields, submit forms and activate controls |
+| `angular_drag` | Drag exact live pointer handles to an exact destination; production requires permission for both endpoints |
+| `angular_form_*` | A typed tool for each available form |
+| `angular_read_view` | Node adapter page view; production returns permitted metadata only |
+| `angular_press_key`, `angular_upload_file` | Node adapter keyboard and upload operations |
+| `angular_navigate` | Node adapter navigation in development; disabled in production |
+
+For input examples, pagination, uploads, and keyboard operations, see the [tool reference](https://github.com/JOELJOSEPHCHALAKUDY/ngx-mcp/blob/main/docs/tools.md).
+
+## Commands
+
+Run `npx ngx-mcp <command> --help` for the full options.
+
+| Command/option | Meaning |
+| --- | --- |
+| `generate --project <tsconfig>` | Read the app with its own compiler and stage a new copy |
+| `--out <new-dir>` | Output outside the original workspace |
+| `--mode mcp\|webmcp\|both` | Choose connections; defaults to `mcp` |
+| `--profile development\|production` | Choose access controls; defaults to `development` |
+| `--policy <reviewed.json> --access-bootstrap <module.ts>` | Required for production; exact policy/build binding and trusted backend hooks |
+| `--target <name>` | Select an Angular project in a multi-app workspace |
+| `--build --configuration production` | Build the copy using the app's Angular CLI |
+| `--compiler-only` | Skip additional runtime UI-library discovery |
+| `serve --base-url <url> --headed` | Connect an MCP client to a running generated app |
+| `serve --storage-state <file>` | Use operator-provided Playwright session state; treat the file as a credential |
+| `serve --allow-origin <https-origin>` | Explicitly permit a remote production app |
+| `serve --allow-network-origin <https-origin>` | Permit a remote app's required API/identity/resource origin; repeat as needed |
+| `host --config <server-config.mjs>` | Start authenticated HTTP MCP with server-owned identity/session/audit configuration |
 
 ## Documentation
 
